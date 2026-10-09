@@ -1,0 +1,119 @@
+[
+  {
+    "paper_id": "2020-june-26nov",
+    "pages": 30,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "b8cc07a33c8acd9e5c752cd9a3980374b0bba8a225132ee08b17b7bab04ee4af"
+  },
+  {
+    "paper_id": "2020-june-30nov",
+    "pages": 30,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "470b987cb5c22c5cfc5bc5e6f9b61af48920dc7e8b81a5dba7e5adb02ea818a2"
+  },
+  {
+    "paper_id": "2021-june",
+    "pages": 24,
+    "found": 100,
+    "missing": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "unexpected": [],
+    "sha256": "91c954194f83129f5c0d234a5457b279e361540ea43578c0c23448ae655b5f20"
+  },
+  {
+    "paper_id": "2022-june",
+    "pages": 67,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "1742a3137cb9d35822c680cd67343345a8b828769b3fd53da011ee4bad851c81"
+  },
+  {
+    "paper_id": "2023-june",
+    "pages": 75,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "d69f78edeb63dcd45fa3af6f05ef9d638cb4e225ea99d94b77ef7aca612baa33"
+  },
+  {
+    "paper_id": "2023-december",
+    "pages": 88,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "30c503bdb1973a98ac2629f9cbaa128218990ab07df9ffbb3eb5241fc26800a7"
+  },
+  {
+    "paper_id": "2024-june",
+    "pages": 84,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "d7b54f21f19be982df0fc0ffcbf013e28ec67d56d755e4676e0c796fdc07f83a"
+  },
+  {
+    "paper_id": "2024-december-28feb",
+    "pages": 98,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "459bc71ce0871ace9527acafe2a215759e86c0a972aea6caa08d90b8f1f2d8ee"
+  },
+  {
+    "paper_id": "2024-december-02mar",
+    "pages": 105,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "0fd28cae40b731ea30415886d73ecf8de1afed923520207de25145b225c9194e"
+  },
+  {
+    "paper_id": "2025-june",
+    "pages": 104,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "e262bd59311d4b8cb8d1b904143cf43b1debb671f6fcd60705934dd67638a17f"
+  },
+  {
+    "paper_id": "2025-december",
+    "pages": 70,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "537559e3c318fb1b0717b3fa07fa86d759453605875e6a40dd668756bae08f59"
+  },
+  {
+    "paper_id": "2026-june",
+    "pages": 77,
+    "found": 120,
+    "missing": [],
+    "unexpected": [],
+    "sha256": "61acac95ffda7626e375004fc756744f1346caf9579e884282d18832d9771ed5"
+  }
+]

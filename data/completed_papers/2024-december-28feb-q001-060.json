@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2024-december-28feb-q001",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 1,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "If a map is placed so that southwest becomes east, what will north become?",
+      "options": {
+        "A": "Northeast",
+        "B": "Southwest",
+        "C": "Northwest",
+        "D": "Southeast"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "All directions rotate through the same angle.",
+        "Use east=0°, north=90°, southwest=225° and rotate southwest to 0°."
+      ],
+      "solution": "The orientation change is a rotation of 135° counterclockwise (equivalently 225° clockwise). North, initially at 90° from east counterclockwise, moves to 90°+135°=225°, which is southwest. Thus B is correct; northeast, northwest, and southeast have angles 45°,135°,315°, respectively.",
+      "theory": "A map rotation preserves angular differences between directions. The eight compass points are spaced by 45°: east, northeast, north, northwest, west, southwest, south, southeast in counterclockwise order. Determine the rotation from the one stated correspondence and apply it uniformly to every other direction. Angles differing by a full turn describe the same direction, so calculations are performed modulo 360°. A clockwise rotation can be replaced by an equivalent counterclockwise one. This avoids interpreting the phrase becomes as a relabeling of only one compass point. Reflections are different transformations and would reverse orientation; placing a map with one stated rotated direction is conventionally a rotation, for which the relative order of compass points remains fixed.",
+      "similar_questions": [
+        {
+          "prompt": "If north becomes east by rotating a map, what does west become?",
+          "solution": "North at 90° moves to east at 0°, a clockwise 90° turn. West at 180° becomes 90°, north."
+        },
+        {
+          "prompt": "If southeast becomes south, what does northeast become?",
+          "solution": "Southeast is 315° and south 270°, so rotate clockwise 45°. Northeast at 45° becomes east at 0°."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 1, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2024-december-28feb-q001.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q002",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 2,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Water of pH 8 is diluted 100 times with neutral water (pH 7). It will",
+      "options": {
+        "A": "become acidic.",
+        "B": "remain basic.",
+        "C": "become neutral.",
+        "D": "become heavy."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Neutral water reduces an excess of base but does not add excess acid.",
+        "Include water’s own ionization near pH 7; do not add two to the pH."
+      ],
+      "solution": "The original solution is basic. Dilution with neutral water reduces the excess base concentration by a factor 100 but leaves it positive. At the same temperature and usual aqueous equilibrium, the final hydrogen-ion concentration therefore remains below the neutral value and its pH remains slightly above 7. It approaches neutral from the basic side, so B holds. It does not become acidic, exactly neutral under a finite dilution, or heavy water. In an ideal strong-base model at 25°C, the excess [OH⁻]−[H⁺] changes from 9.9×10⁻⁷ to 9.9×10⁻⁹ M, giving pH approximately 7.0215.",
+      "theory": "The pH is −log₁₀ of hydrogen-ion activity, approximated by concentration in an ideal dilute solution. Neutrality means equal hydrogen- and hydroxide-ion activities; its numerical pH depends on temperature, and the source supplies pH 7 for the neutral diluent. Diluting a basic solution with neutral water decreases the excess base without changing its sign. Close to neutrality, water autoionization matters, so the rule that a hundredfold dilution shifts pH by two units cannot be extrapolated through neutral pH. The ion product and charge balance together determine the final concentrations. Finite neutral dilution generally approaches the neutral value rather than crossing it. Heavy water refers to isotopic composition and has no relation to this acid–base dilution. The calculation assumes ordinary ideal aqueous mixing.",
+      "similar_questions": [
+        {
+          "prompt": "A weakly basic solution is diluted tenfold with neutral water. Does neutral dilution make it acidic?",
+          "solution": "No. Under ordinary aqueous acid–base equilibrium, its excess base is reduced while remaining positive. The pH moves toward the supplied neutral pH from above."
+        },
+        {
+          "prompt": "In the ideal model at 25°C, a solution has excess base b>0. Show [H⁺]<10⁻⁷ M.",
+          "solution": "Let h=[H⁺] and [OH⁻]=h+b. Since h(h+b)=10⁻¹⁴, h²<10⁻¹⁴ for b>0. Thus h<10⁻⁷ and pH>7."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 2, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2024-december-28feb-q002.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q003",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Fifteen distinct points lie on a circle. How many distinct straight lines at most can pairs of these points form?",
+      "options": {
+        "A": "105",
+        "B": "455",
+        "C": "30",
+        "D": "210"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "A line is determined by an unordered pair of distinct points.",
+        "A straight line can meet a circle at at most two points."
+      ],
+      "solution": "No three distinct points on a circle can be collinear, because a line has at most two intersections with the circle. Consequently every unordered pair determines a different line. The number is C(15,2)=15·14/2=105, option A. The answer is actually always 105 for fifteen distinct points on a circle, regardless of random placement. 210 counts ordered pairs, 455 counts triples, and 30 does not count all pairs.",
+      "theory": "An unordered pair of distinct objects from a set of n has count C(n,2)=n(n−1)/2. Each ordered choice gives n(n−1), but exchanging the two members leaves the same pair, requiring division by two. In geometry two distinct points determine a unique straight line. Different pairs can sometimes determine the same line if three or more points are collinear, so an unrestricted set of points yields an upper bound rather than automatic equality. Points on a nondegenerate circle avoid that problem because a line intersects a circle in at most two distinct points. Intersections among the resulting lines elsewhere do not reduce the number of lines, and a diameter is counted like every other pair-defined line.",
+      "similar_questions": [
+        {
+          "prompt": "How many distinct pair-defined lines arise from eight distinct points on a circle?",
+          "solution": "No three are collinear, so all C(8,2)=8·7/2=28 pairs give distinct lines."
+        },
+        {
+          "prompt": "Five points include exactly three on one line, with no other triple collinear. How many pair-defined lines are there?",
+          "solution": "There are C(5,2)=10 pairs. The three pairs within the collinear triple give just one line, losing two from the count. Thus there are 8 lines."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 3, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2024-december-28feb-q003.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q004",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 4,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A microbial population starts at 50 and has exponential growth rate 0.1 per hour. Its approximate population after 10 hours is",
+      "options": {
+        "A": "51",
+        "B": "82",
+        "C": "136",
+        "D": "156"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use the continuous exponential model N(t)=N₀eʳᵗ.",
+        "Here rt=1, so multiply the initial count by e."
+      ],
+      "solution": "The model N′=0.1N with N(0)=50 gives N(t)=50e^(0.1t). At ten hours N(10)=50e≈135.914, approximately 136. C is correct; the other values do not match this continuous exponential growth model.",
+      "theory": "Continuous exponential growth means the instantaneous growth rate is proportional to the current amount: N′(t)=rN(t). Solving by separation gives N(t)=N₀e^(rt), where r has units reciprocal to the time unit. The product rt must be dimensionless. A population model may output a noninteger real quantity even though actual counts are integers; the final estimate can be rounded. The phrase growth rate per hour in this continuous model differs from discrete hourly multiplication by 1+r, which would give N₀(1+r)^t for whole-hour updates. Doubling time is ln 2/r and e-folding time is 1/r. Here ten hours is one e-folding time, so the population multiplies by approximately 2.718.",
+      "similar_questions": [
+        {
+          "prompt": "A culture begins at 100 and grows continuously at rate 0.2 per hour. Find its size after five hours.",
+          "solution": "N(5)=100e^(0.2·5)=100e≈271.8, approximately 272."
+        },
+        {
+          "prompt": "At continuous rate 0.1 per hour, what is the doubling time?",
+          "solution": "Set e^(0.1t)=2. Taking logs gives t=ln2/0.1≈6.931 hours."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 4, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2024-december-28feb-q004.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q005",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 5,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The figure fits profit (million ₹) against mean temperature T (°C) by least squares, with line Profit=4T−86 and correlation r=0.83. Which inference can definitely be drawn?",
+      "options": {
+        "A": "The sum of squared differences between observed and expected temperatures is minimum.",
+        "B": "83% of variation in profit is explained by variation in temperature.",
+        "C": "A rise in temperature causes profit to increase.",
+        "D": "At 25°C the estimated profit is 14 million ₹."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Identify the response minimized by vertical least-squares residuals.",
+        "Substitute T=25; explained variation uses r², while causation needs more evidence."
+      ],
+      "solution": "The fitted response at 25°C is 4·25−86=14 million ₹, so D is justified. Ordinary regression of profit on temperature minimizes squared profit residuals, not squared temperature residuals, refuting A. The explained fraction for simple linear regression with an intercept is r²=0.83²=0.6889, about 68.89%, not 83%, so B fails. The positive association and slope do not establish that temperature itself causes profit changes, so C is not a definite inference.",
+      "theory": "Simple least-squares regression with an intercept predicts a response y from a predictor x by ŷ=a+bx and minimizes the sum of squared vertical response errors. Reversing the roles of x and y gives a different regression and objective. The correlation coefficient r measures linear association and is dimensionless; in this model the coefficient of determination is R²=r², giving the fraction of sample response variation explained by the fitted line. A prediction is computed by substituting the predictor value into the line, with the response units retained. Association alone is insufficient to infer causation because confounding and other mechanisms can create a correlation. Predictions within the observed predictor range are interpolation; the plotted temperatures include 25°C.",
+      "similar_questions": [
+        {
+          "prompt": "A fitted line is ŷ=3x+2. What does it predict at x=4?",
+          "solution": "Substitution gives ŷ=3·4+2=14."
+        },
+        {
+          "prompt": "If simple regression has correlation r=−0.6, what fraction of response variation does it explain?",
+          "solution": "R²=r²=0.36, so 36%. The negative sign describes slope direction, not negative explained variance."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 5, PDF page 3. No candidate response used as an answer key.",
+      "page": 3,
+      "image": "assets/questions/2024-december-28feb-q005.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q006",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 6,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The mean of seven numbers is 71. Excluding one number makes the mean of the remaining six equal to 75. Find the excluded number.",
+      "options": {
+        "A": "75",
+        "B": "74",
+        "C": "73",
+        "D": "47"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Convert both means into total sums.",
+        "Subtract the six-number total from the seven-number total."
+      ],
+      "solution": "The original total is 7·71=497. The remaining total is 6·75=450. The excluded number is 497−450=47, so D holds. Removing a number below the original mean raises the mean, consistent with the result. None of 75,74,73 gives the required total difference.",
+      "theory": "The arithmetic mean of n numbers is their total divided by n, so a known count and mean determine the total exactly. When one observation is removed, the difference between the old and new totals equals that observation. If the original mean is a and the new mean of n−1 observations is b, the removed value is na−(n−1)b. One must adjust the count as well as the average; simply subtracting averages loses the weight information. A removed value below the original mean causes the remaining mean to rise, while a value above it causes the mean to fall. The same total-sum method extends to adding observations, combining groups, or replacing one observation by another.",
+      "similar_questions": [
+        {
+          "prompt": "Ten numbers average 20. Removing one leaves nine averaging 21. Find the removed value.",
+          "solution": "The totals are 200 and 189, so the removed number is 11."
+        },
+        {
+          "prompt": "Six numbers average 12. Adding a seventh produces average 13. Find the added number.",
+          "solution": "The old total is 72 and the new total is 91. The added number is 19."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 6, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2024-december-28feb-q006.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q007",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 7,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Choose the completion making this statement logically correct: THE NUMBER OF OCCURRENCES OF THE LETTER “N” IN THIS SENTENCE IS CORRECTLY COUNTED AS ________.",
+      "options": {
+        "A": "SIX",
+        "B": "SEVEN",
+        "C": "EIGHT",
+        "D": "NINE"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The word inserted in the blank is itself part of the sentence.",
+        "There are seven N letters before the blank; count the N letters in each proposed completion."
+      ],
+      "solution": "Before the blank, N occurs once in NUMBER, once in OCCURRENCES, once as the quoted letter N, once in IN, twice in SENTENCE, and once in COUNTED: seven in total. SIX contributes zero, producing seven rather than six. SEVEN contributes one, producing eight rather than seven. EIGHT contributes zero, producing seven rather than eight. NINE contributes two, producing nine, matching its meaning. Thus NINE, option D, is the unique consistent completion.",
+      "theory": "A self-referential counting sentence includes its own completion in the object being counted. The correct solution therefore needs a fixed-point check: the numerical meaning of the completion must equal the count in the fixed text plus the count introduced by that completion. Count occurrences of the target character, not words containing it, because a word may contain the character twice. The quoted target letter is still an occurrence in the displayed sentence unless explicitly excluded. Option labels and the separate question instructions are outside the sentence and are not counted. For a finite list of proposed completions, compute the total separately for each rather than guess from the unfinished sentence. The condition of self-consistency eliminates all but the valid completion.",
+      "similar_questions": [
+        {
+          "prompt": "A sentence has four E letters before its blank. Which completion FIVE or SIX consistently gives its total E count?",
+          "solution": "FIVE has one E, giving five in total and matching FIVE. SIX has zero E, giving four rather than six. FIVE is consistent."
+        },
+        {
+          "prompt": "Fixed text contains two N letters. Which completion THREE or FOUR consistently counts its total N letters?",
+          "solution": "Neither THREE nor FOUR contains N. Both give a total of two, which matches neither three nor four. There is no consistent offered completion."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 7, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2024-december-28feb-q007.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q008",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 8,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In a board meeting of 20 directors, six shake everyone else’s hand while the other fourteen do not shake one another. The total number of handshakes is",
+      "options": {
+        "A": "26",
+        "B": "84",
+        "C": "99",
+        "D": "190"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Separate handshakes within the group of six from those between the two groups.",
+        "Count C(6,2)+6·14, with each unordered pair counted once."
+      ],
+      "solution": "The six mutually handshaking directors contribute C(6,2)=15 handshakes. Every one of these six also shakes all fourteen others, giving 6·14=84. There are none among the fourteen. Total 15+84=99, option C. 84 omits the internal handshakes; 190 is the count if everyone shakes everyone; 26 does not count the allowed pairs.",
+      "theory": "A handshake is an unordered pair of people and must be counted once even though both people participate. For a group of k people all shaking one another, there are C(k,2) pairs. For all possible handshakes between disjoint groups of sizes a and b, there are ab pairs, with no division by two because each pair is uniquely specified by its member in each group. If k among n people shake everybody while the rest never shake one another, the count is C(k,2)+k(n−k). Equivalently subtract forbidden pairs C(n−k,2) from C(n,2). Adding each person’s handshake degree counts every handshake twice, so the degree-sum approach requires a final factor of one half.",
+      "similar_questions": [
+        {
+          "prompt": "Of ten people, three shake everyone while the other seven do not shake each other. Count handshakes.",
+          "solution": "Within the three there are C(3,2)=3. Across the groups there are 3·7=21. Total 24."
+        },
+        {
+          "prompt": "In a complete 12-person handshake meeting, how many handshakes are there?",
+          "solution": "Every unordered pair participates once, so C(12,2)=12·11/2=66."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 8, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2024-december-28feb-q008.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,2483 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2025-june-q001",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 1,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Consider the statements: I: All Booklets are Manuals. II: All Manuals are Catalogues. If both are true, which conclusion can conclusively be drawn?",
+      "options": {
+        "A": "All Manuals are Booklets.",
+        "B": "All Catalogues are Booklets.",
+        "C": "All Booklets are Catalogues.",
+        "D": "All Catalogues are Manuals."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Translate each “all” statement into a subset relation.",
+        "Chain the two inclusions; their converses need not hold."
+      ],
+      "solution": "Let B,M,C denote the three sets. The hypotheses give B⊆M and M⊆C, hence B⊆C. Thus every booklet is a catalogue. Reverse inclusions are unsupported: for example B={1}, M={1,2}, C={1,2,3} satisfies both hypotheses and falsifies all three other options.",
+      "theory": "A set is a collection of objects, and a subset relation means that every member of one collection belongs to another. The statement “all X are Y” is the inclusion X⊆Y; it does not assert Y⊆X. Inclusion is transitive: X⊆Y and Y⊆Z imply X⊆Z. Venn diagrams divide a union into disjoint membership regions, so each printed regional count is counted once in the total. An intersection of two sets may include their triple intersection; “exactly two” expressly excludes that central region. When interpreting an unlabelled diagram, compare containment and overlap relations, rather than the apparent sizes of the curves. Ordinary category meanings determine inclusion, while the drawing does not imply numerical cardinalities. A useful check is to supply an object in each visibly allowed region and see whether its proposed category memberships are consistent.",
+      "similar_questions": [
+        {
+          "prompt": "All roses are flowers and all flowers are plants. What follows?",
+          "solution": "Writing R⊆F⊆P gives R⊆P, so all roses are plants. Neither converse follows; a grass plant is a counterexample to plants being roses."
+        },
+        {
+          "prompt": "All squares are rectangles. Must all rectangles be squares?",
+          "solution": "No. A rectangle of side lengths 2 and 3 belongs to the rectangle set but not the square set, so the reverse inclusion fails."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 1, PDF page 1. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295476.",
+      "page": 1,
+      "image": "assets/questions/2025-june-q001.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q002",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 2,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "The Venn diagram gives sport counts: football only 18, cricket only 24, tennis only 20, football–cricket only 7, football–tennis only 11, cricket–tennis only 8, all three 4. The percentage playing exactly two sports is closest to ____%.",
+      "options": {
+        "A": "5",
+        "B": "14",
+        "C": "28",
+        "D": "32"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Sum only the three pairwise-only regions for the numerator.",
+        "The denominator is the sum of all seven disjoint regions."
+      ],
+      "solution": "Exactly two sports: 7+11+8=26 players. Total: 18+24+20+7+11+8+4=92. The percentage is 100×26/92=28.2608…%, closest to 28%.",
+      "theory": "A set is a collection of objects, and a subset relation means that every member of one collection belongs to another. The statement “all X are Y” is the inclusion X⊆Y; it does not assert Y⊆X. Inclusion is transitive: X⊆Y and Y⊆Z imply X⊆Z. Venn diagrams divide a union into disjoint membership regions, so each printed regional count is counted once in the total. An intersection of two sets may include their triple intersection; “exactly two” expressly excludes that central region. When interpreting an unlabelled diagram, compare containment and overlap relations, rather than the apparent sizes of the curves. Ordinary category meanings determine inclusion, while the drawing does not imply numerical cardinalities. A useful check is to supply an object in each visibly allowed region and see whether its proposed category memberships are consistent.",
+      "similar_questions": [
+        {
+          "prompt": "A three-set diagram has pairwise-only counts 3,4,5 and total 60. Find the percentage in exactly two sets.",
+          "solution": "The disjoint exactly-two count is 3+4+5=12. Therefore the percentage is 100×12/60=20%."
+        },
+        {
+          "prompt": "Two clubs have 30 and 25 members and 10 common members. Find the union and those in exactly one.",
+          "solution": "Inclusion–exclusion gives union 30+25−10=45. Exactly one is (30−10)+(25−10)=35."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 2, PDF page 2. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295477.",
+      "page": 2,
+      "image": "assets/questions/2025-june-q002.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q003",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A company’s value is the total value of its shares. Rakesh owns 2/15 of the shares and sells 1/3 of his shares for Rs. 75,000. What is the total company value then?",
+      "options": {
+        "A": "Rs. 15,75,800",
+        "B": "Rs. 16,87,500",
+        "C": "Rs. 17,75,800",
+        "D": "Rs. 18,27,500"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Find the fraction of the whole company sold.",
+        "Multiply 2/15 by 1/3, then divide the sale value by that fraction."
+      ],
+      "solution": "The sold shares constitute (2/15)(1/3)=2/45 of the company. Assuming the same share valuation, (2/45)V=75,000. Hence V=75,000×45/2=Rs.16,87,500.",
+      "theory": "A ratio records relative quantities: a:b:c means ak,bk,ck for one common positive scale k. Percent means per hundred, so a percentage increase p replaces a quantity x by x(1+p/100). Fractions of fractions are multiplied, whereas successive additions and subtractions must use the stated reference quantity. Direct proportionality means y=kx with the same constant k across comparisons; this constant can be cancelled when ranking values. Percentage error is measured against the intended or original quantity, not automatically against the observed quantity. To solve a word problem, introduce the common scale, translate each change algebraically, and reduce the resulting ratio. State units throughout. Common mistakes include adding a fixed amount to ratio entries without determining their scale, confusing percentage points with percent change, and treating recovered losses as a fraction of the remaining balance.",
+      "similar_questions": [
+        {
+          "prompt": "An investor owns 1/4 of a firm and sells half that holding for Rs. 50,000. Find firm value.",
+          "solution": "The sale is 1/8 of the firm; V/8=50,000 gives V=Rs.400,000."
+        },
+        {
+          "prompt": "A 3/10 holding is worth Rs.90,000. What is a 1/6 holding worth at the same price?",
+          "solution": "Total value is 90,000÷(3/10)=300,000. One-sixth is Rs.50,000."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 3, PDF page 3. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295478.",
+      "page": 3,
+      "image": "assets/questions/2025-june-q003.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q004",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 4,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A car has wheels of diameter 36 cm and travels at 60 km/h. Its wheel rotation rate in RPM is closest to ____.",
+      "options": {
+        "A": "884",
+        "B": "898",
+        "C": "906",
+        "D": "986"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Convert the car speed to centimetres per minute.",
+        "Each revolution covers π times the diameter."
+      ],
+      "solution": "60 km/h=100,000 cm/min. Wheel circumference is 36π cm. RPM=100,000/(36π)=884.194…; the closest option is 884. The rolling calculation assumes no slipping.",
+      "theory": "Geometric calculations combine a formula with its dimensional meaning. A circle of radius r has circumference 2πr and area πr²; a cylinder of base radius R and height h has volume πR²h, and a sphere of radius a has volume 4πa³/3. These formulas assume Euclidean geometry. For rolling without slipping, travelled distance equals circumference times the number of revolutions. A completely immersed solid displaces its own volume of liquid, provided no liquid overflows. A displacement vector records signed coordinate changes; the straight-line distance from its initial point is its Euclidean norm. Arc length and chord length are different: a semicircular arc has length πr but its diameter has length 2r. Cutting and rearranging pieces preserves area when interiors do not overlap. Check units, immersion conditions, and whether the question asks for path length or net displacement.",
+      "similar_questions": [
+        {
+          "prompt": "A wheel of diameter 50 cm travels 1 km/min. Find RPM.",
+          "solution": "Distance is 100,000 cm/min and circumference 50π cm, so RPM=2000/π≈636.62."
+        },
+        {
+          "prompt": "A wheel of radius 0.3 m turns 500 times/min. Find speed in km/h.",
+          "solution": "One revolution covers 0.6π m. Speed=300π m/min=18π km/h≈56.55 km/h."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 4, PDF page 4. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295479.",
+      "page": 4,
+      "image": "assets/questions/2025-june-q004.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q005",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 5,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A cylindrical container of radius 20 cm contains water to height 25 cm. A solid sphere of radius 7 cm is fully immersed. Find the approximate increase in water level.",
+      "options": {
+        "A": "1.14 cm",
+        "B": "2.28 cm",
+        "C": "5.50 cm",
+        "D": "7.00 cm"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The displaced water volume equals the sphere volume.",
+        "Divide 4π(7³)/3 by the cylinder’s base area π(20²)."
+      ],
+      "solution": "The sphere displaces 4π·343/3 cm³. If Δh is the rise, 400πΔh=1372π/3. Thus Δh=1372/1200=1.1433… cm, approximately 1.14 cm. The initial depth 25 cm exceeds the sphere diameter 14 cm, so full immersion is possible.",
+      "theory": "Geometric calculations combine a formula with its dimensional meaning. A circle of radius r has circumference 2πr and area πr²; a cylinder of base radius R and height h has volume πR²h, and a sphere of radius a has volume 4πa³/3. These formulas assume Euclidean geometry. For rolling without slipping, travelled distance equals circumference times the number of revolutions. A completely immersed solid displaces its own volume of liquid, provided no liquid overflows. A displacement vector records signed coordinate changes; the straight-line distance from its initial point is its Euclidean norm. Arc length and chord length are different: a semicircular arc has length πr but its diameter has length 2r. Cutting and rearranging pieces preserves area when interiors do not overlap. Check units, immersion conditions, and whether the question asks for path length or net displacement.",
+      "similar_questions": [
+        {
+          "prompt": "A sphere of radius 3 cm is immersed in a cylinder of radius 6 cm. Find the rise.",
+          "solution": "The displaced volume is 36π cm³; base area is 36π cm². Thus Δh=1 cm."
+        },
+        {
+          "prompt": "A 200 cm³ object is submerged in a tank of base 10 cm by 20 cm. Find rise.",
+          "solution": "The horizontal cross section is 200 cm². Volume conservation gives 200Δh=200, hence Δh=1 cm."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 5, PDF page 4. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295480.",
+      "page": 4,
+      "image": "assets/questions/2025-june-q005.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q006",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 6,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Market shares (%) of P,Q,R,S,T are 17,25,24,14,20; annual productions (thousand scooters) are 80,120,110,80,100. Profit is proportional to market share divided by production. X: T and P have the same profit. Y: R has maximum profit. Z: S has minimum profit. Which are correct?",
+      "options": {
+        "A": "X and Y",
+        "B": "X and Z",
+        "C": "Y and Z",
+        "D": "Only Z"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Compute the five share/production ratios.",
+        "A common positive proportionality constant does not change their ranking."
+      ],
+      "solution": "Ratios are P=17/80=.2125, Q=25/120≈.20833, R=24/110≈.21818, S=14/80=.175, T=20/100=.2. P and T differ, so X is false. R is largest and S smallest, so Y and Z are true.",
+      "theory": "A ratio records relative quantities: a:b:c means ak,bk,ck for one common positive scale k. Percent means per hundred, so a percentage increase p replaces a quantity x by x(1+p/100). Fractions of fractions are multiplied, whereas successive additions and subtractions must use the stated reference quantity. Direct proportionality means y=kx with the same constant k across comparisons; this constant can be cancelled when ranking values. Percentage error is measured against the intended or original quantity, not automatically against the observed quantity. To solve a word problem, introduce the common scale, translate each change algebraically, and reduce the resulting ratio. State units throughout. Common mistakes include adding a fixed amount to ratio entries without determining their scale, confusing percentage points with percent change, and treating recovered losses as a fraction of the remaining balance.",
+      "similar_questions": [
+        {
+          "prompt": "Scores are proportional to ratios 12/40,15/60,18/50. Which is largest?",
+          "solution": "The ratios are .30,.25,.36. The third is largest, independent of the common positive multiplier."
+        },
+        {
+          "prompt": "A and B have shares 20%,30% and production 100,150. Compare profits proportional to share/production.",
+          "solution": "Both ratios equal .2, so their profits are equal under the stated proportionality."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 6, PDF page 5. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295481.",
+      "page": 5,
+      "image": "assets/questions/2025-june-q006.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q007",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 7,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Rahul and his father jog on a circular track of radius r (r>2). Rahul completes one round. His father runs half a round and returns to the starting point in a straight line. What is the ratio of Rahul’s distance to his father’s?",
+      "options": {
+        "A": "πr/(π+2)",
+        "B": "2π/(π+2)",
+        "C": "1",
+        "D": "2"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The father’s straight return joins diametrically opposite points.",
+        "His route consists of a semicircular arc plus one diameter."
+      ],
+      "solution": "Rahul travels 2πr. His father travels πr along the semicircle and 2r along the diameter, total r(π+2). Their ratio is 2πr/[r(π+2)]=2π/(π+2). The radius cancels.",
+      "theory": "Geometric calculations combine a formula with its dimensional meaning. A circle of radius r has circumference 2πr and area πr²; a cylinder of base radius R and height h has volume πR²h, and a sphere of radius a has volume 4πa³/3. These formulas assume Euclidean geometry. For rolling without slipping, travelled distance equals circumference times the number of revolutions. A completely immersed solid displaces its own volume of liquid, provided no liquid overflows. A displacement vector records signed coordinate changes; the straight-line distance from its initial point is its Euclidean norm. Arc length and chord length are different: a semicircular arc has length πr but its diameter has length 2r. Cutting and rearranging pieces preserves area when interiors do not overlap. Check units, immersion conditions, and whether the question asks for path length or net displacement.",
+      "similar_questions": [
+        {
+          "prompt": "Compare a full circular lap with a semicircle followed by a diameter for radius 3.",
+          "solution": "Distances are 6π and 3π+6; their ratio is 2π/(π+2)."
+        },
+        {
+          "prompt": "A quarter-circle arc of radius 4 is followed by its chord. Find total distance.",
+          "solution": "The arc is 2π. The 90° chord is √(4²+4²)=4√2. Total is 2π+4√2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 7, PDF page 6. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295482.",
+      "page": 6,
+      "image": "assets/questions/2025-june-q007.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q008",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 8,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Kavita walks 200 m north, turns 45° right and walks 70 m, then turns 90° right and walks 70 m. Which is closest to the shortest distance from her house?",
+      "options": {
+        "A": "296 m",
+        "B": "240 m",
+        "C": "200 m",
+        "D": "223 m"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Resolve the last two walks into east and north components.",
+        "Their north components cancel; their east components add."
+      ],
+      "solution": "Use east–north coordinates. The final two displacement vectors are (70/√2,70/√2) and (70/√2,−70/√2). Final position is (70√2,200). Distance=√(9800+40000)=√49800≈223.16 m, closest to 223 m.",
+      "theory": "Geometric calculations combine a formula with its dimensional meaning. A circle of radius r has circumference 2πr and area πr²; a cylinder of base radius R and height h has volume πR²h, and a sphere of radius a has volume 4πa³/3. These formulas assume Euclidean geometry. For rolling without slipping, travelled distance equals circumference times the number of revolutions. A completely immersed solid displaces its own volume of liquid, provided no liquid overflows. A displacement vector records signed coordinate changes; the straight-line distance from its initial point is its Euclidean norm. Arc length and chord length are different: a semicircular arc has length πr but its diameter has length 2r. Cutting and rearranging pieces preserves area when interiors do not overlap. Check units, immersion conditions, and whether the question asks for path length or net displacement.",
+      "similar_questions": [
+        {
+          "prompt": "Walk 100 m north, then 50 m northeast and 50 m southeast. Find displacement magnitude.",
+          "solution": "The latter vectors add to (50√2,0), hence distance=√(10000+5000)=50√6≈122.47 m."
+        },
+        {
+          "prompt": "Walk 3 km east and 4 km north. Find shortest return distance.",
+          "solution": "The final coordinates are (3,4). The straight distance is √(3²+4²)=5 km, whereas the travelled route was 7 km."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 8, PDF page 7. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295483.",
+      "page": 7,
+      "image": "assets/questions/2025-june-q008.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q009",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 9,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Initial salaries of John, Riya, Sunil are in ratio 4:3:5. Adding Rs.10,000 to each changes their ratio to 6:5:7. What was Sunil’s initial salary?",
+      "options": {
+        "A": "Rs.20,000",
+        "B": "Rs.25,000",
+        "C": "Rs.30,000",
+        "D": "Rs.35,000"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Write initial salaries as 4k,3k,5k and final salaries as 6t,5t,7t.",
+        "Subtract two salary equations to show k=t."
+      ],
+      "solution": "Equations 4k+10000=6t and 3k+10000=5t give k=t on subtraction. Then 10000=2k, hence k=5000. Sunil initially earned 5k=Rs.25,000. The third equation also gives 25000+10000=7·5000.",
+      "theory": "A ratio records relative quantities: a:b:c means ak,bk,ck for one common positive scale k. Percent means per hundred, so a percentage increase p replaces a quantity x by x(1+p/100). Fractions of fractions are multiplied, whereas successive additions and subtractions must use the stated reference quantity. Direct proportionality means y=kx with the same constant k across comparisons; this constant can be cancelled when ranking values. Percentage error is measured against the intended or original quantity, not automatically against the observed quantity. To solve a word problem, introduce the common scale, translate each change algebraically, and reduce the resulting ratio. State units throughout. Common mistakes include adding a fixed amount to ratio entries without determining their scale, confusing percentage points with percent change, and treating recovered losses as a fraction of the remaining balance.",
+      "similar_questions": [
+        {
+          "prompt": "Two salaries in ratio 2:3 become 3:4 after each gains Rs.5000. Find initial salaries.",
+          "solution": "Let 2k+5000=3t and 3k+5000=4t. Subtraction gives k=t; 5000=k. Salaries were Rs.10,000 and Rs.15,000."
+        },
+        {
+          "prompt": "Quantities 3k and 5k receive 12 each and become 2:3. Find k.",
+          "solution": "(3k+12)/(5k+12)=2/3 gives 9k+36=10k+24, so k=12. Initial quantities are 36 and 60."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 9, PDF page 7. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295484.",
+      "page": 7,
+      "image": "assets/questions/2025-june-q009.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q010",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 10,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Rose, Lotus, Marigold plants have ratio 8:5:7. Their counts increase by 75%,40%,50%, respectively. Find the new ratio in the same order.",
+      "options": {
+        "A": "5:3:4",
+        "B": "4:2:3",
+        "C": "5:4:3",
+        "D": "7:4:5"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Multiply each old ratio entry by its own increase factor.",
+        "The factors are 1.75,1.40,1.50."
+      ],
+      "solution": "New counts are proportional to 8·1.75=14, 5·1.4=7, 7·1.5=10.5. Dividing all entries by 3.5 yields 4:2:3.",
+      "theory": "A ratio records relative quantities: a:b:c means ak,bk,ck for one common positive scale k. Percent means per hundred, so a percentage increase p replaces a quantity x by x(1+p/100). Fractions of fractions are multiplied, whereas successive additions and subtractions must use the stated reference quantity. Direct proportionality means y=kx with the same constant k across comparisons; this constant can be cancelled when ranking values. Percentage error is measured against the intended or original quantity, not automatically against the observed quantity. To solve a word problem, introduce the common scale, translate each change algebraically, and reduce the resulting ratio. State units throughout. Common mistakes include adding a fixed amount to ratio entries without determining their scale, confusing percentage points with percent change, and treating recovered losses as a fraction of the remaining balance.",
+      "similar_questions": [
+        {
+          "prompt": "Counts in ratio 2:3 rise by 50% and 100%. Find new ratio.",
+          "solution": "They become 2·1.5:3·2=3:6=1:2."
+        },
+        {
+          "prompt": "Counts in ratio 5:8 decrease by 20% and 25%. Find new ratio.",
+          "solution": "They become 5·.8:8·.75=4:6=2:3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 10, PDF page 8. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295485.",
+      "page": 8,
+      "image": "assets/questions/2025-june-q010.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q011",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 11,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "What is the unit digit of 1³+2³+3³+4³+5³+6³+7³+8³+9³?",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "7",
+        "D": "9"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the sum-of-cubes identity.",
+        "The sum is the square of 1+2+⋯+9."
+      ],
+      "solution": "The identity Σ(k³)=[n(n+1)/2]² gives (9·10/2)²=45²=2025. Its units digit is 5.",
+      "theory": "A base-ten two-digit number with tens digit a and units digit b has numerical value 10a+b, where 1≤a≤9 and 0≤b≤9. Writing ab in a number puzzle denotes this positional value, not the product a times b. The unit digit of an integer is its remainder modulo 10. Congruences can be added and multiplied: replacing each term by a congruent integer preserves the remainder of the final expression. For powers, unit digits often repeat cyclically, and for sums one can also exploit an algebraic identity. The sum of the first n cubes is [n(n+1)/2]² for nonnegative integer n. First express the quantity algebraically, then reduce only as much as needed. Common pitfalls are dropping a place-value factor of ten and reducing an exponent without checking its actual cycle length.",
+      "similar_questions": [
+        {
+          "prompt": "Find the unit digit of 1³+⋯+10³.",
+          "solution": "The sum is [10·11/2]²=55²=3025, so the units digit is 5."
+        },
+        {
+          "prompt": "Find the unit digit of 7⁴.",
+          "solution": "Modulo 10, 7²≡9 and 7⁴≡9²≡1. Indeed 7⁴=2401."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 11, PDF page 8. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295486.",
+      "page": 8,
+      "image": "assets/questions/2025-june-q011.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q012",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 12,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Suresh asks Ramesh about the person in a photo Ramesh holds. Ramesh says: “I have no brothers or sisters. However, that man’s father is my father’s son.” Who is in the photo?",
+      "options": {
+        "A": "Suresh",
+        "B": "Ramesh",
+        "C": "Ramesh’s son",
+        "D": "Ramesh’s cousin"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Identify “my father’s son” using the no-siblings condition.",
+        "That person is the father of the photographed man."
+      ],
+      "solution": "Ramesh has no siblings, so his father’s son is Ramesh himself. Therefore the photographed man’s father is Ramesh, and the person in the photo is Ramesh’s son.",
+      "theory": "A coding or relationship puzzle is solved by translating each assertion into a precise constraint. A substitution code assigns a fixed digit or symbol to each letter; repeated letters must therefore receive repeated symbols. A letter not present in the example remains unspecified unless an additional rule is stated. In family relationships, replace descriptions one step at a time and identify the speaker before interpreting possessives such as “my”. In assignment puzzles, an exclusion eliminates a possible pairing, and a one-to-one assignment requires each available item to be used once. Distinct people mentioned together are normally distinct participants. Build a small table of possibilities and remove forbidden entries, then verify the surviving assignment against every sentence. Avoid inventing an alphabetic rule from a single example or confusing the person in a photograph with that person's parent.",
+      "similar_questions": [
+        {
+          "prompt": "An only child says, “Her mother is my mother’s daughter.” Who is the woman referred to?",
+          "solution": "The speaker is the only daughter of her mother, hence “my mother’s daughter” is the speaker. The referenced woman is the speaker’s daughter."
+        },
+        {
+          "prompt": "A man says, “This child’s father is my brother.” How is the child related to him?",
+          "solution": "The father is the speaker’s brother, so the child is his nephew or niece; gender must be supplied to select between these terms."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 12, PDF page 8. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295487.",
+      "page": 8,
+      "image": "assets/questions/2025-june-q012.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q013",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 13,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Three identical semicircles are arranged as in the source diagram: two upper semicircles have a gap 10 between their inner diameter endpoints. The lower semicircle’s left endpoint is 15 right of the leftmost upper endpoint, and its right endpoint is 15 left of the rightmost upper endpoint. What is the common diameter?",
+      "options": {
+        "A": "5π",
+        "B": "20",
+        "C": "15π/2",
+        "D": "25"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Compare the full horizontal span using the two upper diameters.",
+        "The same span equals the lower diameter plus the two outer lengths 15."
+      ],
+      "solution": "Let diameter be d. From the upper semicircles the total span is 2d+10. From the lower semicircle and outer segments it is 15+d+15=d+30. Thus 2d+10=d+30 and d=20. Curved lengths are irrelevant to these straight endpoint measurements.",
+      "theory": "Geometric calculations combine a formula with its dimensional meaning. A circle of radius r has circumference 2πr and area πr²; a cylinder of base radius R and height h has volume πR²h, and a sphere of radius a has volume 4πa³/3. These formulas assume Euclidean geometry. For rolling without slipping, travelled distance equals circumference times the number of revolutions. A completely immersed solid displaces its own volume of liquid, provided no liquid overflows. A displacement vector records signed coordinate changes; the straight-line distance from its initial point is its Euclidean norm. Arc length and chord length are different: a semicircular arc has length πr but its diameter has length 2r. Cutting and rearranging pieces preserves area when interiors do not overlap. Check units, immersion conditions, and whether the question asks for path length or net displacement.",
+      "similar_questions": [
+        {
+          "prompt": "Two equal upper semicircles have a gap 6. A lower equal semicircle has exterior horizontal segments 10 each. Find diameter.",
+          "solution": "The span equality is 2d+6=d+20, hence d=14."
+        },
+        {
+          "prompt": "For equal diameters d=12 and upper gap 4, equal lower exterior segments each have length x. Find x.",
+          "solution": "The total span is 28. Also it is 12+2x, hence 2x=16 and x=8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 13, PDF page 9. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295488.",
+      "page": 9,
+      "image": "assets/questions/2025-june-q013.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q014",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 14,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A number is mistakenly divided by 2 instead of multiplied by 2. What percentage change in the result does this mistake cause?",
+      "options": {
+        "A": "25%",
+        "B": "50%",
+        "C": "75%",
+        "D": "100%"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Compare the erroneous result with the intended result.",
+        "Use intended result 2x as the percentage denominator."
+      ],
+      "solution": "For a nonzero number x, intended result is 2x and erroneous result x/2. The error has magnitude 2x−x/2=3x/2 for positive x. Relative to intended value, this is (3x/2)/(2x)=3/4, a 75% decrease.",
+      "theory": "A ratio records relative quantities: a:b:c means ak,bk,ck for one common positive scale k. Percent means per hundred, so a percentage increase p replaces a quantity x by x(1+p/100). Fractions of fractions are multiplied, whereas successive additions and subtractions must use the stated reference quantity. Direct proportionality means y=kx with the same constant k across comparisons; this constant can be cancelled when ranking values. Percentage error is measured against the intended or original quantity, not automatically against the observed quantity. To solve a word problem, introduce the common scale, translate each change algebraically, and reduce the resulting ratio. State units throughout. Common mistakes include adding a fixed amount to ratio entries without determining their scale, confusing percentage points with percent change, and treating recovered losses as a fraction of the remaining balance.",
+      "similar_questions": [
+        {
+          "prompt": "A positive number is divided by 3 instead of multiplied by 3. Find percentage decrease.",
+          "solution": "Correct result is 3x, wrong result x/3. Relative decrease is (3x−x/3)/(3x)=8/9, or 88.888…%."
+        },
+        {
+          "prompt": "A quantity is multiplied by 4 instead of 5. Find percentage shortfall.",
+          "solution": "Intended 5x and obtained 4x differ by x. Relative shortfall is x/(5x)=20%."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 14, PDF page 10. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295489.",
+      "page": 10,
+      "image": "assets/questions/2025-june-q014.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q015",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 15,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "The source diagram shows four categories: two large overlapping sets, a small set wholly inside both, and a fourth oval overlapping each without containment. The categories could be:",
+      "options": {
+        "A": "Rivers, water bodies, oceans, sources of evaporation",
+        "B": "Parliamentarians, celebrities, elected persons, professional politicians",
+        "C": "Monkeys, four-legged animals, pet animals, land animals",
+        "D": "Furniture, chairs, seats, wooden objects"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Look for a small category contained in each of two overlapping categories.",
+        "Chairs are both furniture and seats; wooden objects can intersect all three."
+      ],
+      "solution": "Take chairs as the small circle, furniture and seats as the two large overlapping sets, and wooden objects as the remaining oval. All chairs are furniture and seats. Furniture includes non-seats such as tables; seats can include non-furniture such as rocks. Wooden objects include chairs, non-chair furniture, non-furniture seats, and other objects. Thus these category relations realize the displayed containment and overlap. The other options impose further containments or disjointness inconsistent with the drawing, such as rivers and oceans being disjoint categories inside water bodies.",
+      "theory": "A set is a collection of objects, and a subset relation means that every member of one collection belongs to another. The statement “all X are Y” is the inclusion X⊆Y; it does not assert Y⊆X. Inclusion is transitive: X⊆Y and Y⊆Z imply X⊆Z. Venn diagrams divide a union into disjoint membership regions, so each printed regional count is counted once in the total. An intersection of two sets may include their triple intersection; “exactly two” expressly excludes that central region. When interpreting an unlabelled diagram, compare containment and overlap relations, rather than the apparent sizes of the curves. Ordinary category meanings determine inclusion, while the drawing does not imply numerical cardinalities. A useful check is to supply an object in each visibly allowed region and see whether its proposed category memberships are consistent.",
+      "similar_questions": [
+        {
+          "prompt": "Find categories for a small set contained in two overlapping sets and a fourth intersecting all.",
+          "solution": "Squares can be the small set, rectangles and rhombi the two overlapping supersets, and red shapes the fourth. Every square is a rectangle and rhombus; non-square rectangles and non-square rhombi exist, and colour crosses all categories."
+        },
+        {
+          "prompt": "Can dogs, mammals, animals, and pets model two nested sets plus a crossing set?",
+          "solution": "Dogs⊆mammals⊆animals gives a three-level chain. Pets overlaps these and may include fish, so it crosses mammals but stays within animals. This needs that additional containment and does not fit a diagram where the crossing set extends outside animals."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 15, PDF page 10. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295490.",
+      "page": 10,
+      "image": "assets/questions/2025-june-q015.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q016",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 16,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "In a code, DELTOID is written 3152893. LOTION could be written:",
+      "options": {
+        "A": "582986",
+        "B": "582981",
+        "C": "198396",
+        "D": "198392"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Map the known letters position by position.",
+        "Only the code of N is new; compare each option’s first five digits."
+      ],
+      "solution": "The mapping is D→3,E→1,L→5,T→2,O→8,I→9. Hence LOTIO must be 58298, and LOTION has form 58298?. Only 582986 has that prefix. N is unspecified by the example, but may consistently be assigned 6.",
+      "theory": "A coding or relationship puzzle is solved by translating each assertion into a precise constraint. A substitution code assigns a fixed digit or symbol to each letter; repeated letters must therefore receive repeated symbols. A letter not present in the example remains unspecified unless an additional rule is stated. In family relationships, replace descriptions one step at a time and identify the speaker before interpreting possessives such as “my”. In assignment puzzles, an exclusion eliminates a possible pairing, and a one-to-one assignment requires each available item to be used once. Distinct people mentioned together are normally distinct participants. Build a small table of possibilities and remove forbidden entries, then verify the surviving assignment against every sentence. Avoid inventing an alphabetic rule from a single example or confusing the person in a photograph with that person's parent.",
+      "similar_questions": [
+        {
+          "prompt": "If PLAN is 7246, what could PALL be: 7422 or 7244?",
+          "solution": "P→7,L→2,A→4,N→6; PALL must be 7422, so the first option fits."
+        },
+        {
+          "prompt": "If CAT is 351, which could CART be: 3581 or 3815?",
+          "solution": "The known letters require prefix C,A as 3,5 and final T as 1. Therefore 3581 fits, assigning the previously unspecified R the digit 8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 16, PDF page 11. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295491.",
+      "page": 11,
+      "image": "assets/questions/2025-june-q016.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q017",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 17,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "For a two-digit number ab, subtract the sum of its digits and divide the result by 9. The result will be:",
+      "options": {
+        "A": "always a",
+        "B": "always b",
+        "C": "neither a nor b",
+        "D": "either a or b depending on a+b"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Write the number as 10a+b.",
+        "Subtract a+b before simplifying."
+      ],
+      "solution": "The calculation is [(10a+b)−(a+b)]/9=9a/9=a. Therefore the result is always the tens digit a, regardless of b.",
+      "theory": "A base-ten two-digit number with tens digit a and units digit b has numerical value 10a+b, where 1≤a≤9 and 0≤b≤9. Writing ab in a number puzzle denotes this positional value, not the product a times b. The unit digit of an integer is its remainder modulo 10. Congruences can be added and multiplied: replacing each term by a congruent integer preserves the remainder of the final expression. For powers, unit digits often repeat cyclically, and for sums one can also exploit an algebraic identity. The sum of the first n cubes is [n(n+1)/2]² for nonnegative integer n. First express the quantity algebraically, then reduce only as much as needed. Common pitfalls are dropping a place-value factor of ten and reducing an exponent without checking its actual cycle length.",
+      "similar_questions": [
+        {
+          "prompt": "Apply the rule to 74.",
+          "solution": "The digit sum is 11. Then (74−11)/9=63/9=7, its tens digit."
+        },
+        {
+          "prompt": "In base 8 a two-digit number has digits a,b. Subtract its digit sum and divide by 7. Find result.",
+          "solution": "The number equals 8a+b. Subtraction gives 7a and division by 7 gives a, the leading digit."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 17, PDF page 12. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295492.",
+      "page": 12,
+      "image": "assets/questions/2025-june-q017.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q018",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 18,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A circle of radius 1 is cut into four quarters and rejoined into the shape shown (four circular arcs forming a curved hourglass outline). What is the shape’s area?",
+      "options": {
+        "A": "π",
+        "B": "1",
+        "C": "2",
+        "D": "4"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Join the four endpoints of the quarter-circle arcs with straight chords.",
+        "Each chord has length √2; the two outward circular segments and two inward segments have equal areas and cancel."
+      ],
+      "solution": "The drawing rejoins the four quarter-circle boundary arcs, alternating two convex arcs and two concave arcs. A quarter-circle arc of radius 1 has a chord of length √(1²+1²)=√2. The four joining chords form a square with area (√2)²=2. Each circular segment between an arc and its chord has area π/4−1/2. The upper and lower segments add to the square, while the left and right segments subtract. Hence total area is 2+2(π/4−1/2)−2(π/4−1/2)=2. Treating the statement as a rearrangement of four filled quarter-discs with nonoverlapping interiors would incorrectly preserve area π; the boundary figure specifies the arc arrangement used here.",
+      "theory": "A circular sector of radius r and angle θ in radians has area r²θ/2. The isosceles triangle joining its center to the two arc endpoints has area r²sinθ/2, so the circular segment between the chord and arc has area r²(θ−sinθ)/2. A quarter-circle has θ=π/2, chord length r√2, and segment area r²(π/4−1/2). A figure assembled from arcs can be analyzed by joining consecutive arc endpoints, calculating the resulting straight-sided polygon, and adding or subtracting circular segments according to whether each arc bulges outward or inward. Equal convex and concave segments cancel. Rearranging boundary arcs does not preserve the enclosed area in the way rearranging nonoverlapping filled pieces does; one must follow the pictured boundary. Chord lengths and sector angles determine the geometry, and all areas scale quadratically with r.",
+      "similar_questions": [
+        {
+          "prompt": "Four quarter-circle arcs of radius 3 form the same alternating convex/concave square-based outline. Find its area.",
+          "solution": "Each chord is 3√2, so the chord square has area 18. Each segment has area 9(π/4−1/2); two add and two subtract. The final area is therefore 18."
+        },
+        {
+          "prompt": "Four outward quarter-circle arcs of radius 1 are attached to the sides of their chord square. Find the enclosed area.",
+          "solution": "The chord square has side √2 and area 2. All four segments add, each with area π/4−1/2. Total area is 2+4(π/4−1/2)=π."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Exact source figure interpreted as four rejoined quarter-circle boundary arcs; its alternating outward and inward circular segments determine the enclosed area.",
+      "answer_source": "Independent mathematical derivation; question 18, PDF page 12. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295493.",
+      "page": 12,
+      "image": "assets/questions/2025-june-q018.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q019",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 19,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A trader loses two thirds of her investment one day. The next day she recovers one third of the previous day’s loss. What fraction of her initial investment remains?",
+      "options": {
+        "A": "1/3",
+        "B": "2/3",
+        "C": "2/9",
+        "D": "5/9"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Normalize the initial investment to 1.",
+        "The recovery is one third of 2/3, not one third of the remaining balance."
+      ],
+      "solution": "After losing 2/3 she has 1/3. The recovery is (1/3)(2/3)=2/9. Thus her final holding is 1/3+2/9=3/9+2/9=5/9 of the original.",
+      "theory": "A ratio records relative quantities: a:b:c means ak,bk,ck for one common positive scale k. Percent means per hundred, so a percentage increase p replaces a quantity x by x(1+p/100). Fractions of fractions are multiplied, whereas successive additions and subtractions must use the stated reference quantity. Direct proportionality means y=kx with the same constant k across comparisons; this constant can be cancelled when ranking values. Percentage error is measured against the intended or original quantity, not automatically against the observed quantity. To solve a word problem, introduce the common scale, translate each change algebraically, and reduce the resulting ratio. State units throughout. Common mistakes include adding a fixed amount to ratio entries without determining their scale, confusing percentage points with percent change, and treating recovered losses as a fraction of the remaining balance.",
+      "similar_questions": [
+        {
+          "prompt": "An investment loses half and then recovers one fourth of that loss. What fraction remains?",
+          "solution": "The remaining fraction is 1/2+(1/4)(1/2)=1/2+1/8=5/8."
+        },
+        {
+          "prompt": "A holding loses 40% and recovers half the loss. What percentage of the initial holding remains?",
+          "solution": "After the loss 60% remains; recovery is half of 40%, namely 20% of initial value. Total is 80%."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 19, PDF page 13. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295494.",
+      "page": 13,
+      "image": "assets/questions/2025-june-q019.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q020",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 20,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Rahman, George, Vedant wear red, green, violet shirts, one each. Rahman and the person in violet notice no one wears a colour starting with his own initial. Which match is correct?",
+      "options": {
+        "A": "Rahman–Violet, George–Red, Vedant–Green",
+        "B": "Rahman–Green, George–Violet, Vedant–Red",
+        "C": "Rahman–Green, George–Red, Vedant–Violet",
+        "D": "Rahman–Red, George–Violet, Vedant–Green"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Rahman cannot wear red, George cannot wear green, and Vedant cannot wear violet.",
+        "Rahman and the violet-shirted person are distinct, so Rahman cannot wear violet either."
+      ],
+      "solution": "Rahman is neither red (matching initial) nor violet (he is distinct from that person), hence green. George cannot be green and Vedant cannot be violet. With red and violet remaining, Vedant wears red and George violet. This is option B.",
+      "theory": "A coding or relationship puzzle is solved by translating each assertion into a precise constraint. A substitution code assigns a fixed digit or symbol to each letter; repeated letters must therefore receive repeated symbols. A letter not present in the example remains unspecified unless an additional rule is stated. In family relationships, replace descriptions one step at a time and identify the speaker before interpreting possessives such as “my”. In assignment puzzles, an exclusion eliminates a possible pairing, and a one-to-one assignment requires each available item to be used once. Distinct people mentioned together are normally distinct participants. Build a small table of possibilities and remove forbidden entries, then verify the surviving assignment against every sentence. Avoid inventing an alphabetic rule from a single example or confusing the person in a photograph with that person's parent.",
+      "similar_questions": [
+        {
+          "prompt": "Anna, Bea, Cara wear amber, blue, coral, none matching initials. Anna is distinct from the coral wearer. Determine the assignment.",
+          "solution": "Anna cannot wear amber or coral, so blue. Cara cannot wear coral, so amber. Bea takes coral; all exclusions are satisfied."
+        },
+        {
+          "prompt": "Three people A,B,C take tasks X,Y,Z. A cannot take X or Z; B cannot take Z. Assign tasks.",
+          "solution": "A must take Y. The remaining tasks are X,Z; B cannot take Z, so B takes X and C takes Z."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 20, PDF page 14. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295495.",
+      "page": 14,
+      "image": "assets/questions/2025-june-q020.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q022",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "Let A={p/q∈(0,1):p∈ℕ, q=2ⁿ for n∈ℕ∪{0}, gcd(p,q)=1}, B={p/q∈(0,1):p∈ℕ, q=2ⁿ5ᵐ for n,m∈ℕ∪{0}, gcd(p,q)=1}, and C={p/q∈(0,1):p/q has a terminating decimal expansion}. Which statement is true?",
+      "options": {
+        "A": "A⊊C and B⊊C",
+        "B": "A⊊C⊊B",
+        "C": "A⊊B⊊C",
+        "D": "A⊊B=C"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "A terminating decimal is an integer divided by a power of 10.",
+        "For a reduced fraction, its denominator must divide some 10ᵏ."
+      ],
+      "solution": "If p/q in lowest terms terminates after k decimal places, p/q=a/10ᵏ; coprimality forces q|10ᵏ. Thus q has only prime factors 2 and 5. Conversely if q=2ⁿ5ᵐ, choose k≥max(n,m); then q|10ᵏ and p/q has a terminating decimal. Hence B=C. Every dyadic rational in A lies in B. The inclusion is strict since 1/5∈B but 1/5∉A. Therefore A⊊B=C.",
+      "theory": "A rational number is in lowest terms when its numerator and denominator are coprime. A terminating base-b expansion means that the number equals an integer divided by bᵏ for some nonnegative integer k. For p/q in lowest terms, this is equivalent to q dividing bᵏ: one direction follows by cross-multiplication and Euclid's divisibility lemma, and the other by multiplying numerator and denominator to obtain denominator bᵏ. Unique prime factorization therefore says that only primes dividing b may divide q. In base ten these primes are 2 and 5; dyadic rationals use only 2. To prove strict inclusion, establish ordinary inclusion first and exhibit one element of the larger set outside the smaller. An unreduced denominator can be misleading, so cancellation must precede the prime-factor test.",
+      "similar_questions": [
+        {
+          "prompt": "Does 7/40 have a terminating decimal?",
+          "solution": "40=2³·5, so it divides 10³. Multiplying numerator and denominator by 25 gives 175/1000=.175."
+        },
+        {
+          "prompt": "Which of 1/3 and 1/9 terminate in base 12?",
+          "solution": "12 has prime factors 2,3. Both denominators use only 3; 3 divides 12 and 9 divides 12². In fact 1/3=4/12 and 1/9=16/144."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 22, PDF page 16. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295497.",
+      "page": 16,
+      "image": "assets/questions/2025-june-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q023",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 23,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "Let A,B be nonempty subsets of ℕ with |A|≥2. Let S₁={f:A→B:f is one-to-one} and S₂={g:B→A:g is onto}. Which statement is true?",
+      "options": {
+        "A": "If A⊊B and B is finite, there is a one-to-one map S₂→S₁.",
+        "B": "If B=ℕ, there is a one-to-one map S₂→B.",
+        "C": "If B=ℕ and A is finite, there is a one-to-one map B→S₁.",
+        "D": "If A is finite, S₂ is finite for any B."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "For finite A and B=ℕ, construct infinitely many distinct injections A→ℕ.",
+        "Test the other claims using A={1,2}, either B={1,2,3,4} or B=ℕ."
+      ],
+      "solution": "For C enumerate A={a₁,…,aₖ}, and for n∈ℕ define fₙ(aᵢ)=kn+i (i=1,…,k). Each fₙ is injective and different n give different maps, yielding an injection ℕ→S₁. A is false: for A={1,2}, B={1,2,3,4}, |S₁|=4·3=12, but |S₂|=2⁴−2=14. For B=ℕ,A={1,2}, there are uncountably many surjections: each nonempty proper subset of ℕ gives a distinct map by assigning 1 on that subset and 2 elsewhere. Hence no injection S₂→ℕ exists, and S₂ is not finite. This disproves B and D.",
+      "theory": "An injective map sends different domain elements to different images, whereas a surjective map attains every codomain element. For finite sets with sizes k and m, the number of injections from a k-element set to an m-element set is m(m−1)⋯(m−k+1), with zero possibilities if k>m. Onto maps from m points to two points correspond to binary assignments except the two constant ones, giving 2ᵐ−2. For infinite domains even a finite codomain of size at least two can yield uncountably many functions: binary-valued functions correspond to subsets, and Cantor's theorem makes the power set of ℕ uncountable. To establish an injection between function spaces, construct distinct indexed functions explicitly. Do not infer finite cardinality of a function space from finite cardinality of its codomain.",
+      "similar_questions": [
+        {
+          "prompt": "Count injections from a two-element set to a five-element set.",
+          "solution": "The first image has 5 choices and the second 4, so there are 20 injections."
+        },
+        {
+          "prompt": "Count surjections from a four-element set onto a two-element set.",
+          "solution": "There are 2⁴=16 functions. Remove the two constant functions that omit one target; 14 remain."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 23, PDF page 17. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295498.",
+      "page": 17,
+      "image": "assets/questions/2025-june-q023.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q024",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 24,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f:ℝ\\ℚ→ℝ\\ℚ be f(x)=(3x+2)/(4x+3). Let x₁ be irrational and xₙ₊₁=f(xₙ). Suppose xₙ converges to a real ℓ. Which is true?",
+      "options": {
+        "A": "If ℓ is positive, ℓ=√3/2.",
+        "B": "If ℓ is positive, ℓ=1/√2.",
+        "C": "If ℓ is negative, ℓ=−√3/2.",
+        "D": "If ℓ is negative, ℓ=−1/2."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the recurrence after cross-multiplication to avoid a potential limit at the pole.",
+        "Passing to the limit gives ℓ(4ℓ+3)=3ℓ+2."
+      ],
+      "solution": "Each irrational xₙ avoids −3/4, so xₙ₊₁(4xₙ+3)=3xₙ+2. Both xₙ and xₙ₊₁ tend to ℓ; taking limits yields 4ℓ²+3ℓ=3ℓ+2, or ℓ²=1/2. Therefore the positive possible limit is 1/√2 and the negative is −1/√2. Both are irrational fixed points, so starting at either realizes its limit; the negative alternatives are not valid. The Möbius map preserves irrationality because solving a rational output y for x gives x=(2−3y)/(4y−3), rational when possible.",
+      "theory": "A convergent iterative sequence xₙ₊₁=f(xₙ) often has a fixed-point limit: if f is continuous at the limit ℓ, then ℓ=f(ℓ). Rational functions are continuous where their denominators are nonzero, but that condition must be checked rather than assumed. Cross-multiplying the recurrence before taking limits gives a polynomial identity valid for every term and can exclude a pole without invoking continuity there. The shifted sequence xₙ₊₁ has the same limit as xₙ. A fixed-point equation supplies necessary possible limits; it does not by itself prove convergence from all starting values. To refute an asserted implication concerning a sign, starting at an actual fixed point supplies a convergent counterexample. For a nondegenerate Möbius map with rational coefficients, an irrational input cannot have a rational output because the inverse equation would force a rational input.",
+      "similar_questions": [
+        {
+          "prompt": "If xₙ₊₁=(2xₙ+3)/(xₙ+2) converges, find possible limits.",
+          "solution": "Cross-multiplication and limits give ℓ(ℓ+2)=2ℓ+3, hence ℓ²=3. Possible limits are ±√3; starting at each fixed point realizes it."
+        },
+        {
+          "prompt": "If xₙ₊₁=(xₙ+2)/3 and the sequence converges, find its limit.",
+          "solution": "Continuity gives ℓ=(ℓ+2)/3, so ℓ=1. In fact xₙ−1=(x₁−1)/3ⁿ⁻¹ proves convergence for every starting value."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 24, PDF page 18. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 56295499.",
+      "page": 18,
+      "image": "assets/questions/2025-june-q024.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q025",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 25,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f(x)=x logₑ(1+1/x), x∈(0,∞). Which is true?",
+      "options": {
+        "A": "f is unbounded.",
+        "B": "f is increasing.",
+        "C": "lim(x→∞)f(x)=2.",
+        "D": "f is decreasing."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Differentiate and set t=1/x.",
+        "Show log(1+t)>t/(1+t) for t>0 by differentiating their difference."
+      ],
+      "solution": "f′(x)=log(1+1/x)−1/(x+1). Set t=1/x>0 and g(t)=log(1+t)−t/(1+t). Then g(0)=0 and g′(t)=t/(1+t)²>0, so f′(x)>0. Also log(1+t)<t for t>0, hence 0<f(x)<1, and log(1+t)/t→1 as t→0 shows f(x)→1 as x→∞. Thus only the increasing assertion is true.",
+      "theory": "A differentiable real function on an interval is increasing if its derivative is everywhere nonnegative, and strictly increasing when its derivative is positive. Logarithmic inequalities can be proved by introducing their difference and examining its derivative, rather than relying on a power series outside its range of validity. For t>0, integration of 1/(1+s) over [0,t] gives t/(1+t)<log(1+t)<t, since the integrand lies strictly between those endpoint values except at endpoints. Substitution t=1/x turns a limit at infinity into one at zero. The fundamental logarithmic limit log(1+t)/t→1 follows from the derivative of log at 1 or these bounds. Monotonicity and boundedness are independent properties; increasing functions on unbounded intervals need not be unbounded.",
+      "similar_questions": [
+        {
+          "prompt": "Show h(x)=x/(x+1) increases for x>0 and find its limit.",
+          "solution": "h′(x)=1/(x+1)²>0. Since h=1−1/(x+1), its limit at infinity is 1 and it is bounded by 1."
+        },
+        {
+          "prompt": "Prove log(1+t)<t for t>0.",
+          "solution": "Let k(t)=t−log(1+t). Then k(0)=0 and k′(t)=t/(1+t)>0, hence k(t)>0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 25, PDF page 19. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954100.",
+      "page": 19,
+      "image": "assets/questions/2025-june-q025.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q026",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 26,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For n≥1 define fₙ:[0,1]→ℝ by fₙ(x)=nx on [0,1/n], 2−nx on (1/n,2/n], and 0 on (2/n,1]. Which is true?",
+      "options": {
+        "A": "fₙ converges uniformly on [0,1] to a continuous f.",
+        "B": "fₙ converges pointwise to a discontinuous f.",
+        "C": "fₙ converges pointwise to a continuous f.",
+        "D": "fₙ does not converge pointwise on [0,1]."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Fix x before letting n tend to infinity.",
+        "For x>0 eventually 2/n<x; then compare with the moving peak x=1/n."
+      ],
+      "solution": "At x=0, fₙ(0)=0. For each fixed x>0 choose n>2/x; then x>2/n and fₙ(x)=0. Thus fₙ→f≡0 pointwise, and the limit is continuous. Yet fₙ(1/n)=1 for every n, so sup|fₙ−f|=1 and convergence is not uniform. Therefore C is true. For small n each branch is understood restricted to the declared domain [0,1].",
+      "theory": "Pointwise convergence means that for each fixed x and each ε>0 there is an index N that may depend on x, after which |fₙ(x)−f(x)|<ε. Uniform convergence requires one N that works for every x in the domain; equivalently the supremum norm of the error tends to zero. A narrow moving spike may eventually vanish at every fixed location while retaining a constant maximum height, producing pointwise but nonuniform convergence. The uniform limit theorem says that a uniform limit of continuous functions is continuous, but its converse is false: a continuous pointwise limit does not establish uniform convergence. Always determine the pointwise limit first, then analyze the supremum of the error, permitting the maximizing point to depend on n.",
+      "similar_questions": [
+        {
+          "prompt": "Let gₙ(x)=xⁿ on [0,1]. Find its pointwise limit and test uniform convergence.",
+          "solution": "For x<1, xⁿ→0; at 1 it stays 1. The discontinuous limit cannot be a uniform limit of continuous gₙ, so convergence is not uniform."
+        },
+        {
+          "prompt": "Let hₙ(x)=x/n on [0,1]. Is convergence to zero uniform?",
+          "solution": "The maximum error is sup₀≤x≤₁ x/n=1/n→0. Thus convergence is uniform and the limit is continuous."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 26, PDF page 20. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954101.",
+      "page": 20,
+      "image": "assets/questions/2025-june-q026.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q027",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 27,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which polynomial is the characteristic polynomial of a real 2×2 matrix A with trace(A)=7 and trace(A²)=29?",
+      "options": {
+        "A": "t²+7t+10",
+        "B": "t²−7t+29",
+        "C": "t²−7t−10",
+        "D": "t²−7t+10"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "For a 2×2 matrix the polynomial is t²−trace(A)t+det(A).",
+        "Use trace(A²)=trace(A)²−2det(A)."
+      ],
+      "solution": "For A=[[a,b],[c,d]], trace(A²)=a²+d²+2bc=(a+d)²−2(ad−bc). Thus 29=49−2det(A), giving det(A)=10. The characteristic polynomial det(tI−A) is t²−7t+10. It is realized, for example, by diag(2,5).",
+      "theory": "The characteristic polynomial of an n×n matrix A is det(tI−A); its roots over an algebraic closure are eigenvalues counted with algebraic multiplicity. For a 2×2 matrix it is t²−tr(A)t+det(A). Trace is the sum of diagonal entries and also the sum of eigenvalues, while determinant is their product. Direct expansion yields tr(A²)=(tr A)²−2det A, even when the matrix is not diagonalizable. This identity is a special Newton relation between power sums and elementary symmetric functions. The Cayley–Hamilton theorem states that A satisfies its characteristic polynomial. In problems involving traces, recover polynomial coefficients using these invariant identities. Do not replace tr(A²) by (tr A)²; their difference encodes the determinant.",
+      "similar_questions": [
+        {
+          "prompt": "Find the characteristic polynomial when tr A=5 and tr A²=13 for a 2×2 matrix.",
+          "solution": "13=25−2det A gives det A=6. Hence the polynomial is t²−5t+6=(t−2)(t−3)."
+        },
+        {
+          "prompt": "A has eigenvalues 1 and 4. Compute tr A² and its characteristic polynomial.",
+          "solution": "The squared eigenvalues sum to 1+16=17. Trace is 5, determinant 4, and the polynomial is t²−5t+4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 27, PDF page 21. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954102.",
+      "page": 21,
+      "image": "assets/questions/2025-june-q027.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q028",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 28,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let 𝔽₅ be the field with five elements. How many 2×2 matrices with entries in 𝔽₅ have rank one?",
+      "options": {
+        "A": "125",
+        "B": "144",
+        "C": "145",
+        "D": "480"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Write a nonzero rank-one matrix as uvᵀ with u,v nonzero.",
+        "Two pairs give the same matrix precisely by reciprocal nonzero scalar rescaling."
+      ],
+      "solution": "Each nonzero rank-one matrix equals uvᵀ with u,v∈𝔽₅²\\{0}. There are (5²−1)²=24² such pairs. The same matrix has exactly 5−1=4 representations, namely (cu,c⁻¹v) for c≠0. Hence the count is 576/4=144. Alternatively there are (25−1)/(5−1)=6 possible image lines, and for each line 25−1=24 nonzero maps into it.",
+      "theory": "The rank of a matrix is the dimension of its column space, or equivalently of its image as a linear transformation. A rank-one matrix over a field has the form uvᵀ with both vectors nonzero, because all columns are scalar multiples of one fixed nonzero column. This representation is not unique: multiplying u by a nonzero scalar and v by its inverse preserves the product. Over a finite field of q elements there are qᵐ−1 nonzero m-vectors, and each one-dimensional subspace contains q−1 nonzero vectors. Consequently the number of rank-one m×n matrices is (qᵐ−1)(qⁿ−1)/(q−1). This formula excludes the zero matrix, whose rank is zero. The finite-field assumption matters: counting scalar representatives without dividing by q−1 overcounts each matrix.",
+      "similar_questions": [
+        {
+          "prompt": "How many rank-one 2×2 matrices over 𝔽₂ are there?",
+          "solution": "There are 3 choices each for u and v, and only one nonzero scalar. Hence 3·3/1=9."
+        },
+        {
+          "prompt": "Count rank-one 2×3 matrices over 𝔽₃.",
+          "solution": "The formula gives (3²−1)(3³−1)/(3−1)=8·26/2=104."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 28, PDF page 21. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954103.",
+      "page": 21,
+      "image": "assets/questions/2025-june-q028.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q029",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 29,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "X is the real vector space of twice differentiable real functions on [0,1]. Define φ:X→ℝ³ by φ(f)=(f(1),f′(1),f″(1)). Which is true?",
+      "options": {
+        "A": "dim(X/ker φ)=3.",
+        "B": "ker φ is finite dimensional.",
+        "C": "dim(X/ker φ)=1.",
+        "D": "X is finite dimensional."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Construct a quadratic with any prescribed value and first two derivatives at 1.",
+        "Apply the first isomorphism theorem; powers (x−1)ᵏ for k≥3 lie in the kernel."
+      ],
+      "solution": "For any (a,b,c)∈ℝ³, f(x)=a+b(x−1)+(c/2)(x−1)² has φ(f)=(a,b,c), so φ is onto. The first isomorphism theorem gives X/ker φ≅im φ=ℝ³, hence dimension 3. The functions (x−1)ᵏ, k≥3, lie in ker φ and are linearly independent, proving the kernel and X are infinite dimensional.",
+      "theory": "For a linear map T:V→W, its kernel consists of vectors sent to zero and its image consists of all attained outputs. The quotient V/ker T identifies vectors whose difference lies in the kernel. The first isomorphism theorem gives V/ker T≅im T, regardless of whether V is finite dimensional; therefore a finite-dimensional image yields a finite-dimensional quotient even when the original space and kernel are infinite dimensional. Evaluation of a function and its derivatives at a fixed point is linear. Polynomials in powers of x−a provide prescribed derivative data through their Taylor coefficients, and sufficiently high powers annihilate all low-order derivative evaluations. Distinct monomials are linearly independent because a zero polynomial has every coefficient zero. Avoid applying finite-dimensional subtraction to two infinite dimensions.",
+      "similar_questions": [
+        {
+          "prompt": "On polynomials define T(p)=(p(0),p′(0)). Find quotient dimension.",
+          "solution": "The polynomial a+bx attains any (a,b), so T is onto ℝ². The quotient by its kernel is isomorphic to ℝ² and has dimension 2; the kernel contains all powers xᵏ for k≥2."
+        },
+        {
+          "prompt": "Let T:ℝ⁴→ℝ² be T(a,b,c,d)=(a+c,b+d). Find kernel dimension.",
+          "solution": "T is onto. Kernel vectors satisfy c=−a,d=−b, giving basis (1,0,−1,0),(0,1,0,−1) and dimension 2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 29, PDF page 22. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954104.",
+      "page": 22,
+      "image": "assets/questions/2025-june-q029.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q030",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 30,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For A=[[29,0,55,17],[1,28,46,26],[17,13,33,38],[21,67,0,13]], what is its largest real eigenvalue?",
+      "options": {
+        "A": "101",
+        "B": "67",
+        "C": "103",
+        "D": "113"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Inspect the row sums.",
+        "Use the maximum component of an eigenvector to bound the modulus of every eigenvalue."
+      ],
+      "solution": "Every row sums to 101, so A(1,1,1,1)ᵀ=101(1,1,1,1)ᵀ and 101 is an eigenvalue. For any complex eigenpair Av=λv choose i with |vᵢ|=maxⱼ|vⱼ|>0. Since entries are nonnegative, |λ||vᵢ|≤Σⱼaᵢⱼ|vⱼ|≤101|vᵢ|. Thus |λ|≤101. In particular no real eigenvalue exceeds 101, making it the largest real eigenvalue.",
+      "theory": "An eigenvalue λ of a square matrix A is a scalar for which Av=λv for some nonzero vector v. Constant row sum s makes the all-ones vector an eigenvector with eigenvalue s. The induced infinity norm of a matrix is the maximum absolute row sum, and every eigenvalue has modulus at most any induced matrix norm. One proof selects a component of an eigenvector of maximal magnitude and applies the triangle inequality to that row of the eigenvalue equation. For matrices with nonnegative entries and constant row sum s, the absolute row sum is s, so s is both an eigenvalue and the spectral radius. Nonnegativity is necessary for this particular bound from ordinary row sums; signed entries may have larger absolute row sums and larger eigenvalues.",
+      "similar_questions": [
+        {
+          "prompt": "Find the largest real eigenvalue of [[2,3],[4,1]].",
+          "solution": "Rows sum to 5, giving eigenvalue 5. The nonnegative row-sum bound puts every eigenvalue within |λ|≤5, so 5 is largest. The other eigenvalue is −2."
+        },
+        {
+          "prompt": "Does row sum 1 imply spectral radius 1 for [[3,−2],[−2,3]]?",
+          "solution": "No. Eigenvalues are 1 on (1,1) and 5 on (1,−1). Negative entries invalidate the nonnegative row-sum bound; the absolute row sum is 5."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 30, PDF page 23. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954105.",
+      "page": 23,
+      "image": "assets/questions/2025-june-q030.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q031",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 31,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For n≥1 define fₙ∈C[0,π] by sin(nx)/sin x for 0<x<π, fₙ(0)=n, fₙ(π)=(−1)ⁿ⁻¹n. Let V=spanℝ{f₁,f₂,f₃}, with ⟨f,g⟩=(2/π)∫₀^π f(x)g(x)sin²x dx. Which is true?",
+      "options": {
+        "A": "f₄∈V.",
+        "B": "{f₁,f₂,f₃} is an orthonormal basis of V.",
+        "C": "dim V=2.",
+        "D": "{f₁,f₂,f₃} is orthogonal but not orthonormal."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The weight sin²x cancels the denominators in the products.",
+        "Use sine-function orthogonality on [0,π]."
+      ],
+      "solution": "For positive m,n, ⟨fₘ,fₙ⟩=(2/π)∫₀^π sin(mx)sin(nx)dx=δₘₙ. This follows by the product-to-sum formula, with integral π/2 when m=n and zero otherwise. Thus f₁,f₂,f₃ are orthonormal, hence independent and a basis of their span, of dimension 3. The same identity gives f₄ orthogonal to V with norm 1; if f₄ belonged to V it would be orthogonal to itself, impossible. Only B is true.",
+      "theory": "An inner product is a positive-definite symmetric bilinear form on a real vector space. A family is orthogonal if distinct vectors have zero inner product and orthonormal if each vector also has norm one. Any finite orthogonal family of nonzero vectors is linearly independent: take inner products with each member in a proposed zero combination to obtain its coefficient. Weighted integral inner products ∫fgw are positive definite on continuous functions when the nonnegative weight is positive throughout the interval interior. Isolated endpoint zeros do not affect positivity. Sine functions on [0,π] satisfy ∫sin(mx)sin(nx)=0 for distinct positive integers and π/2 for equal indices, proved through product-to-sum identities. Scaling by 2/π normalizes their norms. Boundary extensions affect continuity, but endpoints do not change the integral.",
+      "similar_questions": [
+        {
+          "prompt": "Normalize sin x under the ordinary L² inner product on [0,π].",
+          "solution": "Its squared norm is ∫sin²x dx=π/2, so √(2/π)sin x has norm one."
+        },
+        {
+          "prompt": "If u,v are orthogonal and have squared norms 2 and 3, find ‖2u−v‖².",
+          "solution": "Expanding the inner product gives 4‖u‖²−4⟨u,v⟩+‖v‖²=8+0+3=11."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 31, PDF page 24. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954106.",
+      "page": 24,
+      "image": "assets/questions/2025-june-q031.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q032",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 32,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "V={ax³+bx²+cx:a,b,c∈ℝ}. For f∈V define Q(f)=∫₋₁¹(f′(t))²dt. Which assertion is FALSE?",
+      "options": {
+        "A": "Q is a positive definite quadratic form on V.",
+        "B": "Q takes every positive real value.",
+        "C": "Q(x)=2.",
+        "D": "For all f,g∈V, Q(f+g)=Q(f)+Q(g)."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Expand the square of f′+g′.",
+        "Test the claimed additivity using f=g=x."
+      ],
+      "solution": "Q is quadratic, and Q(f)≥0. If Q(f)=0, continuity and nonnegativity imply f′≡0, hence f is constant. V contains no nonzero constants, so f=0; Q is positive definite. Also Q(x)=∫₋₁¹1dt=2. For any r>0, Q(√(r/2)x)=r. But Q(x+x)=Q(2x)=8, while Q(x)+Q(x)=4. Thus D is false; the missing cross term is 2∫f′g′.",
+      "theory": "A real quadratic form Q comes from a symmetric bilinear form B through Q(v)=B(v,v), and satisfies Q(cv)=c²Q(v). It is positive definite if Q(v)>0 for every nonzero v. Integral expressions such as ∫(f′)² are automatically nonnegative, but their kernel must be checked: derivative zero means a constant function, so positivity depends on whether nonzero constants are allowed in the underlying space. Continuity ensures that a nonnegative integrand with zero integral vanishes everywhere. Quadratic forms are generally not additive; expansion gives Q(u+v)=Q(u)+2B(u,v)+Q(v). Positive scaling lets a nonzero positive quadratic form attain every positive value. Confusing a quadratic form with a linear functional is the central pitfall; homogeneity has degree two, not one.",
+      "similar_questions": [
+        {
+          "prompt": "On V=span{x,x²}, is ∫₀¹(f′)² positive definite?",
+          "solution": "Zero integral forces f′=0, and the only constant in V is zero, so yes. For f=ax+bx² the value is a²+2ab+4b²/3."
+        },
+        {
+          "prompt": "For Q(a,b)=a²+b², test Q((1,0)+(1,0))=Q(1,0)+Q(1,0).",
+          "solution": "The left side is Q(2,0)=4 and the right side is 2. The cross term is 2, so additivity fails."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 32, PDF page 25. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954107.",
+      "page": 25,
+      "image": "assets/questions/2025-june-q032.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q033",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 33,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f:ℂ→ℂ be a polynomial. For R>0 let γ_R(t)=Re^{2πit}, 0≤t≤1. Suppose ∫₀¹|(f∘γ_R)(t)γ_R′(t)|dt→c∈ℝ as R→∞. Which is FALSE?",
+      "options": {
+        "A": "zf(1/z)→0 as |z|→∞.",
+        "B": "f is constant.",
+        "C": "c=0.",
+        "D": "c>0."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The displayed absolute value gives an integral of magnitudes, not a signed contour integral.",
+        "For a nonzero degree-d polynomial, its modulus on a large circle is uniformly comparable to Rᵈ."
+      ],
+      "solution": "Suppose f≠0 has degree d≥0 and leading coefficient a_d≠0. Uniformly in θ, f(Re^{iθ})/(a_dRᵈe^{idθ})→1, so for sufficiently large R, |f(Re^{iθ})|≥|a_d|Rᵈ/2. Also |γ_R′(t)|=2πR. The integral is therefore ≥π|a_d|R^{d+1}→∞, contrary to its finite limit. Hence f≡0, and c=0. This makes A,B,C true and c>0 false.",
+      "theory": "A polynomial's leading term controls its growth uniformly on large circles. If f(z)=a_dzᵈ plus lower-degree terms with a_d≠0, the sum of lower terms divided by |a_d|Rᵈ tends to zero uniformly for |z|=R. Thus its modulus is eventually bounded below by a positive multiple of Rᵈ. The parameterized circle γ_R(t)=Re^{2πit} has speed |γ_R′|=2πR, so integration of |f(γ_R)γ_R′| measures the magnitude of f integrated against arc length. It is fundamentally different from a complex contour integral ∫f(z)dz, where cancellations can yield zero for every polynomial. A finite limiting magnitude integral excludes every nonzero polynomial, including a nonzero constant. Always locate absolute-value bars precisely before applying Cauchy's theorem or asymptotic arguments.",
+      "similar_questions": [
+        {
+          "prompt": "Evaluate ∫₀¹|γ_R′(t)|dt for γ_R=Re^{2πit}.",
+          "solution": "The speed is constant 2πR, so the integral is 2πR, the circumference; it diverges as R→∞."
+        },
+        {
+          "prompt": "Compare ∮_|z|=R z²dz with ∮_|z|=R |z²||dz|.",
+          "solution": "The analytic integral is zero because z² has primitive z³/3. The magnitude integral equals R² times circumference 2πR, hence 2πR³."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 33, PDF page 26. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954108.",
+      "page": 26,
+      "image": "assets/questions/2025-june-q033.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q034",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 34,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let X be the image of [0,1] under f(z)=(z−i)/(z+i). Which is true?",
+      "options": {
+        "A": "X is the line segment joining −1 and −i.",
+        "B": "X={e^{iθ}:θ∈[π,3π/2]}.",
+        "C": "X is the line segment joining −1 and 1.",
+        "D": "X={e^{iθ}:θ∈[−π/2,π]}."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "For real x, numerator and denominator have equal modulus.",
+        "Find the endpoint images and the signs of real and imaginary parts for 0<x<1."
+      ],
+      "solution": "For real x, f(x)=[(x−i)²]/(x²+1)=(x²−1)/(x²+1)−i·2x/(x²+1), with |f(x)|=1. It sends 0 to −1 and 1 to −i, with both real and imaginary parts negative in between. More explicitly f(x)=e^{i(π+2 arctan x)}. As x rises from 0 to 1, that angle rises continuously from π to 3π/2. Thus X is exactly the lower-left quarter of the unit circle, option B.",
+      "theory": "A Möbius transformation (az+b)/(cz+d), with ad−bc≠0, is a bijection of the extended complex plane and maps generalized circles to generalized circles. A generalized circle is either a circle or a line, with the point at infinity included for lines. For a real variable x, the Cayley transformation (x−i)/(x+i) has modulus one because x−i and x+i are complex conjugates. To identify an interval image, endpoint images alone are insufficient: a circle has two connecting arcs, and one must determine the interior location or a continuous argument. Multiplying numerator and denominator by the conjugate separates real and imaginary parts. A parameter such as arctan x then identifies the traversed angular interval. Avoid replacing a curved arc with the straight chord connecting its endpoints.",
+      "similar_questions": [
+        {
+          "prompt": "Find the image of [0,∞) under (x−i)/(x+i).",
+          "solution": "The angle π+2arctan x ranges from π toward 2π, excluding 2π for finite x. Thus the image is the lower semicircle from −1 inclusive to 1 exclusive."
+        },
+        {
+          "prompt": "Compute the image of x=√3 under the same transformation.",
+          "solution": "The angle is π+2π/3=5π/3. Thus the image is 1/2−i√3/2, also obtained from real part (3−1)/4 and imaginary part −2√3/4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 34, PDF page 27. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954109.",
+      "page": 27,
+      "image": "assets/questions/2025-june-q034.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q035",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 35,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Which assertion is true? There exists an entire function f such that, for every positive integer n:",
+      "options": {
+        "A": "f⁽ⁿ⁾(0)=n!/nⁿ.",
+        "B": "f⁽ⁿ⁾(0)=n!nⁿ.",
+        "C": "f⁽ⁿ⁾(0)=(n−1)!.",
+        "D": "f⁽ⁿ⁾(0)=n!n."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Taylor coefficients are derivatives divided by n!.",
+        "An entire function requires infinite radius of convergence; examine the nth roots of the coefficients."
+      ],
+      "solution": "For A the Taylor coefficient is a_n=1/nⁿ, so |a_n|^{1/n}=1/n→0. The series a₀+Σₙ≥₁zⁿ/nⁿ has infinite radius and defines the required entire function. For B, coefficients nⁿ have nth roots n→∞, giving radius zero. For C, coefficients 1/n have nth roots tending to 1, giving radius 1. For D, coefficients n also have nth roots tending to 1, giving radius 1. Uniqueness of Taylor coefficients rules out alternative entire functions satisfying those latter derivative data.",
+      "theory": "An entire function is holomorphic on all of ℂ. Its Taylor expansion at zero is f(z)=Σa_nzⁿ with coefficients a_n=f⁽ⁿ⁾(0)/n!, and the series converges throughout the plane. The Cauchy–Hadamard formula states 1/R=limsup|a_n|^{1/n}, with R=∞ when that limsup is zero and R=0 when it is infinite. Derivative prescriptions therefore determine all nonconstant Taylor coefficients and leave only the constant term free. A power series with infinite radius constructs the desired entire function, whereas a finite radius proves that no entire function can have those coefficients, by uniqueness of analytic expansions. The factorial division is essential: the growth of the derivatives themselves cannot be used as though they were the power-series coefficients.",
+      "similar_questions": [
+        {
+          "prompt": "Can an entire function satisfy f⁽ⁿ⁾(0)=1 for every n≥1?",
+          "solution": "Coefficients are 1/n!, whose nth roots tend to zero. The function eᶻ−1, with arbitrary added constant, satisfies the requirement."
+        },
+        {
+          "prompt": "Can an entire function satisfy f⁽ⁿ⁾(0)=n!2ⁿ?",
+          "solution": "Coefficients 2ⁿ have nth-root limit 2, so radius is 1/2. They produce 1/(1−2z) near zero, which has a pole; no entire function exists."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 35, PDF page 28. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954110.",
+      "page": 28,
+      "image": "assets/questions/2025-june-q035.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q036",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 36,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be entire and f(ℂ)⊂{x+iy:y=x+1}. Which is true?",
+      "options": {
+        "A": "|f(z)|→∞ as |z|→∞.",
+        "B": "f(z)/z→0 as |z|→∞.",
+        "C": "zf(z)→0 as |z|→∞.",
+        "D": "f(z)→0 as |z|→∞."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "A line is not an open subset of the complex plane.",
+        "Apply the open mapping theorem to show f is constant."
+      ],
+      "solution": "If f were nonconstant, the open mapping theorem would make f(ℂ) open in ℂ. A subset of the line y=x+1 cannot contain a nonempty open disk, so f is constant, say f≡c on that line. Then c/z→0 as |z|→∞. The line does not contain zero, so c≠0: |f| stays finite and positive, |zf| diverges, and f does not tend to zero. Thus only B is true.",
+      "theory": "The open mapping theorem says that a nonconstant holomorphic function on a connected open domain sends open sets to open sets. In particular, a nonconstant entire function has an image open in ℂ. A line, circle, or other set with empty interior cannot contain such an image; holomorphic functions whose values are constrained to these sets must therefore be constant. This argument does not require boundedness, unlike Liouville's theorem. One can also derive constancy from the Cauchy–Riemann equations when real and imaginary parts satisfy a linear relation. Once constancy is established, evaluate each claimed asymptotic behavior for that constant, including whether zero belongs to the prescribed image set. A constant function need not be zero, and multiplying it by z and dividing it by z have very different limits.",
+      "similar_questions": [
+        {
+          "prompt": "If an entire function has real values everywhere, prove it is constant.",
+          "solution": "The real axis has empty interior, whereas a nonconstant holomorphic image is open. Therefore the function is constant."
+        },
+        {
+          "prompt": "An entire function has values on |w|=3. Find the limit of f(z)/z.",
+          "solution": "The circular image restriction forces f≡c with |c|=3. Hence |f(z)/z|=3/|z|→0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 36, PDF page 28. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954111.",
+      "page": 28,
+      "image": "assets/questions/2025-june-q036.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q037",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 37,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "Which statement is true?",
+      "options": {
+        "A": "p∤1+(p−1)! for some odd prime p.",
+        "B": "p|(1234)^{p−1}−1 for all primes p>700.",
+        "C": "There exist a∈ℤ and a prime p>11 with p∤aᵖ−a.",
+        "D": "p∤(p²)!/(p!)² for some odd prime p."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Recall Wilson’s theorem and both forms of Fermat’s little theorem.",
+        "Factor 1234, and count the p-factors in the factorial quotient."
+      ],
+      "solution": "Wilson gives (p−1)!≡−1 mod p for every prime, so A is false. Since 1234=2·617, every prime p>700 is coprime to 1234; Fermat gives 1234^{p−1}≡1 mod p, proving B. Fermat also gives aᵖ≡a for all integers a, disproving C. For D use Legendre: v_p((p²)!)=p+1 and v_p((p!)²)=2. The quotient has p-adic valuation p−1>0, so p divides it for every odd prime. Thus D is false.",
+      "theory": "Fermat's little theorem states aᵖ≡a modulo a prime p for every integer a. When p does not divide a, cancelling a yields a^{p−1}≡1. Wilson's theorem characterizes primes by (p−1)!≡−1 mod p. Legendre's formula counts prime factors in factorials: v_p(n!)=Σₖ≥₁⌊n/pᵏ⌋. The valuation of a product is the sum of valuations, and of an integer quotient the difference. A positive valuation means divisibility by p. Before applying Fermat's exponent p−1 form, verify coprimality by factoring the base or ruling out all its prime factors. For factorial quotients, ordinary cancellation is often inefficient; valuation counts handle repeated powers systematically. A counterexample to a universally quantified nondivisibility statement must respect all stated prime restrictions.",
+      "similar_questions": [
+        {
+          "prompt": "Show 7 divides 10⁶−1.",
+          "solution": "Since 7 does not divide 10 and 7 is prime, Fermat gives 10⁶≡1 mod 7, proving the divisibility."
+        },
+        {
+          "prompt": "Find v₃(12!).",
+          "solution": "Legendre gives ⌊12/3⌋+⌊12/9⌋=4+1=5, so 3⁵ divides 12! and 3⁶ does not."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 37, PDF page 29. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954112.",
+      "page": 29,
+      "image": "assets/questions/2025-june-q037.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q038",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 38,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be a subring of ℚ such that for every nonzero rational r, either r∈A or 1/r∈A. Which statement is FALSE?",
+      "options": {
+        "A": "{a∈A:1/a∉A}∪{0} is an additive subgroup of ℚ.",
+        "B": "A has at most one maximal ideal.",
+        "C": "If A≠ℚ, A has infinitely many prime ideals.",
+        "D": "For any nonzero a,b∈A, a divides b or b divides a in A."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The hypothesis makes A a valuation ring: compare a/b and b/a.",
+        "Use the localization ℤ_(2), whose denominators are odd, as a counterexample to the prime-ideal claim."
+      ],
+      "solution": "The hypothesis applied to 1 implies 1∈A. For a,b≠0 in A, a/b or b/a lies in A, hence one divides the other, proving D. Let m be zero together with the nonunits. If a,b are nonzero nonunits, suppose b/a∈A (the other case is symmetric); then a+b=a(1+b/a) cannot be a unit, since that would make a a unit. Negation and multiplication by ring elements preserve nonunits, so m is an ideal and in particular an additive subgroup. Every proper ideal contains only nonunits, and A/m is a field; thus m is the unique maximal ideal unless A is already a field (then m={0} is maximal). For C take A=ℤ_(2)={m/n:n odd}. It has the required reciprocal property, is not ℚ, and its only prime ideals are (0) and 2A. Indeed localization retains precisely prime ideals of ℤ disjoint from the odd integers, namely (0),(2). Thus C is false.",
+      "theory": "A valuation ring of a field K is a subring A in which every nonzero r∈K has r or its reciprocal in A. This condition implies comparability of divisibility for any two nonzero elements of A. The nonunits form an ideal: comparability factors a sum of nonunits by one of them, and a product containing a nonunit cannot become invertible. Since every element outside this ideal is a unit, it is the unique maximal ideal, so valuation rings are local. The localization ℤ_(p) consists of fractions with denominator not divisible by p and is a discrete valuation ring. Its prime ideals are (0) and pℤ_(p), obtained from prime ideals of ℤ avoiding the multiplicative set. A proper subring of a field need not have infinitely many prime ideals; locality and dimension are separate properties.",
+      "similar_questions": [
+        {
+          "prompt": "Why is ℤ_(3) a valuation ring of ℚ?",
+          "solution": "Write a rational in lowest terms m/n. If 3∤n it lies in ℤ_(3). If 3|n, coprimality gives 3∤m, so its reciprocal n/m lies there."
+        },
+        {
+          "prompt": "Identify units and maximal ideal of ℤ_(5).",
+          "solution": "A fraction m/n with 5∤n is invertible precisely when 5∤m. Nonunits have numerator divisible by 5 and form 5ℤ_(5), the unique maximal ideal."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 38, PDF page 30. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954113.",
+      "page": 30,
+      "image": "assets/questions/2025-june-q038.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q039",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 39,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which statement is true?",
+      "options": {
+        "A": "The ideal 2ℤ[i] is maximal in ℤ[i].",
+        "B": "The ideal Xℂ[X,Y] is maximal in ℂ[X,Y].",
+        "C": "Polynomials in ℂ[X] whose coefficients sum to 0 form a maximal ideal.",
+        "D": "The ideal (√2−1)ℤ[√2] is maximal in ℤ[√2]."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "An ideal is maximal exactly when the quotient is a field.",
+        "Summing coefficients is evaluation at X=1; check whether √2−1 is a unit."
+      ],
+      "solution": "Evaluation ev₁:ℂ[X]→ℂ is onto, and its kernel consists exactly of polynomials whose coefficient sum is zero, namely (X−1). The quotient is ℂ, a field, so C is true. A is false: in ℤ[i]/(2), i+1 is a nonzero nilpotent, since (i+1)²=2i=0, so the quotient is not a field. B has quotient ℂ[Y], not a field. D is the whole ring because (√2−1)(√2+1)=1; a maximal ideal must be proper.",
+      "theory": "For a commutative ring with identity, a proper ideal I is maximal if and only if R/I is a field, and prime if and only if the quotient is an integral domain. A surjective ring homomorphism to a field therefore has maximal kernel by the first isomorphism theorem. Evaluation at a point a maps K[X] onto the field K and has kernel (X−a), giving a standard maximal ideal. In several variables, removing only one variable usually leaves a polynomial ring, which is not a field. An ideal generated by a unit equals the entire ring and cannot be maximal. Nonzero nilpotents in a quotient disprove that it is a domain or field. Check properness and the actual quotient rather than assuming that a familiar prime integer remains prime in a larger ring.",
+      "similar_questions": [
+        {
+          "prompt": "Is (X−2) maximal in ℝ[X]?",
+          "solution": "Evaluation at 2 has kernel (X−2) and image ℝ. Thus ℝ[X]/(X−2)≅ℝ is a field, so the ideal is maximal."
+        },
+        {
+          "prompt": "Is (X,Y) maximal in ℂ[X,Y]?",
+          "solution": "Evaluation at (0,0) maps onto ℂ and has kernel (X,Y). The quotient is ℂ, hence the ideal is maximal."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 39, PDF page 30. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954114.",
+      "page": 30,
+      "image": "assets/questions/2025-june-q039.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q040",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 40,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "S={1,2,3,4,5} has topology τ={∅,{1},S}. How many homeomorphisms of S onto itself exist?",
+      "options": {
+        "A": "25",
+        "B": "120",
+        "C": "24",
+        "D": "6"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A homeomorphism must preserve the unique nonempty proper open set.",
+        "After fixing 1, the remaining four points may be freely permuted."
+      ],
+      "solution": "For a bijection h:S→S, continuity requires h⁻¹({1}) to be open. This preimage is a singleton, and the only open singleton is {1}, so h(1)=1. Conversely every bijection fixing 1 preserves ∅,{1},S and its inverse does too, hence is a homeomorphism. There are 4!=24 permutations of the other four points.",
+      "theory": "A topology on a set specifies the open subsets and must contain the empty set and whole space, be closed under arbitrary unions, and under finite intersections. A function is continuous when inverse images of open sets are open. A homeomorphism is a bijection whose map and inverse are continuous; it preserves the full topology, not just the underlying cardinality. On a finite space, identifying distinguished open sets can dramatically restrict allowable permutations. For the topology consisting only of ∅, one singled-out singleton, and the whole set, that unique open singleton must be fixed. All other points have identical topological roles and may be permuted freely. A bijection alone need not be a homeomorphism, and counting all n! permutations ignores any distinguished open subsets.",
+      "similar_questions": [
+        {
+          "prompt": "On a four-point set with topology {∅,{a},S}, count self-homeomorphisms.",
+          "solution": "They must fix a; every permutation of the remaining three points works. Thus the count is 3!=6."
+        },
+        {
+          "prompt": "Count self-homeomorphisms of a three-point discrete space.",
+          "solution": "Every subset is open, so every bijection and its inverse are continuous. All 3!=6 permutations are homeomorphisms."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 40, PDF page 31. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954115.",
+      "page": 31,
+      "image": "assets/questions/2025-june-q040.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q041",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 41,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Given that φ(x)=x solves y″−(2/x²+1/x)(xy′−y)=0 for 0<x<∞, what is the general solution?",
+      "options": {
+        "A": "(a+be^{−2x})x, a,b∈ℝ.",
+        "B": "(a+be^{2x})x, a,b∈ℝ.",
+        "C": "aeˣ+bx, a,b∈ℝ.",
+        "D": "(a+beˣ)x, a,b∈ℝ."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use the known nonzero solution by setting y=xv.",
+        "Compute xy′−y and y″; cancellations reduce the equation to v″−v′=0."
+      ],
+      "solution": "Set y=xv. Then y′=v+xv′, y″=2v′+xv″, and xy′−y=x²v′. The ODE becomes 2v′+xv″−(2+x)v′=x(v″−v′)=0. Since x>0, v″−v′=0, so v′=Ceˣ and v=a+beˣ. Thus y=x(a+beˣ). The two solutions x and xeˣ are independent because their Wronskian is x²eˣ≠0 on the domain, confirming that this is the full two-parameter solution.",
+      "theory": "A homogeneous linear second-order differential equation y″+P(x)y′+Q(x)y=0 has a two-dimensional solution space on an interval where its coefficients are continuous. If a nonzero solution y₁ is known, reduction of order sets y=y₁v, and the term proportional to v disappears because y₁ already satisfies the equation. The resulting equation involves v′ and v″ and can be reduced to a first-order equation for v′. Dividing by y₁ requires an interval where it does not vanish. Two solutions form a fundamental system if their Wronskian y₁y₂′−y₁′y₂ is nonzero at a point; then every solution is their linear combination. Domain restrictions matter when coefficients have singularities such as 1/x or 1/x². Carefully expand composite expressions such as xy′−y before substituting.",
+      "similar_questions": [
+        {
+          "prompt": "Solve y″−(2/x)y′+(2/x²)y=0 on x>0 using y₁=x.",
+          "solution": "Set y=xv. Substitution gives xv″=0, hence v=a+bx. Thus y=ax+bx²; their Wronskian x² is nonzero."
+        },
+        {
+          "prompt": "Solve v″−2v′=0.",
+          "solution": "Let u=v′. Then u′−2u=0 gives u=Ce^{2x}; integrating yields v=A+Be^{2x}."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 41, PDF page 32. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954116.",
+      "page": 32,
+      "image": "assets/questions/2025-june-q041.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q042",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 42,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let λₙ be the eigenvalues of (xy′)′+(λ/x)y=0 on 1<x<e^{2π}, with y(1)=y(e^{2π})=0. Find Σₙ≥₁1/λₙ.",
+      "options": {
+        "A": "π²/12",
+        "B": "2π²/3",
+        "C": "π²/4",
+        "D": "π²/16"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Set t=log x and Y(t)=y(eᵗ).",
+        "The transformed problem is Y″+λY=0 on (0,2π) with zero endpoints."
+      ],
+      "solution": "Since y′=Y′/x, xy′=Y′ and (xy′)′=Y″/x. Multiplication by x gives Y″+λY=0, with Y(0)=Y(2π)=0. λ≤0 yields only the zero solution. For λ>0, Y=C sin(√λt), and sin(2π√λ)=0 implies √λ=n/2, n≥1. Thus λₙ=n²/4. Consequently Σ1/λₙ=4Σ1/n²=4·π²/6=2π²/3.",
+      "theory": "A Sturm–Liouville eigenvalue problem seeks values of a parameter λ for which a homogeneous second-order equation has a nonzero solution satisfying both endpoint conditions. The regular form is −(py′)′+qy=λwy, with p and w positive on a finite interval. For the logarithmic coefficients p=x and w=1/x, the substitution t=log x removes these variable coefficients. The basic Dirichlet problem −Y″=λY on an interval of length L has eigenfunctions sin(nπt/L) and eigenvalues (nπ/L)² for n≥1. Zero and negative λ produce no nonzero solutions with both endpoints zero. Reciprocal eigenvalue sums then use the Basel identity Σ1/n²=π²/6. Track the transformed interval length carefully, since it enters eigenvalues quadratically.",
+      "similar_questions": [
+        {
+          "prompt": "Find Dirichlet eigenvalues of −Y″=λY on (0,π).",
+          "solution": "Boundary conditions give Y=C sin(√λt) and √λπ=nπ. Hence λₙ=n², and reciprocal sum is π²/6."
+        },
+        {
+          "prompt": "For (xy′)′+(λ/x)y=0 on (1,e³) with zero endpoints, find the reciprocal eigenvalue sum.",
+          "solution": "t=log x gives interval length 3, so λₙ=(nπ/3)². The sum is (9/π²)(π²/6)=3/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 42, PDF page 33. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954117.",
+      "page": 33,
+      "image": "assets/questions/2025-june-q042.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q043",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 43,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let u(x,y) solve (y+u)uₓ+yuᵧ=x−y for x∈ℝ,y>0, with u(x,1)=1+x. Which is true?",
+      "options": {
+        "A": "u(1,1)=2.",
+        "B": "u(2,2)=4.",
+        "C": "u(3,3)=3/2.",
+        "D": "u(4,4)=2/3."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "One option can be read directly from the initial condition.",
+        "For a full solution, try u=x+B(y) and substitute into the PDE."
+      ],
+      "solution": "The initial condition immediately gives u(1,1)=1+1=2. To check the remaining choices, let u=x+B(y). Substitution gives (y+x+B)+yB′=x−y, hence yB′+B=−2y. Thus (yB)′=−2y and B=C/y−y. Since B(1)=1, C=2. Therefore u=x−y+2/y, which directly satisfies both the PDE and initial data. It gives u(2,2)=1, u(3,3)=2/3, u(4,4)=1/2, so only A holds. The initial line is noncharacteristic because its y-direction characteristic speed is y=1; characteristic uniqueness identifies this smooth solution on y>0.",
+      "theory": "A first-order quasilinear PDE a(x,y,u)uₓ+b(x,y,u)uᵧ=c(x,y,u) can be solved along characteristics satisfying dx/ds=a, dy/ds=b, du/ds=c. Initial values prescribed on a curve determine a locally unique solution when the characteristic vector is not tangent to that curve, assuming smooth coefficients. Here the initial curve y=1 is noncharacteristic because b=y is nonzero. Before solving a full Cauchy problem, inspect whether a requested value lies directly on the initial curve. An affine ansatz in x can simplify linear dependence in the equation, but it must be verified by substitution and the boundary data. A constructed smooth solution must satisfy both constraints, and uniqueness gives its relevance. Division by y is permitted only on the stated positive-y domain.",
+      "similar_questions": [
+        {
+          "prompt": "Solve yuᵧ+u=2y with u(x,1)=3, independent of x.",
+          "solution": "The equation is (yu)ᵧ=2y. Integrating gives yu=y²+C. At y=1, C=2, so u=y+2/y."
+        },
+        {
+          "prompt": "Solve uₓ+uᵧ=0 with u(x,0)=x².",
+          "solution": "Characteristics have y−x constant, so u depends on x−y. Initial data give u=(x−y)²; substitution yields uₓ+uᵧ=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 43, PDF page 34. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954118.",
+      "page": 34,
+      "image": "assets/questions/2025-june-q043.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q044",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 44,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let u solve u_tt−u_xx=0 on x∈ℝ,t>0, with u(x,0)=1+x² and u_t(x,0)=x+1. Find u(1,1).",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Apply d’Alembert’s formula with wave speed 1.",
+        "Average the initial displacement at x−t and x+t, then integrate the initial velocity between them."
+      ],
+      "solution": "d’Alembert gives u(x,t)=[(1+(x+t)²)+(1+(x−t)²)]/2+(1/2)∫_{x−t}^{x+t}(s+1)ds. The first term is 1+x²+t²; the integral term is t(x+1). Thus u=1+x²+t²+t(x+1). At (1,1), u=1+1+1+2=5. Direct differentiation confirms u_tt=2=u_xx and the prescribed displacement and velocity.",
+      "theory": "The one-dimensional wave equation u_tt=c²u_xx describes waves travelling at speed c. For initial displacement f and initial velocity g on the whole real line, d'Alembert's formula is u(x,t)=[f(x+ct)+f(x−ct)]/2+(1/(2c))∫_{x−ct}^{x+ct}g(s)ds. Sufficient smoothness of f and g ensures that this is a classical solution, and the formula satisfies both initial conditions. The displacement contributes an average of two travelling profiles, while the velocity contributes an integral over the domain of dependence. Polynomial initial data allow an alternative polynomial ansatz and an easy derivative check. Do not omit the integral term when initial velocity is nonzero, and do not confuse its factor 1/(2c) with a simple endpoint average.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u_tt=u_xx with f(x)=x and g(x)=0.",
+          "solution": "The formula gives [(x+t)+(x−t)]/2=x. It is independent of time and has zero initial velocity."
+        },
+        {
+          "prompt": "With f(x)=0 and g(x)=2, find u(x,t).",
+          "solution": "The integral term is (1/2)∫_{x−t}^{x+t}2ds=2t. Thus u=2t, which has u_t(x,0)=2 and both second derivatives zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 44, PDF page 35. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954119.",
+      "page": 35,
+      "image": "assets/questions/2025-june-q044.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q045",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 45,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "A cubic spline on [0,4] is s(x)=a(x−2)²+b(x−1)² for 0≤x≤1, (x−2)² for 1<x≤3, and 2c(x−2)²+(x−3)³ for 3<x≤4. Find 2a+b+2c.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "5"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "A cubic spline has continuous values and first two derivatives at its knots.",
+        "Match at x=1 to determine a,b and at x=3 to determine c."
+      ],
+      "solution": "At x=1, continuity gives a=1. First derivatives give −2a=−2, consistent. Matching second derivatives gives 2a+2b=2, hence b=0. At x=3, values give 2c=1, so c=1/2. The first-derivative equality 4c=2 and second-derivative equality 4c=2 agree, since the added cubic has zero value, first derivative, and second derivative at 3. Therefore 2a+b+2c=2+0+1=3.",
+      "theory": "A cubic spline is a function that is polynomial of degree at most three on each interval between knots and is twice continuously differentiable across the knots. Degree at most three includes quadratic and linear pieces. At every interior knot, the left and right limits of the function, its first derivative, and its second derivative must agree. The third derivative is allowed to jump. Terms of the form (x−k)³ introduced to the right of a knot k automatically vanish together with their first two derivatives at that knot, making them natural spline building blocks. Determine unknown coefficients through matching conditions and then check consistency of all derivative orders. A cubic spline is not necessarily a natural spline; zero endpoint second derivatives require an additional explicit condition.",
+      "similar_questions": [
+        {
+          "prompt": "Is s(x)=x² for x≤1 and x²+(x−1)³ for x>1 a cubic spline?",
+          "solution": "At 1 the added term and its first two derivatives are zero. Both pieces have degree at most 3, so s is C² and is a cubic spline."
+        },
+        {
+          "prompt": "For s(x)=ax² on x≤1 and x²+b(x−1)² on x>1, impose C² matching.",
+          "solution": "Value matching gives a=1. First derivatives then agree. Second derivative matching gives 2a=2+2b, so b=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 45, PDF page 36. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954120.",
+      "page": 36,
+      "image": "assets/questions/2025-june-q045.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q046",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 46,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Let y be an extremal of J[y]=∫₀^{π/4}[(y′)²−4y²+2xy]dx with y(0)=0,y(π/4)=1. Find y(x).",
+      "options": {
+        "A": "(1−π/4)sin(2x)+x",
+        "B": "(1−π/16)sin(2x)+x/4",
+        "C": "(1+π/4)sin(2x)−x",
+        "D": "(1+π/16)sin(2x)−x/4"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the Euler–Lagrange equation d/dx(F_y′)−F_y=0.",
+        "The resulting equation is y″+4y=x; find a linear particular solution."
+      ],
+      "solution": "For F=(y′)²−4y²+2xy, F_y′=2y′ and F_y=−8y+2x. Thus 2y″+8y−2x=0, or y″+4y=x. General solution: y=Acos2x+Bsin2x+x/4. At 0, y=0 gives A=0. At π/4, sin(π/2)=1 and x/4=π/16, so B=1−π/16. Hence the extremal is (1−π/16)sin2x+x/4.",
+      "theory": "For a functional J[y]=∫F(x,y,y′)dx with fixed endpoint values, a sufficiently smooth extremal satisfies the Euler–Lagrange equation F_y−d(F_y′)/dx=0. It follows from the first variation: vary y by εη with η zero at the endpoints, integrate the derivative term by parts, and use the fundamental lemma of the calculus of variations. The Euler–Lagrange equation is a necessary stationarity condition; it does not automatically prove a minimum or maximum. Quadratic functionals commonly lead to linear second-order boundary-value equations. Solve the homogeneous equation, add a particular solution, then impose both endpoint conditions. Carefully differentiate mixed terms such as 2xy with respect to y, treating x as independent. The sign of a y² term determines the sign in the resulting differential equation.",
+      "similar_questions": [
+        {
+          "prompt": "Find the extremal of ∫₀¹(y′)²dx with y(0)=0,y(1)=2.",
+          "solution": "Euler–Lagrange gives 2y″=0, so y=A+Bx. Boundary values give A=0,B=2 and y=2x."
+        },
+        {
+          "prompt": "Find the extremal of ∫₀¹[(y′)²+2y]dx with zero endpoints.",
+          "solution": "Euler–Lagrange yields 2y″−2=0, hence y=x²+Ax+B. The endpoints give B=0,A=−1, so y=x²−x."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 46, PDF page 37. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954121.",
+      "page": 37,
+      "image": "assets/questions/2025-june-q046.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q047",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 47,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "If y solves y(x)=x²+2∫₀¹xty(t)dt, which is true?",
+      "options": {
+        "A": "y(0)+y(1)=1/2.",
+        "B": "y(−1)+y(1)=1.",
+        "C": "y′(0)+y′(1)=3/2.",
+        "D": "y′(−1)+y′(1)=3."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The kernel xt is separable; denote ∫₀¹ty(t)dt by a constant K.",
+        "Substitute y(t)=t²+2Kt back into the definition of K."
+      ],
+      "solution": "Set K=∫₀¹ty(t)dt. Then y(x)=x²+2Kx, and K=∫₀¹(t³+2Kt²)dt=1/4+2K/3. Thus K=3/4 and y=x²+(3/2)x, with y′=2x+3/2. The four left sides are 5/2,2,5,3 respectively, so only D matches. The nonzero coefficient 1−2/3 ensures uniqueness.",
+      "theory": "A Fredholm integral equation of the second kind has form y(x)=f(x)+λ∫_a^bK(x,t)y(t)dt. A separable or degenerate kernel K(x,t)=Σa_j(x)b_j(t) reduces the unknown integral contribution to finitely many constants c_j=∫b_j(t)y(t)dt. Substituting y=f+λΣa_jc_j into those definitions produces a finite linear system. For a rank-one kernel a(x)b(t), the scalar equation is c=∫bf+λc∫ba. If 1−λ∫ba≠0, a unique solution follows; if it vanishes, compatibility determines whether there are no solutions or infinitely many. Treat the dummy integration variable t separately from the free variable x. Once the explicit solution is obtained, derivatives and endpoint sums can be evaluated directly and checked by substitution. Always check the computed solution in the original equation.",
+      "similar_questions": [
+        {
+          "prompt": "Solve y(x)=1+x∫₀¹y(t)dt.",
+          "solution": "Let K=∫y. Then y=1+Kx and K=1+K/2, so K=2 and y=1+2x."
+        },
+        {
+          "prompt": "Solve y(x)=x+∫₀¹xty(t)dt.",
+          "solution": "With K=∫ty, y=x+Kx. Then K=(1+K)/3, so K=1/2 and y=3x/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 47, PDF page 38. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954122.",
+      "page": 38,
+      "image": "assets/questions/2025-june-q047.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q048",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 48,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "A dynamical system has L= q̇₁²+q̇₂²+q₁²+q̇₁q̇₂. If p₁,p₂ are the conjugate momenta, which is true?",
+      "options": {
+        "A": "ṗ₁=2q₁,ṗ₂=0.",
+        "B": "ṗ₁=−q₁,ṗ₂=0.",
+        "C": "ṗ₁=−q₁/2,ṗ₂=q₂.",
+        "D": "ṗ₁=q₁,ṗ₂=−q₂."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Conjugate momentum is pᵢ=∂L/∂q̇ᵢ.",
+        "Euler–Lagrange gives ṗᵢ=∂L/∂qᵢ."
+      ],
+      "solution": "The momenta are p₁=2q̇₁+q̇₂ and p₂=2q̇₂+q̇₁. Euler–Lagrange equations give ṗ₁=∂L/∂q₁=2q₁ and ṗ₂=∂L/∂q₂=0, because q₂ does not occur explicitly. Therefore A is correct. The velocity cross term affects the definitions of momenta, but not these explicit coordinate derivatives.",
+      "theory": "In Lagrangian mechanics, a Lagrangian L(q,q̇,t) determines motion by d(∂L/∂q̇ᵢ)/dt=∂L/∂qᵢ. The conjugate momentum pᵢ is defined as ∂L/∂q̇ᵢ, so its derivative is the coordinate derivative of L along solutions. A coordinate absent from L is called cyclic or ignorable, and its conjugate momentum is conserved even if that momentum contains several velocities. A mixed kinetic term q̇₁q̇₂ couples the momentum definitions. One must use the actual sign of the potential-related term as displayed: if L contains +q₁², its derivative is +2q₁, regardless of the usual convention L=T−V. A nonsingular velocity Hessian permits inversion from momenta to velocities, but that inversion is unnecessary when only momentum derivatives are requested.",
+      "similar_questions": [
+        {
+          "prompt": "For L=(m/2)q̇²−(k/2)q², find p and ṗ.",
+          "solution": "p=mq̇ and ṗ=−kq, giving the harmonic-oscillator equation mq̈+kq=0."
+        },
+        {
+          "prompt": "For L=q̇₁²+q̇₂²+3q̇₁q̇₂ with no coordinate dependence, identify conserved momenta.",
+          "solution": "p₁=2q̇₁+3q̇₂ and p₂=2q̇₂+3q̇₁. Both coordinate derivatives vanish, so ṗ₁=ṗ₂=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 48, PDF page 39. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954123.",
+      "page": 39,
+      "image": "assets/questions/2025-june-q048.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q049",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 49,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "A data set has 2n+1 observations (n∈ℕ), each equal to x or x+r, where x∈ℕ,r≥0. Which is always true?",
+      "options": {
+        "A": "Mean and median differ if and only if r>0.",
+        "B": "Variance is positive if and only if r>0.",
+        "C": "Mean and mode are equal if and only if r=0.",
+        "D": "Median and mode are equal for every r≥0."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "For r>0, the two frequencies sum to an odd number.",
+        "One value therefore occurs at least n+1 times and occupies the median position."
+      ],
+      "solution": "If r=0 all observations equal x, so median=mode=x. If r>0, let k be the frequency of x and 2n+1−k that of x+r. Since their sum is odd, the frequencies are unequal and one exceeds n. That majority value is the unique mode and also the (n+1)st ordered observation, hence the median. Thus D always holds. A,B,C are not always true: the wording permits all observations to equal x even when r>0, giving equal mean, median, mode and zero variance. If both distinct values occur, mean is strictly between them, but this extra assumption was not stated.",
+      "theory": "The arithmetic mean is the sum of observations divided by their number. For an odd sample size 2n+1, the median is the (n+1)st observation after ordering. The mode is the value with greatest frequency; it is unique when one value has a strict frequency majority. In a data set taking at most two distinct values and having odd size, one frequency exceeds half the total, so the median and mode coincide. Variance measures squared deviations from the mean and is zero precisely when all observations are equal, regardless of whether the list of allowed values contains another possible value. The statement that observations are either a or b does not require both to occur. This distinction is essential when testing “if and only if” claims involving a separation parameter.",
+      "similar_questions": [
+        {
+          "prompt": "For observations 2,2,2,5,5, find mean, median, mode.",
+          "solution": "Mean=(6+10)/5=16/5=3.2. The third ordered value is 2, and 2 occurs three times, so median=mode=2."
+        },
+        {
+          "prompt": "For seven observations each allowed to be 4 or 9, can variance be zero?",
+          "solution": "Yes: take all seven equal to 4. Their mean is 4 and every squared deviation is zero, although the two allowed values differ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 49, PDF page 39. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954124.",
+      "page": 39,
+      "image": "assets/questions/2025-june-q049.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q050",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 50,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "A biased six-faced die is tossed once. Each prime face has probability twice that of each nonprime face. Find the probability of an odd result.",
+      "options": {
+        "A": "1/3",
+        "B": "2/3",
+        "C": "4/9",
+        "D": "5/9"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The prime faces are 2,3,5; the nonprime faces are 1,4,6.",
+        "Assign probability p to each nonprime face and 2p to each prime face, then normalize."
+      ],
+      "solution": "There are three primes and three nonprimes, so 3(2p)+3p=9p=1 and p=1/9. Odd faces 1,3,5 have probabilities p,2p,2p. Their sum is 5p=5/9. The number 1 is nonprime.",
+      "theory": "A discrete probability distribution assigns nonnegative probabilities to possible outcomes, with total probability one. When relative weights are given, normalize by dividing each weight by the sum of all weights. An event probability is the sum of the probabilities of its constituent mutually exclusive outcomes. A prime integer has exactly two positive divisors, one and itself; among the die faces 1 through 6, the primes are 2,3,5, while 1 is not prime. Biased dice need not assign equal probability to each face, so counting favourable faces alone is insufficient. If probabilities are constant within categories and one category has twice the per-face probability of another, category sizes must still be included in the normalization. Separate per-outcome weights from the total probability of a category.",
+      "similar_questions": [
+        {
+          "prompt": "A four-faced die has weights 1,1,2,2. Find the probability of face 3.",
+          "solution": "Total weight is 6; face 3 has weight 2, giving probability 2/6=1/3."
+        },
+        {
+          "prompt": "A six-faced die assigns weight 3 to even faces and 1 to odd faces. Find P(result>4).",
+          "solution": "Total weight is 3·3+3·1=12. Faces 5 and 6 have weights 1 and 3, hence probability 4/12=1/3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 50, PDF page 40. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954125.",
+      "page": 40,
+      "image": "assets/questions/2025-june-q050.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q051",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 51,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "Z₁,Z₂,… are iid discrete uniform on {1,2,…,2024}. Put Yₙ=Σᵢ₌₁ⁿZᵢ for n≥2 and let Xₙ be the remainder of Yₙ modulo 2025. Which is true?",
+      "options": {
+        "A": "lim P(Xₙ=0)=1/2026.",
+        "B": "lim P(Xₙ=0)=1/2025.",
+        "C": "lim P(Xₙ=0)=1/2024.",
+        "D": "lim P(Xₙ=0)=1/2023."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "From any residue, the next increment reaches every other residue with equal probability.",
+        "Let pₙ=P(Xₙ=0); derive pₙ₊₁=(1−pₙ)/2024."
+      ],
+      "solution": "A nonzero increment modulo 2025 cannot leave a residue unchanged. From each nonzero current residue, exactly one of the 2024 increments takes it to zero. Hence pₙ₊₁=(1−pₙ)/2024. Its fixed point p satisfies 2024p=1−p, giving p=1/2025. Moreover pₙ₊₁−1/2025=−(pₙ−1/2025)/2024, so the deviations decay geometrically and the limit is 1/2025.",
+      "theory": "A random walk modulo an integer m is a finite-state Markov chain whose transition probabilities depend only on the current residue and the increment law. If the increment is uniform on all nonzero residues, a transition is equally likely to any different state and impossible to the same state. The uniform distribution on the m states is stationary because each transition-matrix column sums to one. For a specific target state, its probability satisfies pₙ₊₁=(1−pₙ)/(m−1), with fixed point 1/m. Subtracting the fixed point produces a geometric recurrence with multiplier −1/(m−1), whose magnitude is below one for m>2. This directly proves convergence without a general Markov-chain theorem. Distinguish the number m of possible remainders from the m−1 possible nonzero increments.",
+      "similar_questions": [
+        {
+          "prompt": "Uniformly add 1,2,3,4 modulo 5. Find the limiting probability of residue 0.",
+          "solution": "The recursion is pₙ₊₁=(1−pₙ)/4, so its fixed point is 1/5 and deviations have factor −1/4. The limit is 1/5."
+        },
+        {
+          "prompt": "Uniformly add 1 modulo 2 starting at residue 0. Does the zero-state probability converge?",
+          "solution": "The state alternates deterministically between 0 and 1. Thus pₙ alternates 1 and 0; the recurrence multiplier is −1, so convergence fails."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 51, PDF page 41. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954126.",
+      "page": 41,
+      "image": "assets/questions/2025-june-q051.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q052",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 52,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Brand I battery life has density e^{−x} for x>0. Brand II has density (x/4)e^{−x/2} for x>0. Mobiles use I and II with probabilities 20% and 80%. Find the probability battery life exceeds 2 years.",
+      "options": {
+        "A": "(13/5)e^{−2}",
+        "B": "(1/5)(e^{−2}+2e^{−1})",
+        "C": "(1/5)(e^{−2}+8e^{−1})",
+        "D": "(1/5)(4e^{−2}+2e^{−1})"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use total probability over the two battery brands.",
+        "Integrate the Brand II density from 2 to infinity; integration by parts gives 2e^{−1}."
+      ],
+      "solution": "For Brand I, survival probability is ∫₂∞e^{−x}dx=e^{−2}. For Brand II, an antiderivative of (x/4)e^{−x/2} is −(x/2+1)e^{−x/2}; its tail at 2 equals 2e^{−1}. Thus P(T>2)=(1/5)e^{−2}+(4/5)(2e^{−1})=(1/5)(e^{−2}+8e^{−1}).",
+      "theory": "The survival function of a nonnegative continuous random variable is S(t)=P(T>t)=∫_t^∞f(x)dx. An exponential distribution with rate λ has survival e^{−λt}; a gamma distribution with shape two and scale β has density xe^{−x/β}/β² and survival e^{−t/β}(1+t/β), obtainable by integration by parts. When a population is a mixture of brands or subgroups, the law of total probability weights each conditional survival probability by its subgroup proportion. The mixture distribution is generally not itself an exponential or gamma distribution with averaged parameters. Rates and scales are reciprocals, so identify the density carefully before using a formula. Population proportions apply to the conditional probabilities, not to the time threshold or to the density parameters.",
+      "similar_questions": [
+        {
+          "prompt": "Half a population has Exp(1) life and half Exp(2). Find survival at t=1.",
+          "solution": "Total probability gives (1/2)e^{−1}+(1/2)e^{−2}; averaging the rates would not give this same mixture."
+        },
+        {
+          "prompt": "A gamma life has shape 2 and scale 3. Find survival at t=3.",
+          "solution": "The shape-two formula gives e^{−3/3}(1+3/3)=2e^{−1}."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 52, PDF page 42. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954127.",
+      "page": 42,
+      "image": "assets/questions/2025-june-q052.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q053",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 53,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X has P(X=0)=θ/3, P(X=1)=1−θ/2, P(X=2)=θ/6, θ∈(0,1). A sample of size 90 has counts 20,60,10 for 0,1,2. Find the maximum likelihood estimate of θ.",
+      "options": {
+        "A": "1/3",
+        "B": "1/2",
+        "C": "2/3",
+        "D": "3/4"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Ignoring constants, the likelihood is θ³⁰(1−θ/2)⁶⁰.",
+        "Differentiate its logarithm and solve the score equation."
+      ],
+      "solution": "The likelihood is proportional to (θ/3)²⁰(1−θ/2)⁶⁰(θ/6)¹⁰, hence θ³⁰(1−θ/2)⁶⁰. Its log derivative is 30/θ−30/(1−θ/2). Setting this to zero gives θ=1−θ/2 and θ=2/3. The second derivative −30/θ²−15/(1−θ/2)² is strictly negative, so this interior point is the unique maximum. It lies in (0,1).",
+      "theory": "Maximum likelihood estimation chooses parameter values maximizing the probability or density of the observed sample. For iid discrete observations recorded as category counts n_j, the likelihood is proportional to ∏p_j(θ)^{n_j}; the multinomial coefficient is constant in θ and can be dropped. Taking logarithms turns products into sums and preserves maximizers because the logarithm is increasing. An interior candidate solves the score equation, the derivative of the log likelihood. Strict negative second derivative establishes uniqueness of a maximum on an interval, but one must also check the parameter restrictions and possible boundary behavior. Categories sharing the same parameter factor can be combined in the score. Keep the chain-rule factor when differentiating log(1−θ/2), and distinguish likelihood maximization from simply equating every observed frequency with its model probability.",
+      "similar_questions": [
+        {
+          "prompt": "A Bernoulli sample has 12 successes and 8 failures. Find the MLE of p.",
+          "solution": "Log likelihood is 12log p+8log(1−p). The score gives 12/p=8/(1−p), so p=12/20=.6; strict concavity confirms the maximum."
+        },
+        {
+          "prompt": "P(0)=θ/4,P(1)=1−θ/2,P(2)=θ/4, with counts 10,30,10. Find the interior MLE.",
+          "solution": "Likelihood is proportional to θ²⁰(1−θ/2)³⁰. Score 20/θ−15/(1−θ/2)=0 gives 20−10θ=15θ, so θ=.8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 53, PDF page 43. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954128.",
+      "page": 43,
+      "image": "assets/questions/2025-june-q053.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q054",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 54,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "One observation X has density f(x|θ)=3(θ−x)²/θ³ for 0<x<θ, zero otherwise. The interval (X/(1−λ₁),X/(1−λ₂)) has confidence coefficient 1−α, with 0<λ₁<λ₂<1. Which holds?",
+      "options": {
+        "A": "λ₂²−λ₁²=1−α.",
+        "B": "λ₂³−λ₁³=1−α.",
+        "C": "λ₂²−λ₁²=4(1−α).",
+        "D": "λ₂³−λ₁³=9(1−α)."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The pivot W=1−X/θ has a parameter-free density.",
+        "Translate interval coverage into λ₁<W<λ₂."
+      ],
+      "solution": "Set V=X/θ; its density is 3(1−v)² for 0<v<1. Thus W=1−V has density 3w² on (0,1). The event X/(1−λ₁)<θ<X/(1−λ₂) is equivalent to 1−λ₂<X/θ<1−λ₁, hence λ₁<W<λ₂. Its probability is ∫_{λ₁}^{λ₂}3w²dw=λ₂³−λ₁³. Equating coverage to 1−α proves B.",
+      "theory": "A confidence interval is a random interval whose probability of covering the fixed unknown parameter equals a stated confidence coefficient under repeated sampling. A pivotal quantity is a function of the data and parameter with a distribution independent of the parameter; scale families often use X/θ. A one-to-one transformation of a continuous random variable changes its density by the absolute Jacobian of the inverse. Once a pivot's distribution is known, translate the coverage inequalities into bounds for that pivot and integrate its density. Care is needed when reciprocals or subtraction reverse inequalities. Strict versus non-strict endpoints do not affect coverage for continuous distributions. The coverage probability concerns the random data, whereas θ stays fixed; it is not a posterior probability assigned to θ.",
+      "similar_questions": [
+        {
+          "prompt": "If X is uniform on (0,θ), find coverage of (X/b,X/a), 0<a<b<1.",
+          "solution": "The event is a<X/θ<b. Since X/θ is uniform on (0,1), coverage is b−a."
+        },
+        {
+          "prompt": "If W has density 2w on (0,1), find P(a<W<b).",
+          "solution": "Integrating gives ∫_a^b2w dw=b²−a². Thus that interval has target coverage 1−α when b²−a²=1−α."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 54, PDF page 44. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954129.",
+      "page": 44,
+      "image": "assets/questions/2025-june-q054.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q055",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 55,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X₁,…,Xₙ are iid with density θ2^θ/x^{θ+1} for x>2, θ>0. Define χ²_{m,β} by P(Y>χ²_{m,β})=β for Y~χ²_m. For testing H₀:θ=1 against H₁:θ>1, which is the size-α UMP rejection rule?",
+      "options": {
+        "A": "Σlog Xᵢ>(1/2)χ²_{2n,α}+nlog2.",
+        "B": "Σlog Xᵢ<(1/2)χ²_{2n,1−α}+nlog2.",
+        "C": "Σlog Xᵢ>χ²_{n,α}+nlog2.",
+        "D": "Σlog Xᵢ<χ²_{n,1−α}+nlog2."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Tᵢ=log(Xᵢ/2) has an exponential distribution with rate θ.",
+        "Large θ gives smaller sums, and under the null 2ΣTᵢ has χ²_{2n} distribution."
+      ],
+      "solution": "The survival P(X>2eᵗ)=e^{−θt} shows Tᵢ=log(Xᵢ/2)~Exp(rate θ). Their sum T=Σlog Xᵢ−nlog2 has likelihood θⁿe^{−θT}. For any θ>1 the likelihood ratio to θ=1 is θⁿe^{−(θ−1)T}, decreasing in T; the same lower-tail rejection set is most powerful for every alternative. Under H₀, 2T~χ²_{2n}. With the specified upper-tail quantile notation, P(2T<χ²_{2n,1−α})=α. Hence reject when Σlog Xᵢ<(1/2)χ²_{2n,1−α}+nlog2, option B.",
+      "theory": "A uniformly most powerful test maximizes power among all tests of a given size for every parameter in the specified alternative. The Neyman–Pearson lemma chooses large likelihood ratios for a simple alternative, and monotone likelihood ratios in a common statistic can yield the same rejection region across a one-sided family. Pareto-type scale observations become exponential variables under logarithmic transformation: log(X/a) has rate θ. A sum of n iid rate-one exponentials is gamma with shape n and scale one, and twice that sum is chi-square with 2n degrees of freedom. Increasing the exponential rate shifts observations downward, so the relevant rejection tail is lower. Quantile conventions must be read carefully: an upper-tail probability 1−α corresponds to a lower-tail probability α.",
+      "similar_questions": [
+        {
+          "prompt": "Test Exp(rate θ) observations for θ=1 versus θ>1. State a size .05 rejection region for n observations.",
+          "solution": "Let T be their sum. Under the null 2T~χ²_{2n}; reject for 2T below the lower .05 quantile, equivalently below the upper-tail .95 quantile."
+        },
+        {
+          "prompt": "For one Exp(1) observation, find the lower-tail .1 cutoff.",
+          "solution": "P(T<c)=1−e^{−c}=.1 gives c=−log(.9). A test against a larger rate rejects when T<−log(.9)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 55, PDF page 45. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954130.",
+      "page": 45,
+      "image": "assets/questions/2025-june-q055.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q056",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 56,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X|θ~N(θ,15), and the improper prior on θ is proportional to 1 on ℝ. Observed X=13. Which statement is true?",
+      "options": {
+        "A": "Posterior mean=MLE of θ; posterior variance=Var(X|θ).",
+        "B": "Posterior mean=MLE of θ; posterior variance<Var(X|θ).",
+        "C": "Posterior mean>MLE of θ; posterior variance=Var(X|θ).",
+        "D": "Posterior mean>MLE of θ; posterior variance<Var(X|θ)."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The flat prior leaves the likelihood kernel unchanged as a function of θ.",
+        "Normalize exp[−(θ−13)²/(2·15)] as a normal density in θ."
+      ],
+      "solution": "The likelihood as a function of θ is proportional to exp[−(13−θ)²/30]. Multiplication by the constant prior gives this same kernel, whose normalized posterior is N(13,15). Thus posterior mean is 13 and posterior variance is 15. The likelihood is maximized at θ=13, so the posterior mean equals the MLE, and posterior variance equals the conditional observation variance. A is correct.",
+      "theory": "Bayes' formula gives a posterior density proportional to likelihood times prior, provided the product has a finite positive normalizing integral. A constant prior on the whole real line is improper because it does not integrate to one, but it can yield a proper posterior. For a normal observation with known variance σ² and unknown mean θ, the likelihood in θ is a normal kernel centered at the observed value. A flat prior therefore produces N(x,σ²). With n independent observations it instead produces N(x̄,σ²/n). A proper normal prior adds precision and generally shrinks both the posterior mean and variance. Do not assume every Bayesian update reduces variance relative to the sampling variance; with one observation and a flat prior they are equal.",
+      "similar_questions": [
+        {
+          "prompt": "Two iid N(θ,8) observations are 3 and 5, with flat prior. Find posterior.",
+          "solution": "The sample mean is 4. Completing the likelihood square gives posterior N(4,8/2)=N(4,4)."
+        },
+        {
+          "prompt": "X|θ~N(θ,4) and θ~N(0,4); observe X=6. Find posterior.",
+          "solution": "Precisions add: posterior variance=(1/4+1/4)⁻¹=2. Mean=2(6/4+0/4)=3, so posterior is N(3,2)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 56, PDF page 46. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954131.",
+      "page": 46,
+      "image": "assets/questions/2025-june-q056.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q057",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 57,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For yᵢ=β₀+β₁x₁ᵢ+⋯+β₈x₈ᵢ+εᵢ, i=1,…,29, with iid N(0,σ²) errors, the least-squares F statistic for regression significance is 2.50. Find possible R² and adjusted R².",
+      "options": {
+        "A": "0.30 and 0.10",
+        "B": "0.50 and 0.30",
+        "C": "0.50 and 0.16",
+        "D": "0.30 and −0.10"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "There are p=8 slope terms and n−p−1=20 residual degrees of freedom.",
+        "Use F=(R²/p)/[(1−R²)/(n−p−1)]."
+      ],
+      "solution": "F=(SSR/8)/(SSE/20)=(20/8)R²/(1−R²). Since F=2.5=20/8, R²/(1−R²)=1, giving R²=.5. Adjusted R²=1−(SSE/20)/(SST/28)=1−(1−.5)(28/20)=1−.7=.3. Thus option B is correct.",
+      "theory": "In ordinary least-squares regression with an intercept, total corrected sum of squares decomposes as SST=SSR+SSE. The coefficient of determination is R²=SSR/SST=1−SSE/SST. For n observations and p slope predictors, the global F statistic testing all slopes equal zero is (SSR/p)/(SSE/(n−p−1)), assuming a full-rank design matrix. Under independent normal errors with common variance, it has an F distribution under the null. Adjusted R² accounts for degrees of freedom: 1−[SSE/(n−p−1)]/[SST/(n−1)]. It can be negative and is generally lower than ordinary R². The intercept consumes one degree of freedom but is not counted among the p slopes in the global numerator. Use the same degrees of freedom consistently in both formulas.",
+      "similar_questions": [
+        {
+          "prompt": "For n=21,p=4,R²=.4, compute F and adjusted R².",
+          "solution": "Residual degrees of freedom are 16. F=(.4/4)/(.6/16)=8/3. Adjusted R²=1−.6·20/16=.25."
+        },
+        {
+          "prompt": "If n=11,p=2 and F=4, find R².",
+          "solution": "F=(8/2)R²/(1−R²)=4R²/(1−R²). Thus R²=.5; adjusted R²=1−.5·10/8=.375."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 57, PDF page 47. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954132.",
+      "page": 47,
+      "image": "assets/questions/2025-june-q057.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q058",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 58,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "(X₁,X₂,X₃)ᵀ~N₃(0,I₃), and (X,Y,Z)ᵀ=[[3,0,0],[2,2,0],[4,0,4]](X₁,X₂,X₃)ᵀ. Find the partial correlation ρ_{YZ·X}.",
+      "options": {
+        "A": "1/2",
+        "B": "2/3",
+        "C": "3/4",
+        "D": "0"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Regress Y and Z on X=3X₁.",
+        "Their residuals involve independent coordinates X₂ and X₃."
+      ],
+      "solution": "X=3X₁, Y=2X₁+2X₂ and Z=4X₁+4X₃. The linear projection of Y onto X is (2/3)X and of Z onto X is (4/3)X. The residuals are 2X₂ and 4X₃, independent with positive variances. Their correlation is zero, so ρ_{YZ·X}=0. Equivalently covariance(Y,Z)=8 and covariance(Y,X)covariance(Z,X)/variance(X)=6·12/9=8, leaving zero partial covariance.",
+      "theory": "Partial correlation between Y and Z controlling for X is the correlation of their residuals after linear projection on X. For nondegenerate variables it equals (ρ_YZ−ρ_YXρ_ZX)/√[(1−ρ_YX²)(1−ρ_ZX²)]. The unstandardized residual covariance is Cov(Y,Z)−Cov(Y,X)Cov(Z,X)/Var(X). In a jointly normal model, zero partial correlation is equivalent to conditional independence given X, provided residual variances are positive. Independent standard normal coordinates make linear transformations easy to analyze: covariances are sums of products of matching coefficients. A common component can create marginal correlation that vanishes after controlling for the variable measuring that component. Determine residuals before normalizing; their independence or zero covariance may make a lengthy correlation calculation unnecessary.",
+      "similar_questions": [
+        {
+          "prompt": "Let Y=A+B,Z=A+C,X=A with independent unit-variance A,B,C. Find partial correlation.",
+          "solution": "After projection on X the residuals are B,C. They have covariance zero and variances one, so partial correlation is zero, although marginal correlation is 1/2."
+        },
+        {
+          "prompt": "Let Y=A+B,Z=A+B+C,X=A with independent unit-variance components. Find partial correlation.",
+          "solution": "Residuals are B and B+C. Their covariance is 1 and variances are 1 and 2, giving ρ=1/√2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 58, PDF page 48. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954133.",
+      "page": 48,
+      "image": "assets/questions/2025-june-q058.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q059",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 59,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "A population of size 85 contains 34 Statisticians and 51 Biologists. Independent SRSWOR samples draw 12 and 15 from those strata. Let ȳ_S,ȳ_B,ȳ denote the two stratum sample means and pooled sample mean. Which is an unbiased estimator of population mean Ȳ?",
+      "options": {
+        "A": "ȳ",
+        "B": "(2ȳ_S+3ȳ_B)/5",
+        "C": "(4ȳ_S+5ȳ_B)/9",
+        "D": "(ȳ_S/12+ȳ_B/15)/(1/12+1/15)"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Each stratum sample mean is unbiased for its own population mean.",
+        "Combine them using population stratum proportions, not sample proportions."
+      ],
+      "solution": "Under SRSWOR, E(ȳ_S)=Ȳ_S and E(ȳ_B)=Ȳ_B. The target mean is (34/85)Ȳ_S+(51/85)Ȳ_B=(2/5)Ȳ_S+(3/5)Ȳ_B. Therefore (2ȳ_S+3ȳ_B)/5 is unbiased. The pooled sample uses weights 12/27=4/9 and 15/27=5/9, not the population weights; option C is precisely that pooled mean. Option D weights the strata 5/9 and 4/9, also incorrect in general.",
+      "theory": "Stratified sampling divides a finite population into disjoint strata and samples separately within each. Under simple random sampling without replacement, every subset of the required size in a stratum is equally likely and the stratum sample mean is unbiased for its population mean. The overall population mean is the weighted sum of stratum population means with weights W_h=N_h/N. Its unbiased estimator is therefore ΣW_hȳ_h, regardless of how sample sizes are allocated. A pooled unweighted sample mean instead uses n_h/n and is unbiased for the overall mean only under proportional allocation or special equal-mean populations. Without-replacement sampling affects the estimator's variance through finite-population corrections, but not these expectations. Distinguish population sizes from sample sizes when selecting weights; inverse sample-size weights do not generally estimate the desired mean.",
+      "similar_questions": [
+        {
+          "prompt": "Two strata have population sizes 20,80 and sample means 10,30. Find the stratified estimate.",
+          "solution": "Weights are .2 and .8, so the estimate is .2·10+.8·30=26, irrespective of sample allocation."
+        },
+        {
+          "prompt": "Strata sizes are 60,40 and sample sizes 6,4. Is the pooled mean unbiased?",
+          "solution": "The sample proportions .6,.4 equal population proportions, so the pooled mean .6ȳ₁+.4ȳ₂ is the stratified unbiased estimator."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 59, PDF page 49. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954134.",
+      "page": 49,
+      "image": "assets/questions/2025-june-q059.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q060",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 60,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Operations Research",
+      "difficulty": "Moderate",
+      "prompt": "Maximize z=x+y subject to 5x+3y≤30, 2x+6y≤25, 2x−y≤8, x≥0,y≥0. Find the optimal objective value.",
+      "options": {
+        "A": "45/11",
+        "B": "74/11",
+        "C": "85/12",
+        "D": "25/6"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Intersect the first two binding constraints and test the remaining constraint.",
+        "A nonnegative weighted sum of the first two inequalities gives a matching objective upper bound."
+      ],
+      "solution": "Solving 5x+3y=30 and 2x+6y=25 gives x=35/8,y=65/24. Both are positive and 2x−y=145/24≤8, so the point is feasible. Its objective is 35/8+65/24=170/24=85/12. To certify optimality, multiply the first inequality by 1/6 and the second by 1/12. The left side becomes x+y and the right side becomes 30/6+25/12=85/12. Every feasible point has z≤85/12, and the constructed point attains this bound.",
+      "theory": "A linear program optimizes a linear objective over a polyhedron defined by linear inequalities. In two variables the feasible region is an intersection of half-planes, and a finite optimum is attained at a boundary vertex or along an optimal edge when the feasible set is nonempty and bounded in the objective direction. A candidate obtained by intersecting two constraint boundaries must satisfy all remaining inequalities, including nonnegativity. Optimality can be certified without listing every vertex: a nonnegative linear combination of constraint inequalities that equals the objective provides an upper bound for maximization. A feasible point attaining that bound is optimal by weak duality. The multipliers are dual variables, and unused constraints may have multiplier zero. Never accept an intersection solely because it yields a large objective; feasibility is an independent requirement.",
+      "similar_questions": [
+        {
+          "prompt": "Maximize x+y subject to x+2y≤6,2x+y≤6,x,y≥0.",
+          "solution": "Adding the two inequalities gives 3(x+y)≤12, hence z≤4. The feasible intersection x=y=2 attains 4, certifying optimality."
+        },
+        {
+          "prompt": "Maximize 2x+y subject to x+y≤3,x≤2,x,y≥0.",
+          "solution": "Add x+y≤3 to x≤2 to obtain 2x+y≤5. The feasible point (2,1) attains 5, so the maximum is 5."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 60, PDF page 50. No candidate response used as an answer key. Cross-checked against NTA final key, https://csirnet.nta.ac.in/images/FINAL_KEY_CSIR_JUNE_2025.pdf, page 4, exact question ID 562954135.",
+      "page": 50,
+      "image": "assets/questions/2025-june-q060.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

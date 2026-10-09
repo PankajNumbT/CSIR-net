@@ -1,0 +1,1855 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2020-june-26nov-q003",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Rice A and B cost ₹30 and ₹90 per kg; pulses C and D cost ₹100 and ₹120 per kg. Buy at least 1 kg each of A and B and 0.5 kg each of C and D. Find the minimum and maximum costs of 5 kg.",
+      "options": {
+        "A": "₹150 and ₹600",
+        "B": "₹260 and ₹530",
+        "C": "₹290 and ₹470",
+        "D": "₹370 and ₹460"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "First purchase the compulsory quantities.",
+        "Allocate every remaining kilogram to the cheapest item for the minimum and the costliest item for the maximum."
+      ],
+      "solution": "The compulsory 3 kg costs $30+90+0.5(100)+0.5(120)=230$. There are 2 kg left. The cheapest choice adds $2(30)=60$, giving ₹290. The costliest adds $2(120)=240$, giving ₹470. Both allocations satisfy every lower bound. Hence **C**.",
+      "theory": "For a linear cost $\\sum c_i x_i$ with $x_i\\ge l_i$ and $\\sum x_i=W$, write $x_i=l_i+z_i$. Then $z_i\\ge0$ and $\\sum z_i=R=W-\\sum l_i$. The variable cost is a weighted average of the coefficients times $R$, so it lies between $R\\min c_i$ and $R\\max c_i$. These bounds are attained by putting all excess mass in an extremal item. Check feasibility $W\\ge\\sum l_i$ first. Upper limits on quantities would require allocating the remainder in price order rather than all to one item.",
+      "similar_questions": [
+        {
+          "prompt": "Two items cost ₹20 and ₹50/kg. At least 1 kg of each is required; buy 4 kg. Find the cost range.",
+          "solution": "The compulsory cost is ₹70 and 2 kg remain. The range is ₹110–₹170."
+        },
+        {
+          "prompt": "When is the minimum unique?",
+          "solution": "If the cheapest coefficient is unique and positive remainder is available, all remainder must go to that item. Equal cheapest prices give multiple minima."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 3, PDF page 1. Not checked against an NTA final key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-26nov-q003.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q006",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 6,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A 7 m tube of inner diameter 2 cm is full of water. It is emptied into a bucket of inner base area 200 cm². Find the approximate water height.",
+      "options": {
+        "A": "22 cm",
+        "B": "44 cm",
+        "C": "9 cm",
+        "D": "11 cm"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Convert the tube length to centimetres.",
+        "Use conservation of volume: tube volume = bucket base area × height."
+      ],
+      "solution": "The tube radius is 1 cm and length is 700 cm. Its volume is $\\pi(1)^2(700)=700\\pi\\ \\mathrm{cm}^3$. Thus $h=700\\pi/200=3.5\\pi\\approx11.0$ cm. **D**.",
+      "theory": "The volume of a cylinder is $\\pi r^2L$. After pouring without losses, volume is conserved. A vessel with constant cross-section $A$ has water height $V/A$. Use inner dimensions, divide diameter by two, and convert every length to the same unit before multiplying. If a receiving vessel has varying cross-section, $V=\\int_0^h A(z)\\,dz$ instead.",
+      "similar_questions": [
+        {
+          "prompt": "A tube of radius 2 cm and length 100 cm drains into a bucket with base area 100 cm². Find the height.",
+          "solution": "$V=400\\pi$ cm³, so $h=4\\pi$ cm."
+        },
+        {
+          "prompt": "What happens if the tube diameter doubles?",
+          "solution": "At fixed length and bucket area, volume and water height multiply by $2^2=4$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 6, PDF page 2. Not checked against an NTA final key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-26nov-q006.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q008",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 8,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A square board is divided into 9 equal squares. Three independent uniformly random shots hit the board. What is the probability that at least two hit the same small square?",
+      "options": {
+        "A": "$1/3$",
+        "B": "$56/81$",
+        "C": "$25/81$",
+        "D": "$2/3$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use the complementary event: all three shots hit different squares.",
+        "The second shot must avoid one square; the third must avoid two."
+      ],
+      "solution": "All distinct has probability $1\\cdot(8/9)\\cdot(7/9)=56/81$. The requested event is its complement: $1-56/81=25/81$. **C**. The assumptions are independent shots and equal hit probabilities for all nine squares.",
+      "theory": "The occupancy or birthday calculation for $k$ independent choices among $m$ equally likely cells is $P(\\text{all distinct})=(m)_k/m^k$ for $k\\le m$, where $(m)_k=m(m-1)\\cdots(m-k+1)$. At least one collision is its complement. For $k>m$, collision is certain by the pigeonhole principle. Exactly one pair and at least one pair are different events when $k\\ge4$. With unequal cell probabilities, the simple product formula no longer applies.",
+      "similar_questions": [
+        {
+          "prompt": "Three shots hit four equal cells. Find the collision probability.",
+          "solution": "$1-(4\\cdot3\\cdot2)/4^3=5/8$."
+        },
+        {
+          "prompt": "For the original board, find the probability all three hit the same square.",
+          "solution": "There are 9 choices for the shared square, each with probability $(1/9)^3$, so the result is $1/81$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 8, PDF page 3. Not checked against an NTA final key.",
+      "page": 3,
+      "image": "assets/questions/2020-june-26nov-q008.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q012",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 12,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Clock A loses 4 minutes per real hour; C gains 3 minutes per real hour. Both agree with the correct clock at Monday 8 pm. When C reads Wednesday 2 pm, what does A read?",
+      "options": {
+        "A": "7:20 am",
+        "B": "8:40 am",
+        "C": "9:20 am",
+        "D": "10:40 am"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "C has advanced 42 displayed hours since synchronisation.",
+        "Convert C time to real elapsed time, then apply A’s rate."
+      ],
+      "solution": "Clock C runs at $63/60$ of real speed. Its displayed elapsed time is 42 h, so real elapsed time is $42(60/63)=40$ h. A advances $40(56/60)=37\\frac13$ h. Adding 37 h 20 min to Monday 8 pm gives Wednesday **9:20 am**, option C.",
+      "theory": "A clock gaining $g$ minutes per hour has rate $(60+g)/60$; a clock losing $l$ has rate $(60-l)/60$. Displayed elapsed time equals rate times real elapsed time. Compare elapsed times from the synchronisation point rather than subtracting clock errors from a displayed calendar time. Between clocks, the ratio of elapsed readings is $(60-l)/(60+g)$. Keep day changes and fractional hours explicit.",
+      "similar_questions": [
+        {
+          "prompt": "C gains 6 min/hour and shows 11 elapsed hours. A loses 3 min/hour. How far has A advanced?",
+          "solution": "Real elapsed time is $11/1.1=10$ h, so A advances $10(57/60)=9.5$ h."
+        },
+        {
+          "prompt": "Two clocks run at 59 and 61 minutes per real hour. How far apart are they after 12 real hours?",
+          "solution": "The gap grows at 2 minutes per hour, hence 24 minutes."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 12, PDF page 4. Not checked against an NTA final key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-26nov-q012.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q013",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 13,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A class needs one pencil per two students, one eraser per three, and one ruler per four. The total number of these items is 65. Find the class size.",
+      "options": {
+        "A": "55",
+        "B": "60",
+        "C": "65",
+        "D": "70"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "If there are N students, write the three item counts.",
+        "Add the fractions using denominator 12."
+      ],
+      "solution": "For the stated exact ratios, $N/2+N/3+N/4=65$, so $13N/12=65$ and $N=60$. This gives 30 pencils, 20 erasers, and 15 rulers, totalling 65. **B**.",
+      "theory": "For exact resource ratios, item counts add: $N\\sum_i(1/d_i)=T$. Solve for $N$ and verify it is an integer compatible with each denominator. If the wording requires whole items rounded up instead, use ceilings $\\sum_i\\lceil N/d_i\\rceil=T$, which can have several solutions; exact ratios and rounding are different models.",
+      "similar_questions": [
+        {
+          "prompt": "One item is needed per 2 students and another per 5. There are 42 items. Find N.",
+          "solution": "$N(1/2+1/5)=42$, so $N=60$."
+        },
+        {
+          "prompt": "Verify the original class size by counting items.",
+          "solution": "For 60 students, 30+20+15=65 items, and all sharing ratios are integral."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 13, PDF page 4. Not checked against an NTA final key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-26nov-q013.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q015",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 15,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Active cases are 990, 1000, 1030, 1060, 1090 on days 0, 1, 4, 7, 10; recovered cases are 760, 800, 920, 1040, 1160. If both linear trends continue, on which day are recoveries twice active cases?",
+      "options": {
+        "A": "61",
+        "B": "62",
+        "C": "63",
+        "D": "64"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Find each daily rate from the table.",
+        "Set recovered count equal to twice the active count."
+      ],
+      "solution": "The trends are $A(d)=990+10d$ and $R(d)=760+40d$. Solve $760+40d=2(990+10d)$: $20d=1220$, giving $d=61$. At that time, $A=1600$ and $R=3200$. **A**.",
+      "theory": "A linear trend is $y(d)=y(0)+md$ with constant slope $m=\\Delta y/\\Delta d$. Unequally spaced table days require dividing by the actual day interval. For $R(d)=kA(d)$, solve $(m_R-km_A)d=kA(0)-R(0)$. If the coefficient is zero, either the equality holds always or never. A negative crossing time lies before day zero. Here extrapolation is an explicit assumption in the problem.",
+      "similar_questions": [
+        {
+          "prompt": "Active cases are 100+2d and recoveries 20+6d. When are recoveries twice active cases?",
+          "solution": "$20+6d=200+4d$, so $d=90$."
+        },
+        {
+          "prompt": "When are the two original counts equal?",
+          "solution": "$760+40d=990+10d$ gives $d=23/3$ days."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 15, PDF page 5. Not checked against an NTA final key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-26nov-q015.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q022",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Easy",
+      "prompt": "A bounded function $f:\\mathbb N\\to\\mathbb N$ is given. Which statement is NOT true?",
+      "options": {
+        "A": "$\\limsup f(n)\\in\\mathbb N$",
+        "B": "$\\liminf f(n)\\in\\mathbb N$",
+        "C": "$\\liminf(f(n)+n)\\in\\mathbb N$",
+        "D": "$\\limsup(f(n)+n)\\notin\\mathbb N$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A bounded integer sequence takes values in a finite set.",
+        "What happens to f(n)+n as n grows?"
+      ],
+      "solution": "Because $f$ is bounded and integer-valued, its tail extrema stabilise at integers: the largest and smallest values occurring infinitely often. Thus A and B hold. Since $f(n)+n\\to+\\infty$, its liminf and limsup are both $+\\infty$ in the extended real line. Infinity is not a natural number, so C is false and D is true. **C**.",
+      "theory": "For a real sequence, $\\limsup a_n=\\lim_{N\\to\\infty}\\sup_{n\\ge N}a_n$ and similarly for infimum. These limits can be infinite. A bounded sequence need not converge, but its liminf and limsup are finite and equal exactly when it converges. For a finite-valued sequence, they are the smallest and largest values appearing infinitely often. Adding a sequence tending to positive infinity to a uniformly bounded sequence forces divergence to positive infinity; this follows from two-sided bounds.",
+      "similar_questions": [
+        {
+          "prompt": "Let f(n)=1 for even n and 3 for odd n. Find its liminf and limsup.",
+          "solution": "They are 1 and 3, respectively."
+        },
+        {
+          "prompt": "If |a_n|≤5, what is the limit of n+a_n?",
+          "solution": "$n-5\\le n+a_n\\le n+5$, hence the limit is $+\\infty$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 22, PDF page 7. Not checked against an NTA final key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-26nov-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q023",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 23,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Hard",
+      "prompt": "Which statement about continuous maps $\\mathbb R^2\\to\\mathbb R$ is true?",
+      "options": {
+        "A": "At most countably many continuous maps",
+        "B": "At most finitely many continuous surjections",
+        "C": "Infinitely many continuous injections",
+        "D": "No continuous bijections"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Constant maps disprove the first claim; shifted coordinate projections disprove the second.",
+        "Restrict a proposed injection to a circle and use compactness and connectedness."
+      ],
+      "solution": "Every real constant gives a different continuous map, so A is false. The maps $(x,y)\\mapsto x+c$ are distinct continuous surjections, so B is false. Suppose an injection existed. Its restriction to $S^1$ is a continuous injection from a compact space into a Hausdorff space, hence a homeomorphism onto its image. The image is a nondegenerate compact interval in $\\mathbb R$. Removing an interior point disconnects that interval, while removing one point from $S^1$ leaves a connected space. Contradiction. No continuous injection exists, so C is false and **D** holds.",
+      "theory": "A continuous bijection is not automatically a homeomorphism. It is one if its domain is compact and target Hausdorff, because compact sets have closed images. Connected subsets of the real line are intervals. Removing a point can distinguish topological spaces: a circle minus one point is homeomorphic to a line, while an interval minus an interior point has two components. Restricting a proposed map to a convenient compact subset often turns a difficult global problem into a topological invariant argument. Set-theoretic bijections between R and R² do exist; continuity is the obstruction here.",
+      "similar_questions": [
+        {
+          "prompt": "Can there be a continuous injection from a circle into the line?",
+          "solution": "No. Its compact connected image would be an interval homeomorphic to the circle, contradicted by puncturing at an interior image point."
+        },
+        {
+          "prompt": "Give a continuous surjection from R² to R.",
+          "solution": "The projection $(x,y)\\mapsto x$ is continuous and surjective."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 23, PDF page 7. Not checked against an NTA final key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-26nov-q023.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q024",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 24,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For which domain does $\\sum_{n=1}^{\\infty}(-1)^n\\sin(nx)/n^{\\log_e n}$ converge uniformly?",
+      "options": {
+        "A": "Only x=0",
+        "B": "Only $[-\\pi,\\pi]$",
+        "C": "Only $\\mathbb R\\setminus\\{n\\pi:n\\in\\mathbb Z\\}$",
+        "D": "All $\\mathbb R$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Bound $|\\sin(nx)|$ independently of x.",
+        "For sufficiently large n, $\\log n\\ge2$."
+      ],
+      "solution": "For all real x, $|(-1)^n\\sin(nx)/n^{\\log n}|\\le n^{-\\log n}$. For $n\\ge\\lceil e^2\\rceil$, $n^{-\\log n}\\le n^{-2}$. The majorant series converges, and finitely many initial terms do not affect convergence. The Weierstrass M-test gives absolute and uniform convergence on the entire real line. **D**.",
+      "theory": "The M-test: if $|f_n(x)|\\le M_n$ for every x in a domain and $\\sum M_n<\\infty$, then $\\sum f_n$ converges uniformly and absolutely there. Uniform convergence controls tails simultaneously for every x; pointwise convergence alone does not. Here $n^{-\\log n}=\\exp[-(\\log n)^2]$ eventually decays faster than any fixed power $n^{-p}$. The alternating sign is unnecessary because an absolute majorant already works. A uniformly convergent sum of continuous functions is continuous; termwise differentiation requires additional conditions on derivatives.",
+      "similar_questions": [
+        {
+          "prompt": "Does $\\sum \\cos(nx)/n^2$ converge uniformly on R?",
+          "solution": "Yes: $|\\cos(nx)/n^2|\\le1/n^2$ and the M-test applies."
+        },
+        {
+          "prompt": "For which p does the M-test apply to $\\sum \\sin(nx)/n^p$?",
+          "solution": "The bound $1/n^p$ is summable for $p>1$. Failure for p≤1 does not by itself prove absence of uniform convergence."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 24, PDF page 7. Not checked against an NTA final key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-26nov-q024.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q025",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 25,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Hard",
+      "prompt": "For an arbitrary real sequence $(a_n)$, which assertion always holds?",
+      "options": {
+        "A": "$\\sum(-1)^n a_n/(1+|a_n|)$ converges",
+        "B": "Some subsequence makes $\\sum a_{n_k}/(1+|a_{n_k}|)$ converge",
+        "C": "Some b makes $\\sum|b-a_n/(1+|a_n|)|(-1)^n$ converge",
+        "D": "Some b and subsequence make $\\sum|b-a_{n_k}/(1+|a_{n_k}|)|$ converge"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The transformed sequence $b_n=a_n/(1+|a_n|)$ is bounded.",
+        "After finding a convergent subsequence, select an even faster one with error at most 2⁻ᵏ."
+      ],
+      "solution": "Put $b_n=a_n/(1+|a_n|)$, so $|b_n|<1$. By Bolzano–Weierstrass, some subsequence converges to a real b. Thin it further to ensure $|b-b_{n_k}|<2^{-k}$. Therefore the nonnegative series in D is bounded by a convergent geometric series. A fails for $a_n=(-1)^n$, giving constant terms 1/2. B fails for $a_n=1$. For C, again take $a_n=(-1)^n$: the term magnitudes alternate between $|b-1/2|$ and $|b+1/2|$ and cannot both tend to zero. **D**.",
+      "theory": "Every bounded real sequence has a convergent subsequence. Given convergence to b and any positive summable error sequence ε_k, choose increasing indices n_k with distance below ε_k. This strengthens subsequential convergence to summability along a further subsequence. It does not force convergence of a series of the values themselves: those may approach a nonzero limit. For every convergent series, its individual terms must tend to zero. Alternating signs alone never guarantee convergence; the standard alternating-series test also needs magnitudes decreasing to zero.",
+      "similar_questions": [
+        {
+          "prompt": "Show every bounded real sequence has a subsequence whose successive differences are absolutely summable.",
+          "solution": "Choose a subsequence with $|b_{n_k}-b|<2^{-k}$. Then $|b_{n_{k+1}}-b_{n_k}|\\le2^{-(k+1)}+2^{-k}$, a summable bound."
+        },
+        {
+          "prompt": "Must every convergent sequence have summable errors from its limit?",
+          "solution": "No: $1/n\\to0$, but $\\sum1/n$ diverges. A thinner subsequence $n_k=2^k$ has summable errors."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 25, PDF page 7. Not checked against an NTA final key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-26nov-q025.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q026",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 26,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Easy",
+      "prompt": "Continuous f,g on [0,1] satisfy f(0)=f(1)=0, g(0)=g(1)=1, and f(1/2)>g(1/2). What must hold?",
+      "options": {
+        "A": "No point has f(t)=g(t)",
+        "B": "Exactly one point has f(t)=g(t)",
+        "C": "At least two points have f(t)=g(t)",
+        "D": "Always infinitely many points have f(t)=g(t)"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Apply the intermediate value theorem to h=f−g.",
+        "Use [0,1/2] and [1/2,1] separately."
+      ],
+      "solution": "The continuous function h=f−g has h(0)=h(1)=−1 and h(1/2)>0. IVT gives a zero in (0,1/2) and another in (1/2,1), so they are distinct. **C**. To rule out D, take g=1 and f=8t(1−t); the equality is a quadratic with exactly two roots.",
+      "theory": "IVT states that a continuous real function on an interval takes every value between its endpoint values. Opposite endpoint signs guarantee an interior zero. Applying IVT on disjoint open subintervals guarantees distinct roots. It gives a lower bound on root count, not uniqueness. Strict monotonicity can establish uniqueness on each interval. Continuity is essential: a jump can cross from negative to positive without attaining zero.",
+      "similar_questions": [
+        {
+          "prompt": "A continuous h has signs +,−,+ at x=0,1,2. How many zeros are guaranteed?",
+          "solution": "At least two, one in (0,1) and one in (1,2)."
+        },
+        {
+          "prompt": "Give a discontinuous sign-changing function without zeros.",
+          "solution": "$h(x)=-1$ for x<0 and $h(x)=1$ for x≥0 changes sign but never equals zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 26, PDF page 8. Not checked against an NTA final key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-26nov-q026.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q027",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 27,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "An n×n matrix A has exactly r distinct nonzero eigenvalues. Which assertion is always true?",
+      "options": {
+        "A": "$\\operatorname{rank}A\\le r$",
+        "B": "If r=0, then $\\operatorname{rank}A<n-1$",
+        "C": "$\\operatorname{rank}A\\ge r$",
+        "D": "$A^2$ has r distinct nonzero eigenvalues"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Eigenvectors for distinct eigenvalues are linearly independent.",
+        "For nonzero λ, an eigenvector v lies in the image of A because v=A(v/λ)."
+      ],
+      "solution": "Choose one eigenvector for each distinct nonzero eigenvalue. They are independent and all lie in im A, so its dimension, rank A, is at least r. **C**. A fails for A=I₂ (rank 2, r=1). B fails for a nilpotent Jordan block of rank n−1. D fails for diag(1,−1), whose square is I₂ and merges the two eigenvalues.",
+      "theory": "The rank is the dimension of the image, while nullity is the dimension of the kernel; their sum is n. Distinct eigenvalues give independent eigenvectors, but eigenvalue multiplicities and Jordan blocks mean that the number of distinct eigenvalues does not determine rank. All eigenvalues zero implies nilpotence over a field in which the characteristic polynomial splits, not the zero matrix. Polynomial functions of a matrix map eigenvalues through the polynomial; distinct values may collide, as λ and −λ do under squaring.",
+      "similar_questions": [
+        {
+          "prompt": "What is the rank of a single nilpotent Jordan block J₄?",
+          "solution": "It has ones on the superdiagonal, rank 3, nullity 1, and only eigenvalue 0."
+        },
+        {
+          "prompt": "For a diagonal matrix, how do you find its rank?",
+          "solution": "Count its nonzero diagonal entries, including repetitions, rather than distinct nonzero values."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 27, PDF page 8. Not checked against an NTA final key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-26nov-q027.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q028",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 28,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Easy",
+      "prompt": "For arbitrary 2×2 matrices A and B, which determinant identity holds?",
+      "options": {
+        "A": "$\\det(A+B)+\\det(A-B)=\\det A+\\det B$",
+        "B": "$\\det(A+B)+\\det(A-B)=2\\det A-2\\det B$",
+        "C": "$\\det(A+B)+\\det(A-B)=2\\det A+2\\det B$",
+        "D": "$\\det(A+B)-\\det(A-B)=2\\det A-2\\det B$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The determinant of a 2×2 matrix is quadratic in its entries.",
+        "Expand both determinants; mixed A–B terms cancel in the sum."
+      ],
+      "solution": "Write $A=(a_{ij})$, $B=(b_{ij})$. Expanding gives $\\det(A+B)=\\det A+\\det B+M$, where $M=a_{11}b_{22}+b_{11}a_{22}-a_{12}b_{21}-b_{12}a_{21}$. Replacing B by −B changes M to −M and leaves det B unchanged. Adding gives $2\\det A+2\\det B$. **C**.",
+      "theory": "The determinant is multilinear in columns, but is not linear as a function of the whole matrix. In dimension two it is a homogeneous quadratic form and satisfies the parallelogram identity Q(u+v)+Q(u−v)=2Q(u)+2Q(v). The degree matters: in general det(cA)=cⁿdet(A), and this particular identity need not hold in other dimensions. Expanding a polynomial and cancelling odd mixed terms is a useful method for matrix identities.",
+      "similar_questions": [
+        {
+          "prompt": "Check the identity for A=I₂, B=2I₂.",
+          "solution": "The left side is det(3I₂)+det(−I₂)=9+1=10; the right side is 2(1)+2(4)=10."
+        },
+        {
+          "prompt": "Does det(A+B)=det A+det B generally hold?",
+          "solution": "No: for A=B=I₂, the two sides are 4 and 2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 28, PDF page 8. Not checked against an NTA final key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-26nov-q028.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q029",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 29,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Find $A^{20}$ for $A=\\begin{pmatrix}3&-2\\\\2&-1\\end{pmatrix}$.",
+      "options": {
+        "A": "$\\begin{pmatrix}41&40\\\\-40&-39\\end{pmatrix}$",
+        "B": "$\\begin{pmatrix}41&-40\\\\40&-39\\end{pmatrix}$",
+        "C": "$\\begin{pmatrix}41&-40\\\\-40&-39\\end{pmatrix}$",
+        "D": "$\\begin{pmatrix}41&40\\\\40&-39\\end{pmatrix}$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Compute N=A−I.",
+        "Check N², then apply the binomial formula to (I+N)²⁰."
+      ],
+      "solution": "$N=\\begin{pmatrix}2&-2\\\\2&-2\\end{pmatrix}$ satisfies N²=0. Since I commutes with N, $(I+N)^{20}=I+20N$; every higher-power term vanishes. This equals $\\begin{pmatrix}41&-40\\\\40&-39\\end{pmatrix}$. **B**.",
+      "theory": "For A=λI+N with Nᵏ=0, powers truncate: $A^m=\\sum_{j=0}^{k-1}\\binom mj\\lambda^{m-j}N^j$ for nonnegative integer m, interpreting the original binomial expression when λ=0. A repeated eigenvalue does not imply diagonalizability; a nonzero nilpotent part produces a Jordan block. Here the characteristic polynomial is (t−1)² and Cayley–Hamilton gives (A−I)²=0. This avoids twenty repeated matrix multiplications.",
+      "similar_questions": [
+        {
+          "prompt": "If N²=0, find (2I+N)⁵.",
+          "solution": "$32I+5\\cdot16N=32I+80N$."
+        },
+        {
+          "prompt": "Find the inverse of I+N when N²=0.",
+          "solution": "$(I+N)(I-N)=I-N^2=I$, so the inverse is I−N."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 29, PDF page 8. Not checked against an NTA final key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-26nov-q029.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q030",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 30,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Easy",
+      "prompt": "A real 2×2 matrix A has determinant 1 and trace 3. Find trace(A²).",
+      "options": {
+        "A": "2",
+        "B": "10",
+        "C": "9",
+        "D": "7"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use the characteristic polynomial for a 2×2 matrix.",
+        "Take the trace of A²−3A+I=0, remembering trace(I₂)=2."
+      ],
+      "solution": "Cayley–Hamilton gives A²−3A+I₂=0. Taking traces yields tr(A²)−3·3+2=0, hence tr(A²)=7. **D**. Equivalently, if eigenvalues are λ₁,λ₂, then λ₁²+λ₂²=(λ₁+λ₂)²−2λ₁λ₂=9−2.",
+      "theory": "For every 2×2 matrix, $\\chi_A(t)=t^2-(\\operatorname{tr}A)t+\\det A$. Cayley–Hamilton substitutes A into this polynomial. Thus $\\operatorname{tr}(A^2)=(\\operatorname{tr}A)^2-2\\det A$. It holds without diagonalizability. Traces of powers satisfy a recurrence: s_m=T s_{m−1}−D s_{m−2}, with s₀=2 and s₁=T. Distinguish trace(A²) from (trace A)².",
+      "similar_questions": [
+        {
+          "prompt": "If a 2×2 matrix has trace 4 and determinant 3, find trace(A²).",
+          "solution": "It is 16−6=10."
+        },
+        {
+          "prompt": "For the original matrix, find trace(A³).",
+          "solution": "Use s₃=3s₂−s₁=3·7−3=18."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 30, PDF page 9. Not checked against an NTA final key.",
+      "page": 9,
+      "image": "assets/questions/2020-june-26nov-q030.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q052",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 52,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Easy",
+      "prompt": "X is uniform on [0,100] and Y=⌊X⌋. Which statement is true?",
+      "options": {
+        "A": "$P(Y\\le25)=1/4$",
+        "B": "$P(Y\\le25)=26/100$",
+        "C": "$E(Y)=50$",
+        "D": "$E(Y)=101/2$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Y≤25 is the event X<26.",
+        "The point X=100 has probability zero."
+      ],
+      "solution": "For k=0,…,99, $P(Y=k)=P(k\\le X<k+1)=1/100$. Therefore $P(Y\\le25)=26/100$, so **B**. Also $E(Y)=(0+99)/2=49.5$, ruling out C and D.",
+      "theory": "A continuous random variable can become discrete under a floor transformation. Derive masses by preimages: P(⌊X⌋=k)=P(k≤X<k+1). For X uniform on [0,m], integer m, the floor is discrete uniform on 0,…,m−1; the endpoint m has zero mass. Its mean is (m−1)/2 and variance (m²−1)/12. Endpoints of continuous intervals have probability zero, but inclusive thresholds for the resulting integer variable change how many cells are counted.",
+      "similar_questions": [
+        {
+          "prompt": "X is uniform on [0,10]. Find P(⌊X⌋≤3).",
+          "solution": "Four unit cells contribute, giving 4/10."
+        },
+        {
+          "prompt": "For the original Y, find Var(Y).",
+          "solution": "For uniform integers 0,…,99, the variance is $(100^2-1)/12=9999/12$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 52, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2020-june-26nov-q052.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q053",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 53,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "An iid sample has pdf $f(x\\mid\\theta)=(\\log\\theta)\\theta^x/(\\theta-1)$ for 0<x<1, θ>1. Classify $T=\\sum X_i$.",
+      "options": {
+        "A": "Sufficient but not complete",
+        "B": "Sufficient but not minimal sufficient",
+        "C": "Complete sufficient",
+        "D": "Neither complete nor sufficient"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Write the joint density using η=log θ.",
+        "The natural parameter η ranges over the open interval (0,∞)."
+      ],
+      "solution": "Let η=log θ>0. The joint density is $[\\eta/(e^\\eta-1)]^n\\exp(\\eta T)\\mathbf1_{(0,1)^n}$. Factorization makes T sufficient. This is a full one-parameter exponential family with fixed support and natural parameter space containing an open interval, so its natural statistic T is complete. Hence **C**. The likelihood ratio for two sample points is parameter-independent exactly when their sums agree, also showing minimal sufficiency.",
+      "theory": "A statistic is sufficient when the likelihood factors into a data-only part and a part depending on the data through that statistic. It is complete if Eθ[g(T)]=0 for every θ implies g(T)=0 almost surely for every θ, whenever those expectations exist. Full exponential families with parameter-independent support and a natural parameter space containing a nonempty open set have complete natural statistics. Completeness is not automatic for curved families or arbitrary sufficient statistics. Combined with sufficiency, it supports unique unbiased estimators via the Lehmann–Scheffé theorem.",
+      "similar_questions": [
+        {
+          "prompt": "For iid Poisson(λ), is the sample sum complete sufficient?",
+          "solution": "Yes. The joint density is a full exponential family with natural parameter log λ ranging over R. The sum is complete sufficient."
+        },
+        {
+          "prompt": "Why does the product indicator not break sufficiency here?",
+          "solution": "The support (0,1)ⁿ does not depend on θ and belongs to the data-only factor."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 53, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2020-june-26nov-q053.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q054",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 54,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Hard",
+      "prompt": "One observation has logistic location pdf $f(x\\mid\\theta)=e^{x-\\theta}/(1+e^{x-\\theta})^2$. Find a UMP size-α test of H₀:θ≤θ₀ versus H₁:θ>θ₀.",
+      "options": {
+        "A": "Reject X>k with $\\alpha=P_{\\theta_0}(X>k)$",
+        "B": "Reject X<k with $\\alpha=P_{\\theta_0}(X>k)$",
+        "C": "Reject X>k with $\\alpha=P_{\\theta_0}(X<k)$",
+        "D": "Reject X<k with $\\alpha=P_{\\theta_0}(X<k)$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Larger θ shifts the distribution to the right.",
+        "Show the likelihood ratio for θ₁>θ₀ is increasing in x, then calibrate the upper tail."
+      ],
+      "solution": "For θ₁>θ₀, the derivative of the log likelihood ratio with respect to x is $2[s(x-\\theta_0)-s(x-\\theta_1)]>0$, where $s(u)=e^u/(1+e^u)$. Thus the family has monotone likelihood ratio in X. The upper-tail test is most powerful for every θ₁>θ₀ and the same threshold works for all alternatives. Choose $P_{\\theta_0}(X>k)=\\alpha$, giving $k=\\theta_0+\\log((1-\\alpha)/\\alpha)$ for 0<α<1. For θ≤θ₀ its rejection probability is at most α. **A**.",
+      "theory": "Neyman–Pearson compares likelihood ratios for simple hypotheses. A monotone likelihood ratio family yields a common one-sided rejection region for every alternative, giving a uniformly most powerful test by the Karlin–Rubin argument. Size for a composite null is the supremum rejection probability over the null, here attained at θ₀. The logistic CDF is Fθ(x)=s(x−θ). Reversing the alternative reverses the tail. UMP tests for two-sided alternatives generally do not follow from this one-sided argument.",
+      "similar_questions": [
+        {
+          "prompt": "For θ₀=0 and α=0.05, find the critical value.",
+          "solution": "$k=\\log19\\approx2.944$; reject above k."
+        },
+        {
+          "prompt": "What is the rejection probability at θ₁>θ₀?",
+          "solution": "$P_{\\theta_1}(X>k)=1/[1+e^{k-\\theta_1}]$, which exceeds α and increases with θ₁."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 54, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2020-june-26nov-q054.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q055",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 55,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Easy",
+      "prompt": "For 35 iid observations split into 15 X observations and 20 Y observations, let R be the sum of ranks of the X observations in the pooled sample. Find E(R).",
+      "options": {
+        "A": "270",
+        "B": "300",
+        "C": "360.5",
+        "D": "330.5"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Each pooled rank has mean (35+1)/2 under the iid assumption.",
+        "Use linearity of expectation; the ranks are not independent."
+      ],
+      "solution": "Each X observation is exchangeable with every pooled observation. With the usual no-tie ranking (or midranks for ties), its expected rank is $(35+1)/2=18$. Summing 15 expectations gives E(R)=15·18=270. **A**. Independence between the ranks is unnecessary.",
+      "theory": "For two iid groups of sizes m and n with N=m+n, the null expected Wilcoxon rank sum is m(N+1)/2. The pooled ranks sum to N(N+1)/2 and exchangeability allocates the same expected rank to every observation. With a continuous distribution, ties have probability zero and Var(R)=mn(N+1)/12. Ties require a variance correction, though midrank assignment preserves the mean. The Mann–Whitney statistic U=R−m(m+1)/2 has mean mn/2. Different sampling distributions invalidate the iid null expectation.",
+      "similar_questions": [
+        {
+          "prompt": "For group sizes 10 and 12, find the expected first-group rank sum.",
+          "solution": "$10(23)/2=115$."
+        },
+        {
+          "prompt": "Find E(U) for the original groups.",
+          "solution": "$E(U)=15\\cdot20/2=150$; equivalently 270−15·16/2=150."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 55, PDF page 15. Not checked against an NTA final key.",
+      "page": 15,
+      "image": "assets/questions/2020-june-26nov-q055.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q057",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 57,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Independent $X_1,X_2\\sim N_p(\\mu,\\Sigma)$ have positive-definite Σ. Which expression always has a central chi-square distribution?",
+      "options": {
+        "A": "$\\frac12(X_1-X_2)^T(X_1-X_2)$",
+        "B": "$2(X_1-X_2)^T(X_1-X_2)$",
+        "C": "$2(X_1-X_2)^T\\Sigma^{-1}(X_1-X_2)$",
+        "D": "$\\frac12(X_1-X_2)^T\\Sigma^{-1}(X_1-X_2)$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The difference has mean zero and covariance 2Σ.",
+        "Whiten the difference to obtain independent standard normal coordinates."
+      ],
+      "solution": "$D=X_1-X_2\\sim N_p(0,2\\Sigma)$. Hence $Z=(2\\Sigma)^{-1/2}D\\sim N_p(0,I_p)$ and $Z^TZ\\sim\\chi_p^2$. This quadratic form is $D^T(2\\Sigma)^{-1}D=\\frac12D^T\\Sigma^{-1}D$. **D**. C is four times this chi-square variable; A and B fail to account for arbitrary Σ.",
+      "theory": "For a multivariate normal vector W with mean m and invertible covariance V, the squared Mahalanobis distance (W−m)ᵀV⁻¹(W−m) has a central chi-square distribution with p degrees of freedom. Whitening is a linear transform to unit covariance, after which normal components are independent. For an uncentered form with a nonzero mean, the distribution is noncentral chi-square. Covariances add for independent differences; for correlated vectors, cross-covariance terms must be included. Ordinary Euclidean squared length works only for a matching scalar identity covariance.",
+      "similar_questions": [
+        {
+          "prompt": "W∼N₃(0,4I). What is ||W||²/4 distributed as?",
+          "solution": "$\\chi_3^2$."
+        },
+        {
+          "prompt": "What is the expected value of the correct form in this question?",
+          "solution": "A $\\chi_p^2$ variable has mean p and variance 2p."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 57, PDF page 15. Not checked against an NTA final key.",
+      "page": 15,
+      "image": "assets/questions/2020-june-26nov-q057.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q059",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 59,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Hard",
+      "prompt": "In a complete randomized block design with b blocks and k treatments under the usual independent equal-variance additive error model, which claim holds?",
+      "options": {
+        "A": "Any two estimated treatment contrasts are uncorrelated",
+        "B": "Error sum of squares has bk−1 degrees of freedom",
+        "C": "Every estimated treatment contrast is uncorrelated with every estimated block contrast",
+        "D": "Two estimated treatment contrasts always have negative correlation"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A contrast has coefficients summing to zero.",
+        "Compute the covariance between a treatment row-mean contrast and a block column-mean contrast."
+      ],
+      "solution": "Write treatment contrast $T=\\sum_i c_i\\bar y_{i\\cdot}$ and block contrast $B=\\sum_j d_j\\bar y_{\\cdot j}$, with Σcᵢ=Σdⱼ=0. Since $\\operatorname{Cov}(\\bar y_{i\\cdot},\\bar y_{\\cdot j})=\\sigma^2/(bk)$, $\\operatorname{Cov}(T,B)=\\sigma^2(\\sum c_i)(\\sum d_j)/(bk)=0$. **C**. Two treatment contrasts instead have covariance $(\\sigma^2/b)\\sum c_i a_i$, not necessarily zero or negative. Error degrees of freedom are (b−1)(k−1), so B is false.",
+      "theory": "A contrast is a linear combination of factor effects whose coefficients sum to zero, eliminating the overall mean. Balanced complete block designs make treatment and block contrast subspaces orthogonal. Orthogonality under spherical independent errors gives zero covariance; normal errors further give independence. Treatment contrasts are mutually orthogonal only when their coefficient vectors have zero dot product. Total degrees of freedom bk−1 decompose into treatment k−1, block b−1, and residual (b−1)(k−1). Missing cells and unequal variances can destroy these simple properties.",
+      "similar_questions": [
+        {
+          "prompt": "With b=4 and k=3, find residual degrees of freedom.",
+          "solution": "(4−1)(3−1)=6."
+        },
+        {
+          "prompt": "Are contrasts with coefficients (1,−1,0) and (1,1,−2) uncorrelated?",
+          "solution": "Yes: their dot product is 1−1+0=0 under the balanced equal-variance model."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 59, PDF page 16. Not checked against an NTA final key.",
+      "page": 16,
+      "image": "assets/questions/2020-june-26nov-q059.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q060",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 60,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Operations Research",
+      "difficulty": "Easy",
+      "prompt": "Find the maximum and minimum of 5x+7y subject to |x|+|y|≤1.",
+      "options": {
+        "A": "5 and −5",
+        "B": "5 and −7",
+        "C": "7 and −5",
+        "D": "7 and −7"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Bound the absolute value by 5|x|+7|y|.",
+        "Try the vertices (0,1) and (0,−1)."
+      ],
+      "solution": "$|5x+7y|\\le5|x|+7|y|\\le7(|x|+|y|)\\le7$. The upper bound is attained at (0,1), the lower at (0,−1). The extrema are 7 and −7, so **D**.",
+      "theory": "The constraint is the unit ℓ₁ ball, a diamond with vertices (±1,0),(0,±1). A linear objective reaches extrema at vertices of a compact polytope. More generally, max over Σ|xᵢ|≤R of a·x equals R max|aᵢ|, the duality between ℓ₁ and ℓ∞ norms. The minimum is its negative because the feasible set is symmetric. With a Euclidean ball instead, the maximum is R||a||₂, so the shape of the constraint matters.",
+      "similar_questions": [
+        {
+          "prompt": "Find max(3x−4y) for |x|+|y|≤2.",
+          "solution": "The maximum is 2·4=8, attained at (0,−2)."
+        },
+        {
+          "prompt": "Find max(5x+7y) for x²+y²≤1.",
+          "solution": "By Cauchy–Schwarz the maximum is $\\sqrt{74}$, attained at $(5,7)/\\sqrt{74}$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 60, PDF page 16. Not checked against an NTA final key.",
+      "page": 16,
+      "image": "assets/questions/2020-june-26nov-q060.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q061",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 61,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "Which sets are in bijection with $\\mathbb R$?",
+      "options": {
+        "A": "All maps {0,1}→N",
+        "B": "All maps N→{0,1}",
+        "C": "All subsets of N",
+        "D": "All subsets of R"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "A binary sequence corresponds uniquely to a subset of N.",
+        "Cantor’s theorem makes the power set of R strictly larger than R."
+      ],
+      "solution": "A map {0,1}→N is determined by an ordered pair of natural numbers, so A is countable. A map N→{0,1} is a binary sequence, and its positions with value 1 give a bijection with P(N). Both B and C have cardinality $2^{\\aleph_0}$, the continuum, and hence match R. Cantor’s theorem gives $|P(R)|>|R|$, so D does not. The complete correct set is **B,C**.",
+      "theory": "Finite products of countable sets remain countable, but the set of all infinite binary sequences is uncountable. Characteristic functions give a bijection P(S)↔{0,1}ˢ. To identify continuum cardinality rigorously, map binary sequences into the Cantor set using ternary digits 0 and 2, giving an injection into R, and encode real numbers via rational lower cuts for an injection into P(N); Cantor–Schröder–Bernstein gives equality. Direct binary expansions require care with nonunique dyadic representations. Cantor’s diagonal argument proves no set surjects onto its own power set.",
+      "similar_questions": [
+        {
+          "prompt": "Is N×N countable?",
+          "solution": "Yes. Enumerate pairs by increasing sum, then within each finite diagonal."
+        },
+        {
+          "prompt": "Which is larger: P(N) or P(P(N))?",
+          "solution": "The second is strictly larger by Cantor’s theorem applied to P(N)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 61, PDF page 16. Not checked against an NTA final key.",
+      "page": 16,
+      "image": "assets/questions/2020-june-26nov-q061.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q062",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 62,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Which of the following series converge?",
+      "options": {
+        "A": "$\\sum_{n\\ge1}(-1)^n/\\sqrt n$",
+        "B": "$\\sum_{n\\ge1}(-1)^n/(\\sqrt n+n)$ is absolutely convergent",
+        "C": "$\\sum_{n\\ge1}\\{[1+(-1)^n]\\sqrt n+\\log n\\}/n^{3/2}$",
+        "D": "$\\sum_{n\\ge1}\\{(-1)^n\\sqrt n+1\\}/n^{3/2}$"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Use the alternating-series test for A, and examine absolute values for B.",
+        "Split C and D into simpler series. In C the even-indexed harmonic part remains positive."
+      ],
+      "solution": "A converges by the alternating-series test since 1/√n decreases to zero. B is not absolutely convergent: for n≥1, n≤n+√n≤2n, so its absolute terms are at least 1/(2n). In C, the summand is $(1+(-1)^n)/n+(\\log n)/n^{3/2}$; its even-indexed first part is 1/k at n=2k and diverges, while all terms are nonnegative. D is $\\sum(-1)^n/n+\\sum1/n^{3/2}$, the sum of two convergent series. Thus **A,D**.",
+      "theory": "The alternating-series test needs nonincreasing nonnegative magnitudes tending to zero. Absolute convergence implies convergence, while conditional convergence means the original series converges but its absolute-value series diverges. Positive series admit comparison and limit comparison tests; p-series converge exactly when p>1. Splitting into a sum of series is justified when the component series converge, or when divergent behavior can be established from nonnegative components. The term (log n)/nᵖ is summable for p>1 because log n grows slower than any positive power. Adding a summable positive perturbation to an alternating harmonic series preserves convergence but may not give absolute convergence.",
+      "similar_questions": [
+        {
+          "prompt": "Classify $\\sum(-1)^n/n^{3/4}$.",
+          "solution": "It converges conditionally: alternating test applies, while the absolute p-series has p=3/4≤1."
+        },
+        {
+          "prompt": "Does $\\sum[(-1)^n/n+1/n^2]$ converge?",
+          "solution": "Yes, by summing a convergent alternating harmonic series and a convergent p-series. It remains conditionally convergent."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 62, PDF page 16. Not checked against an NTA final key.",
+      "page": 16,
+      "image": "assets/questions/2020-june-26nov-q062.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q021",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Nonempty A,B⊂R have C=A∩B. Which condition forces C to be empty?",
+      "options": {
+        "A": "A,B open and C compact",
+        "B": "A,B open and C closed",
+        "C": "A,B both dense in R",
+        "D": "A open and B compact"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "In R, a compact set is closed and bounded.",
+        "An intersection of open sets is open. Use connectedness of R."
+      ],
+      "solution": "Under A, C is open and compact, hence also closed. Since R is connected, its only clopen subsets are ∅ and R. R is not compact, so C=∅. **A**. For B and C take A=B=R, giving nonempty C. For D take A=R and B={0}, giving C={0}. These examples satisfy the specified nonemptiness.",
+      "theory": "A clopen set is both open and closed. Connectedness is equivalent to having no proper nonempty clopen subset. In R, compactness is equivalent to closedness and boundedness; it is stronger than closedness alone. The empty set is open, closed, and compact. Dense sets need not intersect (Q and its complement), but density also does not force disjointness. In a disconnected ambient space, a nonempty compact open component can exist, so the conclusion uses the particular topology of R.",
+      "similar_questions": [
+        {
+          "prompt": "If U⊂R is open and compact, what is U?",
+          "solution": "U must be empty by the same connectedness argument."
+        },
+        {
+          "prompt": "Can a closed bounded subset of R be nonempty and open?",
+          "solution": "No. A nonempty clopen subset of R would have to be R, which is unbounded."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 7. Not checked against an NTA final key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-30nov-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q022",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Easy",
+      "prompt": "Find $\\lim_{n\\to\\infty}(1+\\sqrt2+\\sqrt[3]3+\\cdots+\\sqrt[n]n)/n$.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Does not exist"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "First find the limit of aₖ=k¹ᐟᵏ.",
+        "The expression is the arithmetic mean of the first n terms of that sequence."
+      ],
+      "solution": "$k^{1/k}=\\exp((\\log k)/k)\\to1$. The arithmetic means of a convergent sequence have the same limit by Cesàro’s theorem. Therefore the requested limit is 1, option **B**.",
+      "theory": "If aₖ→L, then (a₁+⋯+aₙ)/n→L. For a proof, choose K so |aₖ−L|<ε for k≥K. The finite initial error sum divided by n tends to zero, while the tail’s average error is bounded by ε. The converse is false: an alternating sequence can have convergent averages without converging itself. Taking logarithms is useful for powers kᵅ⁽ᵏ⁾; here log k grows more slowly than k.",
+      "similar_questions": [
+        {
+          "prompt": "Find the limit of (1+1/2+⋯+1/n)/n.",
+          "solution": "The sequence 1/k tends to zero; its arithmetic means also tend to zero."
+        },
+        {
+          "prompt": "Give a sequence whose means converge but which does not converge.",
+          "solution": "$a_k=(-1)^k$ has means tending to zero, although aₖ oscillates."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 22, PDF page 1. Not checked against an NTA final key.",
+      "page": 1,
+      "image": "assets/questions/2021-june-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q021",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let aₙ=n+n⁻¹. Find the sum $\\sum_{n=1}^{\\infty}(-1)^{n+1}a_{n+1}/n!$.",
+      "options": {
+        "A": "Does not converge",
+        "B": "$e^{-1}-1$",
+        "C": "$e^{-1}$",
+        "D": "$e^{-1}+1$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Expand aₙ₊₁=(n+1)+1/(n+1).",
+        "Use the exponential power series and shift the factorial indices."
+      ],
+      "solution": "The series is absolutely convergent by the ratio test. Split its summand into $n/n!+1/n!+1/(n+1)!$. The signed sums of these three components are respectively $e^{-1}$, $1-e^{-1}$, and $e^{-1}$: for the first set m=n−1; for the last set m=n+1. Their total is $1+e^{-1}$. Hence **D**.",
+      "theory": "The entire exponential series eᶻ=Σzⁿ/n! converges absolutely for every complex z. Absolute convergence permits finite decomposition, index shifts, and removal of finitely many terms. Identities n/n!=1/(n−1)! and [(n+1)n!]=(n+1)! are central here. When shifting an alternating series, track the new sign and starting index explicitly. A ratio-test limit below one proves absolute convergence; it does not compute the sum by itself.",
+      "similar_questions": [
+        {
+          "prompt": "Find $\\sum_{n=1}^{\\infty}(-1)^{n+1}n/n!$.",
+          "solution": "Put m=n−1. The result is $\\sum_{m\\ge0}(-1)^m/m!=e^{-1}$."
+        },
+        {
+          "prompt": "Find $\\sum_{n=1}^{\\infty}1/(n+1)!$.",
+          "solution": "Removing the n=0 and n=1 terms from e gives e−2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 9. Not checked against an NTA final key.",
+      "page": 9,
+      "image": "assets/questions/2022-june-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-june-q021",
+      "source_type": "official_exam",
+      "paper_id": "2023-june",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Hard",
+      "prompt": "S is infinite and the axiom of choice holds. Which set is necessarily in bijection with S?",
+      "options": {
+        "A": "Q",
+        "B": "R",
+        "C": "S×S",
+        "D": "P(S)"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "An infinite set can be countable or have larger cardinality.",
+        "With choice, the square of any infinite cardinal equals that cardinal."
+      ],
+      "solution": "The axiom of choice allows S to be well ordered, with infinite cardinal κ. The infinite-cardinal multiplication theorem gives κ·κ=κ, so S and S×S are in bijection. **C**. A fails for S=R; B fails for S=N. D always fails by Cantor’s theorem: no set is in bijection with its own power set.",
+      "theory": "Cardinality compares sets through bijections. Under choice, every infinite cardinal κ satisfies κ+κ=κ and κ·κ=κ. One proof of the square theorem orders ordinal pairs first by max coordinate and then lexicographically. A transfinite induction on infinite initial ordinals shows each proper initial segment of this order has cardinality below κ; assigning pairs their ranks gives an injection κ×κ→κ. The reverse injection is α↦(α,0), and Cantor–Schröder–Bernstein yields equality. Choice is relevant for arbitrary infinite sets; finite sets instead have |S×S|=|S|². Cantor’s diagonal argument proves |P(S)|>|S| regardless of choice.",
+      "similar_questions": [
+        {
+          "prompt": "Give an enumeration of N×N.",
+          "solution": "List pairs by increasing sum of coordinates. Every diagonal is finite and every pair occurs on one diagonal."
+        },
+        {
+          "prompt": "For a set S with three elements, is S×S in bijection with S?",
+          "solution": "No. Their sizes are 9 and 3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 13. Not checked against an NTA final key.",
+      "page": 13,
+      "image": "assets/questions/2023-june-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q021",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Easy",
+      "prompt": "Find inf U for $U=\\{x\\in\\mathbb R:x^2-9x+18\\le0,\\ x^2-7x+12\\le0\\}$.",
+      "options": {
+        "A": "5",
+        "B": "4",
+        "C": "3",
+        "D": "2"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Factor each quadratic.",
+        "Both inequalities must hold, so intersect their solution intervals."
+      ],
+      "solution": "The first inequality is (x−3)(x−6)≤0, giving [3,6]. The second is (x−3)(x−4)≤0, giving [3,4]. Their intersection is U=[3,4], whose infimum and minimum are 3. **C**.",
+      "theory": "For a quadratic with positive leading coefficient and real roots a≤b, its value is nonpositive on [a,b]. A pair of simultaneous conditions means intersection, while an “or” condition means union. The infimum is the greatest lower bound and need not belong to the set; a minimum must belong. Here non-strict inequalities include both endpoints. Repeated roots and negative leading coefficients change the sign pattern, so use a sign chart when needed.",
+      "similar_questions": [
+        {
+          "prompt": "Find inf{x:(x−1)(x−5)<0}.",
+          "solution": "The set is (1,5), so its infimum is 1, but it has no minimum."
+        },
+        {
+          "prompt": "Intersect [−2,3] and [1,7].",
+          "solution": "The intersection is [1,3], with infimum 1 and supremum 3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2023-december-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q021",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For $A=\\{x\\in\\mathbb Q:0<(\\sqrt2-1)x<\\sqrt2+1\\}$, considered in R, which statement holds?",
+      "options": {
+        "A": "$\\sup A=2+2\\sqrt3$",
+        "B": "$\\sup A=3+2\\sqrt2$",
+        "C": "$\\inf A=2+2\\sqrt3$",
+        "D": "$\\inf A=3+2\\sqrt2$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Divide by the positive coefficient √2−1.",
+        "Rational numbers are dense in every real interval."
+      ],
+      "solution": "The inequality gives $0<x<(\\sqrt2+1)/(\\sqrt2-1)=(\\sqrt2+1)^2=3+2\\sqrt2$. Rational density implies every smaller real number fails to be an upper bound: there is a rational in the interval above it and below the endpoint. Thus sup A=3+2√2, **B**. Similarly inf A=0. Neither bound belongs to A.",
+      "theory": "Density of Q in R means every open interval contains a rational. It allows a set of rational points to have irrational supremum in R. An upper bound b is the supremum if every b−ε is exceeded by an element of the set. Rationalizing a denominator uses multiplication by its conjugate; here (√2−1)(√2+1)=1. Bounds depend on the ambient ordered field: Q is not order complete, so an irrational least upper bound need not exist within Q.",
+      "similar_questions": [
+        {
+          "prompt": "What is sup(Q∩(0,√3)) as a subset of R?",
+          "solution": "It is √3; there is no maximum."
+        },
+        {
+          "prompt": "Does that set have a supremum in Q?",
+          "solution": "No. Every rational upper bound exceeds √3 and can be replaced by a smaller rational upper bound."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 13. Not checked against an NTA final key.",
+      "page": 13,
+      "image": "assets/questions/2024-june-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q021",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Easy",
+      "prompt": "How many injective functions are there from {1,…,7} to {1,…,10}?",
+      "options": {
+        "A": "$10^7$",
+        "B": "$10!/7!$",
+        "C": "$10!/3!$",
+        "D": "$7^{10}$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "An injection cannot reuse an image.",
+        "Count choices successively for the seven labelled domain elements."
+      ],
+      "solution": "There are 10 choices for the first image, then 9,8,7,6,5,4 for the remaining images. Multiplying gives 10·9·8·7·6·5·4=10!/3!=604800. **C**.",
+      "theory": "For a labelled domain of size m and codomain of size n, injections number n!/(n−m)! when m≤n, and zero otherwise. Unrestricted functions number nᵐ. Choosing only the image subset gives binomial(n,m), but each such subset supports m! bijections from the domain, recovering the injection count. Surjections require a different calculation, commonly inclusion–exclusion.",
+      "similar_questions": [
+        {
+          "prompt": "Count injections from a 3-element set to a 5-element set.",
+          "solution": "5·4·3=60."
+        },
+        {
+          "prompt": "Count unrestricted maps from the same sets.",
+          "solution": "Each of the three arguments has five independent choices, so 5³=125."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2024-december-28feb-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-02mar-q021",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-02mar",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Hard",
+      "prompt": "For nonempty A,B⊂R, let S=C(A,R), T=C(B,R), U=C(A×A,R). Which claim is true?",
+      "options": {
+        "A": "If A is finite, S and U are in bijection",
+        "B": "If A is finite and B=[0,1], S and T are not in bijection",
+        "C": "S and U are never in bijection",
+        "D": "If A≠B, T and U are not in bijection"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "A finite subset of R has the discrete subspace topology.",
+        "Compare cardinalities of finite real products and of C([0,1],R)."
+      ],
+      "solution": "If |A|=m≥1 is finite, every map on A and A×A is continuous, so S has size |Rᵐ| and U has size |Rᵐ²|. Both equal the continuum; hence **A**. For B, C([0,1],R) also has continuum cardinality: constants give a lower bound, while restriction to the countable dense rational subset is injective and gives an upper bound |Rᴺ|=continuum. Thus B is false. C is contradicted by finite A. For D choose A={0}, B={0,1}; U≅R and T≅R² are in bijection although A≠B.",
+      "theory": "Cardinality is distinct from topology and vector-space dimension. All nonempty finite Cartesian powers of R have continuum size even when their Euclidean dimensions differ. On a finite subset of a metric space, every singleton is open and all maps are continuous. A continuous real-valued function on a space is determined by its values on a dense subset: limits from that subset fix every remaining value. A countable determining set bounds the cardinality by |Rᴺ|=(2^ℵ₀)^ℵ₀=2^ℵ₀. Set-theoretic bijections here need not be continuous as maps between function spaces.",
+      "similar_questions": [
+        {
+          "prompt": "How many continuous real-valued functions are there on a 2-point discrete space?",
+          "solution": "They are determined by two arbitrary real values, so their cardinality is the continuum."
+        },
+        {
+          "prompt": "Why is restriction to a dense subset injective for continuous functions?",
+          "solution": "If two continuous functions agree on the dense subset, their difference is zero there and, by continuity, zero everywhere."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2024-december-02mar-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-june-q021",
+      "source_type": "official_exam",
+      "paper_id": "2025-june",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Easy",
+      "prompt": "Nonnegative integers p,q satisfy statements (I): p+k=q for some integer k≥1; (II): q+k=p for some integer k≥1. Which claim holds?",
+      "options": {
+        "A": "Both can be true",
+        "B": "Both are false iff p=q",
+        "C": "For every p,q at least one is true",
+        "D": "Some p≠q make both false"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Statement I is equivalent to q>p.",
+        "Use trichotomy of the integer order."
+      ],
+      "solution": "I holds exactly when q>p, by taking k=q−p. II holds exactly when p>q. They cannot both hold. When p=q neither admits a positive k, and when p≠q exactly one holds. Therefore **B** is the unique true claim.",
+      "theory": "A linear order satisfies trichotomy: exactly one of p<q, p=q, p>q holds. Integer discreteness means strict inequality is equivalent to a difference of at least one. The condition k≥1 matters; allowing k=0 would make both statements true at equality. Translate existential arithmetic statements into simple inequalities before assessing universal claims. A single counterexample suffices to refute a universal statement.",
+      "similar_questions": [
+        {
+          "prompt": "Which statements hold at p=2,q=5?",
+          "solution": "I holds with k=3; II is false."
+        },
+        {
+          "prompt": "If k≥0 were allowed, what happens at p=q?",
+          "solution": "Both statements hold with k=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 15. Not checked against an NTA final key.",
+      "page": 15,
+      "image": "assets/questions/2025-june-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q021",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 21,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X∼Binomial(n,p), with n∈{5,6}, p∈{1/4,3/4}. Given X=3, find the maximum likelihood estimate of (n,p).",
+      "options": {
+        "A": "$(5,1/4)$",
+        "B": "$(5,3/4)$",
+        "C": "$(6,3/4)$",
+        "D": "$(6,1/4)$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "There are only four admissible parameter pairs.",
+        "Evaluate binomial(n,3)p³(1−p)ⁿ⁻³ at each pair; n is also unknown."
+      ],
+      "solution": "The four likelihoods in option order are 90/1024, 270/1024, 135/1024, 135/1024. The unique maximum is 270/1024 at (5,3/4). Hence **B**. For n=6, three successes and three failures make the two p choices equally likely.",
+      "theory": "Maximum likelihood chooses the admissible parameter maximising the probability of the observed data. In a discrete finite parameter space, direct enumeration is exact and often simpler than calculus. For binomial data the likelihood includes the combinatorial coefficient binomial(n,x); it cannot be dropped when n varies. The unrestricted formula p̂=x/n assumes n fixed and a continuous parameter p∈[0,1]; it does not solve this restricted joint problem. Equal likelihoods can produce nonunique MLEs, so compare all admissible pairs.",
+      "similar_questions": [
+        {
+          "prompt": "With n=5 fixed and p restricted to {1/4,3/4}, which p is preferred if X=1?",
+          "solution": "The likelihood ratio for p=3/4 over p=1/4 is 3^(2x−n)=3^(−3)<1, so p=1/4."
+        },
+        {
+          "prompt": "If n=6 is fixed and X=3, is the restricted MLE unique?",
+          "solution": "No. Both p=1/4 and p=3/4 have equal likelihood."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 13. Not checked against an NTA final key.",
+      "page": 13,
+      "image": "assets/questions/2025-december-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2026-june-q021",
+      "source_type": "official_exam",
+      "paper_id": "2026-june",
+      "question_number": 21,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Independent Xᵢ are exponential with means 1/(iθ), i=1,2,3, θ>0. Which displayed statistic is sufficient for θ?",
+      "options": {
+        "A": "$3X_1+3X_2+3X_3$",
+        "B": "$X_1+2X_2+3X_3$",
+        "C": "$3X_1+2X_2+X_3$",
+        "D": "$X_1+X_2/2+X_3/3$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "An exponential variable with mean 1/(iθ) has rate iθ.",
+        "Multiply the three densities and inspect where θ and the data interact."
+      ],
+      "solution": "The joint density is $6\\theta^3\\exp[-\\theta(x_1+2x_2+3x_3)]\\mathbf1_{x_i\\ge0}$. By the factorization theorem, T=X₁+2X₂+3X₃ is sufficient for θ, so **B**. The likelihood ratio of two sample points is parameter-independent precisely when their weighted sums agree; this also identifies T as minimal sufficient. The other weight vectors are not proportional to (1,2,3) and do not determine T on the positive orthant.",
+      "theory": "For independent exponentials with rates cᵢθ and known positive constants cᵢ, the density factors through T=ΣcᵢXᵢ. Each cᵢXᵢ has exponential rate θ, so T has Gamma(shape n, rate θ). Its mean is n/θ. Distinguish rate from scale or mean when converting a statement into a density. Any one-to-one transformation of a sufficient statistic remains sufficient; arbitrary reweighting need not. Sufficiency describes information retained by a statistic, rather than whether that statistic itself estimates the parameter without bias.",
+      "similar_questions": [
+        {
+          "prompt": "For means 1/θ and 1/(4θ), give a sufficient statistic.",
+          "solution": "T=X₁+4X₂; its distribution is Gamma(2, rate θ)."
+        },
+        {
+          "prompt": "For the original three observations, find the likelihood MLE of θ.",
+          "solution": "The log likelihood is constant+3log θ−θT, giving θ̂=3/T for T>0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 21, PDF page 14. Not checked against an NTA final key.",
+      "page": 14,
+      "image": "assets/questions/2026-june-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q031",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 31,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Easy",
+      "prompt": "For which real a,b does $p(x,y)=a^2x_1y_1+abx_2y_1+abx_1y_2+b^2x_2y_2$ define an inner product on R²?",
+      "options": {
+        "A": "a>0,b>0",
+        "B": "ab>0",
+        "C": "a=b=0",
+        "D": "For no a,b"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Factor p(x,x).",
+        "Find a nonzero vector at which that square vanishes."
+      ],
+      "solution": "$p(x,x)=(ax_1+bx_2)^2$. If (a,b)≠(0,0), the nonzero vector (b,−a) has p(x,x)=0. If a=b=0, every vector has zero squared length. Thus positive definiteness fails in all cases, and **D** holds.",
+      "theory": "A real inner product is a symmetric bilinear form positive on every nonzero vector. A square of one linear functional is only positive semidefinite in a space of dimension at least two because that functional has a nontrivial kernel. Its matrix vvᵀ has rank at most one. For a symmetric matrix, an inner product requires all eigenvalues positive, equivalently positive definiteness. Nonnegativity alone defines a degenerate form, not an inner product.",
+      "similar_questions": [
+        {
+          "prompt": "Does x₁y₁+x₂y₂ define an inner product on R²?",
+          "solution": "Yes. Its quadratic form is x₁²+x₂²>0 for every nonzero vector."
+        },
+        {
+          "prompt": "What is the kernel of the form for a=2,b=3?",
+          "solution": "The vectors with 2x₁+3x₂=0, a line spanned by (3,−2)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 31, PDF page 9. Not checked against an NTA final key.",
+      "page": 9,
+      "image": "assets/questions/2020-june-26nov-q031.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q032",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 32,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Easy",
+      "prompt": "Which quadratic form on R² is positive definite?",
+      "options": {
+        "A": "XY",
+        "B": "X²−XY+Y²",
+        "C": "X²+2XY+Y²",
+        "D": "X²+XY"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Complete the square in B.",
+        "For other choices, look for a nonzero zero or a negative value."
+      ],
+      "solution": "$X^2-XY+Y^2=(X-Y/2)^2+3Y^2/4$, strictly positive for every nonzero pair, so **B**. A is negative at (1,−1). C=(X+Y)² vanishes at (1,−1). D vanishes at (0,1) and is negative at (1,−2).",
+      "theory": "For Q=aX²+2bXY+cY², the symmetric matrix is [[a,b],[b,c]]. Sylvester’s criterion in dimension two gives positive definiteness exactly when a>0 and ac−b²>0. The coefficient of XY is 2b, not b. Positive semidefinite forms may vanish on nonzero vectors. Completing squares gives a direct proof and often identifies the null directions or negative directions.",
+      "similar_questions": [
+        {
+          "prompt": "For what t is X²+tXY+Y² positive definite?",
+          "solution": "The determinant condition is 1−t²/4>0, hence |t|<2."
+        },
+        {
+          "prompt": "What happens at t=2?",
+          "solution": "It is (X+Y)², positive semidefinite but not positive definite."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 32, PDF page 9. Not checked against an NTA final key.",
+      "page": 9,
+      "image": "assets/questions/2020-june-26nov-q032.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q033",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 33,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For the positively oriented circle |z−1|=1, find $(2\\pi i)^{-1}\\oint dz/(z^3-1)$.",
+      "options": {
+        "A": "3",
+        "B": "1/3",
+        "C": "2",
+        "D": "1/2"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Locate all three cube roots of unity relative to the circle.",
+        "For a simple zero a of h, the residue of 1/h at a is 1/h′(a)."
+      ],
+      "solution": "The poles are 1 and ω,ω² with ω=e^(2πi/3). The distances of ω and ω² from the centre 1 are √3>1, so only z=1 is inside. Its residue is 1/(3·1²)=1/3. The residue theorem makes the normalised integral equal to that residue. **B**.",
+      "theory": "The residue theorem gives a positively oriented contour integral as 2πi times the sum of enclosed residues, weighted by winding numbers for general contours. A simple pole g(z)/h(z) with h(a)=0 and h′(a)≠0 has residue g(a)/h′(a). Poles outside the contour contribute nothing, and a pole on the contour invalidates the ordinary formula. Check geometric location before calculating residues; the contour centre need not be zero.",
+      "similar_questions": [
+        {
+          "prompt": "Find $(2\\pi i)^{-1}\\oint_{|z-1|=1/2} dz/(z^3-1)$.",
+          "solution": "Again only pole 1 is enclosed; the answer is 1/3."
+        },
+        {
+          "prompt": "Find the same normalised integral around |z|=2.",
+          "solution": "All three residues sum to (1+ω+ω²)/3=0, so the integral is zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 33, PDF page 9. Not checked against an NTA final key.",
+      "page": 9,
+      "image": "assets/questions/2020-june-26nov-q033.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q034",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 34,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Hard",
+      "prompt": "For which positive integers p does f(z)=sin z/zᵖ have a holomorphic primitive on C\\{0}?",
+      "options": {
+        "A": "All even integers",
+        "B": "All odd integers",
+        "C": "All multiples of 3",
+        "D": "All multiples of 4"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "A primitive on the punctured plane exists precisely when the residue at zero vanishes.",
+        "Find which term of the sine expansion could produce z⁻¹."
+      ],
+      "solution": "The Laurent expansion is $\\sum_{k\\ge0}(-1)^k z^{2k+1-p}/(2k+1)!$. A z⁻¹ term requires 2k+1−p=−1, or p=2k+2, an even positive integer. Its coefficient is then nonzero, preventing a primitive. For odd p there is no z⁻¹ term and every Laurent term can be integrated to a single-valued holomorphic function on the punctured plane. Thus **B**.",
+      "theory": "A holomorphic function has a global primitive exactly when all closed-curve integrals vanish. The punctured plane is not simply connected, and its loop periods are controlled by the residue at the missing point. Integrating z⁻¹ gives a logarithm with nonzero loop period; all other integer Laurent powers have single-valued power primitives. Holomorphicity alone on a multiply connected domain does not ensure a primitive. The residue obstruction is necessary and sufficient here because there is only one puncture and no other singularity.",
+      "similar_questions": [
+        {
+          "prompt": "Does 1/z² have a primitive on the punctured plane?",
+          "solution": "Yes: −1/z is a single-valued holomorphic primitive."
+        },
+        {
+          "prompt": "Does sin z/z² have a primitive there?",
+          "solution": "No. Its Laurent series begins 1/z−z/6+⋯, with residue 1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 34, PDF page 9. Not checked against an NTA final key.",
+      "page": 9,
+      "image": "assets/questions/2020-june-26nov-q034.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q035",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 35,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For the positively oriented circle |z−1|=1/2, compute $\\oint e^{1/z}/(z^2-1)\\,dz$.",
+      "options": {
+        "A": "$i\\pi e$",
+        "B": "$-i\\pi e$",
+        "C": "$\\pi e$",
+        "D": "$-\\pi e$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Check whether 0,1,−1 lie inside the contour.",
+        "Only the simple pole at 1 is enclosed."
+      ],
+      "solution": "The disc is centred at 1 with radius 1/2. It contains z=1 but neither 0 (distance 1) nor −1 (distance 2). The residue at 1 is e/(1+1)=e/2. Therefore the integral is 2πi·e/2=iπe. **A**.",
+      "theory": "An essential singularity outside a contour does not affect the residue sum inside it. Here e^(1/z) is holomorphic throughout the closed disc except that the quotient has a simple pole at 1. For a factorised denominator (z−a)h(z), the simple-pole residue is numerator(a)/h(a). Positive versus negative orientation changes the sign. Determine the enclosed singularities before applying Cauchy’s formula or the residue theorem.",
+      "similar_questions": [
+        {
+          "prompt": "Compute the same integral around |z+1|=1/2.",
+          "solution": "Only −1 is enclosed, with residue e^(−1)/(−2). The integral is −iπ/e."
+        },
+        {
+          "prompt": "What changes if the original circle is traversed clockwise?",
+          "solution": "The integral becomes −iπe."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 35, PDF page 10. Not checked against an NTA final key.",
+      "page": 10,
+      "image": "assets/questions/2020-june-26nov-q035.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q037",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 37,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Easy",
+      "prompt": "Which claim is true for the stated integers?",
+      "options": {
+        "A": "Every even n≥16 divides (n−1)!+3",
+        "B": "Every odd n≥16 divides (n−1)!",
+        "C": "Every even n≥16 divides (n−1)!",
+        "D": "For even n≥16, n² divides n!+1"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "For even n, write n=2m.",
+        "Both distinct factors 2 and m occur in (n−1)! when m≥8."
+      ],
+      "solution": "For even n≥16, the distinct numbers 2 and n/2 appear among 1,…,n−1 and their product is n. Hence n divides (n−1)!, proving **C**. A then has remainder 3 modulo n. B fails at n=17, because none of 1,…,16 contains a factor 17. D fails since n divides n! and therefore n!+1 has remainder 1 even modulo n.",
+      "theory": "To prove divisibility by a composite number, locate enough prime factors or identify factors whose product equals that number within a larger product. Distinct-factor reasoning must be checked: for n=4 the two proposed factors 2 and n/2 coincide, and 4 does not divide 3!. Universal claims are disproved by a single valid counterexample. Congruences reduce adding small constants to a factorial once its divisibility is known.",
+      "similar_questions": [
+        {
+          "prompt": "Does every even n≥6 divide (n−1)!?",
+          "solution": "Yes: 2 and n/2 are distinct and both occur; the same proof applies."
+        },
+        {
+          "prompt": "Why does a prime p fail to divide (p−1)!?",
+          "solution": "A prime dividing a product must divide one factor, but all factors are positive and below p."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 37, PDF page 10. Not checked against an NTA final key.",
+      "page": 10,
+      "image": "assets/questions/2020-june-26nov-q037.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q038",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 38,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Easy",
+      "prompt": "For a nonempty set X, consider intersection and symmetric difference as operations on P(X). Which gives a group?",
+      "options": {
+        "A": "Both operations",
+        "B": "Intersection only",
+        "C": "Symmetric difference only",
+        "D": "Neither"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A△A=∅, and A△∅=A.",
+        "Under intersection, the identity must be X. Can a proper subset have an inverse?"
+      ],
+      "solution": "Symmetric difference is associative and commutative, has identity ∅, and every set is its own inverse. Thus it is an abelian group. Intersection has identity X, but ∅ cannot have an inverse because ∅∩B=∅≠X for every B. X is nonempty, so intersection is not a group. **C**.",
+      "theory": "A group requires closure, associativity, an identity, and an inverse for every element. Identify a subset with its 0–1 characteristic function. Symmetric difference becomes coordinatewise addition modulo 2, proving associativity and self-inverse behavior. Intersection becomes coordinatewise multiplication; only the all-one function X is invertible. Together these operations form a Boolean ring, a useful connection between set algebra and algebra over the two-element field.",
+      "similar_questions": [
+        {
+          "prompt": "Find {1,2}△{2,3}.",
+          "solution": "The result is {1,3}; elements present in exactly one set remain."
+        },
+        {
+          "prompt": "In this group, solve A△B=C for B.",
+          "solution": "Apply △A to both sides. Since A△A=∅, the unique solution is B=A△C."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 38, PDF page 10. Not checked against an NTA final key.",
+      "page": 10,
+      "image": "assets/questions/2020-june-26nov-q038.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q039",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 39,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Hard",
+      "prompt": "Euler’s totient φ(n) counts integers 1≤a≤n coprime to n. Which statement is NOT true?",
+      "options": {
+        "A": "Infinitely many n satisfy φ(n)>φ(n+1)",
+        "B": "Infinitely many n satisfy φ(n)<φ(n+1)",
+        "C": "Some N>2 satisfies φ(N)<φ(n) for every n>N",
+        "D": "The set {φ(n)/n:n∈N} has finitely many limit points"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use large odd primes to establish rises and falls.",
+        "For a fixed prime p, consider φ(pq)/(pq) with varying primes q."
+      ],
+      "solution": "For an odd prime p>3, φ(p)=p−1 while φ(p+1)≤(p+1)/2, so A holds at infinitely many n=p. Also φ(p−1)≤(p−1)/2<p−1=φ(p), proving B at n=p−1. For C choose N=6: φ(6)=2, and φ(n)>2 for n>6. Indeed φ(n) is even for n>2, and φ(n)=2 only for n=3,4,6. For D fix any prime p and let distinct primes q≠p tend to infinity. The distinct ratios φ(pq)/(pq)=(1−1/p)(1−1/q) tend to 1−1/p. Different p give infinitely many distinct limit points, so **D** is false.",
+      "theory": "Inclusion–exclusion on prime divisors gives φ(n)=n∏ₚ∣ₙ(1−1/p). For even n this is at most n/2. For n>2, residues coprime to n pair as a and n−a without a fixed point, so φ(n) is even. To classify φ(n)=2, each prime divisor p contributes p−1 dividing φ(n), so p is 2 or 3; using φ(2ᵃ3ᵇ) restricts the possibilities to 3,4,6. A limit point of a set requires distinct points approaching it: merely repeating φ(pᵏ)/pᵏ would not suffice. Varying a second prime supplies distinct nearby ratios.",
+      "similar_questions": [
+        {
+          "prompt": "Compute φ(12).",
+          "solution": "$12(1-1/2)(1-1/3)=4$."
+        },
+        {
+          "prompt": "Show 1 is a limit point of the ratio set.",
+          "solution": "For primes p→∞, the distinct ratios φ(p)/p=1−1/p approach 1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 39, PDF page 10. Not checked against an NTA final key.",
+      "page": 10,
+      "image": "assets/questions/2020-june-26nov-q039.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q040",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 40,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Hard",
+      "prompt": "A map is closed when it sends every closed set to a closed set. Which claim is true for metric spaces?",
+      "options": {
+        "A": "Every subspace inclusion is closed",
+        "B": "Every product projection onto X is closed",
+        "C": "For continuous f:X→Y and g:Y→Z, if g∘f is closed then g restricted to f(X) is closed",
+        "D": "If f sends closed balls to closed sets then f is closed"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "For C, take a relatively closed F⊂f(X) and pull it back under f.",
+        "Its image under g is exactly the image of f⁻¹(F) under g∘f."
+      ],
+      "solution": "For a closed F in the subspace f(X), continuity of f makes f⁻¹(F) closed in X. Its image under the closed map g∘f is g(F), so g|f(X) is closed. **C**. A fails for (0,1)↪R: the whole subspace is closed in itself but not in R. B fails for the closed hyperbola xy=1 in R², whose projection is R\\{0}. D fails for arctan:R→R: images of closed balls are compact intervals, but its whole-domain image is (−π/2,π/2), not closed.",
+      "theory": "Continuity is defined by closed-set preimages, while closedness concerns images. A relatively closed subset F of a subspace S has the form H∩S for H closed in the ambient space. Product projections are continuous and open, but need not be closed when the other factor is noncompact; a compact other factor does ensure closedness. In R, closed balls are compact, so every continuous map sends them to compact, hence closed, images in a Hausdorff target. This restricted property cannot control arbitrary unbounded closed sets.",
+      "similar_questions": [
+        {
+          "prompt": "Why is the hyperbola xy=1 closed in R²?",
+          "solution": "It is the inverse image of the closed singleton {1} under the continuous multiplication map (x,y)↦xy."
+        },
+        {
+          "prompt": "Is a continuous map from a compact space to a Hausdorff space closed?",
+          "solution": "Yes. Closed subsets of the compact domain are compact; their continuous images are compact and hence closed."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 40, PDF page 11. Not checked against an NTA final key.",
+      "page": 11,
+      "image": "assets/questions/2020-june-26nov-q040.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

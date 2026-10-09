@@ -1,0 +1,1519 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2025-december-q081",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 81,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let u solve $u_{tt}-u_{xx}+u_t=0$ for $0<x<\\pi,t>0$, with $u(0,t)=u(\\pi,t)=0$, $u(x,0)=\\sin x$, $u_t(x,0)=0$. Define $E(t)=\\int_0^\\pi(u_t^2+u_x^2)dx$. Which statements are true?",
+      "options": {
+        "A": "$E(t)\\ge\\pi$ for all $t>0$.",
+        "B": "$E(t)\\le\\pi$ for all $t>0$.",
+        "C": "$E(t)\\ge\\pi/2$ for all $t>0$.",
+        "D": "$E(t)\\le\\pi/2$ for all $t>0$."
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Differentiate energy and integrate the spatial cross term by parts.",
+        "The boundary term vanishes, giving $E\\prime=-2\\int u_t^2\\le0$, while $E(0)=\\pi/2$."
+      ],
+      "solution": "The fixed zero boundary values imply $u_t=0$ at the endpoints. Therefore $E\\prime=2\\int u_t(u_{tt}-u_{xx})dx=-2\\int u_t^2dx\\le0$. Initially $u_t=0$ and $u_x=\\cos x$, so $E(0)=\\pi/2$. Hence D and the weaker B hold. A fails because $E\\le\\pi/2<\\pi$. For C, write $u=\\sin x\\,a(t)$ with $a\\prime\\prime+a\\prime+a=0$, $a(0)=1,a\\prime(0)=0$. Thus $a=e^{-t/2}[\\cos(\\sqrt3t/2)+\\sin(\\sqrt3t/2)/\\sqrt3]$, so energy tends to zero. C is false.",
+      "theory": "Wave energy combines the squared velocity and squared spatial gradient. A damping term proportional to velocity dissipates this energy, whereas the undamped wave equation conserves it. Differentiating the integral requires regularity of the solution; integration by parts moves the spatial derivative and creates a boundary flux. Fixed homogeneous Dirichlet boundaries force the time derivative to vanish there, removing that flux. The energy identity then has a nonpositive derivative, proving monotonicity without solving the PDE. The initial energy sets the sharp upper bound, so remember whether a conventional one-half factor is included in the definition. To disprove a lower bound, one can isolate the initially excited sine mode and show its damped oscillator amplitude decays. Zero initial velocity does not mean zero velocity for later times.",
+      "similar_questions": [
+        {
+          "prompt": "For $u_{tt}-u_{xx}+2u_t=0$ with zero boundary values, find $E\\prime$.",
+          "solution": "The same integration by parts gives $E\\prime=2\\int u_t(-2u_t)dx=-4\\int u_t^2dx$. Thus energy is nonincreasing."
+        },
+        {
+          "prompt": "For $u(x,0)=2\\sin x$ and zero initial velocity on $(0,\\pi)$, find initial energy.",
+          "solution": "$u_x(x,0)=2\\cos x$, so $E(0)=4\\int_0^\\pi\\cos^2x\\,dx=2\\pi$. Any positive damping gives $E(t)\\le2\\pi$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 81, PDF page 48. No candidate response used as an answer key.",
+      "page": 48,
+      "image": "assets/questions/2025-december-q081.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q082",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 82,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let S be the set of all $2\\times2$ matrices A for which the Gauss–Seidel iterative sequence converges for every initial guess when solving $A(x_1,x_2)^T=(1,2)^T$. Which matrices belong to S?",
+      "options": {
+        "A": "$\\begin{pmatrix}4&1\\\\2&3\\end{pmatrix}$",
+        "B": "$\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}$",
+        "C": "$\\begin{pmatrix}1&5\\\\1&10\\end{pmatrix}$",
+        "D": "$\\begin{pmatrix}-5&2\\\\1&-4\\end{pmatrix}$"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "For $A=\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}$, derive the error iteration using the newly updated first coordinate.",
+        "Its nonzero eigenvalue is $bc/(ad)$; convergence for every starting vector requires its absolute value below one."
+      ],
+      "solution": "The errors satisfy $e_1^{(k+1)}=-(b/a)e_2^{(k)}$ and $e_2^{(k+1)}=-(c/d)e_1^{(k+1)}=(bc/ad)e_2^{(k)}$. The iteration eigenvalues are 0 and $bc/(ad)$. The four ratios are respectively $1/6$, $3/2$, $1/2$, and $1/10$. Thus A,C,D have spectral radius below one and converge for every initial guess; B has radius $3/2$ and fails for starting errors with a nonzero second component. All diagonal entries here are nonzero, so the iterations are defined.",
+      "theory": "A stationary linear iteration has form $x^{(k+1)}=Tx^{(k)}+b$. When the target solution exists, its error evolves by powers of T. Convergence for every initial guess is equivalent to spectral radius $\\rho(T)<1$, not merely to the existence of some convergent starting values. Gauss–Seidel uses newly computed coordinates immediately and therefore differs from Jacobi iteration. Nonzero diagonal entries are needed to perform the coordinate divisions. Strict diagonal dominance and symmetric positive definiteness are familiar sufficient conditions, but neither is necessary; the two-by-two spectral calculation gives an exact test. Negative diagonal entries do not automatically cause failure. The right-hand side changes the fixed point but not the error matrix, so convergence is determined by the coefficient matrix and update ordering.",
+      "similar_questions": [
+        {
+          "prompt": "Does Gauss–Seidel converge for $A=\\begin{pmatrix}2&3\\\\1&4\\end{pmatrix}$?",
+          "solution": "The nonzero iteration eigenvalue is $3/(2\\cdot4)=3/8$, so the spectral radius is below one and every initial guess converges."
+        },
+        {
+          "prompt": "For $A=\\begin{pmatrix}1&2\\\\2&1\\end{pmatrix}$, give the error multiplier.",
+          "solution": "$bc/(ad)=4$. The second-coordinate error is multiplied by 4 each step, so generic initial errors diverge and convergence for every guess fails."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 82, PDF page 49. No candidate response used as an answer key.",
+      "page": 49,
+      "image": "assets/questions/2025-december-q082.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q083",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 83,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let R be a commutative ring with unity and at least five elements. For every a,b in R, some c in R satisfies $a=bc$ or $b=ac$. Which statements are necessarily true?",
+      "options": {
+        "A": "R has a unique maximal ideal.",
+        "B": "Every finitely generated ideal of R is principal.",
+        "C": "R is an integral domain.",
+        "D": "R is a Euclidean domain."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "The condition means any two principal ideals are comparable by inclusion.",
+        "Show nonunits form an ideal. For a finite list of generators, one of their principal ideals contains all the others."
+      ],
+      "solution": "Principal ideals are linearly ordered. In a finite set of generators choose a principal ideal maximal under inclusion; it contains every generator and equals their generated ideal, proving B. Let M be the nonunits. It is closed under multiplication by arbitrary elements. If a,b are nonunits and $a=bc$, then $a+b=b(c+1)$ is a nonunit; the alternative case is analogous. It is also closed under negatives, so M is a proper ideal. Every proper ideal contains no units and lies in M, making M the unique maximal ideal: A. In $\\mathbb Z/8\\mathbb Z$, divisibility is ordered by powers of 2 and the condition holds, but $2\\cdot4=0$ with both nonzero. Thus C fails and consequently D fails.",
+      "theory": "A commutative ring in which principal ideals are totally ordered is often called a valuation ring in a broad convention allowing zero divisors; a valuation domain additionally requires an integral domain. The divisibility formulation in the source implies precisely this principal-ideal comparison. Finite sums of principal ideals equal the largest one, proving the finitely generated ideals are principal. Locality follows because the nonunits form a proper ideal; all proper ideals are contained in it, so it is uniquely maximal. A product equal to a unit forces both factors to be units in a commutative unital ring, which justifies the nonunit closure argument. Neither locality nor principal finitely generated ideals eliminates zero divisors. Quotients by prime powers supply chain-ring counterexamples to stronger domain and Euclidean-domain claims.",
+      "similar_questions": [
+        {
+          "prompt": "List the ideals of $\\mathbb Z/8\\mathbb Z$ and its maximal ideal.",
+          "solution": "They are $(0),(4),(2),(1)$ in an inclusion chain. The unique maximal proper ideal is $(2)$, consisting of the nonunits."
+        },
+        {
+          "prompt": "In a ring with comparable principal ideals, show $(a,b,c)$ is principal.",
+          "solution": "Compare $(a),(b)$ and retain the larger; compare that with $(c)$ and retain the larger again. This principal ideal contains all three generators and is contained in their generated ideal, so equality follows."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 83, PDF page 49. No candidate response used as an answer key.",
+      "page": 49,
+      "image": "assets/questions/2025-december-q083.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q084",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 84,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "(P) The IVP $y\\prime+y=e^{-x^2}$, $y(0)=0$, has a Taylor-series solution about zero. (Q) The IVP $y\\prime+y=r(x)$, $y(0)=0$, with $r(x)=e^{-1/x^2}$ for $x\\ne0$ and $r(0)=0$, has a Taylor-series solution about zero. Which statements are true?",
+      "options": {
+        "A": "P is true.",
+        "B": "P is false.",
+        "C": "Q is true.",
+        "D": "Q is false."
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Use the integrating factor $e^x$. The first forcing is analytic, while the second is smooth but flat at zero.",
+        "If a solution of Q were analytic, then $y\\prime+y$ would be analytic, contradicting the forcing."
+      ],
+      "solution": "For either IVP, $y(x)=e^{-x}\\int_0^x e^t r(t)dt$. For P the integrand $e^{t-t^2}$ is entire, so its integral and the solution are analytic, proving A and disproving B. For Q, every derivative of r at zero vanishes, but r is positive for every nonzero x. It is therefore not analytic at zero. An analytic y would make $y\\prime+y$ analytic and equal r, impossible. Hence Q is false, giving D and excluding C. Equivalently the solution is flat at zero yet positive for positive x, so its identically zero Taylor series cannot represent it.",
+      "theory": "A Taylor-series solution means a convergent power series that actually represents the function near the expansion point, not merely a formal derivative sequence. Analytic coefficients and forcing in a linear ODE at an ordinary point give an analytic solution. Smoothness of all orders is weaker than analyticity: the standard function $e^{-1/x^2}$ extended by zero is flat at zero, with every derivative zero, but is not identically zero nearby. An integrating factor solves first-order linear equations and provides an explicit expression useful for distinguishing these behaviors. Derivatives of analytic functions and sums of analytic functions remain analytic, so a nonanalytic forcing rules out an analytic solution here. A formal power series can fail to solve the actual equation even when all coefficient recurrences at the expansion point seem satisfied.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $y\\prime+y=1$, $y(0)=0$, and give its Taylor series.",
+          "solution": "$y=1-e^{-x}$. Hence $y=x-x^2/2!+x^3/3!-\\cdots$, a convergent analytic solution."
+        },
+        {
+          "prompt": "Why is $r(x)=e^{-1/x^2}$ not represented by its Taylor series at zero?",
+          "solution": "All its derivatives there are zero because exponential decay dominates every inverse power. Its Taylor series is zero, but $r(x)>0$ for x nonzero, so equality fails on every neighborhood."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 84, PDF page 50. No candidate response used as an answer key.",
+      "page": 50,
+      "image": "assets/questions/2025-december-q084.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q085",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 85,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "Let $F:\\mathbb R^3\\to\\mathbb R$ be $C^1$ with $F(0,0,0)=-1$, $F_x(0)=2$, $F_y(0)=0$, $F_z(0)=3$. Write $\\Omega_\\epsilon=(-\\epsilon,\\epsilon)^2$. Which assertions hold for some positive $\\epsilon,\\delta$ and $C^1$ functions with range in $(-\\delta,\\delta)$ and value zero at the origin?",
+      "options": {
+        "A": "There is $g:\\Omega_\\epsilon\\to(-\\delta,\\delta)$ with $F(x,y,g(x,y))=-1$.",
+        "B": "There is $h:\\Omega_\\epsilon\\to(-\\delta,\\delta)$ with $F(x,h(x,z),z)=-1$.",
+        "C": "There are $k_1,k_2:(-\\epsilon,\\epsilon)\\to(-\\delta,\\delta)$ with $F(x,k_1(x),k_2(x))=-1$.",
+        "D": "There are $j_1,j_2:(-\\epsilon,\\epsilon)\\to(-\\delta,\\delta)$ with $F(j_1(z),j_2(z),z)=-1$."
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "A nonzero partial derivative permits solving for that coordinate by the implicit function theorem.",
+        "For C fix y=0 and solve for z; for D fix y=0 and solve for x."
+      ],
+      "solution": "Apply the implicit function theorem to $F+1$. Since $F_z(0)=3\\ne0$, there is a local C¹ function g with $F(x,y,g(x,y))=-1$, proving A. Restrict this to y=0: choose $k_1(x)=0$, $k_2(x)=g(x,0)$, proving C. Since $F_x(0)=2\\ne0$, solve instead for x as a function of (y,z), then restrict y=0 to prove D. Neighborhoods can be shrunk to the required ranges. B is not necessary: $F(x,y,z)=-1+2x+3z$ satisfies every datum but is independent of y, and $2x+3z=0$ cannot hold for all (x,z) in an open square.",
+      "theory": "The implicit function theorem applies to a continuously differentiable equation $H=0$ when the derivative with respect to the coordinate to be solved for is nonzero. It then supplies a local uniquely defined C¹ graph through the specified point. For several equations the corresponding derivative block must be invertible. The theorem is local, so one may shrink coordinate neighborhoods and function ranges to fit a small rectangular domain. A zero partial derivative does not prove that solving for that variable is impossible in every example, but it removes the general guarantee and permits counterexamples. Curves lying in a level surface can be produced by fixing one free coordinate in an available graph. Here the two nonzero derivatives provide graphs in two different coordinate directions, yielding both requested curve constructions.",
+      "similar_questions": [
+        {
+          "prompt": "Near $(0,0)$, can $x+y+y^2=0$ be solved as y=g(x)?",
+          "solution": "The y derivative at zero is 1, so yes by the implicit function theorem. Differentiating gives $g\\prime(0)=-1$."
+        },
+        {
+          "prompt": "For $H(x,y,z)=x+z+y^2$, construct a curve with z=t on the zero level.",
+          "solution": "Fix y=0 and choose x=-t. Then $H(-t,0,t)=0$ for every t, and the curve passes smoothly through the origin."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 85, PDF page 51. No candidate response used as an answer key.",
+      "page": 51,
+      "image": "assets/questions/2025-december-q085.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q086",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 86,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For $n\\ge1$ define $f_n:[-1,1]\\to\\mathbb R$ by $f_n(x)=-1$ if $x\\le-1/n$, $f_n(x)=nx$ if $-1/n<x<1/n$, and $f_n(x)=1$ if $x\\ge1/n$. On which intervals does it converge uniformly?",
+      "options": {
+        "A": "$[0,1]$",
+        "B": "$(0,1]$",
+        "C": "$(10^{-2025},1)$",
+        "D": "$(-10^{-2025},10^{-2025}]$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The pointwise limit is the sign function, with value zero at zero.",
+        "Any interval bounded away from zero eventually lies entirely in a constant branch; points arbitrarily close to zero defeat uniform convergence."
+      ],
+      "solution": "Pointwise, the limit is f(x)=−1 for x<0, f(0)=0, and f(x)=1 for x>0. On C, once $n\\ge10^{2025}$, every x exceeds 1/n, so $f_n=f=1$ exactly, proving uniform convergence. On A and B, the error at positive x<1/n is $1-nx$, whose supremum is 1; thus neither converges uniformly. On D the interval contains such arbitrarily small positive x, so the same obstruction applies. On intervals containing zero, continuity of every f_n and discontinuity of f also independently rule out uniform convergence.",
+      "theory": "Uniform convergence controls the maximum error over the entire domain with one index threshold. Pointwise convergence allows the threshold to depend on the point. A narrowing transition layer can therefore disappear at each fixed nonzero point while keeping the supremum error large near its center. Uniform limits of continuous functions are continuous on the same domain, giving a useful obstruction when the pointwise limit has a jump. But removing the jump point alone is insufficient: an interval approaching that point still contains locations inside every transition layer. A fixed positive distance from the transition center is what makes convergence uniform, and in this example eventual equality is even stronger. The tiny value $10^{-2025}$ is positive, so its magnitude affects only how large the threshold index must be.",
+      "similar_questions": [
+        {
+          "prompt": "Does the same sequence converge uniformly on $[0.01,1]$?",
+          "solution": "For n≥100, 1/n≤0.01 and the function is identically 1 throughout the interval. Hence convergence is uniform with zero error eventually."
+        },
+        {
+          "prompt": "For $g_n(x)=\\min(nx,1)$ on $(0,1)$, compute the supremum error from its pointwise limit.",
+          "solution": "The limit is 1. For 0<x<1/n the error is 1−nx, with supremum 1 as x approaches zero. It is not uniformly convergent despite pointwise convergence."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 86, PDF page 51. No candidate response used as an answer key.",
+      "page": 51,
+      "image": "assets/questions/2025-december-q086.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q087",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 87,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "For a metric space $(X,d)$, nonempty $A\\subset X$, and $x\\in X$, define $d(x,A)=\\inf_{a\\in A}d(x,a)$. Which statements are necessarily true?",
+      "options": {
+        "A": "$d(x,A)-d(y,A)\\le d(x,y)$ for all x,y and nonempty A.",
+        "B": "$x\\mapsto d(x,A)$ is uniformly continuous for every nonempty A.",
+        "C": "A is closed iff $d(x,A)>0$ for every $x\\notin A$.",
+        "D": "If X is compact and nonempty closed $C_1,\\ldots,C_k$ have empty intersection, the minimum of $\\sum_i d(x,C_i)$ on X is 0."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Apply the triangle inequality before taking an infimum over A.",
+        "The zero set of the distance function is the closure of A. A continuous positive function on a compact space has positive minimum."
+      ],
+      "solution": "For every a in A, $d(x,a)\\le d(x,y)+d(y,a)$. Taking infima gives A; exchanging x,y gives the 1-Lipschitz estimate $|d(x,A)-d(y,A)|\\le d(x,y)$, proving B. Distance zero is equivalent to membership in $\\overline A$, so C is equivalent to $\\overline A=A$. For D, the sum is continuous and nonnegative and attains its minimum by compactness. If it were zero at x, every distance would be zero, and closedness would put x in every C_i, contrary to empty intersection. Its minimum is therefore strictly positive, not zero.",
+      "theory": "Distance to a nonempty subset is defined by an infimum and need not be attained. The triangle inequality nevertheless gives a global one-Lipschitz bound, so the distance function is uniformly continuous without compactness or closedness assumptions on the subset. Its zeros identify the closure, because zero infimum means every ball intersects the subset. Closed sets therefore have strictly positive distance from each particular outside point, although there need not be a common positive bound for all outside points. A finite sum of distance functions is continuous. Compactness ensures its infimum is achieved; if all summands are nonnegative, a zero sum means each is zero. This converts an empty intersection of closed sets into a positive minimum. Without compactness the infimum can be zero while remaining unattained.",
+      "similar_questions": [
+        {
+          "prompt": "Find $d(x,(0,1))$ on the real line.",
+          "solution": "It is −x for x<0, zero for 0≤x≤1, and x−1 for x>1. Its zero set is the closure [0,1], including excluded endpoints."
+        },
+        {
+          "prompt": "For X=[0,1], C₁={0}, C₂={1}, find the minimum sum of distances.",
+          "solution": "For x∈[0,1], the sum is x+(1−x)=1. Its minimum is 1, even though the closed sets have empty intersection."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 87, PDF page 52. No candidate response used as an answer key.",
+      "page": 52,
+      "image": "assets/questions/2025-december-q087.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q088",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 88,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $A=\\{(1+(-1)^n)n-1/n:n\\text{ is a positive integer}\\}$. Which statements are true?",
+      "options": {
+        "A": "A is bounded below but not above.",
+        "B": "A is bounded above but not below.",
+        "C": "$\\inf A=-1$",
+        "D": "$\\sup A=1$"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Separate odd and even values of n. The parentheses multiply n; they do not multiply the reciprocal term.",
+        "Odd n give −1/n; even n give 2n−1/n."
+      ],
+      "solution": "For odd n, $(1+(-1)^n)n-1/n=-1/n$, ranging from −1 at n=1 upward toward zero. For even n it is $2n-1/n$, which is positive and tends to infinity. Every value is at least −1 and −1 belongs to A, so $\\inf A=-1$. There is no finite upper bound. Thus A,C hold and B,D fail. The exact placement of the factor n is essential: the source is not the bounded sequence $1+(-1)^n-1/n$.",
+      "theory": "The infimum of a nonempty bounded-below subset is its greatest lower bound; it need not be attained, but an attained smallest element is automatically the infimum. The supremum is similarly a least upper bound for bounded-above sets. Alternating expressions should be separated into even and odd subsequences, since one part may determine the lower behavior and the other the upper behavior. A set is unbounded above if it contains a sequence tending to positive infinity, regardless of whether another subsequence converges. The presence of a finite limit point does not imply boundedness of the entire set. Parentheses and multiplicative factors must be preserved when transcribing expressions; otherwise the boundedness and answer change entirely.",
+      "similar_questions": [
+        {
+          "prompt": "Find infimum and supremum of $\\{(-1)^n+1/n:n\\ge1\\}$.",
+          "solution": "Odd terms approach −1 from above, so the infimum is −1, not attained. Even terms are 1+1/n and are largest at n=2, giving supremum 3/2."
+        },
+        {
+          "prompt": "Determine boundedness of $\\{(1-(-1)^n)n:n\\ge1\\}$.",
+          "solution": "Even terms are zero, odd terms are 2n and grow without bound. Thus the set is bounded below with infimum zero and unbounded above."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 88, PDF page 52. No candidate response used as an answer key.",
+      "page": 52,
+      "image": "assets/questions/2025-december-q088.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q089",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 89,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $f:(0,\\infty)\\to(0,\\infty)$ be $f(x)=\\int_0^x\\sqrt t/(1+t^2)\\,dt$, where the positive square root is used. Which statements are true?",
+      "options": {
+        "A": "f is uniformly continuous.",
+        "B": "f is bounded.",
+        "C": "There is positive x with f(x)=0.",
+        "D": "The derivative of f is continuous."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Use the fundamental theorem of calculus and bound its derivative.",
+        "Split the total integral at 1, comparing with $t^{1/2}$ near zero and $t^{-3/2}$ near infinity."
+      ],
+      "solution": "$f\\prime(x)=\\sqrt x/(1+x^2)$ is continuous and is at most 1: for x≤1 the numerator is at most one, and for x≥1 the ratio is at most $x^{-3/2}≤1$. Hence f is Lipschitz and A,D hold. Moreover $f(x)\\le\\int_0^1\\sqrt t\\,dt+\\int_1^\\infty t^{-3/2}dt=2/3+2=8/3$, proving B. The integrand is strictly positive for t>0, so its integral over any positive-length interval (0,x) is positive; C is false.",
+      "theory": "The fundamental theorem of calculus differentiates an integral with variable upper limit when its integrand is continuous, giving the derivative directly. A uniform bound on that derivative on an interval implies a global Lipschitz bound by the mean value theorem, and hence uniform continuity even on an unbounded domain. Boundedness of the primitive is a separate question determined here by convergence of the improper integral of the nonnegative integrand. Splitting at a convenient point allows distinct local comparisons: positive powers are integrable near zero when their exponent exceeds −1, and negative powers are integrable near infinity when the exponent is below −1. Strict positivity of the integrand forces a strictly positive primitive at positive x. A function can thus be increasing, bounded, smooth, and uniformly continuous simultaneously.",
+      "similar_questions": [
+        {
+          "prompt": "For $g(x)=\\int_0^x(1+t^2)^{-1}dt$, establish boundedness and uniform continuity.",
+          "solution": "The derivative is at most 1, so g is Lipschitz. Since g=arctan x, it is bounded above by π/2 for x>0."
+        },
+        {
+          "prompt": "Is $h(x)=\\int_0^x t^{-1/2}dt$ bounded on $(0,\\infty)$?",
+          "solution": "The integral is $2\\sqrt x$, finite for every positive x but unbounded at infinity. Its improper-integrability near zero does not imply boundedness of its primitive on the whole half-line."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 89, PDF page 53. No candidate response used as an answer key.",
+      "page": 53,
+      "image": "assets/questions/2025-december-q089.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q090",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 90,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "On $\\mathbb R$, let $F_1(x)=1$ for x≥1 and 0 otherwise, and $F_2(x)=\\int_0^x e^{-t}dt$ for x≥0 and 0 otherwise. Put $F(x)=\\frac23F_1(x)+\\frac13F_2(x)$. Which statements are true?",
+      "options": {
+        "A": "F is nondecreasing.",
+        "B": "The limit of F at positive infinity is 1.",
+        "C": "F is left-continuous on the real line.",
+        "D": "F is right-continuous on the real line."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "This is a mixture of the CDF of a point mass at 1 and the CDF of an exponential distribution.",
+        "Check the jump at 1: its size is 2/3, and the value includes the jump."
+      ],
+      "solution": "Each F_i is nondecreasing and right-continuous and tends to 1 at infinity. Their positive weighted average shares these properties, proving A,B,D. At 1, $F(1)=2/3+(1-e^{-1})/3$ while $F(1^-)= (1-e^{-1})/3$. The jump is 2/3, so F is not left-continuous, disproving C. At zero the exponential component equals zero on both sides, so there is no additional discontinuity there.",
+      "theory": "A cumulative distribution function is nondecreasing, right-continuous, has limit zero at negative infinity and one at positive infinity. Its jump at a point equals the probability mass at that point. Mixtures of probability distributions produce weighted averages of their CDFs, preserving these defining properties. A discrete point mass creates a jump, while an absolutely continuous exponential component gives the smooth term $1-e^{-x}$ on the nonnegative half-line. Right-continuity includes the atom in the value at its location; the left-hand limit excludes it. Therefore a valid CDF need not be left-continuous or continuous. In a mixed distribution, the continuous density integrates to only the mixture weight allocated to that component, and cannot alone account for the discrete mass.",
+      "similar_questions": [
+        {
+          "prompt": "For a half-and-half mixture of a point mass at 0 and $U(0,1)$, find the jump at zero.",
+          "solution": "The CDF is zero to the left of zero and equals 1/2 at zero. The jump is 1/2, exactly the atomic mixture weight."
+        },
+        {
+          "prompt": "For the source mixture, find $P(X=1)$ and $P(X>1)$.",
+          "solution": "The atom contributes $P(X=1)=2/3$. Only the exponential component can exceed 1, so $P(X>1)=e^{-1}/3$, also equal to $1-F(1)$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 90, PDF page 53. No candidate response used as an answer key.",
+      "page": 53,
+      "image": "assets/questions/2025-december-q090.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q091",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 91,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "A $2^5$ factorial design has eight blocks: 1: $(1),acd,bce,abde$; 2: $e,acde,bc,abd$; 3: $a,cd,abce,bde$; 4: $ab,bcd,ace,de$; 5: $b,abcd,ce,ade$; 6: $ac,d,abe,bcde$; 7: $abc,bd,ae,cde$; 8: $c,ad,be,abcde$. Which effects are confounded with blocks?",
+      "options": {
+        "A": "$ABC$",
+        "B": "$BCD$",
+        "C": "$CDE$",
+        "D": "$ABDE$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "An effect is block-confounded when its ±1 contrast is constant within every block.",
+        "Encode treatment labels as binary vectors; compare parity of intersection with each effect label."
+      ],
+      "solution": "Encode a treatment by high-level bits (a,b,c,d,e). Block 1 is the subgroup $H=\\{0,acd,bce,abde\\}$, with $acd\\oplus bce=abde$. The displayed other blocks are its cosets (using respective representatives e,a,ab,b,ac,abc,c). An effect is constant on cosets iff its binary dot product with both acd and bce is zero mod 2. For ABC the intersection sizes are 2 and 2; for BCD they are 2 and 2; for CDE they are 2 and 2; for ABDE they are 2 and 2. Thus all four characters annihilate H and remain constant within every block. Every listed effect is confounded.",
+      "theory": "In a two-level factorial design, each factorial effect is represented by a product of ±1 factor-level signs. An effect is confounded with blocks when its contrast is constant within each block, so its variation cannot be distinguished from block effects. Binary coding turns products into parity calculations: multiplying labels corresponds to symmetric difference, and a contrast evaluates a dot product modulo two, up to a fixed overall sign. A principal block that is a subgroup of the treatment group generates the other blocks as cosets. Confounded effects are the orthogonal complement of that subgroup. Eight blocks in a full 32-treatment design provide seven block degrees of freedom, so seven independent nonidentity contrast labels are confounded in total; the options may list only some of them. Constancy must be checked across the actual block structure.",
+      "similar_questions": [
+        {
+          "prompt": "For a $2^3$ design with principal block $(1),ab$, which of C and A is block-confounded?",
+          "solution": "The subgroup generator is ab. C has dot product zero with it, so C is constant on each coset and confounded. A has odd intersection with ab, so it changes within a block and is not confounded."
+        },
+        {
+          "prompt": "For principal block $(1),abc$ in a $2^3$ design, test effects AB and ABC.",
+          "solution": "AB intersects abc in two letters, even, so AB is confounded. ABC intersects in three letters, odd, so its sign changes between the two principal-block treatments and it is not confounded."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 91, PDF page 54. No candidate response used as an answer key.",
+      "page": 54,
+      "image": "assets/questions/2025-december-q091.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q092",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 92,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For $n\\in\\mathbb N$, define $f_n:[0,1]\\to\\mathbb R$ by $f_n(x)=n(1-nx)$ for $0\\le x\\le1/n$, and zero for x>1/n. Which statements are necessarily true?",
+      "options": {
+        "A": "The sequence is uniformly bounded.",
+        "B": "The sequence does not converge pointwise.",
+        "C": "The sequence converges uniformly to zero.",
+        "D": "$\\{f_n:n\\in\\mathbb N\\}$ is compact in $C[0,1]$ with the supremum norm."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Look first at the common endpoint x=0; the narrowing supports do not control that value.",
+        "The norm is n. A compact subset of a normed space must be bounded."
+      ],
+      "solution": "At zero, $f_n(0)=n\\to\\infty$, so no real-valued pointwise limit exists on [0,1], proving B. Also $\\|f_n\\|_\\infty=n$, so A is false. Uniform convergence implies pointwise convergence and the error from zero has norm n, disproving C. Each f_n is continuous because both branches equal zero at x=1/n. But their norms are unbounded, so their set cannot be compact in C[0,1], disproving D. For every fixed x>0, f_n(x) is eventually zero; this does not repair the failure at zero.",
+      "theory": "Pointwise convergence of functions on a domain requires a finite limiting value at every point of that domain. A failure at a single included endpoint suffices to disprove it. Uniform boundedness of a family means one constant bounds all values of all functions, equivalently bounded supremum norms. Narrow support does not imply small norm: height and width control different properties. The present triangular functions have growing height and shrinking width, with constant integral area, illustrating that integral convergence and norm convergence are distinct. Every compact subset of a metric space is bounded, so unbounded norms immediately rule out compactness without invoking the full Arzelà–Ascoli theorem. Continuous piecewise formulas must agree at their join; here they do, even though the family lacks boundedness.",
+      "similar_questions": [
+        {
+          "prompt": "Compute $\\int_0^1f_n(x)dx$ for the source sequence.",
+          "solution": "Integrating on [0,1/n] gives $[nx-n^2x^2/2]_0^{1/n}=1/2$. Thus the integrals remain fixed while each positive point eventually sees value zero."
+        },
+        {
+          "prompt": "Does $g_n(x)=\\max(1-nx,0)$ converge uniformly on [0,1]?",
+          "solution": "It converges pointwise to a function equal to 1 at zero and zero elsewhere. Each g_n is continuous but the limit is discontinuous, so convergence is not uniform; the supremum error is 1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 92, PDF page 55. No candidate response used as an answer key.",
+      "page": 55,
+      "image": "assets/questions/2025-december-q092.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q093",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 93,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be entire and $g(z)=f(z)-1/z$ on $\\mathbb C\\setminus\\{0\\}$. Which statements are necessarily true?",
+      "options": {
+        "A": "g has a pole at zero.",
+        "B": "If $g(\\alpha)=0$, then $|\\alpha|\\ne1$.",
+        "C": "g has only finitely many zeros.",
+        "D": "$\\max_{|z|=1}|g(z)|\\ge1$"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "The entire part cannot cancel the principal part −1/z.",
+        "Apply the maximum modulus principle to $h(z)=zg(z)=zf(z)-1$, which is entire and has h(0)=−1."
+      ],
+      "solution": "g has a simple pole at zero with residue −1, proving A. B fails with f≡1, because g(1)=0. C fails for the entire function $f(z)=(1-\\cos z)/z$, extended at zero by its removable value: then $g(z)=-\\cos z/z$ has infinitely many nonzero zeros. For D, h(z)=zf(z)−1 is holomorphic on the closed unit disc and h(0)=−1. The maximum modulus principle gives $1\\le\\max_{|z|=1}|h(z)|=\\max_{|z|=1}|g(z)|$. Thus A,D.",
+      "theory": "An entire function has no negative powers in its Taylor expansion at zero, so subtracting a nonzero simple principal part always leaves a simple pole. Multiplication by z removes that pole and creates an entire auxiliary function whose value at zero is known independently of f. The maximum modulus principle bounds that interior value by the boundary maximum. This technique can establish quantitative boundary lower bounds for meromorphic functions without estimating the unknown entire part. Zeros of a nonidentically-zero holomorphic function are isolated, but there may be infinitely many tending to infinity; isolated does not mean finite on an unbounded domain. An apparent quotient can define an entire function after removing a singularity when its numerator vanishes sufficiently at zero. Counterexamples should check that extension explicitly.",
+      "similar_questions": [
+        {
+          "prompt": "For entire f and $g=f-2/z$, show $\\max_{|z|=1}|g|\\ge2$.",
+          "solution": "Let h=zg=zf−2, entire with h(0)=−2. Maximum modulus gives $2\\le\\max_{|z|=1}|h|$, which equals the boundary maximum of g."
+        },
+        {
+          "prompt": "Find the pole and zeros of $g(z)=-\\cos z/z$.",
+          "solution": "Near zero it equals −1/z+z/2+⋯, a simple pole of residue −1. Its zeros are π/2+kπ for all integers k, an infinite discrete set."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 93, PDF page 55. No candidate response used as an answer key.",
+      "page": 55,
+      "image": "assets/questions/2025-december-q093.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q094",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 94,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Functional Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\ell^2$ be the real square-summable sequence space with inner product $\\langle a,b\\rangle=\\sum a_nb_n$. Put $H=\\{a\\in\\ell^2:|a_n|<1/n\\text{ for every }n\\ge1\\}$. Which statements are true?",
+      "options": {
+        "A": "H contains an orthonormal basis of ℓ².",
+        "B": "H is a linear subspace.",
+        "C": "H is bounded in ℓ².",
+        "D": "H is convex."
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The summable coordinatewise squared bounds give a common norm bound and uniform tail control.",
+        "The closed coordinate box is compact in ℓ², so it cannot contain infinitely many vectors separated by distance √2."
+      ],
+      "solution": "For a∈H, $\\|a\\|^2<\\sum1/n^2=\\pi^2/6$, proving C. Convex combinations obey $|ta_n+(1-t)b_n|\\le t|a_n|+(1-t)|b_n|<1/n$ for 0≤t≤1, so D holds. B fails because $a=(3/4,0,\\ldots)$ belongs to H but 2a does not. Let K have the weak inequalities |a_n|≤1/n. It is closed, and its uniformly small squared tails plus finite-dimensional bounded heads make it totally bounded, hence compact. H⊂K cannot contain an infinite orthonormal family, whose pairwise distances are √2. Since ℓ² needs an infinite orthonormal basis, A fails.",
+      "theory": "The ℓ² norm is sensitive to the sum of squared coordinates, so bounds by a square-summable envelope give both boundedness and uniform tail control. A bounded subset of an infinite-dimensional Hilbert space need not be compact, but a closed set with uniformly small tails and bounded finite-dimensional projections is compact. One proves total boundedness by approximating the first finitely many coordinates with a finite net and discarding the small tail, then uses completeness. Orthogonal unit vectors have mutual distance √2 and cannot lie in a totally bounded set. Convexity follows coordinatewise from the triangle inequality, whereas a linear subspace must also tolerate arbitrary scalar multiples. Strict coordinate constraints alone do not define an open set in the ℓ² norm, so openness should not be assumed.",
+      "similar_questions": [
+        {
+          "prompt": "Is $\\{a:|a_n|\\le2^{-n}\\}$ compact in ℓ²?",
+          "solution": "Yes. It is closed, finite-coordinate projections are bounded, and tails are uniformly bounded by $\\sum_{n>N}4^{-n}\\to0$. Thus it is totally bounded and complete, hence compact."
+        },
+        {
+          "prompt": "Why is the ℓ² unit ball not compact?",
+          "solution": "It contains every standard unit vector e_n. Distances between distinct e_n are √2, so this sequence has no Cauchy subsequence and no convergent subsequence."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 94, PDF page 56. No candidate response used as an answer key.",
+      "page": 56,
+      "image": "assets/questions/2025-december-q094.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q095",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 95,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_n$ be i.i.d. exponential variables of mean 1 and $T_n=\\max(X_1,\\ldots,X_n)-\\ln n$. Suppose $T_n\\xrightarrow{d}Y$. Which statements are true?",
+      "options": {
+        "A": "Y has a Double Exponential distribution with location $\\ln(\\ln2)$ and scale 1.",
+        "B": "The median of Y is $\\ln(\\ln2)$.",
+        "C": "$P(Y\\le0)=e^{-1}$",
+        "D": "The derivative of the CDF at $\\ln3$ is $e^{-1/3}$."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "For fixed y, compute the maximum CDF at $\\ln n+y$ and take its limit.",
+        "The limit CDF is $\\exp(-e^{-y})$; differentiate it carefully, retaining the factor $e^{-y}$."
+      ],
+      "solution": "For large n, $P(T_n\\le y)=(1-e^{-y}/n)^n\\to F(y)=\\exp(-e^{-y})$. This is the standard Gumbel (extreme-value double-exponential) law with location 0 and scale 1, not the location in A. Solving F(m)=1/2 gives $e^{-m}=\\ln2$, so m=−ln(ln2), disproving B. At zero F(0)=e^{-1}, proving C. Its derivative is $e^{-y}\\exp(-e^{-y})$, so at ln3 it is $\\frac13e^{-1/3}$, disproving D. Even if “double exponential” were used for the Laplace family, A would still be false.",
+      "theory": "The distribution of the maximum of n independent identically distributed variables has CDF equal to the nth power of their common CDF. Appropriate centering of exponential maxima by ln n produces a nondegenerate extreme-value limit. The limit $(1-a/n)^n\\to e^{-a}$ yields the Gumbel CDF. In a location-scale Gumbel distribution the CDF is $\\exp[-\\exp(-(y-\\mu)/s)]$, and its location is not generally its mean or median. The median is $\\mu-s\\ln(\\ln2)$, so signs matter. Differentiating a nested exponential requires both chain-rule factors. Convergence in distribution is established by CDF convergence at continuity points of the limiting law; here the limit is continuous everywhere. A centered maximum need not become symmetric or Gaussian.",
+      "similar_questions": [
+        {
+          "prompt": "For exponential rate 2, find the limit CDF of $2\\max X_i-\\ln n$.",
+          "solution": "The variables 2X_i are standard exponential. Thus the centered maximum has CDF converging to $\\exp(-e^{-y})$, the standard Gumbel law."
+        },
+        {
+          "prompt": "Find the 0.9 quantile of standard Gumbel.",
+          "solution": "Solve $\\exp(-e^{-q})=0.9$. Then $e^{-q}=-\\ln0.9$ and $q=-\\ln(-\\ln0.9)$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 95, PDF page 56. No candidate response used as an answer key.",
+      "page": 56,
+      "image": "assets/questions/2025-december-q095.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q096",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 96,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $f:[0,1]\\to[0,1]$ be nondecreasing. Define $L_\\alpha^+=\\lim_{x\\to\\alpha^+}f(x)$, $L_\\alpha^-=\\lim_{x\\to\\alpha^-}f(x)$, and $U_\\alpha=(L_\\alpha^-,L_\\alpha^+)$ if the former is smaller, otherwise the empty set. Which statements are true?",
+      "options": {
+        "A": "Both one-sided limits exist for every α∈(0,1).",
+        "B": "If f is surjective, f is continuous.",
+        "C": "If f is Riemann integrable, f is continuous.",
+        "D": "For distinct α,β∈(0,1), the intervals Uα and Uβ are disjoint."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Bounded monotone functions have one-sided limits given by suprema and infima.",
+        "A jump leaves a gap of values that cannot be attained, except possibly one value at the jump point."
+      ],
+      "solution": "For interior α, $L^-_\\alpha=\\sup_{x<\\alpha}f(x)$ and $L^+_\\alpha=\\inf_{x>\\alpha}f(x)$ exist, proving A. If a jump occurs, all values in the gap except possibly f(α) are missed, contradicting surjectivity; endpoint discontinuities likewise miss a nonempty interval. Thus B. C fails for the step function f=0 below 1/2 and f=1 at and above 1/2, which is Riemann integrable but discontinuous. If α<β, choose x between them: $L^+_\\alpha\\le f(x)\\le L^-_\\beta$. Hence the open gaps cannot overlap, proving D.",
+      "theory": "Bounded monotone real functions have finite one-sided limits at every interior point, and any discontinuity is a jump. Their jump intervals are pairwise disjoint, since monotonicity orders both points and values. Selecting a different rational number in every nonempty jump interval proves that there are at most countably many discontinuities. Every bounded monotone function is Riemann integrable, which does not imply continuity. Surjectivity onto an interval is stronger: a jump skips an interval of values, with at most the value at the jump point potentially restored, so no jump is allowed. Endpoints must also be checked for continuity relative to the domain. The open-gap convention avoids overlap at shared boundary values and is essential when proving disjointness.",
+      "similar_questions": [
+        {
+          "prompt": "Give a Riemann-integrable monotone function with one jump.",
+          "solution": "The indicator of [1/2,1] on [0,1] is nondecreasing and has one discontinuity. A bounded function with finitely many discontinuities is Riemann integrable."
+        },
+        {
+          "prompt": "Why can a monotone function have only countably many positive jumps?",
+          "solution": "Each positive jump determines a nonempty open interval of skipped values. These intervals are disjoint, and each contains a rational. Choosing one rational per interval injects the jump set into the countable rationals."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 96, PDF page 57. No candidate response used as an answer key.",
+      "page": 57,
+      "image": "assets/questions/2025-december-q096.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q097",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 97,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A homogeneous Markov chain on {1,2,3,4} has transition matrix $P=\\begin{pmatrix}1/4&3/4&0&0\\\\1&0&0&0\\\\1/8&0&7/8&0\\\\0&0&1/9&8/9\\end{pmatrix}$. Which statements are true?",
+      "options": {
+        "A": "State 2 is positive recurrent.",
+        "B": "Mean recurrence time of state 1 is $7/4$.",
+        "C": "State 4 is transient.",
+        "D": "State 3 is aperiodic and ergodic."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The set {1,2} is a closed irreducible class; states 3 and 4 can leave and never return.",
+        "Find the stationary distribution on {1,2}; mean recurrence time is the reciprocal stationary mass."
+      ],
+      "solution": "{1,2} is a finite closed irreducible class, so its states are positive recurrent: A. Its balance equation gives π₂=(3/4)π₁, and normalization gives π₁=4/7, π₂=3/7. Thus the mean return time to 1 is 1/π₁=7/4, proving B. State 4 leaves for 3 with probability 1/9 per step and can never return once it leaves, so C. State 3 has a self-loop and period one, but exits to the closed class and is transient. It is not positive recurrent or ergodic, so D, which asserts both properties, is false.",
+      "theory": "Communicating classes partition a Markov chain into states that can mutually reach each other. A closed finite irreducible class is positive recurrent and has a unique stationary distribution supported on that class. The expected first return time to a state in it is the reciprocal of the corresponding stationary probability. A self-loop implies period one, but does not imply recurrence: a state may linger geometrically before escaping permanently. In the usual statewise terminology, ergodicity requires positive recurrence and aperiodicity. Finite chains can contain transient states whenever their communicating classes are not closed. For transient states, a stationary distribution on the entire finite chain assigns zero mass, so the reciprocal stationary-mass return-time formula is not used as a finite expected return. Inspect directed reachability before applying recurrence formulas.",
+      "similar_questions": [
+        {
+          "prompt": "For a chain with $P=\\begin{pmatrix}1/2&1/2\\\\1&0\\end{pmatrix}$, find mean return time to state 1.",
+          "solution": "Balance gives π₂=π₁/2 and normalization π₁=2/3. The mean return time is 1/π₁=3/2."
+        },
+        {
+          "prompt": "A state has a self-loop of probability 0.9 and transitions with probability 0.1 to an absorbing state. Is it recurrent?",
+          "solution": "No. It eventually exits with probability one and cannot return. It is transient despite period one from its self-loop."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 97, PDF page 57. No candidate response used as an answer key.",
+      "page": 57,
+      "image": "assets/questions/2025-december-q097.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q098",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 98,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Independent X,Y have MGFs $M_X(t)=e^{3(e^t-1)}$ and $M_Y(t)=(\\frac12e^{-3t}+\\frac12e^{3t})^2$ for all real t. Which statements are true?",
+      "options": {
+        "A": "$P(XY=0)=(1+e^{-3})/2$",
+        "B": "$E(X+Y)=3$",
+        "C": "$\\operatorname{Var}(X+Y)=21$",
+        "D": "$\\operatorname{Cov}(X+Y,X-Y)=0$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Recognize X as Poisson(3), and Y as the sum of two independent symmetric ±3 variables.",
+        "Use independence for zero-event probabilities and variance addition; covariance of sum and difference equals Var(X)−Var(Y)."
+      ],
+      "solution": "X is Poisson(3), with mean and variance 3 and P(X=0)=e^{-3}. Y takes −6,0,6 with probabilities 1/4,1/2,1/4, so E(Y)=0, Var(Y)=18 and P(Y=0)=1/2. Independence gives $P(XY=0)=1-P(X\\ne0)P(Y\\ne0)=1-(1-e^{-3})/2=(1+e^{-3})/2$, proving A. The sum has mean 3 and variance 3+18=21, proving B,C. Covariance is Var(X)−Var(Y)=−15, so D is false.",
+      "theory": "An MGF finite near zero determines the distribution and yields moments by differentiation. The exponential form $\\exp[\\lambda(e^t-1)]$ is the Poisson MGF. Products of MGFs correspond to sums of independent variables, so the square of a symmetric two-point MGF identifies a two-term sum. Recognizing this structure is simpler than repeated differentiation, though either method is valid. Independence permits variance addition and factorization of event probabilities. The event that a product vanishes is the union of the zero events; inclusion–exclusion prevents double-counting their intersection. Covariance of a sum and difference simplifies to a variance difference, because the two cross-covariances cancel even without independence. Therefore independent X and Y need not make X+Y and X−Y uncorrelated.",
+      "similar_questions": [
+        {
+          "prompt": "For independent X,Y with variances 4 and 9, find Cov(X+Y,X−Y).",
+          "solution": "Expand bilinearly: Var(X)−Cov(X,Y)+Cov(Y,X)−Var(Y)=4−9=−5."
+        },
+        {
+          "prompt": "For Y the sum of three independent symmetric ±2 variables, find mean and variance.",
+          "solution": "Each summand has mean zero and variance 4. Independence gives E(Y)=0 and Var(Y)=12; its MGF is $(\\frac12e^{-2t}+\\frac12e^{2t})^3$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 98, PDF page 58. No candidate response used as an answer key.",
+      "page": 58,
+      "image": "assets/questions/2025-december-q098.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q099",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 99,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be a nonzero $3\\times3$ integer matrix, with eigenvalues $\\lambda_1,\\lambda_2,\\lambda_3$ counted with multiplicity. Which statements are necessarily true?",
+      "options": {
+        "A": "There exists a cubic $f\\in\\mathbb Q[X]$ with $f(\\lambda_i)=0$ for all i.",
+        "B": "There exists a quadratic $f\\in\\mathbb Q[X]$ with $f(\\lambda_i)=0$ for all i.",
+        "C": "Every $f\\in\\mathbb Q[X]$ vanishing at all eigenvalues satisfies $f(A)=0$.",
+        "D": "Every cubic $f\\in\\mathbb Q[X]$ vanishing at all eigenvalues satisfies $f(A)=0$."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The characteristic polynomial is a monic integer cubic.",
+        "Vanishing at eigenvalues need not include enough multiplicity to annihilate a Jordan block."
+      ],
+      "solution": "The characteristic polynomial lies in Z[X]⊂Q[X], is cubic, and vanishes at every eigenvalue, proving A. B fails for diag(1,2,3), since a nonzero quadratic cannot have three distinct roots. Let N be the nonzero 3-by-3 nilpotent Jordan block, with ones just above the diagonal. Its only eigenvalue is zero. The polynomial f=X vanishes there but f(N)=N≠0, disproving C. The cubic f=X(X−1)(X−2)=X³−3X²+2X also vanishes at every eigenvalue, yet f(N)=−3N²+2N≠0, disproving D. Cubic degree alone does not ensure the required triple multiplicity.",
+      "theory": "The characteristic polynomial of an integer matrix has integer coefficients and supplies a polynomial vanishing at its eigenvalues. Cayley–Hamilton says this specific polynomial annihilates the matrix. The minimal polynomial is the monic polynomial of smallest degree that annihilates the matrix, and every annihilating polynomial must be divisible by it. Its root multiplicities reflect the sizes of the largest Jordan blocks, whereas merely vanishing at each distinct eigenvalue requires only one root factor. A diagonalizable matrix does not need repeated factors, but a defective nilpotent block does. Specifying a polynomial degree equal to the matrix dimension does not determine how that degree is distributed among factors. Counterexamples using integer diagonal matrices or nilpotent Jordan blocks satisfy the source coefficient requirement without any algebraic-number complications.",
+      "similar_questions": [
+        {
+          "prompt": "For $N=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$, which of X and X² annihilates N?",
+          "solution": "N≠0 so X does not. N²=0 so X² does; the minimal polynomial is X² even though the sole eigenvalue is zero."
+        },
+        {
+          "prompt": "For A=diag(2,2,3), does every polynomial vanishing at 2 and 3 annihilate A?",
+          "solution": "Yes. Evaluating a polynomial on a diagonal matrix applies it to each diagonal entry, producing diag(f(2),f(2),f(3))=0. The minimal polynomial is (X−2)(X−3)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 99, PDF page 58. No candidate response used as an answer key.",
+      "page": 58,
+      "image": "assets/questions/2025-december-q099.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q100",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 100,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "Canonical coordinates Q,P are generated from q,p by $F(q,P)=q^2e^P$. Let G(p,Q) generate the same coordinates and satisfy G(2,e)=0. Which statements are true?",
+      "options": {
+        "A": "$G(p,Q)=-Q[1+\\log_e(p^2/(4Q))]$",
+        "B": "$G(p,Q)=-pQ[1+\\log_e(Q^2/(4p))]$",
+        "C": "$p=2qe^P,\\quad Q=q^2e^P$",
+        "D": "$p=-2qe^P,\\quad Q=-q^2e^P$"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "For a type-II generating function, p=Fq and Q=FP.",
+        "Transform to a type-III generator with G=F−pq−PQ, then express q,P in terms of p,Q."
+      ],
+      "solution": "Type-II rules give p=2qe^P and Q=q²e^P, proving C and excluding D. On an invertible branch, pq=2Q, q=2Q/p, and $P=\\ln(p²/(4Q))$. The type-III generator is $G=F-pq-PQ=Q-2Q-PQ=-Q[1+\\ln(p²/(4Q))]+C_0$. At (p,Q)=(2,e), the logarithm is −1, so G(2,e)=C₀, and the condition forces C₀=0. Thus A holds. B does not yield the required derivatives q=−Gp and P=−GQ. The local generating transformation is considered where p≠0 and Q>0, consistent with the specified evaluation point.",
+      "theory": "Generating functions encode canonical transformations through different choices of independent old and new coordinates. For the type-II function F(q,P), the defining derivatives are p=∂F/∂q and Q=∂F/∂P. Passing to the type-III function G(p,Q) requires subtracting both pq and PQ, so dG=−q dp−P dQ. This fixes the derivative signs and prevents confusing generating-function types. To express G in its intended variables, the original transformation must be locally invertible; singular coordinate points require separate treatment. Adding a constant does not change the transformation, so a supplied function value fixes that remaining freedom. Logarithms require a positive argument for real mechanical coordinates, and the chosen branch here has Q>0. Verification can be done by differentiating the final expression.",
+      "similar_questions": [
+        {
+          "prompt": "For F(q,P)=qP, find the corresponding type-III generator.",
+          "solution": "p=P and Q=q. Therefore G=F−pq−PQ=qP−qP−qP=−pQ, whose derivatives give q=−Gp=Q and P=−GQ=p."
+        },
+        {
+          "prompt": "Differentiate the source G to recover q and P.",
+          "solution": "Gp=−2Q/p, giving q=2Q/p. GQ=−ln(p²/(4Q)), since the derivative of the bracket contributes −1/Q, so P=ln(p²/(4Q))."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 100, PDF page 59. No candidate response used as an answer key.",
+      "page": 59,
+      "image": "assets/questions/2025-december-q100.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q101",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 101,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\mathbb D=\\{z:|z|<1\\}$ and let $f:\\mathbb D\\to\\mathbb D$ be holomorphic with f(−1/2)=0. Which statements are necessarily true?",
+      "options": {
+        "A": "$|f(-1/5)|\\le1/5$",
+        "B": "$|f(-1/5)|\\le1/3$",
+        "C": "$|f\\prime(-1/2)|\\le1/2$",
+        "D": "$|f\\prime(-1/2)|\\le4/3$"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Apply Schwarz–Pick with base point −1/2.",
+        "The pseudohyperbolic distance is |(z+1/2)/(1+z/2)|, and the derivative bound at the zero is 1/(1−1/4)."
+      ],
+      "solution": "Schwarz–Pick gives $|f(z)|\\le|(z+1/2)/(1+z/2)|$ because f(−1/2)=0. At z=−1/5 the bound is (3/10)/(9/10)=1/3, proving B. Its derivative form gives $|f\\prime(-1/2)|\\le(1-|f(-1/2)|²)/(1-1/4)=4/3$, proving D. The disc automorphism $f(z)=(z+1/2)/(1+z/2)$ attains both equalities, yielding value magnitude 1/3>1/5 and derivative 4/3>1/2. Therefore A and C are not necessary.",
+      "theory": "Schwarz' lemma applies to holomorphic self-maps of the unit disc fixing zero and bounds both their modulus and derivative at zero. Disc automorphisms move any chosen base point to zero, leading to the invariant Schwarz–Pick inequality. The pseudohyperbolic distance is $|(z-a)/(1-\\overline a z)|$, and the derivative bound is $|f\\prime(a)|\\le(1-|f(a)|²)/(1-|a|²)$. At a zero of f the numerator becomes one, but the denominator still depends on the location of that zero. Thus applying the origin derivative bound at a nonzero point is incorrect. Disc automorphisms attain equality and serve as sharp counterexamples to stronger numerical bounds. The map remains holomorphic because its denominator has no zero inside the disc and maps the disc onto itself.",
+      "similar_questions": [
+        {
+          "prompt": "If f is a disc self-map with f(1/3)=0, bound |f(0)|.",
+          "solution": "Schwarz–Pick gives $|f(0)|\\le|(0-1/3)/(1-0)|=1/3$. The automorphism $(z-1/3)/(1-z/3)$ attains equality."
+        },
+        {
+          "prompt": "For f(a)=0 with |a|=1/2, find the sharp derivative bound.",
+          "solution": "The derivative bound is $1/(1-|a|²)=1/(3/4)=4/3$, achieved by a disc automorphism sending a to zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 101, PDF page 59. No candidate response used as an answer key.",
+      "page": 59,
+      "image": "assets/questions/2025-december-q101.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q102",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 102,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For t∈[0,2π], let $\\gamma_1(t)=e^{it}$ and $\\gamma_2(t)=1+i+e^{it}$. Which statements are true?",
+      "options": {
+        "A": "$\\int_{\\gamma_1}dz/(z\\sin z)=0$",
+        "B": "$\\int_{\\gamma_1}dz/(z\\sin z)=2\\pi i$",
+        "C": "$\\int_{\\gamma_2}dz/(z\\sin z)=2\\pi i$",
+        "D": "$\\int_{\\gamma_2}dz/(z\\sin z)=0$"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "At zero the integrand has a double pole, but its residue need not be nonzero.",
+        "The translated unit disc contains no zero of z sin z."
+      ],
+      "solution": "Near zero, $\\sin z=z-z³/6+\\cdots$, so $1/(z\\sin z)=z^{-2}+1/6+O(z²)$. There is no z⁻¹ term and the residue at zero is zero. The only pole inside γ₁ is zero, since other sine zeros ±π,±2π,… lie outside. Hence its integral is zero: A, not B. For γ₂ the distance to zero is √2>1; to π it is $\\sqrt{(\\pi-1)²+1}>1$, and all other integer multiples of π are farther away. No pole is enclosed, so Cauchy's theorem gives zero, proving D and excluding C.",
+      "theory": "The residue theorem sums coefficients of the first negative Laurent power, not pole orders or arbitrary principal-part coefficients. A double pole can have zero residue, in which case its contour integral around a circle is zero even though the function is not holomorphic inside. The sine function has zeros at integer multiples of π, and the extra factor z increases the order at zero. Series expansion is especially efficient when the integrand is even: an even Laurent series cannot contain an odd power such as z⁻¹. Translating a circle changes which singularities lie inside; use full complex distances from its center. Cauchy's theorem applies only when the whole enclosed region is free of singularities, while the residue theorem handles the first circle despite its central double pole.",
+      "similar_questions": [
+        {
+          "prompt": "Compute $\\int_{|z|=1}z^{-2}dz$ counterclockwise.",
+          "solution": "The residue is the coefficient of z⁻¹, which is zero. Thus the integral is zero, despite a second-order pole at zero."
+        },
+        {
+          "prompt": "Compute $\\int_{|z|=1}(z^{-2}+3z^{-1})dz$.",
+          "solution": "The residue at zero is 3, so the integral is 2πi times 3, equal to 6πi."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 102, PDF page 60. No candidate response used as an answer key.",
+      "page": 60,
+      "image": "assets/questions/2025-december-q102.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q103",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 103,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let T be an operator on a finite-dimensional real vector space V and suppose T² is diagonalizable over R. Which statements are necessarily true?",
+      "options": {
+        "A": "If T is not real-diagonalizable, T² has an eigenvalue at most zero.",
+        "B": "If T² has only negative eigenvalues, dim V is even.",
+        "C": "If T² has only nonnegative eigenvalues, T is real-diagonalizable.",
+        "D": "For every nonzero v, {v,Tv,T²v} is dependent."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Decompose V into eigenspaces of T², each invariant under T.",
+        "Positive squared eigenvalues give two distinct real roots for T; negative ones give a complex structure. The zero eigenspace may contain a nilpotent block."
+      ],
+      "solution": "On a T²-eigenspace for λ>0, T satisfies $(T-\\sqrt\\lambda I)(T+\\sqrt\\lambda I)=0$ and is real-diagonalizable. If all squared eigenvalues were positive, their direct sum would diagonalize T, proving A by contrapositive. On a λ<0 eigenspace, J=T/√(−λ) satisfies J²=−I. A real space with such a complex structure has even dimension (or take determinants: det(J)²=(−1)^d). Summing proves B. C fails for a nonzero nilpotent two-by-two Jordan block with T²=0. D fails for T=diag(1,2,3), v=(1,1,1): the three vectors form a Vandermonde matrix with nonzero determinant, so are independent.",
+      "theory": "Diagonalizability of a polynomial in an operator does not always imply diagonalizability of the operator. Spectral decomposition of T² gives invariant subspaces because T commutes with T². On positive eigenspaces, the polynomial X²−λ splits over the reals into distinct factors, guaranteeing diagonalizability. On negative eigenspaces it has no real roots and instead defines a complex structure, forcing even real dimension. At the zero eigenvalue the polynomial X² has a repeated root, allowing a nonzero nilpotent operator, which is the obstruction in the nonnegative case. Linear dependence of v,Tv,T²v would correspond to a low-degree relation for that cyclic vector; a diagonal operator with three distinct eigenvalues and a vector using all three eigenspaces disproves a universal claim of this kind.",
+      "similar_questions": [
+        {
+          "prompt": "For $T=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$, describe T and T² over R.",
+          "solution": "T²=−I is diagonalizable with negative eigenvalue −1. T is a rotation by π/2 and has no real eigenvalues, so is not real-diagonalizable; the space dimension is two."
+        },
+        {
+          "prompt": "If T²=4I, prove T is diagonalizable over R.",
+          "solution": "T is annihilated by X²−4=(X−2)(X+2), a product of distinct real linear factors. Hence V decomposes into the ±2 eigenspaces and T is diagonalizable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 103, PDF page 60. No candidate response used as an answer key.",
+      "page": 60,
+      "image": "assets/questions/2025-december-q103.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q104",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 104,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "A sample of size 7 from a continuous distribution with unique median M is used to test $H_0:M=2$ against $H_1:M>2$ at level 0.05 by the right-tailed sign statistic K counting observations greater than 2. Observations are −3,−6,1,9,4,10,12. Which statements are true?",
+      "options": {
+        "A": "H₀ is rejected.",
+        "B": "The p-value exceeds 0.01.",
+        "C": "Under H₀, E(K)=3.5.",
+        "D": "$[X_{(2)},X_{(6)}]$ has confidence coefficient at least 0.95 for M."
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Under the null K is Binomial(7,1/2); the observed count is 4.",
+        "For an order-statistic interval, count how many observations lie below the true median."
+      ],
+      "solution": "Four observations exceed 2, so K=4. Under H₀ each sign is positive with probability 1/2 and K∼Bin(7,1/2). The right-tail p-value is $(35+21+7+1)/128=1/2$, so A is false and B true. The mean is 7/2=3.5, proving C. For the interval [X₂,X₆], let B count sample values below M; continuity gives B∼Bin(7,1/2). Coverage occurs iff 2≤B≤5, with probability $1-2P(B\\le1)=1-2(1+7)/128=7/8=0.875$. Thus D is false. The min–max interval would instead have coverage 126/128>0.95.",
+      "theory": "The sign test uses only which side of a hypothesized median each observation falls on. Under a continuous distribution with the specified unique median, there are no ties at that value and each sign is a fair Bernoulli variable. This makes the null statistic exactly binomial and the right-tail p-value a sum of binomial masses from the observed count upward. Discreteness can make a nonrandomized test conservative at a nominal level. Distribution-free confidence intervals for the median use order statistics: their coverage is obtained by counting observations below the true median, again a binomial variable. Both tails must be excluded for a two-sided interval. A central-looking interval does not automatically have 95% coverage, particularly with a very small sample.",
+      "similar_questions": [
+        {
+          "prompt": "For n=7, what is the smallest K rejected by a nonrandomized right-tail level-0.05 sign test?",
+          "solution": "P(K≥6)=(7+1)/128=0.0625>0.05, while P(K≥7)=1/128<0.05. Thus only K=7 is rejected."
+        },
+        {
+          "prompt": "Find coverage of [X₁,X₇] for a continuous-population median.",
+          "solution": "It fails only when all observations lie below M or all above M. Each event has probability 2⁻⁷, so coverage is 1−2/128=63/64≈0.984375."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 104, PDF page 61. No candidate response used as an answer key.",
+      "page": 61,
+      "image": "assets/questions/2025-december-q104.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q105",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 105,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let y₁,y₂ be linearly independent solutions of $x^2y\\prime\\prime+\\frac{(1+\\sin x)x}{2}y\\prime-\\frac32(\\cos x)y=0$ for x>0, with y₂(0)=0. Which statements are true?",
+      "options": {
+        "A": "$\\lim_{x\\to0^+}y_2/(x^2y_1)$ exists.",
+        "B": "$\\lim_{x\\to0^+}y_2/(xy_1)$ exists.",
+        "C": "$\\lim_{x\\to0^+}xy_1/y_2$ does not exist.",
+        "D": "$\\lim_{x\\to0^+}x^2y_1/y_2$ exists."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Zero is a regular singular point; compute the indicial roots from the limiting coefficients.",
+        "The roots are 3/2 and −1. The solution with zero endpoint value uses only the positive root."
+      ],
+      "solution": "The indicial equation is $r(r-1)+r/2-3/2=0$, with roots 3/2 and −1, whose difference is 5/2. Frobenius theory gives independent solutions $v=x^{3/2}(1+O(x))$ and $w=x^{-1}(1+O(x))$. Interpreting the stated y₂(0)=0 as the continuous endpoint value, y₂=c v with c≠0. Independence forces y₁=a v+b w with b≠0. Thus y₂/y₁∼(c/b)x^{5/2}. The first two ratios tend to zero, proving A,B. Their reciprocal times x is asymptotic to (b/c)x^{-3/2}, which has no finite limit, proving C. The last ratio behaves as (b/c)x^{-1/2} and has no finite limit, so D is false. “Exists” here means a finite real limit.",
+      "theory": "An equation $x^2y\\prime\\prime+xp(x)y\\prime+q(x)y=0$ with p,q analytic at zero has a regular singular point there. Frobenius solutions begin with powers xʳ determined by $r(r-1)+p(0)r+q(0)=0$. When the roots differ by a noninteger, two independent power-series-times-power solutions are available without logarithmic complications. An endpoint condition of finite value eliminates a negatively powered divergent solution. Independence then forces the other chosen solution to retain that divergent component, so ratios are governed by the difference of exponents. Ordinary limits of real functions are finite unless extended-real limits are explicitly requested; divergence to either infinity means the stated finite limit does not exist. The ODE is prescribed only for x>0, so the endpoint condition is understood through continuous extension.",
+      "similar_questions": [
+        {
+          "prompt": "For $x^2y\\prime\\prime-2y=0$, find exponents and the solution vanishing at zero with y(1)=1.",
+          "solution": "The equation r(r−1)−2=0 gives r=2,−1. The divergent x⁻¹ term must vanish, and y(1)=1 selects y=x²."
+        },
+        {
+          "prompt": "If y₂∼x² and y₁∼x⁻¹, determine y₂/(x²y₁) and x²y₁/y₂ near zero.",
+          "solution": "The first behaves like x^(2−2+1)=x and tends to zero. The reciprocal behaves like x⁻¹ and has no finite limit."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 105, PDF page 61. No candidate response used as an answer key.",
+      "page": 61,
+      "image": "assets/questions/2025-december-q105.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q106",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 106,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Two independent fair dice produce X,Y, their respective upper-face values. Which statements are true?",
+      "options": {
+        "A": "$P(X-Y=0\\mid X+Y=2)=P(X-Y=0\\mid X+Y=12)$",
+        "B": "$E[(X-Y)/(X+Y)]=0$",
+        "C": "$\\operatorname{Cov}(X+Y,X-Y)=0$",
+        "D": "X+Y and X−Y are independent."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "At the extreme sums there is only one possible ordered outcome.",
+        "Swap X and Y to negate the ratio without changing its distribution. Zero covariance is weaker than independence."
+      ],
+      "solution": "Given sum 2, the outcome is (1,1), and given sum 12 it is (6,6). Both differences are zero with conditional probability one, proving A. Each ordered pair (x,y) and (y,x) has equal probability and opposite ratio (x−y)/(x+y); diagonal pairs give zero, so B. Expanding covariance gives Var(X)−Var(Y)=0 since the dice are identically distributed, proving C. But conditional on sum 2, difference zero has probability one, while unconditionally P(X−Y=0)=6/36=1/6. This dependence disproves D.",
+      "theory": "Exchangeability means the joint law is unchanged by permuting the variables. For two identical independent dice, swapping them changes the sign of any antisymmetric statistic while retaining its probability, making its expectation zero when integrable. The sum-and-difference covariance equals the difference of the marginal variances; the cross-covariances cancel. Independence implies zero covariance when second moments exist, but the converse fails outside special families such as jointly Gaussian variables. Conditional distributions give a direct test of dependence: if an event involving the difference has a different probability at a particular sum, the variables are dependent. Extreme dice sums concentrate on one ordered outcome, which makes this test immediate. A denominator X+Y is always positive here, so the ratio is well-defined and bounded.",
+      "similar_questions": [
+        {
+          "prompt": "For two independent fair coins coded 0 or 1, are their sum and difference uncorrelated?",
+          "solution": "The coins have equal variance, so Cov(X+Y,X−Y)=0. They are dependent because sum zero forces difference zero."
+        },
+        {
+          "prompt": "If X,Y are exchangeable positive variables, show E[(X−Y)/(X+Y)]=0.",
+          "solution": "The ratio is bounded by one and thus integrable. Swapping X,Y leaves its distribution unchanged but negates it, so its expectation equals its own negative and is zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 106, PDF page 62. No candidate response used as an answer key.",
+      "page": 62,
+      "image": "assets/questions/2025-december-q106.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q107",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 107,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let V be four-dimensional over C and A an operator on V. Which statements are necessarily true?",
+      "options": {
+        "A": "There is a nonzero eigenvector.",
+        "B": "There are two independent eigenvectors v,w with $Av=\\lambda v$, $Aw=\\mu w$.",
+        "C": "There are independent v,w with $Av=\\lambda v$, $Aw=\\mu v+\\delta w$.",
+        "D": "There is a three-dimensional A-invariant subspace."
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The characteristic polynomial splits over C, giving an eigenvector.",
+        "Complex triangularization produces an invariant flag of dimensions 1,2,3,4. A single Jordan block tests the stronger eigenvector claim."
+      ],
+      "solution": "The fundamental theorem of algebra gives a root of the characteristic polynomial and an associated eigenvector, proving A. Every complex operator is triangularizable: choose an eigenvector, pass to the quotient by its invariant span, and continue. Thus there is a two-dimensional invariant subspace containing an eigenvector v; in a basis v,w its action has Av=λv and Aw=μv+δw, proving C. The same invariant flag contains a three-dimensional invariant subspace, proving D. B fails for a single size-four Jordan block, whose eigenspace is only one-dimensional, so it has no two independent eigenvectors.",
+      "theory": "Over an algebraically closed field, every finite-dimensional linear operator has an eigenvalue and is upper triangular in some basis. Triangularization is weaker than diagonalization: diagonalization requires a basis of eigenvectors, while a triangular basis only requires each initial span to be invariant. The resulting invariant flag contains subspaces of every dimension from zero to the full space. One constructs it inductively using the quotient by an invariant eigenvector line, or directly from Jordan form. A Jordan block has a single eigenvector line despite its larger dimension, showing why repeated algebraic eigenvalues need not yield independent eigenvectors. A relation allowing Aw to have both a v and w component expresses invariance of the two-dimensional span and does not demand that w itself be an eigenvector.",
+      "similar_questions": [
+        {
+          "prompt": "For a single 3-by-3 Jordan block at λ, identify invariant subspaces.",
+          "solution": "With the standard upper-triangular block, span(e₁) and span(e₁,e₂) are invariant, as is the full space. Only span(e₁) is the eigenspace."
+        },
+        {
+          "prompt": "Why might a real rotation matrix have no one-dimensional invariant subspace?",
+          "solution": "A real planar rotation by π/2 has characteristic polynomial X²+1 and no real eigenvalue. A one-dimensional invariant real subspace would provide a real eigenvector, impossible. Algebraic closure matters."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 107, PDF page 62. No candidate response used as an answer key.",
+      "page": 62,
+      "image": "assets/questions/2025-december-q107.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q108",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 108,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let p≥3 be prime and let an irreducible $f\\in\\mathbb Q[x]$ of degree p have exactly two nonreal roots a₁,a₂ and real roots a₃,…,aₚ. Let K be its splitting field and identify G=Gal(K/Q) as a subgroup of Sₚ. Which statements are true?",
+      "options": {
+        "A": "The transposition (1 2) belongs to G.",
+        "B": "p divides |G|.",
+        "C": "A p-cycle belongs to G.",
+        "D": "G=Sₚ."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Complex conjugation swaps exactly the two nonreal roots. Irreducibility makes G transitive.",
+        "Orbit–stabilizer and Cauchy give a p-cycle. Conjugating the transposition by that cycle gives edges of a connected graph because p is prime."
+      ],
+      "solution": "Rational coefficients ensure the two nonreal roots are conjugates. Complex conjugation restricts to an automorphism of K and fixes every real root, so it is (1 2), proving A. Irreducibility makes G transitive on p roots, and orbit–stabilizer gives p∣|G|, proving B. Cauchy gives an element of order p; on p letters it is a p-cycle, proving C. Label roots around that cycle by Z/pZ. If the conjugation transposition exchanges positions i,j, its cycle-conjugates exchange all pairs differing by d=j−i. Since d≠0 and p is prime, these edges form a connected graph. Edge transpositions of a connected graph generate the full symmetric group, so G=Sₚ, proving D.",
+      "theory": "In characteristic zero, irreducible polynomials are separable and their splitting fields are Galois. The Galois group acts transitively on roots of an irreducible polynomial. Complex conjugation acts on a splitting field contained in C and pairs nonreal conjugate roots while fixing real ones; exactly two nonreal roots therefore yield a transposition. For prime degree, transitivity forces the group order to be divisible by that prime, and Cauchy\\'s theorem supplies a full-length cycle. A transposition and such a cycle generate Sₚ when the number of letters is prime: conjugation creates a connected set of pair-swaps, whose transpositions generate all permutations. The prime-degree assumption is essential to this argument because a fixed step need not connect a composite cyclic index set. Separability also ensures roots are distinct.",
+      "similar_questions": [
+        {
+          "prompt": "What is the Galois group of an irreducible cubic with one real root and two nonreal roots?",
+          "solution": "The prime degree is three and conjugation is a transposition. Transitivity gives an element of order three, and these generate S₃. Thus the Galois group is S₃."
+        },
+        {
+          "prompt": "Why do the swaps (1 2),(2 3),…,(n−1 n) generate Sₙ?",
+          "solution": "Adjacent swaps move any selected symbol to its desired position, then repeat on the remaining symbols. Every permutation can be sorted by these swaps, so they generate the entire symmetric group."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 108, PDF page 63. No candidate response used as an answer key.",
+      "page": 63,
+      "image": "assets/questions/2025-december-q108.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q109",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 109,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let T be a nonzero real linear operator with T²=T. In L(V), let W be spanned by I and all positive powers of T. Which statements are necessarily true?",
+      "options": {
+        "A": "$\\{S\\in W:S^2=S\\}$ has exactly two elements.",
+        "B": "$\\dim_\\mathbb RW=2$",
+        "C": "If $U^2=U$ and $(T+U)^2=T+U$, then TU=0.",
+        "D": "If $U^2=U$ and $(T-U)^2=T-U$, then $(TU)^2=TU$."
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "All positive powers of T equal T, but T may equal I.",
+        "Expand the squared sum or difference and multiply by T or U to isolate the mixed products."
+      ],
+      "solution": "W=span(I,T). If T=I it has dimension one, so B fails. If T is a nontrivial projection, W consists of independently chosen scalars on im(T) and ker(T), and has four idempotents 0,I,T,I−T, disproving A. For C, expansion gives TU+UT=0. Multiplying on left and right by T gives TU+TUT=0 and TUT+UT=0, hence TU=UT and 2TU=0; over R, TU=0. For D, expansion gives TU+UT=2U. Multiplying on left by U gives UTU+U=2U, hence UTU=U. Therefore (TU)²=T(UTU)=TU. Thus C,D.",
+      "theory": "An idempotent operator is a projection in the algebraic sense, decomposing V as its image plus its kernel; no inner product or orthogonality is required. Its positive powers are all identical, so the algebra generated by it and the identity has dimension at most two. The identity itself is permitted by the nonzero assumption, making the one-dimensional exceptional case important. For a nontrivial projection, choosing eigenvalues zero or one independently on the two summands gives four idempotents in that algebra. Products of idempotents need not themselves be idempotent unless relations are imposed. Expanding an additional sum-or-difference idempotence condition constrains the mixed products. One must preserve multiplication order because operators need not commute; multiplying equations on both sides establishes the needed conclusions. Division by two uses the real-field characteristic.",
+      "similar_questions": [
+        {
+          "prompt": "For T=diag(1,0), list idempotents in span(I,T).",
+          "solution": "An element is diag(a+b,a). Idempotence requires each diagonal entry to be 0 or 1, giving 0,I,T,I−T, exactly four."
+        },
+        {
+          "prompt": "If projections T,U satisfy TU=UT=0, is T+U idempotent?",
+          "solution": "Yes: (T+U)²=T²+TU+UT+U²=T+U. The mixed terms vanish, so their sum is another projection."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 109, PDF page 63. No candidate response used as an answer key.",
+      "page": 63,
+      "image": "assets/questions/2025-december-q109.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q110",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 110,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let G be a finite nonabelian group. Which statements are necessarily true?",
+      "options": {
+        "A": "Every positive divisor d of |G| occurs as a subgroup order.",
+        "B": "The multiplication map G×G→G, (a,b)↦ab, is not a homomorphism.",
+        "C": "If every divisor of |G| occurs as a subgroup order, G has at least three normal subgroups.",
+        "D": "|G| is not 16."
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "A homomorphic multiplication map would force elements from the two direct-product factors to commute.",
+        "For C choose the smallest prime divisor p and a subgroup of index p; such a subgroup is normal."
+      ],
+      "solution": "A fails for A₄, which has order 12 but no subgroup of order 6: an index-two subgroup would be normal, and A₄ has no quotient of order two (its 3-cycles generate it and must map trivially). If multiplication were a homomorphism, images of (a,e) and (e,b), which commute in G×G, would commute in G for all a,b, contradicting nonabelianity; B holds. For C, let p be the smallest prime divisor of |G|. The assumption gives H of index p. The coset action has transitive image whose order divides both |G| and p!, hence is p; its stabilizer is trivial, so H is the kernel and normal. Since G is nonabelian, H is nontrivial and proper, giving {e},H,G: C. The nonabelian dihedral group of an octagon has order 16, disproving D.",
+      "theory": "Lagrange\\'s theorem says subgroup orders divide the group order, but the converse is false in general. Cauchy\\'s theorem guarantees subgroups of prime order only, while Sylow theory covers prime powers of maximal size. A subgroup whose index is the smallest prime divisor of the finite group order is normal: the action on its cosets constrains the permutation-image order so strongly that the subgroup becomes the action kernel. This supplies a nontrivial proper normal subgroup under the source\\'s extra divisor-existence assumption. Homomorphisms preserve commutation, so the two commuting factors of a direct product test whether multiplication can define a homomorphism. Nonabelian groups of power-of-two order certainly exist, including dihedral groups. Be explicit whether a dihedral notation records polygon size or total group order.",
+      "similar_questions": [
+        {
+          "prompt": "Prove a subgroup of index two is normal.",
+          "solution": "The two left cosets are H and its complement, as are the two right cosets. Thus the outside coset agrees on both sides, giving gH=Hg for every g."
+        },
+        {
+          "prompt": "When is the multiplication map G×G→G a homomorphism?",
+          "solution": "It is a homomorphism exactly when G is abelian. If abelian, (aa′)(bb′)=(ab)(a′b′). Conversely, commuting direct-product factors force every a,b in G to commute."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 110, PDF page 64. No candidate response used as an answer key.",
+      "page": 64,
+      "image": "assets/questions/2025-december-q110.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q111",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 111,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "A series system consists of four independent identically distributed component lifetimes with hazard $\\lambda(t)=1/(1+t)$ and survival S(t), t>0. Let Y be the system lifetime. Which statements are true?",
+      "options": {
+        "A": "Component cumulative hazard is $H(t)=2\\ln(1+t)$.",
+        "B": "$S(t)=(1+t)^{-2}$",
+        "C": "$P(Y<1/2)=[S(1/2)]^4$",
+        "D": "$P(Y<1/2)=65/81$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Integrate the hazard and exponentiate its negative to obtain survival.",
+        "A series system survives only if all four components survive; failure is the complementary event."
+      ],
+      "solution": "The cumulative hazard is $H(t)=\\int_0^t(1+s)^{-1}ds=\\ln(1+t)$, so A is false. Survival is $S(t)=e^{-H(t)}=1/(1+t)$, disproving B. Independence and series architecture give $P(Y>t)=S(t)^4$, so C confuses survival with failure. At t=1/2, S=2/3 and $P(Y<1/2)=1-(2/3)^4=1-16/81=65/81$, proving D. Continuous lifetime laws make the distinction between < and ≤ immaterial at the threshold.",
+      "theory": "The hazard rate is the instantaneous failure rate conditional on survival. For a continuous nonnegative lifetime with initial survival one, cumulative hazard is the integral of the hazard and survival is its negative exponential. A decreasing hazard can yield a heavy-tailed survival law rather than an exponential law. A series system fails at the first component failure, so its lifetime is the minimum. Independent component survivals therefore multiply, and identically distributed components raise the survival function to the number of components. The system cumulative hazard is the sum of component cumulative hazards; its instantaneous hazard here is four times the component hazard. Failure probability is one minus survival, a distinction essential when evaluating the options. A parallel system would instead fail only when all components have failed.",
+      "similar_questions": [
+        {
+          "prompt": "Three independent components have S(t)=e^{-2t}. Find a series-system survival.",
+          "solution": "The minimum survives with probability S(t)³=e^{-6t}, giving a system exponential rate 6."
+        },
+        {
+          "prompt": "If component hazard is 2/(1+t), find its survival and four-component series survival.",
+          "solution": "H(t)=2ln(1+t), so component survival is (1+t)⁻². The series survival is its fourth power, (1+t)⁻⁸."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 111, PDF page 64. No candidate response used as an answer key.",
+      "page": 64,
+      "image": "assets/questions/2025-december-q111.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q112",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 112,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "For distinct positive a,b define $f(x,y)=(ax+by)^2/(ax^2+by^2)$ for (x,y)≠(0,0), and f(0,0)=0. Which statements are necessarily true?",
+      "options": {
+        "A": "The limit at (0,0) does not exist.",
+        "B": "The partial derivatives at (0,0) do not exist.",
+        "C": "$\\lim_{x\\to0}f(x,0)=\\lim_{y\\to0}f(0,y)$",
+        "D": "f is differentiable at (0,0)."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Compute the values on the two coordinate axes; the denominator is positive off the origin.",
+        "Partial derivatives use difference quotients from the assigned value zero, not just the axis limits."
+      ],
+      "solution": "For nonzero x, f(x,0)=a; for nonzero y, f(0,y)=b. Since a≠b, the two path limits differ, proving A and disproving C. The x partial derivative quotient is [f(h,0)−f(0,0)]/h=a/h, which has no finite limit. The y quotient is b/h, likewise failing. Thus B. Differentiability would imply continuity, but the function is not continuous at zero and has no partial derivatives there, so D is false. Positivity of a,b ensures the formula is defined everywhere off zero.",
+      "theory": "A multivariable limit must agree along every approach path. Two coordinate-axis limits that differ are enough to prove nonexistence, but agreement on the axes alone would not prove existence. A partial derivative at a point fixes all other coordinates and takes a difference quotient relative to the function value at that point. It can fail even when the function is constant along a punctured axis, because the assigned central value differs. Differentiability means a first-order linear approximation with an error small relative to distance; it implies continuity and existence of partial derivatives. Homogeneous degree-zero quotients are constant along rays, so their directional values expose continuity failures particularly easily. A positive-definite denominator avoids unrelated domain singularities and permits every axis test used here.",
+      "similar_questions": [
+        {
+          "prompt": "For g(x,y)=x²/(x²+y²) off zero and g(0)=0, determine continuity.",
+          "solution": "On the x axis g=1, on the y axis g=0. The path limits differ, so no limit exists at zero and g is discontinuous there."
+        },
+        {
+          "prompt": "If a=b=1 in the source formula, does that repair continuity?",
+          "solution": "No. On the x axis the value is 1, but along y=x the value is (2x)²/(2x²)=2. Axis agreement alone is insufficient; the limit still fails."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 112, PDF page 65. No candidate response used as an answer key.",
+      "page": 65,
+      "image": "assets/questions/2025-december-q112.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q113",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 113,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "For n≥5 let independent $X_t=\\alpha+\\alpha^2t+\\epsilon_t$, t=1,…,n, where εₜ are i.i.d. $N(0,\\sigma^2)$ and α∈R,σ>0 are unknown. Which statements are true?",
+      "options": {
+        "A": "$(X_1,\\ldots,X_n)$ is sufficient for (α,σ).",
+        "B": "$(\\sum X_t,\\sum tX_t,\\sum t^2X_t^2)$ is jointly minimal sufficient for (α,σ).",
+        "C": "$X_4-X_3-X_2+X_1$ is ancillary.",
+        "D": "$(X_4+X_1-X_2-X_3)/(X_5+X_2-X_3-X_4)$ is ancillary."
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "The entire sample is always sufficient. Expand the normal likelihood to identify the correct squared statistic.",
+        "Both contrasts in D remove α and α²t; their common scale σ cancels in the ratio. A single contrast still has σ-dependent variance."
+      ],
+      "solution": "A is true trivially. The log likelihood depends on the sample through S₁=ΣXₜ, S₂=ΣtXₜ and S₃=ΣXₜ², with residual sum S₃−2αS₁−2α²S₂ plus parameter-only terms. B instead uses Σt²Xₜ². For x=(9,−1,1,0,0,…) and z=(7,3,−1,0,0,…), both listed triples equal (9,10,94), but Σx²=83, Σz²=59. Their likelihood ratio is exp(−12/σ²), parameter-dependent, so B is not even sufficient. C has mean zero and variance 4σ², depending on σ, so is not ancillary. For D, the numerator and denominator coefficient sums and t-weighted sums are zero. They are jointly σ times a fixed centered Gaussian vector, with denominator nonzero almost surely. The ratio distribution is independent of α,σ, so D.",
+      "theory": "A statistic is sufficient when it retains all information in the data about the parameter; the factorization theorem and the likelihood-ratio criterion provide equivalent tests in this dominated positive-density model. Minimal sufficiency requires that likelihood ratios be parameter-free precisely on equal-statistic fibers. The full sample is always sufficient but rarely minimal. A statistic is ancillary when its entire distribution is parameter-independent, not merely when its expectation is zero. Linear contrasts can eliminate the mean parameters while still retaining an unknown variance factor. Ratios of jointly scaled centered contrasts can remove that common factor, producing ancillarity even if the contrasts are correlated. In this curved normal mean model, expansion of the likelihood must preserve the exact squared statistic; adding weights t² changes the statistic and can destroy sufficiency. Null denominator events may be assigned arbitrary values.",
+      "similar_questions": [
+        {
+          "prompt": "For independent $N(\\mu,\\sigma^2)$ variables, is X₁−X₂ ancillary for both parameters?",
+          "solution": "It has mean zero and variance 2σ², so its distribution depends on σ. It is not ancillary for (μ,σ), though it is free of μ."
+        },
+        {
+          "prompt": "If U,V are independent centered normals with common unknown variance, is U/V ancillary for that variance?",
+          "solution": "Write U=σZ₁ and V=σZ₂. Their ratio is Z₁/Z₂, standard Cauchy, independent of σ. Since P(V=0)=0, it is well-defined almost surely and ancillary."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 113, PDF page 65. No candidate response used as an answer key.",
+      "page": 65,
+      "image": "assets/questions/2025-december-q113.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q114",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 114,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Let y be the extremal of $J(y)=\\int_0^1[(y\\prime)^2\\sin x+2(\\cos x)y]dx$ subject to y(0)=0,y(1)=1. Which statements are true?",
+      "options": {
+        "A": "$y(1/2)=1$",
+        "B": "$y\\prime(0)=1$",
+        "C": "$y(1/4)=2$",
+        "D": "$y\\prime(1/2)=1$"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "The Euler–Lagrange equation integrates once to sin(x)y′=sin(x)+C.",
+        "A nonzero C would make y have a logarithmic divergence at zero, violating the endpoint condition."
+      ],
+      "solution": "For L=(y′)²sinx+2cosx y, the Euler–Lagrange equation is $2\\cos x-\\frac d{dx}(2\\sin x\\,y\\prime)=0$. Thus (sinx y′)′=cosx and sinx y′=sinx+C. If C≠0, integrating Ccscx gives a logarithmic divergence as x→0, incompatible with y(0)=0. Hence y′=1 and y=x after the first endpoint condition; the second is satisfied. B,D follow, while A and C fail because y(1/2)=1/2 and y(1/4)=1/4. For an admissible perturbation h with zero endpoints, the linear cross terms cancel by integration by parts and J(x+h)−J(x)=∫sinx(h′)²dx≥0, confirming minimality.",
+      "theory": "The Euler–Lagrange equation provides the stationarity condition for a differentiable integrand depending on the curve and its first derivative. If the equation integrates once, boundary behavior can select the integration constant without solving a second-order system. Here the coefficient sinx vanishes at the left endpoint, so dividing by it introduces a potentially singular cscx term. Its primitive diverges logarithmically near zero, and finite endpoint data exclude that term. A derivative evaluated at zero is then understood as the endpoint one-sided derivative of the regular extremal. Because sinx is positive inside (0,1), the quadratic derivative term has positive second variation. Integration by parts shows the stationary solution is the unique global minimizer among sufficiently regular admissible curves, not merely a formal extremal.",
+      "similar_questions": [
+        {
+          "prompt": "Minimize $\\int_0^1(y′)^2dx$ with endpoints y(0)=0,y(1)=2.",
+          "solution": "EL gives y″=0, so y=2x. For any zero-endpoint perturbation h, the energy is 4+∫(h′)²≥4, proving minimality."
+        },
+        {
+          "prompt": "Why cannot y′=1+C/x with C≠0 meet a finite y(0)?",
+          "solution": "Integrating gives y=x+C ln x+D. The logarithm diverges as x→0⁺, so no finite continuous extension at zero exists unless C=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 114, PDF page 66. No candidate response used as an answer key.",
+      "page": 66,
+      "image": "assets/questions/2025-december-q114.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q115",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 115,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $Y=X\\beta+\\epsilon$ be normal multiple regression with p regressors and intercept, β=(β₀,…,βₚ)ᵀ, ε∼Nₙ(0,σ²I), σ>0,n>p+1, and unique least-squares estimator. Write corrected total, regression and residual sums of squares as YᵀAY,YᵀBY,YᵀCY, with A=B+C. Which statements are always true?",
+      "options": {
+        "A": "$Y^TAY/\\sigma^2$ is central χ² with n−1 degrees.",
+        "B": "$Y^TBY/\\sigma^2$ is central χ² with p degrees if β₁=⋯=βₚ=0.",
+        "C": "$Y^TBY/Y^TCY$ is central F with (p,n−p) degrees.",
+        "D": "The regression and residual sums are independent iff β₁=⋯=βₚ=0."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Let H be the fitted-space projection and J the constant-space projection. Then B=H−J and C=I−H.",
+        "Orthogonal normal quadratic forms are independent for every mean. Centrality, degrees of freedom, and F scaling are separate issues."
+      ],
+      "solution": "With full rank, A=I−J, B=H−J and C=I−H are projections of ranks n−1,p,n−p−1, and BC=0. A is not always true: the total quadratic form is noncentral when the nonconstant regression mean is present. Under zero slopes, the mean lies in the constant space and B annihilates it, so B gives central χ²ₚ. C fails because the residual degrees are n−p−1, and even under zero slopes an F statistic requires $(Y^TBY/p)/(Y^TCY/(n-p-1))$, not the raw ratio. The two normal projected components and their squared norms are independent for every β since BC=0; D falsely makes this conditional on zero slopes. Thus only B.",
+      "theory": "Normal regression sums of squares are quadratic forms associated with orthogonal projections. A projection of rank r applied to a spherical normal vector yields a chi-square variable with r degrees of freedom and noncentrality equal to the squared projected mean divided by σ². It is central exactly when the projection annihilates that mean. An intercept consumes one dimension, so residual degrees of freedom are n−p−1 when p excludes the intercept. Corrected total variation removes the constant component, and model variation is the remaining fitted projection. Orthogonal projected normal vectors are independent regardless of their means, so independence is not restricted to the null hypothesis. An F distribution comes from a ratio of independent central chi-squares each divided by its own degrees of freedom; a raw sum-of-squares ratio has a different scale.",
+      "similar_questions": [
+        {
+          "prompt": "For simple regression with intercept and n=12, give the null F statistic and degrees.",
+          "solution": "There is p=1 slope and residual rank 12−1−1=10. Under zero slope, F=(SSR/1)/(SSE/10) has F₁,₁₀ distribution."
+        },
+        {
+          "prompt": "Under a nonzero slope, do SSR and SSE remain independent?",
+          "solution": "Yes. Their projection matrices are orthogonal, so the projected normal vectors are independent. SSR becomes noncentral, while SSE remains central, but independence persists."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 115, PDF page 67. No candidate response used as an answer key.",
+      "page": 67,
+      "image": "assets/questions/2025-december-q115.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

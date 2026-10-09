@@ -1,0 +1,1213 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2020-june-30nov-q001",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 1,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A $3.1\\,m\\times2.2\\,m\\times2.1\\,m$ granite block is cut into the maximum number of $3\\,m\\times2\\,m$ slabs of thickness $4\\,cm$. These form a $1.5\\,m$ wide pavement. What is the maximum pavement length in meters?",
+      "options": {
+        "A": "200",
+        "B": "220",
+        "C": "400",
+        "D": "440"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Convert thickness to meters and compare the two possible orientations of the two-meter side.",
+        "Put the three-meter side along 3.1 m and the two-meter side along 2.1 m, leaving 2.2 m for stacking slabs."
+      ],
+      "solution": "Thickness is $0.04$ m. The three-meter dimension must lie along 3.1 m. Using 2.1 m for the two-meter side leaves 2.2 m as the thickness direction, yielding $\\lfloor2.2/0.04\\rfloor=55$ slabs. Reversing the other two directions gives only $\\lfloor2.1/0.04\\rfloor=52$ slabs. The maximum slab area is $55(3)(2)=330\\,m^2$, hence pavement length $330/1.5=220$ m, B. This uses the standard rectangular slab-cutting convention with negligible saw loss; 200,400,440 do not follow from the maximum usable slab count.",
+      "theory": "Rectangular cutting problems require matching each required dimension to an available dimension and counting whole pieces with floor functions. A volume quotient alone may overestimate usable pieces because offcuts cannot necessarily form the prescribed slab shape. All lengths must first use the same unit: four centimeters is 0.04 meters. When one required side is larger than two block dimensions, its direction is forced. The remaining directions should be compared rather than chosen by eye. After cutting, a slab contributes its face area to the pavement; the thickness affects slab count but is not a pavement dimension. Pavement area equals width times length, so length follows by dividing total usable face area by the fixed width. Standard exam cutting models ignore kerf and assume axis-aligned rectangular cuts.",
+      "similar_questions": [
+        {
+          "prompt": "A $4.1\\times2.1\\times1$ m block yields $4\\times2$ m slabs 5 cm thick. Find their count and total face area.",
+          "solution": "The face fits along the first two dimensions; the remaining meter yields $\\lfloor1/0.05\\rfloor=20$ slabs. Their total area is $20\\cdot8=160\\,m^2$."
+        },
+        {
+          "prompt": "Forty slabs each of area $3\\,m^2$ make a pavement 2 m wide. Find its length.",
+          "solution": "Total area is $40\\cdot3=120\\,m^2$. Dividing by width gives length $120/2=60$ m."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 1, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-30nov-q001.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q002",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 2,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Milk rises rapidly at boiling point because",
+      "options": {
+        "A": "It becomes hotter than the vessel at boiling point.",
+        "B": "Its temperature rapidly increases at boiling point.",
+        "C": "Its bulk density rapidly decreases and it becomes more buoyant at boiling point.",
+        "D": "Its vapour pressure rapidly decreases at boiling point."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Think about the volume occupied by vapor bubbles trapped in liquid milk.",
+        "Milk components stabilize a foam, so the gas–liquid mixture expands and has reduced bulk density."
+      ],
+      "solution": "At boiling, vapor bubbles form in the milk. Proteins and other milk components stabilize a surface film and foam that traps those bubbles, rapidly increasing the mixture volume. Its bulk density decreases and the expanded froth rises, matching C. Milk need not become hotter than its heated vessel, so A fails. During boiling at fixed pressure added heat primarily supplies latent heat rather than a rapid temperature increase, so B fails. Vapor pressure does not rapidly decrease at boiling, so D fails.",
+      "theory": "Boiling occurs when vapor pressure becomes sufficient for vapor bubbles to persist in the liquid at the surrounding pressure. Latent heat converts liquid to vapor while the equilibrium boiling temperature remains approximately constant at fixed pressure. Milk is a mixture with proteins and fats that can stabilize bubbles and a surface film; this differs from a simple liquid whose bubbles escape readily. Foam contains a large gas volume for relatively little mass, so its bulk density is smaller than the liquid density and its occupied volume can increase sharply. The rising froth is therefore an expansion effect associated with trapped vapor and buoyancy. Bulk density means total mass divided by the volume of the gas–liquid mixture, not the intrinsic density of the liquid phase. Increased volume should not be confused with a sudden increase in temperature.",
+      "similar_questions": [
+        {
+          "prompt": "Why can boiling water stay near a fixed temperature while heat continues to enter?",
+          "solution": "At fixed pressure, energy supplies latent heat of vaporization. It converts liquid into vapor rather than primarily raising the equilibrium liquid temperature."
+        },
+        {
+          "prompt": "A foam has mass 100 g and volume 400 mL. Compare its density with a liquid of density 1 g/mL.",
+          "solution": "Its bulk density is $100/400=0.25$ g/mL, one quarter of the liquid density. The gas-filled foam occupies four times the volume for the same mass."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 2, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-30nov-q002.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q003",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In an examination, two students score 100 out of 100 and each remaining six students scores less than 12. Negative marks are impossible. If $N$ is the median and $M$ the mean, which statement is true?",
+      "options": {
+        "A": "$M>2N$.",
+        "B": "$3N/2<M\\le2N$.",
+        "C": "$N\\le M\\le3N/2$.",
+        "D": "From the above information can be said about the relationship between the Median score of the students and the Mean score of students."
+      },
+      "correct_options": [],
+      "hints": [
+        "Order the eight scores: the fourth and fifth are among the six scores below twelve.",
+        "The two perfect scores alone contribute 200 points, so the mean is at least 25."
+      ],
+      "solution": "The median is the average of ordered scores four and five, both below twelve, so $0\\le N<12$ and $2N<24$. Nonnegativity of the other scores gives $M\\ge200/8=25$. Hence $M>2N$ always, making A the mathematically established intended answer and refuting B,C. The exact option D, however, lacks the predicate telling what can be said; it is not a complete assertion. The supplied option set is therefore marked source_issue instead of silently inserting “nothing” or another missing phrase. If D was intended to claim the relationship cannot be determined, A would be the unique answer.",
+      "theory": "The arithmetic mean equals the total score divided by the number of observations, while the median depends on the central ordered observations. For an even sample of size eight, the median is the average of the fourth and fifth order statistics. Large outlying scores strongly influence the mean but may leave the median among the ordinary low scores. Bounds can prove inequalities without knowing each score exactly: a lower bound for the mean and an upper bound for the median suffice here. The strict bound on low scores produces a strict median bound, while nonnegative marks give a weak lower bound on the mean. These distinctions matter when comparing expressions such as twice the median. A complete mathematical option must state a proposition; a missing conclusion cannot be supplied from presumed examination intent.",
+      "similar_questions": [
+        {
+          "prompt": "Six nonnegative scores consist of four values below ten and two values 60. Compare mean $M$ with twice median $N$.",
+          "solution": "The middle third and fourth scores are below ten, so $2N<20$. The total is at least120, making $M\\ge20$. Thus $M>2N$."
+        },
+        {
+          "prompt": "Find mean and median of $0,1,2,3,4,5,100,100$.",
+          "solution": "The sum is215 and the mean is$215/8=26.875$. The median is$(3+4)/2=3.5$, hence twice the median is7 and the mean exceeds it."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option D is incomplete as printed. A follows unambiguously from score bounds; conditional intended answer is A if D was meant to express inability to determine the relationship.",
+      "answer_source": "Independent mathematical derivation; question 3, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-30nov-q003.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q004",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 4,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Two points start on the same radial ray on concentric circles of radii 100 m and 150 m. They move in opposite directions at 8 m/s. Approximately how many seconds until they again align along the same radial direction?",
+      "options": {
+        "A": "31",
+        "B": "37",
+        "C": "47",
+        "D": "53"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Convert linear speed into angular speed separately for the two radii.",
+        "Opposite angular velocities add in relative magnitude; same-ray alignment requires relative angle $2\\pi$."
+      ],
+      "solution": "The angular speeds are $8/100$ and $8/150$ radians per second. Their relative angular speed is $8/100+8/150=2/15$. The first repeated same-ray alignment occurs after $t=2\\pi/(2/15)=15\\pi\\approx47.12$ seconds, so C. A,B,D do not approximate the computed time. Alignment on opposite rays would occur at half this time but would not be the common radial direction stated in the question.",
+      "theory": "For uniform circular motion, linear speed and angular speed are related by $v=r\\omega$. Equal linear speeds on different radii therefore produce different angular speeds. Relative motion is best studied through the difference of angular positions: velocities in opposite senses have a relative magnitude equal to the sum of their positive angular speeds. Points on concentric circles can align along one radial ray without occupying the same physical point, because their radii remain different. Same-ray alignment requires an angular difference that is a multiple of $2\\pi$; alignment on the same diameter allows multiples of $\\pi$ and is a different condition. The first positive recurrence time is the smallest such relative-angle interval divided by relative speed. Retain radians consistently and round only after deriving the exact expression.",
+      "similar_questions": [
+        {
+          "prompt": "Points on radii 20 and 30 move oppositely at 2 m/s. Find their same-ray recurrence time.",
+          "solution": "The relative angular speed is$2/20+2/30=1/6$ rad/s. Thus the first time is$2\\pi/(1/6)=12\\pi$ seconds."
+        },
+        {
+          "prompt": "Two runners on one circle of circumference 400 m move oppositely at 5 and 3 m/s. When do they meet again?",
+          "solution": "The relative linear speed is8 m/s. They close one circumference in$400/8=50$ seconds."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 4, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-30nov-q004.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q005",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 5,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Which combination of square tiles shown in the original diagram can produce the given four-by-four floor pattern? Refer to the source image for the precise drawn curves.",
+      "options": {
+        "A": "The two tiles drawn in option (a): two steep arcs.",
+        "B": "The two tiles drawn in option (b): a shallow arc and a steep arc.",
+        "C": "The two tiles drawn in option (c): a shallow arc and a steep arc in the depicted orientations.",
+        "D": "The two tiles drawn in option (d): a shallow arc and a steep arc in the depicted orientations."
+      },
+      "correct_options": [],
+      "hints": [
+        "Compare complete individual cells with candidate tiles, including which edges the curve intersects.",
+        "Specify whether rotations and reflections are permitted before declaring two drawn tile types equivalent."
+      ],
+      "solution": "The target consists of a four-by-four grid with curved lines joining across cell edges. A valid construction must match edge-intersection positions, tangent directions, and curvature after every permitted tile transformation. The source gives only schematic drawings and does not state whether tiles can be rotated or reflected. Several shallow/steep candidate curves can be transformed into similarly depicted curves, while the approximate drawing does not specify their radii or exact endpoint locations. Consequently I cannot independently derive a unique choice from the supplied image and rules without an extra geometric or transformation convention. No option is assigned. A precise version should supply exact tile curves and permitted rotations/reflections; one would then classify target cells by those transformations and verify a complete tiling. This is a source ambiguity, not a presumed official-key disagreement.",
+      "theory": "Tiling recognition compares local cell patterns under a specified transformation group. For square tiles, allowed rotations form four possibilities, while admitting reflection doubles the potential symmetry operations. A reflected curve is not necessarily obtainable by rotation, so this rule can change which tile types are needed. Matching an overall silhouette is insufficient: curves must meet at the same location on a shared edge and should have compatible tangents when the target is smooth. A rigorous classification can encode each tile by its boundary intersections, tangent directions, and curvature, then compare each target cell with the orbit of each candidate. Approximate illustrations can obscure these invariants, especially when endpoints lie near corners or midpoints. A unique answer needs enough geometry and transformation rules to distinguish candidate orbits; guessing from visual resemblance would not establish an independently reviewed solution.",
+      "similar_questions": [
+        {
+          "prompt": "A tile has a segment from the midpoint of its top edge to the midpoint of its right edge. What endpoint pairs result from rotations?",
+          "solution": "The four rotations give top–right, right–bottom, bottom–left, and left–top midpoint pairs. They never give opposite-edge pairs."
+        },
+        {
+          "prompt": "Can a horizontal segment joining left and right midpoints generate a top-to-bottom segment if rotations are allowed?",
+          "solution": "Yes: a quarter-turn maps the left midpoint to the top or bottom midpoint and the right midpoint to the opposite one. Without rotation the orientation remains horizontal."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Schematic tile drawings do not specify exact curves or whether rotations/reflections are allowed; no independently justified unique construction was identified. Original image remains the authority, and no answer is guessed.",
+      "answer_source": "Independent mathematical derivation; question 5, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-30nov-q005.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q006",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 6,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Fifteen players participate in a singles badminton tournament. A player is eliminated as soon as she loses a match. How many matches determine the winner?",
+      "options": {
+        "A": "30",
+        "B": "29",
+        "C": "15",
+        "D": "14"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Every completed match eliminates exactly one player.",
+        "A winner is determined when fourteen of the fifteen players have been eliminated."
+      ],
+      "solution": "There is exactly one survivor, so fourteen players must be eliminated. Each match produces one loser and one elimination, requiring exactly fourteen matches, D. The round layout and any byes do not change that count. Fifteen would eliminate everyone, while29 and30 belong to other tournament structures, not this single-elimination rule.",
+      "theory": "A single-elimination tournament can be counted through eliminations rather than through rounds. Starting with $n$ players and ending with one winner requires $n-1$ eliminations. Each decisive two-player match eliminates one participant, so precisely $n-1$ matches are played regardless of bracket shape. A bye advances a player without eliminating anyone and therefore contributes no match. The number of rounds may depend on scheduling and powers of two, but the total match count does not. Round-robin tournaments instead have every unordered pair play, giving $n(n-1)/2$ matches, and double-elimination rules require a different count. The key hypothesis is immediate elimination after a first loss and a single eventual champion. Tracking the invariant “players remaining decreases by one per match” avoids unnecessary bracket construction.",
+      "similar_questions": [
+        {
+          "prompt": "How many matches are required in a single-elimination tournament with 32 entrants?",
+          "solution": "Thirty-one players must lose and be removed. Each match removes one, so31 matches are required."
+        },
+        {
+          "prompt": "Eight players play a full round robin once. How many matches occur?",
+          "solution": "Every unordered pair plays, giving$\\binom82=8\\cdot7/2=28$ matches; this is different from the seven matches of single elimination."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 6, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-30nov-q006.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q007",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 7,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A box contains three white and five black balls. Two balls are drawn one by one with replacement. Find the probability of one white and one black.",
+      "options": {
+        "A": "$15/64$",
+        "B": "$15/32$",
+        "C": "$3/32$",
+        "D": "$3/28$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Replacement makes both draws independent with unchanged color probabilities.",
+        "The event has two disjoint orders, white–black and black–white."
+      ],
+      "solution": "Each draw has probabilities $3/8$ white and $5/8$ black. White–black has probability $15/64$, as does black–white. Adding the disjoint orders gives $30/64=15/32$, B. A counts only one order; C,D do not use the replacement probabilities and both allowed orders.",
+      "theory": "With replacement, each selected ball is returned before the next draw, so the composition and color probabilities remain unchanged. Random independent draws then permit multiplication of probabilities for a specified ordered sequence. The event of one ball of each color does not prescribe the order, and its two orderings are mutually exclusive; their probabilities must be added. Equivalently the number of white balls in two trials is binomial with success probability three eighths, and the mass at one is twice the product of success and failure probabilities. Without replacement the conditional probabilities would change and the two draws would be dependent, yielding a different answer. Always distinguish ordered outcomes from unordered events and check whether replacement is explicitly stated before choosing a counting or conditional-probability formula.",
+      "similar_questions": [
+        {
+          "prompt": "With two red and three blue balls, find the probability of one of each in two replacement draws.",
+          "solution": "The two orders have probability$(2/5)(3/5)$ each. The total is$2\\cdot6/25=12/25$."
+        },
+        {
+          "prompt": "For the same box, find the probability of one of each without replacement.",
+          "solution": "Red–blue has probability$(2/5)(3/4)=3/10$, and blue–red has$(3/5)(2/4)=3/10$. The total is$3/5$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 7, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-30nov-q007.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q008",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 8,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The first day of 2020 was Wednesday. The first day of 2021 would be",
+      "options": {
+        "A": "Wednesday",
+        "B": "Thursday",
+        "C": "Friday",
+        "D": "Monday"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Check whether2020 is a leap year.",
+        "A leap year has366 days, which shifts the weekday by two modulo seven."
+      ],
+      "solution": "2020 is divisible by four and is not a century year, so it is a leap year with366 days. Since366 has remainder two modulo seven, the next January1 is two weekdays after Wednesday: Friday, C. Thursday would be the shift after an ordinary365-day year; the other choices do not match the remainder.",
+      "theory": "Weekday arithmetic is modular arithmetic modulo seven because weekdays repeat every seven days. A common year has365 days and therefore shifts the next year’s starting weekday by one, while a leap year has366 days and shifts it by two. Under the Gregorian rule, a year divisible by four is leap except that century years must be divisible by400. Thus2020 has an extra February day, while1900 would not and2000 would. To move between corresponding dates across one whole year, count that year’s days and reduce the total modulo seven. The stated starting weekday is enough; there is no need to reconstruct the whole calendar. Be careful whether the interval contains the leap day, since intervals between other dates may have a different day count.",
+      "similar_questions": [
+        {
+          "prompt": "If a common year starts on Monday, what weekday starts the next year?",
+          "solution": "A365-day interval has remainder one modulo seven, so the next year starts Tuesday."
+        },
+        {
+          "prompt": "If the year2000 starts on Saturday, what weekday starts2001?",
+          "solution": "2000 is divisible by400 and therefore leap. A366-day shift is two weekdays, giving Monday."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 8, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-30nov-q008.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q009",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 9,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The shaded circles have diameters1,0.5,0.25,0.125 cm inside unit squares, as shown. The shaded areas of A and B have ratio one. What is the ratio of shaded area in C to D?",
+      "options": {
+        "A": "0.75",
+        "B": "1",
+        "C": "1.25",
+        "D": "1.5"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Circle area scales with the square of diameter. In C, one quarter of the unit circle is unshaded.",
+        "Count D as two circles of diameter0.5, two of diameter0.25, and eight of diameter0.125."
+      ],
+      "solution": "C has shaded area $\\tfrac34\\cdot\\pi/4=3\\pi/16$. In D the two diameter-$1/2$ circles contribute $2\\pi/16=\\pi/8$, the two diameter-$1/4$ circles contribute $2\\pi/64=\\pi/32$, and the eight diameter-$1/8$ circles contribute $8\\pi/256=\\pi/32$. Their sum is $3\\pi/16$. Thus C and D have equal area and the ratio is one, B; all other numerical ratios fail. The count uses the circles shown, including the four tiny circles on each of the two perpendicular rows.",
+      "theory": "A circle of diameter $d$ has area $\\pi d^2/4$, so halving its diameter quarters its area. For collections of nonoverlapping circles, total shaded area is the sum of the individual areas. Four circles of half the original diameter reproduce one full circle’s area, explaining the equal areas of A and B. A quarter-circle cut from a symmetric unit circle removes one fourth of its area even if the enclosing square’s removed corner is larger than the actual circular portion. In diagrams with several scales, classify circles by diameter before counting them to avoid mixing radii and diameters. Ratios simplify by cancelling the common factor $\\pi/4$. Empty space between circles contributes no shaded area, and touching boundaries have zero area so do not alter the sum.",
+      "similar_questions": [
+        {
+          "prompt": "How many diameter-$1/4$ circles have the same area as one diameter-one circle?",
+          "solution": "The area ratio is$(1/4)^2=1/16$, so sixteen small circles match the large area."
+        },
+        {
+          "prompt": "Find the total area of three diameter-$1/2$ circles and four diameter-$1/4$ circles.",
+          "solution": "The first group contributes$3\\pi/16$ and the second$4\\pi/64=\\pi/16$, totaling$\\pi/4$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 9, PDF page 3. No candidate response used as an answer key.",
+      "page": 3,
+      "image": "assets/questions/2020-june-30nov-q009.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q010",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 10,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "An isosceles triangle $ABC$ lies in a unit square with base $AB$ the lower side, apex $C$ at the midpoint of the upper side, and $AD=BD$. Which graph depicts cumulative square and triangle areas as a vertical line moves from A to B? Refer to the source graphs.",
+      "options": {
+        "A": "Graph (a): square area is linear; triangle area first bends upward then downward and ends at0.5.",
+        "B": "Graph (b): square area is linear; triangle area bends upward throughout to0.5.",
+        "C": "Graph (c): both areas are linear.",
+        "D": "Graph (d): triangle area first bends downward then upward."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Cumulative area is the integral of vertical cross-section height.",
+        "The triangle height increases linearly to the midpoint and decreases linearly thereafter."
+      ],
+      "solution": "Let $x$ measure distance from A along AB. The square cumulative area is $S(x)=x$. The triangle cross-section height is $2x$ for $0\\le x\\le1/2$ and $2(1-x)$ for $1/2\\le x\\le1$. Hence $T(x)=x^2$ in the first half and $T(x)=1/2-(1-x)^2$ in the second. It is convex then concave, has $T(1/2)=1/4$, and ends at $T(1)=1/2$, matching A. B has wrong curvature in the second half; C ignores the changing height; D reverses the curvature.",
+      "theory": "Cumulative area to the left of a moving vertical boundary is the integral of the figure’s vertical slice height. Its derivative therefore equals that height, so the graph’s slope can be read from the geometry. A rectangle with constant height produces a linear cumulative-area graph. For a triangle whose apex lies above the base midpoint, the slice height increases linearly before the apex and decreases linearly afterward. Integrating these pieces gives two quadratic expressions with matching value and slope at the midpoint. Increasing height means a convex cumulative graph, while decreasing height means concavity. The final values equal total areas: one for the unit square and one half for the triangle. This slope-based method is more reliable than matching endpoint values alone, since several incorrect graphs can share the same total area.",
+      "similar_questions": [
+        {
+          "prompt": "For the triangle with vertices$(0,0),(2,0),(1,2)$, compute cumulative area for$0\\le x\\le1$.",
+          "solution": "The slice height is$2x$, so the cumulative area is$\\int_0^x2t\\,dt=x^2$. At the midpoint it is one, half the total area two."
+        },
+        {
+          "prompt": "For a rectangle width three and height two, find its cumulative-area function.",
+          "solution": "Every vertical slice has height two, so$A(x)=\\int_0^x2\\,dt=2x$ on$[0,3]$. It is linear and ends at total area six."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 10, PDF page 3. No candidate response used as an answer key.",
+      "page": 3,
+      "image": "assets/questions/2020-june-30nov-q010.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q011",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 11,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Coding genes constitute about2% of the human genome. If the whole genome is written on a pack of50 cards, how many cards correspond to coding genes?",
+      "options": {
+        "A": "One card",
+        "B": "Two cards",
+        "C": "Three cards",
+        "D": "Four cards"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Convert2% to the fraction2/100.",
+        "Multiply the fraction by the total number of cards."
+      ],
+      "solution": "The coding fraction is $2/100=1/50$. Thus fifty equally sized cards contain $50(1/50)=1$ card of coding content, A. Two,three,four cards would represent4%,6%,8%, respectively, rather than the stated2%. The calculation uses the proportion given and does not require any additional genomic information.",
+      "theory": "A percentage represents a fraction out of one hundred and can be converted to a decimal or reduced fraction before multiplication. If a whole is represented by equally sized units, a specified content fraction occupies the same fraction of those units. The representation is proportional: here each of fifty cards represents one fiftieth of the total, exactly two percent. The unit count should not be confused with the numerical percentage itself. When a percentage is approximate, the result is correspondingly approximate in a physical analogy, though these options select the nearest integer representation. A useful check is to work backward from each candidate card count to its fraction of the total. The biology supplies the stated proportion; the inference is purely arithmetic and should not silently substitute a different genomic percentage.",
+      "similar_questions": [
+        {
+          "prompt": "Five percent of a collection represented by80 cards corresponds to how many cards?",
+          "solution": "$0.05\\cdot80=4$ cards."
+        },
+        {
+          "prompt": "Three of60 cards represent a feature. What percentage is that?",
+          "solution": "The fraction is$3/60=1/20=0.05$, or5%."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 11, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-30nov-q011.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q012",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 12,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Locations A,B,C,D lie on a straight road with AC=30 km. A bus starts from A at8 am toward B, and another from C at8:30 am toward D. Both move away from A in the same direction, the first twice as fast as the second. They meet at9 am after each has covered80% of its route. Find BD.",
+      "options": {
+        "A": "37.5 km",
+        "B": "25.0 km",
+        "C": "12.5 km",
+        "D": "7.5 km"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Let the slower speed be v; the first travels for one hour and the second for half an hour.",
+        "The meeting equation is $2v=30+v/2$. Divide each traveled distance by0.8 to find its full route."
+      ],
+      "solution": "Take A as coordinate zero and C as30. If the slower speed is$v$, at9 am the first bus is at$2v$ and the second at$30+v/2$. Equating gives$v=20$ km/h and meeting coordinate40. AB is$40/0.8=50$ km, so B is at50. CD is$10/0.8=12.5$ km, so D is at42.5. Hence BD is$50-42.5=7.5$ km, D. The other options correspond to unrelated route lengths or incorrectly handling start times.",
+      "theory": "One-dimensional motion is conveniently represented by coordinates measured from a common reference point. The distance traveled by each vehicle is its speed times its own elapsed time, which need not be the same when departure times differ. A meeting means equality of absolute coordinates, not equality of traveled distances when the starting positions differ. A given fraction of a completed route gives total route length by division, not multiplication. Here both buses have completed the same percentage at the meeting, but their route lengths differ because the faster bus has traveled longer as well as faster. Once endpoint coordinates are found, their distance is the absolute difference. Drawing an ordered road diagram or writing a position equation prevents confusing AC with the initial separation after the first bus has already traveled for half an hour.",
+      "similar_questions": [
+        {
+          "prompt": "A faster car starts at0 at noon at40 km/h. A slower car starts at30 at12:30 at20 km/h. When do they meet?",
+          "solution": "At t hours after noon, positions are40t and30+20(t-1/2). Equality gives20t=20, so t=1: they meet at1 pm at coordinate40."
+        },
+        {
+          "prompt": "A vehicle has covered18 km, which is75% of its route. Find the remaining distance.",
+          "solution": "Total distance is18/0.75=24 km. The remaining distance is24-18=6 km."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 12, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-30nov-q012.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q013",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 13,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Alex has selection probability8/11 and Gafoor5/14, independently. Find the probability exactly one is selected.",
+      "options": {
+        "A": "$25/72$",
+        "B": "$67/154$",
+        "C": "$87/154$",
+        "D": "$15/72$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Exactly one means Alex selected and Gafoor rejected, or the reverse.",
+        "Use independent products and add the two disjoint events."
+      ],
+      "solution": "The probability is $(8/11)(1-5/14)+(1-8/11)(5/14)=72/154+15/154=87/154$, C. The two terms correspond to the mutually exclusive possibilities. The remaining options do not equal that sum; in particular a probability of both selected is not an exactly-one probability.",
+      "theory": "For two independent events with probabilities p and q, the probability of exactly one is p(1-q)+(1-p)q. The two component events are disjoint, so addition is justified; independence is used within each product, not to claim the exactly-one components are independent. The complementary event consists of both occurring or neither occurring and provides a check through one minus pq+(1-p)(1-q). Selection of only one does not mean at least one: the latter also includes simultaneous selection and has probability p+q-pq. When rational probabilities have different denominators, forming a common denominator makes arithmetic and comparison with options easier. Keep the rejection probabilities attached to the correct person. A narrative use of the word independent is the crucial hypothesis that allows multiplication without needing a joint-probability specification.",
+      "similar_questions": [
+        {
+          "prompt": "Independent selection probabilities are1/3 and1/2. Find exactly-one probability.",
+          "solution": "It is$(1/3)(1/2)+(2/3)(1/2)=1/6+1/3=1/2$."
+        },
+        {
+          "prompt": "For those probabilities, find at-least-one probability.",
+          "solution": "The neither probability is$(2/3)(1/2)=1/3$. Its complement is2/3, larger than exactly-one because it includes both selected."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 13, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-30nov-q013.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q014",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 14,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The standard deviation of17 body temperatures in Fahrenheit is2.7. What is their standard deviation in Celsius?",
+      "options": {
+        "A": "3.5",
+        "B": "2.7",
+        "C": "2.5",
+        "D": "1.5"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Celsius equals$(5/9)(F-32)$.",
+        "Adding a constant does not change standard deviation; multiplying scales it by the absolute multiplier."
+      ],
+      "solution": "The conversion is $C=(5/9)F-160/9$. Thus $s_C=(5/9)s_F=(5/9)(2.7)=1.5$, D. Translation by32 affects the mean but cancels from centered deviations. The sample size17 and the choice of population or sample variance denominator do not change this scaling relation.",
+      "theory": "For an affine transformation Y=aX+b, the mean becomes a times the original mean plus b. Each centered deviation becomes a times its original value, so variance scales by a squared and standard deviation by the absolute value of a. This holds for both population and sample standard deviations when the same convention is used before and after conversion. The additive offset does not affect spread because it shifts every observation equally. Temperature scale conversion is an affine transformation, making this rule preferable to trying to transform the standard deviation as though it were an individual temperature. Standard deviation has the units of the measured variable, whereas variance has squared units. A negative scale factor would reverse order but still give a nonnegative spread through its absolute value.",
+      "similar_questions": [
+        {
+          "prompt": "A data set has standard deviation4. Find the standard deviation after Y=3X+10.",
+          "solution": "The offset cancels and the factor is3, so the new standard deviation is12."
+        },
+        {
+          "prompt": "If Fahrenheit variance is81, find Celsius variance.",
+          "solution": "Variance scales by$(5/9)^2$, giving81(25/81)=25 square Celsius degrees. The corresponding standard deviation is5 Celsius degrees."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 14, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-30nov-q014.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q015",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 15,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Nine dots form a three-by-three grid as in the source image. How many triangles can be drawn by joining these dots?",
+      "options": {
+        "A": "74",
+        "B": "76",
+        "C": "78",
+        "D": "84"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Select any three of nine points, then remove collinear triples.",
+        "There are three rows, three columns, and two long diagonals containing triples."
+      ],
+      "solution": "There are$\\binom93=84$ triples. Exactly eight are collinear: three complete rows, three complete columns, and the two corner-to-corner diagonals. No other slope gives three lattice points in this3-by3 grid, since endpoints separated by two grid steps need an integer-coordinate midpoint. Hence the number of nondegenerate triangles is84-8=76, B. D includes all degenerate triples, while A and C subtract the wrong number.",
+      "theory": "Three distinct points determine a nondegenerate triangle exactly when they are not collinear. Counting all unordered triples and subtracting the collinear ones is often easier than classifying triangles by shape or orientation. On a lattice, collinearity can be checked using a zero determinant of coordinate differences, or by verifying that one point lies on the line through the other two. In a three-by-three integer grid, a line containing three points must span two steps in some coordinate direction, and the middle point is the midpoint of the extreme pair. The coordinate differences must therefore have even components, restricting possible directions to horizontal, vertical, and the two unit-slope diagonals. Each three-point line contributes one rejected triple. Overlapping lines share points but not a complete triple, so their counts are simply added.",
+      "similar_questions": [
+        {
+          "prompt": "How many triangles use three vertices of a square?",
+          "solution": "All$\\binom43=4$ triples are noncollinear, so there are four triangles."
+        },
+        {
+          "prompt": "Six points lie in two parallel rows of three. How many triangles can they form?",
+          "solution": "There are$\\binom63=20$ triples. The two rows each contain one collinear triple; no other line can contain three points from only two rows unless it is a row. The answer is18."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 15, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-30nov-q015.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q016",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 16,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Liquids A,B,C of densities3,2,1 g/cc are mixed in volume proportion1:2:3 to make6 mL. What is the solution density?",
+      "options": {
+        "A": "1.7",
+        "B": "2.0",
+        "C": "2.5",
+        "D": "3.0"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Density is total mass divided by total volume.",
+        "The component volumes are1,2,3 mL, so their masses are3,4,3 grams."
+      ],
+      "solution": "Under the stated additive-volume mixing convention, the component volumes are1,2,3 cc. Total mass is$3(1)+2(2)+1(3)=10$ g. Dividing by6 cc gives$5/3\\approx1.7$ g/cc, A. An unweighted average of densities would give2.0, but the unequal volume proportions require volume weighting; the other options likewise fail.",
+      "theory": "A mixture’s mass is the sum of component masses, and each component mass equals its density times its volume. If volumes are additive, the final density is the volume-weighted mean of component densities. It is not the simple average unless all volumes are equal. Volume ratios determine relative weights and can be normalized by their sum; the total mixture volume cancels from the density calculation. A cubic centimeter and a milliliter are equal volume units, so no conversion factor is needed here. Physical mixtures can sometimes contract or expand, but a question specifying a resulting volume and simple proportions uses the additive-volume model unless another relation is supplied. The weighted density should lie between the smallest and largest component densities, offering a quick plausibility check.",
+      "similar_questions": [
+        {
+          "prompt": "Mix equal volumes of densities2 and4 g/cc with additive volumes. Find density.",
+          "solution": "The weights are equal, so density is$(2+4)/2=3$ g/cc."
+        },
+        {
+          "prompt": "Mix volumes2 and3 cc with densities1 and5 g/cc. Find density.",
+          "solution": "Mass is2+15=17 g and volume5 cc. Density is17/5=3.4 g/cc."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 16, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-30nov-q016.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q017",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 17,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A fair coin is tossed independently eight times. What is the probability that the third toss is a head?",
+      "options": {
+        "A": "$1/8$",
+        "B": "$1/4$",
+        "C": "$1/2$",
+        "D": "$3/2^8$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Only one specified toss is constrained.",
+        "The other seven tosses can have any outcomes and do not change the third toss probability."
+      ],
+      "solution": "The third toss is a fair Bernoulli trial, so its head probability is1/2, C. Equivalently among$2^8$ equally likely sequences, $2^7$ have a head at position three. This is not the probability that the first head occurs on the third toss, nor the probability of exactly three heads; A,B,D correspond to neither the stated event nor its sequence count.",
+      "theory": "Independence of repeated fair tosses gives equally likely full binary sequences, but a marginal event concerning one specified toss has the same probability as a single toss. Other coordinates are unrestricted and sum out of the event. To count sequences, fixing one coordinate leaves seven free binary choices. Distinguish “the third toss is a head” from “the first head occurs on toss three,” which additionally constrains the first two outcomes, and from “there are exactly three heads,” which is a binomial-count event. The total number of trials can be irrelevant to a single-coordinate marginal question as long as that coordinate exists. Writing the event explicitly before calculating prevents unnecessarily multiplying by probabilities of unconstrained outcomes or misusing a combinations formula.",
+      "similar_questions": [
+        {
+          "prompt": "What is the probability the fifth of ten fair tosses is a tail?",
+          "solution": "It is1/2. Counting gives$2^9$ favorable sequences out of$2^{10}$."
+        },
+        {
+          "prompt": "What is the probability the first head occurs on the third fair toss?",
+          "solution": "The required initial sequence is tail,tail,head, giving$(1/2)^3=1/8$. Later tosses are unrestricted."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 17, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-30nov-q017.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q018",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 18,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A girl runs at constant speed along a straight path toward a bus initially stationary some distance ahead. Before she reaches it, the bus accelerates away. Which source graph is a possible depiction? Solid line represents girl and dotted line bus.",
+      "options": {
+        "A": "Graph(a): girl linear; dotted curve begins near the origin and later steepens above the girl.",
+        "B": "Graph(b): girl linear; dotted curve starts near zero with increasing slope and later crosses above the girl.",
+        "C": "Graph(c): girl linear; dotted curve initially nearly horizontal above zero and later meets the girl.",
+        "D": "Graph(d): both depicted curves are straight with different slopes."
+      },
+      "correct_options": [],
+      "hints": [
+        "If the vertical axis is common position, the bus must initially have positive intercept and zero slope.",
+        "If it instead records each object’s own distance traveled, both can start at zero, but intersections then do not represent meeting."
+      ],
+      "solution": "For common position coordinates the girl is $x_g(t)=vt$ and a bus beginning a distance L ahead and moving after time t0 has $x_b(t)=L$ for $t\\le t0$ and $x_b(t)=L+\\tfrac12a(t-t0)^2$ afterward. Acceleration starts before the girl reaches the stationary bus when $t0<L/v$. Thus the bus graph requires an initial positive horizontal segment followed by increasing slope. The schematic options do not specify whether “dist” means common position or separately measured distance traveled. A and B start very near the origin without an unambiguous stationary positive-position segment; C has a positive flat part that the girl’s line appears to reach before the bus accelerates; D represents constant speeds. If separate traveled distances are intended, intersections lose their catching interpretation and multiple accelerating curves can be compatible by selecting L. A unique mathematically justified selection is not established by the supplied drawing; source_issue is retained rather than inferring an origin convention.",
+      "theory": "A position–time graph has slope equal to velocity and curvature determined by acceleration. Constant speed along a straight path gives a straight line, rest gives a horizontal segment, and positive acceleration gives increasing slope. Comparing two positions requires a shared spatial origin; only then does an intersection mean the objects meet. Graphs of distances traveled separately from each object’s starting location can both begin at zero even when the objects are initially separated, and their intersections then have a different meaning. A bus initially ahead must have a positive position intercept under the girl’s origin. The ordering of events also matters: acceleration must begin before the girl’s position reaches the initial bus position. Approximate plots should show this initial separation and timing clearly. Without a coordinate convention, plausible curve shapes alone cannot establish a unique answer.",
+      "similar_questions": [
+        {
+          "prompt": "A runner has position3t and a bus waits at30 until t=5 before accelerating at2. Write its position.",
+          "solution": "The bus position is30 for $t\\le5$ and $30+(t-5)^2$ afterward. Since5<30/3=10, acceleration starts before the runner would reach the stationary bus."
+        },
+        {
+          "prompt": "Two cars have traveled distances2t and3t from starting points ten units apart. Does equality of these curves imply a meeting?",
+          "solution": "No. Their positions must include starting coordinates, for example2t and10+3t. Equality of traveled distances at t=0 merely says neither has moved, not that they occupy the same location."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Source graphs use an unspecified “dist” origin and do not unambiguously encode an initially separated stationary bus accelerating before contact. The physical position equations and the alternative traveled-distance interpretation are stated; no graph choice is guessed.",
+      "answer_source": "Independent mathematical derivation; question 18, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-30nov-q018.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q019",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 19,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Four taps separately fill a tank in6,5,4,3 hours. Approximately how long do all four together take?",
+      "options": {
+        "A": "1 hour",
+        "B": "1.5 hours",
+        "C": "2 hours",
+        "D": "2.5 hours"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Add filling rates, not filling times.",
+        "The total rate in tanks per hour is $1/6+1/5+1/4+1/3=57/60$."
+      ],
+      "solution": "Total rate is $(10+12+15+20)/60=57/60=19/20$ tank/hour. Thus the time is its reciprocal $20/19\\approx1.053$ hours, closest to one hour, A. The other choices exceed the computed approximation. Simultaneous independent flows are assumed constant and additive.",
+      "theory": "Work-rate problems measure a common completed job per unit time. A tap that fills one tank in T hours has rate one over T tanks per hour. When taps operate simultaneously without interfering and no outlet removes water, their rates add. The time for one complete tank is the reciprocal of the total rate. Adding or averaging the completion times is incorrect because faster taps contribute more water per hour. Units help verify the calculation: a sum of inverse hours gives a rate, whose reciprocal is in hours. Exact fractions should be kept until the final approximation to avoid unnecessary rounding. The combined completion time must be shorter than the fastest individual time, providing a quick check. Leaks or changing flow rates would require modifying the rate equation.",
+      "similar_questions": [
+        {
+          "prompt": "Two taps fill a tank in4 and6 hours. Find their combined time.",
+          "solution": "Total rate is $1/4+1/6=5/12$, so time is $12/5=2.4$ hours."
+        },
+        {
+          "prompt": "A tap fills in3 hours and a leak empties in6 hours. Find net filling time.",
+          "solution": "Net rate is $1/3-1/6=1/6$ tank/hour, so filling takes6 hours."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 19, PDF page 6. No candidate response used as an answer key.",
+      "page": 6,
+      "image": "assets/questions/2020-june-30nov-q019.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q020",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 20,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The number of nonoverlapping unit squares that can be fitted inside a circle of finite diameter d is at most",
+      "options": {
+        "A": "$\\pi d^2/4-1$",
+        "B": "$\\pi d^2$",
+        "C": "$\\pi d^2/4$",
+        "D": "$\\pi(d-1)^2/4$"
+      },
+      "correct_options": [],
+      "hints": [
+        "Compare the sum of square areas with the enclosing circle area.",
+        "If a number is bounded by the area, it is also bounded by four times that area. Part A expects a single choice."
+      ],
+      "solution": "Let N be the fitted-square count. Nonoverlap gives $N\\le\\pi d^2/4$, so C is a valid universal upper bound. Since $\\pi d^2/4\\le\\pi d^2$, B is also a valid, looser upper bound. Therefore the literal question has two true options despite its single-correct Part A format. A fails already for a small positive d with no square, because its bound can be negative; it also fails at $d=\\sqrt2$, where one unit square fits but $\\pi/2-1<1$. D fails at $d=\\sqrt2$ as well, because $\\pi(\\sqrt2-1)^2/4<1$. The source is marked ambiguous. If the intended question asks for the tightest of the displayed universal area bounds, C is the intended selection, but “tightest” is not printed.",
+      "theory": "Packing upper bounds follow from containment and nonoverlap: the combined area of packed objects cannot exceed the container area. Each unit square has area one, so its count is bounded by the disk area. The bound may be sharpened to an integer floor, but it need not be attained because curved boundaries can leave unavoidable gaps. A valid upper bound remains valid when increased, which matters in single-choice questions asking merely “at most” without specifying a best bound. To reject a proposed universal bound, one counterexample diameter suffices. The smallest circle containing a unit square has diameter equal to its diagonal, square root of two. Arbitrary finite positive diameters may also contain no square, so a proposed negative bound is invalid even when the count is zero. Area necessity is distinct from a constructive packing theorem.",
+      "similar_questions": [
+        {
+          "prompt": "Give an area upper bound on unit-square count inside a disk of radius two.",
+          "solution": "The disk area is $4\\pi$, so the integer count is at most $\\lfloor4\\pi\\rfloor=12$. This does not assert12 squares can actually fit."
+        },
+        {
+          "prompt": "What is the minimum circle diameter containing one unit square?",
+          "solution": "The diagonal is $\\sqrt2$. Opposite vertices must lie in the circle, giving diameter at least $\\sqrt2$, and the circumcircle centered at the square center attains it."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Both B and C are valid literal upper bounds, incompatible with Part A single-correct scoring. Conditional intended tightest displayed bound is C; the word “tightest” has not been inserted.",
+      "answer_source": "Independent mathematical derivation; question 20, PDF page 6. No candidate response used as an answer key.",
+      "page": 6,
+      "image": "assets/questions/2020-june-30nov-q020.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q022",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Evaluate $\\lim_{n\\to\\infty}\\frac{((n+1)(n+2)\\cdots(n+n))^{1/n}}{n}$.",
+      "options": {
+        "A": "$e/4$",
+        "B": "$4/e$",
+        "C": "$e$",
+        "D": "Does not exist"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Take logarithms after factoring one n from each product factor.",
+        "The logarithm becomes a Riemann sum for $\\int_0^1\\log(1+x)\\,dx$."
+      ],
+      "solution": "Let $a_n$ be the displayed quantity. Then $\\log a_n=\\frac1n\\sum_{j=1}^n\\log(1+j/n)$. Continuity makes this a convergent Riemann sum, with limit $\\int_0^1\\log(1+x)dx=[(1+x)\\log(1+x)-(1+x)]_0^1=2\\log2-1$. Exponentiating gives $\\lim a_n=e^{2\\log2-1}=4/e$, B. The positive limit exists, refuting D; A is its reciprocal and C is a different number.",
+      "theory": "Products of many positive terms often become tractable after taking logarithms, which convert a geometric mean into an arithmetic mean. A Riemann sum of the form one over n times a sum of function values at j over n converges to the integral over the unit interval when the function is continuous. Factoring n out of each of n terms produces an overall factor n after the nth root, exactly canceling the denominator here. This normalization must be done before taking a limit. Continuity of the exponential function transfers convergence of logarithms back to the original positive sequence. Integrating log requires an integration-by-parts antiderivative. Since every normalized factor lies between one and two, the resulting geometric mean also lies in that interval, consistent with four over e and ruling out some options immediately.",
+      "similar_questions": [
+        {
+          "prompt": "Find $\\lim_{n\\to\\infty}(\\prod_{j=1}^n e^{j/n})^{1/n}$.",
+          "solution": "Its logarithm is$n^{-1}\\sum j/n=(n+1)/(2n)\\to1/2$, so the limit is$e^{1/2}$."
+        },
+        {
+          "prompt": "Find $\\lim(\\prod_{j=1}^n(2+j/n))^{1/n}$.",
+          "solution": "The logarithm tends to$\\int_0^1\\log(2+x)dx=3\\log3-2\\log2-1$, so the limit is$27/(4e)$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 22, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-30nov-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q023",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 23,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "Let $Y=\\{1,2,\\ldots,100\\}$ and $h:Y\\to Y$ be strictly increasing. How many functions $g:Y\\to Y$ satisfy $g(h(j))=h(g(j))$ for every j?",
+      "options": {
+        "A": "0",
+        "B": "$100!$",
+        "C": "$100^{100}$",
+        "D": "$100^{98}$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A strictly increasing self-map of a finite totally ordered set must be bijective.",
+        "Its ordered outputs must be1,2,...,100, so h is the identity."
+      ],
+      "solution": "Strict increase makes h injective. Since domain and codomain both have100 elements, its increasing sequence of100 distinct values in Y must be exactly1,...,100; thus h(j)=j. Every g then satisfies the commuting identity. Each of100 inputs can be assigned independently to100 outputs, giving$100^{100}$ functions, C. The factorial counts only bijections, an unnecessary restriction, while the other counts do not enumerate all functions.",
+      "theory": "A strictly increasing function on a linearly ordered finite set preserves the order of all distinct inputs and is therefore injective. For a self-map of a finite set, injectivity implies surjectivity. An order-preserving bijection of a finite chain is its identity, because the least element and then each successive element must occupy its ordered position. A commuting condition with the identity imposes no restriction. The number of all maps from an m-element set to a k-element set is k to the power m, because each input has k independent output choices. Bijections from a set to itself instead number m factorial. Avoid assuming an arbitrary function is monotone or injective just because the function it commutes with has those properties. Establish the special self-map first, then simplify the condition on g.",
+      "similar_questions": [
+        {
+          "prompt": "How many maps from a five-element set to a three-element set exist?",
+          "solution": "Each of the five inputs has three choices, independently, so$3^5=243$ maps exist."
+        },
+        {
+          "prompt": "Find all strictly increasing self-maps of$\\{1,2,3,4\\}$.",
+          "solution": "Four ordered distinct outputs chosen from four elements must be1,2,3,4. Thus only the identity exists."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 23, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-30nov-q023.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q024",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 24,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "An infinite binary word is a sequence $a=(a_1a_2a_3\\ldots)$ with $a_n\\in\\{0,1\\}$. Fix $s=(s_1s_2s_3\\ldots)$ with $s_n=1$ exactly for prime n. Let $S=\\{a=(a_1a_2s_3\\ldots):\\exists m\\in\\mathbb N,\\ a_n=s_n\\ \\forall n\\ge m\\}$, retaining the displayed $s_3$ in the source. What is the cardinality?",
+      "options": {
+        "A": "1",
+        "B": "Finite but more than1",
+        "C": "Countably infinite",
+        "D": "Uncountable"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "For a fixed cutoff m, only finitely many prefix digits can vary.",
+        "Take a countable union over cutoffs, and exhibit infinitely many distinct finite changes."
+      ],
+      "solution": "For each m, words agreeing with s from index m onward are determined by at most m-1 binary digits, so there are at most$2^{m-1}$ such words. S is a countable union of finite sets and hence at most countable. Changing exactly one digit at an arbitrarily large index yields infinitely many distinct eventually agreeing words, so S is countably infinite, C. If the source’s displayed s3 is taken to force the third digit, choose changed indices other than three; the same argument and cardinality hold. The particular prime pattern is irrelevant to eventual agreement.",
+      "theory": "Cardinality of sequence classes depends on how many positions are allowed to vary. All infinite binary sequences form an uncountable set, but sequences differing from one fixed sequence at only finitely many positions form a countable set. A cutoff representation writes that class as a union over positive integers of finite sets of prefixes, proving at most countability. To distinguish finite from countably infinite, explicitly generate infinitely many sequences by moving one changed digit farther out. A countable union of finite sets is countable even when the finite sizes grow exponentially. Conversely, a countable collection of finite choices at infinitely many unrestricted positions is not automatically countable; the full infinite product is uncountable. The fixed sequence’s arithmetic description does not affect this counting argument. A single fixed coordinate likewise leaves the conclusion unchanged.",
+      "similar_questions": [
+        {
+          "prompt": "How many binary sequences have only finitely many ones?",
+          "solution": "For every cutoff m, sequences zero after m are specified by a finite prefix. Their countable union is at most countable, and placing a single one at each different index proves infinitude. Thus they are countably infinite."
+        },
+        {
+          "prompt": "How many binary sequences may differ from a fixed sequence only among its first four digits?",
+          "solution": "Each of four digits has two choices and all remaining digits are fixed, giving$2^4=16$ sequences."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 24, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-30nov-q024.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q025",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 25,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be a nonconstant real polynomial of degree k and let $g:\\mathbb R\\to\\mathbb R$ be bounded and continuous. Which is necessarily true?",
+      "options": {
+        "A": "There always exists $x_0$ with$f(x_0)=g(x_0)$.",
+        "B": "There is no $x_0$ with$f(x_0)=g(x_0)$.",
+        "C": "There exists such $x_0$ if k is even.",
+        "D": "There exists such $x_0$ if k is odd."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Compare the end behavior of odd- and even-degree polynomials.",
+        "If k is odd, f-g has opposite signs at the two tails because g is bounded. Apply the intermediate value theorem."
+      ],
+      "solution": "For odd degree, f tends to opposite infinite signs as x tends to the two ends of the real line. Since g is bounded, f-g has those same opposite tail signs and is continuous. The intermediate value theorem gives a zero, proving D. A and C fail for$f(x)=x^2+1$, $g(x)=0$, which never intersect. B fails for$f(x)=x$, $g(x)=0$, which intersect at zero. Thus only the odd-degree guarantee holds generally.",
+      "theory": "A real polynomial’s leading term controls its values for large absolute input. For odd degree the two tails have opposite signs, whereas an even-degree polynomial has the same infinite sign at both ends. A bounded perturbation cannot change these tail behaviors. The intermediate value theorem requires continuity on an interval and opposite or zero endpoint values, and then guarantees a zero inside that interval. It does not require monotonicity or differentiability. Here continuity of g ensures continuity of f-g, while boundedness permits selecting finite endpoints with opposite signs for odd degree. Even-degree behavior alone does not force a crossing of an arbitrary bounded function; a strictly positive polynomial supplies a counterexample. “Necessarily” is a universal claim, so a single counterexample rejects an option even if some examples satisfy it.",
+      "similar_questions": [
+        {
+          "prompt": "Prove$x^3+\\sin x=5$ has a real solution.",
+          "solution": "The continuous function$x^3+\\sin x-5$ tends to negative infinity on the left and positive infinity on the right because sine is bounded. The intermediate value theorem gives a zero."
+        },
+        {
+          "prompt": "Can$x^2+2=\\cos x$ hold for real x?",
+          "solution": "No. The left side is at least two and the right side at most one, so equality is impossible."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 25, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-30nov-q025.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q026",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 26,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "The source asks for “the sum of the finite series” $S=\\frac12-\\frac1{3\\cdot1!}+\\frac1{4\\cdot2!}-\\frac1{5\\cdot3!}+\\cdots$. What is it?",
+      "options": {
+        "A": "$2-1/e$",
+        "B": "$1-2/e$",
+        "C": "$2/e-1$",
+        "D": "$1/e-2$"
+      },
+      "correct_options": [],
+      "hints": [
+        "The wording says finite but supplies no last term; an ellipsis alone does not specify a finite truncation.",
+        "For an explicitly infinite interpretation, integrate the power series$x e^{-x}$ from zero to one."
+      ],
+      "solution": "As printed, a finite series has no stated number of terms, so its sum is not determined. For example the first term sums to1/2, while the first two sum to1/6; neither yields a single fixed listed value. Conditional infinite interpretation: $S_\\infty=\\sum_{j=0}^\\infty(-1)^j/((j+2)j!)=\\int_0^1x\\sum_{j=0}^\\infty(-x)^j/j!\\,dx=\\int_0^1xe^{-x}dx=1-2/e$. Uniform absolute convergence on[0,1] justifies integration termwise. Thus B is the intended answer if “finite” is replaced by “infinite,” but no such correction is imposed on the exact source; source_issue is used.",
+      "theory": "A finite sum requires a definite endpoint or number of terms. An infinite series is the limit of its finite partial sums when that limit exists, and an ellipsis without an endpoint usually denotes this different object. Factorial denominators suggest the exponential power series, which converges uniformly and absolutely on bounded intervals. A factor one over j plus two can be represented as an integral of x to the j plus one, allowing the series to be summed by termwise integration. The interchange requires a convergence justification; uniform convergence on a compact interval suffices. The elementary antiderivative of x times e to the minus x follows by integration by parts. A likely wording typo can explain a listed value, but the analysis should identify the exact conditional interpretation rather than silently changing a finite problem into an infinite one.",
+      "similar_questions": [
+        {
+          "prompt": "Sum$\\sum_{j=0}^\\infty(-1)^j/((j+1)j!)$.",
+          "solution": "Integrating$e^{-x}=\\sum(-x)^j/j!$ over[0,1] gives the sum$1-e^{-1}$."
+        },
+        {
+          "prompt": "Find the first three partial-sum terms of the source expression.",
+          "solution": "The sum is$1/2-1/3+1/8=(12-8+3)/24=7/24$. It differs from the infinite sum$1-2/e$, demonstrating dependence on a truncation."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Source explicitly says finite series but gives no endpoint. Conditional infinite-series evaluation is B; no finite/infinite wording correction is silently made.",
+      "answer_source": "Independent mathematical derivation; question 26, PDF page 8. No candidate response used as an answer key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-30nov-q026.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q027",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 27,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let $S=\\{u_1,\\ldots,u_k\\}$ be nonzero vectors in$\\mathbb R^n$. I: If S is dependent, then$u_k$ is a linear combination of$u_1,\\ldots,u_{k-1}$. II: If S is independent, then$k<n$. Which is true?",
+      "options": {
+        "A": "I false, II true",
+        "B": "I true, II false",
+        "C": "Both false",
+        "D": "Both true"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Dependence says some vector can be eliminated, not necessarily the last one.",
+        "An independent set can have exactly n vectors: a basis."
+      ],
+      "solution": "I fails with$u_1=(1,0),u_2=(2,0),u_3=(0,1)$ in$\\mathbb R^2$. The first two are dependent, so the full set is dependent, but u3 is not in their span. II fails for the n standard basis vectors, an independent set of size n. The correct upper bound is$k\\le n$, not strict inequality. Both statements are false, C; the other truth-pair options are rejected by these counterexamples.",
+      "theory": "Linear dependence means a nontrivial scalar relation among the vectors. Solving that relation for one vector requires its coefficient to be nonzero, and dependence does not guarantee the coefficient of a specified final vector is nonzero. The equivalence “dependent after adding a vector means the added vector is in the previous span” needs the previous vectors to be independent; otherwise dependence may already have existed. In an n-dimensional vector space, an independent set has at most n elements and a basis reaches that bound. Nonzero individual vectors need not be collectively independent, as scalar multiples show. A counterexample should meet all given hypotheses, including nonzero vectors, rather than use a zero vector excluded by the statement. Strict and weak dimensional inequalities differ exactly at the basis case.",
+      "similar_questions": [
+        {
+          "prompt": "If independent$u_1,u_2$ become dependent after adding u3, prove u3 lies in their span.",
+          "solution": "A dependence$c_1u_1+c_2u_2+c_3u_3=0$ must have$c_3\\ne0$, else independence forces all coefficients zero. Thus$u_3=-(c_1/c_3)u_1-(c_2/c_3)u_2$."
+        },
+        {
+          "prompt": "Can four vectors in$\\mathbb R^3$ be independent?",
+          "solution": "No. The dimension is three, so every independent set has at most three vectors. Any four have a nontrivial linear relation."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 27, PDF page 8. No candidate response used as an answer key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-30nov-q027.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q028",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 28,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let M be a real5-by5 matrix of rank3. The system Mx=b is consistent. Let R be the reduced row-echelon form of the augmented matrix[M b], with R[i,:] its ith row. Which is necessary?",
+      "options": {
+        "A": "$R[3,:]=[0,1,0,*,*,*]$.",
+        "B": "$R[5,:]=[0,0,1,0,*,*]$.",
+        "C": "$R[4,:]=[0,0,0,1,*,*]$.",
+        "D": "$R[4,:]=[0,0,0,0,0,0]$."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Consistency means augmented rank equals coefficient rank.",
+        "An echelon matrix of rank three has exactly three nonzero rows, all above its zero rows."
+      ],
+      "solution": "Consistency gives$\\operatorname{rank}[M\\ b]=\\operatorname{rank}M=3$. Row operations preserve rank, and reduced echelon form places its three nonzero rows first. Hence rows four and five are zero, proving D and refuting the necessarily-nonzero rows in B,C. A is not necessary; indeed a third-row leading one in column two cannot follow two earlier pivots. The pivot columns themselves can vary, but the final two zero rows cannot.",
+      "theory": "Row reduction preserves the rank of a matrix and the solution set of a linear system when applied to its augmented matrix. Consistency is equivalent to equality of coefficient and augmented ranks, or to the absence of a row with all-zero coefficients and a nonzero augmented entry. In echelon form each nonzero row has a pivot and the zero rows appear at the bottom, so rank counts exactly the nonzero rows. Reduced echelon form additionally normalizes pivots and clears their columns above and below. A rank-three consistent system with five rows therefore has two bottom zero rows even though the pivot positions among the five coefficient columns are not fixed. The nullity is two, giving a two-dimensional affine family of solutions, but this does not identify which variables are free without knowing the pivot columns.",
+      "similar_questions": [
+        {
+          "prompt": "A4-by6 coefficient matrix has rank two and the system is consistent. How many zero rows appear in augmented RREF?",
+          "solution": "The augmented rank is two. Its RREF has two nonzero rows followed by two zero rows."
+        },
+        {
+          "prompt": "If coefficient rank is two but augmented rank is three, is the system consistent?",
+          "solution": "No. The extra augmented pivot creates a row with zero coefficients and nonzero right-hand side, contradicting any possible solution."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 28, PDF page 8. No candidate response used as an answer key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-30nov-q028.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q029",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 29,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be an n-by-n matrix of rank one. Set$\\alpha=\\det(I+A)$ and$\\beta=\\operatorname{trace}A$. Which is true?",
+      "options": {
+        "A": "$\\beta-\\alpha=1$",
+        "B": "$\\alpha-\\beta=1$",
+        "C": "$\\alpha<\\beta+1$",
+        "D": "$\\alpha>\\beta+1$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Write a rank-one matrix as$uv^T$.",
+        "Use$\\det(I+uv^T)=1+v^Tu$ and$\\operatorname{trace}(uv^T)=v^Tu$."
+      ],
+      "solution": "Rank one gives$A=uv^T$ for nonzero vectors. The rank-one determinant lemma yields$\\det(I+A)=1+v^Tu$. Its trace is$\\sum_i u_iv_i=v^Tu$, so$\\alpha=1+\\beta$ and B holds. A has the opposite sign, while C,D assert strict inequalities where there is equality. This remains true when trace is zero and A is a nonzero nilpotent rank-one matrix.",
+      "theory": "A rank-one matrix is an outer product uv transpose; all of its columns are multiples of one vector. Its trace is the inner product v transpose u, and its square equals that scalar times itself. The determinant lemma states that an invertible matrix B obeys det(B+uv transpose)=det(B)(1+v transpose B inverse u). Taking B to be the identity gives the formula used here without assuming A is invertible or diagonalizable. Equivalently the characteristic polynomial of a rank-one matrix has all but possibly one eigenvalue zero, but a trace-zero example can be nilpotent and still nonzero. Determinant of I plus A is therefore one plus its trace. Do not confuse this special rank-one formula with a general identity for arbitrary matrices, where higher-order principal minors also contribute.",
+      "similar_questions": [
+        {
+          "prompt": "For$u=(1,2)^T,v=(3,4)^T$, calculate$\\det(I+uv^T)$.",
+          "solution": "$v^Tu=3+8=11$, so the determinant is12. Directly$I+uv^T=\\begin{pmatrix}4&4\\\\6&9\\end{pmatrix}$ has determinant36-24=12."
+        },
+        {
+          "prompt": "For$A=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$, verify the formula.",
+          "solution": "A has rank one and trace zero. I+A is upper triangular with both diagonal entries one, so its determinant is one, equal to one plus trace."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 29, PDF page 8. No candidate response used as an answer key.",
+      "page": 8,
+      "image": "assets/questions/2020-june-30nov-q029.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q030",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 30,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let a,b,c be distinct integers and$A=\\begin{pmatrix}a^2&b^2&c^2\\\\a^5&b^5&c^5\\\\a^{11}&b^{11}&c^{11}\\end{pmatrix}$. What is the set of all possible ranks?",
+      "options": {
+        "A": "$\\{3\\}$",
+        "B": "$\\{2,3\\}$",
+        "C": "$\\{1,2,3\\}$",
+        "D": "$\\{0,1,2,3\\}$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "At least two of the three distinct integers are nonzero.",
+        "The first two rows restricted to two distinct nonzero columns have determinant$a^2b^2(b^3-a^3)\\ne0$. Exhibit rank two and rank three examples."
+      ],
+      "solution": "At least two integers, say a,b, are distinct and nonzero. Their first-two-row minor is$a^2b^5-b^2a^5=a^2b^2(b^3-a^3)\\ne0$, since cubing is injective on integers. Thus rank is at least two and at most three. Taking(a,b,c)=(0,1,2) gives a zero column and the other two independent, hence rank two. Taking(1,2,3), factor$a^2,b^2,c^2$ from columns; the remaining determinant of rows1,t,t^3 with t=a^3,b^3,c^3 equals the Vandermonde product times$a^3+b^3+c^3$, which is nonzero. Thus rank three occurs. The set is exactly{2,3}, B. No claim about every nonzero integer triple is needed to establish the possible ranks.",
+      "theory": "The rank of a matrix is the largest size of a nonzero minor and the dimension of its column space. To determine all possible ranks in a parameterized matrix, first prove a universal lower and upper bound, then provide examples attaining each claimed value. Distinct real numbers have distinct cubes, so a two-by-two minor from powers two and five gives a simple rank lower bound whenever both bases are nonzero. A zero base gives a zero column and can reduce rank. Generalized Vandermonde determinants arise after factoring powers from columns; rows one,t,t cubed produce the usual Vandermonde determinant times the sum of the three parameters. This factorization verifies a convenient full-rank example. A set-of-possible-ranks problem does not require classifying every exceptional parameter choice if bounds and explicit attaining examples already suffice.",
+      "similar_questions": [
+        {
+          "prompt": "Find the rank of the same power matrix for(a,b,c)=(-1,0,1).",
+          "solution": "The middle column is zero. The outer columns are(1,-1,-1)^T and(1,1,1)^T, which are not proportional, so rank is two."
+        },
+        {
+          "prompt": "For distinct nonzero a,b, prove the columns$(a^2,a^5)^T$ and$(b^2,b^5)^T$ are independent.",
+          "solution": "Their determinant is$a^2b^2(b^3-a^3)$, nonzero because a,b are distinct nonzero real numbers. Thus the two columns are independent."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 30, PDF page 9. No candidate response used as an answer key.",
+      "page": 9,
+      "image": "assets/questions/2020-june-30nov-q030.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

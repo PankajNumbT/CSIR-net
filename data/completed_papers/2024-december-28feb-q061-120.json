@@ -1,0 +1,2603 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2024-december-28feb-q061",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 61,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Which statements are true?",
+      "options": {
+        "A": "For x<y real, some r∈ℚ has x<2²⁰²⁴r/e<y",
+        "B": "If positive a_n satisfies limsup a_n/log n=L>0 finite, then limsup a_n<∞",
+        "C": "The set of all finite subsets of ℚ is countably infinite",
+        "D": "The set of continuous functions ℝ→{0,1} is infinite"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Scale the interval in A before applying density of ℚ.",
+        "For B use a_n=log n; for D use connectedness of ℝ."
+      ],
+      "solution": "A holds because density of ℚ supplies r between ex/2²⁰²⁴ and ey/2²⁰²⁴. B fails for a_n=log n: the normalized limsup is 1 but a_n→∞. For C, finite subsets of cardinality k are images of the countable set ℚᵏ; the union over k≥0 is countable and contains infinitely many singleton subsets. D fails because a continuous image of connected ℝ is connected, so the only functions into {0,1} are the two constants. Exactly A,C are true.",
+      "theory": "A set is countable if it is finite or admits an enumeration by natural numbers. Finite products and countable unions of countable sets are countable. Therefore the family of finite subsets of a countable set is countable: enumerate subsets by their finite cardinality and use tuples as a countable covering family. A subset of ℝ is dense if every nonempty open interval contains one of its points; nonzero scalar multiples of the rational numbers are dense. Continuous images of connected spaces are connected, so a continuous map from ℝ into the discrete set {0,1} is constant. Limsup describes tail behavior and need not bound an original sequence when a growing normalization is used. Common pitfalls include confusing countability with density and assuming a normalized bounded sequence must itself be bounded.",
+      "similar_questions": [
+        {
+          "prompt": "Is the family of finite subsets of ℤ countable?",
+          "solution": "Yes. For each k it is covered by ℤᵏ, which is countable. A countable union of these families is countable; infinitely many singleton subsets make it countably infinite."
+        },
+        {
+          "prompt": "How many continuous maps from [0,1] to {−1,1} exist?",
+          "solution": "[0,1] is connected and the target is discrete. Its continuous image must be a singleton, so only the two constant maps exist."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 61, PDF page 48. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704141, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 48,
+      "image": "assets/questions/2024-december-28feb-q061.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q062",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 62,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "a_n=(−1)ⁿ(1+e⁻ⁿ), b_n=max{a₁,…,a_n}, c_n=min{a₁,…,a_n}. Which are true?",
+      "options": {
+        "A": "a_n does not converge",
+        "B": "limsup a_n=lim b_n",
+        "C": "liminf a_n=lim c_n",
+        "D": "lim b_n=lim c_n"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Separate the even and odd subsequences.",
+        "Running extrema retain early exceptional terms; tail extrema do not."
+      ],
+      "solution": "Even terms tend to 1 and odd terms to −1, so a_n diverges and A is true. The largest positive term is a₂=1+e⁻², and b_n equals this for n≥2. The most negative term is a₁=−1−e⁻¹, and c_n equals this for all n. Yet limsup a_n=1 and liminf a_n=−1. Thus B,C fail, and the limits of b_n,c_n are unequal, rejecting D.",
+      "theory": "A sequence is bounded above if one real number exceeds all its terms, and unbounded above if for every real x some term exceeds x. These quantifiers are central: an unbounded-above sequence need not be unbounded below. Exponential growth eⁿ dominates its reciprocal e⁻ⁿ as n tends to infinity. For positive sequences, ratios aₙ₊₁/aₙ can remain bounded even when aₙ diverges to infinity. To analyze a ratio containing exponentials, divide numerator and denominator by the dominant exponential. A limiting value alone does not establish a bound for every n; an explicit algebraic inequality can do so. Common pitfalls include confusing the growth of a sequence with the growth of its consecutive ratio and forgetting that a positive sequence cannot lie below every real number.",
+      "similar_questions": [
+        {
+          "prompt": "For a_n=1/n, compare running maximum and limsup.",
+          "solution": "The running maximum is always a₁=1, while limsup a_n=0. The difference is the retention of the first term in the running maximum."
+        },
+        {
+          "prompt": "For a_n=(−1)ⁿ, find running and tail extrema.",
+          "solution": "Even values are 1 and odd values −1. For n≥2 the running maximum is 1 and minimum −1; limsup=1, liminf=−1. Equality occurs here because the extreme values recur indefinitely."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 62, PDF page 48. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704142, official option(s) A; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 48,
+      "image": "assets/questions/2024-december-28feb-q062.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q063",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 63,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f(x)=x²sin(1/x) for x≠0, f(0)=0. Which are true?",
+      "options": {
+        "A": "lim_{x→0}f(x) exists",
+        "B": "f is continuous at 0",
+        "C": "f is differentiable at 0",
+        "D": "lim_{x→0}f′(x) does not exist"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Bound the oscillatory expression by x².",
+        "Use the derivative definition at zero and then differentiate away from zero."
+      ],
+      "solution": "|f(x)|≤x²→0, proving existence of the limit and continuity. The zero difference quotient is f(h)/h=h sin(1/h)→0, so f′(0)=0. For x≠0, f′(x)=2x sin(1/x)−cos(1/x). At x_k=1/(2πk), this is −1; at y_k=1/((2k+1)π), it is +1. Both tend to zero, so f′ has no limit there. All A,B,C,D are true.",
+      "theory": "Differentiability at a point is defined by a limit of difference quotients in one dimension, and by a linear approximation with error o(‖h‖) in several dimensions. Differentiability implies continuity. Existence of all partial derivatives or even every directional derivative does not imply total differentiability. Oscillatory factors such as sin(1/x) can be controlled by |sin|≤1 to establish continuity or a first derivative at zero, but their differentiated expressions can retain nonvanishing oscillation. To disprove a multivariable limit, compare two paths; curved paths can reveal behavior invisible on all straight lines. If a total derivative exists, its coefficients must agree with the partial derivatives. Common pitfalls include differentiating a formula only valid away from the point and assigning its limiting derivative without evaluating the actual definition.",
+      "similar_questions": [
+        {
+          "prompt": "Analyze differentiability at zero of x³sin(1/x), extended by zero.",
+          "solution": "The quotient x²sin(1/x) tends to zero, so the derivative at zero is 0. Away from zero its derivative is 3x²sin(1/x)−x cos(1/x), which tends to 0; the derivative is continuous at zero."
+        },
+        {
+          "prompt": "Analyze x sin(1/x), extended by zero.",
+          "solution": "Its absolute value is at most |x|, so it is continuous at zero. Its difference quotient is sin(1/x), which has no limit, so it is not differentiable there."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 63, PDF page 49. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704143, official option(s) A,B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 49,
+      "image": "assets/questions/2024-december-28feb-q063.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q064",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 64,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f_n(x)=nx(1−x)ⁿ on [0,1]. Which are true?",
+      "options": {
+        "A": "No pointwise convergence on [0,1]",
+        "B": "Pointwise convergence to a continuous function",
+        "C": "Pointwise convergence to a discontinuous function",
+        "D": "No uniform convergence on [0,1]"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "For fixed interior x, exponential decay beats n.",
+        "Evaluate the maximum at x=1/(n+1)."
+      ],
+      "solution": "At x=0,1 every term is zero. For 0<x<1, n(1−x)ⁿ→0, so the pointwise limit is identically zero and continuous, giving B and rejecting A,C. Differentiating yields f_n′=n(1−x)^(n−1)[1−(n+1)x], so the maximum is f_n(1/(n+1))=(n/(n+1))^(n+1)→e⁻¹, not zero. The supremum error does not vanish, proving D.",
+      "theory": "Pointwise convergence of functions means that for each fixed x the numerical sequence converges; uniform convergence requires one index controlling the error simultaneously at every point of the domain. For a series, absolute convergence means convergence of the series of absolute values at each point. Uniform convergence of continuous functions preserves continuity, which provides an efficient obstruction when the proposed limit is discontinuous. A geometric series ∑rⁿ converges to 1/(1−r) exactly when |r|<1. Endpoints where the multiplier vanishes must be examined separately rather than cancelled. The uniform Cauchy criterion tests tails in the supremum norm. Common pitfalls include exchanging a pointwise limit with another limit, treating pointwise absolute convergence as uniform convergence, and using the Weierstrass M-test as a necessary rather than sufficient condition.",
+      "similar_questions": [
+        {
+          "prompt": "Does n x²(1−x)ⁿ converge uniformly to zero?",
+          "solution": "The maximum occurs at x=2/(n+2). Its value is n·4/(n+2)²·(n/(n+2))ⁿ≤4n/(n+2)²→0, so convergence is uniform."
+        },
+        {
+          "prompt": "Does (1−x)ⁿ converge uniformly on [0,1]?",
+          "solution": "Its pointwise limit is 1 at zero and 0 elsewhere, which is discontinuous. Continuous summands cannot converge uniformly to that limit."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 64, PDF page 50. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704144, official option(s) B,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 50,
+      "image": "assets/questions/2024-december-28feb-q064.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q065",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 65,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f:ℝ→ℝ is continuous and zero for x≤0 and x≥1. F(x)=∑_{n∈ℤ}f(x+n). Which are true?",
+      "options": {
+        "A": "F is bounded",
+        "B": "F is continuous on ℝ",
+        "C": "F is uniformly continuous on ℝ",
+        "D": "F is not uniformly continuous on ℝ"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "At each noninteger point, at most one summand is nonzero.",
+        "The sum is continuous and periodic with period one."
+      ],
+      "solution": "For x∈(k,k+1), F(x)=f(x−k). At integers all terms vanish because f(0)=f(1)=0. Thus successive copies join continuously. Reindexing gives F(x+1)=F(x). Since f is bounded on [0,1], F is bounded. Continuity and periodicity imply uniform continuity by applying Heine–Cantor on, for example, [−1,2] and reducing arguments by a common integer. Therefore A,B,C hold and D fails.",
+      "theory": "A continuous function with compact support is bounded and uniformly continuous. Periodization sums its integer translates; if support lies in a compact interval then only finitely many translates contribute in any bounded neighborhood. Such a locally finite sum is continuous. Reindexing the translates shows period one. A continuous periodic function is bounded and uniformly continuous, since one can reduce the relevant points to a compact interval containing a fundamental period and neighboring periods, then apply the Heine–Cantor theorem. For support inside [0,1], at most one translate is nonzero at any particular noninteger point, and endpoint vanishing joins successive copies continuously. Common pitfalls include applying convergence tests to a sum that is locally finite and assuming continuity alone on the unbounded real line implies uniform continuity.",
+      "similar_questions": [
+        {
+          "prompt": "Periodize f(x)=x(1−x) on [0,1], zero outside. Find its maximum.",
+          "solution": "The periodized function is {x}(1−{x}) on each unit interval, with zero at integers. Its maximum is 1/4 at half-integers; it is continuous and uniformly continuous."
+        },
+        {
+          "prompt": "Why would periodizing f≡1 on (0,1), with f=0 at endpoints, fail continuity?",
+          "solution": "The base function itself jumps at its endpoints. The periodized result is 1 at nonintegers and 0 at integers, so jumps persist; continuity of the original f is essential."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 65, PDF page 51. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704145, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 51,
+      "image": "assets/questions/2024-december-28feb-q065.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q066",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 66,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Easy",
+      "prompt": "g is continuous on ℝ and f(x)=∫₀ˣ(x−t)g(t)dt. Which are true?",
+      "options": {
+        "A": "f(0)=0",
+        "B": "f′(0) exists and is 0",
+        "C": "f″(0) exists and equals g(0)",
+        "D": "f″(0) exists but differs from g(0)"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Differentiate with the variable-endpoint Leibniz rule.",
+        "The endpoint term vanishes because x−t=0 at t=x."
+      ],
+      "solution": "f(0)=0. Leibniz gives f′(x)=∫₀ˣg(t)dt+(x−x)g(x)=∫₀ˣg(t)dt. Thus f′(0)=0. By the fundamental theorem of calculus, f″(x)=g(x), in particular f″(0)=g(0). A,B,C are true and D is false.",
+      "theory": "The fundamental theorem of calculus says that if g is continuous, then G(x)=∫₀ˣg(t)dt is differentiable and G′(x)=g(x), including for negative x through oriented integration. An integral with a variable endpoint and a parameter-dependent integrand is differentiated by the Leibniz rule: endpoint contribution plus the integral of the parameter derivative. This often creates higher smoothness than the original integrand has. Monotone real functions on a compact interval are bounded and Riemann integrable; their discontinuities are jump discontinuities and form a countable set. Monotone functions are Borel measurable because preimages of rays are intervals, and Borel measurability implies Lebesgue measurability. Common pitfalls include demanding a derivative of g when only its continuity is needed and overlooking the difference between countably many discontinuities and a discontinuity at every point.",
+      "similar_questions": [
+        {
+          "prompt": "If g(t)=1, evaluate f and its first two derivatives.",
+          "solution": "f=∫₀ˣ(x−t)dt=x²/2, f′=x and f″=1=g. At zero f=f′=0."
+        },
+        {
+          "prompt": "If g(t)=t, evaluate f.",
+          "solution": "f=x∫₀ˣt dt−∫₀ˣt²dt=x³/2−x³/3=x³/6. Hence f′=x²/2 and f″=x=g(x)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 66, PDF page 52. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704146, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 52,
+      "image": "assets/questions/2024-december-28feb-q066.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q067",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 67,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f:[0,1]→ℝ is monotonic. Which are true?",
+      "options": {
+        "A": "f is Riemann integrable",
+        "B": "Its discontinuity set contains no nonempty open set",
+        "C": "f is Lebesgue measurable",
+        "D": "f is Borel measurable"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Monotonicity bounds f and controls its jump discontinuities.",
+        "Preimages of rays are intervals, hence Borel sets."
+      ],
+      "solution": "A monotone real function on [0,1] is bounded. For uniform partitions the upper-minus-lower Darboux sum is at most |f(1)−f(0)|/n, proving Riemann integrability. Its discontinuities are at most countable: associate to each nonzero jump a rational in its disjoint jump interval. A countable set cannot contain any nonempty interval, proving B. For increasing f, {x:f(x)>a} is an interval of one of the endpoint types, so it is Borel; the decreasing case is analogous. Thus f is Borel and therefore Lebesgue measurable. All four are true.",
+      "theory": "The fundamental theorem of calculus says that if g is continuous, then G(x)=∫₀ˣg(t)dt is differentiable and G′(x)=g(x), including for negative x through oriented integration. An integral with a variable endpoint and a parameter-dependent integrand is differentiated by the Leibniz rule: endpoint contribution plus the integral of the parameter derivative. This often creates higher smoothness than the original integrand has. Monotone real functions on a compact interval are bounded and Riemann integrable; their discontinuities are jump discontinuities and form a countable set. Monotone functions are Borel measurable because preimages of rays are intervals, and Borel measurability implies Lebesgue measurability. Common pitfalls include demanding a derivative of g when only its continuity is needed and overlooking the difference between countably many discontinuities and a discontinuity at every point.",
+      "similar_questions": [
+        {
+          "prompt": "For f(x)=1_{x≥1/2}, decide integrability and measurability.",
+          "solution": "It is increasing, has only one discontinuity, and is Riemann integrable with integral 1/2. The threshold preimages are intervals, hence it is Borel and Lebesgue measurable."
+        },
+        {
+          "prompt": "Give a monotone function with infinitely many discontinuities.",
+          "solution": "Let f(x)=∑_{k≥1}2⁻ᵏ1_{x≥r_k}, where distinct r_k lie in (0,1). The uniformly convergent sum is monotone and jumps at each r_k; its discontinuity set is still countable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 67, PDF page 52. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704147, official option(s) A,B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 52,
+      "image": "assets/questions/2024-december-28feb-q067.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q068",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 68,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "f(x,y)=sgn(x)√(x²+y²) for x≠0 and f(0,y)=0. Which are true?",
+      "options": {
+        "A": "Continuous at (0,0)",
+        "B": "Both partial derivatives exist at (0,0)",
+        "C": "Differentiable at (0,0)",
+        "D": "Not differentiable at (0,0)"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Bound |f| by the distance to the origin.",
+        "The partials predict linear approximation x; test the diagonal path."
+      ],
+      "solution": "|f(x,y)|≤√(x²+y²), so continuity holds. On the x-axis f(x,0)=x, giving f_x(0,0)=1; on the y-axis f(0,y)=0, giving f_y(0,0)=0. If differentiable, its derivative would be L(x,y)=x. Along (t,t), t>0, [f(t,t)−t]/√(2t²)=(√2−1)/√2, a nonzero constant. The required normalized error does not tend to zero. Thus A,B,D hold and C fails.",
+      "theory": "Differentiability at a point is defined by a limit of difference quotients in one dimension, and by a linear approximation with error o(‖h‖) in several dimensions. Differentiability implies continuity. Existence of all partial derivatives or even every directional derivative does not imply total differentiability. Oscillatory factors such as sin(1/x) can be controlled by |sin|≤1 to establish continuity or a first derivative at zero, but their differentiated expressions can retain nonvanishing oscillation. To disprove a multivariable limit, compare two paths; curved paths can reveal behavior invisible on all straight lines. If a total derivative exists, its coefficients must agree with the partial derivatives. Common pitfalls include differentiating a formula only valid away from the point and assigning its limiting derivative without evaluating the actual definition.",
+      "similar_questions": [
+        {
+          "prompt": "Is f(x,y)=√(x²+y²) differentiable at the origin?",
+          "solution": "No. Its restriction to the x-axis is |x|, which is not differentiable at zero; even that partial derivative fails."
+        },
+        {
+          "prompt": "For f(x,y)=x²+y², verify differentiability at the origin.",
+          "solution": "Both partial derivatives are zero, so the candidate linear map is zero. The normalized error is (x²+y²)/√(x²+y²)=√(x²+y²)→0, proving differentiability."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 68, PDF page 53. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704148, official option(s) A,B,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 53,
+      "image": "assets/questions/2024-december-28feb-q068.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q069",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 69,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "f(x,y)=x²y/(x⁴+y²)+e^(xy) for (x,y)≠(0,0), and f(0,0)=1. Which are true?",
+      "options": {
+        "A": "Differentiable off the origin",
+        "B": "All directional derivatives exist at the origin",
+        "C": "Differentiable everywhere",
+        "D": "Not continuous at the origin"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "For directional derivatives substitute (x,y)=(ta,tb).",
+        "For continuity inspect the curved path y=x²."
+      ],
+      "solution": "Off the origin the denominator is positive, so the expression is smooth, proving A. Along direction (a,b), if b≠0 the rational term equals t a²b/(t²a⁴+b²), whose quotient by t tends to a²/b; the exponential difference quotient tends to zero. If b=0, f(ta,0)=1 and the directional derivative is zero. Thus all directional derivatives exist. But along y=x²≠0, the rational term equals 1/2 and e^(x³)→1, so f→3/2 instead of f(0,0)=1. Hence D is true and C false. The directional derivatives need not assemble into a linear map.",
+      "theory": "Differentiability at a point is defined by a limit of difference quotients in one dimension, and by a linear approximation with error o(‖h‖) in several dimensions. Differentiability implies continuity. Existence of all partial derivatives or even every directional derivative does not imply total differentiability. Oscillatory factors such as sin(1/x) can be controlled by |sin|≤1 to establish continuity or a first derivative at zero, but their differentiated expressions can retain nonvanishing oscillation. To disprove a multivariable limit, compare two paths; curved paths can reveal behavior invisible on all straight lines. If a total derivative exists, its coefficients must agree with the partial derivatives. Common pitfalls include differentiating a formula only valid away from the point and assigning its limiting derivative without evaluating the actual definition.",
+      "similar_questions": [
+        {
+          "prompt": "For h=x²y/(x⁴+y²), extended by zero, find the directional derivative along (1,1).",
+          "solution": "h(t,t)=t/(t²+1), so h(t,t)/t→1. Along (1,0) the derivative is zero, illustrating dependence on the direction."
+        },
+        {
+          "prompt": "Show h is not continuous by comparing two paths.",
+          "solution": "Along y=0, h=0. Along y=x², h=1/2 for x≠0. Since these limits differ, h has no limit at the origin."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 69, PDF page 54. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704149, official option(s) A,B,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 54,
+      "image": "assets/questions/2024-december-28feb-q069.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q070",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 70,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Functional Analysis",
+      "difficulty": "Moderate",
+      "prompt": "X={u∈C[0,1]:u(0)=0}, ‖u‖=sup|u|. T(u)=∫₀¹u(t)dt and S={|T(u)|:u∈X,‖u‖≤1}. Which are true?",
+      "options": {
+        "A": "S is unbounded",
+        "B": "S is bounded with supremum 1",
+        "C": "Some u∈X has ‖u‖=1 and T(u)=1",
+        "D": "S is closed"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Bound the integral by the sup norm.",
+        "Continuity at zero prevents equality, but narrow boundary ramps approach it."
+      ],
+      "solution": "|T(u)|≤∫|u|≤1, so S is bounded. Since u(0)=0 and u is continuous, for some δ>0, |u|≤1/2 on [0,δ], giving |T(u)|≤1−δ/2<1; the bound is never attained. Let u_n(t)=min(nt,1). Then u_n∈X, ‖u_n‖=1 and T(u_n)=1−1/(2n)→1. Thus sup S=1 but 1∉S; S is not closed. In fact scaling these functions yields every value in [0,1). Only B is true.",
+      "theory": "A normed-space linear functional T is bounded when |T(u)|≤C‖u‖ for a finite constant C; its operator norm is the least such C, equivalently the supremum over the unit ball. A supremum need not be attained. For an integration functional on continuous functions, |∫u|≤∫|u|≤‖u‖ gives an upper bound. Extra constraints such as u(0)=0 can prevent equality, because continuity forces a nontrivial interval where |u| is strictly below one. Nevertheless functions rising rapidly from zero to one can approach the upper bound arbitrarily closely. A bounded image of a closed unit ball need not be closed in infinite dimensions. Common pitfalls include equating norm one with existence of a maximizing vector and using finite-dimensional compactness for an infinite-dimensional unit ball.",
+      "similar_questions": [
+        {
+          "prompt": "On all of C[0,1], does the integration functional attain norm one?",
+          "solution": "Yes. The constant function u≡1 has norm one and integral one. Removing the constraint u(0)=0 permits a maximizer."
+        },
+        {
+          "prompt": "Compute the integral of u_n(t)=min(nt,1).",
+          "solution": "Split at 1/n: ∫₀^(1/n)nt dt+∫_(1/n)¹1dt=1/(2n)+1−1/n=1−1/(2n). Its values approach one strictly from below."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 70, PDF page 55. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704150, official option(s) B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 55,
+      "image": "assets/questions/2024-december-28feb-q070.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q071",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 71,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "V consists of real polynomials of degree ≤3. D is differentiation and M(f)=xD(f). Which are true?",
+      "options": {
+        "A": "DM≠MD",
+        "B": "D+M is invertible",
+        "C": "DM is invertible",
+        "D": "rank(DM)=rank(MD)"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Apply each operator to xᵏ.",
+        "Constants are killed, while DM and MD differ on x."
+      ],
+      "solution": "For k=0,1,2,3, M(xᵏ)=kxᵏ. Thus DM(xᵏ)=k²x^(k−1), while MD(xᵏ)=k(k−1)x^(k−1), proving DM−MD=D≠0. Constants are killed by D+M and DM, so neither is invertible. DM has image span{1,x,x²}, rank 3; MD has image span{x,x²}, rank 2. Hence only A holds.",
+      "theory": "For a linear operator T, a polynomial p(T) is defined by substituting the operator into the polynomial and using composition for powers. The identity operator I commutes with every operator, so ordinary polynomial identities remain valid for T and I. On polynomials of degree at most m, differentiation D is nilpotent: D^(m+1)=0. Thus T=I+D can simplify high powers or polynomial combinations without expanding thousands of compositions. For a matrix satisfying A³=I, the roots of its minimal polynomial are among cube roots of unity; because those roots are distinct over the complex numbers, the matrix is diagonalizable there. Nevertheless rank conclusions can also be proved directly by factorizations. Common pitfalls include treating an operator power as multiplication of function values and overlooking a low-degree annihilating polynomial.",
+      "similar_questions": [
+        {
+          "prompt": "Compute the commutator [D,M] on arbitrary differentiable f.",
+          "solution": "DMf=D(xf′)=f′+xf″ and MDf=xD(f′)=xf″. Their difference is f′, so [D,M]=D."
+        },
+        {
+          "prompt": "On degree-at-most-two polynomials, compute ranks of DM and MD.",
+          "solution": "DM sends x to 1 and x² to 4x, so its image span{1,x} has rank 2. MD kills x and sends x² to 2x, so its rank is 1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 71, PDF page 56. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704151, official option(s) A; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 56,
+      "image": "assets/questions/2024-december-28feb-q071.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q072",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 72,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "V is the ℚ-space of polynomials of degree ≤3. A={f:V→ℚ | f linear}, B={f∈A:f(1)=0}. Which are true?",
+      "options": {
+        "A": "For every f∈B, dim ker f=3",
+        "B": "dim B=3",
+        "C": "dim A=4",
+        "D": "For every f∈A, im f has dimension 1"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "A linear functional is described by its four basis values.",
+        "The zero functional must be included in universal claims."
+      ],
+      "solution": "{1,x,x²,x³} is a basis, so dim A=4. B fixes the first basis value to zero and leaves three free values, hence dim B=3. A is false because the zero functional belongs to B and has a four-dimensional kernel. D is false for the same zero functional, whose image has dimension zero. Nonzero functionals do have rank one and kernel dimension three, but the options do not restrict to nonzero f. Thus B,C hold.",
+      "theory": "A vector space basis is a linearly independent spanning family; its size is the dimension. A linear transformation is determined by its values on a basis. For a finite-dimensional space U, the dual U* of real-valued linear functionals has the same dimension as U, even if U consists of functions in an infinite-dimensional ambient space. Rank–nullity states dim U=rank T+dim ker T. Matrix rank is the dimension of its column space and equals the row rank. The trace is the sum of diagonal entries and satisfies tr(AB)=tr(BA). Orthogonal complements are computed using homogeneous linear equations. Common pitfalls include substituting the dimension of the ambient function space for that of a finite span, confusing a matrix's determinant with rank, and forgetting that a single nontrivial linear constraint reduces dimension by exactly one.",
+      "similar_questions": [
+        {
+          "prompt": "For a nonzero linear functional on ℚ⁵, find kernel dimension.",
+          "solution": "Its image is a nonzero subspace of ℚ, hence has dimension 1. Rank–nullity gives kernel dimension 5−1=4."
+        },
+        {
+          "prompt": "For the dual of degree≤4 polynomials, find dimension of functionals vanishing on 1 and x.",
+          "solution": "The dual has dimension 5; two independent basis-value constraints leave three free coordinates. The constrained space has dimension 3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 72, PDF page 57. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704152, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 57,
+      "image": "assets/questions/2024-december-28feb-q072.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q073",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 73,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A,B are real 2×2 matrices and M=AB−BA. Which are necessarily true?",
+      "options": {
+        "A": "If A,B are upper triangular then M is real diagonalizable",
+        "B": "If A,B are real diagonalizable then M is real diagonalizable",
+        "C": "If A,B are real diagonalizable then M=λI₂ for some real λ",
+        "D": "M²=λI₂ for some real λ"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The trace of every commutator is zero.",
+        "Two upper triangular matrices with distinct diagonal entries can have a nonzero nilpotent commutator."
+      ],
+      "solution": "tr M=0, so Cayley–Hamilton gives M²+det(M)I₂=0. Thus D holds with λ=−det M. To reject A,B,C simultaneously, take A=diag(1,0), B=[[1,1],[0,2]]. Both are upper triangular and individually real diagonalizable because each has distinct real eigenvalues. Yet M=[[0,1],[0,0]] is nonzero nilpotent, hence not diagonalizable and not scalar. Therefore only D is necessary.",
+      "theory": "A square matrix is diagonalizable over a field if it admits a basis of eigenvectors over that field. A sufficient and necessary polynomial criterion is that its minimal polynomial split into distinct linear factors. A matrix of finite order over ℂ is therefore diagonalizable, because its minimal polynomial divides tᵏ−1, which has no repeated roots in characteristic zero. Real diagonalizability additionally requires real eigenvalues. Cayley–Hamilton gives M²−tr(M)M+det(M)I=0 for a 2×2 matrix; a commutator has trace zero, so its square is scalar. For symmetric positive definite blocks, determinants simplify by the Schur complement and quadratic forms of the inverse are positive. Common pitfalls include assuming separately diagonalizable matrices commute, ignoring the field of diagonalization, and treating every invariant subspace as possessing an invariant complement.",
+      "similar_questions": [
+        {
+          "prompt": "For M=[[a,b],[c,−a]], calculate M².",
+          "solution": "Multiplication gives diagonal entries a²+bc and off-diagonal entries ab−ab=0, ca−ac=0. Thus M²=(a²+bc)I₂, the trace-zero 2×2 identity."
+        },
+        {
+          "prompt": "Is [[0,1],[0,0]] diagonalizable?",
+          "solution": "Its only eigenvalue is zero and its eigenspace is span{(1,0)}, dimension 1. A 2×2 diagonalization needs two independent eigenvectors, so it is not diagonalizable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 73, PDF page 58. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704153, official option(s) D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 58,
+      "image": "assets/questions/2024-december-28feb-q073.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q074",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 74,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A=[[1,2],[0,3]], B=[[-1,0],[1,5]], and T:M₂(ℝ)→M₂(ℝ) is T(X)=AXBᵗ. Which are true?",
+      "options": {
+        "A": "det T=225",
+        "B": "det T=−225",
+        "C": "tr T=16",
+        "D": "tr T=−16"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "The operator is represented by B⊗A in column-vectorization coordinates.",
+        "Use determinant and trace identities for a Kronecker product."
+      ],
+      "solution": "Column vectorization gives vec(AXBᵗ)=(B⊗A)vec X. Thus det T=(det B)²(det A)²=(−5)²·3²=225. Also tr T=tr B·tr A=(−1+5)(1+3)=16. Therefore A,C hold and B,D fail. The determinant here is of a four-dimensional operator, not det(AXBᵗ) for one chosen X.",
+      "theory": "A square matrix is diagonalizable over a field if it admits a basis of eigenvectors over that field. A sufficient and necessary polynomial criterion is that its minimal polynomial split into distinct linear factors. A matrix of finite order over ℂ is therefore diagonalizable, because its minimal polynomial divides tᵏ−1, which has no repeated roots in characteristic zero. Real diagonalizability additionally requires real eigenvalues. Cayley–Hamilton gives M²−tr(M)M+det(M)I=0 for a 2×2 matrix; a commutator has trace zero, so its square is scalar. For symmetric positive definite blocks, determinants simplify by the Schur complement and quadratic forms of the inverse are positive. Common pitfalls include assuming separately diagonalizable matrices commute, ignoring the field of diagonalization, and treating every invariant subspace as possessing an invariant complement.",
+      "similar_questions": [
+        {
+          "prompt": "If A=diag(2,3), B=diag(4,5), find eigenvalues of X↦AXBᵗ.",
+          "solution": "The matrix units E_ij are eigenvectors with eigenvalues a_i b_j: 8,10,12,15. Their product is 14400 and sum 45."
+        },
+        {
+          "prompt": "For X↦2X on M₂(ℝ), find determinant and trace.",
+          "solution": "The operator acts as 2I on a four-dimensional space. Its determinant is 2⁴=16 and trace is 4·2=8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 74, PDF page 59. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704154, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 59,
+      "image": "assets/questions/2024-december-28feb-q074.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q075",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 75,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Hard",
+      "prompt": "T:ℂⁿ→ℂⁿ, n≥2, and V is T-invariant. Which are necessarily true?",
+      "options": {
+        "A": "V has a vector-space direct complement",
+        "B": "V always has a T-invariant direct complement",
+        "C": "If Tᵏ=I for some k≥1, V has a T-invariant direct complement",
+        "D": "If V has a T-invariant direct complement then Tᵏ=I for some k≥1"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Extend a basis for A.",
+        "Finite order makes T diagonalizable, but a Jordan block gives a counterexample to B."
+      ],
+      "solution": "A holds by extending a basis of V to a basis of ℂⁿ. B fails for T=[[0,1],[0,0]] and V=span(e₁): any invariant complementary line would be generated by an eigenvector outside V, but the only eigenvectors lie in V. For C, Tᵏ=I implies the minimal polynomial divides tᵏ−1, which splits with distinct roots over ℂ. Decompose into eigenspaces, choose within each eigenspace a complement to V’s intersection, and sum those complements to obtain an invariant direct complement. D fails for T=2I: every subspace has an invariant complement, but 2ᵏI≠I for all k≥1. Thus A,C hold.",
+      "theory": "A square matrix is diagonalizable over a field if it admits a basis of eigenvectors over that field. A sufficient and necessary polynomial criterion is that its minimal polynomial split into distinct linear factors. A matrix of finite order over ℂ is therefore diagonalizable, because its minimal polynomial divides tᵏ−1, which has no repeated roots in characteristic zero. Real diagonalizability additionally requires real eigenvalues. Cayley–Hamilton gives M²−tr(M)M+det(M)I=0 for a 2×2 matrix; a commutator has trace zero, so its square is scalar. For symmetric positive definite blocks, determinants simplify by the Schur complement and quadratic forms of the inverse are positive. Common pitfalls include assuming separately diagonalizable matrices commute, ignoring the field of diagonalization, and treating every invariant subspace as possessing an invariant complement.",
+      "similar_questions": [
+        {
+          "prompt": "Explain an invariant complement for a diagonalizable T.",
+          "solution": "The space is a direct sum of eigenspaces. An invariant V splits into its eigenspace intersections using spectral projections. Choose a linear complement to each intersection within that eigenspace; every chosen complement is invariant because T acts as a scalar there."
+        },
+        {
+          "prompt": "Can the zero operator have invariant complements without finite order?",
+          "solution": "Yes. Every subspace is invariant under zero, so ordinary complements are invariant. But zero to any positive power is zero, never the identity on a nonzero space."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 75, PDF page 59. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704155, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 59,
+      "image": "assets/questions/2024-december-28feb-q075.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q076",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 76,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A=[[0,0,1],[1,0,0],[0,1,0]], B=diag(A,1). Which are true?",
+      "options": {
+        "A": "Both A and B are real diagonalizable",
+        "B": "A is complex diagonalizable but not real diagonalizable",
+        "C": "Neither is real diagonalizable, but both are complex diagonalizable",
+        "D": "Neither is complex diagonalizable"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "A is a three-cycle permutation matrix.",
+        "Its eigenvalues are the three cube roots of one."
+      ],
+      "solution": "A³=I and its characteristic polynomial is t³−1=(t−1)(t²+t+1), giving distinct eigenvalues 1,ω,ω². Hence A is diagonalizable over ℂ but not over ℝ, since ω,ω² are nonreal. B adds another eigenvalue 1 but its minimal polynomial is still t³−1, without repeated roots; it too is complex diagonalizable and not real diagonalizable. Thus B,C hold, A,D fail.",
+      "theory": "A square matrix is diagonalizable over a field if it admits a basis of eigenvectors over that field. A sufficient and necessary polynomial criterion is that its minimal polynomial split into distinct linear factors. A matrix of finite order over ℂ is therefore diagonalizable, because its minimal polynomial divides tᵏ−1, which has no repeated roots in characteristic zero. Real diagonalizability additionally requires real eigenvalues. Cayley–Hamilton gives M²−tr(M)M+det(M)I=0 for a 2×2 matrix; a commutator has trace zero, so its square is scalar. For symmetric positive definite blocks, determinants simplify by the Schur complement and quadratic forms of the inverse are positive. Common pitfalls include assuming separately diagonalizable matrices commute, ignoring the field of diagonalization, and treating every invariant subspace as possessing an invariant complement.",
+      "similar_questions": [
+        {
+          "prompt": "Is a 2×2 transposition permutation matrix real diagonalizable?",
+          "solution": "[[0,1],[1,0]] has eigenvectors (1,1),(1,−1) and real eigenvalues 1,−1. It is diagonalizable over both ℝ and ℂ."
+        },
+        {
+          "prompt": "Is a four-cycle permutation matrix real diagonalizable?",
+          "solution": "Its eigenvalues are 1,−1,i,−i, all distinct. It is diagonalizable over ℂ, but nonreal eigenvalues prevent diagonalization over ℝ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 76, PDF page 60. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704156, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 60,
+      "image": "assets/questions/2024-december-28feb-q076.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q077",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 77,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "V=C([0,π],ℝ) with ⟨f,g⟩=∫₀ᵖⁱfg. S={sin x,cos x,sin²x,cos²x}, W=span S. Which are true?",
+      "options": {
+        "A": "S is a basis of W",
+        "B": "S is an orthonormal basis of W",
+        "C": "Some f,g∈S have ⟨f,g⟩=0",
+        "D": "S contains an orthonormal basis of W"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Use x=0 and x=π to separate cos and cos² coefficients.",
+        "Check ⟨sin,cos⟩ and the individual norms."
+      ],
+      "solution": "If αsin x+βcos x+γsin²x+δcos²x=0, the endpoints give β+δ=0 and −β+δ=0, so β=δ=0. For 0<x<π, division by sin x gives α+γsin x=0 for all x, forcing α=γ=0. Thus S is independent and is a basis. ∫sin x cos x=0, proving C. The squared norms are π/2 for sin,cos and 3π/8 for sin²,cos²; none equals 1, so S is not orthonormal and contains no orthonormal basis. Hence A,C only.",
+      "theory": "An inner product is positive definite, symmetric in the real case, and linear in each argument. For continuous functions on a compact interval, ∫fg defines an inner product because ∫f²=0 forces continuous f to vanish identically. Orthogonality requires zero inner product, while orthonormality additionally requires norm one. Linear independence is separate from orthogonality: a nonorthogonal family can still be a basis of its span. Functional identities can be tested at strategic points to prove independence, especially when parity or endpoint values separate coefficients. A set containing a basis need not contain an orthonormal basis because rescaling generally produces new vectors outside the set. Common pitfalls include mistaking a spanning set for an independent family and assuming that Gram–Schmidt's output remains among the original functions.",
+      "similar_questions": [
+        {
+          "prompt": "Normalize sin x and cos x on [0,π].",
+          "solution": "Their squared norms are π/2 and their cross inner product is zero. Multiplying each by √(2/π) gives an orthonormal pair."
+        },
+        {
+          "prompt": "Are sin²x and cos²x orthogonal on [0,π]?",
+          "solution": "Their inner product is ∫sin²x cos²x=(1/8)∫(1−cos4x)dx=π/8>0. Thus they are not orthogonal."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 77, PDF page 61. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704157, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 61,
+      "image": "assets/questions/2024-december-28feb-q077.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q078",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 78,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A is a 4×4 real symmetric positive definite matrix and v=(a,b,c,d)ᵗ. B=[[0,vᵗ],[v,A]]. Which are necessarily true?",
+      "options": {
+        "A": "det B>0 for every nonzero v",
+        "B": "det B>0 for infinitely many v",
+        "C": "det B≤0 for every v",
+        "D": "det B≤0 for infinitely many v"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Use the determinant Schur complement of A.",
+        "A⁻¹ remains positive definite."
+      ],
+      "solution": "Because A is invertible, det B=det A·(0−vᵗA⁻¹v). Positive definiteness gives det A>0 and vᵗA⁻¹v>0 for nonzero v. Thus det B<0 for nonzero v, and det B=0 at v=0. Consequently C,D hold; A,B are false.",
+      "theory": "A square matrix is diagonalizable over a field if it admits a basis of eigenvectors over that field. A sufficient and necessary polynomial criterion is that its minimal polynomial split into distinct linear factors. A matrix of finite order over ℂ is therefore diagonalizable, because its minimal polynomial divides tᵏ−1, which has no repeated roots in characteristic zero. Real diagonalizability additionally requires real eigenvalues. Cayley–Hamilton gives M²−tr(M)M+det(M)I=0 for a 2×2 matrix; a commutator has trace zero, so its square is scalar. For symmetric positive definite blocks, determinants simplify by the Schur complement and quadratic forms of the inverse are positive. Common pitfalls include assuming separately diagonalizable matrices commute, ignoring the field of diagonalization, and treating every invariant subspace as possessing an invariant complement.",
+      "similar_questions": [
+        {
+          "prompt": "For A=I₂ and v=(a,b), compute the bordered determinant.",
+          "solution": "The Schur complement is −(a²+b²), and det A=1. Thus the 3×3 bordered matrix has determinant −a²−b²."
+        },
+        {
+          "prompt": "Replace the leading zero by c. When is the bordered symmetric matrix positive definite?",
+          "solution": "The Schur-complement criterion gives A>0 and c−vᵗA⁻¹v>0. Hence positivity holds exactly when c>vᵗA⁻¹v."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 78, PDF page 62. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704158, official option(s) C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 62,
+      "image": "assets/questions/2024-december-28feb-q078.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q079",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 79,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f:ℂ\\{−1,1}→ℂ is holomorphic and omits every value w with |w−1|<1. Which are true?",
+      "options": {
+        "A": "f is constant",
+        "B": "Singularities at −1 and 1 are removable",
+        "C": "f is bounded",
+        "D": "Singularities at −1 and 1 are poles or essential"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The omitted disc implies |f−1|≥1.",
+        "Apply removable singularities and Liouville to 1/(f−1)."
+      ],
+      "solution": "g=1/(f−1) is well-defined and holomorphic on the punctured plane, with |g|≤1. Both punctures are removable for g, so g extends to a bounded entire function and is constant by Liouville. On its original domain g never vanishes, so its constant is nonzero and f=1+1/g is constant. Thus f itself extends across both punctures and is bounded. A,B,C hold, while D fails.",
+      "theory": "Liouville's theorem says that a bounded entire function is constant. The removable-singularity theorem allows a holomorphic function bounded near an isolated missing point to extend holomorphically across it. If the original function omits a disc centered at a, the reciprocal 1/(f−a) is bounded; it can be extended across finitely many punctures and Liouville then forces constancy. A nonconstant complex polynomial grows in modulus to infinity as |z| grows, so inverse images of bounded modulus discs are bounded and open by continuity. Boundary points of a strict sublevel set satisfy equality of the modulus. If a component contained no zero, applying the maximum-modulus principle to 1/P on the component would contradict the smaller boundary modulus. Common pitfalls include applying Liouville directly to an unbounded f and assuming a polynomial sublevel set must be connected.",
+      "similar_questions": [
+        {
+          "prompt": "If an entire f omits the disc |w−2|<3, prove it is constant.",
+          "solution": "Then |f−2|≥3 and g=1/(f−2) is entire with |g|≤1/3. Liouville makes g constant and nonzero, so f is constant."
+        },
+        {
+          "prompt": "Can a nonconstant holomorphic function on ℂ\\{0} omit a full open disc?",
+          "solution": "No. The reciprocal centered on that disc is bounded near zero, extends entirely, and is constant by Liouville. Hence the original function would have to be constant."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 79, PDF page 63. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704159, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 63,
+      "image": "assets/questions/2024-december-28feb-q079.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q080",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 80,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Hard",
+      "prompt": "P is a nonconstant complex polynomial, R>0, and S_R={z:|P(z)|<R}. Which are true?",
+      "options": {
+        "A": "S_R is open",
+        "B": "S_R is bounded",
+        "C": "|P(z)|=R on every boundary point of S_R",
+        "D": "Every connected component of S_R contains a zero of P"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Continuity gives openness; polynomial growth gives boundedness.",
+        "If a component has no zero, apply the maximum-modulus principle to 1/P."
+      ],
+      "solution": "A holds as a continuous inverse image of the open disc. Polynomial growth |P(z)|→∞ gives B. At a boundary point continuity rules out |P|>R, while |P|<R would make it interior; hence C. Let U be a component. Components of an open planar set are open; their boundaries lie in ∂S_R and have |P|=R. If U had no zero, 1/P would be holomorphic on U and continuous on its compact closure, with modulus 1/R on the boundary but greater than 1/R inside. Its maximum would occur inside, violating the maximum-modulus principle. Thus D also holds.",
+      "theory": "Liouville's theorem says that a bounded entire function is constant. The removable-singularity theorem allows a holomorphic function bounded near an isolated missing point to extend holomorphically across it. If the original function omits a disc centered at a, the reciprocal 1/(f−a) is bounded; it can be extended across finitely many punctures and Liouville then forces constancy. A nonconstant complex polynomial grows in modulus to infinity as |z| grows, so inverse images of bounded modulus discs are bounded and open by continuity. Boundary points of a strict sublevel set satisfy equality of the modulus. If a component contained no zero, applying the maximum-modulus principle to 1/P on the component would contradict the smaller boundary modulus. Common pitfalls include applying Liouville directly to an unbounded f and assuming a polynomial sublevel set must be connected.",
+      "similar_questions": [
+        {
+          "prompt": "For P(z)=z² and R=4, describe S_R.",
+          "solution": "|z²|<4 means |z|<2, an open bounded disc. Its boundary satisfies |P|=4 and its single component contains the zero z=0."
+        },
+        {
+          "prompt": "For P(z)=z²−1 and sufficiently small R, what do the components contain?",
+          "solution": "Small inverse-image neighborhoods form separate components around 1 and −1. The theorem forces each component to contain a zero; here each contains one of those two roots."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 80, PDF page 64. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704160, official option(s) A,B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 64,
+      "image": "assets/questions/2024-december-28feb-q080.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q081",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 81,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f is holomorphic on D={|z|<1} and g(z)=e^(1/z)f(z) is bounded on D\\{0}. Which are true?",
+      "options": {
+        "A": "f(0)=0",
+        "B": "f≡0 on D",
+        "C": "f=ce⁻¹ᐟᶻ on D\\{0} for some c≠0",
+        "D": "f=czⁿe⁻¹ᐟᶻ on D\\{0} for some c≠0,n≥1"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "A nonzero holomorphic f has a finite-order zero at zero.",
+        "Along positive real x, e^(1/x)xᵐ grows without bound for every fixed m."
+      ],
+      "solution": "If f were not identically zero, write f(z)=zᵐh(z) with finite m≥0 and h(0)≠0. For small positive x, |h(x)|≥|h(0)|/2, so |g(x)|≥(|h(0)|/2)xᵐe^(1/x)→∞, contradicting boundedness. Thus f≡0 and f(0)=0, proving A,B. The nonzero-constant forms in C,D have an essential singularity at zero and cannot be holomorphic there; they also contradict f≡0.",
+      "theory": "A holomorphic function near zero has a convergent Taylor series. If it is not identically zero, it has a zero of some finite order m and can be written f(z)=zᵐh(z) with h(0)≠0. An exponential e^(1/z) grows faster than every reciprocal power along the positive real axis, so multiplication by a finite-order zero cannot make it bounded near zero. Rotational symmetry f(iz)=f(z) instead restricts Taylor coefficients: a coefficient of zⁿ can be nonzero only if iⁿ=1, meaning n is divisible by four. Regrouping these terms yields an entire function of z⁴. The regrouped series is entire because its fourth-root argument can be chosen at arbitrary large modulus. Common pitfalls include using essential-singularity intuition without a growth argument and concluding rotational symmetry forces a function to be constant.",
+      "similar_questions": [
+        {
+          "prompt": "Can z¹⁰e^(1/z) be bounded near zero?",
+          "solution": "No. Along x>0 the logarithm of its modulus is 10 log x+1/x, which tends to +∞. A finite-order vanishing factor cannot suppress exponential growth."
+        },
+        {
+          "prompt": "If f holomorphic near zero and e^(−1/z)f bounded, must f vanish?",
+          "solution": "Yes. On the negative real axis z=−x, x>0, e^(−1/z)=e^(1/x). The same finite-order zero argument forces f identically zero near zero, then on its connected domain by the identity theorem."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 81, PDF page 64. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704161, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 64,
+      "image": "assets/questions/2024-december-28feb-q081.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q082",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 82,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f is entire and f(z)=f(iz) for all z. Which are true?",
+      "options": {
+        "A": "f(z)=f(−z) for all z",
+        "B": "f′(0)=f″(0)=f‴(0)=0",
+        "C": "There is an entire g with f(z)=g(z⁴)",
+        "D": "f must be constant"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Apply the symmetry twice to obtain evenness.",
+        "Compare Taylor coefficients under z↦iz."
+      ],
+      "solution": "Iterating gives f(−z)=f(i²z)=f(z), proving A. Write f=∑a_nzⁿ. Equality with f(iz) implies a_n(1−iⁿ)=0, so only coefficients indexed by multiples of four survive; in particular a₁=a₂=a₃=0, proving B. Define g(w)=∑_{k≥0}a_(4k)wᵏ. Since f is entire, this series converges for every w (choose a fourth root z), proving C. The nonconstant function z⁴ satisfies the symmetry, rejecting D.",
+      "theory": "A holomorphic function near zero has a convergent Taylor series. If it is not identically zero, it has a zero of some finite order m and can be written f(z)=zᵐh(z) with h(0)≠0. An exponential e^(1/z) grows faster than every reciprocal power along the positive real axis, so multiplication by a finite-order zero cannot make it bounded near zero. Rotational symmetry f(iz)=f(z) instead restricts Taylor coefficients: a coefficient of zⁿ can be nonzero only if iⁿ=1, meaning n is divisible by four. Regrouping these terms yields an entire function of z⁴. The regrouped series is entire because its fourth-root argument can be chosen at arbitrary large modulus. Common pitfalls include using essential-singularity intuition without a growth argument and concluding rotational symmetry forces a function to be constant.",
+      "similar_questions": [
+        {
+          "prompt": "If f(−z)=f(z) is entire, factor it through z².",
+          "solution": "Its odd Taylor coefficients vanish, so f=∑a_(2k)z²ᵏ. The series g(w)=∑a_(2k)wᵏ is entire and f(z)=g(z²)."
+        },
+        {
+          "prompt": "If f(ωz)=f(z) for a primitive third root ω, which Taylor terms survive?",
+          "solution": "Coefficient comparison gives a_n(1−ωⁿ)=0. Thus n must be a multiple of 3, and f(z)=g(z³) with g entire."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 82, PDF page 65. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704162, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 65,
+      "image": "assets/questions/2024-december-28feb-q082.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q083",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 83,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which statements are true?",
+      "options": {
+        "A": "φ(n) is even for every n≥3",
+        "B": "For a finite group G and S⊆G with |S|>|G|/2, {ab:a,b∈S}=G",
+        "C": "ℝ[x₁,…,xₙ] is Euclidean for every n≥1",
+        "D": "{f∈C([0,1],ℝ):f(1/2)=0} is a prime ideal"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Pair coprime residues for A and use intersecting large subsets for B.",
+        "Evaluation at 1/2 gives the function-ring quotient; two-variable polynomial rings need not be principal."
+      ],
+      "solution": "A: coprime residues a and n−a form distinct pairs for n≥3. B: for g∈G, sets S and gS⁻¹ have total size >|G| and intersect; s=g t⁻¹ implies g=st with s,t∈S. C fails at n=2: the ideal (x₁,x₂) is not principal (a common divisor of both variables must be a unit, which would make the ideal whole), while every Euclidean domain is principal. D is the kernel of the surjective evaluation map f↦f(1/2) to ℝ; its quotient is a field, so it is maximal and prime. Exactly A,B,D hold.",
+      "theory": "Euler's totient φ(n) counts residues coprime to n. For n≥3, pairing a with n−a proves φ(n) is even because no coprime residue is fixed by this pairing. In a finite group, a subset larger than half the group intersects every translate of its inverse, so its pairwise product set is the whole group. An evaluation map on a ring of functions is a surjective ring homomorphism to the scalar field; its kernel is maximal and hence prime. Euclidean domains are principal ideal domains, but polynomial rings in two or more variables are not principal ideal domains: the ideal generated by two distinct variables is not principal. Common pitfalls include confusing multivariable polynomial rings with one-variable Euclidean domains and forgetting inverses when proving a product-set pigeonhole argument.",
+      "similar_questions": [
+        {
+          "prompt": "Compute φ(12) and exhibit its pairs.",
+          "solution": "Coprime residues are 1,5,7,11. The pairing a↦12−a gives {1,11} and {5,7}, so φ(12)=4 is even."
+        },
+        {
+          "prompt": "For S={0,1,2} in additive ℤ/5ℤ, compute S+S.",
+          "solution": "Sums produce 0,1,2,3,4, the full group. Its size 3 exceeds 5/2, illustrating the general large-subset theorem."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 83, PDF page 66. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704163, official option(s) A,B,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 66,
+      "image": "assets/questions/2024-december-28feb-q083.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q084",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 84,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "X⊆ℕ has |X(n)|/n→1 and is partitioned into disjoint X₁,…,X₈. Here S(n)={s∈S:s≤n}. Which are true?",
+      "options": {
+        "A": "Every |X_i(n)|/n has a limit",
+        "B": "Every liminf |X_i(n)|/n is ≥0",
+        "C": "Some limsup |X_i(n)|/n is ≥1/8",
+        "D": "Every limsup |X_i(n)|/n is <1/8"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "All counting ratios are nonnegative.",
+        "Sum the eight ratios; use alternating long blocks to refute individual convergence."
+      ],
+      "solution": "B holds because every ratio lies in [0,1]. Since the ratios sum to |X(n)|/n→1, if all eight upper limits were <1/8, their finite sum would be <1, contradicting limsup of the sum ≤sum of limsups. This proves C and rejects D. A fails: let X=ℕ and put alternating blocks with endpoints N_k=2^(2^k) into X₁,X₂, distributing any finitely many initial integers among the other pieces. Each new block dominates all predecessors, so the density of X₁ oscillates near 1 and 0; its limit does not exist.",
+      "theory": "The natural density of a subset S of positive integers is the limit, when it exists, of |S∩{1,…,n}|/n. Lower and upper density are the corresponding liminf and limsup and always exist as bounded extended limits in [0,1]. A finite disjoint partition has counting ratios whose sum equals the ratio of the union, but individual limits need not exist even if the sum converges. The sum of finitely many limsups bounds the limsup of their sum from above, so a density-one set partitioned into m pieces has at least one piece with upper density ≥1/m. Alternating blocks with lengths dominating all previous blocks can create oscillation between densities close to zero and one. Common pitfalls include assuming densities distribute equally or exist for every member of a partition.",
+      "similar_questions": [
+        {
+          "prompt": "Partition ℕ into residue classes modulo 8. Find their densities.",
+          "solution": "Each class has n/8+O(1) members up to n, so every density is 1/8. The lower bound on at least one upper density is attained sharply."
+        },
+        {
+          "prompt": "If a density-one set is partitioned into three pieces, what can be guaranteed?",
+          "solution": "All lower densities are nonnegative, and at least one upper density is ≥1/3, because otherwise the sum of the three upper densities would be less than the union density 1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 84, PDF page 66. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704164, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 66,
+      "image": "assets/questions/2024-december-28feb-q084.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q085",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 85,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "R is a nonzero ring with identity and r²=r for every r∈R. Which are true?",
+      "options": {
+        "A": "R is never an integral domain",
+        "B": "r=−r for every r",
+        "C": "Every nonzero prime ideal is maximal",
+        "D": "R is commutative"
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Expand (1+1)²=1+1.",
+        "Expand (r+s)² and examine prime quotients."
+      ],
+      "solution": "Idempotence of 2·1 gives 4·1=2·1, hence 2·1=0 and 2r=0, proving B. Expanding (r+s)²=r+s and cancelling r²=r,s²=s gives rs+sr=0; since additive negatives equal positives, rs=sr, proving D. For any prime ideal P, R/P is a Boolean domain. Every element t satisfies t(t−1)=0, forcing t=0 or 1, so the quotient is the two-element field and P is maximal; C follows, even for zero prime ideals. A fails because the field 𝔽₂ is a Boolean integral domain.",
+      "theory": "A Boolean ring is a ring in which every element satisfies r²=r. Expanding (1+1)²=1+1 yields 2·1=0, so the ring has characteristic two and r=−r for every element. Expanding (r+s)²=r+s then gives rs+sr=0, which in characteristic two means rs=sr. Thus every Boolean ring is commutative. A Boolean integral domain is necessarily the two-element field: r(r−1)=0 forces every r to be zero or one. Every prime quotient of a Boolean ring is therefore this field, so each prime ideal is maximal. Nontrivial Boolean rings need not be domains, as a product of two copies of the two-element field shows. Common pitfalls include assuming idempotence means absence of zero divisors and overlooking the two-element field as a counterexample to a universal negative claim.",
+      "similar_questions": [
+        {
+          "prompt": "Show 𝔽₂×𝔽₂ is Boolean but not a domain.",
+          "solution": "Each coordinate squares to itself, so every pair is idempotent. Yet (1,0)(0,1)=(0,0) with both factors nonzero, giving zero divisors."
+        },
+        {
+          "prompt": "Find the maximal ideals of 𝔽₂×𝔽₂.",
+          "solution": "The kernels of the two coordinate projections are {0}×𝔽₂ and 𝔽₂×{0}. Each quotient is 𝔽₂, so both are maximal and prime."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 85, PDF page 67. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704165, official option(s) B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 67,
+      "image": "assets/questions/2024-december-28feb-q085.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q086",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 86,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A group is divisible if every y has an nth root for every positive integer n. Which groups are divisible?",
+      "options": {
+        "A": "ℚ under addition",
+        "B": "ℂ\\{0} under multiplication",
+        "C": "Cyclic group of order 5",
+        "D": "Symmetric group S₅"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "In additive notation an nth root means solving nx=y.",
+        "For a finite group choose n equal to the group order."
+      ],
+      "solution": "In (ℚ,+), x=y/n is rational and solves nx=y, so A holds. Every nonzero complex number has an nth root by polar form, so B holds. In C₅, every x satisfies x⁵=e, so a nonidentity y has no fifth root. In S₅, every x satisfies x¹²⁰=e by Lagrange, so a nonidentity y has no 120th root. C,D fail. More generally no nontrivial finite group is divisible.",
+      "theory": "A finite group of prime order is cyclic by Lagrange's theorem: a nonidentity element generates a subgroup whose order must be the prime. Composite orders can also admit a unique group up to isomorphism. A positive integer n is a cyclic number precisely when gcd(n,φ(n))=1, where φ is Euler's totient; equivalently every group of order n is cyclic exactly under this condition. The obstruction is constructive: if p² divides n, two nonisomorphic abelian groups of order n can be formed; if n is squarefree and p divides q−1 for primes p,q dividing n, a nonabelian semidirect product of order pq exists. Group counts grow without bound along prime powers because distinct partitions give distinct finite abelian groups. Common pitfalls include extending the prime-order theorem to an “only if” statement and counting only abelian groups.",
+      "similar_questions": [
+        {
+          "prompt": "Is (ℝ,+) divisible?",
+          "solution": "Yes. For every real y and integer n≥1, x=y/n is real and nx=y."
+        },
+        {
+          "prompt": "Is (ℤ,+) divisible?",
+          "solution": "No. The equation 2x=1 has no integer solution. Thus the required root exists neither for this y nor for all n."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 86, PDF page 68. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704166, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 68,
+      "image": "assets/questions/2024-december-28feb-q086.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q087",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 87,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "f∈ℝ[x] is a product of distinct monic irreducibles P₁,…,Pₙ with n≥2. Which are true about ℝ[x]/(f)?",
+      "options": {
+        "A": "It is a field",
+        "B": "It is finite dimensional as an ℝ-vector space",
+        "C": "It is a finite direct sum of fields each isomorphic to ℝ or ℂ",
+        "D": "It has no nonzero nilpotent elements"
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Apply the Chinese remainder theorem to the pairwise coprime factors.",
+        "Real irreducible polynomials have degree one or two."
+      ],
+      "solution": "CRT gives ℝ[x]/(f)≅∏_{i=1}ⁿℝ[x]/(P_i). Each factor is a field, isomorphic to ℝ for a linear factor and ℂ for an irreducible quadratic. Thus C holds; for finite families direct sum and direct product have the same underlying ring. Polynomial division makes the quotient dimension deg f, proving B. If uᵐ=0, each field coordinate has zero mth power and is zero, so u=0, proving D. With n≥2 the product has nonzero zero divisors (coordinate idempotents), hence is not a field and A fails.",
+      "theory": "Distinct monic irreducible polynomials over a field are pairwise coprime, so their generated ideals are pairwise comaximal. The Chinese remainder theorem identifies the quotient by their product with the finite product of the quotients by each irreducible factor. Each factor quotient is a field. Over ℝ an irreducible polynomial is linear or quadratic; the resulting fields are ℝ and ℂ, respectively. Polynomial division gives a vector-space basis 1,x,…,x^(d−1) for the quotient by a monic degree-d polynomial. A product of two or more nonzero fields has zero divisors but no nonzero nilpotents, because each coordinate field has none. Common pitfalls include calling a product of fields a field and forgetting that repeated factors, unlike distinct factors, can introduce nilpotents.",
+      "similar_questions": [
+        {
+          "prompt": "Describe ℝ[x]/(x(x−1)).",
+          "solution": "CRT identifies it with ℝ×ℝ by evaluation at 0 and 1. It has dimension 2, zero divisors, and no nonzero nilpotents."
+        },
+        {
+          "prompt": "Describe ℝ[x]/((x−1)(x²+1)).",
+          "solution": "The distinct factors are coprime. The quotient is ℝ×ℂ, of real dimension 1+2=3. It is reduced but not a field."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 87, PDF page 69. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704167, official option(s) B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 69,
+      "image": "assets/questions/2024-december-28feb-q087.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q088",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 88,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "f(x)=x²⁰²⁵−1 over 𝔽₅. S is its root set in an algebraic closure. Which are true?",
+      "options": {
+        "A": "S is cyclic under multiplication",
+        "B": "S has φ(2025) elements",
+        "C": "S has φ(2025) generators",
+        "D": "S has 81 elements"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Factor the characteristic-power multiplicity from exponent 2025=25·81.",
+        "Count distinct roots, then use cyclicity of finite multiplicative field subgroups."
+      ],
+      "solution": "In characteristic five, x²⁰²⁵−1=(x⁸¹−1)²⁵. The derivative of x⁸¹−1 is 81x⁸⁰=x⁸⁰ in 𝔽₅ and never zero at a root, so it has 81 distinct roots in the algebraic closure. They form a finite multiplicative subgroup, hence cyclic. Its generator count is φ(81)=54, whereas φ(2025)=2025(1−1/3)(1−1/5)=1080. Thus A,D hold and B,C fail.",
+      "theory": "In characteristic p, the Frobenius identity (a−b)^p=a^p−b^p shows that powers divisible by p can create repeated polynomial roots. If m=pᵏd with p not dividing d, then xᵐ−1=(xᵈ−1)^(pᵏ). Its distinct roots are therefore the d roots of xᵈ−1, whose derivative d x^(d−1) is nonzero at each root. These roots form a finite multiplicative subgroup of the field's algebraic closure, and every finite subgroup of a field's multiplicative group is cyclic. A cyclic group of order d has φ(d) generators, distinct from its total d elements. The multiplicative root condition excludes zero. Common pitfalls include equating polynomial degree with the number of distinct roots in positive characteristic and computing generators using the degree before removing the characteristic-power multiplicity.",
+      "similar_questions": [
+        {
+          "prompt": "How many distinct roots does x¹²−1 have in characteristic 3?",
+          "solution": "x¹²−1=(x⁴−1)³. Since 3 does not divide 4, x⁴−1 is separable and has four distinct roots in the algebraic closure."
+        },
+        {
+          "prompt": "How many generators do those four roots have?",
+          "solution": "They form a cyclic group of order 4. Its generator count is φ(4)=2, rather than φ(12)=4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 88, PDF page 69. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704168, official option(s) A,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 69,
+      "image": "assets/questions/2024-december-28feb-q088.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q089",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 89,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "On ℝ, U is open iff U=∅ or 0∈U. Which are true?",
+      "options": {
+        "A": "The irrationals are dense",
+        "B": "For each prime p, {0,√p} is dense",
+        "C": "[0,1] is compact",
+        "D": "The space is Hausdorff"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The open singleton {0} tests density.",
+        "Cover [0,1] by the open two-point sets {0,x}."
+      ],
+      "solution": "A fails because the nonempty open set {0} misses all irrationals. B holds: every nonempty open set contains 0 and therefore meets {0,√p}. For C, the family {{0,x}:x∈[0,1]} is an open cover with no finite subcover, since a finite union contains only finitely many points. D fails because any two nonempty open neighborhoods share 0, so distinct points cannot have disjoint neighborhoods. Only B holds.",
+      "theory": "A topology specifies open subsets and thereby determines closure, compactness, separation, and continuity. A subset is dense exactly when it intersects every nonempty open set. In the particular-point topology, every nonempty open set contains a distinguished point; any subset containing that point is dense. The singleton of the distinguished point is open, so a subset missing it cannot be dense. No two nonempty open sets are disjoint, preventing Hausdorff separation in a space with multiple points. Compactness must be checked through finite subcovers, not through Euclidean closedness and boundedness, since the topology has changed. Covering an infinite subset by sets consisting of the distinguished point and one additional point disproves compactness. Common pitfalls include transferring familiar real-line properties to a nonstandard topology and treating density as a metric concept.",
+      "similar_questions": [
+        {
+          "prompt": "In this topology, characterize all dense subsets.",
+          "solution": "A dense subset must meet the open singleton {0}, so it must contain 0. Conversely, containing 0 makes it meet every nonempty open set, proving exactly that characterization."
+        },
+        {
+          "prompt": "Which subsets are compact in this topology?",
+          "solution": "Every finite subset is compact in any topology. An infinite subset has the cover {0,x} indexed by its elements (restricted to the subset); no finite subcover exists. Thus exactly the finite subsets are compact."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 89, PDF page 70. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704169, official option(s) B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 70,
+      "image": "assets/questions/2024-december-28feb-q089.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q090",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 90,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Hard",
+      "prompt": "A is homeomorphic to B, B is a dense subspace of C, and C is homeomorphic to a subspace W of A. Which statements are FALSE in general?",
+      "options": {
+        "A": "B, closure(W), C are homeomorphic",
+        "B": "B,W,C are homeomorphic",
+        "C": "If C is compact, A,B,C are homeomorphic",
+        "D": "If A is connected, B and C are connected"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Consider A=B=(0,1), C=[0,1], with a compact subinterval W⊂A.",
+        "Connectedness passes through homeomorphism and then to closure."
+      ],
+      "solution": "Take A=B=(0,1), C=[0,1], and W=[1/3,2/3]⊂A. B is dense in C, A≈B, and C≈W by affine scaling. But B is noncompact while W=closure_A(W) and C are compact, so both A and B statements fail. This also disproves C despite its compactness hypothesis. D is true: A connected implies B connected by homeomorphism; C=closure_C(B) is connected because the closure of a connected subset is connected. Therefore the false assertions are A,B,C.",
+      "theory": "A topological space is connected if it cannot be split into two disjoint nonempty open subsets. Path connectedness requires a continuous path between every pair of points and implies connectedness; the converse fails in general. Open subsets of Euclidean space are locally path connected, so an open connected subset is path connected. Continuous images of connected spaces are connected. For a continuous open surjection with connected fibers, a separation of the domain would induce a separation of the range: each fiber must lie wholly in one side. Compact subsets are closed in Hausdorff spaces, not in arbitrary spaces. A lattice generated by two real-linearly independent complex numbers is discrete rather than dense. Common pitfalls include omitting Hausdorff hypotheses and transferring Euclidean path properties to all topological spaces.",
+      "similar_questions": [
+        {
+          "prompt": "Can a dense proper subset fail to be homeomorphic to its closure?",
+          "solution": "Yes. (0,1) is dense in [0,1], but the latter is compact and the former is not. Compactness is preserved by homeomorphism, so they cannot be homeomorphic."
+        },
+        {
+          "prompt": "Prove the closure of a connected subset is connected.",
+          "solution": "If the closure had a separation into relatively open nonempty U,V, density forces the original subset to meet both. Their intersections would then separate that connected subset, a contradiction."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 90, PDF page 71. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704170, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 71,
+      "image": "assets/questions/2024-december-28feb-q090.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q091",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 91,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "y″+5y′+6y=sin(e⁻⁵ˣ), x>0. Which are true?",
+      "options": {
+        "A": "Every solution is bounded on (0,∞)",
+        "B": "Some solution is unbounded on (0,∞)",
+        "C": "Every solution is unbounded on (0,∞)",
+        "D": "Every solution tends to zero as x→∞"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "The homogeneous roots are −2 and −3.",
+        "Use the convolution kernel e⁻²ˣ−e⁻³ˣ and |sin(e⁻⁵ˣ)|≤e⁻⁵ˣ."
+      ],
+      "solution": "Every solution has y=C₁e⁻²ˣ+C₂e⁻³ˣ+∫₀ˣ[e⁻²⁽ˣ⁻ᵗ⁾−e⁻³⁽ˣ⁻ᵗ⁾]sin(e⁻⁵ᵗ)dt, since the coefficients and forcing extend smoothly to zero. The homogeneous terms are bounded and decay. The convolution magnitude is at most ∫₀ˣe⁻²⁽ˣ⁻ᵗ⁾e⁻⁵ᵗdt≤e⁻²ˣ/3, so it is bounded and decays too. Thus A,D hold; B,C contradict this common bound.",
+      "theory": "A constant-coefficient second-order linear ODE has homogeneous solutions determined by its characteristic roots. Negative real parts give decaying modes. A particular solution for a bounded or decaying forcing can be represented as a convolution with a decaying impulse response; bounding that convolution proves boundedness and decay. For a nonautonomous first-order system, multiplying coordinates by exponential factors can remove time-dependent coefficients and expose a constant matrix. If that matrix is nilpotent, its matrix exponential terminates after finitely many terms. Scalar autonomous equations y′=F(y) can be analyzed using the sign of F and equilibria; uniqueness prevents a trajectory from crossing an equilibrium. Finite-time blow-up follows when ∫^∞dy/F(y) is finite. Common pitfalls include examining only homogeneous solutions, overlooking the maximal existence interval, and assuming smooth polynomial vector fields guarantee global solutions.",
+      "similar_questions": [
+        {
+          "prompt": "Solve y″+5y′+6y=e⁻⁵ˣ.",
+          "solution": "The homogeneous solution is C₁e⁻²ˣ+C₂e⁻³ˣ. Try Ae⁻⁵ˣ; substitution gives (25−25+6)A=1, so A=1/6. Every resulting solution is bounded and tends to zero."
+        },
+        {
+          "prompt": "Why can positive-root homogeneous modes destroy boundedness?",
+          "solution": "For y″−y=0, y=eˣ is a solution and is unbounded. Thus forcing bounds alone do not ensure boundedness unless the homogeneous dynamics are stable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 91, PDF page 71. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704171, official option(s) A,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 71,
+      "image": "assets/questions/2024-december-28feb-q091.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q092",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 92,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "x′=x−4e⁻²ᵗy, y′=e²ᵗx−y, x(0)=y(0)=1. Which are true?",
+      "options": {
+        "A": "lim t⁻²x(t)y(t)=0",
+        "B": "x(1)=0 and y(1/2)=0",
+        "C": "x(1/2)=0 and y(1)=0",
+        "D": "lim t⁻²x(t)y(t)=2"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Set U=eᵗx and V=e⁻ᵗy.",
+        "The resulting constant coefficient matrix has square zero."
+      ],
+      "solution": "U′=2U−4V and V′=U−2V, with U(0)=V(0)=1. The matrix N=[[2,−4],[1,−2]] satisfies N²=0, so (U,V)ᵗ=(I+tN)(1,1)ᵗ=(1−2t,1−t)ᵗ. Hence x=e⁻ᵗ(1−2t), y=eᵗ(1−t). Their zeros are t=1/2 and t=1, respectively, proving C. Their product is 2t²−3t+1, so the normalized limit is 2, proving D and rejecting A,B.",
+      "theory": "A constant-coefficient second-order linear ODE has homogeneous solutions determined by its characteristic roots. Negative real parts give decaying modes. A particular solution for a bounded or decaying forcing can be represented as a convolution with a decaying impulse response; bounding that convolution proves boundedness and decay. For a nonautonomous first-order system, multiplying coordinates by exponential factors can remove time-dependent coefficients and expose a constant matrix. If that matrix is nilpotent, its matrix exponential terminates after finitely many terms. Scalar autonomous equations y′=F(y) can be analyzed using the sign of F and equilibria; uniqueness prevents a trajectory from crossing an equilibrium. Finite-time blow-up follows when ∫^∞dy/F(y) is finite. Common pitfalls include examining only homogeneous solutions, overlooking the maximal existence interval, and assuming smooth polynomial vector fields guarantee global solutions.",
+      "similar_questions": [
+        {
+          "prompt": "For Z′=NZ with N²=0, give the exact solution.",
+          "solution": "The exponential series terminates: e^(tN)=I+tN. Thus Z(t)=(I+tN)Z(0), with no higher powers."
+        },
+        {
+          "prompt": "If x=e⁻ᵗ(2−t), y=eᵗ(3+t), find lim t⁻²xy.",
+          "solution": "The exponentials cancel and xy=(2−t)(3+t)=6−t−t². Dividing by t² gives limit −1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 92, PDF page 72. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704172, official option(s) C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 72,
+      "image": "assets/questions/2024-december-28feb-q092.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q093",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 93,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "y′=y⁵+y⁴+y³+y²+y+1, y(0)=b, on maximal interval I_b. Which are true?",
+      "options": {
+        "A": "For all sufficiently large positive b, y_b is bounded above on I_b",
+        "B": "For all sufficiently large positive b, y_b is bounded below on I_b",
+        "C": "For all sufficiently negative b, y_b is bounded above on I_b",
+        "D": "For all sufficiently negative b, y_b is bounded below on I_b"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Factor the polynomial as (y+1)(y⁴+y²+1).",
+        "The equilibrium −1 separates the increasing and decreasing trajectories."
+      ],
+      "solution": "F(y)=(y+1)(y⁴+y²+1), with the second factor strictly positive. The only equilibrium is −1; uniqueness prevents crossing it. If b>−1, the solution stays above −1 and increases, so it is bounded below. Forward it becomes arbitrarily large (indeed ∫_b^∞dy/F(y)<∞ for b>0), rejecting A. If b<−1, it stays below −1 and decreases, so it is bounded above; forward it becomes arbitrarily negative, with finite escape time by the analogous integral, rejecting D. Choose α=1 for B and α=−2 for C. Exactly B,C hold.",
+      "theory": "A constant-coefficient second-order linear ODE has homogeneous solutions determined by its characteristic roots. Negative real parts give decaying modes. A particular solution for a bounded or decaying forcing can be represented as a convolution with a decaying impulse response; bounding that convolution proves boundedness and decay. For a nonautonomous first-order system, multiplying coordinates by exponential factors can remove time-dependent coefficients and expose a constant matrix. If that matrix is nilpotent, its matrix exponential terminates after finitely many terms. Scalar autonomous equations y′=F(y) can be analyzed using the sign of F and equilibria; uniqueness prevents a trajectory from crossing an equilibrium. Finite-time blow-up follows when ∫^∞dy/F(y) is finite. Common pitfalls include examining only homogeneous solutions, overlooking the maximal existence interval, and assuming smooth polynomial vector fields guarantee global solutions.",
+      "similar_questions": [
+        {
+          "prompt": "Analyze y′=y³, y(0)=b>0.",
+          "solution": "Separating gives y=b/√(1−2b²x), with maximal upper time 1/(2b²). It is positive and bounded below by zero, but unbounded above near escape."
+        },
+        {
+          "prompt": "Analyze y′=y+1 for initial b.",
+          "solution": "y=(b+1)eˣ−1. For b>−1 it stays above −1 and increases; for b<−1 it stays below −1 and decreases. The equilibrium barrier follows the same sign analysis."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 93, PDF page 73. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704173, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 73,
+      "image": "assets/questions/2024-december-28feb-q093.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q094",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 94,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "u_xx+u_yy=0 on (0,1)², with u(x,0)=eᵖⁱˣ, u(x,1)=−eᵖⁱˣ, u(0,y)=cos(πy)+sin(πy), u(1,y)=eᵖⁱ[cos(πy)+sin(πy)]. Which values occur at an interior point?",
+      "options": {
+        "A": "√2 eᵖⁱ",
+        "B": "eᵖⁱ",
+        "C": "−1",
+        "D": "−eᵖⁱ"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Identify a separated harmonic expression meeting all boundary data.",
+        "Its exact interior range is between its unattained global extrema."
+      ],
+      "solution": "u(x,y)=e^(πx)[cos(πy)+sin(πy)] satisfies the PDE and all data, so uniqueness identifies it. The bracket ranges from values greater than −1 up to √2; x∈(0,1) gives e^(πx)<eπ. Thus u lies strictly between −eπ and √2eπ, excluding A,D. For B, choose y=1/4 and x=1−log(√2)/π∈(0,1); then u=eπ. For C, choose x=1/2; the bracket continuously varies from √2 to −1 and therefore takes −e^(−π/2), giving u=−1. Hence B,C occur.",
+      "theory": "The Laplace equation Δu=0 defines harmonic functions; boundary data on a bounded domain determine a unique continuous harmonic solution under the usual classical hypotheses by the maximum principle. Separated functions e^(ax)cos(ay) and e^(ax)sin(ay) are harmonic. For the heat equation u_t=u_xx with zero endpoint data, a sine expansion gives coefficients decaying like e^(−k²π²t), so solutions tend to zero. Uniqueness transfers symmetries of the domain and initial data to the solution. The energy E(t)=∫u² satisfies E′=2∫u u_xx=−2∫u_x² after integration by parts, since the boundary terms vanish. Common pitfalls include claiming interior attainment of a strict boundary maximum, overlooking reflection symmetry, and confusing energy dissipation with pointwise monotonicity.",
+      "similar_questions": [
+        {
+          "prompt": "Show e^(ax)cos(ay) is harmonic.",
+          "solution": "Its second x derivative is a²e^(ax)cos(ay), while its second y derivative is −a²e^(ax)cos(ay). Their sum is zero."
+        },
+        {
+          "prompt": "Can a nonconstant harmonic function attain its maximum at an interior point?",
+          "solution": "No. The strong maximum principle forces a harmonic function attaining an interior maximum to be constant on a connected domain. Thus strict extrema from nonconstant boundary data are not interior values."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 94, PDF page 74. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704174, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 74,
+      "image": "assets/questions/2024-december-28feb-q094.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q095",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 95,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "u_t=u_xx on (0,1)×(0,∞), u(x,0)=4x(1−x), u(0,t)=u(1,t)=0. Which are true?",
+      "options": {
+        "A": "u(x,t)→0 for each interior x",
+        "B": "u(x,t)=u(1−x,t)",
+        "C": "∫₀¹u(x,t)²dx is nonincreasing in t",
+        "D": "That integral is nondecreasing in t"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Reflect x about 1/2 and use uniqueness.",
+        "Differentiate the squared L² norm and integrate by parts."
+      ],
+      "solution": "The sine-series solution is ∑b_ke^(−k²π²t)sin(kπx), so it decays to zero as t→∞, proving A. Reflection v(x,t)=u(1−x,t) obeys the same equation, boundary conditions, and symmetric initial data; uniqueness gives B. Energy differentiation gives E′=2∫u u_xx=−2∫u_x²≤0, proving C. Since the solution is nonzero at small t, it cannot have identically zero spatial derivative under zero boundaries; energy strictly dissipates then, rejecting D.",
+      "theory": "The Laplace equation Δu=0 defines harmonic functions; boundary data on a bounded domain determine a unique continuous harmonic solution under the usual classical hypotheses by the maximum principle. Separated functions e^(ax)cos(ay) and e^(ax)sin(ay) are harmonic. For the heat equation u_t=u_xx with zero endpoint data, a sine expansion gives coefficients decaying like e^(−k²π²t), so solutions tend to zero. Uniqueness transfers symmetries of the domain and initial data to the solution. The energy E(t)=∫u² satisfies E′=2∫u u_xx=−2∫u_x² after integration by parts, since the boundary terms vanish. Common pitfalls include claiming interior attainment of a strict boundary maximum, overlooking reflection symmetry, and confusing energy dissipation with pointwise monotonicity.",
+      "similar_questions": [
+        {
+          "prompt": "For initial data sin(πx), give the heat solution and energy.",
+          "solution": "u=e^(−π²t)sin(πx), so E=(1/2)e^(−2π²t), which strictly decreases to zero."
+        },
+        {
+          "prompt": "If the initial data are antisymmetric about 1/2, what symmetry persists?",
+          "solution": "Reflection with sign, v=−u(1−x,t), satisfies the same initial and boundary problem. Uniqueness gives u(x,t)=−u(1−x,t)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 95, PDF page 75. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704175, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 75,
+      "image": "assets/questions/2024-december-28feb-q095.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q096",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 96,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "∫_(x₀)^(x₀+h)f(x)dx≈λh[f(x₀)+f(x₀+h)]+ph³[f″(x₀)+f″(x₀+h)] is exact for the highest possible polynomial degree. Which are true?",
+      "options": {
+        "A": "2λ+24p=0",
+        "B": "7λ−12p=4",
+        "C": "2λ+24p=−3",
+        "D": "7λ−12p=11"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Scale to x₀=0,h=1 and test f=1 and f=x².",
+        "The resulting rule is also exact for x and x³ but fails at x⁴."
+      ],
+      "solution": "Testing f=1 gives 2λ=1, so λ=1/2. Testing x² gives 1/3=λ+4p, hence p=−1/24. For x and x³, the rule returns 1/2 and λ+6p=1/4, respectively; for x⁴ it returns 1/2−12/24=0 instead of 1/5. Thus degree of exactness is 3 and the coefficients are forced. Then 2λ+24p=1−1=0 and 7λ−12p=7/2+1/2=4. A,B true; C,D false.",
+      "theory": "A quadrature rule's degree of exactness is the largest polynomial degree for which its output equals the exact integral. Coefficients are determined by testing low-degree monomials, after translating and scaling the integration interval to [0,1]. Derivative-based rules scale a second-derivative term by h³, since two derivatives contribute h⁻². Polynomial interpolation through distinct nodes has a unique polynomial of degree at most one less than the number of nodes. If a correction preserves previously fitted values, it vanishes at those nodes and is divisible by their node product. Testing the new point then fixes its remaining coefficient. Common pitfalls include forgetting interval scaling, claiming exactness without testing monomials, and solving a full coefficient system when the correction's roots already give its form.",
+      "similar_questions": [
+        {
+          "prompt": "Find the corrected rule for ∫₀¹x³dx.",
+          "solution": "With λ=1/2,p=−1/24, endpoint values sum to 1 and second derivatives sum to 6. The rule gives 1/2−6/24=1/4, the exact integral."
+        },
+        {
+          "prompt": "Compare it with the trapezoidal rule for x².",
+          "solution": "Trapezoidal output is 1/2; the second-derivative correction is −(2+2)/24=−1/6. The corrected value is 1/3, exact."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 96, PDF page 76. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704176, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 76,
+      "image": "assets/questions/2024-december-28feb-q096.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q097",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 97,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f has degree ≤2 and interpolates (−1,2),(0,1),(1,2). g has degree ≤3 and f+g also interpolates (2,17). Which are true?",
+      "options": {
+        "A": "f(5)+g(3)=50",
+        "B": "2f(5)−g(3)=4",
+        "C": "f(1)+g(3)=50",
+        "D": "f(5)+g(3)=74"
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The symmetric data give f=x²+1.",
+        "g vanishes at −1,0,1, so it is a multiple of x(x²−1)."
+      ],
+      "solution": "f=x²+1. Since g must preserve the first three interpolated values, g=Cx(x−1)(x+1). At x=2, f(2)=5, so g(2)=12 and 6C=12, giving C=2. Thus f(5)=26, g(3)=2·3·8=48, f(1)=2. The listed expressions are 74, 4, 50, 74, respectively. Therefore B,C,D hold and A fails.",
+      "theory": "A quadrature rule's degree of exactness is the largest polynomial degree for which its output equals the exact integral. Coefficients are determined by testing low-degree monomials, after translating and scaling the integration interval to [0,1]. Derivative-based rules scale a second-derivative term by h³, since two derivatives contribute h⁻². Polynomial interpolation through distinct nodes has a unique polynomial of degree at most one less than the number of nodes. If a correction preserves previously fitted values, it vanishes at those nodes and is divisible by their node product. Testing the new point then fixes its remaining coefficient. Common pitfalls include forgetting interval scaling, claiming exactness without testing monomials, and solving a full coefficient system when the correction's roots already give its form.",
+      "similar_questions": [
+        {
+          "prompt": "Correct f=x² through nodes −1,0,1 to interpolate value 10 at x=2.",
+          "solution": "The correction is Cx(x²−1). Since f(2)=4, 6C=6 gives C=1. The new polynomial is x²+x³−x."
+        },
+        {
+          "prompt": "Why is the correction unique among cubic polynomials?",
+          "solution": "A cubic vanishing at the three distinct nodes must be a scalar multiple of their degree-three node product. The fourth distinct node fixes that scalar uniquely."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 97, PDF page 77. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704177, official option(s) B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 77,
+      "image": "assets/questions/2024-december-28feb-q097.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q098",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 98,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Hard",
+      "prompt": "S(b) is the set of one-corner broken extremals for J=∫₀¹[(y′)⁴−3(y′)²]dx, y(0)=0,y(1)=b. Which are true?",
+      "options": {
+        "A": "S(2) has exactly two elements",
+        "B": "S(1/2) has exactly one element",
+        "C": "S(2) is empty",
+        "D": "S(1/2) has exactly two elements"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Apply both corner conditions to distinct slopes a,c.",
+        "Endpoint b must be a strict convex combination of the two allowed slopes."
+      ],
+      "solution": "On each smooth segment the Euler–Lagrange equation makes 4p³−6p constant; continuity of p on a segment therefore makes its slope constant. At the corner, momentum equality gives a²+ac+c²=3/2 for a≠c. Hamiltonian equality gives (a²−c²)(a²+c²−1)=0. If a²+c²=1, then ac=1/2 and (a−c)²=0, a contradiction. Thus c=−a and a²=3/2. The slopes must be ±s, s=√(3/2). For a corner at τ∈(0,1), b=τa+(1−τ)c lies strictly between −s and s. Hence b=2 is impossible. For b=1/2, each slope ordering gives exactly one τ=(b−c)/(a−c), yielding two distinct extremals. C,D true; A,B false.",
+      "theory": "A broken extremal is a continuous piecewise smooth stationary curve with a genuine interior corner. The Euler–Lagrange equation holds on each smooth segment. At a free corner, the Weierstrass–Erdmann conditions require continuity of the momentum F_(y′) and of the Hamiltonian y′F_(y′)−F. For an integrand depending only on y′, each segment is generally affine and these two matching conditions restrict the allowed distinct slopes. Endpoint displacement is a convex combination of those slopes, with weights given by the two segment lengths. Different slope orders can yield different admissible corners. A smooth extremal's weak local minimality is governed by small derivative variations; strong local minimality permits steep short variations with small position error. Common pitfalls include enforcing only one corner condition and confusing weak C¹ neighborhoods with strong C⁰ neighborhoods.",
+      "similar_questions": [
+        {
+          "prompt": "For b=0, locate both one-corner extremals.",
+          "solution": "The slopes are s and −s in either order. The endpoint average zero forces τ=1/2. The two graphs are a positive triangular arch and its negative."
+        },
+        {
+          "prompt": "For b=s=√(3/2), can a genuine one-corner extremal occur?",
+          "solution": "No. A strict convex combination of s and −s cannot equal the endpoint s. The only corresponding affine slope s has no corner."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 98, PDF page 78. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704178, official option(s) C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 78,
+      "image": "assets/questions/2024-december-28feb-q098.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q099",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 99,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Hard",
+      "prompt": "S={y∈C¹[−1,1]:y(−1)=−1,y(1)=3}, J[y]=∫_−1¹[(y′)³+(y′)²]dx. φ is the extremal. B₀ uses ‖y−φ‖∞<ε; B₁ uses ‖y−φ‖∞+‖y′−φ′‖∞<ε. Which are true?",
+      "options": {
+        "A": "φ(x)=2x+1",
+        "B": "Some B₀ neighborhood has J[y]≥J[φ] for all y",
+        "C": "Some B₁ neighborhood has J[y]≥J[φ] for all y",
+        "D": "Some B₁ neighborhood has J[y]≤J[φ] for all y"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Euler–Lagrange makes 3(y′)²+2y′ constant.",
+        "Expand around slope 2; small derivative variations and steep short variations behave differently."
+      ],
+      "solution": "For a C¹ extremal, 3p²+2p is constant, so continuous p lies in a finite root set and is constant. Endpoints force p=2, φ=2x+1, proving A. Write y=φ+z, h=z′; then ∫h=0 and J[y]−J[φ]=∫h²(7+h). If ‖h‖∞<1, this is nonnegative, proving C, and positive for any nonzero small smooth perturbation, rejecting D. B fails: use a localized triangular z with derivative −M over length δ and +M/2 over length 2δ. Its displacement returns to zero and its maximum magnitude is Mδ, arbitrarily small. The energy change is δM²[(7−M)+(7+M/2)/2]=δM²(21/2−3M/4)<0 when M>14. Smooth the corners while preserving endpoint values and the strict negative change, producing C¹ competitors in every B₀ neighborhood. Thus only A,C hold.",
+      "theory": "A broken extremal is a continuous piecewise smooth stationary curve with a genuine interior corner. The Euler–Lagrange equation holds on each smooth segment. At a free corner, the Weierstrass–Erdmann conditions require continuity of the momentum F_(y′) and of the Hamiltonian y′F_(y′)−F. For an integrand depending only on y′, each segment is generally affine and these two matching conditions restrict the allowed distinct slopes. Endpoint displacement is a convex combination of those slopes, with weights given by the two segment lengths. Different slope orders can yield different admissible corners. A smooth extremal's weak local minimality is governed by small derivative variations; strong local minimality permits steep short variations with small position error. Common pitfalls include enforcing only one corner condition and confusing weak C¹ neighborhoods with strong C⁰ neighborhoods.",
+      "similar_questions": [
+        {
+          "prompt": "For J=∫(y′)² with fixed endpoints, compare affine y with any perturbation z.",
+          "solution": "The cross term is 2p∫z′=0, so the change is ∫(z′)²≥0. Unlike the cubic case, every admissible perturbation raises energy, including steep ones."
+        },
+        {
+          "prompt": "For the cubic-plus-quadratic integrand at slope 2, compute the second variation.",
+          "solution": "F″(p)=6p+2, so F″(2)=14. The second variation is 14∫(z′)²>0 for nontrivial endpoint-zero perturbations, confirming strict weak local minimality."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 99, PDF page 79. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704179, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 79,
+      "image": "assets/questions/2024-december-28feb-q099.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q100",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 100,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "u(x)=f(x)+(2/π)∫₀ᵖⁱsin(x−t)u(t)dt has a unique solution for which f?",
+      "options": {
+        "A": "cos x",
+        "B": "cos5x",
+        "C": "sin x",
+        "D": "sin5x"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Expand sin(x−t) into a rank-two kernel.",
+        "On span{sin,cos}, K sends sin to −cos and cos to sin."
+      ],
+      "solution": "Let Ku=(2/π)[sin x∫cos t·u(t)dt−cos x∫sin t·u(t)dt]. Its range is span{sin,cos}; there K(sin)=−cos and K(cos)=sin, so K²=−I on that span and I−K is invertible. On the orthogonal complement K=0. Therefore I−K is invertible for every f, giving unique solutions for all four choices. Explicitly f=cos x gives u=(sin x+cos x)/2; f=sin x gives u=(sin x−cos x)/2. Fifth harmonics are orthogonal to both first harmonics on [0,π], so u=cos5x or sin5x for B,D.",
+      "theory": "A separable or degenerate integral kernel can be written as a finite sum a_j(x)b_j(t). The integral equation then reduces to a finite-dimensional linear system for the moments ∫b_j(t)u(t)dt. Solvability and uniqueness depend on the invertibility of the resulting coefficient matrix, not simply on the presence of a nonzero kernel. The identity sin(x−t)=sin x cos t−cos x sin t produces a rank-two operator. On [0,π], sin and cos are orthogonal and each has squared norm π/2, making its action on their span especially simple. Functions orthogonal to that span are annihilated by the kernel. Common pitfalls include interchanging sin(x−t) with sin(x+t), assuming a symmetric kernel when it is antisymmetric, and testing existence without checking the homogeneous equation.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u=sin x+Ku for this operator.",
+          "solution": "Put u=a sin+b cos. Then (I−K)u=(a−b)sin+(a+b)cos. Equate to sin: a−b=1,a+b=0, so u=(sin−cos)/2."
+        },
+        {
+          "prompt": "Show the homogeneous equation has only zero solution.",
+          "solution": "If u=Ku, then u belongs to span{sin,cos}. Its coefficient equations a=b and b=−a give a=b=0. Thus the homogeneous kernel is trivial and the moment system has a unique solution."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 100, PDF page 80. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704180, official option(s) A,B,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 80,
+      "image": "assets/questions/2024-december-28feb-q100.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q101",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 101,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "u(x)=3+sin x+∫₀ˣ[(3+sin x)/(3+sin t)]u(t)dt. Which are true?",
+      "options": {
+        "A": "u(π/2)=4eᵖⁱᐟ²",
+        "B": "u(π)=3eᵖⁱ",
+        "C": "u(−π)=4e⁻ᵖⁱ",
+        "D": "u(−π/2)=4eᵖⁱ"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Divide by the nonvanishing factor 3+sin x.",
+        "The quotient satisfies v=1+∫₀ˣv, hence v′=v."
+      ],
+      "solution": "Let v=u/(3+sin x), whose denominator is always ≥2. The equation becomes v(x)=1+∫₀ˣv(t)dt, so v′=v and v(0)=1. Thus v=eˣ and u=(3+sin x)eˣ. Values are u(π/2)=4e^(π/2), u(π)=3eπ, u(−π)=3e⁻π, and u(−π/2)=2e^(−π/2). Therefore A,B hold and C,D fail.",
+      "theory": "A separable or degenerate integral kernel can be written as a finite sum a_j(x)b_j(t). The integral equation then reduces to a finite-dimensional linear system for the moments ∫b_j(t)u(t)dt. Solvability and uniqueness depend on the invertibility of the resulting coefficient matrix, not simply on the presence of a nonzero kernel. The identity sin(x−t)=sin x cos t−cos x sin t produces a rank-two operator. On [0,π], sin and cos are orthogonal and each has squared norm π/2, making its action on their span especially simple. Functions orthogonal to that span are annihilated by the kernel. Common pitfalls include interchanging sin(x−t) with sin(x+t), assuming a symmetric kernel when it is antisymmetric, and testing existence without checking the homogeneous equation.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u(x)=2+x+∫₀ˣ[(2+x)/(2+t)]u(t)dt for x≥0.",
+          "solution": "Divide by 2+x: v=1+∫v. Thus v=eˣ and u=(2+x)eˣ."
+        },
+        {
+          "prompt": "Solve v(x)=5+2∫₀ˣv(t)dt.",
+          "solution": "Differentiation gives v′=2v with v(0)=5. Thus v=5e²ˣ; substitution integrates to 5+5(e²ˣ−1)=5e²ˣ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 101, PDF page 81. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704181, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 81,
+      "image": "assets/questions/2024-december-28feb-q101.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q102",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 102,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "T=5ẋ²/2+l²θ̇²+2lẋθ̇cosθ and L=T+2gl cosθ, g,l>0. Find the nonzero small-oscillation frequency.",
+      "options": {
+        "A": "(5/3)√(g/l)",
+        "B": "√(5g/(3l))",
+        "C": "(5/2)√(g/l)",
+        "D": "√(5g/(2l))"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Expand cosθ to second order in the potential and to zeroth order in the quadratic kinetic term.",
+        "Solve det(K−ω²M)=0 for the nonzero generalized eigenvalue."
+      ],
+      "solution": "The quadratic mass matrix is M=[[5,2l],[2l,2l²]], because T=(1/2)q̇ᵗMq̇. The quadratic potential is glθ², so K=[[0,0],[0,2gl]]. Normal frequencies satisfy det(K−ω²M)=ω²(6l²ω²−10gl)=0. Apart from the translation zero mode, ω²=5g/(3l), hence ω=√(5g/(3l)), option B. Equivalently the cyclic x equation gives ẍ=−(2l/5)θ̈, reducing the θ equation to (6l²/5)θ̈+2glθ=0.",
+      "theory": "For a mechanical system with one generalized coordinate x, the Lagrangian is kinetic energy minus potential energy, L=T−V. Its Euler–Lagrange equation is d/dt(∂L/∂ẋ)−∂L/∂x=0. An inextensible cord makes both attached blocks and every cord element move with the same speed, so kinetic energy includes all moving masses. Taking the table edge as zero height, a hanging block contributes −mgx to potential energy, and a uniform hanging cord of density M/l contributes −Mgx²/(2l). The generalized gravitational force is −dV/dx. If the kinetic coefficient is constant, acceleration equals generalized force divided by total moving mass. Common pitfalls include omitting one block's inertia, treating only the hanging cord as moving, and accepting a formula whose units are not acceleration.",
+      "similar_questions": [
+        {
+          "prompt": "For T=(m/2)ẋ² and V=(k/2)x², find the frequency.",
+          "solution": "Euler–Lagrange gives mẍ+kx=0. Thus ω²=k/m and ω=√(k/m)."
+        },
+        {
+          "prompt": "For a coupled mass matrix [[a,b],[b,c]] and stiffness diag(0,k), find the nonzero frequency.",
+          "solution": "The determinant is ω²[(ac−b²)ω²−ak]. Thus ω²=ak/(ac−b²), assuming the mass matrix is positive definite."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 102, PDF page 82. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704182, official option(s) B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 82,
+      "image": "assets/questions/2024-december-28feb-q102.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q103",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 103,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Random variables X_n and X share a probability space. Which are true?",
+      "options": {
+        "A": "Almost-sure convergence implies convergence in probability",
+        "B": "Convergence in probability implies almost-sure convergence",
+        "C": "If ∑P(|X_n−X|>δ)<∞ for every δ>0, then convergence is almost sure",
+        "D": "Convergence in distribution to an almost-sure constant implies convergence in probability"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Use indicator dominated convergence and Borel–Cantelli.",
+        "Independent rare events with divergent total probability refute B."
+      ],
+      "solution": "A follows since indicators of |X_n−X|>ε tend to zero almost surely and are bounded by one. B fails for independent Bernoulli X_n with P(X_n=1)=1/n: X_n→0 in probability, but the second Borel–Cantelli lemma gives infinitely many ones almost surely, so no almost-sure convergence. C follows by applying the first Borel–Cantelli lemma to thresholds δ=1/k and taking the countable intersection of probability-one events. For D with X=c a.s., convergence of distribution at c±ε bounds P(|X_n−c|>ε) by tails tending to zero (use slightly smaller thresholds if needed). Hence A,C,D hold.",
+      "theory": "Almost-sure convergence means sample paths converge outside a null set; convergence in probability means P(|X_n−X|>ε)→0 for every ε>0; convergence in distribution means convergence of distribution functions at continuity points of the limit law. Almost-sure convergence implies convergence in probability, which implies convergence in distribution. The reverse implications fail generally, but convergence in distribution to a constant implies convergence in probability to that constant. The first Borel–Cantelli lemma says summable event probabilities imply only finitely many occurrences almost surely, providing a sufficient condition for almost-sure convergence via thresholds ε=1/k. Independent Bernoulli sums satisfy the strong law and central limit theorem: centered sums divided by √n tend to a normal variable with the Bernoulli variance. Common pitfalls include reversing implications and omitting variance rescaling in a nonstandard normalization.",
+      "similar_questions": [
+        {
+          "prompt": "If P(|X_n|>ε)≤2⁻ⁿ for each ε>0, what convergence follows?",
+          "solution": "The probabilities are summable. Borel–Cantelli at ε=1/k makes only finitely many exceedances occur for every k almost surely, so X_n→0 almost surely and in probability."
+        },
+        {
+          "prompt": "If X_n converges in distribution to 7, what happens to P(|X_n−7|>0.1)?",
+          "solution": "It tends to zero because the limit is deterministic. Thus distribution convergence strengthens to convergence in probability in this special case."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 103, PDF page 83. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704183, official option(s) A,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 83,
+      "image": "assets/questions/2024-december-28feb-q103.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q104",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 104,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "(X_k,Y_k) are iid with density e⁻ʸ for 0<x<y<∞. N_n=#{k≤n:Y_k≥2}. Which are true?",
+      "options": {
+        "A": "N_n/(3n)→e⁻² almost surely",
+        "B": "N_n/n→e⁻² in probability",
+        "C": "N_n/n→3e⁻² in distribution",
+        "D": "(N_n−3ne⁻²)/√(3n) tends to Normal(0,e⁻²(1−3e⁻²))"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Integrate over x to get the marginal density of Y.",
+        "N_n is a sum of iid Bernoulli indicators with one computable success probability."
+      ],
+      "solution": "f_Y(y)=∫₀ʸe⁻ʸdx=ye⁻ʸ, so p=P(Y≥2)=∫₂∞ye⁻ʸdy=3e⁻². The strong law gives N_n/n→p almost surely, hence N_n/(3n)→e⁻² and convergence in distribution of N_n/n to p. B specifies the wrong limit. The Bernoulli CLT gives (N_n−np)/√n⇒N(0,p(1−p)); dividing further by √3 gives variance p(1−p)/3=e⁻²(1−3e⁻²). Therefore A,C,D hold.",
+      "theory": "Almost-sure convergence means sample paths converge outside a null set; convergence in probability means P(|X_n−X|>ε)→0 for every ε>0; convergence in distribution means convergence of distribution functions at continuity points of the limit law. Almost-sure convergence implies convergence in probability, which implies convergence in distribution. The reverse implications fail generally, but convergence in distribution to a constant implies convergence in probability to that constant. The first Borel–Cantelli lemma says summable event probabilities imply only finitely many occurrences almost surely, providing a sufficient condition for almost-sure convergence via thresholds ε=1/k. Independent Bernoulli sums satisfy the strong law and central limit theorem: centered sums divided by √n tend to a normal variable with the Bernoulli variance. Common pitfalls include reversing implications and omitting variance rescaling in a nonstandard normalization.",
+      "similar_questions": [
+        {
+          "prompt": "For this Y density, find P(Y≥a), a≥0.",
+          "solution": "Integration by parts gives ∫_a∞ye⁻ʸdy=(a+1)e⁻ᵃ."
+        },
+        {
+          "prompt": "For N_n~Binomial(n,p), find the limit variance of (N_n−np)/√(cn).",
+          "solution": "The standard CLT variance is p(1−p) after √n normalization. Dividing by √c gives variance p(1−p)/c."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 104, PDF page 84. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704184, official option(s) A,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 84,
+      "image": "assets/questions/2024-december-28feb-q104.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q105",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 105,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A Markov chain on {0,1,2} has P=[[0,1/2,1/2],[3/4,0,1/4],[3/4,1/4,0]]. Which are true?",
+      "options": {
+        "A": "P⁽²⁾₀₀=3/4",
+        "B": "P⁽³⁾₁₀=39/64",
+        "C": "The stationary probability of state 2 is 2/7",
+        "D": "State 1 is transient"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Multiply P for the requested transition entries.",
+        "The symmetry of states 1 and 2 simplifies the stationary equations."
+      ],
+      "solution": "P⁽²⁾₀₀=(1/2)(3/4)+(1/2)(3/4)=3/4, A. Row 1 of P² is (3/16,7/16,3/8), so P⁽³⁾₁₀=(7/16)(3/4)+(3/8)(3/4)=39/64, B. By symmetry π₁=π₂=a and π₀=(3/4)(2a)=3a/2. Normalization gives (7/2)a=1, so a=2/7 and π₀=3/7, proving C. The finite chain is irreducible (all distinct-state transitions are positive), so every state is positive recurrent, not transient. D fails.",
+      "theory": "For a two-state transition system, let p_n be the probability of state T at step n. If P(T next|T now)=a and P(T next|F now)=b, total probability gives p_(n+1)=a p_n+b(1−p_n)=b+(a−b)p_n. The stationary value is p*=b/(1−a+b), provided the denominator is nonzero. Subtraction gives p_n−p*=(a−b)^(n−1)(p_1−p*). When |a−b|<1, dependence on the initial distribution decays geometrically. Stationarity does not mean independence: consecutive states may remain correlated. In queueing systems with nonexponential service times, the number of customers alone is generally not Markov because the residual service distribution depends on age. Common pitfalls include using a stationary value as an exact finite-step probability and assuming the memoryless property for a gamma service distribution.",
+      "similar_questions": [
+        {
+          "prompt": "Find the stationary distribution of the symmetric two-state chain [[0.8,0.2],[0.2,0.8]].",
+          "solution": "The balance equations give equal state probabilities, and normalization yields (1/2,1/2)."
+        },
+        {
+          "prompt": "Why is an irreducible finite chain recurrent?",
+          "solution": "It has a stationary probability distribution with strictly positive entries and finite expected return time 1/π_i for each state. Hence all states are positive recurrent, excluding transience."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 105, PDF page 85. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704185, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 85,
+      "image": "assets/questions/2024-december-28feb-q105.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q106",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 106,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "For an iid sample with absolutely continuous CDF F, Y_(r,n)=nF(X_(r:n)), r=2,3. Let its limiting law be Y_r. Which are true?",
+      "options": {
+        "A": "Y₂ is gamma with mean 2",
+        "B": "E(Y_(3,n))→3",
+        "C": "Y₃ is beta with mean 1/3",
+        "D": "Y_(2,n) is Beta(2,n−1)"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Transform the sample by F to independent uniforms.",
+        "The unscaled order statistic is beta; multiplying by n produces the gamma limit."
+      ],
+      "solution": "U_i=F(X_i) are iid uniform and U_(r:n)=F(X_(r:n))~Beta(r,n−r+1). For fixed r, nU_(r:n)⇒Gamma(r,rate 1), so Y₂ has mean 2 and Y₃ has gamma mean 3, not the beta law stated in C. Directly E(Y_(3,n))=n·3/(n+1)→3, proving B without relying on moment convergence from weak convergence. D omits the factor n: Y_(2,n)=n·Beta(2,n−1), with support [0,n], not [0,1]. A,B hold.",
+      "theory": "For a random variable with continuous distribution function F, the probability integral transform F(X) is uniform on (0,1). Applying this coordinatewise to an independent sample preserves independence and order. The rth uniform order statistic U_(r:n) has Beta(r,n−r+1) distribution and mean r/(n+1). For fixed r, nU_(r:n) converges in distribution to a Gamma(r,rate 1) variable, as can be seen from the limiting Poisson count of uniform observations below y/n. Scaling a beta variable changes its support and does not preserve its original beta distribution on [0,1]. Inverse distribution functions transform uniforms into other distributions, including the standard normal. Common pitfalls include transferring convergence of distributions to convergence of expectations without proof and forgetting the factor n in a scaled order statistic.",
+      "similar_questions": [
+        {
+          "prompt": "Find E[nF(X_(1:n))].",
+          "solution": "The first uniform order statistic has mean 1/(n+1), so the scaled mean is n/(n+1)→1, matching the exponential/Gamma(1,1) limit."
+        },
+        {
+          "prompt": "Find the variance of U_(2:n).",
+          "solution": "For Beta(2,n−1), variance is 2(n−1)/[(n+1)²(n+2)]. Multiplication by n² gives the scaled variance, which tends to 2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 106, PDF page 86. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704186, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 86,
+      "image": "assets/questions/2024-december-28feb-q106.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q107",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 107,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "X has Cauchy density 1/[π(1+x²)]. Z=1/2+arctan(X)/π. Which are true?",
+      "options": {
+        "A": "E(Zᵐ)=1/(m+1) for all m∈ℕ",
+        "B": "E[Φ⁻¹(Z)]=0 for standard normal CDF Φ",
+        "C": "Z is degenerate at 0",
+        "D": "Z has the distribution of (Z₁+Z₂)/2 for iid copies Z₁,Z₂"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Recognize Z as the Cauchy CDF evaluated at X.",
+        "Uniform moments and the inverse-CDF transform identify A,B; variance tests D."
+      ],
+      "solution": "The Cauchy CDF is F(x)=1/2+arctan x/π, so Z=F(X)~Uniform(0,1). Thus E Zᵐ=∫₀¹zᵐdz=1/(m+1), proving A. Φ⁻¹(Z) is standard normal and has mean zero, proving B. Z is nondegenerate, rejecting C. Var Z=1/12, while independent averaging gives Var[(Z₁+Z₂)/2]=1/24, so the distributions differ and D fails.",
+      "theory": "For a random variable with continuous distribution function F, the probability integral transform F(X) is uniform on (0,1). Applying this coordinatewise to an independent sample preserves independence and order. The rth uniform order statistic U_(r:n) has Beta(r,n−r+1) distribution and mean r/(n+1). For fixed r, nU_(r:n) converges in distribution to a Gamma(r,rate 1) variable, as can be seen from the limiting Poisson count of uniform observations below y/n. Scaling a beta variable changes its support and does not preserve its original beta distribution on [0,1]. Inverse distribution functions transform uniforms into other distributions, including the standard normal. Common pitfalls include transferring convergence of distributions to convergence of expectations without proof and forgetting the factor n in a scaled order statistic.",
+      "similar_questions": [
+        {
+          "prompt": "If U is uniform, what is −log U distributed as?",
+          "solution": "For t≥0, P(−log U>t)=P(U<e⁻ᵗ)=e⁻ᵗ. Thus it is exponential with rate 1 and mean 1."
+        },
+        {
+          "prompt": "Find E(Z²) and Var Z in this problem.",
+          "solution": "Uniform integration gives E Z²=1/3 and E Z=1/2. Therefore Var Z=1/3−1/4=1/12."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 107, PDF page 87. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704187, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 87,
+      "image": "assets/questions/2024-december-28feb-q107.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q108",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 108,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Z₁~Binomial(2,1/2), Z₂~Poisson(1), independently. The equations are x₁−2x₂+x₃=1, 2x₁−5x₂+2x₃=2, x₁+2x₂+Z₁x₃=Z₂. Find the probability of infinitely many solutions.",
+      "options": {
+        "A": "e⁻¹",
+        "B": "e⁻¹/2",
+        "C": "e⁻¹/4",
+        "D": "e⁻¹/12"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Subtract twice the first equation from the second.",
+        "The remaining scalar equation becomes an identity only for one pair (Z₁,Z₂)."
+      ],
+      "solution": "The subtraction gives −x₂=0. Hence x₂=0 and x₁+x₃=1. The third equation becomes (Z₁−1)x₃=Z₂−1. Infinitely many solutions occur exactly when Z₁=1 and Z₂=1; otherwise it is either inconsistent or fixes x₃ uniquely. By independence the probability is [binomial(2,1)(1/2)²]·e⁻¹= e⁻¹/2, B.",
+      "theory": "Expectation is integration against a probability measure. For independent uniform coordinates on [0,1], an integral over the unit cube is the expectation of the same expression in independent U(0,1) variables. The strong law of large numbers states that sample averages of integrable independent identically distributed variables converge almost surely to their expectations. Ratios converge when the limiting denominator is nonzero. The dominated convergence theorem passes an almost-sure limit through expectation when all random variables are bounded in magnitude by one integrable bound. Bayes' theorem instead combines prior probabilities with conditional likelihoods and normalizes their products. Common pitfalls include dividing expectations instead of applying an asymptotic law, ignoring a zero-denominator point of measure zero, and failing to normalize posterior weights.",
+      "similar_questions": [
+        {
+          "prompt": "If (Z₁,Z₂)=(1,0), classify solutions.",
+          "solution": "The reduced equation is 0·x₃=−1, so there are no solutions."
+        },
+        {
+          "prompt": "If (Z₁,Z₂)=(2,3), find the unique solution.",
+          "solution": "The reduced equation gives x₃=2. Then x₁=1−2=−1 and x₂=0, yielding (−1,0,2)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 108, PDF page 88. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704188, official option(s) B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 88,
+      "image": "assets/questions/2024-december-28feb-q108.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q109",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 109,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X₁,…,X₁₃ iid Poisson(θ), θ>0. Which are true?",
+      "options": {
+        "A": "(∑_{i=1}⁸X_i)(∑_{i=8}¹³X_i) is unbiased for 48θ²",
+        "B": "(1/13)∑_{i=1}¹³X_i is the method-of-moments estimator",
+        "C": "No unbiased estimator of e⁻⁷ᶿ exists",
+        "D": "(e^(X₇),∑_{i=1}⁶X_i,∑_{i=8}¹³X_i) is sufficient for θ"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "The two sums in A overlap at X₈.",
+        "A zero-count event estimates e⁻⁷ᶿ; the tuple in D recovers the total."
+      ],
+      "solution": "Let A₀=∑₁⁸X_i and B₀=∑₈¹³X_i. Their means are 8θ and 6θ, but Cov(A₀,B₀)=Var X₈=θ. Thus E(A₀B₀)=48θ²+θ and A is false. E X_i=θ, so matching the sample mean proves B. The indicator 1_{X₁+⋯+X₇=0} has expectation e⁻⁷ᶿ, disproving C. The Poisson likelihood factors through total T=∑₁¹³X_i; D’s tuple recovers X₇ by logarithm and thus T by summation, so it is sufficient. B,D hold.",
+      "theory": "A statistic is sufficient for a parameter when the conditional sample distribution given that statistic does not depend on the parameter. The factorization theorem establishes sufficiency by writing the likelihood as a parameter-dependent function of the statistic times a parameter-free factor. Independent Poisson counts have total T~Poisson(nθ), and their likelihood depends on θ only through T, so the total is sufficient. Any statistic from which T can be recovered is also sufficient. Method of moments equates the sample mean to the population mean; for a Poisson model this gives the sample mean as estimator of θ. Overlapping sums are not independent: covariance equals the variance of their shared counts. Exponential-function unbiased estimators can be built using Poisson probability-generating functions or zero-count events. Common pitfalls include assuming different-looking sums are disjoint and confusing a nonlinear transform of a count with loss of information when that transform is injective.",
+      "similar_questions": [
+        {
+          "prompt": "Give an unbiased estimator of e⁻²ᶿ using two iid Poisson(θ) counts.",
+          "solution": "Their sum is Poisson(2θ), so the indicator of both being zero has expectation P(sum=0)=e⁻²ᶿ."
+        },
+        {
+          "prompt": "Give an unbiased estimator of θ² from one Poisson(θ) variable.",
+          "solution": "The factorial moment E[X(X−1)]=θ², so X(X−1) is unbiased. In contrast E X²=θ²+θ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 109, PDF page 89. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704189, official option(s) B,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 89,
+      "image": "assets/questions/2024-december-28feb-q109.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q110",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 110,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X₁,X₂,X₃ iid Uniform[0,θ]. The LR test of H₀:θ=3 against θ≠3 has size 0.001. Which are true?",
+      "options": {
+        "A": "Reject if max X_i=3.1",
+        "B": "Reject if max X_i=1.3",
+        "C": "Reject if max X_i=0.1",
+        "D": "Its power at θ=0.3 is 1"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The full-model MLE is the sample maximum M.",
+        "Under the null the ratio is (M/3)³, with lower cutoff 0.001."
+      ],
+      "solution": "For M≤3, Λ=(M/3)³; for M>3 the null likelihood is zero, so rejection is automatic. Under H₀, P(M<c)=(c/3)³, giving the size-0.001 cutoff c=3(0.001)^(1/3)=0.3. Thus reject when M<0.3 or M>3. Values 3.1 and 0.1 reject, while 1.3 does not. At θ=0.3, M<0.3 almost surely, so power is 1. Hence A,C,D hold.",
+      "theory": "A likelihood-ratio test compares the maximum null likelihood with the maximum likelihood over the full parameter set. Small ratios signal poor agreement with the null. For Uniform[0,θ], the unconstrained MLE is the sample maximum M and the likelihood is θ⁻ⁿ1_{M≤θ}. A fixed null θ₀ gives ratio (M/θ₀)ⁿ when M≤θ₀ and zero if M>θ₀. Under the null, (M/θ₀)ⁿ is uniform on [0,1], so a size-α test rejects for M<θ₀α^(1/n) or M>θ₀. The upper-tail rejection costs no null probability because observations outside the null support are impossible there. Common pitfalls include designing a symmetric two-tail cutoff and missing automatic rejection when an observation lies outside the null support.",
+      "similar_questions": [
+        {
+          "prompt": "For n=2, θ₀=4 and size 0.01, find the LR rejection rule.",
+          "solution": "The lower cutoff is 4√0.01=0.4. Reject for M<0.4 or M>4."
+        },
+        {
+          "prompt": "For the present n=3 rule, find power at θ=1.",
+          "solution": "The upper-support rejection is impossible because M≤1. The lower event M<0.3 has probability (0.3/1)³=0.027, so power is 0.027."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 110, PDF page 90. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704190, official option(s) A,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 90,
+      "image": "assets/questions/2024-december-28feb-q110.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q111",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 111,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X_i have density e⁻⁽ˣ⁻ᶿ⁾ for x≥θ, zero otherwise. X_(1)=min X_i. Which intervals have the claimed confidence levels?",
+      "options": {
+        "A": "(X_(1)−(2/n)ln5,X_(1)) has level 97%",
+        "B": "The same interval has level 96%",
+        "C": "(X_(1)−(1/n)ln20,X_(1)) has level 95%",
+        "D": "The latter interval has level 96%"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The minimum gap has Exp(rate n) distribution.",
+        "Coverage for width c/n is 1−e⁻ᶜ."
+      ],
+      "solution": "P(X_(1)−θ>t)=e⁻ⁿᵗ for t≥0. Coverage of (X_(1)−c/n,X_(1)) is P(0<X_(1)−θ<c/n)=1−e⁻ᶜ. With c=2ln5 this is 1−1/25=0.96, so B is true and A false. With c=ln20 it is 1−1/20=0.95, so C is true and D false. Endpoint inclusions do not matter because the pivot is continuous.",
+      "theory": "A confidence interval is a random interval whose coverage probability equals the stated level for every parameter value. For shifted exponential observations X_i=θ+E_i with E_i iid Exp(1), the minimum gap X_(1)−θ has exponential rate n. Therefore n(X_(1)−θ) is a parameter-free Exp(1) pivot, and an interval (X_(1)−c/n,X_(1)) has coverage 1−e⁻ᶜ. For Uniform(θ,θ+1), the shifted minimum has Beta(1,n) distribution and mean 1/(n+1), so the sample minimum is biased but becomes consistent. Consistency means convergence in probability to the parameter and does not require exact finite-sample unbiasedness. The sample maximum instead converges to θ+1. Common pitfalls include reading a nominal level without calculating its tail probability and confusing asymptotic unbiasedness with exact unbiasedness.",
+      "similar_questions": [
+        {
+          "prompt": "Give a 90% interval based on this minimum.",
+          "solution": "Choose c with e⁻ᶜ=0.1, so c=ln10. The interval is (X_(1)−ln10/n,X_(1))."
+        },
+        {
+          "prompt": "Find the bias of X_(1) as estimator of θ.",
+          "solution": "The gap is Exp(rate n), whose mean is 1/n. Thus E X_(1)=θ+1/n, and X_(1)−1/n is unbiased."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 111, PDF page 90. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704191, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 90,
+      "image": "assets/questions/2024-december-28feb-q111.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q112",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 112,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X₁,…,Xₙ iid Uniform(θ,θ+1), θ∈ℝ. T_n=min X_i. Which are true?",
+      "options": {
+        "A": "T_n is unbiased for θ",
+        "B": "Eθ(T_n)→θ for every θ",
+        "C": "T_n is consistent for θ",
+        "D": "max X_i is consistent for θ"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Shift by θ and use the first uniform order statistic.",
+        "The maximum estimates the other endpoint."
+      ],
+      "solution": "T_n−θ has mean 1/(n+1), so E T_n=θ+1/(n+1); A fails but B holds. For 0<ε<1, P(|T_n−θ|>ε)=(1−ε)ⁿ→0, proving consistency C. Conversely max X_i→θ+1 in probability since P(max≤θ+1−ε)=(1−ε)ⁿ. It therefore is not consistent for θ, rejecting D.",
+      "theory": "A confidence interval is a random interval whose coverage probability equals the stated level for every parameter value. For shifted exponential observations X_i=θ+E_i with E_i iid Exp(1), the minimum gap X_(1)−θ has exponential rate n. Therefore n(X_(1)−θ) is a parameter-free Exp(1) pivot, and an interval (X_(1)−c/n,X_(1)) has coverage 1−e⁻ᶜ. For Uniform(θ,θ+1), the shifted minimum has Beta(1,n) distribution and mean 1/(n+1), so the sample minimum is biased but becomes consistent. Consistency means convergence in probability to the parameter and does not require exact finite-sample unbiasedness. The sample maximum instead converges to θ+1. Common pitfalls include reading a nominal level without calculating its tail probability and confusing asymptotic unbiasedness with exact unbiasedness.",
+      "similar_questions": [
+        {
+          "prompt": "Give an unbiased correction to the uniform sample minimum.",
+          "solution": "Subtract its known bias: T_n−1/(n+1) has expectation θ."
+        },
+        {
+          "prompt": "Give a consistent estimator of θ based on the maximum.",
+          "solution": "Since max X_i→θ+1, the corrected estimator max X_i−1 converges in probability to θ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 112, PDF page 91. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704192, official option(s) B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 91,
+      "image": "assets/questions/2024-december-28feb-q112.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q113",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 113,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "For a symmetric absolutely continuous sample of size 3, T⁺ is the Wilcoxon sum of positive-sign absolute ranks. Which are true?",
+      "options": {
+        "A": "P(T⁺=3)=1/4",
+        "B": "Var T⁺=7/2",
+        "C": "P(T⁺>3)=5/8",
+        "D": "P(T⁺>4)=1/8"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Enumerate the eight subsets of ranks {1,2,3}.",
+        "Variance is one quarter of 1²+2²+3²."
+      ],
+      "solution": "The eight equiprobable subset sums are 0,1,2,3,3,4,5,6. Therefore P(T⁺=3)=2/8=1/4, proving A. Write T⁺=B₁+2B₂+3B₃ with iid fair Bernoulli signs; variance=(1+4+9)/4=7/2, proving B. The strict upper tails have P(T⁺>3)=3/8 and P(T⁺>4)=2/8=1/4, rejecting C,D.",
+      "theory": "The Wilcoxon signed-rank statistic adds the ranks of absolute observations whose signs are positive. Under an absolutely continuous distribution symmetric about zero, ties and zeros occur with probability zero, the signs are independent fair Bernoulli choices, and conditional on the absolute ranks all 2ⁿ subsets of {1,…,n} are equally likely. Thus T⁺ has the distribution of ∑rB_r with independent Bernoulli(1/2) variables. Its mean is n(n+1)/4 and variance n(n+1)(2n+1)/24, obtained by summing r²/4. Exact small-sample probabilities come from enumerating subset sums, with repeated sums counted separately. Common pitfalls include treating the statistic as binomial, counting distinct sums rather than sign patterns, and forgetting that strict tail inequalities exclude the boundary value.",
+      "similar_questions": [
+        {
+          "prompt": "For n=2, list the signed-rank distribution.",
+          "solution": "The four equally probable subsets of {1,2} have sums 0,1,2,3, so T⁺ is uniform on those four values and has variance 5/4."
+        },
+        {
+          "prompt": "For n=4, compute E T⁺ and Var T⁺.",
+          "solution": "Mean is (1+2+3+4)/2=5. Variance is (1+4+9+16)/4=30/4=15/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 113, PDF page 92. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704193, official option(s) A,B; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 92,
+      "image": "assets/questions/2024-december-28feb-q113.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q114",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 114,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X_i iid N(θ,1); prior θ~N(1,2). δ_n is the squared-error Bayes estimator. Z is the limit law of [(2n+1)δ_n−1−2nθ]/√n. Which are true?",
+      "options": {
+        "A": "δ_n→θ in probability for every θ",
+        "B": "Z is normal",
+        "C": "E Z⁴=48",
+        "D": "E Z²=1"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Compute the conjugate posterior mean using prior precision 1/2.",
+        "The displayed normalized expression simplifies to twice the centered normalized sample sum."
+      ],
+      "solution": "Posterior precision is n+1/2 and mean δ_n=(∑X_i+1/2)/(n+1/2)=(2∑X_i+1)/(2n+1). Its bias is (1−θ)/(2n+1)→0 and variance 4n/(2n+1)²→0, proving A. The normalized expression equals 2(∑X_i−nθ)/√n, exactly N(0,4) for every n. Thus Z~N(0,4), proving B. Its fourth moment is 3·4²=48, proving C, while its second moment is 4, rejecting D.",
+      "theory": "Under squared-error loss, the Bayes estimator is the posterior mean, assuming the posterior second moment exists. Normal likelihoods and normal priors are conjugate: posterior precision is prior precision plus sample precision, and posterior mean is their precision-weighted combination. For known sampling variance one and prior mean m₀, variance τ², the posterior mean is (nX̄+m₀/τ²)/(n+1/τ²). As sample size increases, prior influence vanishes and the estimator is consistent for each fixed true mean. Exact linear transformations of the sample sum remain normal, so an asymptotic normal law may already hold at every n. A centered normal variable of variance v has second moment v and fourth moment 3v². Common pitfalls include treating prior variance as precision, confusing posterior randomness with frequentist sampling of the estimator, and using standard-normal moments without checking the resulting variance.",
+      "similar_questions": [
+        {
+          "prompt": "With prior N(0,1) and sample variance one, find the posterior mean.",
+          "solution": "Prior precision 1 combines with sample precision n, giving δ=nX̄/(n+1)=∑X_i/(n+1)."
+        },
+        {
+          "prompt": "For Z~N(0,9), compute second and fourth moments.",
+          "solution": "E Z²=9 and E Z⁴=3·9²=243. The fourth-moment formula uses the square of variance."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 114, PDF page 93. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704194, official option(s) A,B,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 93,
+      "image": "assets/questions/2024-december-28feb-q114.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q115",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 115,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Y_i=β₁+⋯+β_i+ε_i, i=1,…,n, with uncorrelated mean-zero errors of variance σ². β̂_i are BLUEs. Which are true?",
+      "options": {
+        "A": "Residual sum of squares is positive almost surely",
+        "B": "Every β_i has infinitely many linear unbiased estimators",
+        "C": "Var β̂₁=σ²",
+        "D": "Y₃−Y₂ is the BLUE of β₃"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The cumulative-sum design is square and invertible.",
+        "Its inverse takes consecutive differences."
+      ],
+      "solution": "The lower-triangular design matrix has ones on and below the diagonal and determinant one. Its inverse yields β̂₁=Y₁ and β̂_i=Y_i−Y_(i−1) for i≥2. The fit is exactly Xβ̂=Y, so residual sum of squares is zero, rejecting A. Any linear unbiased estimator aᵗY of β_i must satisfy aᵗX=e_iᵗ; invertibility makes this solution unique, rejecting B. Var β̂₁=Var ε₁=σ² and β̂₃=Y₃−Y₂, so C,D hold. The source’s β₃ statement naturally presumes n≥3.",
+      "theory": "In a full-rank normal linear model with k coefficients and n observations, the residual sum of squares Q satisfies Q/σ²~χ²_ν with ν=n−k. The unbiased residual variance estimator is Q/ν, while the maximum-likelihood estimator is Q/n. Since a chi-square variable has mean ν and variance 2ν, these estimators' biases, variances and mean squared errors follow directly. The unbiased estimator has variance 2σ⁴/ν. The MLE has smaller variance 2νσ⁴/n² but downward bias −kσ²/n, so its MSE is σ⁴(2ν+k²)/n². Smaller variance does not automatically imply smaller MSE. For saturated square invertible designs, ν=0 and the fit interpolates the data exactly. Common pitfalls include forgetting the intercept in k and treating equality of MSEs as a strict inequality.",
+      "similar_questions": [
+        {
+          "prompt": "Find Var β̂_i for i≥2 in this model.",
+          "solution": "β̂_i=β_i+ε_i−ε_(i−1). Uncorrelated equal-variance errors give variance σ²+σ²=2σ²."
+        },
+        {
+          "prompt": "Find Cov(β̂₂,β̂₃).",
+          "solution": "Their error parts are ε₂−ε₁ and ε₃−ε₂. The only shared term gives covariance −Var ε₂=−σ²."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 115, PDF page 94. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704195, official option(s) C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 94,
+      "image": "assets/questions/2024-december-28feb-q115.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q116",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 116,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Normal regression has r regressors plus an intercept, full column rank. Let σ̂² be residual mean square and σ̂²_MLE the MLE. Which are true?",
+      "options": {
+        "A": "MSE(MLE)<MSE(σ̂²) when r=2,n=12",
+        "B": "Var(MLE)>Var(σ̂²) for 2≤r≤n−2,n≥12",
+        "C": "Var(MLE)<Var(σ̂²) for 1≤r≤n−2,n≥3",
+        "D": "MSE(MLE)>MSE(σ̂²) when r=7,n=12"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Degrees of freedom are ν=n−r−1.",
+        "Compare both variance and squared bias, checking equality at r=7."
+      ],
+      "solution": "With k=r+1 and ν=n−k, Q/σ²~χ²_ν. Hence Var σ̂²=2σ⁴/ν, while Var MLE=2νσ⁴/n², strictly smaller when 0<ν<n. Thus C holds and B fails. MSE MLE=σ⁴(2ν+k²)/n² and MSE σ̂²=2σ⁴/ν. For r=2,n=12, ν=9,k=3: these are 27σ⁴/144=3σ⁴/16 and 2σ⁴/9, so A holds. For r=7,n=12, ν=4,k=8: both are σ⁴/2, so the strict inequality D fails. Exactly A,C.",
+      "theory": "In a full-rank normal linear model with k coefficients and n observations, the residual sum of squares Q satisfies Q/σ²~χ²_ν with ν=n−k. The unbiased residual variance estimator is Q/ν, while the maximum-likelihood estimator is Q/n. Since a chi-square variable has mean ν and variance 2ν, these estimators' biases, variances and mean squared errors follow directly. The unbiased estimator has variance 2σ⁴/ν. The MLE has smaller variance 2νσ⁴/n² but downward bias −kσ²/n, so its MSE is σ⁴(2ν+k²)/n². Smaller variance does not automatically imply smaller MSE. For saturated square invertible designs, ν=0 and the fit interpolates the data exactly. Common pitfalls include forgetting the intercept in k and treating equality of MSEs as a strict inequality.",
+      "similar_questions": [
+        {
+          "prompt": "For n=10,k=2, compare MSEs.",
+          "solution": "ν=8. MSE MLE=(16+4)σ⁴/100=σ⁴/5, while unbiased MSE=2σ⁴/8=σ⁴/4; the MLE has smaller MSE."
+        },
+        {
+          "prompt": "For n=10,k=8, compare MSEs.",
+          "solution": "ν=2. MLE MSE=(4+64)σ⁴/100=0.68σ⁴; unbiased MSE=σ⁴. Despite larger bias the MLE is still better here, illustrating that the comparison depends on the parameters."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 116, PDF page 94. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704196, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 94,
+      "image": "assets/questions/2024-december-28feb-q116.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q117",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 117,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "(X₁,X₂) is bivariate normal with means (1,0), unit variances, correlation 1/2. U~Uniform(0,1) independently. Z=(UX₁+X₂−U)/√(U²+U+1). Which are true?",
+      "options": {
+        "A": "Z is symmetric about zero",
+        "B": "E Z²=2",
+        "C": "Var(Z²)=1",
+        "D": "Z and U are independent"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Condition on U=u and center X₁.",
+        "The denominator equals the conditional standard deviation."
+      ],
+      "solution": "Write A=X₁−1 and B=X₂. Their centered normal covariance is 1/2. Given U=u, the numerator uA+B is normal with mean zero and variance u²+1+2u(1/2)=u²+u+1. Therefore Z|U=u~N(0,1) for every u. The conditional law is constant, proving Z independent of U and standard normal; A,D hold. E Z²=1, not 2, and Var Z²=E Z⁴−(E Z²)²=3−1=2, not 1, rejecting B,C.",
+      "theory": "Under squared-error loss, the Bayes estimator is the posterior mean, assuming the posterior second moment exists. Normal likelihoods and normal priors are conjugate: posterior precision is prior precision plus sample precision, and posterior mean is their precision-weighted combination. For known sampling variance one and prior mean m₀, variance τ², the posterior mean is (nX̄+m₀/τ²)/(n+1/τ²). As sample size increases, prior influence vanishes and the estimator is consistent for each fixed true mean. Exact linear transformations of the sample sum remain normal, so an asymptotic normal law may already hold at every n. A centered normal variable of variance v has second moment v and fourth moment 3v². Common pitfalls include treating prior variance as precision, confusing posterior randomness with frequentist sampling of the estimator, and using standard-normal moments without checking the resulting variance.",
+      "similar_questions": [
+        {
+          "prompt": "For independent standard normals A,B and independent U, standardize UA+B.",
+          "solution": "Conditional variance is U²+1, so (UA+B)/√(U²+1) has conditional standard normal law for every U. It is standard normal and independent of U."
+        },
+        {
+          "prompt": "If correlation is ρ, what denominator gives the same property?",
+          "solution": "Var(uA+B)=u²+2ρu+1. Dividing by its square root yields N(0,1) conditionally wherever this variance is positive."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 117, PDF page 95. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704197, official option(s) A,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 95,
+      "image": "assets/questions/2024-december-28feb-q117.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q118",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 118,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "Blocks are columns: ABE, CDE, ACF, BDF, ADG, BCG, EFG. Which are true?",
+      "options": {
+        "A": "It is a balanced incomplete block design",
+        "B": "It is not connected",
+        "C": "It is binary",
+        "D": "It is symmetric"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Count v,b,k,r and pair concurrences.",
+        "All pairs occur once, so the concurrence graph is complete."
+      ],
+      "solution": "There are v=b=7 treatments/blocks, each block has k=3 distinct treatments, and each treatment occurs r=3 times. The seven triples contain 7·3=21 unordered treatment pairs, exactly the 21 pairs among seven treatments; direct inspection shows none repeats, so λ=1. Hence it is a BIBD and binary. Because v=b, it is symmetric. Every pair has positive concurrence, so the design is connected and B is false. A,C,D hold.",
+      "theory": "A block design assigns treatments to blocks. It is binary if each treatment appears at most once per block. A balanced incomplete block design has v treatments, b blocks, constant block size k<v, constant replication r, and constant concurrence λ for every treatment pair; its parameters satisfy vr=bk and λ(v−1)=r(k−1). A symmetric BIBD has v=b and therefore r=k. Connectedness means all treatment contrasts are estimable, equivalently the treatment concurrence graph is connected. A BIBD with λ>0 is connected because every treatment pair appears together somewhere. For a normal vector, conditional linear combinations can identify independence from a mixing variable when the conditional law is identical for all its values. Common pitfalls include equating incomplete with disconnected and claiming symmetry only from a visual arrangement.",
+      "similar_questions": [
+        {
+          "prompt": "Check the BIBD identities for this design.",
+          "solution": "vr=7·3=21=bk. Also λ(v−1)=1·6=6=r(k−1)=3·2, confirming the count relationships."
+        },
+        {
+          "prompt": "For all six pairs of four treatments as blocks, find BIBD parameters.",
+          "solution": "v=4,b=6,k=2. Each treatment occurs r=3 times and each pair λ=1. It is binary and connected but not symmetric since v≠b."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 118, PDF page 96. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704198, official option(s) A,C,D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 96,
+      "image": "assets/questions/2024-december-28feb-q118.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q119",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 119,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "X₁,X₂ have absolutely continuous laws with hazards h₁(t)≤h₂(t) for all t. Which are true?",
+      "options": {
+        "A": "P(X₁>1)≥P(X₂>1)",
+        "B": "P(X₁>1)≤P(X₂>1/2)",
+        "C": "E X₁≥E X₂ if both exist",
+        "D": "h₁+h₂ is the hazard of min(X₁,X₂)"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Integrate the hazard inequality to compare survival functions.",
+        "The minimum’s hazard sum requires independence, which is absent here."
+      ],
+      "solution": "S_i(t)=exp[−∫_−∞ᵗh_i(s)ds], so h₁≤h₂ implies S₁(t)≥S₂(t), proving A and stochastic ordering. This ordering implies E X₁≥E X₂ whenever both expectations exist, proving C. B fails for X₁~Exp(1), X₂~Exp(3): P(X₁>1)=e⁻¹>e⁻³ᐟ²=P(X₂>1/2). D is not forced without independence: take X₁=X₂~Exp(1). Marginal hazards are both 1, but min equals that same variable and has hazard 1, not 2. Exactly A,C hold.",
+      "theory": "For an absolutely continuous distribution with survival function S(t)=P(X>t)>0, the hazard is h(t)=f(t)/S(t)=−d log S(t)/dt almost everywhere. Integrating gives S(t)=exp(−∫_−∞ᵗh(s)ds), under the usual endpoint conventions. A smaller hazard therefore gives a larger survival function at every threshold, called first-order stochastic dominance. When expectations exist, this stochastic ordering also orders expectations, either by integrating positive and negative survival tails or by quantile coupling. Hazards add for the minimum of independent lifetimes because its survival function is the product of their survival functions. Without independence, the marginal hazards do not determine the minimum distribution. Common pitfalls include reversing survival ordering, comparing unequal thresholds from a same-threshold theorem, and silently assuming independence.",
+      "similar_questions": [
+        {
+          "prompt": "For independent exponential lifetimes of rates 2 and 3, find the minimum law.",
+          "solution": "Its survival is e⁻²ᵗe⁻³ᵗ=e⁻⁵ᵗ for t≥0, so the minimum is exponential rate 5, illustrating hazard addition under independence."
+        },
+        {
+          "prompt": "If X₁~Exp(1), X₂~Exp(2), compare their means and survivals.",
+          "solution": "For t≥0, e⁻ᵗ≥e⁻²ᵗ. Their means are 1 and 1/2, consistent with the smaller hazard producing the stochastically larger lifetime."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 119, PDF page 97. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704199, official option(s) A,C; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 97,
+      "image": "assets/questions/2024-december-28feb-q119.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-december-28feb-q120",
+      "source_type": "official_exam",
+      "paper_id": "2024-december-28feb",
+      "question_number": 120,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Operations Research",
+      "difficulty": "Easy",
+      "prompt": "Maximize P=x₁+x₂ subject to x₁+x₂+2x₃≤5, 2x₁−3x₃≥1, x₂+x₃≤0, and x₁,x₂,x₃≥0. Which are true?",
+      "options": {
+        "A": "The optimum value is 4",
+        "B": "(4,1,0) is an optimal point",
+        "C": "The optimum value is 6",
+        "D": "(1/2,0,0) is a corner point"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Nonnegativity and x₂+x₃≤0 force both those coordinates to zero.",
+        "Reduce the problem to a one-dimensional interval for x₁."
+      ],
+      "solution": "x₂=x₃=0 follows from the third constraint and nonnegativity. Remaining constraints are x₁≤5 and 2x₁≥1, so the feasible region is {(x₁,0,0):1/2≤x₁≤5}. Its endpoints are the corner points; thus (1/2,0,0) is a corner, proving D. The objective is x₁, maximized at (5,0,0) with value 5, rejecting A,C. Point (4,1,0) violates x₂+x₃≤0, so B fails.",
+      "theory": "A linear program optimizes a linear objective subject to linear inequalities and, often, nonnegativity restrictions. Its feasible region is a convex polyhedron; an extreme point cannot be expressed as a nontrivial convex combination of two different feasible points. Nonnegativity can make apparently complex constraints force some variables to zero: if x₂,x₃≥0 and x₂+x₃≤0, both must vanish. Reducing the remaining inequalities can reveal a line segment whose endpoints are exactly the corner points. A linear objective on a compact segment attains its optimum at an endpoint, unless it is constant. Every proposed optimal point must first be checked for feasibility, and the objective value should be distinguished from the coordinate vector. Common pitfalls include optimizing over an infeasible point and ignoring the effect of sign constraints.",
+      "similar_questions": [
+        {
+          "prompt": "Maximize x on the feasible segment 2≤x≤7.",
+          "solution": "The objective increases with x, so its maximum is 7 at the upper endpoint. The two corner points are 2 and 7."
+        },
+        {
+          "prompt": "If x,y≥0 and x+y≤0, what feasible points exist?",
+          "solution": "Each nonnegative summand must be zero, so only (0,0) is feasible. This can reduce the dimension of a larger linear program."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 120, PDF page 97. No candidate response used as an answer key. Cross-check: NTA final key, Mathematical Sciences, 28 February 2025, exact question ID 704200, official option(s) D; https://csirnet.nta.ac.in/images/csirdecember-2024final-answer-key.pdf.",
+      "page": 97,
+      "image": "assets/questions/2024-december-28feb-q120.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

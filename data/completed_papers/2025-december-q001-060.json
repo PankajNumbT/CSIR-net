@@ -1,0 +1,1599 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2025-december-q001",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 1,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Five students graduated from a college, not all in the same year, after each has studied for four years. If batchmates Jiten and Anwar were between Ramesh and Prakash but senior to Sam while Ramesh had left the college before Jiten took admission, then it is certain that",
+      "options": {
+        "A": "Anwar was the most senior",
+        "B": "Ramesh was the most senior",
+        "C": "Sam was the most junior",
+        "D": "Prakash was the most junior"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the departure-before-admission statement to orient Ramesh relative to Jiten.",
+        "Jiten and Anwar are tied, and lie between Ramesh and Prakash."
+      ],
+      "solution": "Ramesh is senior to Jiten. Since Jiten and Anwar are batchmates between Ramesh and Prakash, the order begins Ramesh, then Jiten=Anwar, then Prakash. Sam is junior to Jiten=Anwar, but his order relative to Prakash is unspecified. Thus Ramesh is necessarily the most senior (B); A is false, and either C or D can fail depending on whether Sam or Prakash is last.",
+      "theory": "An ordering problem is solved by translating each statement into a relation before combining relations. If two people study for the same fixed duration, earlier admission and earlier graduation give the same seniority order. “Between” does not by itself specify which endpoint is earlier; an additional inequality must fix the orientation. A conclusion is necessary only when it holds in every ordering satisfying the premises. To reject a proposed conclusion, construct one compatible ordering in which it fails. For categorical statements, represent classes by sets: “all A are B” means A is a subset of B, whereas “some A are B” asserts a nonempty intersection. Do not infer that a universal inclusion guarantees existence.",
+      "similar_questions": [
+        {
+          "prompt": "A is older than B, B and C have equal ages, and D is younger than C. Who is oldest?",
+          "solution": "A>B=C>D, so A is oldest."
+        },
+        {
+          "prompt": "A>B, B>C and B>D. Is C necessarily the youngest?",
+          "solution": "No. A>B>C>D satisfies the premises but D is youngest; A>B>D>C makes C youngest."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 1, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2025-december-q001.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q002",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 2,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Which among the following cities can be said most appropriately to bear the same relation to Tamil Nadu that Pune bears to Maharashtra; Surat to Gujarat and Asansol to West Bengal?",
+      "options": {
+        "A": "Tirupati",
+        "B": "Mysore",
+        "C": "Chennai",
+        "D": "Coimbatore"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The relation pairs each city with its own state.",
+        "The given cities are prominent cities other than their state capitals."
+      ],
+      "solution": "Coimbatore is a prominent city in Tamil Nadu other than its capital, so it follows the given pattern (D). Tirupati is in Andhra Pradesh and Mysore is in Karnataka, eliminating A and B. Chennai is the capital of Tamil Nadu and does not match the noncapital-city pattern, eliminating C.",
+      "theory": "A verbal analogy asks for a common relationship, rather than a superficial similarity of the names. First identify the type of objects on each side: here a city is paired with its own state. Then refine the relation by comparing the examples: these are prominent cities other than their state capitals. Test every candidate against both conditions. A city outside the specified state fails the first condition, and the state capital fails the refined pattern. In general, analogies can involve location, function, hierarchy, part and whole, or numerical structure. Prefer the relationship supported by all given examples. Avoid introducing a precise ranking or a changing population statistic unless the question actually requires it.",
+      "similar_questions": [
+        {
+          "prompt": "Choose the analogous pair: Jaipur:Rajasthan as Lucknow:which state?",
+          "solution": "Both are state capitals. Lucknow is the capital of Uttar Pradesh."
+        },
+        {
+          "prompt": "Which relation is shared by Surat:Gujarat and Pune:Maharashtra?",
+          "solution": "Each first item is a prominent city situated in the second item, its state; neither is that state’s capital."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 2, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2025-december-q002.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q003",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The geometric mean of 100 observations is 25. If each observation is multiplied by 4, what will be the new geometric mean?",
+      "options": {
+        "A": "100",
+        "B": "50",
+        "C": "25",
+        "D": "(25×4)^(1/2)"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Write the original mean as the hundredth root of a product.",
+        "Multiplying every factor by 4 multiplies that product by 4^100."
+      ],
+      "solution": "The new mean is (4^100 product x_i)^(1/100)=4G=100. Thus A is correct; B and C do not scale by 4, and D equals 10, also incorrect.",
+      "theory": "For positive observations x_1,...,x_n, the geometric mean is G=(x_1...x_n)^(1/n). Equivalently, log G is the arithmetic mean of their logarithms. Multiplying every observation by a positive constant c multiplies the product by c^n and the geometric mean by c. This homogeneity differs from multiplying the product alone by c, which would multiply the mean by c^(1/n). Geometric means naturally summarize multiplicative growth and ratios; zero or negative observations require separate conventions and generally cannot be handled by the real logarithmic definition. For equal weights all observations contribute equally. A useful check is that a mean of equal observations must equal that common observation, and any scaling formula should preserve this property.",
+      "similar_questions": [
+        {
+          "prompt": "The geometric mean of five positive numbers is 3. Each is multiplied by 7. Find the new mean.",
+          "solution": "The product gains a factor 7^5, so its fifth root gains a factor 7. The new mean is 21."
+        },
+        {
+          "prompt": "Find the geometric mean of 4 and 9, and of their doubles.",
+          "solution": "The original mean is sqrt(36)=6. Their doubles are 8 and 18, with mean sqrt(144)=12."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 3, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2025-december-q003.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q004",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 4,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Alloy A is formed by mixing iron (Fe) and nickel (Ni) in the ratio 3:4, while alloy B is formed by mixing Fe and Ni in the ratio 9:5. If equal quantities of alloys A and B are melted together to form a new alloy C, what will be the ratio of Fe to Ni in alloy C?",
+      "options": {
+        "A": "4:3",
+        "B": "5:3",
+        "C": "15:13",
+        "D": "13:9"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use iron fractions 3/7 and 9/14.",
+        "Take 14 mass units of each alloy to avoid fractions."
+      ],
+      "solution": "In 14 units of A there are 6 Fe and 8 Ni; in 14 units of B there are 9 Fe and 5 Ni. The combined masses are 15 Fe and 13 Ni, so the ratio is 15:13 (C). None of A, B or D reduces to this ratio.",
+      "theory": "In mixture problems, convert a component ratio into a fraction of the whole before adding quantities. A mixture with component ratio a:b has first-component fraction a/(a+b), not a/b. If quantities m and n of two mixtures are combined without material loss, their first-component mass is m a/(a+b)+n c/(c+d), and the other component is the complementary total mass. For equal quantities, simply average the component fractions. The resulting proportion must lie between the two original proportions; this gives a quick consistency check. Adding the numerators and denominators of the original ratios is generally wrong unless the underlying component units have been normalized consistently. Ratios should finally be reduced to coprime integers.",
+      "similar_questions": [
+        {
+          "prompt": "Equal masses of alloys with component ratios 1:3 and 3:1 are combined. Find the new ratio.",
+          "solution": "The first-component fraction is (1/4+3/4)/2=1/2, giving 1:1."
+        },
+        {
+          "prompt": "Mix twice as much of a 1:1 alloy as of a 1:3 alloy. Find the first-component fraction.",
+          "solution": "For masses 2 and 1 the first-component mass is 2(1/2)+1(1/4)=5/4. Dividing by total mass 3 gives 5/12, so the ratio is 5:7."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 4, PDF page 3. No candidate response used as an answer key.",
+      "page": 3,
+      "image": "assets/questions/2025-december-q004.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q005",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 5,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Two identical metal bars are heated to different temperatures and allowed to cool in the same surroundings. Which one of the following figures correctly shows their cooling curves? See the original source image for figures A–D.",
+      "options": {
+        "A": "Figure A",
+        "B": "Figure B",
+        "C": "Figure C",
+        "D": "Figure D"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Both bars approach the same surrounding temperature.",
+        "Their temperature difference decays with time without changing sign."
+      ],
+      "solution": "For T_i(t)=T_s+(T_i(0)-T_s)e^(-kt), T_1-T_2=(T_1(0)-T_2(0))e^(-kt). The curves never cross and approach the same limiting temperature, as in figure C. Figures A and D cross; figure B shows separated limiting levels. Thus option C is correct.",
+      "theory": "Newton’s law of cooling models a body in fixed surroundings by dT/dt=-k(T-T_s), where k>0 and T_s is the surrounding temperature. Its solution is T(t)=T_s+(T(0)-T_s)e^(-kt). Identical bars under the same heat-transfer conditions have the same k and the same limiting temperature T_s. Their temperature difference is their initial difference multiplied by e^(-kt), so its sign cannot change and its magnitude tends to zero. A graph showing crossing or different final temperatures is inconsistent with this model. The hotter bar initially cools faster in absolute degrees per unit time. This model assumes approximately uniform internal temperature and a constant heat-transfer coefficient; those assumptions underlie the qualitative exam diagram.",
+      "similar_questions": [
+        {
+          "prompt": "Two bodies start at 80°C and 60°C in 20°C surroundings with k=1. Find their difference at time t.",
+          "solution": "Their temperatures are 20+60e^(-t) and 20+40e^(-t), so the difference is 20e^(-t)>0."
+        },
+        {
+          "prompt": "A bar has initial temperature 100°C and ambient temperature 25°C. When is its excess temperature halved?",
+          "solution": "Its excess is 75e^(-kt). Setting this equal to 75/2 gives t=(log 2)/k."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 5, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2025-december-q005.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q006",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 6,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The following figure shows densities and masses of five objects (A to E). See the original source image for the radar chart. The object with the largest volume is ____.",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "D",
+        "D": "E"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Volume equals mass divided by density.",
+        "Compare the red radius divided by the blue radius on each object’s axis."
+      ],
+      "solution": "For D the chart gives mass 4 and density 2, so V_D=2 in common units. A has mass about 3.5 and density 2.5, with quotient about 1.4; B has 1/4; C has 2/5; E has 2/4. D has the largest mass-to-density ratio. Therefore C is correct, while the objects listed in A, B and D have smaller volumes.",
+      "theory": "Density is mass per unit volume: rho=m/V, so volume V=m/rho for positive density. In a graph containing masses and densities, compare the quotient for each object, rather than comparing either plotted quantity separately. Units must be compatible across the objects; a common unit conversion multiplies all computed volumes by the same factor and does not affect their ranking. A radar chart uses a separate radial axis for each category: read values outward from its centre, not by vertical height on the page. Similarly, relative change is the difference divided by the initial value. An absolute difference can be larger while its relative change is smaller. Specify whether the comparison concerns signed changes or magnitudes.",
+      "similar_questions": [
+        {
+          "prompt": "An object has mass 18 kg and density 3 kg/L. Find its volume.",
+          "solution": "V=m/rho=18/3=6 L."
+        },
+        {
+          "prompt": "Objects P and Q have (mass,density)=(12,4) and (10,2). Which is larger in volume?",
+          "solution": "V_P=3 and V_Q=5, so Q has larger volume despite its smaller mass."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 6, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2025-december-q006.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q007",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 7,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In an exam, questions of three difficulty levels hard, medium, and easy fetch respectively 7, 3, and 2 marks if correct and 0 if incorrect. Three students got 30 marks each but in three different ways, though the total number of questions correctly answered by each student was the same. Then what could be the total number of questions correctly answered by each of these students?",
+      "options": {
+        "A": "12",
+        "B": "10",
+        "C": "9",
+        "D": "6"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Let h+m+e=N and 7h+3m+2e=30.",
+        "Eliminate e to get 5h+m=30-2N, then impose e,m,h≥0."
+      ],
+      "solution": "For N=10, 5h+m=10 gives (h,m,e)=(0,10,0),(1,5,4),(2,0,8): three ways. For N=12 there are only (0,6,6),(1,1,10). For N=9 only (1,7,1),(2,2,5); for N=6 only (3,3,0). Thus only B permits three distinct compositions.",
+      "theory": "A counting problem with fixed integer scores or costs becomes a linear Diophantine equation. Require the variables to be integers and enforce nonnegativity, or strict positivity if every item type must occur. Eliminate one variable using a fixed total count, then derive a finite range for the remaining variables. Congruences often reduce the possibilities sharply: ax+by=N implies ax congruent to N modulo b. Solve that congruence and then check the bounds and the original equation. In three-variable problems, each feasible ordered triple describes one distinct composition. Do not confuse the number of compositions with the number of arrangements or labelled selections. Exhaustive enumeration within proven finite bounds is a valid way to verify completeness.",
+      "similar_questions": [
+        {
+          "prompt": "Scores are 5,3,1. How can three correct questions total 9?",
+          "solution": "With h+m+e=3 and 5h+3m+e=9, 2h+m=3. The solutions are (0,3,0) and (1,1,1)."
+        },
+        {
+          "prompt": "Scores are 4 and 1. Ten correct answers total 22. Find the counts.",
+          "solution": "If h+e=10 and 4h+e=22, subtraction gives 3h=12, so h=4,e=6."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 7, PDF page 6. No candidate response used as an answer key.",
+      "page": 6,
+      "image": "assets/questions/2025-december-q007.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q008",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 8,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The following plot shows temperature as a function of x and y. Along which path is the temperature change minimum? See the original source image for the colour plot.",
+      "options": {
+        "A": "x=constant or y=constant",
+        "B": "y/x²=constant",
+        "C": "y²+x²=constant",
+        "D": "yx=constant"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Identify the shape of the equal-colour contours.",
+        "They are arcs at a fixed distance from the origin."
+      ],
+      "solution": "The colours follow approximately circular contours centred at the origin. Along x²+y²=constant the distance from the origin and therefore the plotted temperature remain fixed: the change is zero. This is option C. Horizontal/vertical lines (A), the parabolic family in B and the hyperbolic family in D generally cross colour bands and change temperature.",
+      "theory": "For a scalar field T(x,y), a level curve is a path on which T remains constant. Along a differentiable parametrized path r(s), its rate of change is grad T(r(s)) dot r prime(s). Consequently the tangent to a regular level curve is perpendicular to the gradient, and the temperature change along such a curve is zero, its smallest possible magnitude. If a displayed field depends only on the distance r=sqrt(x^2+y^2) from the origin, its contours are circles x^2+y^2=constant. Straight horizontal or vertical paths and hyperbolas generally change r. Read the repeated colour bands in the given plot to identify the contour geometry; do not equate a small local slope with an entire constant-temperature path.",
+      "similar_questions": [
+        {
+          "prompt": "T(x,y)=x²+y². Find a path with no temperature change through (3,4).",
+          "solution": "The level is T=25, so x²+y²=25 is a constant-temperature path."
+        },
+        {
+          "prompt": "T(x,y)=xy. What are the level curves through points with xy=6?",
+          "solution": "They satisfy xy=6. Along any such hyperbola, dT=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 8, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2025-december-q008.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q009",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 9,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The minimum height of a plane vertical mirror that will allow a 6-feet tall person to see himself fully in it",
+      "options": {
+        "A": "depends on the distance between the person and the mirror",
+        "B": "is 3 feet",
+        "C": "is 4.5 feet",
+        "D": "is 6 feet"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the virtual image and the straight line from each endpoint to the eye.",
+        "Reflection points lie halfway between the eye height and each endpoint height."
+      ],
+      "solution": "If the eye height is e and full height H=6 feet, the required bottom reflection point is e/2, while the top is (e+H)/2. Their separation is H/2=3 feet, independent of distance. Thus B is correct; A is false and C,D exceed the minimum.",
+      "theory": "A plane mirror forms an upright virtual image at the same distance behind the mirror as the object is in front. The angle of reflection equals the angle of incidence. To determine the mirror segment needed to see a point on the body, connect the eye to that point’s virtual image; the intersection with the mirror is the reflection point. Because the object and image are equally distant from the mirror, this intersection lies halfway between the eye height and the point height. The reflection points for the head and feet therefore differ by half the person’s full height. Moving the person toward or away from the mirror changes the ray angles but leaves these halfway heights unchanged.",
+      "similar_questions": [
+        {
+          "prompt": "Find the minimum mirror height for a person 1.8 m tall.",
+          "solution": "The required height is half the body height, 0.9 m."
+        },
+        {
+          "prompt": "A 2 m tall person has eyes 1.8 m high. Locate the required mirror endpoints.",
+          "solution": "The bottom is at 1.8/2=0.9 m and the top at (1.8+2)/2=1.9 m; the mirror height is 1 m."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 9, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2025-december-q009.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q010",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 10,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Three periodic events repeat every 24 seconds, 54 seconds, and 56 seconds. If they coincide at 10:20:00, when will they next coincide?",
+      "options": {
+        "A": "10:35:12",
+        "B": "10:45:20",
+        "C": "10:45:12",
+        "D": "10:35:20"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Find lcm(24,54,56).",
+        "Use 24=2³·3, 54=2·3³, 56=2³·7."
+      ],
+      "solution": "The least common multiple is 2³·3³·7=1512 seconds=25 minutes 12 seconds. Adding to 10:20:00 gives 10:45:12 (C). The intervals for A,B,D are 912,1520,920 seconds respectively and are not simultaneous multiples of the three periods.",
+      "theory": "Periodic events occurring at integer intervals coincide again after the least common multiple of the intervals. Factor each interval into primes, retain the largest exponent of every prime, and multiply those prime powers. A common multiple need not be the least one; multiplying all intervals usually overcounts repeated factors. Once the interval is found, convert seconds into minutes and seconds before adding it to a clock time. For example, an interval of 90 seconds is one minute thirty seconds. This method assumes that all events share the stated starting phase and repeat without drift. For events with different phases, a system of congruences replaces the simple least-common-multiple calculation, and compatibility conditions can prevent any coincidence.",
+      "similar_questions": [
+        {
+          "prompt": "Events repeat every 12 and 18 seconds. When do they next coincide after a common start?",
+          "solution": "lcm(12,18)=2²·3²=36 seconds."
+        },
+        {
+          "prompt": "Periods are 15,20,30 seconds. A common start is 08:00:00. Find the next coincidence.",
+          "solution": "Their lcm is 60 seconds, giving 08:01:00."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 10, PDF page 8. No candidate response used as an answer key.",
+      "page": 8,
+      "image": "assets/questions/2025-december-q010.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q011",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 11,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The numbers (in millions) of coconut, guava, mango and apple trees in a region in 2010 and 2020 are shown in the following figure. See the original source image: coconut 15→12, guava 25→22, mango 20→18, apple 30→35. The maximum relative change in numbers was for",
+      "options": {
+        "A": "coconut trees",
+        "B": "guava trees",
+        "C": "mango trees",
+        "D": "apple trees"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Compare change divided by the 2010 value.",
+        "For change magnitude, the percentages are 20%,12%,10%, and 16⅔%."
+      ],
+      "solution": "The magnitudes of the relative changes are coconut |12-15|/15=1/5, guava 3/25, mango 2/20=1/10, and apple 5/30=1/6. Since 1/5 is largest, A is correct. B,C,D all have smaller proportional changes. Here “maximum relative change” is read as the magnitude of the change; apples alone have a positive signed change.",
+      "theory": "Density is mass per unit volume: rho=m/V, so volume V=m/rho for positive density. In a graph containing masses and densities, compare the quotient for each object, rather than comparing either plotted quantity separately. Units must be compatible across the objects; a common unit conversion multiplies all computed volumes by the same factor and does not affect their ranking. A radar chart uses a separate radial axis for each category: read values outward from its centre, not by vertical height on the page. Similarly, relative change is the difference divided by the initial value. An absolute difference can be larger while its relative change is smaller. Specify whether the comparison concerns signed changes or magnitudes.",
+      "similar_questions": [
+        {
+          "prompt": "Numbers change from 80 to 100. Find relative change.",
+          "solution": "(100-80)/80=1/4, an increase of 25%."
+        },
+        {
+          "prompt": "A decreases 50→40 and B increases 200→230. Which has the larger relative change magnitude?",
+          "solution": "A changes by 10/50=20%, B by 30/200=15%, so A has the larger magnitude."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 11, PDF page 8. No candidate response used as an answer key.",
+      "page": 8,
+      "image": "assets/questions/2025-december-q011.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q012",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 12,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Some, but not all, faces of a six-faced cubical fair die are painted red (R) and the remaining green (G); and the die is thrown until red faces come up on top 4 times. Consider the following sequences of colours listed left to right as they appear on the top. A: GRRRR; B: GRGRRR. Which one of the following is true?",
+      "options": {
+        "A": "A is more probable than B",
+        "B": "B is more probable than A",
+        "C": "Both have the same probability",
+        "D": "Whether A or B is more probable depends upon how many faces are painted green"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Write p=P(R) and q=P(G), where 0<p,q<1.",
+        "The second specified sequence contains exactly one extra green outcome."
+      ],
+      "solution": "P(GRRRR)=qp⁴ and P(GRGRRR)=q²p⁴. Their ratio is 1/q>1 since 0<q<1. Thus A is always more probable, giving A. B and C are false; D is false because the strict inequality holds for every permitted colouring. No binomial coefficient is needed for these specified orders.",
+      "theory": "For independent trials with success probability p, the probability of one specified ordered sequence with r successes and s failures is p^r(1-p)^s. A binomial coefficient is needed only when many different orders are collected into one event, such as exactly r successes in n trials. Stopping at a specified success count still permits the probability of an individual valid sequence to be calculated by multiplying its trial probabilities. Conditional probability obeys P(A given B)=P(A intersection B)/P(B) whenever P(B)>0. Its denominator is the population already known to satisfy B. Reversing the conditioning can produce a different answer. Distinguish a specified sequence, an unordered count, and a conditional event before choosing a formula.",
+      "similar_questions": [
+        {
+          "prompt": "Compare P(SS) and P(FSS) for independent trials with P(S)=0.6.",
+          "solution": "They are 0.36 and 0.4·0.36=0.144, so SS is more probable."
+        },
+        {
+          "prompt": "A fair coin is tossed until the second head. Find P(THH).",
+          "solution": "This specified valid stopping sequence has probability (1/2)³=1/8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 12, PDF page 9. No candidate response used as an answer key.",
+      "page": 9,
+      "image": "assets/questions/2025-december-q012.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q013",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 13,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "12 लीटर क्षमता के एक पूर्ण भरे हुए पात्र से एक 8 लीटर क्षमता वाले खाली पात्र में 6 लीटर पानी को लाने के लिए न्यूनतम कितनी बार पानी उड़ेलना होगा जबकि एक 5 लीटर का खाली पात्र भी उपयोग के लिए उपलब्ध हो?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use states (water in 12 L,8 L,5 L containers); a pour ends when a container empties or fills.",
+        "One efficient sequence begins (12,0,0)→(4,8,0)→(4,3,5)."
+      ],
+      "solution": "English: obtain 6 L in the 8 L container using initially full 12 L and empty 8 L,5 L containers. A six-pour path is (12,0,0)→(4,8,0)→(4,3,5)→(9,3,0)→(9,0,3)→(1,8,3)→(1,6,5). Minimality can be verified by breadth-first legal-pour enumeration: the distinct new states at depths 1–5 have no second coordinate 6, and the first such state occurs at depth 6. Equivalently execute the finite state search with each edge moving min(source,free capacity). Thus C, six pours, is minimal; A,B are impossible and D is unnecessary.",
+      "theory": "Water-pouring puzzles can be represented as a finite graph. A state lists the volumes in each container, and an allowed pour transfers water until the source empties or the destination fills. The total volume is conserved, each volume remains between zero and its container capacity, and every legal transfer is min(source volume, destination capacity minus destination volume). Breadth-first search examines states in layers of equal pour count. Its first encounter with a target therefore proves minimum length, whereas merely exhibiting a sequence proves only an upper bound. Keep a record of visited states to avoid loops. Unless the question permits a measuring scale or partial pours, arbitrary stopping midway through a pour would change the problem.",
+      "similar_questions": [
+        {
+          "prompt": "With an initially full 8 L container and empty 5 L and 3 L containers, obtain 2 L in the 5 L container.",
+          "solution": "Pour 8→5 giving (3,5,0), then 5→3 giving (3,2,3): two pours, with one pour unable to create 2 L in the 5 L jug."
+        },
+        {
+          "prompt": "With full 7 L and empty 4 L,3 L containers, obtain 1 L in the 4 L container.",
+          "solution": "Pour 7→4: (3,4,0); pour 4→3: (3,1,3). This takes two pours."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 13, PDF page 9. No candidate response used as an answer key.",
+      "page": 9,
+      "image": "assets/questions/2025-december-q013.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q014",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 14,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A lady bought some apples, each costing Rs. 25, and some bananas each costing Rs. 6, for a total of Rs. 378. In how many ways could she have chosen the numbers of apples and bananas?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "4"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Let a,b be positive integers with 25a+6b=378.",
+        "Reduce modulo 6, then use 25a<378."
+      ],
+      "solution": "Modulo 6 the equation gives a≡0 (mod 6). Since 1≤a≤15, a is 6 or 12. They yield b=(378-25a)/6=38 or 13. Hence exactly two ways, B; A,C,D miscount the positive solutions. Allowing zero apples would add (0,63), but “some apples” requires a>0.",
+      "theory": "A counting problem with fixed integer scores or costs becomes a linear Diophantine equation. Require the variables to be integers and enforce nonnegativity, or strict positivity if every item type must occur. Eliminate one variable using a fixed total count, then derive a finite range for the remaining variables. Congruences often reduce the possibilities sharply: ax+by=N implies ax congruent to N modulo b. Solve that congruence and then check the bounds and the original equation. In three-variable problems, each feasible ordered triple describes one distinct composition. Do not confuse the number of compositions with the number of arrangements or labelled selections. Exhaustive enumeration within proven finite bounds is a valid way to verify completeness.",
+      "similar_questions": [
+        {
+          "prompt": "Positive numbers of 4-unit and 7-unit items cost 39. Find all possibilities.",
+          "solution": "4a+7b=39 gives b≡1 mod4. With b≤5, b=1 or5; corresponding a=8 or1."
+        },
+        {
+          "prompt": "Positive numbers of 5-unit and 3-unit items total 31. How many choices?",
+          "solution": "5a+3b=31 implies a≡2 mod3. With a≤6, a=2 or5, giving b=7 or2: two choices."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 14, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2025-december-q014.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q015",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 15,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Suppose a₁,a₂,...,a₃₀₀ are integers such that a_(i−1)+a_i+a_(i+1)=2025 for all i=2,3,...,299. If a₇=−5, a₉=37, then the value of a₁₀₆ is",
+      "options": {
+        "A": "1993",
+        "B": "37",
+        "C": "−5",
+        "D": "2030"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Subtract adjacent three-term-sum equations.",
+        "The sequence has period 3; compare 106 and 7 modulo 3."
+      ],
+      "solution": "Subtracting equations gives a_(i+2)=a_(i−1), hence a_(j+3)=a_j. Since 106−7=99 is divisible by 3, a₁₀₆=a₇=−5 (C). The other residue classes have values 37 and 2025−(−5)−37=1993, so A and B refer to different classes; D is not a residue-class value.",
+      "theory": "A recurrence can conceal a simple periodic structure. If every three consecutive terms have the same sum K, subtract the equations for neighbouring triples to obtain a_(i+2)=a_(i-1), or equivalently a_(j+3)=a_j. All terms are consequently determined by the three residue classes of their indices modulo 3. Two values in distinct classes, together with the sum, determine the third. Always check that both subtracted equations lie in the stated index range; endpoint terms may need a separate argument. This method is more efficient than calculating hundreds of terms. For other constant sliding-window sums of length m, the same subtraction proves period m, provided the recurrence covers the required indices.",
+      "similar_questions": [
+        {
+          "prompt": "Every three consecutive terms sum to 10, with a₁=2,a₂=3. Find a₂₀.",
+          "solution": "a₃=5 and period 3 holds. Since 20≡2 mod3, a₂₀=3."
+        },
+        {
+          "prompt": "Every four consecutive terms have a fixed sum. Prove a_(n+4)=a_n.",
+          "solution": "Subtract the sums beginning at n and n+1. All shared terms cancel, leaving a_n=a_(n+4)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 15, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2025-december-q015.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q016",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 16,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "How many 5-digit numbers can be formed from the digits 0,2,3,4,6,7 and 9, using each at most once, which are divisible by 5?",
+      "options": {
+        "A": "120",
+        "B": "240",
+        "C": "360",
+        "D": "720"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "There is no digit 5, so the units digit must be 0.",
+        "Fill the remaining four places with distinct digits chosen from six nonzero digits."
+      ],
+      "solution": "Fixing the final digit as 0 leaves six nonzero digits for four ordered positions. The count is 6·5·4·3=360, so C is correct. There is no leading-zero correction because zero has already been used at the end. A,B,D do not equal this permutation count.",
+      "theory": "Digit-counting problems should be split by the most restrictive position first. A decimal integer is divisible by 5 exactly when its units digit is 0 or 5. A number with k digits cannot begin with zero, and “at most once” requires distinct positions to use distinct digits. After fixing a valid terminal digit, fill the remaining ordered positions by permutations, accounting separately for any possible leading zero. The count P(n,r)=n!/(n-r)! applies when r ordered positions use distinct digits from n available digits. If zero has already been placed at the end, every remaining nonzero digit is eligible for the leading place. Combinations alone would count sets of digits and miss their distinct arrangements.",
+      "similar_questions": [
+        {
+          "prompt": "How many 3-digit numbers with distinct digits from {0,1,2,3} are divisible by 5?",
+          "solution": "Only final digit 0 works; the other positions have 3·2=6 choices."
+        },
+        {
+          "prompt": "How many 3-digit distinct-digit numbers from {0,1,2,5} are divisible by 5?",
+          "solution": "Ending 0 gives 3·2=6. Ending 5 gives leading 1 or2 and then two choices, for 4. Total 10."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 16, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2025-december-q016.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q017",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 17,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A recent survey suggests that the total fertility rate in a country has fallen below 2.1, the population replacement ratio. This necessarily implies that the",
+      "options": {
+        "A": "infant mortality rate has increased reducing the net fertility ratio.",
+        "B": "total population will decline.",
+        "C": "population of young people is going to increase with a faster rate in the long run if the same status continues.",
+        "D": "proportion of elderly people is going to decrease in the long run if the same status continues."
+      },
+      "correct_options": [],
+      "hints": [
+        "Separate fertility from mortality and from population growth.",
+        "Use the accounting identity population change=births−deaths+net migration."
+      ],
+      "solution": "No option follows necessarily from the stated fact. A is false: fertility can fall with unchanged or declining infant mortality. B is not necessary: population momentum can maintain growth, and immigration can offset a natural decrease indefinitely; persistence and a closed population were not assumed. C does not follow from low fertility and would generally oppose its long-run effect. D also does not follow and generally opposes population ageing under sustained low fertility. B is a common intended answer only after adding demographic assumptions, so the exact source cannot support a unique mathematically necessary answer.",
+      "theory": "Total fertility rate summarizes the births a woman would have if current age-specific fertility rates persisted through her reproductive life. It is a period measure, not a direct measure of the current annual birth total. A replacement benchmark near 2.1 is a simplified demographic threshold that depends on survival and sex ratios. Total population changes through births, deaths, immigration and emigration. An age distribution containing many young adults can sustain growth even after fertility drops below replacement, a phenomenon called population momentum. Sustained low fertility in a closed population generally leads to eventual decline and ageing, but this conclusion requires additional assumptions. A statement using “necessarily” must remain true without adding unmentioned migration, mortality or persistence assumptions.",
+      "similar_questions": [
+        {
+          "prompt": "A population has 800 births,900 deaths, and 300 net immigrants in a year. Does it decline?",
+          "solution": "Its change is 800−900+300=200, so it grows despite a natural decrease."
+        },
+        {
+          "prompt": "A country has many people entering childbearing ages while fertility per woman falls. Must births immediately decrease?",
+          "solution": "No. More childbearing women can offset fewer births per woman; an age distribution or actual birth counts are needed."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Exact source uses “necessarily”; none of its four options is implied without assumptions about persistence, age structure and migration. Intended B requires added assumptions.",
+      "answer_source": "Independent mathematical derivation; question 17, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2025-december-q017.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q018",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 18,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In a class, 40% and 20% students passed in Mathematics and Physics, respectively, and 10% students passed in both subjects. What is the probability of a randomly selected student to have passed in Physics if the student already passed in Mathematics?",
+      "options": {
+        "A": "1/2",
+        "B": "1/20",
+        "C": "1/4",
+        "D": "2/25"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The conditioning group is the students who passed Mathematics.",
+        "Divide the joint probability 0.10 by P(Mathematics)=0.40."
+      ],
+      "solution": "P(Physics|Mathematics)=P(Physics∩Mathematics)/P(Mathematics)=0.10/0.40=1/4. Thus C is correct. A is the reversed conditional P(Mathematics|Physics); B and D are neither required ratio.",
+      "theory": "For independent trials with success probability p, the probability of one specified ordered sequence with r successes and s failures is p^r(1-p)^s. A binomial coefficient is needed only when many different orders are collected into one event, such as exactly r successes in n trials. Stopping at a specified success count still permits the probability of an individual valid sequence to be calculated by multiplying its trial probabilities. Conditional probability obeys P(A given B)=P(A intersection B)/P(B) whenever P(B)>0. Its denominator is the population already known to satisfy B. Reversing the conditioning can produce a different answer. Distinguish a specified sequence, an unordered count, and a conditional event before choosing a formula.",
+      "similar_questions": [
+        {
+          "prompt": "P(A)=0.6 and P(A∩B)=0.18. Find P(B|A).",
+          "solution": "P(B|A)=0.18/0.6=0.3."
+        },
+        {
+          "prompt": "30 of 100 students play chess; 12 play both chess and tennis. What fraction of chess players play tennis?",
+          "solution": "The conditioning group has size30, so the fraction is12/30=2/5."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 18, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2025-december-q018.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q019",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 19,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The value of 1+(1/2¹+1/3)+(1/2²+1/5+1/6+1/7)+...+(1/2⁹+...+1/1023) lies between",
+      "options": {
+        "A": "2 and 10",
+        "B": "11 and 20",
+        "C": "21 and 30",
+        "D": "31 and 40"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The blocks cover all denominators from 1 to 1023.",
+        "Use either harmonic-sum bounds or bound each dyadic block by 1."
+      ],
+      "solution": "The expression is H₁₀₂₃. The first term is1 and there are nine dyadic blocks, each strictly less than1, so H₁₀₂₃<10. Its first four terms already sum to25/12>2. Therefore 2<H₁₀₂₃<10, giving A; all other intervals begin above its upper bound.",
+      "theory": "The harmonic sum H_n=1+1/2+...+1/n can be estimated without evaluating every term. Since 1/x decreases, integral comparison gives log(n+1)<=H_n<=1+log n. Grouping terms between successive powers of two is another useful method: the block from 2^k to 2^(k+1)-1 contains 2^k terms, each at most 1/2^k, so its sum is at most 1. When a displayed expression is written in such blocks, confirm that the blocks cover consecutive denominators and do not repeat or omit terms. The harmonic series diverges, but a finite harmonic sum grows only logarithmically. Upper and lower bounds, rather than a decimal approximation, are often enough to distinguish broad answer intervals.",
+      "similar_questions": [
+        {
+          "prompt": "Show 1+1/2+...+1/15<4.",
+          "solution": "Group as1, terms2–3,4–7,8–15. Each of the last three blocks has sum<1, so total<4."
+        },
+        {
+          "prompt": "Bound H₁₀₀ using an integral.",
+          "solution": "log101≤H₁₀₀≤1+log100, so approximately4.615≤H₁₀₀≤5.605."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 19, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2025-december-q019.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q020",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 20,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In a community, some artists are teachers, no teacher is a painter, all painters are artists, and all teachers are professionals. Then it can be definitely asserted that",
+      "options": {
+        "A": "no painter is a professional",
+        "B": "all artists are professionals",
+        "C": "no professionals are teachers",
+        "D": "some artists are professionals"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use the artist who is known to be a teacher.",
+        "Every teacher is a professional."
+      ],
+      "solution": "Some artist is a teacher, and every teacher is a professional, so some artist is a professional (D). A fails because a painter could be a professional without being a teacher. B fails because other artists need not be teachers or professionals. C contradicts the existence of an artist-teacher, who is necessarily a professional.",
+      "theory": "An ordering problem is solved by translating each statement into a relation before combining relations. If two people study for the same fixed duration, earlier admission and earlier graduation give the same seniority order. “Between” does not by itself specify which endpoint is earlier; an additional inequality must fix the orientation. A conclusion is necessary only when it holds in every ordering satisfying the premises. To reject a proposed conclusion, construct one compatible ordering in which it fails. For categorical statements, represent classes by sets: “all A are B” means A is a subset of B, whereas “some A are B” asserts a nonempty intersection. Do not infer that a universal inclusion guarantees existence.",
+      "similar_questions": [
+        {
+          "prompt": "Some musicians are students and all students are residents. What existential conclusion follows?",
+          "solution": "The musician-student supplied by the first premise is a resident, so some musicians are residents."
+        },
+        {
+          "prompt": "All cats are mammals. Must all mammals be cats?",
+          "solution": "No. A dog can be a mammal without being a cat; inclusion cannot be reversed."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 20, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2025-december-q020.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q022",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let X={1,...,17} and S₁₇ be the group of permutations of X. For a subgroup G of S₁₇ and x∈X, let S_G(x)={σ∈G:σ(x)=x}. Which statement is true for every subgroup G of S₁₇?",
+      "options": {
+        "A": "The number of pairs (σ,x)∈G×X with σ(x)=x is strictly greater than Σ_(x∈X)|S_G(x)|.",
+        "B": "(1/|G|)Σ_(x∈X)|S_G(x)| is always an integer.",
+        "C": "For all x∈X, S_G(x) is a normal subgroup of G.",
+        "D": "For all x,y∈X, S_G(x) is isomorphic to S_G(y)."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Count the fixed-point pairs by their second coordinate.",
+        "Each orbit contributes |G| to the sum of stabilizer sizes."
+      ],
+      "solution": "For an orbit O, all stabilizers have size |G|/|O|, so Σ_(x∈O)|S_G(x)|=|G|. Therefore the quotient in B is the integer number of orbits. A is false because the pair count is exactly the indicated sum. C fails for G=S₁₇: point stabilizers are not normal. D fails for the subgroup generated by (12), since stabilizers of1 and3 have sizes1 and2.",
+      "theory": "A group action partitions a set into orbits. The stabilizer G_x consists of elements fixing x and is a subgroup. Orbit–stabilizer gives |Gx|=|G|/|G_x| for finite G. Counting pairs (g,x) with gx=x in two orders gives sum_x|G_x|=sum_g|Fix(g)|. Summing stabilizer sizes within one orbit contributes exactly |G|, hence dividing the total by |G| gives the number of orbits, Burnside’s formula. Stabilizers at points in the same orbit are conjugate and thus isomorphic, but stabilizers belonging to different orbits need not be isomorphic. A stabilizer is generally not normal: conjugating G_x by g gives G_(gx). Keep the distinction between one orbit and the entire set when using these facts.",
+      "similar_questions": [
+        {
+          "prompt": "C₃ rotates three vertices and fixes a fourth point. Compute the average stabilizer size.",
+          "solution": "The three moved points have stabilizer size1 and the fixed point size3. The sum is6; divided by3 it gives2 orbits."
+        },
+        {
+          "prompt": "S₃ acts on {1,2,3}. Is the stabilizer of1 normal?",
+          "solution": "It is {e,(23)}. Conjugating by(12) gives {e,(13)}, a different subgroup, so it is not normal."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 22, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2025-december-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q023",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 23,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let I be the 3×3 identity matrix. Given any three distinct matrices A,B,C∈M₃(R), which statement is necessarily true?",
+      "options": {
+        "A": "There exist D∈M₃(R) and f∈R[X] with f(A)=f(B)=f(C)=0 and f(D)=I.",
+        "B": "There exist D∈M₃(R) and f∈R[X] with f(A)=f(B)=0, f(C)=I and f(D)=I.",
+        "C": "There exist D∈M₃(R) and f∈R[X] with f(A)=0, f(B)=f(C)=I and f(D)≠0.",
+        "D": "There exist D∈M₃(R) and f∈R[X] with f(A)=f(B)=0, f(C)=I and f(D)=0."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Multiply the characteristic polynomials of A,B,C.",
+        "Choose a real scalar t where the product is nonzero, and normalize at t."
+      ],
+      "solution": "Let p=χ_Aχ_Bχ_C. Cayley–Hamilton gives p(A)=p(B)=p(C)=0. Choose real t with p(t)≠0 and set f=p/p(t), D=tI; then f(D)=I, proving A. To refute B,C,D, take A=J,B=2J,C=3J, where J is a nilpotent 3×3 Jordan block. These are distinct and all have minimal polynomial X³. Any f with f(A)=0 is divisible by X³, so also f(B)=f(C)=0, preventing all asserted identity values.",
+      "theory": "For a square matrix A, a polynomial f is evaluated by replacing its variable by A, with the constant coefficient multiplied by the identity. The minimal polynomial m_A is the unique monic polynomial of least positive degree satisfying m_A(A)=0; every annihilating polynomial is divisible by it. The characteristic polynomial also annihilates A by Cayley–Hamilton. Products of characteristic or minimal polynomials can therefore annihilate several matrices simultaneously. To prescribe a nonzero value at a scalar matrix tI, choose t outside their finite set of roots and normalize the polynomial by its value at t. Distinct matrices need not have different minimal polynomials. In particular, polynomial evaluation cannot freely distinguish similar matrices by assigning zero to one and identity to another.",
+      "similar_questions": [
+        {
+          "prompt": "Find f annihilating A=diag(1,2) and B=3I, and D with f(D)=I.",
+          "solution": "Take p(t)=(t−1)(t−2)(t−3); p(0)=−6. Set f=p/(−6),D=0I."
+        },
+        {
+          "prompt": "Can a polynomial satisfy f(J)=0 and f(2J)=I for a nonzero 2×2 nilpotent Jordan block?",
+          "solution": "No. Both minimal polynomials are t². The first equality forces t² to divide f, hence f(2J)=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 23, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2025-december-q023.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q024",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 24,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let X,Y be topological spaces. Statement S: for every open U⊆X×Y and every x∈X with {x}×Y⊆U, there is a neighbourhood W of x in X with W×Y⊆U. Which statement is true?",
+      "options": {
+        "A": "If X×Y is Hausdorff, S is true.",
+        "B": "If Y is connected, S is true.",
+        "C": "If X×Y is regular, S is true.",
+        "D": "If Y is compact, S is true."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Cover {x}×Y by basic open rectangles in U.",
+        "Compactness lets you replace the Y-side cover by a finite subcover."
+      ],
+      "solution": "If Y is compact, choose rectangles A_y×B_y⊆U with x∈A_y,y∈B_y. A finite subcollection of B_y covers Y; the intersection of the corresponding A_y is a neighbourhood W with W×Y⊆U. Thus D is the tube lemma. A,B,C all fail with X=Y=R and U={(a,b):|ab|<1}: U contains {0}×R, but every neighbourhood of0 contains a nonzero a, and sufficiently large b has |ab|≥1. R is connected and R² is Hausdorff and regular.",
+      "theory": "The tube lemma says that if Y is compact and an open subset U of X×Y contains {x}×Y, then some neighbourhood W of x satisfies W×Y⊆U. For each y choose a basic open rectangle A_y×B_y contained in U around (x,y). Compactness gives a finite subcover B_y1,...,B_ym of Y, and the intersection A_y1∩...∩A_ym is the required neighbourhood. No separation axiom on X is needed. Connectedness, Hausdorffness and regularity address different properties and do not provide the finite subcover. A standard failure with noncompact Y is a tube whose width shrinks as the second coordinate grows; every vertical point is covered but no uniform positive width survives.",
+      "similar_questions": [
+        {
+          "prompt": "Let Y=[0,1] and U be open in R×Y containing {0}×Y. Must U contain (−ε,ε)×Y for some ε>0?",
+          "solution": "Yes, by the tube lemma and compactness of [0,1]."
+        },
+        {
+          "prompt": "Does the open set {(x,y):|xy|<1} contain a uniform tube around {0}×R?",
+          "solution": "No. For any ε>0 take x=ε/2 and y=3/ε; their product is3/2, outside the set."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 24, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2025-december-q024.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q025",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 25,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let M,N∈M₃(C) satisfy tr(M^k)=tr(N^k), 1≤k≤3. Which statement is necessarily true?",
+      "options": {
+        "A": "M²=N²",
+        "B": "M³=N³",
+        "C": "The characteristic polynomials of M and N are the same.",
+        "D": "The minimal polynomials of M and N are the same."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Relate the first three power traces to elementary symmetric functions of the eigenvalues.",
+        "Use Newton’s identities for a cubic characteristic polynomial."
+      ],
+      "solution": "Write p_k=tr(M^k)=tr(N^k). Both characteristic polynomials equal t³−p₁t²+(p₁²−p₂)t/2−(p₁³−3p₁p₂+2p₃)/6, so C is true. For A,B use M=diag(1,2,3),N=diag(3,2,1): all power traces agree but the squares and cubes differ. For D use M=0,N=J, a nilpotent Jordan block: all traces are0, but minimal polynomials are t and t³.",
+      "theory": "The traces p_k=tr(A^k) are the power sums of the eigenvalues, counted with algebraic multiplicity, even when A is not diagonalizable. Newton’s identities express the elementary symmetric functions e_k in terms of p_1,...,p_k. For a 3×3 matrix, e_1=p_1, e_2=(p_1²−p_2)/2 and e_3=(p_1³−3p_1p_2+2p_3)/6. The characteristic polynomial is t³−e_1t²+e_2t−e_3. Thus the first three power traces determine it over the complex or real numbers. They do not determine the matrix itself, its powers as matrices, or its Jordan block sizes. The minimal polynomial records the largest Jordan block for each eigenvalue, so matrices with identical power traces can have different minimal polynomials.",
+      "similar_questions": [
+        {
+          "prompt": "A 2×2 matrix has tr A=3 and tr A²=5. Find its characteristic polynomial.",
+          "solution": "The determinant is (3²−5)/2=2, so χ_A(t)=t²−3t+2."
+        },
+        {
+          "prompt": "Give two 2×2 matrices with the same characteristic but different minimal polynomials.",
+          "solution": "I and [[1,1],[0,1]] both have characteristic(t−1)²; their minimal polynomials are t−1 and(t−1)²."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 25, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2025-december-q025.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q026",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 26,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A homogeneous Markov chain on {1,2,3,4} has transition matrix P=[[1/4,0,2/3,1/12],[0,1,0,0],[1/12,0,1/4,2/3],[2/3,0,1/12,1/4]]. Which statement about stationary distributions is true?",
+      "options": {
+        "A": "There is no stationary distribution.",
+        "B": "A stationary distribution exists and is unique.",
+        "C": "There are exactly two stationary distributions.",
+        "D": "There are infinitely many stationary distributions."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "State2 is absorbing and never communicates with the other three states.",
+        "The {1,3,4} block is doubly stochastic; combine its uniform stationary law with mass at2."
+      ],
+      "solution": "Both δ₂=(0,1,0,0) and ν=(1/3,0,1/3,1/3) are stationary. For every t∈[0,1], tδ₂+(1−t)ν=((1−t)/3,t,(1−t)/3,(1−t)/3) is stationary. These distinct distributions show infinitely many, D. A,B,C respectively deny existence, uniqueness failure or the continuum of convex combinations, so are false.",
+      "theory": "For a row-stochastic transition matrix P, a stationary distribution is a row probability vector pi satisfying piP=pi. Every finite Markov chain has at least one stationary distribution. Each closed irreducible communicating class has a unique stationary distribution supported on that class. When there are several such classes, every convex combination of their stationary distributions is also stationary; two different distributions already yield infinitely many. Transient states receive zero stationary mass. Irreducibility ensures uniqueness, while aperiodicity is needed for ordinary convergence of transition probabilities, not for stationary existence or uniqueness. Doubly stochastic blocks have a uniform stationary distribution. Always check row sums and the convention for row versus column vectors before solving the balance equations.",
+      "similar_questions": [
+        {
+          "prompt": "P is the 2×2 identity. Describe all stationary distributions.",
+          "solution": "Every (t,1−t),0≤t≤1, satisfies piP=pi, giving infinitely many."
+        },
+        {
+          "prompt": "P=[[1/2,1/2],[1/4,3/4]]. Find the stationary law.",
+          "solution": "The balance equation pi₁=pi₁/2+pi₂/4 gives pi₂=2pi₁. Normalization gives (1/3,2/3)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 26, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2025-december-q026.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q027",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 27,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let F_q be a field with q elements, n≥2, and A a 2n×2n matrix over F_q with rank n. Let W={v∈F_q^(2n):Av=0}. What is the number of (n+2)-dimensional subspaces of F_q^(2n) containing W?",
+      "options": {
+        "A": "1",
+        "B": "((q^(2n)−q^n)(q^(2n)−q^(n+1)))/q^n",
+        "C": "((q^(2n)−1)(q^(2n)−q)···(q^(2n)−q^(n−1)))/q^n",
+        "D": "((q^n−1)(q^n−q))/((q²−1)(q²−q))"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Rank–nullity gives dim W=n.",
+        "Use the correspondence with 2-dimensional subspaces of the n-dimensional quotient."
+      ],
+      "solution": "Rank–nullity gives dim W=2n−n=n. Subspaces U containing W with dim U=n+2 correspond bijectively to 2-dimensional subspaces of V/W, which has dimension n. Count their ordered bases: (q^n−1)(q^n−q), and divide by the number (q²−1)(q²−q) of ordered bases in each 2-space. This is D. A holds only for n=2, not every n. For n=2,q=2 the correct count is1, whereas B=24 and C=60, refuting them.",
+      "theory": "The number of k-dimensional subspaces of an n-dimensional vector space over a field with q elements is the Gaussian binomial coefficient product_(j=0)^(k−1)(q^n−q^j)/(q^k−q^j). The numerator counts ordered linearly independent k-tuples, while the denominator counts the ordered bases of one k-dimensional subspace. If a fixed subspace W is required to be contained in U, the correspondence U↦U/W converts the count into a subspace count in V/W. Dimensions obey dim(V/W)=dim V−dim W and dim(U/W)=dim U−dim W. Rank–nullity supplies dim ker A=number of columns−rank A. Do not count bases as subspaces: many ordered bases describe the same subspace, which is precisely why the denominator is essential.",
+      "similar_questions": [
+        {
+          "prompt": "How many 2-dimensional subspaces does F₂³ have?",
+          "solution": "The count is (8−1)(8−2)/[(4−1)(4−2)]=42/6=7."
+        },
+        {
+          "prompt": "How many 3-dimensional subspaces of F₃⁴ contain a fixed 2-dimensional subspace?",
+          "solution": "They correspond to lines in a 2-dimensional quotient. Their number is(3²−1)/(3−1)=4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 27, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2025-december-q027.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q028",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 28,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let D={z∈C:|z|<1}, and X={f:D→C holomorphic: f(2z)=f(z)/(1−(f(z))²) for all |z|<1/2}. Which statement is true?",
+      "options": {
+        "A": "X is uncountable.",
+        "B": "X is infinite and countable.",
+        "C": "Every element of X is an open map.",
+        "D": "X has exactly one element."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Substitute z=0 to determine f(0).",
+        "If a nonzero term of least degree m exists, compare its coefficient on both sides."
+      ],
+      "solution": "At0, c=c/(1−c²) implies c³=0, so f(0)=0. If f is nonzero near0, let f(z)=a_m z^m+O(z^(m+1)),m≥1. The equation gives leading coefficients 2^m a_m=a_m, impossible. Thus f vanishes near0 and, by the identity theorem, on D. The zero function satisfies the equation, so X={0}, proving D. A,B fail by cardinality, and C fails because the zero map is not open.",
+      "theory": "A holomorphic function has a convergent power series near every point of its domain. If it is not identically zero near zero and vanishes there, it has a finite order m≥1: f(z)=a_m z^m+O(z^(m+1)) with a_m≠0. Comparing the lowest nonzero terms in a functional equation often forces a contradiction or determines m. Once a function vanishes on a nonempty open subset of a connected domain, the identity theorem makes it vanish throughout that domain. A denominator in a functional equation must be nonzero wherever the equation is asserted. The open mapping theorem applies to nonconstant holomorphic functions; constant functions are not open maps into the complex plane. These distinctions prevent both false cardinality claims and incorrect applications of open mapping.",
+      "similar_questions": [
+        {
+          "prompt": "Find holomorphic f near0 satisfying f(2z)=f(z) and f(0)=0.",
+          "solution": "Writing its power series gives(2^m−1)a_m=0 for every m≥1, so all coefficients vanish and f=0."
+        },
+        {
+          "prompt": "Does f(z)=0 define an open map C→C?",
+          "solution": "No. The image of any nonempty open set is {0}, which is not open in C."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 28, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2025-december-q028.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q029",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 29,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let u_t=16u_xx+2 for 0<x<7,t>0, with u_x(0,t)=u(7,t)=0 and u(x,0)=0. Which statement is true for each x∈(0,7) as t→∞?",
+      "options": {
+        "A": "u(x,t)→0",
+        "B": "u(x,t)→x²(7−x)²/16",
+        "C": "u(x,t)→x²(7−x)/16",
+        "D": "u(x,t)→(49−x²)/16"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Solve the stationary boundary-value equation16v″+2=0.",
+        "Subtract the stationary solution; the mixed-boundary heat modes all decay."
+      ],
+      "solution": "The steady equation is v″=−1/8, so v=−x²/16+ax+b. From v′(0)=0 and v(7)=0 obtain a=0,b=49/16. The difference w=u−v solves homogeneous heat flow with Neumann at0 and Dirichlet at7. Its eigenfunctions cos((2j+1)πx/14) have strictly positive decay rates16((2j+1)π/14)², so w→0. Hence D. A is not this positive profile; B,C have the wrong second derivatives and do not solve the steady equation.",
+      "theory": "For a forced heat equation u_t=k u_xx+F(x), a stationary solution v satisfies kv″+F=0 together with the boundary conditions. Subtracting v gives a homogeneous heat equation for w=u−v. On a bounded interval, separated boundary conditions produce eigenfunctions of the spatial operator. With a Dirichlet condition at one end and a Neumann condition at the other, all eigenvalues of −d²/dx² are strictly positive, so each mode decays exponentially and w tends to zero. This justifies convergence to v instead of merely guessing an equilibrium. If both endpoints were Neumann, a constant mode could persist and a nonzero mean forcing could prevent a steady limit. Boundary conditions therefore matter as much as the differential equation.",
+      "similar_questions": [
+        {
+          "prompt": "Find the equilibrium of u_t=2u_xx+4 on(0,3), u_x(0,t)=u(3,t)=0.",
+          "solution": "2v″+4=0 gives v=−x²+ax+b. The conditions give a=0,b=9, hence v=9−x²."
+        },
+        {
+          "prompt": "Why can constant forcing prevent equilibration with Neumann conditions at both ends?",
+          "solution": "Integrating u_t=k u_xx+F gives d/dt integral u=integral F because boundary derivatives vanish. For constant F>0 the mean grows linearly."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 29, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2025-december-q029.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q030",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 30,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For a finite group G, let S(G) be its number of subgroups. Which statement is necessarily true?",
+      "options": {
+        "A": "If finite G,G′ satisfy S(G)=S(G′), they are isomorphic.",
+        "B": "If S(G)=4, then |G|=p^m for some prime p and positive integer m.",
+        "C": "If S(G)=5, then G is cyclic.",
+        "D": "For every positive integer n there is a finite group G with S(G)=n."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use cyclic groups of prime-power order to realize arbitrary subgroup counts.",
+        "For the other statements examine C₂,C₃,C₆ and the Klein four group."
+      ],
+      "solution": "For n≥2, C_(p^(n−1)) has exactly n subgroups; the trivial group gives n=1. Thus D holds. A fails since C₂ and C₃ each have two subgroups but different orders. B fails for C₆, whose subgroups have orders1,2,3,6. C fails for C₂×C₂, which has five subgroups and is not cyclic.",
+      "theory": "A cyclic group of order m has exactly one subgroup for each positive divisor of m. Hence the number of its subgroups is the divisor-count function tau(m); for m=p^r it equals r+1. The trivial group has one subgroup, itself. Equal subgroup counts do not imply isomorphism or equal orders. Noncyclic groups can also have small subgroup counts: the Klein four group has the trivial subgroup, three order-two subgroups and the whole group, giving five. To establish an existence claim for every desired count n, choose a family with a controllable subgroup count, such as cyclic prime-power groups. To refute universal implications, explicit examples with their subgroup lists are more reliable than intuition about group size.",
+      "similar_questions": [
+        {
+          "prompt": "How many subgroups does C₂₇ have?",
+          "solution": "Its subgroup orders are1,3,9,27, so it has4 subgroups."
+        },
+        {
+          "prompt": "Construct a finite group with seven subgroups.",
+          "solution": "C₆₄=C_(2⁶) has one subgroup of each order1,2,4,8,16,32,64, giving7."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 30, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2025-december-q030.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q031",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 31,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Let X,Y,Z be independent normal variables with means −1,0,1 and variances1,1,3 respectively. Which random variable has Cauchy distribution with location0 and scale1?",
+      "options": {
+        "A": "(X−1)/|Y|",
+        "B": "(X+2Y+Z)/(X−2Y+Z)",
+        "C": "(Z−1)/Y",
+        "D": "(X−Y)/(X+Y)"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "For B, compare the means and variances of the numerator and denominator.",
+        "Their covariance is Var(X)+Var(Z)−4Var(Y)."
+      ],
+      "solution": "Set U=X+2Y+Z and V=X−2Y+Z. Both means are0, both variances are1+4+3=8, and Cov(U,V)=1−4+3=0. Joint normality gives independence, so U/V is standard Cauchy (B). A has P(ratio>0)=P(X>1)<1/2, so is not centred Cauchy. C is Cauchy with scale√3. For D, X−Y and X+Y are independent N(−1,2); if q=P(N(−1,2)>0)≠1/2, the ratio is positive with probability q²+(1−q)²>1/2, excluding standard Cauchy.",
+      "theory": "If U and V are independent centred normal variables with equal positive variance, U/V has the standard Cauchy distribution. With unequal variances its scale is sd(U)/sd(V). Linear combinations of jointly normal variables remain jointly normal; for jointly normal variables zero covariance implies independence. Means and covariances must both be checked before using the ratio result. If underlying variables are independent, covariance of two linear combinations is the sum of the products of their corresponding coefficients and variances. A nonzero numerator mean, nonzero denominator mean, or dependence generally changes the ratio law. Dividing by an absolute value also changes the construction unless symmetry restores the same distribution. The denominator equals zero with probability zero for a nondegenerate normal variable.",
+      "similar_questions": [
+        {
+          "prompt": "U,V are independent N(0,4) and N(0,9). Find the law of U/V.",
+          "solution": "Write U=2Z₁,V=3Z₂ for independent standard normals. The ratio is(2/3)(Z₁/Z₂), Cauchy with scale2/3."
+        },
+        {
+          "prompt": "X,Y are independent standard normals. Show(X+Y)/(X−Y) is standard Cauchy.",
+          "solution": "The combinations are centred normal with variance2 and covariance1−1=0. They are independent, so their ratio is standard Cauchy."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 31, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2025-december-q031.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q032",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 32,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Suppose y(x) is the extremal of J(y)=∫₀⁴ (y′)²/y² dx subject to y(0)=1,y(4)=e⁸. Which statement is true?",
+      "options": {
+        "A": "y(log_e2)=2",
+        "B": "y(log_e3)=9",
+        "C": "y(log_e4)=4",
+        "D": "y(log_e5)=5"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Put z=log y so the integrand becomes(z′)².",
+        "The transformed extremal is linear between z(0)=0 and z(4)=8."
+      ],
+      "solution": "The Euler–Lagrange equation for z is z″=0. Endpoints give z=2x, hence y=e^(2x). Therefore y(log2)=4, y(log3)=9, y(log4)=16 and y(log5)=25. Only B holds. Equivalently the original equation is yy″−(y′)²=0, giving the same exponential.",
+      "theory": "For a functional integral L(x,y,y′) dx with fixed endpoint values, a sufficiently smooth extremal satisfies the Euler–Lagrange equation d/dx(L_(y′))−L_y=0. For L=(y′/y)² and a positive admissible function, the substitution z=log y turns the functional into integral (z′)² dx. Its Euler–Lagrange equation is z″=0, so z is the straight line between its endpoint logarithms and y is exponential. Cauchy–Schwarz also proves that this extremal minimizes the functional: integral (z′)² is at least (z(b)−z(a))²/(b−a), with equality for constant z′. Functions crossing zero are not admissible for the original integrand. Check endpoint values after solving, and do not confuse the exponent with the endpoint value itself.",
+      "similar_questions": [
+        {
+          "prompt": "Minimize∫₀²(y′/y)²dx with y(0)=1,y(2)=e⁶. Find y.",
+          "solution": "z=log y has endpoints0,6 and minimizing straight line z=3x. Thus y=e^(3x), and the minimum is∫₀²9dx=18."
+        },
+        {
+          "prompt": "For positive y with y(0)=2,y(1)=8, find the same extremal.",
+          "solution": "z is log2+x(log8−log2)=log2+xlog4. Therefore y=2·4^x."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 32, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2025-december-q032.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q033",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 33,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For nonnegative a let √a be the nonnegative root. Let f(x)=x(√(x²+3)−√(x²+2)). Which statement is true?",
+      "options": {
+        "A": "lim_(x→∞)f(x)=∞",
+        "B": "lim_(x→∞)f(x)=0",
+        "C": "lim_(x→∞)f(x)=1",
+        "D": "lim_(x→∞)f(x)=1/2"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Multiply the difference of radicals by its conjugate.",
+        "For positive large x, divide both denominator radicals by x."
+      ],
+      "solution": "Rationalization gives f(x)=x/[√(x²+3)+√(x²+2)]=1/[√(1+3/x²)+√(1+2/x²)] for x>0. The denominator tends to2, so the limit is1/2. Thus D is correct and A,B,C are excluded.",
+      "theory": "When subtracting two nearby square roots, rationalize with the conjugate. The identity sqrt(A)−sqrt(B)=(A−B)/(sqrt(A)+sqrt(B)) avoids the indeterminate cancellation of two large terms. For large positive x, divide a denominator involving sqrt(x²+c) by x to obtain sqrt(1+c/x²), which tends to 1. For negative x one must use |x|, since sqrt(x²)=|x|; ignoring this can reverse the sign of a limit. Continuity of the square-root function on positive arguments then completes the calculation. A difference of two quantities tending to infinity need not tend to infinity: their leading growth can cancel. This method often gives a finite limit directly without L’Hôpital’s rule or an asymptotic expansion.",
+      "similar_questions": [
+        {
+          "prompt": "Find lim_(x→∞)x(√(x²+7)−√(x²+1)).",
+          "solution": "Rationalizing gives6x/[√(x²+7)+√(x²+1)]→6/2=3."
+        },
+        {
+          "prompt": "Find the same limit as x→−∞ for f(x)=x(√(x²+3)−√(x²+2)).",
+          "solution": "The denominator is asymptotic to2|x|, so f(x)→x/(2|x|)=−1/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 33, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2025-december-q033.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q034",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 34,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Hard",
+      "prompt": "(P) The IVP y′=f(y), f(y)=y cos(1/y) for y≠0 and f(0)=0, y(0)=0 has at most one solution. (Q) If z′=(1−z⁴)^100/(1+z²), z(0)=0, then for each α∈(0,2) some x_α∈R satisfies z(x_α)=1−α. Which statement is true?",
+      "options": {
+        "A": "Both P and Q are true.",
+        "B": "P is true, Q is false.",
+        "C": "P is false, Q is true.",
+        "D": "Both P and Q are false."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "For P use |f(y)|≤|y| rather than differentiating f.",
+        "For Q separate variables on−1<z<1 and check endpoint integrals."
+      ],
+      "solution": "P: any solution satisfies |y(t)|≤∫₀ᵗ|y(s)|ds for t≥0. Gronwall gives y=0; applying the same argument to y(−t) gives uniqueness backward too. Q: F(z)>0 on(−1,1), and separation gives x=∫₀^z (1+s²)/(1−s⁴)^100 ds. This strictly increasing function maps(−1,1) onto R, since it diverges at both endpoints. Its inverse reaches every1−α∈(−1,1). Thus both are true (A), excluding B,C,D.",
+      "theory": "For y′=f(y), continuity of f guarantees local existence, while local Lipschitz continuity is a common sufficient condition for uniqueness. Its failure does not prove nonuniqueness. A bound |f(y)|≤C|y| near an equilibrium can establish uniqueness of the zero solution via the integral equation and Gronwall’s inequality, including backward time. For a smooth autonomous equation z′=F(z), solutions cannot cross an equilibrium where F vanishes because uniqueness would force agreement with the constant solution. On an interval with F>0, separation gives x−x_0=integral dz/F(z). If that integral diverges at both endpoints, the solution exists for all real times and traverses the entire interval. Finite target values strictly inside the interval are reached in finite time.",
+      "similar_questions": [
+        {
+          "prompt": "Does y′=y sin(1/y), f(0)=0, y(0)=0 have a unique solution?",
+          "solution": "Yes. |f(y)|≤|y|, so Gronwall in both time directions forces y=0."
+        },
+        {
+          "prompt": "Solve z′=1−z²,z(0)=0 and state its range.",
+          "solution": "Separation gives artanh z=x, so z=tanh x. Its range is(−1,1), approaching but never reaching its equilibrium endpoints."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 34, PDF page 21. No candidate response used as an answer key.",
+      "page": 21,
+      "image": "assets/questions/2025-december-q034.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q035",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 35,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Consider u_t+u_x=0 for x>0,t>0, u(x,0)=e^x, u(0,t)=1−sin t. Which statement is true?",
+      "options": {
+        "A": "There exists a unique solution with u(1,t)=e−sin t for all t<1.",
+        "B": "There does not exist a solution with u(1,t)=e−sin t for all t>1.",
+        "C": "There exists a solution with u(x,t)=e^(x−t) for all t>x.",
+        "D": "There exists a solution with u(x,t)=e−sin(t−x) for all t<x."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Trace characteristics x−t=constant to the initial line or the boundary.",
+        "The initial data apply for t<x, and the boundary data for t>x."
+      ],
+      "solution": "Characteristics force u=e^(x−t) when t<x and u=1−sin(t−x) when t>x, with value1 on t=x. The formulas have matching first derivatives there. For t>1, u(1,t)=1−sin(t−1), which cannot equal e−sin t for every t; at t=1+2π their values are1 and e−sin1. Thus B is true. A gives the wrong formula for t<1; C incorrectly extends initial data into t>x; D gives the wrong formula in t<x.",
+      "theory": "The first-order transport equation u_t+c u_x=0 has characteristic lines x−ct=constant. Along each characteristic u is constant. On a half-line with c>0, tracing a point backward reaches either the initial line t=0 or the inflow boundary x=0. Thus initial data determine the region x>ct and boundary data determine x<ct. The formulas must agree at the characteristic emerging from the corner; matching values gives continuity and matching compatible first derivatives gives a classical C¹ solution. Boundary data cannot be arbitrarily imposed at an outflow boundary. A common error is to use the initial-data formula after the characteristic has entered from the boundary. Check the relevant region before substituting a fixed spatial coordinate.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u_t+u_x=0 on x,t>0 with u(x,0)=x and u(0,t)=0.",
+          "solution": "For x>t, tracing to t=0 gives u=x−t. For t>x, tracing to x=0 gives u=0. The result is continuous but not C¹ along x=t."
+        },
+        {
+          "prompt": "With u(x,0)=cos x,u(0,t)=cos t, find the transport solution.",
+          "solution": "Initial characteristics give cos(x−t), and boundary characteristics give cos(t−x), the same value. Thus u=cos(x−t) everywhere."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 35, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2025-december-q035.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q036",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 36,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Define x₁=1 and x_(n+1)=√(1+x_n²/n), n≥1, using the nonnegative root. Which statement is true?",
+      "options": {
+        "A": "limsup x_n=1",
+        "B": "limsup x_n=√2",
+        "C": "limsup x_n=2",
+        "D": "limsup x_n=1+√2"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Set b_n=x_n².",
+        "Show1≤b_n≤2, then squeeze1+b_n/n as n→∞."
+      ],
+      "solution": "b₁=1,b₂=2, and b_(n+1)=1+b_n/n. For n≥2, 1≤b_n≤2 implies1≤b_(n+1)≤1+2/n≤2, so the bound holds by induction. Consequently1+1/n≤b_(n+1)≤1+2/n, hence b_n→1 and x_n→1. Its limsup is1 (A); B,C,D confuse larger constants or early values with the tail limit.",
+      "theory": "For a recurrence involving a nonnegative square root, squaring can simplify the recurrence without losing sign information, since the original sequence remains nonnegative. Before passing to a limit, prove boundedness and justify convergence or use a direct squeeze. A relation of the form b_(n+1)=1+b_n/n with bounded b_n immediately yields b_(n+1)→1 because b_n/n→0. The original square-root sequence then tends to 1 by continuity. It is unnecessary to solve the recurrence explicitly. The limsup of a convergent sequence equals its limit, but the largest initial term need not equal the limsup. Checking a few numerical values can suggest a bound, yet induction is needed to establish it for every index.",
+      "similar_questions": [
+        {
+          "prompt": "Let b₁=1,b_(n+1)=3+b_n/n. Prove b_n→3.",
+          "solution": "b₂=4; induction gives0≤b_n≤6 for n≥2 because3+6/n≤6. Thus b_n/n→0, and the recurrence yields b_(n+1)→3."
+        },
+        {
+          "prompt": "If a_n→4 and a_n≥0, what is limsup √a_n?",
+          "solution": "Continuity of √ gives √a_n→2. Therefore the limsup is2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 36, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2025-december-q036.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q037",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 37,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Operations Research",
+      "difficulty": "Moderate",
+      "prompt": "Maximize3x₁+4x₂ subject to3x₁+2x₂≤12,3x₁+5x₂≤15,2x₁−x₂≥0,x₂≤2,x₁,x₂≥0. What is the optimum value?",
+      "options": {
+        "A": "11",
+        "B": "13",
+        "C": "14",
+        "D": "15"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Combine the first two constraints so their left side is the objective.",
+        "Use weights1/3 and2/3, then find where both constraints are equalities."
+      ],
+      "solution": "(1/3)(3x₁+2x₂)+(2/3)(3x₁+5x₂)=3x₁+4x₂≤4+10=14. Equality in the two constraints gives x₂=1,x₁=10/3. This point has2x₁−x₂=17/3≥0,x₂≤2 and nonnegative coordinates, hence is feasible and attains14. Therefore C is optimal; A,B are below the attained value and D exceeds the proved bound.",
+      "theory": "A linear program optimizes a linear objective over a region cut out by linear equalities and inequalities. For a bounded nonempty polytope, an optimum is attained at a vertex, although an entire edge may also be optimal. A useful alternative is to combine constraints with nonnegative multipliers so their left sides equal the objective; the corresponding combination of right sides is then an upper bound for a maximization problem. If a feasible point attains that bound, it proves global optimality. This is a simple dual certificate and avoids checking every vertex. Constraint direction matters: only multipliers preserving the required upper-bound inequality may be used. A candidate intersection must also satisfy all the remaining constraints, including nonnegativity.",
+      "similar_questions": [
+        {
+          "prompt": "Maximize x+y subject to x+2y≤6,2x+y≤6,x,y≥0.",
+          "solution": "Adding constraints gives3(x+y)≤12, so x+y≤4. The feasible point(2,2) attains4."
+        },
+        {
+          "prompt": "Maximize2x+y with x+y≤5,x≤3,x,y≥0.",
+          "solution": "2x+y=(x+y)+x≤5+3=8. Point(3,2) is feasible and attains8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 37, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2025-december-q037.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q038",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 38,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let y₁,y₂ solve y″+(e^(x²)+cos x)y=0, with y₁(0)=3,y₁′(0)=−1,y₂(0)=−5,y₂′(0)=a. If W(y₁,y₂)(1/2)=4, find a.",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "4",
+        "D": "−3"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "There is no y′ term in this second-order equation.",
+        "Abel’s identity makes W constant, so evaluate at0."
+      ],
+      "solution": "Since the y′ coefficient is0, W′=0. Therefore4=W(1/2)=W(0)=3a−(−1)(−5)=3a−5. Hence a=3 (B). Substituting A,C,D gives W=1,7,−14, respectively, not4.",
+      "theory": "For functions y_1 and y_2, the Wronskian is W=y_1 y_2′−y_1′ y_2. For solutions of y″+p(x)y′+q(x)y=0 on an interval with continuous coefficients, differentiating W gives W′=−pW, so W(x)=W(x_0)exp(−integral_(x_0)^x p). This is Abel’s identity. In particular, when the first-derivative coefficient is zero the Wronskian is constant, no matter how complicated q(x) is. If W is nonzero at one point, the two solutions are linearly independent everywhere on the interval. Keep the order of the two functions fixed: exchanging them reverses the sign. Use the initial values to evaluate the determinant instead of attempting to solve an unnecessary variable-coefficient equation.",
+      "similar_questions": [
+        {
+          "prompt": "Solutions of y″+q(x)y=0 have initial values(1,0) and(0,2). Find their Wronskian.",
+          "solution": "The Wronskian at0 is1·2−0·0=2 and remains2 for every x."
+        },
+        {
+          "prompt": "For y″+2y′+y=0, W(0)=3. Find W(x).",
+          "solution": "Abel’s formula gives W(x)=3exp(−∫₀ˣ2ds)=3e^(−2x)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 38, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2025-december-q038.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q039",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 39,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For α,β>0 consider Σ_(n≥4)1/[n(log_e n)^α(log_e(log_e n))^β]. Which statement is true?",
+      "options": {
+        "A": "It converges for all α∈(0,1) and β∈(1,∞).",
+        "B": "It converges for α=1,β=1.",
+        "C": "It converges for α=1 and all β∈(1,∞).",
+        "D": "It converges for all α,β∈(0,∞)."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Apply the integral test and first substitute t=log x.",
+        "At α=1 use s=log t; the remaining test is a p-integral in s."
+      ],
+      "solution": "The corresponding integral becomes∫dt/[t^α(log t)^β]. For α=1 it becomes∫s^(−β)ds and converges exactly forβ>1, proving C. For α<1 it diverges for every fixedβ, refuting A; α=β=1 gives∫ds/s, refuting B. The same cases refute D. For completeness, α>1 gives convergence for anyβ>0 by comparison with a power t^(−γ),1<γ<α.",
+      "theory": "For positive eventually decreasing terms, the integral test equates convergence of a series with convergence of its corresponding improper integral. The series 1/[n(log n)^alpha(log log n)^beta] has its threshold at alpha=1. With t=log x, the integral becomes integral dt/[t^alpha(log t)^beta]. For alpha>1 it converges for any fixed beta; for alpha<1 it diverges because logarithms cannot overcome a nonintegrable power. At alpha=1, setting s=log t reduces it to integral s^(−beta) ds, convergent exactly when beta>1. A finite number of starting terms does not affect convergence. Repeated-log factors matter only at the borderline exponent; treating every logarithm as if it were an ordinary power of n gives the wrong threshold.",
+      "similar_questions": [
+        {
+          "prompt": "Does Σ1/[n log n(log log n)²] converge?",
+          "solution": "Yes. After t=log x and s=log t, the integral is∫s^(−2)ds, finite at infinity."
+        },
+        {
+          "prompt": "Does Σ1/[n(log n)^(1/2)(log log n)^10] converge?",
+          "solution": "No. After t=log x the integrand is t^(−1/2)(log t)^(−10); the logarithm cannot compensate for the exponent1/2<1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 39, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2025-december-q039.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

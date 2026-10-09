@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2022-june-q022",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For which listed real parameters does Σ_{n=3}∞aⁿ/[nᵇ(log n)ᶜ] NOT converge?",
+      "options": {
+        "A": "|a|<1, b,c∈ℝ",
+        "B": "a=1,b>1,c∈ℝ",
+        "C": "a=1,1≥b≥0,c<1",
+        "D": "a=−1,b≥0,c>0"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "First use the root test for |a|<1. For a=1 compare with the logarithmic p-series criterion.",
+        "At b=1 convergence needs c>1. For a=−1 test decreasing absolute terms tending to zero."
+      ],
+      "solution": "A converges absolutely because the nth root of the absolute term tends to |a|<1. B converges: logarithmic factors cannot prevent convergence of a power series with b>1. In C, if b<1 choose ε>0 with b+ε<1; eventually (log n)ᶜ≤n^ε when c≥0, so terms dominate n^{−(b+ε)}, while c<0 only makes them larger. If b=1, the integral substitution t=log x gives ∫dx/[x(log x)ᶜ]=∫t^{−c}dt, divergent for c<1. Thus C always diverges. D converges by the alternating-series test: n^{−b}(log n)^{−c} decreases to zero for b≥0,c>0. Only C is the nonconvergent family.",
+      "theory": "The root test detects exponential factors because the nth roots of powers of n and log n tend to one. At the boundary a=1, the generalized p-series Σ1/[nᵇ(log n)ᶜ] converges for b>1 regardless of c, diverges for b<1 regardless of c, and at b=1 converges exactly when c>1. Integral comparison proves the logarithmic threshold using t=log x. Powers dominate logarithms in either direction, so an arbitrarily small change in the power exponent overwhelms a fixed logarithmic factor. At a=−1, an alternating series can converge conditionally even when the positive series diverges. Its absolute terms must decrease to zero; positivity of c guarantees this even if b=0. Convergence statements for parameter families must hold for every parameter choice within the listed conditions.",
+      "similar_questions": [
+        {
+          "prompt": "Classify Σ_{n=3}∞1/[n(log n)²].",
+          "solution": "The integral substitution t=log x gives ∫t^{−2}dt, finite at infinity. Thus the positive series converges by the integral test."
+        },
+        {
+          "prompt": "Classify Σ_{n=3}∞(−1)ⁿ/log n.",
+          "solution": "The positive terms 1/log n decrease to zero, giving alternating convergence. The positive series diverges because 1/log n≥1/n eventually. Thus convergence is conditional."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 22, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2022-june-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q023",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 23,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let (aₙ),(bₙ) be bounded real sequences. Which statement is true?",
+      "options": {
+        "A": "limsup(aₙ+(−1)ⁿbₙ)=limsup aₙ+|limsup bₙ|",
+        "B": "limsup(aₙ+(−1)ⁿbₙ)≤limsup aₙ+limsup bₙ",
+        "C": "limsup(aₙ+(−1)ⁿbₙ)≤limsup aₙ+|limsup bₙ|+|liminf bₙ|",
+        "D": "limsup(aₙ+(−1)ⁿbₙ) may not exist"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The alternating term is bounded above by |bₙ|.",
+        "limsup|bₙ| equals max{|limsup bₙ|,|liminf bₙ|}, which is at most their sum."
+      ],
+      "solution": "Write U=limsup bₙ,L=liminf bₙ. For bounded sequences, limsup|bₙ|=max(|U|,|L|). Since (−1)ⁿbₙ≤|bₙ|, the sum inequality yields limsup(aₙ+(−1)ⁿbₙ)≤limsup aₙ+max(|U|,|L|)≤limsup aₙ+|U|+|L|, proving C. A fails with aₙ=(−1)ⁿ,bₙ=−1: their sum is identically zero while the asserted right side is 2. B fails with aₙ=0,bₙ=−1: the left side is 1 but right side −1. D fails because every bounded real sequence has a finite limsup; the displayed sum remains bounded. Thus C alone is universal.",
+      "theory": "For a bounded real sequence, limsup and liminf always exist as finite limits of tail suprema and infima. They are respectively the largest and smallest subsequential limits. The limsup sum inequality gives limsup(uₙ+vₙ)≤limsup uₙ+limsup vₙ, but equality need not hold because maxima of different sequences may occur on incompatible indices. Absolute values remove sign ambiguity: the largest absolute subsequential limit is max(|limsup bₙ|,|liminf bₙ|). Multiplication by (−1)ⁿ can exchange positive and negative contributions, so limsup bₙ alone is insufficient to bound the alternating product. Bounding by |bₙ| produces a robust estimate. Counterexamples with constants and parity usually settle incorrect proposed identities quickly.",
+      "similar_questions": [
+        {
+          "prompt": "Find limsup|bₙ| for bₙ=2+3(−1)ⁿ.",
+          "solution": "Even terms are 5 and odd terms −1. The absolute terms alternate 5 and 1, so limsup absolute value is 5=max(|5|,|−1|)."
+        },
+        {
+          "prompt": "Give bounded uₙ,vₙ for which the limsup sum inequality is strict.",
+          "solution": "Take uₙ=(−1)ⁿ and vₙ=−(−1)ⁿ. Their sum is zero, so its limsup is 0, while the individual limsups sum to 2. The high values occur on opposite parity subsequences."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 23, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2022-june-q023.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q024",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 24,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let X be the set of binary sequences (xₙ) with limsup xₙ=1, and Y the set of binary sequences whose limit does not exist. Which cardinality statement holds?",
+      "options": {
+        "A": "X,Y are countable",
+        "B": "X is countable and Y uncountable",
+        "C": "X uncountable and Y countable",
+        "D": "X,Y are uncountable"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "A binary sequence converges exactly when it is eventually constant.",
+        "Inject arbitrary binary sequences into Y by reserving some indices for fixed zero and one values."
+      ],
+      "solution": "The set {0,1}^ℕ is uncountable by Cantor’s diagonal argument. For each binary sequence b define x_{3k−2}=0,x_{3k−1}=1,x_{3k}=bₖ. This is an injective map into Y because the forced zeros and ones occur infinitely often, preventing convergence. It also maps into X since the limsup is one. Thus both sets are uncountable, proving D. Equivalently the eventually constant binary sequences form a countable union of finite-prefix choices, and removing them leaves uncountably many nonconvergent sequences. Y⊆X, since nonconvergent binary sequences contain infinitely many ones as well as zeros.",
+      "theory": "A binary sequence can converge only to zero or one, and convergence to either means it is eventually constant: taking an error tolerance below one half forces the eventual value. The full set of infinite binary sequences is uncountable by diagonalization. Finite binary strings, and hence eventually constant sequences, form a countable set because they are a countable union of finite sets. A sequence has limsup one precisely when ones occur infinitely often. Nonconvergence requires both symbols infinitely often. Uncountability can be proved by subtracting a countable exceptional set or by an explicit injection that preserves arbitrary information while forcing the desired behaviour. Distinguish the number of possible values of each term, which is finite, from the cardinality of the infinite sequence space.",
+      "similar_questions": [
+        {
+          "prompt": "Are eventually periodic binary sequences countable?",
+          "solution": "Yes. Each is specified by a finite initial string and a finite repeating block. There are countably many pairs of finite strings, so this family is countable, despite including infinitely many distinct sequences."
+        },
+        {
+          "prompt": "Prove the binary sequences with infinitely many zeros and ones are uncountable.",
+          "solution": "Inject arbitrary b∈{0,1}^ℕ into x=(0,1,b₁,0,1,b₂,…). The forced symbols guarantee both occur infinitely often, and the third entries recover b, giving injectivity and uncountability."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 24, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2022-june-q024.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q025",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 25,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let D be a proper dense subset of a metric space X and f:D→ℝ uniformly continuous. For p∈X define Bₙ(p)={x∈D:d(x,p)<1/n} and W_p=⋂ₙ closure(f(Bₙ(p))). Which statement holds?",
+      "options": {
+        "A": "W_p may be empty for some p",
+        "B": "W_p is nonempty for every p and contained in f(D)",
+        "C": "W_p is a singleton for every p",
+        "D": "W_p is empty for some p and singleton for some p"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Choose xₙ∈D tending to p by density. Uniform continuity makes f(xₙ) Cauchy.",
+        "Completeness of ℝ gives a unique limit; shrinking image diameters force the whole intersection to be that singleton."
+      ],
+      "solution": "Density supplies xₙ∈Bₙ(p), and d(xₙ,x_m)≤1/n+1/m. Uniform continuity makes f(xₙ) Cauchy, so it converges to L∈ℝ. For any fixed N, all sufficiently late xₙ lie in B_N(p), hence L∈closure(f(B_N(p))). Thus L∈W_p. For ε>0 choose δ from uniform continuity and N with 2/N<δ. Any two points of B_N(p) are less than δ apart, so their image distance is less than ε; the closure has diameter at most ε. Every two points of W_p therefore differ by at most ε for arbitrary ε, proving W_p={L}. B is false: D=ℚ⊂ℝ,f(x)=x,p irrational gives W_p={p} not contained in f(D)=ℚ. Only C holds.",
+      "theory": "A uniformly continuous function maps Cauchy sequences to Cauchy sequences because its distance control is independent of the locations of their terms. If the target is complete, a function on a dense subset consequently extends uniquely to the whole metric space by taking limits along approximating sequences. The extension value need not belong to the original image, only its closure. Shrinking neighbourhood images have diameters tending to zero under uniform continuity, and their closed-image intersection identifies the unique extension value. Density ensures the neighbourhoods are nonempty; completeness ensures the limiting value exists. Ordinary continuity on D would not suffice near omitted points, as functions can blow up or oscillate there. The set-image closure in W_p is essential for including limiting values not attained in D.",
+      "similar_questions": [
+        {
+          "prompt": "Extend f(q)=2q from ℚ to ℝ by the neighbourhood-limit construction.",
+          "solution": "For any p∈ℝ and rationals qₙ→p, f(qₙ)=2qₙ→2p. Thus W_p={2p} and the unique continuous extension is F(p)=2p. Irrational p may yield a value not in the original image 2ℚ."
+        },
+        {
+          "prompt": "Why does f(x)=1/x on D=(0,1] fail this extension method at p=0?",
+          "solution": "It is continuous on D but not uniformly continuous. For xₙ=1/n, the values n are not Cauchy and have no finite limit. The neighbourhood image closures at zero have empty intersection in ℝ, so completeness alone cannot compensate for lack of uniform continuity."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 25, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2022-june-q025.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q026",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 26,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let fₙ(t)=(n+2)(n+1)tⁿ(1−t) on [0,1]. Which statement holds?",
+      "options": {
+        "A": "fₙ converges uniformly",
+        "B": "fₙ converges pointwise but not uniformly",
+        "C": "fₙ diverges on [0,1]",
+        "D": "limₙ∫₀¹fₙ=∫₀¹limₙfₙ"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "For fixed t<1, exponential decay beats the quadratic factor; at t=1 every value is zero.",
+        "Compute the integral exactly: (n+2)(n+1)[1/(n+1)−1/(n+2)]."
+      ],
+      "solution": "For 0≤t<1, n²tⁿ→0, so fₙ(t)→0; at t=1, fₙ(1)=0. Thus the pointwise limit is zero throughout [0,1]. But ∫₀¹fₙ=(n+2)(n+1)(1/(n+1)−1/(n+2))=1 for every n. Uniform convergence to zero would force these integrals to tend to zero, impossible. Thus B holds and A,C fail. D asserts 1=0 and is false. One can also inspect the maximum: it occurs at t=n/(n+1), and fₙ there equals (n+2)(n/(n+1))ⁿ, asymptotic to n/e, explicitly showing the sup norm does not vanish.",
+      "theory": "Pointwise convergence checks each fixed argument separately; uniform convergence controls all arguments with one index threshold. Polynomial factors in n times tⁿ tend to zero for any fixed |t|<1, but their maxima may move toward an endpoint and grow. On a finite interval uniform convergence allows exchanging the limit with integration, since the integral error is bounded by interval length times the supremum error. Pointwise convergence alone does not justify that exchange. This sequence is nonnegative, has unit integral, and concentrates near one in a shrinking region despite tending to zero at each fixed point. A common integrable dominating function cannot exist by dominated convergence. Exact beta-type polynomial integrals offer an easy way to detect this failure without estimating the full maximum.",
+      "similar_questions": [
+        {
+          "prompt": "For gₙ(t)=(n+1)tⁿ on [0,1], find its integral and pointwise limit.",
+          "solution": "The integral is one. For t<1 the limit is zero, but at t=1 values diverge. Thus there is no finite pointwise limit on the whole interval, contrasting with the extra factor (1−t) in the source."
+        },
+        {
+          "prompt": "Show tⁿ converges uniformly to zero on [0,a] for 0<a<1.",
+          "solution": "Its supremum on the interval is aⁿ, tending to zero. Hence convergence is uniform there, unlike on [0,1], where the endpoint values remain one."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 26, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2022-june-q026.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q027",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 27,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A real sequence is Fibonacci-like if aₙ=aₙ₋₁+aₙ₋₂ for n≥3. What is the dimension over ℝ of the vector space of such sequences?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "Infinite and countable",
+        "D": "Infinite and uncountable"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The first two entries determine every later entry uniquely.",
+        "The map from a sequence to (a₁,a₂) is a linear bijection onto ℝ²."
+      ],
+      "solution": "Addition and scalar multiplication preserve the recurrence, so the sequences form a vector space. The linear map T(a)=(a₁,a₂) is injective: zero first two entries recursively force every entry to zero. It is surjective: any two real initial values generate a unique sequence by the recurrence. Therefore the space is linearly isomorphic to ℝ² and has dimension two, B. Explicit basis sequences start with (1,0) and (0,1), namely (1,0,1,1,2,3,…) and (0,1,1,2,3,5,…). Every Fibonacci-like sequence is a₁ times the first plus a₂ times the second. Infinite length of the sequences does not imply infinite vector-space dimension.",
+      "theory": "A homogeneous linear recurrence of order r ordinarily has an r-dimensional solution space when each new term is determined from the previous r and the initial values are free. The coordinate map to those initial values establishes this rigorously as a linear bijection. A basis can be formed from the sequences with standard-unit initial data, avoiding the need to solve a characteristic equation. Distinct roots of that equation give another basis of exponential sequences; repeated roots lead to polynomial times exponential terms. Dimension counts independent degrees of freedom, not the number of entries in each object or the cardinality of the whole space. Even ℝ² has uncountably many elements while its dimension is the finite number two. Homogeneity ensures the zero sequence and linear combinations remain solutions.",
+      "similar_questions": [
+        {
+          "prompt": "Find the dimension of sequences satisfying aₙ=2aₙ₋₁ for n≥2.",
+          "solution": "Only a₁ is free, and every term is a₁2^{n−1}. The sequence (1,2,4,8,…) spans the solution space and is nonzero, so the dimension is one."
+        },
+        {
+          "prompt": "Find the dimension of sequences satisfying aₙ=aₙ₋₃ for n≥4.",
+          "solution": "The first three values are arbitrary and then repeat periodically. Mapping a sequence to those three entries is a linear bijection with ℝ³, so the dimension is three."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 27, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2022-june-q027.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q028",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 28,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be an invertible 5×5 matrix over a field F with the same characteristic polynomial as A⁻¹. Which is necessarily true?",
+      "options": {
+        "A": "(det A)²=1",
+        "B": "(det A)⁵=1",
+        "C": "(tr A)²=1",
+        "D": "(tr A)⁵=1"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The characteristic polynomial determines the determinant.",
+        "Equality gives det A=det A⁻¹=(det A)⁻¹. Use −I₅ over ℝ to test the remaining choices."
+      ],
+      "solution": "Equal characteristic polynomials imply det A=det A⁻¹. Since A is invertible, det A⁻¹=(det A)⁻¹, so (det A)²=1, proving A over any field. The other claims are not necessary: take A=−I₅ over ℝ. Its inverse is itself, satisfying the hypothesis, but det A=−1 and (det A)⁵=−1. Its trace is −5, whose square is 25 and fifth power −3125, neither one. Thus B,C,D fail, and A is the unique universal conclusion. Odd matrix size does not force the determinant to be +1; inverse symmetry permits −1.",
+      "theory": "The characteristic polynomial det(tI−A) encodes trace and determinant in its coefficients: the coefficient of t^{n−1} is −tr A and its constant term is (−1)ⁿdet A. Similar matrices have the same polynomial, but equality of characteristic polynomials is a weaker condition. Inversion reciprocates determinant and eigenvalues, so equality between a matrix’s characteristic polynomial and that of its inverse implies reciprocal symmetry of spectral data. Equating determinants yields a simple field-independent restriction d²=1. It does not imply d=1 in characteristic different from two. Trace of an inverse need not be the reciprocal of trace, so no corresponding scalar identity follows. Counterexamples over one permissible field are enough to refute assertions presented for all fields.",
+      "similar_questions": [
+        {
+          "prompt": "An invertible matrix has the same characteristic polynomial as its inverse. What determinant values are possible over ℝ?",
+          "solution": "The determinant satisfies d=d⁻¹, so d²=1 and d=±1. Both occur: I has determinant one, and diag(−1,1,…,1) is its own inverse with determinant minus one."
+        },
+        {
+          "prompt": "Does diag(2,1/2,1) satisfy the characteristic-polynomial condition?",
+          "solution": "Yes. Inversion gives diag(1/2,2,1), just a permutation of the diagonal entries, so both polynomials coincide. Its determinant is one, while its trace is 7/2, illustrating that the trace need not have square one."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 28, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2022-june-q028.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q029",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 29,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Suppose real matrices A,B are similar, A=SBS⁻¹ for invertible S. Which assertion need not be true?",
+      "options": {
+        "A": "Aᵀ is similar to Bᵀ",
+        "B": "The minimal polynomials of A,B are equal",
+        "C": "tr A=tr B",
+        "D": "Range(A)=Range(B)"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Transpose the similarity relation and apply polynomials to it.",
+        "The range transforms by S; it has the same dimension but need not be the same subspace."
+      ],
+      "solution": "Transposing yields Aᵀ=(S⁻¹)ᵀBᵀSᵀ, proving A. For every polynomial p, p(A)=Sp(B)S⁻¹, so p annihilates one matrix exactly when it annihilates the other; their monic minimal polynomials coincide (B). Trace is similarity invariant, proving C. For D take B=diag(1,0) and S=[[0,1],[1,0]], so A=diag(0,1). The ranges are respectively span{e₁} and span{e₂}, not equal. In general Range(A)=S Range(B), which preserves rank but can change the actual subspace. Thus D alone need not hold.\n\n**Official-key status:** The retrieved NTA final key marks exact source question ID297 Dropped. D is the independently derived answer to the attached wording, as proved above, but the app leaves this officially dropped item unscored. No particular mathematical defect beyond the official withdrawal is inferred.",
+      "theory": "Similarity represents the same linear transformation in different bases. It preserves quantities independent of a coordinate choice, including characteristic polynomial, minimal polynomial, determinant, trace, rank, and eigenvalue multiplicities. A polynomial identity is preserved because powers obey Aᵏ=SBᵏS⁻¹. The transpose relation uses the inverse transpose as the conjugating matrix, so transposes of similar matrices are also similar. Coordinate subspaces such as kernels and ranges transform by S rather than necessarily staying identical: ker A=S ker B and Range A=S Range B. Their dimensions remain equal. Confusing equality of subspaces with isomorphism or equal dimension is a common mistake. A permutation change of basis gives a simple counterexample without changing any spectral invariant.",
+      "similar_questions": [
+        {
+          "prompt": "Let B=diag(1,2) and S swap coordinates. Compute A and compare spectra and ranges.",
+          "solution": "A=SBS⁻¹=diag(2,1). Both have eigenvalues 1,2, trace three, and full range ℝ². This example preserves the range because both are invertible, so a singular example is needed to refute general range equality."
+        },
+        {
+          "prompt": "If A=SBS⁻¹ and v∈ker B, where is Sv?",
+          "solution": "A(Sv)=SBv=0, so Sv∈ker A. Applying S⁻¹ gives the converse, hence ker A=S ker B. The kernels are equal in dimension but may differ as coordinate subsets."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The retrieved NTA final key marks exact source question ID297 Dropped. D is the independently derived answer to the attached wording, as proved above, but the app leaves this officially dropped item unscored. No particular mathematical defect beyond the official withdrawal is inferred.",
+      "answer_source": "Independent mathematical derivation; question 29, PDF page 13. No candidate response used as an answer key. Official final key checked by exact question ID: https://www.nta.ac.in/Download/Notice/Notice_20221102141337.pdf",
+      "page": 13,
+      "image": "assets/questions/2022-june-q029.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q030",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 30,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be a real n×n matrix of rank r. Let V={X∈Mₙ(ℝ):AX=0}. What is dim V?",
+      "options": {
+        "A": "r",
+        "B": "nr",
+        "C": "n²r",
+        "D": "n²−nr"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "AX=0 means that each column of X belongs to ker A.",
+        "Each of the n columns has n−r independent parameters."
+      ],
+      "solution": "Rank–nullity gives dim ker A=n−r. Writing X=[x₁ … xₙ], the product condition AX=0 is equivalent to Axⱼ=0 for every column j. These n columns can be chosen independently from ker A, so V is isomorphic to n copies of that (n−r)-dimensional space. Therefore dim V=n(n−r)=n²−nr, D. Explicitly, if v₁,…,v_{n−r} is a kernel basis, the matrices vᵢeⱼᵀ for 1≤i≤n−r,1≤j≤n form a basis. The extreme cases r=n and r=0 give dimensions zero and n², correctly matching invertible and zero A.",
+      "theory": "Rank–nullity relates a linear map’s domain dimension to its rank and nullity. Matrix multiplication on the left acts independently on columns, so a constraint AX=0 imposes the same kernel condition on each column. If X has m columns instead of n, the resulting dimension is m(n−r). This is a vector-space direct-product count, not a count of individual solutions. A basis can be built by putting each kernel basis vector in one column at a time, with all other columns zero. Multiplication on the right imposes row constraints instead, involving the left kernel. Dimension checks at a zero matrix or an invertible matrix help reject impossible formulas: the solution space must then be all matrices or only the zero matrix respectively.",
+      "similar_questions": [
+        {
+          "prompt": "A 4×4 matrix has rank three. What is the dimension of 4×2 matrices X with AX=0?",
+          "solution": "The kernel has dimension 4−3=1. Each of the two columns can independently be a multiple of a fixed kernel vector, so the solution-space dimension is two."
+        },
+        {
+          "prompt": "For A=diag(1,0,0), describe all 3×3 X with AX=0.",
+          "solution": "The product retains only the first row of X, so that row must be zero. The remaining two rows contain six unrestricted entries. Thus the dimension is six, agreeing with 3(3−1)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 30, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2022-june-q030.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q031",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 31,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "On real polynomials of degree at most one use ⟨f,g⟩=∫₀¹f(x)g(x)dx. Which statement holds?",
+      "options": {
+        "A": "For every nonzero a,b there is c with ax+b orthogonal to x+c",
+        "B": "For every nonzero b there are infinitely many c with x+b orthogonal to x+c",
+        "C": "For every positive c there are infinitely many a,b with ax+b orthogonal to x+c",
+        "D": "For every nonzero b there are infinitely many c with constant b orthogonal to x+c"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Compute the bilinear pairing as a(1/3+c/2)+b(1/2+c).",
+        "With c fixed positive this is one nontrivial linear equation in a,b, leaving a line of solutions."
+      ],
+      "solution": "The inner product equals a/3+(ac+b)/2+bc=a(1/3+c/2)+b(1/2+c). For c>0, the coefficient 1/2+c is nonzero; any real a gives b=−a(1/3+c/2)/(1/2+c). This produces infinitely many pairs, proving C. A fails for a=2,b=−1: the c coefficient is a/2+b=0 but the constant is a/3+b/2=1/6, so no c works. B has at most one solution to (1/2+b)c+1/3+b/2=0; for b=1 it is c=−5/9, not infinitely many. D requires b(1/2+c)=0, giving only c=−1/2 when b≠0. Thus C is the sole true statement.",
+      "theory": "The integral pairing on continuous real polynomials is symmetric and bilinear. It is positive definite because a nonzero polynomial has a nonzero value on some interval, making its squared integral positive. Orthogonality imposes a linear equation in the coefficients of one polynomial when the other is fixed. The orthogonal complement of a nonzero vector in a two-dimensional inner-product space is one-dimensional, explaining the infinitely many pairs in C. In contrast, restricting one coefficient to a fixed value can yield exactly one solution or none. A zero coefficient of the adjustable parameter does not guarantee solutions; the constant term must also vanish. Careful quantifier checks distinguish “for every pair a,b” from “for every c there exist many pairs.”",
+      "similar_questions": [
+        {
+          "prompt": "Find every ax+b orthogonal to x+1 on [0,1].",
+          "solution": "The equation is (5/6)a+(3/2)b=0, so b=−5a/9. Thus the orthogonal complement is span{x−5/9}; each a supplies one pair, giving infinitely many solutions."
+        },
+        {
+          "prompt": "Find c making the constant polynomial 3 orthogonal to x+c.",
+          "solution": "The inner product is 3∫₀¹(x+c)dx=3(1/2+c). It vanishes precisely at c=−1/2, so the solution is unique."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 31, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2022-june-q031.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q032",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 32,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A=(aᵢⱼ) be real symmetric 3×3 and Q(x)=xᵀAx. Which assertion holds?",
+      "options": {
+        "A": "Positive definiteness implies aᵢⱼ>0 for i≠j",
+        "B": "Positive definiteness implies aᵢᵢ>0 for every i",
+        "C": "aᵢⱼ>0 for i≠j implies positive definiteness",
+        "D": "aᵢᵢ>0 for every i implies positive definiteness"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Evaluate Q on coordinate basis vectors.",
+        "Use I for off-diagonal necessity, and a 2×2 block with excessively large off-diagonal entries for insufficiency."
+      ],
+      "solution": "If Q is positive definite, Q(eᵢ)=aᵢᵢ>0, proving B. A fails for A=I₃, positive definite with zero off-diagonal entries. C fails for the matrix having diagonal entries −1 and all off-diagonal entries 1: Q(e₁)=−1 despite every off-diagonal being positive. D fails for [[1,2,0],[2,1,0],[0,0,1]]: all diagonal entries are positive, but Q(1,−1,0)=−2. Thus diagonal positivity is necessary, not sufficient, and no positivity of all off-diagonal entries is required. Exactly B holds.",
+      "theory": "A real symmetric matrix is positive definite if xᵀAx>0 for every nonzero real vector x. Coordinate tests immediately require positive diagonal entries, but general directions also involve cross terms. The spectral theorem equates positive definiteness with all eigenvalues positive. Sylvester’s criterion equivalently requires every leading principal minor to be positive, not merely the one-by-one diagonal tests. Off-diagonal entries can be positive, negative, or zero in a positive-definite matrix; their magnitudes must be compatible with the diagonal entries. For a 2×2 symmetric block this means a>0 and ac−b²>0. Large cross terms can introduce negative directions even when every diagonal is positive. Counterexamples using a 2×2 block embedded in dimension three make this failure transparent.",
+      "similar_questions": [
+        {
+          "prompt": "For which t is [[1,t,0],[t,1,0],[0,0,1]] positive definite?",
+          "solution": "Its eigenvalues are 1+t,1−t,1. All are positive exactly when −1<t<1. At |t|=1 a zero direction appears and beyond that a negative direction appears."
+        },
+        {
+          "prompt": "Can a positive-definite matrix have negative off-diagonal entries?",
+          "solution": "Yes: [[2,−1],[−1,2]] has eigenvalues 1 and 3. Its quadratic form is (x−y)²+x²+y², strictly positive for any nonzero (x,y)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 32, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2022-june-q032.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2022-june-q033",
+      "source_type": "official_exam",
+      "paper_id": "2022-june",
+      "question_number": 33,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be entire with f″+f=0, and f^{(n)} denote its nth derivative. Which statement holds?",
+      "options": {
+        "A": "(f^{(n)}(0))_{n≥1} converges",
+        "B": "limₙf^{(n)}(0)=1",
+        "C": "limₙf^{(n)}(0)=−1",
+        "D": "(|f^{(n)}(0)|)_{n≥1} has a convergent subsequence"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Differentiate the equation repeatedly to get f^{(n+2)}=−f^{(n)}.",
+        "The derivative values repeat every four indices; absolute values have at most two values."
+      ],
+      "solution": "Put a=f(0),b=f′(0). The equation gives f^{(n+2)}(0)=−f^{(n)}(0), so for n≥1 the values repeat b,−a,−b,a. Their absolute values repeat |b|,|a|,|b|,|a|. The odd-index absolute-value subsequence is constantly |b| and hence convergent, proving D. A fails for f(z)=sin z, whose derivatives at zero repeat 1,0,−1,0 and do not converge. The same example refutes B,C; alternatively f≡0 gives limit zero rather than either proposed constant. Entire solutions are f(z)=a cos z+b sin z, but the recurrence alone suffices.",
+      "theory": "An entire function can be differentiated arbitrarily often, so an identity such as f″+f=0 yields a recurrence among all derivative values at a point. Here the recurrence is periodic with period four and bounds the derivative sequence by max(|f(0)|,|f′(0)|). Bounded real sequences have convergent subsequences by Bolzano–Weierstrass, and in this case constant residue-class subsequences are explicit. A bounded sequence need not converge, particularly when multiple residue classes have distinct limits. The general analytic solution of this constant-coefficient equation is a cos z+b sin z, determined by two initial values. Entire growth properties are not needed for the derivative argument. Absolute values erase signs but can still alternate between two different magnitudes, so full absolute-value convergence also is not guaranteed.",
+      "similar_questions": [
+        {
+          "prompt": "For f(z)=2 cos z+sin z, describe |f^{(n)}(0)|.",
+          "solution": "The initial values are a=2,b=1. Derivatives repeat 1,−2,−1,2, so absolute values alternate 1 and 2. They do not converge, but each parity subsequence is constant and converges."
+        },
+        {
+          "prompt": "An entire f satisfies f″=f with f(0)=3,f′(0)=4. Find derivative values at zero.",
+          "solution": "Repeated differentiation gives f^{(n+2)}=f^{(n)}. Thus even derivatives equal 3 and odd derivatives equal 4. The derivative sequence is bounded with two constant subsequences but not convergent."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 33, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2022-june-q033.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2025-december-q116",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 116,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "A nontrivial solution of $y(x)=\\lambda\\int_{-1}^{1}(5xt^3+4x^2t+3xt)y(t)\\,dt$ satisfies $y(1)=5/2$. Which statements are true?",
+      "options": {
+        "A": "$y(0)+y^\\prime(0)=3/2$",
+        "B": "$y(1/2)+y^\\prime(1/2)=7/2$",
+        "C": "$y(-1)+y^\\prime(-1)=-1$",
+        "D": "$y(1/3)+y^\\prime(1/3)=14/9$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The range of this integral operator lies in the span of $x$ and $x^2$.",
+        "Put $y=ax+bx^2$ and use the vanishing of odd integrals over $[-1,1]$."
+      ],
+      "solution": "The right side is a polynomial of the form $ax+bx^2$, so every solution has that form. Symmetry gives $\\int_{-1}^1ty(t)\\,dt=2a/3$ and $\\int_{-1}^1t^3y(t)\\,dt=2a/5$. Consequently\n$$ax+bx^2=\\lambda\\left(4ax+\\frac{8a}{3}x^2\\right).$$\nIf $a=0$, the equations force $b=0$, contrary to nontriviality. Hence $\\lambda=1/4$ and $b=2a/3$. The condition $a+b=5/2$ yields $a=3/2,b=1$. Therefore $y=x^2+3x/2$, and\n$$y(x)+y^\\prime(x)=x^2+\\frac72x+\\frac32.$$\nIts values at $0,1/2,-1,1/3$ are respectively $3/2,7/2,-1,25/9$. **A,B,C are correct; D is false.**",
+      "theory": "A degenerate, or finite-rank, kernel is a finite sum $K(x,t)=\\sum_{j=1}^r a_j(x)b_j(t)$. Its integral operator has range in the span of the functions $a_j$, so a nonzero solution of a homogeneous equation $y=\\lambda Ty$ must lie in that finite-dimensional space. Substitution reduces the integral equation to a matrix eigenvalue problem. The nonzero eigenvalues of $T$ correspond to the characteristic values $\\lambda$ through reciprocals. Symmetry of the integration interval eliminates integrands that are odd, often making the coefficient equations triangular. The homogeneous equation initially determines an eigenfunction only up to scale; a normalization such as $y(1)=5/2$ fixes that scale when evaluation there is nonzero. It is essential to rule out the zero coefficient case before dividing and to substitute the resulting polynomial back into the original equation.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $y(x)=\\lambda x\\int_{-1}^1ty(t)\\,dt$ nontrivially, with $y(1)=2$.",
+          "solution": "Write $y=ax$. The integral is $2a/3$, so $a=\\lambda(2a/3)$ gives $\\lambda=3/2$. Normalization gives $a=2$, hence $y=2x$."
+        },
+        {
+          "prompt": "For $Ty=x\\int_{-1}^1ty(t)\\,dt+x^2\\int_{-1}^1t^2y(t)\\,dt$, find the eigenvalues on its range.",
+          "solution": "For $y=ax+bx^2$, symmetry gives $Ty=(2a/3)x+(2b/5)x^2$. The eigenvalues are $2/3,2/5$, with eigenfunctions $x,x^2$; $y=\\lambda Ty$ has characteristic values $3/2,5/2$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 116, PDF page 68. No candidate response used as an answer key.",
+      "page": 68,
+      "image": "assets/questions/2025-december-q116.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q117",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 117,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Newton–Raphson iteration for $\\sin x-1=0$ converges to $\\alpha=\\pi/2$. Put $e_n=x_n-\\alpha$. For which $p>0$ does $\\lim |e_{n+1}|/|e_n|^p$ exist as a finite nonzero constant, and what is that constant? Assume errors are nonzero along the asymptotic sequence.",
+      "options": {
+        "A": "$p=1$",
+        "B": "The limit is $1/2$.",
+        "C": "$p=2$",
+        "D": "The limit is $1$."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "At $\\pi/2$, both the function and its first derivative vanish.",
+        "Use $\\sin(\\pi/2+e)=\\cos e$ and the half-angle identity for $(1-\\cos e)/\\sin e$."
+      ],
+      "solution": "Newton's update is $x_{n+1}=x_n-(\\sin x_n-1)/\\cos x_n$. In error coordinates,\n$$e_{n+1}=e_n-\\frac{1-\\cos e_n}{\\sin e_n}\n=e_n-\\tan(e_n/2)\n=\\frac{e_n}{2}-\\frac{e_n^3}{24}+O(e_n^5).$$\nThus $|e_{n+1}|/|e_n|\\to1/2$. More generally, the ratio with power $p$ behaves as $\\tfrac12|e_n|^{1-p}$: its limit is zero if $p<1$, finite nonzero only if $p=1$, and unbounded if $p>1$. **A,B are correct.** The root has multiplicity two, so the usual simple-root quadratic convergence theorem does not apply.",
+      "theory": "The order of convergence is measured through the asymptotic error relation $|e_{n+1}|\\sim C|e_n|^p$, with $0<C<\\infty$. Newton's method has order two near a simple root when the needed smoothness and nonzero derivative assumptions hold. If $f(x)=(x-\\alpha)^m g(x)$ with $g(\\alpha)\\ne0$ and multiplicity $m>1$, expansion instead gives $e_{n+1}=(1-1/m)e_n+O(e_n^2)$, hence linear convergence with factor $(m-1)/m$. For $\\sin x-1$, the Taylor expansion about $\\pi/2$ starts at $-e^2/2$, identifying a double root. Exact trigonometric identities simplify the update and reveal the next error term. Modified Newton iteration subtracting $m f/f'$ removes the linear term when the multiplicity is known; its order can be higher in special symmetric examples. Derivative vanishing at the root also means the direct quotient must be evaluated at nearby nonroot iterates.",
+      "similar_questions": [
+        {
+          "prompt": "Apply ordinary Newton iteration to $(x-a)^2=0$. What happens to the error?",
+          "solution": "For $e\\ne0$, $f/f^\\prime=e/2$, so the next error is exactly $e/2$. The convergence is linear with factor $1/2$."
+        },
+        {
+          "prompt": "For Newton iteration on $x^2-2=0$ near $\\sqrt2$, derive the error relation.",
+          "solution": "$x_{n+1}=(x_n+2/x_n)/2$. Subtracting $\\sqrt2$ gives $e_{n+1}=e_n^2/(2x_n)$, so the order is two and constant $1/(2\\sqrt2)$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 117, PDF page 69. No candidate response used as an answer key.",
+      "page": 69,
+      "image": "assets/questions/2025-december-q117.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q118",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 118,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Consider the Dirichlet problem $u_{xx}+u_{yy}=0$ inside the unit disk with continuous boundary data $u(x,y)=e^{x+y}$ on $x^2+y^2=1$. Which statements are true for the classical solution continuous on the closed disk?",
+      "options": {
+        "A": "A unique solution exists.",
+        "B": "No solution exists.",
+        "C": "$u=(1+e)/2$ at some point of the closed disk.",
+        "D": "$u=(1+e^3)/2$ at some point of the closed disk."
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Continuous boundary data on a disk admit a harmonic Poisson extension.",
+        "On the circle, $-\\sqrt2\\le x+y\\le\\sqrt2$; use the maximum principle."
+      ],
+      "solution": "Continuous boundary data have a Poisson integral extension that is harmonic inside and continuous up to the circle. The maximum principle gives uniqueness and\n$$e^{-\\sqrt2}\\le u(x,y)\\le e^{\\sqrt2}.$$\nThus A is true and B false. The number $(1+e)/2$ lies strictly between $1$ and $e$, hence within the boundary range $[e^{-\\sqrt2},e^{\\sqrt2}]$. Since $x+y$ runs continuously through $[-\\sqrt2,\\sqrt2]$ on the circle, the boundary already attains this value. C is true.\n\nFor D, $(1+e^3)/2>e^3/2>e^{\\sqrt2}$: the last inequality follows from $e^{3-\\sqrt2}>e>2$. It violates the upper bound, so D is false. **A,C are correct.** The interior solution is not simply $e^{x+y}$, whose Laplacian is $2e^{x+y}$.",
+      "theory": "For a continuous function $g$ on the boundary of the unit disk, the Poisson formula is $u(r,\\theta)=\\frac1{2\\pi}\\int_0^{2\\pi}\\frac{1-r^2}{1-2r\\cos(\\theta-t)+r^2}g(t)\\,dt$. It produces a harmonic function for $r<1$ with the prescribed continuous boundary limits. The kernel is nonnegative and has integral one, so the extension stays between the boundary minimum and maximum. Alternatively, the maximum principle gives these bounds and proves uniqueness by applying it to the difference of two solutions. To decide whether a value occurs somewhere on the closed disk, it is often enough to check the continuous boundary range. Boundary data need not be harmonic as a formula on the interior; the extension problem prescribes only their values on the circle. Continuity and the stated solution class matter for both existence and uniqueness.",
+      "similar_questions": [
+        {
+          "prompt": "Find the harmonic extension of boundary data $g(\\theta)=2+\\cos(3\\theta)$ on the unit circle.",
+          "solution": "$u(r,\\theta)=2+r^3\\cos(3\\theta)$. Each polar mode is harmonic, and at $r=1$ it gives the required values. Uniqueness follows from the maximum principle."
+        },
+        {
+          "prompt": "If continuous boundary data lie in $[4,7]$, can the continuous harmonic extension attain $9$ inside?",
+          "solution": "No. The maximum principle bounds the extension above by $7$ and below by $4$. If it attains either global extreme at an interior point, the strong maximum principle makes it constant."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 118, PDF page 69. No candidate response used as an answer key.",
+      "page": 69,
+      "image": "assets/questions/2025-december-q118.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q119",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 119,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Hard",
+      "prompt": "In $Y_i=\\beta x_i+\\varepsilon_i$, let $\\beta>0$, $S=\\sum x_i^2>0$, and uncorrelated errors have mean zero and variance $\\sigma^2>0$. Let $\\widetilde\\beta_1=\\sum a_i^*Y_i$, where the coefficients minimize $E(\\sum a_iY_i-\\beta)^2$ over all real coefficients, and let $\\widetilde\\beta_2$ be OLS. Which comparison is true?",
+      "options": {
+        "A": "$\\operatorname{Var}(\\widetilde\\beta_1)>\\operatorname{Var}(\\widetilde\\beta_2)$ and $\\operatorname{MSE}(\\widetilde\\beta_1)>\\operatorname{MSE}(\\widetilde\\beta_2)$.",
+        "B": "$\\operatorname{Var}(\\widetilde\\beta_1)<\\operatorname{Var}(\\widetilde\\beta_2)$ and $\\operatorname{MSE}(\\widetilde\\beta_1)<\\operatorname{MSE}(\\widetilde\\beta_2)$.",
+        "C": "$\\operatorname{Var}(\\widetilde\\beta_1)>\\operatorname{Var}(\\widetilde\\beta_2)$ and $E\\widetilde\\beta_1<E\\widetilde\\beta_2$.",
+        "D": "$\\operatorname{Var}(\\widetilde\\beta_1)<\\operatorname{Var}(\\widetilde\\beta_2)$ and $E\\widetilde\\beta_1>E\\widetilde\\beta_2$."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Write risk as $\\sigma^2\\|a\\|^2+\\beta^2(a^\\top x-1)^2$.",
+        "The unrestricted optimum shrinks the unbiased OLS estimator toward zero."
+      ],
+      "solution": "The risk is $\\sigma^2a^\\top a+\\beta^2(a^\\top x-1)^2$. Its strictly positive definite Hessian gives a unique minimum satisfying\n$$(\\sigma^2I+\\beta^2xx^\\top)a^*=\\beta^2x,\\qquad a^*=\\frac{\\beta^2x}{\\sigma^2+\\beta^2S}.$$\nOLS is $\\widetilde\\beta_2=x^\\top Y/S$. Therefore $\\widetilde\\beta_1=c\\widetilde\\beta_2$, where $c=\\beta^2S/(\\sigma^2+\\beta^2S)\\in(0,1)$. We have\n$$E\\widetilde\\beta_1=c\\beta<\\beta,\\quad\n\\operatorname{Var}(\\widetilde\\beta_1)=c^2\\frac{\\sigma^2}{S}<\\frac{\\sigma^2}{S},$$\nand the minimum MSE is $\\beta^2\\sigma^2/(\\sigma^2+\\beta^2S)=c\\sigma^2/S<\\sigma^2/S$, the OLS MSE. **B is correct.** The optimum depends on unknown $\\beta$; it is a pointwise oracle comparison, not an implementable estimator claimed to improve uniformly.",
+      "theory": "For any estimator, mean squared error equals variance plus squared bias. A linear estimator $a^\\top Y$ in this regression has expectation $\\beta a^\\top x$ and variance $\\sigma^2\\|a\\|^2$ because errors are uncorrelated with common variance. Gauss–Markov minimizes variance subject to the unbiasedness constraint $a^\\top x=1$, yielding OLS coefficients $x/S$. Removing that constraint permits shrinkage: reduced variance can outweigh the induced bias for a specified parameter value. The optimal factor here balances the terms $c^2\\sigma^2/S$ and $(1-c)^2\\beta^2$. Its dependence on the unknown parameter is crucial: pointwise minimum risk over coefficients is an oracle calculation, not evidence that a fixed practical coefficient vector dominates OLS for every $\\beta$. Positive error variance and nonzero design make the optimum strict and ensure all denominators are positive.",
+      "similar_questions": [
+        {
+          "prompt": "If $\\beta=2$, $S=3$, and $\\sigma^2=4$, compare the oracle estimator with OLS.",
+          "solution": "$c=12/(4+12)=3/4$. OLS has variance and MSE $4/3$. The oracle has mean $3/2$, variance $(9/16)(4/3)=3/4$, squared bias $1/4$, and MSE $1$."
+        },
+        {
+          "prompt": "An unbiased estimator has variance $v$. Find the pointwise MSE-optimal constant multiplier when estimating a parameter $\\theta$.",
+          "solution": "Risk of $cT$ is $c^2v+(1-c)^2\\theta^2$. Differentiating gives $c=\\theta^2/(v+\\theta^2)$ and minimum risk $v\\theta^2/(v+\\theta^2)$. Since $c$ depends on $\\theta$, this is an oracle factor."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 119, PDF page 70. No candidate response used as an answer key.",
+      "page": 70,
+      "image": "assets/questions/2025-december-q119.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q120",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 120,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Hard",
+      "prompt": "Let $f:\\mathbb C\\to\\mathbb C$ be $f(z)=\\sin^2z+\\cos^2|z|$. Which statements are true?",
+      "options": {
+        "A": "$f$ is real valued.",
+        "B": "$f(z)=1$ for every $z$.",
+        "C": "$f$ is not entire.",
+        "D": "$f$ has finitely many zeros on the imaginary axis."
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The identity $\\sin^2z+\\cos^2z=1$ uses the same argument in both terms.",
+        "For $z=iy$, reduce to $\\cos^2y-\\sinh^2y$, an even real function."
+      ],
+      "solution": "For $z=x+iy$, $\\operatorname{Im}\\sin^2z=\\tfrac12\\sin(2x)\\sinh(2y)$, whereas $\\cos^2|z|$ is real. Taking $x=\\pi/4,y=1$ disproves A. At $z=i$, $f(i)=\\cos^2(1)-\\sinh^2(1)<0$, disproving B since $f(0)=1$.\n\nIf $f$ were entire, subtracting the entire function $\\sin^2z$ would make $h(z)=\\cos^2|z|$ an entire real-valued function. Such a function is constant by the Cauchy–Riemann equations; yet $h(0)=1$ and $h(\\pi/2)=0$. Thus C holds.\n\nOn the imaginary axis, $F(y)=f(iy)=\\cos^2y-\\sinh^2y$. Put $a=\\operatorname{arsinh}(1)<\\pi/2$. For $|y|>a$, $F(y)<0$. On $(0,a)$, $F^\\prime(y)=-\\sin(2y)-\\sinh(2y)<0$, while $F(0)=1$ and $F(a)=\\cos^2a-1<0$. Hence there is exactly one positive zero and, by evenness, one negative zero. **Exactly two imaginary-axis zeros: C,D are correct.**",
+      "theory": "Complex trigonometric identities remain valid for complex arguments, but replacing an argument with its modulus introduces dependence on both $z$ and its conjugate. A nonconstant real-valued function on a connected open subset of the plane cannot be holomorphic: the Cauchy–Riemann equations force both first partial derivatives of its real part to vanish. This provides a useful test after subtracting a known entire term. Nonholomorphic functions do not generally satisfy the isolated-zero theorem for holomorphic functions, so zeros should be studied directly. Restricting to the imaginary axis uses $\\sin(iy)=i\\sinh y$ and the fact that cosine squared is even. Growth of the hyperbolic term confines all zeros to a bounded interval; strict monotonicity on the positive part and symmetry then give an exact count. Boundedness alone would not establish finiteness for an arbitrary continuous function.",
+      "similar_questions": [
+        {
+          "prompt": "Is $g(z)=z+|z|^2$ entire?",
+          "solution": "If it were, $g(z)-z=|z|^2$ would be holomorphic and real valued on $\\mathbb C$, hence constant. Its values at $0$ and $1$ differ, so it is not entire."
+        },
+        {
+          "prompt": "For $b>0$, count the real zeros of $H(y)=b-\\sinh^2y$.",
+          "solution": "It is even, positive at zero, and strictly decreasing for $y>0$. Solving $\\sinh^2y=b$ gives exactly $y=\\pm\\operatorname{arsinh}(\\sqrt b)$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 120, PDF page 70. No candidate response used as an answer key.",
+      "page": 70,
+      "image": "assets/questions/2025-december-q120.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

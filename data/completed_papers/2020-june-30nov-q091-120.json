@@ -1,0 +1,1284 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2020-june-30nov-q091",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 91,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $f(x,y)=(y+x(1-x^2-y^2),-x+y(1-x^2-y^2))$ and $(\\dot x,\\dot y)=f(x,y)$, $(x(0),y(0))=(0,1/2)$. Which statements are true?",
+      "options": {
+        "A": "$x^2(t)+y^2(t)\\to\\infty$ as $t\\to\\infty$",
+        "B": "$x^2(t)+y^2(t)\\to0$ as $t\\to\\infty$",
+        "C": "“as $x^2(t)+y^2(t)\\to0$ remains bounded as $t\\to\\infty$” [literal source wording]",
+        "D": "$x^2(t)+y^2(t)\\to1$ as $t\\to\\infty$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Differentiate the squared radius; the rotation terms cancel.",
+        "The squared radius solves a logistic equation with initial value $1/4$."
+      ],
+      "solution": "Put $s=x^2+y^2$. Then $s\\prime=2x[y+x(1-s)]+2y[-x+y(1-s)]=2s(1-s)$ and $s(0)=1/4$. Separation gives $s(t)=1/(1+3e^{-2t})$. It is bounded between $1/4$ and 1 and tends to 1, so A and B are false and D is true. Option C is grammatically malformed and explicitly includes an arrow to 0; that limit is false. If C were intended simply to say that $x^2+y^2$ remains bounded, it would be true, giving C,D under that correction. The literal discrepancy prevents assigning an unconditional truth value to the entire wording of C, so this record flags the source and retains only the unambiguous correct label D.",
+      "theory": "For rotationally symmetric planar systems, differentiating $s=x^2+y^2$ often cancels angular terms and yields a scalar equation for radial growth. The logistic equation $s\\prime=ks(1-s)$ has equilibria zero and one, and positive initial values below one increase toward one. Its explicit solution follows by separating $ds/[s(1-s)]=kdt$. Bounded radial motion rules out finite-time escape in a smooth planar system, so the solution here exists for all future time. In polar coordinates the angular equation is a uniform rotation while the radius approaches the unit circle, producing a stable periodic orbit. A limit of the squared radius need not imply convergence of x and y themselves because angular motion continues. Always distinguish boundedness from convergence to zero, and preserve a malformed option rather than silently replacing its stated limit.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $s\\prime=3s(1-s)$, $s(0)=1/2$.",
+          "solution": "Separation gives $s/(1-s)=e^{3t}$, so $s(t)=1/(1+e^{-3t})$. It increases from $1/2$ to 1 and stays bounded."
+        },
+        {
+          "prompt": "For $\\dot x=y$, $\\dot y=-x$, what happens to $x^2+y^2$?",
+          "solution": "Its derivative is $2xy-2yx=0$, so it is constant. The motion stays on a circle, though x and y need not approach individual limits."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option C in the exact image reads “as $x^2(t)+y^2(t)\\to0$ remains bounded as $t\\to\\infty$”. Its arrow-to-zero clause contradicts the exact solution; the boundedness-only interpretation would make C true. D is unambiguously correct, and the conditional correction is explained.",
+      "answer_source": "Independent mathematical derivation; question 91, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2020-june-30nov-q091.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q092",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 92,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "On $[0,\\infty)$ let $x\\prime+(\\sin t-1)x=\\log(1+t)$, $x(0)=1$, and $y\\prime+(\\sin t-1)y=t$, $y(2)=2$. Put $z=y-x$. Which statements are true?",
+      "options": {
+        "A": "$z(1)\\le1$",
+        "B": "$z(2)>z(1)$",
+        "C": "$z(1)>1$",
+        "D": "$z(2)\\le z(1)$"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "The y initial value is specified at t=2, so do not replace it with a condition at zero.",
+        "Use integrating factors and compare the increments of x and y on [1,2]."
+      ],
+      "solution": "Write $c=1-\\sin t\\ge0$ and $C(t)=t+\\cos t-1$, so $\\mu=e^{-C}$ is an integrating factor. On [1,2], $K=\\int_1^2c=1+\\cos2-\\cos1<0.05$. Backward integration gives $y(1)=e^{-K}2-\\int_1^2 e^{-\\int_1^s c} s\\,ds$, hence $0<2e^{-0.05}-1.5<y(1)<2-1.5e^{-0.05}<0.6$. Also $x(1)\\ge e^{C(1)}>1$, so $z(1)<0$, proving A and disproving C. Positivity persists for y on [1,2], and $y\\prime=cy+t\\ge t$, yielding $y(2)-y(1)\\ge1.5$. Meanwhile $C(2)<0.6$, $e^{C(2)}<1.83$, and $\\log3<1.1$ give $x(2)\\le e^{C(2)}(1+2\\log3)<6$. Since x is positive increasing, $x(2)-x(1)=\\int_1^2(cx+\\log(1+t))dt<6(0.05)+1.1=1.4$. Thus $z(2)-z(1)>0.1>0$, proving B and disproving D. The required labels are A,B. Numerical values $z(1)\\approx-1.697$, $z(2)\\approx-1.174$ agree, but the bounds establish the result.",
+      "theory": "Linear scalar equations $u\\prime+a(t)u=b(t)$ are solved using an integrating factor $\\mu(t)=\\exp(\\int a(t)dt)$. Data can be prescribed at any time, and integrating backward is just as legitimate as integrating forward. Comparison of two such solutions requires honoring their actual data locations; comparing right-hand sides alone is not enough if the boundary values occur at different times. A nonnegative coefficient in $u\\prime=c(t)u+b(t)$ preserves positivity forward when b is nonnegative. Integral estimates can establish the ordering of increments without evaluating special-function integrals exactly. The exponent $\\int c$ controls multiplicative growth; bounding it over the particular interval can be much sharper than bounding c by a global maximum. Strict numerical bounds should be used with enough margin to prove the claimed sign, rather than relying on rounded approximations alone.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $u\\prime=u$, $u(2)=3$.",
+          "solution": "The general solution is $Ae^t$, and $Ae^2=3$ gives $u(t)=3e^{t-2}$. In particular, data at 2 do not mean $u(0)=3$."
+        },
+        {
+          "prompt": "If positive x,y satisfy $x\\prime=x+1$, $y\\prime=y+2$, with $x(0)=y(0)$, compare them for t>0.",
+          "solution": "The difference z satisfies $z\\prime=z+1$, z(0)=0. Its solution is $z=e^t-1>0$, so y>x. Here common initial data allow a direct comparison."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 92, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2020-june-30nov-q092.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q093",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 93,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $f:\\mathbb R^2\\to\\mathbb R$ be locally Lipschitz. Consider $\\dot x_1=\\sin(e^{x_2})$, $\\dot x_2=f(x_1,x_2)$ with $(x_1(0),x_2(0))=(1,1)$. Which statements are true?",
+      "options": {
+        "A": "There is at most one local solution at time zero",
+        "B": "There always exists a global solution on $[0,\\infty)$",
+        "C": "There might be no solution near time zero",
+        "D": "There is at least one solution near time zero"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "The first component of the vector field is smooth and the second locally Lipschitz.",
+        "Local existence and uniqueness do not prevent finite-time growth of the second coordinate."
+      ],
+      "solution": "The vector field $F=(\\sin(e^{x_2}),f(x_1,x_2))$ is locally Lipschitz, so Picard–Lindelöf provides a unique local solution through (1,1). Hence A and D are true and C false. B is not guaranteed: choose the locally Lipschitz polynomial $f(x_1,x_2)=x_2^2$. Then $x_2(t)=1/(1-t)$ blows up at t=1, so the solution cannot extend to all nonnegative time. Although $|\\dot x_1|\\le1$, this only controls the first coordinate and does not remove the second-coordinate blowup. Thus A,D are the correct labels.",
+      "theory": "The Picard–Lindelöf theorem gives local existence and uniqueness for an initial-value problem when its vector field is continuous in time and locally Lipschitz in the state variables. A smooth coordinate function is locally Lipschitz, and combining finitely many locally Lipschitz components preserves that property. Local hypotheses apply on bounded neighborhoods and do not by themselves control a solution for arbitrary time. A maximal solution can fail to extend at a finite endpoint if its state escapes every bounded region. Global Lipschitz or suitable linear-growth bounds can prevent that phenomenon. Bounding one coordinate of a coupled system is insufficient if another coordinate can blow up. A polynomial vector field is locally Lipschitz but may exhibit finite-time blowup, making the scalar equation $u\\prime=u^2$ a standard counterexample to an unjustified global-existence conclusion.",
+      "similar_questions": [
+        {
+          "prompt": "Find the maximal forward solution of $u\\prime=u^2$, $u(0)=2$.",
+          "solution": "Separation yields $-1/u=t-1/2$, so $u=2/(1-2t)$. It diverges at t=$1/2$, and its maximal forward interval is $[0,1/2)$."
+        },
+        {
+          "prompt": "Why does $u\\prime=\\sin u$, $u(0)=1$, exist globally?",
+          "solution": "The field is globally Lipschitz since its derivative cosine is bounded by one. Also $|u\\prime|\\le1$ prevents finite-time escape. The unique local solution therefore extends for every real time."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 93, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2020-june-30nov-q093.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q094",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 94,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Which functions solve $u_{xx}+u_{yy}=0$ in $D=\\{(x,y):x^2+y^2<1\\}$?",
+      "options": {
+        "A": "$x^5+2x^2y^3-y^5$",
+        "B": "$x^2+2xy-y^2$",
+        "C": "$e^x\\cos y+e^y\\sin x$",
+        "D": "$(1+x)/(1+2x+x^2+y^2)$"
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Take the Laplacian term by term.",
+        "D is the real part of $1/(1+z)$, whose pole lies on the boundary rather than inside the disk."
+      ],
+      "solution": "A has Laplacian $20x^3+12x^2y-16y^3$, which is not identically zero, so it fails. B has $u_{xx}=2$ and $u_{yy}=-2$, so it is harmonic. For C, $e^x\\cos y$ has cancelling second derivatives, as does $e^y\\sin x$, so their sum is harmonic. D equals $\\Re(1/(1+z))$ for $z=x+iy$. The denominator vanishes only at z=$-1$, outside the open disk, so the function is the real part of a holomorphic function throughout D and is harmonic. Hence B,C,D are correct.",
+      "theory": "A twice continuously differentiable real function is harmonic on an open domain when its Laplacian, the sum of pure second derivatives, vanishes there. Harmonicity is a local condition, and sums or scalar multiples of harmonic functions remain harmonic by linearity. The real and imaginary parts of any holomorphic function are harmonic, using the Cauchy–Riemann equations and equality of mixed derivatives. Rational expressions should first be checked for singularities inside the stated domain; a singularity on the boundary does not invalidate interior harmonicity. Polynomial candidates can be verified by direct differentiation, but a single nonzero Laplacian value suffices to disprove them. Products of exponential and trigonometric functions are common harmonic examples because their second derivatives have opposite signs. Smoothness throughout the open domain is part of the equation’s classical interpretation.",
+      "similar_questions": [
+        {
+          "prompt": "Is $x^3-3xy^2$ harmonic?",
+          "solution": "Its second derivatives are $u_{xx}=6x$ and $u_{yy}=-6x$, summing to zero. It is also the real part of $z^3$."
+        },
+        {
+          "prompt": "Where is $x/(x^2+y^2)$ harmonic?",
+          "solution": "It is $\\Re(1/z)$ and thus harmonic wherever z is nonzero. It is not defined or harmonic at the origin, so it cannot solve the classical Laplace equation on a disk containing zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 94, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2020-june-30nov-q094.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q095",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 95,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Consider $xp^2+yq^2+(x+y)pq-u(p+q)+1=0$, where $p=u_x,q=u_y$. Which statements are true?",
+      "options": {
+        "A": "The general solution is $u=ax+by+1/(a+b)$ for arbitrary constants a,b",
+        "B": "The general solution is $u=f(ax+by)+1/(a+b)$ for arbitrary a,b and arbitrary f",
+        "C": "Charpit equations are $dx/(p^2+pq)=dy/(q^2+pq)=du/[p(p^2+pq)+q(p^2+pq)]=dp/0=dq/0$",
+        "D": "Charpit equations are $dx/[2px+(x+y)q-u]=dy/[2qy+(x+y)p-u]=du/[p(2px+(x+y)q-u)+q(2qy+(x+y)p-u)]=dp/0=dq/0$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Compute $F_p,F_q$ and $F_x+pF_u,F_y+qF_u$.",
+        "An affine two-parameter complete integral is not the whole general solution; envelopes supply nonaffine solutions."
+      ],
+      "solution": "For $F=xp^2+yq^2+(x+y)pq-u(p+q)+1$, $F_p=2xp+(x+y)q-u$ and $F_q=2yq+(x+y)p-u$. Also $F_x=p(p+q)$, $F_y=q(p+q)$, $F_u=-(p+q)$, so $F_x+pF_u=F_y+qF_u=0$. Charpit therefore gives exactly D, with $dp=dq=0$ along characteristics; C uses incorrect denominators. A gives a valid two-parameter complete integral when $a+b\\ne0$, but it is not the full general solution as literally claimed: on $x+y>0$, $u=\\sqrt{2(x+y)}$ is nonaffine and satisfies F=0, since p=q=1/u and $x+y=u^2/2$. It also is undefined as an affine family at $a+b=0$, despite “arbitrary” constants. B is false for arbitrary f, for example f=0 gives p=q=0 and residual 1. Thus only D is literally true. If “general solution” in A is used informally to mean “complete integral” with $a+b\\ne0$, A is conditionally the intended additional choice.",
+      "theory": "Charpit’s method handles nonlinear first-order equations $F(x,y,u,p,q)=0$. Its characteristic differential system has $\\dot x=F_p$, $\\dot y=F_q$, $\\dot u=pF_p+qF_q$, $\\dot p=-(F_x+pF_u)$ and $\\dot q=-(F_y+qF_u)$. These formulas are derivative formulas, so replacing $F_p$ with $F_x$ changes the system. A complete integral is a family depending on two independent constants for two independent variables. It is often used to generate more general solutions by taking envelopes of one-parameter restrictions of that family; therefore it should not be equated with all solutions. A singular envelope can be nonaffine even when the complete integral is affine. Denominators written as zero in the ratio notation mean that p and q are constant along characteristic curves, not literal division by zero. Verify proposed solution families by substitution and state excluded parameter values.",
+      "similar_questions": [
+        {
+          "prompt": "Check that $u=ax+by+1/(a+b)$ solves the stated PDE for $a+b\\ne0$.",
+          "solution": "With p=a,q=b, the quadratic terms factor as $(a+b)(ax+by)$. Subtracting $u(a+b)$ leaves $-1$, and the final +1 cancels it. Thus it is a complete-integral family."
+        },
+        {
+          "prompt": "Check the nonaffine solution $u=\\sqrt{2(x+y)}$ on $x+y>0$.",
+          "solution": "Here p=q=1/u. The quadratic terms sum to $2(x+y)/u^2=1$ and $u(p+q)=2$. The PDE residual is $1-2+1=0$, proving that the affine complete integral does not exhaust all solutions."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "All wording is transcribed literally. Option A is a complete integral for $a+b\\ne0$, often informally called the general solution in exam treatments; under that convention A,D would be intended. Its literal general-solution claim is false, with a fully worked nonaffine counterexample. D is exact.",
+      "answer_source": "Independent mathematical derivation; question 95, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2020-june-30nov-q095.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q096",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 96,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consider $\\int_{-1}^1g(x)dx\\approx g(\\alpha)+g(-\\alpha)$ with $\\alpha=(0.2)^{1/4}$. Which exactness claims hold for all real coefficients?",
+      "options": {
+        "A": "Exact for $a+bx$",
+        "B": "Exact for $a+bx+cx^2$",
+        "C": "Exact for $a+bx+cx^2+dx^3$",
+        "D": "Exact for $a+bx+cx^3+dx^4$"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Symmetry integrates every odd monomial exactly.",
+        "Check the even moments for powers zero, two and four; D omits the quadratic term."
+      ],
+      "solution": "The rule gives 2 for g=1, matching its integral, and zero for every odd monomial, also matching. For $x^2$, the integral is $2/3$ while the rule is $2\\alpha^2=2/\\sqrt5\\ne2/3$, so B and C fail. For $x^4$, the integral is $2/5$, and the rule gives $2\\alpha^4=2(0.2)=2/5$. Thus the rule is exact for every linear combination of 1,x,$x^3$,$x^4$, exactly the family in D, and for the smaller family in A. A,D are correct. Its degree of precision is nevertheless only 1, because quadratic exactness fails.",
+      "theory": "A quadrature rule is exact on a linear space of functions if it is exact on a basis of that space. Monomials make moment checking convenient for polynomial spaces. Symmetric nodes with equal weights integrate odd functions to zero, agreeing with integrals over a symmetric interval. Even monomials impose separate moment equations; choosing nodes to match a fourth moment does not automatically match a second moment. The degree of precision is the largest d for which every polynomial of degree at most d is integrated exactly, so occasional higher-degree exactness does not raise that degree when a lower monomial fails. The standard two-node Gauss–Legendre rule chooses nodes $\\pm1/\\sqrt3$ to match the second moment and reaches degree three. The different node in this question deliberately matches the fourth moment instead.",
+      "similar_questions": [
+        {
+          "prompt": "What two symmetric unit-weight nodes integrate $x^2$ exactly on $[-1,1]$?",
+          "solution": "For nodes $\\pm a$, the rule gives $2a^2$. Set it equal to $2/3$ to obtain $a=1/\\sqrt3$. Symmetry then also gives exactness for x and $x^3$."
+        },
+        {
+          "prompt": "Does the present rule integrate $x^6$ exactly?",
+          "solution": "Its value is $2\\alpha^6=2/(5\\sqrt5)$, while the true integral is $2/7$. These are unequal, so sixth-degree exactness fails as well."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 96, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2020-june-30nov-q096.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q097",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 97,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let S consist of continuous $f:[0,1]\\to[0,\\infty)$ with $\\int_0^1x^2f(x)dx=\\frac12\\int_0^1xf^2(x)dx+\\frac18$. Which statements are true?",
+      "options": {
+        "A": "S is empty",
+        "B": "S has at most one element",
+        "C": "S has at least one element",
+        "D": "S has more than two elements"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Complete a weighted square involving f and x.",
+        "$\\frac12\\int_0^1x(f-x)^2dx$ equals the difference in the given equality."
+      ],
+      "solution": "Rearranging and using $\\frac12\\int_0^1x^3dx=1/8$ gives $\\frac12\\int_0^1x[f(x)-x]^2dx=0$. Its integrand is nonnegative and continuous, so it vanishes everywhere. For x>0 this forces f(x)=x, and continuity forces f(0)=0. Conversely f(x)=x satisfies the equation: the left side is 1/4 and the right side is $1/8+1/8=1/4$. Thus S is the singleton containing the identity function, proving B and C and disproving A and D.",
+      "theory": "Completing the square converts a quadratic integral constraint into a nonnegative error integral, often revealing an equality case exactly. A continuous nonnegative function with zero integral on a compact interval vanishes everywhere: if it were positive at one point, continuity would make it positive on an interval of positive length. A weight such as x vanishes at an endpoint, so the integral initially determines equality only where the weight is positive; continuity then extends the conclusion to the endpoint. Without continuity, equality would generally hold only almost everywhere. Weighted L2 squares also express strict convexity and identify unique minimizers when the weight is positive almost everywhere. Existence and uniqueness should be shown separately by deriving the only candidate and substituting it back into the original relation.",
+      "similar_questions": [
+        {
+          "prompt": "If continuous f satisfies $\\int_0^1(f(x)-2)^2dx=0$, determine f.",
+          "solution": "The continuous nonnegative integrand must vanish everywhere, so f(x)=2 on the entire interval."
+        },
+        {
+          "prompt": "Find the minimum of $\\int_0^1x[f(x)^2-2xf(x)]dx$ over continuous f.",
+          "solution": "Complete the square: it equals $\\int_0^1x(f-x)^2dx-\\int_0^1x^3dx\\ge-1/4$. Equality forces f=x on x>0 and by continuity at zero, so the minimum is attained uniquely at f(x)=x."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 97, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2020-june-30nov-q097.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q098",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 98,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Extremize $J(y)=\\int_1^3y(3x-y)dx$ with $y(1)=1$ and $y(3)=2$. Which statements are true?",
+      "options": {
+        "A": "There is a unique extremal",
+        "B": "$y(x)=3x/2$ is an extremal",
+        "C": "$y(x)=x/2+1/2$ is an extremal",
+        "D": "There are no extremals"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The Euler–Lagrange equation is algebraic because the integrand contains no derivative.",
+        "The stationary interior curve must also satisfy both boundary values by continuity."
+      ],
+      "solution": "For $L=3xy-y^2$, the Euler equation is $L_y=3x-2y=0$, hence y=3x/2 throughout the interior. A continuous extremal would extend that value to the endpoints, giving y(1)=3/2 and y(3)=9/2, incompatible with the prescribed 1 and 2. Thus no admissible extremal exists, D. B is the formal stationary curve but violates the boundary values. C satisfies the boundary values but has Euler residual $3x-2(x/2+1/2)=2x-1\\ne0$. A is therefore false. Completing the square $L=9x^2/4-(y-3x/2)^2$ confirms that a maximum would require the same inadmissible curve; narrow boundary layers can approach its value but do not produce an attained extremal.",
+      "theory": "For fixed-endpoint variational problems, compactly supported variations in the interior yield the Euler–Lagrange equation independently of endpoint values. When an integrand lacks y-prime, this condition reduces to $L_y=0$ pointwise. An admissible extremal must also obey the boundary conditions and required regularity, so an interior stationary curve that cannot meet those conditions is not an extremal of the stated problem. Existence is not automatic when the functional gives no control over derivatives: boundary layers may become arbitrarily narrow without appreciably changing the integral. The supremum can then exist without being attained by a continuous admissible function. A stationary point is necessary for an attained local extremum under unrestricted interior variations. Check both the Euler equation and admissibility rather than identifying any plausible curve passing through the endpoints.",
+      "similar_questions": [
+        {
+          "prompt": "Extremize $\\int_0^1(y-1)^2dx$ with y(0)=y(1)=1.",
+          "solution": "The Euler equation is $2(y-1)=0$, giving y=1. It meets the endpoints and the integrand is nonnegative, so it is the unique global minimizer."
+        },
+        {
+          "prompt": "Does $\\int_0^1y^2dx$ have a continuous stationary curve with y(0)=1,y(1)=0?",
+          "solution": "The Euler equation forces y=0 on the interior and by continuity at zero, contradicting y(0)=1. Thus no admissible stationary curve exists, though continuous narrow boundary layers make the infimum zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 98, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2020-june-30nov-q098.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q099",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 99,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "For the unit ball B in $\\mathbb R^3$, what Euler–Lagrange equation corresponds to $I(u)=\\frac12\\int_B|\\nabla u|^2dx-\\frac12\\int_B|u|^5dx$?",
+      "options": {
+        "A": "$\\Delta u=u^4$",
+        "B": "$\\Delta u=-u^4$",
+        "C": "$\\det(D^2u)=u^4$",
+        "D": "$\\Delta u=-|u|^3u$"
+      },
+      "correct_options": [],
+      "hints": [
+        "Differentiate both terms using an interior test variation.",
+        "The derivative of $|u|^5$ is $5|u|^3u$, so retain the printed factor $1/2$."
+      ],
+      "solution": "For a smooth compactly supported test function $\\phi$, the first variation is $\\int_B\\nabla u\\cdot\\nabla\\phi\\,dx-\\frac52\\int_B|u|^3u\\phi\\,dx$. Integration by parts yields $\\int_B[-\\Delta u-\\frac52|u|^3u]\\phi\\,dx=0$, so the Euler–Lagrange equation is $\\Delta u=-\\frac52|u|^3u$. No printed option has this coefficient. D would be correct if the second functional coefficient were $1/5$ rather than the printed $1/2$. B would additionally require a nonnegative-u hypothesis and the $1/5$ coefficient; A has the wrong sign and C concerns a Hessian determinant rather than the Dirichlet variation. Thus the literal source has no correct listed answer, and the conditional intended D is identified without changing the formula.",
+      "theory": "The Dirichlet energy $\\frac12\\int|\\nabla u|^2$ has first variation $\\int\\nabla u\\cdot\\nabla\\phi$, which becomes $-\\int\\Delta u\\,\\phi$ under integration by parts for interior or fixed-boundary variations. For a power energy $\\int|u|^p$, its derivative with respect to u is $p|u|^{p-2}u$, valid for real u and p>1. Consequently a coefficient $1/p$ is often chosen to cancel p in the Euler equation; a different printed coefficient must remain in the derived PDE. Absolute-value powers matter for sign-changing functions: $|u|^3u$ is not the same as $u^4$ on negative u. The weak Euler equation is tested against all smooth compactly supported variations, and classical smoothness then permits a pointwise interpretation. Boundary conditions affect boundary terms but not this interior coefficient.",
+      "similar_questions": [
+        {
+          "prompt": "Find the Euler equation for $\\frac12\\int|\\nabla u|^2-\\frac14\\int u^4$.",
+          "solution": "The variation is $\\int\\nabla u\\cdot\\nabla\\phi-\\int u^3\\phi$. Integration by parts gives $-\\Delta u-u^3=0$, hence $\\Delta u=-u^3$."
+        },
+        {
+          "prompt": "Find the Euler equation for $\\frac12\\int|\\nabla u|^2+\\frac12\\int u^2$.",
+          "solution": "The first variation is $\\int\\nabla u\\cdot\\nabla\\phi+\\int u\\phi$, so $-\\Delta u+u=0$ and $\\Delta u=u$. The sign changes with the sign of the potential term."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The exact image prints coefficient $-1/2$ before $\\int_B|u|^5$, producing $\\Delta u=-(5/2)|u|^3u$. All listed options omit this factor. D corresponds conditionally to replacing that coefficient by $-1/5$.",
+      "answer_source": "Independent mathematical derivation; question 99, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2020-june-30nov-q099.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q100",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 100,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Functional Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $K(x,y)=x(1-y)$ for $0\\le x\\le y\\le1$ and $K(x,y)=y(1-x)$ for $0\\le y\\le x\\le1$. For its integral operator $\\mathcal K:L^2[0,1]\\to L^2[0,1]$, which statements are true?",
+      "options": {
+        "A": "It is positive definite",
+        "B": "It is self-adjoint",
+        "C": "It has a nonzero nullspace",
+        "D": "It is onto"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "This is the Green kernel for $-u\\prime\\prime=f$ with zero endpoint data.",
+        "Use integration by parts for positivity and the output regularity to reject surjectivity."
+      ],
+      "solution": "The kernel is real and symmetric, so the bounded integral operator is self-adjoint, B. For $u=\\mathcal Kf$, the Green formula gives $-u\\prime\\prime=f$ and $u(0)=u(1)=0$, with $u\\in H^2\\cap H_0^1$. Thus $\\langle\\mathcal Kf,f\\rangle=\\int_0^1u(-u\\prime\\prime)dx=\\int_0^1|u\\prime|^2dx\\ge0$. Equality implies u is constant, hence zero by its endpoints, and then f=0. So it is positive definite and injective: A true, C false. D is false because its range consists of these regular zero-boundary functions; the constant function 1 in L2 cannot equal such a continuous function almost everywhere. Equivalently a compact operator on an infinite-dimensional Hilbert space cannot be onto. Thus A,B are correct.",
+      "theory": "A symmetric square-integrable kernel defines a bounded self-adjoint Hilbert–Schmidt operator on L2, and every Hilbert–Schmidt operator is compact. Positivity is a quadratic-form property, not merely pointwise positivity of the kernel. Green operators invert differential boundary problems, allowing their quadratic forms to be evaluated through energy integrals. For the inverse of the negative second derivative with Dirichlet endpoints, integration by parts gives a strictly positive energy for every nonzero input. Positive definite here means strict quadratic positivity, not a uniform lower bound by a positive constant times the norm squared; compact positive operators can have eigenvalues tending to zero. Their injectivity does not imply surjectivity in infinite dimensions. Output regularity and boundary values often provide a direct range obstruction without appealing to abstract compact-operator theorems.",
+      "similar_questions": [
+        {
+          "prompt": "Find $\\mathcal K1$ for this kernel.",
+          "solution": "Solve $-u\\prime\\prime=1$, u(0)=u(1)=0. Integration gives $u(x)=x(1-x)/2$, which can also be obtained by integrating the two pieces of the kernel."
+        },
+        {
+          "prompt": "Find the eigenvalue corresponding to $f(x)=\\sin(\\pi x)$.",
+          "solution": "Since $-(\\sin\\pi x)\\prime\\prime=\\pi^2\\sin\\pi x$ with zero endpoints, the inverse operator sends it to $\\sin(\\pi x)/\\pi^2$. Its eigenvalue is $1/\\pi^2>0$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 100, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2020-june-30nov-q100.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q101",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 101,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "For $K(x,y)=\\sin(xy)$ on $[0,1]^2$, consider $u(x)=\\sin x+\\int_0^1K(x,y)u(y)dy$. Which statements are true?",
+      "options": {
+        "A": "It is uniquely solvable and its solution is differentiable",
+        "B": "It has more than one differentiable solution",
+        "C": "It has no solution",
+        "D": "It is solvable but its solution is not differentiable"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Bound the integral operator norm on continuous functions.",
+        "$|\\sin(xy)|\\le xy$ gives norm at most $1/2$, and differentiation under the integral is valid."
+      ],
+      "solution": "On $C[0,1]$ with supremum norm, $\\|Tu\\|_\\infty\\le\\|u\\|_\\infty\\sup_{0\\le x\\le1}\\int_0^1xy,dy\\le\\frac12\\|u\\|_\\infty$. Thus $u\\mapsto\\sin x+Tu$ is a contraction and has a unique continuous fixed point, proving existence and uniqueness. Differentiating its equation under the integral gives $u\\prime(x)=\\cos x+\\int_0^1 y\\cos(xy)u(y)dy$, which is continuous. Hence A is true and B,C,D are false. The smooth kernel actually gives derivatives of all orders. On L2 the same norm bound also ensures uniqueness, so there is no alternate square-integrable solution hidden by the continuous formulation.",
+      "theory": "A Fredholm equation of the second kind has form $u=g+Tu$, where T integrates over a fixed domain. If the operator norm is less than one on a Banach space, the contraction theorem or convergent Neumann series gives a unique solution $u=\\sum_{j=0}^\\infty T^jg$. Supremum-norm estimates can be obtained by integrating the absolute kernel in the second variable and taking the supremum in the first. A sufficiently smooth kernel transfers differentiability to the output by differentiation under the integral, justified by a uniform integrable derivative bound. Thus even a solution initially constructed only as continuous becomes smooth when g and the kernel are smooth. Existence, uniqueness and regularity are separate claims, and each should be established. An integral operator with a continuous kernel is compact, but small-norm control is stronger and avoids an eigenvalue analysis here.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $u(x)=1+\\frac12\\int_0^1u(y)dy$.",
+          "solution": "The right side is constant, so u=c. Then $c=1+c/2$ gives c=2. The operator norm is $1/2$, also guaranteeing unique solvability."
+        },
+        {
+          "prompt": "When is $u(x)=1+\\lambda\\int_0^1u(y)dy$ solvable?",
+          "solution": "Again u=c and $(1-\\lambda)c=1$. For $\\lambda\\ne1$ there is the unique constant solution $1/(1-\\lambda)$; at $\\lambda=1$ the equation is inconsistent. Small norm is sufficient but not necessary for solvability."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 101, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2020-june-30nov-q101.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q102",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 102,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "A unit-mass body moves under an attractive central force and has a circular orbit at radius R. Which statements are true?",
+      "options": {
+        "A": "The radial force at R must equal $-L^2/R^3$, where L is angular momentum",
+        "B": "The force can be any strictly negative-valued function of R",
+        "C": "The force can only have inverse-square form",
+        "D": "The force cannot have form $-kR$"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Balance the force with the inward centripetal acceleration.",
+        "For a specified negative force value choose the angular momentum to satisfy the circular-orbit condition."
+      ],
+      "solution": "For unit mass, $L=R^2\\dot\\theta$, and circular radial balance is $F(R)=-R\\dot\\theta^2=-L^2/R^3$, proving A. Any attractive value $F(R)<0$ permits the choice $L^2=-R^3F(R)>0$, so a circular orbit at that radius can exist without prescribing a specific force law, proving B. C is false because a harmonic central force $F(r)=-kr$ with k>0 permits circular motion with angular speed $\\sqrt k$. This same example disproves D. Existence of a circular orbit does not by itself guarantee its stability; no stability premise is required here.",
+      "theory": "For motion in a central force, angular momentum is conserved because the torque vanishes. In polar coordinates for unit mass, the radial equation is $\\ddot r-r\\dot\\theta^2=F(r)$ and $L=r^2\\dot\\theta$. A circular orbit sets r=R constant, so the radial acceleration term vanishes and gives $F(R)=-L^2/R^3$. Equivalently, the effective potential $V(r)+L^2/(2r^2)$ has a stationary point at R. This is an existence condition at one radius and does not constrain the entire functional shape of the force. Stability requires a positive second derivative of the effective potential, an additional condition absent here. Both inverse-square gravity and linear restoring forces can support circular orbits. A sign convention must be stated: negative radial force means inward attraction when the radial coordinate increases outward.",
+      "similar_questions": [
+        {
+          "prompt": "For $F(r)=-k/r^2$, what angular momentum gives a circle at R?",
+          "solution": "The balance $-k/R^2=-L^2/R^3$ gives $L^2=kR$, so $L=\\sqrt{kR}$ in magnitude for unit mass."
+        },
+        {
+          "prompt": "For $F(r)=-kr$, find the speed of a circular orbit at R.",
+          "solution": "Centripetal balance gives $v^2/R=kR$, hence $v=R\\sqrt k$. Its angular speed is $v/R=\\sqrt k$ and angular momentum is $R^2\\sqrt k$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 102, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2020-june-30nov-q102.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q103",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 103,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "For any two events A,B, which inequalities or equalities are necessarily correct?",
+      "options": {
+        "A": "$P(A\\cup B)\\le P(A)+P(B)$",
+        "B": "$P(A\\cup B)\\ge P(A)+P(B)$",
+        "C": "$P(A\\cap B)=P(A)P(B)$",
+        "D": "$P(A\\cap B)\\ge P(A)+P(B)-1$"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Use inclusion–exclusion.",
+        "The intersection probability is nonnegative and the union probability is at most one."
+      ],
+      "solution": "Inclusion–exclusion gives $P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$. Since $P(A\\cap B)\\ge0$, A holds. Since $P(A\\cup B)\\le1$, rearrangement gives D. B fails when A=B has positive probability: the union mass is P(A) rather than twice it. C requires independence and is not universal; for A=B with probability 1/2, the intersection is 1/2 but the product is 1/4. Thus A,D are necessarily correct.",
+      "theory": "Inclusion–exclusion corrects the sum of individual event probabilities by subtracting overlap counted twice. It yields the two-event union bound and, by bounding the union above by one, the lower Fréchet bound for the intersection. The full intersection bounds are $\\max(0,P(A)+P(B)-1)\\le P(A\\cap B)\\le\\min(P(A),P(B))$. Independence is a special structural condition making the intersection exactly the product; it does not follow simply because two events are named separately. Disjointness instead makes their intersection zero and generally differs from independence. Universal probability claims should be tested with equal events, disjoint events, certain events and null events. These simple examples frequently reveal a missing assumption. Equality in the union bound holds exactly when the intersection has probability zero.",
+      "similar_questions": [
+        {
+          "prompt": "If P(A)=0.8 and P(B)=0.7, what lower bound follows for their intersection?",
+          "solution": "The Fréchet bound gives $P(A\\cap B)\\ge0.8+0.7-1=0.5$. Without dependence information its value is not necessarily the product 0.56."
+        },
+        {
+          "prompt": "If A and B are disjoint with probabilities 0.2 and 0.3, find their union.",
+          "solution": "The intersection probability is zero, so inclusion–exclusion yields $P(A\\cup B)=0.2+0.3=0.5$. The union bound is attained."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 103, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2020-june-30nov-q103.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q104",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 104,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Which statements are true?",
+      "options": {
+        "A": "If $X_1,X_2$ are independent Uniform$(0,1)$, then $X_1+X_2$ is Uniform$(0,2)$",
+        "B": "If $X\\sim\\operatorname{Uniform}(0,n)$, then $X/n\\sim\\operatorname{Uniform}(0,1)$",
+        "C": "If $X_1,X_2$ are standard normal, then $(X_1+X_2)/\\sqrt2$ is standard normal",
+        "D": "If X is exponential with mean 1, then $e^{-X}$ is Uniform$(0,1)$"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Independent uniform sums have a convolution density, and normal marginal distributions do not imply independence.",
+        "For D compute the transformed CDF on (0,1)."
+      ],
+      "solution": "A is false: convolution gives density s for $0<s<1$ and $2-s$ for $1<s<2$, not the constant 1/2. B is true by scaling: $P(X/n\\le t)=P(X\\le nt)=t$ for $0<t<1$ (n>0 is implicit in a valid interval). C lacks independence or a joint normal dependence condition; take $X_1=X_2=Z$ standard normal, so the proposed normalized sum is $\\sqrt2Z$, with variance 2. D is true: for $0<u<1$, $P(e^{-X}\\le u)=P(X\\ge-\\log u)=e^{\\log u}=u$. Thus B,D are correct.",
+      "theory": "Distribution transformations are derived from their cumulative distribution functions or density change-of-variable formulas, with attention to monotonicity. A decreasing transform reverses an inequality, as the exponential transform does. For a continuous distribution, applying its CDF gives a uniform random variable; the exponential survival function also gives a uniform variable. Sums require joint-distribution information. Independence allows convolution and addition of variances, while merely specifying normal marginal distributions does not ensure a standard-normal sum or even joint normality. The sum of two independent unit uniforms has a triangular density because the available overlap length of their supports grows and then shrinks. Scaling a uniform variable scales its interval and normalization exactly. Counterexamples using identical variables are useful when an independence hypothesis is absent.",
+      "similar_questions": [
+        {
+          "prompt": "If independent $X_1,X_2\\sim N(0,1)$, find the law of their normalized sum.",
+          "solution": "Independence makes their sum normal with mean zero and variance two. Division by $\\sqrt2$ gives variance one, hence a standard normal distribution."
+        },
+        {
+          "prompt": "For $X\\sim\\operatorname{Exp}(2)$, what transform is uniform?",
+          "solution": "$U=e^{-2X}$. For 0<u<1, $P(U\\le u)=P(X\\ge-\\log u/2)=e^{-2(-\\log u/2)}=u$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 104, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2020-june-30nov-q104.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q105",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 105,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A Markov chain on $\\{1,2,3,4,5\\}$ has transition matrix $\\begin{pmatrix}1/2&0&0&0&1/2\\\\0&1&0&0&0\\\\0&1&0&0&0\\\\1/5&1/5&1/5&1/5&1/5\\\\1/3&0&0&0&2/3\\end{pmatrix}$. Which statements are true?",
+      "options": {
+        "A": "States 2 and 3 are absorbing",
+        "B": "State 3 is recurrent",
+        "C": "$\\{1,5\\}$ is a recurrent class",
+        "D": "State 4 is transient"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Identify closed communicating classes and states that can leave without returning.",
+        "State 3 goes to the absorbing state 2; state 4 cannot be reached back after departure."
+      ],
+      "solution": "State 2 is absorbing, but state 3 moves to 2 with probability one, so A is false. After leaving 3 there is no return, making it transient and B false. States 1 and 5 communicate in both directions and their transitions remain within $\\{1,5\\}$. This finite closed irreducible class is recurrent, proving C. State 4 has probability 1/5 of remaining there each step but otherwise leaves to states from which no return to 4 is possible; its eventual departure probability is one and return probability after one step is only 1/5. Thus 4 is transient, proving D.",
+      "theory": "A communicating class groups states that can reach one another with positive probability in some number of transitions. A class is closed if no transition leaves it. Every finite closed irreducible class is positive recurrent, and a singleton with self-transition probability one is absorbing. Transient states have return probability below one and a finite expected total number of visits. A self-loop alone does not make a state recurrent: it may eventually escape to a closed class and never return. The transition graph is often more informative than repeated matrix multiplication when classifying recurrence. A state that deterministically enters a different absorbing state is transient, not absorbing itself. In finite chains all long-term recurrent behavior lies in closed communicating classes, while states feeding these classes are transient.",
+      "similar_questions": [
+        {
+          "prompt": "For $P=\\begin{pmatrix}1&0\\\\1/2&1/2\\end{pmatrix}$, classify both states.",
+          "solution": "State 1 is absorbing and recurrent. State 2 eventually moves to 1 with probability one, and cannot return afterward, so it is transient despite its self-loop."
+        },
+        {
+          "prompt": "For $P=\\begin{pmatrix}0&1\\\\1&0\\end{pmatrix}$, classify the states.",
+          "solution": "The two states communicate and form a finite closed class, so both are recurrent. Returns occur only at even times, giving period two; recurrence does not imply aperiodicity."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 105, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2020-june-30nov-q105.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q106",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 106,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "For a finite-state Markov chain, both P and $P^T$ are stochastic matrices. Which statements are necessarily true?",
+      "options": {
+        "A": "All states have the same period",
+        "B": "There is at most one stationary distribution",
+        "C": "All states are recurrent",
+        "D": "At least one state has period 1"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "P is doubly stochastic, so the uniform distribution is stationary and strictly positive.",
+        "Test the other claims with disconnected classes and deterministic cycles."
+      ],
+      "solution": "If there are r states, the column sums are one, so the uniform vector $\\pi_i=1/r$ satisfies $\\pi P=\\pi$. In a finite chain any stationary distribution puts zero mass on transient states, whereas this stationary distribution is strictly positive at every state. Therefore every state is recurrent, C. A fails for a block consisting of one absorbing state and a two-cycle: the periods are 1 and 2. B fails for P=I, where every distribution is stationary. D fails for a deterministic two-cycle, a doubly stochastic matrix with both periods two. Thus only C is necessary.",
+      "theory": "A stochastic matrix has nonnegative entries and row sums one; if its transpose is also stochastic, its column sums are one and it is doubly stochastic. On a finite state space the uniform distribution is then invariant. Stationary distributions of a finite chain are supported on closed recurrent classes: transient-state mass would drain away rather than remain invariant. A strictly positive stationary distribution therefore certifies that no state is transient. It does not guarantee irreducibility, uniqueness of the invariant distribution, or aperiodicity. The period of a recurrent state is the greatest common divisor of its possible positive return times and is constant within a communicating class, but can differ across classes. Deterministic cycles and block-diagonal stochastic matrices provide clean examples separating these properties.",
+      "similar_questions": [
+        {
+          "prompt": "Is the uniform distribution stationary for a three-state cyclic permutation matrix?",
+          "solution": "Yes. Each row and column has exactly one 1, so the matrix is doubly stochastic and preserves $(1/3,1/3,1/3)$. Every state has period three."
+        },
+        {
+          "prompt": "How many stationary distributions does the two-state identity chain have?",
+          "solution": "Every probability vector $(p,1-p)$ satisfies $\\pi I=\\pi$. Thus there are infinitely many stationary distributions, even though every state is recurrent and the matrix is doubly stochastic."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 106, PDF page 26. No candidate response used as an answer key.",
+      "page": 26,
+      "image": "assets/questions/2020-june-30nov-q106.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q107",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 107,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "X,Y have CDFs F,G, with F continuous. Which functions of x are necessarily CDFs?",
+      "options": {
+        "A": "$[1-G(-x)+F(x)]/2$",
+        "B": "$[1-F(-x)+G(x)]/2$",
+        "C": "$F(x)G(x)$",
+        "D": "$(1-F(x))(1-G(x))$"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "A CDF must be nondecreasing, right-continuous and have limits zero and one.",
+        "Reflecting a discontinuous CDF needs a left limit; reflecting the continuous F does not."
+      ],
+      "solution": "Because F is continuous, $H(x)=1-F(-x)$ is a CDF (the law of $-X$), and its half-mixture with G is a CDF, proving B. The product F G is nondecreasing and right-continuous, with the required end limits, so C is also a CDF; it is the maximum law for independent variables with those marginals. A can fail right-continuity: take Y=0, so G jumps at zero, while F is any continuous CDF. Then $1-G(-x)$ is zero at x=0 but tends to one from the right, and adding continuous F does not remove the jump defect. D has limit one at negative infinity and zero at positive infinity, the reverse of a CDF, and is nonincreasing. Thus B,C are correct.",
+      "theory": "A cumulative distribution function is nondecreasing, right-continuous, approaches zero at negative infinity and one at positive infinity. These criteria completely characterize distributions on the real line. Reflection generally gives $P(-Y\\le x)=1-G((-x)-)$, using the left limit because the event complementary to $Y\\ge -x$ is $Y<-x$. If G is continuous the left limit equals its value, but continuity is specifically imposed only on F here. Convex mixtures of CDFs are CDFs, corresponding to randomly choosing a component distribution. Products of CDFs are CDFs of maxima for independent draws with those marginals. Products of survival functions instead describe an upper-tail probability for minima and have the wrong monotonicity and end limits to be CDFs themselves. Boundary conventions at atoms are essential, not cosmetic.",
+      "similar_questions": [
+        {
+          "prompt": "If Y=0 almost surely, what is the CDF of $-Y$?",
+          "solution": "It is zero for x<0 and one for x≥0. The formula using $1-G((-x)-)$ gives this; $1-G(-x)$ incorrectly gives zero at x=0."
+        },
+        {
+          "prompt": "For independent unit uniforms, find the CDF of their maximum.",
+          "solution": "For 0≤x≤1, both must be at most x, with probability $x^2$. The CDF is zero below zero, $x^2$ on [0,1], and one above one."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 107, PDF page 26. No candidate response used as an answer key.",
+      "page": 26,
+      "image": "assets/questions/2020-june-30nov-q107.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q108",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 108,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "$X_1,\\ldots,X_n$ are iid Poisson$(\\lambda)$, $\\lambda>0$. Which statements are true? The exponents in C,D are literally $\\sum_i(-1)^{X_i}$.",
+      "options": {
+        "A": "$n^{-1}\\sum_i(-1)^{X_i}$ is unbiased for $e^{-2\\lambda}$",
+        "B": "$n^{-1}\\sum_i(-1)^{X_i}$ is consistent for $e^{-2\\lambda}$",
+        "C": "$((n-2)/n)^{\\sum_i(-1)^{X_i}}$ is the MVUE of $e^{-2\\lambda}$",
+        "D": "$((n-2)/n)^{\\sum_i(-1)^{X_i}}$ is consistent for $e^{-2\\lambda}$"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Use the Poisson probability-generating function at $s=-1$.",
+        "The printed power uses the sum of parity signs, not the sufficient total $\\sum_iX_i$."
+      ],
+      "solution": "The Poisson PGF gives $E[(-1)^X]=\\exp\\{\\lambda(-1-1)\\}=e^{-2\\lambda}=:h$, so A holds. The signs are bounded iid variables, and their sample mean tends almost surely to h by the strong law, proving B. Write $T_n=\\sum_i(-1)^{X_i}$. For n>2, $\\log[(1-2/n)^{T_n}]=(T_n/n)[n\\log(1-2/n)]\\to-2h$, so the printed estimator tends to $e^{-2h}$, which is not identically h as a function of $\\lambda$. Thus D is false. C is also false; the correct MVUE is $(1-2/n)^{S_n}$ with $S_n=\\sum_iX_i$, not the printed parity sum. This follows by conditioning $(-1)^{X_1}$ on S, using $X_1\\mid S\\sim\\operatorname{Bin}(S,1/n)$ and completeness of the Poisson total. For n=2 the printed parity-power can even be undefined on negative exponents of zero. The reviewed labels remain A,B; no exponent is silently corrected.",
+      "theory": "The Poisson probability-generating function is $E(s^X)=\\exp\\{\\lambda(s-1)\\}$, so evaluation at $-1$ computes the expected parity sign. Sample means of bounded iid variables are unbiased and strongly consistent for their mean. The total S of n iid Poisson variables is complete sufficient for the rate, and conditioned on S the individual counts have a multinomial distribution. Rao–Blackwellizing an unbiased parity sign therefore gives $(1-2/n)^S$, whose MVUE property follows from Lehmann–Scheffé. Replacing S by a sum of parity signs produces a fundamentally different estimator, not a harmless notation change. For consistency of a varying-base power, take logarithms and analyze the exponent normalized by n and the logarithm multiplied by n. Existence of a finite-sample expression and convergence to the correct target must both be checked.",
+      "similar_questions": [
+        {
+          "prompt": "Find $E[(-1)^X]$ for $X\\sim\\operatorname{Poisson}(2)$.",
+          "solution": "The PGF at $-1$ gives $e^{2(-2)}=e^{-4}$. Equivalently it is the even-probability minus odd-probability."
+        },
+        {
+          "prompt": "For n=3, verify that $(1/3)^S$ is unbiased for $e^{-2\\lambda}$.",
+          "solution": "$S\\sim\\operatorname{Poisson}(3\\lambda)$, so $E[(1/3)^S]=\\exp\\{3\\lambda(1/3-1)\\}=e^{-2\\lambda}$. It is a function of the complete sufficient statistic S and hence is the MVUE."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "The exact image prints $\\sum_i(-1)^{X_i}$ in the exponent of C,D, rather than $\\sum_iX_i$. Literal evaluation gives A,B. Replacing that exponent with the Poisson total would make C,D true, but that is not the printed source.",
+      "answer_source": "Independent mathematical derivation; question 108, PDF page 26. No candidate response used as an answer key.",
+      "page": 26,
+      "image": "assets/questions/2020-june-30nov-q108.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q109",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 109,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "$X_1,X_2$ are iid Uniform$(0,\\theta)$. Test $H_0:\\theta=1$ versus $H_1:\\theta=2$. Which tests have size at most 0.5 and power at least 0.5?",
+      "options": {
+        "A": "Reject iff $\\max(X_1,X_2)\\ge1.6$",
+        "B": "Reject iff $\\min(X_1,X_2)\\ge1$",
+        "C": "Reject iff $X_1\\ge0.4$",
+        "D": "Reject iff $X_1-X_2\\ge0$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Compute each rejection probability under both parameter values.",
+        "For D, continuous iid symmetry makes either observation larger with probability one half."
+      ],
+      "solution": "A has null rejection probability zero, but alternative rejection probability $1-(1.6/2)^2=0.36<0.5$, so it fails the power condition. B has size zero and power $P(X_1\\ge1,X_2\\ge1)=(1/2)^2=0.25$, also failing. C has size $1-0.4=0.6>0.5$ and power 0.8, so it fails size. D has size and power both 1/2 because iid continuous observations have no ties and either ordering is equally likely. Thus D alone satisfies both inequalities.",
+      "theory": "The size of a test is its rejection probability under a simple null, while its power is the rejection probability under the specified alternative. These are evaluated using different distributions and must both meet the stated thresholds. For independent uniforms on $(0,\\theta)$, the maximum has CDF $(t/\\theta)^2$ for interior t, and the minimum exceeds t with probability $(1-t/\\theta)^2$. Thresholds outside the support yield probabilities zero or one and should be handled before inserting formulas. Exchangeability of iid continuous observations makes their two strict orderings equally probable, independent of the scale parameter, so an ordering-based test may have equal size and power. Such a test can meet weak threshold requirements without meaningfully distinguishing the hypotheses. High power alone does not qualify a test whose null rejection probability exceeds the allowed size.",
+      "similar_questions": [
+        {
+          "prompt": "For two unit uniforms, find $P(\\max\\ge0.8)$.",
+          "solution": "The complementary event has both observations below 0.8, probability $0.8^2=0.64$. The answer is 0.36."
+        },
+        {
+          "prompt": "For two Uniform$(0,3)$ variables, find $P(\\min\\ge1)$.",
+          "solution": "Each exceeds 1 with probability $(3-1)/3=2/3$. Independence gives $(2/3)^2=4/9$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 109, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2020-june-30nov-q109.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q110",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 110,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "$X_1,\\ldots,X_n$ are iid $N(0,\\sigma^2)$. Which statistics are sufficient for $\\sigma^2$?",
+      "options": {
+        "A": "$(X_1,\\ldots,X_n)$",
+        "B": "$(X_1^2,\\ldots,X_n^2)$",
+        "C": "$X_1^2+\\cdots+X_n^2$",
+        "D": "$(X_1^2+X_2^2,\\,X_3^2+\\cdots+X_n^2)$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The likelihood depends on the sample only through the sum of squares.",
+        "Any statistic retaining enough information to recover that sum is also sufficient."
+      ],
+      "solution": "The joint density is $(2\\pi\\sigma^2)^{-n/2}\\exp\\{-\\sum_iX_i^2/(2\\sigma^2)\\}$. Hence S=$\\sum_iX_i^2$ is sufficient by factorization, proving C. A is the full sample and plainly determines S. B records every squared observation and also determines S. D records two partial sums, whose sum is S. In each case the same likelihood factors through the statistic, so A,B,C,D are all sufficient. Sufficiency is not restricted to minimal summaries; statistics carrying extra information remain sufficient.",
+      "theory": "A statistic is sufficient if it retains all sample information about the parameter in the likelihood or conditional-distribution sense. The factorization theorem provides a direct criterion: the joint density can be written as a parameter-dependent function of the statistic times a parameter-free function of the sample. If a sufficient statistic S is a measurable function of another statistic T, then T is also sufficient because the likelihood can factor through T. This upward-closure property means the entire sample is always sufficient, though not usually a useful reduction. In a zero-mean normal model with unknown variance, only the sum of squared observations enters the likelihood. The individual signs carry no information about that variance. Minimal sufficiency identifies the coarsest useful statistic, whereas the question here asks the broader property of sufficiency and therefore permits multiple richer statistics.",
+      "similar_questions": [
+        {
+          "prompt": "If $X_i\\sim N(\\mu,1)$ with unknown mean, are $(X_1,\\ldots,X_n)$ and $\\bar X$ sufficient?",
+          "solution": "Yes. Expanding the likelihood shows its mean dependence through $\\sum X_i=n\\bar X$. The full sample determines this sum and therefore is also sufficient."
+        },
+        {
+          "prompt": "For iid Bernoulli(p), is the pair (number of successes in the first half, number in the second half) sufficient?",
+          "solution": "Yes. Adding the two counts yields the total successes S, and the likelihood is $p^S(1-p)^{n-S}$. Thus the pair contains the sufficient total, even though the total alone is a smaller summary."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 110, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2020-june-30nov-q110.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q111",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 111,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Independent samples $X_1,\\ldots,X_n$ and $Y_1,\\ldots,Y_m$ come from a common continuous CDF F. Let W sum the ranks of X observations among all $N=n+m$ observations. Which statements are true?",
+      "options": {
+        "A": "$E(W)=n(N+1)/2$",
+        "B": "$E(W)=N(N+1)/2$",
+        "C": "W is symmetric about $n(N+1)/2$",
+        "D": "The distribution of W does not depend on F"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The X ranks are a uniformly chosen n-element subset of $\\{1,\\ldots,N\\}$.",
+        "Replacing each selected rank r by $N+1-r$ reflects the sum around its mean."
+      ],
+      "solution": "Continuity eliminates ties, and exchangeability makes every assignment of n of the N ranks to X equally likely. Each X rank has mean $(N+1)/2$, so $E(W)=n(N+1)/2$, A. B is the sum of all N ranks and is not the expected X-only sum when m>0. The map $r\\mapsto N+1-r$ is a bijection on n-rank subsets and replaces W by $n(N+1)-W$, proving symmetry C. This uniform rank-subset law depends only on n,m, not F, proving D. Thus A,C,D are true.",
+      "theory": "Rank tests use order information rather than numerical magnitudes. For iid observations from a common continuous distribution, no two values tie with positive probability and all permutations of their ranks are equally likely. Assigning group labels then gives a uniformly random subset of ranks for either sample, making the Wilcoxon rank-sum statistic distribution-free under the common-distribution null. Its expectation follows from the average rank, and a reflection of all ranks proves symmetry without requiring the parent distribution itself to be symmetric. The variance is $nm(N+1)/12$, which includes the dependence between ranks selected without replacement. A sum of a particular group’s ranks should not be confused with the deterministic sum of all ranks. Ties or different group distributions require additional treatment and can alter the distribution-free conclusion.",
+      "similar_questions": [
+        {
+          "prompt": "For n=1,m=2, list the rank-sum distribution.",
+          "solution": "The one X observation has rank 1,2 or 3, each with probability 1/3. The mean is 2 and the distribution is symmetric about 2."
+        },
+        {
+          "prompt": "For n=2,m=2, list possible W values and probabilities.",
+          "solution": "The six rank pairs are (1,2),(1,3),(1,4),(2,3),(2,4),(3,4), with sums 3,4,5,5,6,7. Thus probabilities are 1/6 at 3,4,6,7 and 2/6 at 5, symmetric about 5."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 111, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2020-june-30nov-q111.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q112",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 112,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "From a lot of 20 items, sample 10 without replacement and let X be sample defectives when the unknown total is D. Test $H_0:D=7$ versus $H_1:D>7$ by rejecting when $X\\ge k$, with $P_7(X\\ge k)\\le0.05<P_7(X\\ge k-1)$. Which statements are true?",
+      "options": {
+        "A": "The test is UMP of its size",
+        "B": "The power function increases in D",
+        "C": "The power function decreases in D",
+        "D": "The test is unbiased"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "X is hypergeometric and its likelihood ratios are increasing in X.",
+        "A coupling that turns a good item into a defective item makes X nondecreasing."
+      ],
+      "solution": "The hypergeometric mass is $f_D(x)=\\binom D x\\binom{20-D}{10-x}/\\binom{20}{10}$. Adjacent likelihood ratios on common support satisfy $f_{D+1}(x)/f_D(x)=\\frac{D+1}{20-D}\\frac{10-D+x}{D+1-x}$, increasing in x; support extension favors larger x as well. Neyman–Pearson therefore makes the upper-tail test most powerful against every D>7 at its actual size, proving A. Coupling identical sampled positions and relabeling one nondefective item as defective shows X and its upper-tail rejection indicator are nondecreasing in D, proving B and disproving C. The power at every alternative is at least its null value, making the test unbiased, D. Numerically k=6: $P_7(X\\ge6)=5291/184756\\approx0.02864$, while $P_7(X\\ge5)>0.05$. “Increasing” here has the standard nondecreasing sense; power saturates at one for sufficiently large D.",
+      "theory": "Sampling without replacement from a finite binary population gives a hypergeometric distribution. A family with monotone likelihood ratio in a statistic admits upper-tail most powerful tests for upper one-sided alternatives, and a common ordering makes such a test uniformly most powerful. Discrete distributions may prevent the size from reaching a nominal target without randomization; “of its size” means the actual null rejection probability. Stochastic monotonicity can be shown through a coupling that uses the same sample positions while increasing the number of defective labels. It ensures that the power of an upper-tail test is nondecreasing. An unbiased test has alternative rejection probability at least the null size, not necessarily at least the nominal 0.05 when its actual size is smaller. Boundary saturation explains why monotonicity need not be strict everywhere.",
+      "similar_questions": [
+        {
+          "prompt": "For a lot of 5 with D=2 and sample size 2, find P(X=2).",
+          "solution": "There are $\\binom52=10$ equally likely samples and only $\\binom22\\binom30=1$ all-defective sample. Thus the probability is 1/10."
+        },
+        {
+          "prompt": "Why can increasing D not reduce the power of an upper-tail sample-defective test?",
+          "solution": "Couple both populations using the same selected sample positions and convert an additional good item to defective. Every sample count either stays fixed or rises by one, so its upper-tail rejection indicator cannot decrease. Averaging establishes monotonic power."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 112, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2020-june-30nov-q112.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q113",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 113,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "In $Y=X\\beta+\\epsilon$, $\\epsilon\\sim N(0,\\sigma^2I_4)$, Case 1 has $X=I_4$ and Case 2 has $X=\\begin{pmatrix}1&1&0&0\\\\0&-1&0&0\\\\0&0&1&1\\\\0&0&1&-1\\end{pmatrix}$. Which statements are true?",
+      "options": {
+        "A": "$\\beta_1-\\beta_2$ is estimable in Case 1 but not Case 2",
+        "B": "$\\beta_1-\\beta_2$ is estimable in both, and its estimator variance is larger in Case 1",
+        "C": "$\\beta_1-\\beta_2$ is estimable in Case 1 but not Case 2 [repeated source option]",
+        "D": "$\\beta_1-\\beta_2$ is estimable in both, and the variance of $\\hat\\beta_1-\\hat\\beta_3$ is larger in Case 1"
+      },
+      "correct_options": [],
+      "hints": [
+        "Both design matrices are nonsingular, so every coefficient contrast is estimable.",
+        "In Case 2 solve explicitly: $\\hat\\beta_1=Y_1+Y_2$, $\\hat\\beta_2=-Y_2$, $\\hat\\beta_3=(Y_3+Y_4)/2$."
+      ],
+      "solution": "Both matrices have rank 4, making all contrasts estimable; A and the identical C are false. In Case 1, $\\hat\\beta=Y$, so both displayed difference variances are $2\\sigma^2$. In Case 2, inversion gives $\\hat\\beta_1=Y_1+Y_2$, $\\hat\\beta_2=-Y_2$, $\\hat\\beta_3=(Y_3+Y_4)/2$, and $\\hat\\beta_4=(Y_3-Y_4)/2$. Therefore $\\operatorname{Var}(\\hat\\beta_1-\\hat\\beta_2)=\\operatorname{Var}(Y_1+2Y_2)=5\\sigma^2$, so B has the inequality backward. Likewise $\\operatorname{Var}(\\hat\\beta_1-\\hat\\beta_3)=\\sigma^2+\\sigma^2+\\sigma^2/4+\\sigma^2/4=(5/2)\\sigma^2$, so D also has the inequality backward. Every literal option is false. If “larger” were corrected to “smaller” in B and D, those corrected statements would be true; the repeated A/C and contrast mismatch in D are preserved rather than repaired.",
+      "theory": "In a linear model, a contrast $c^T\\beta$ is estimable when c lies in the row space of the design matrix. A nonsingular square design has full row space, so every contrast is estimable and the least-squares estimator is simply $X^{-1}Y$. With independent errors of variance $\\sigma^2$, its covariance is $\\sigma^2(X^TX)^{-1}$, or equivalently $\\sigma^2X^{-1}(X^{-1})^T$. Explicit inversion often makes a particular contrast variance transparent: express it as a linear combination of independent observations and sum squared coefficients times $\\sigma^2$. Equal model dimension or full rank does not imply equal precision across designs. A variance comparison must use the actual contrast named in the option. Repeated options do not create a valid answer when all inequalities run contrary to the calculated variances.",
+      "similar_questions": [
+        {
+          "prompt": "If $Y_1=\\beta_1+\\beta_2+\\epsilon_1$ and $Y_2=-\\beta_2+\\epsilon_2$, estimate $\\beta_1-\\beta_2$.",
+          "solution": "Solve $\\hat\\beta_2=-Y_2$ and $\\hat\\beta_1=Y_1+Y_2$. Their difference is $Y_1+2Y_2$, with variance $5\\sigma^2$ under independent equal-variance errors."
+        },
+        {
+          "prompt": "If $Y_1=\\beta_1+\\beta_2+\\epsilon_1$, $Y_2=\\beta_1-\\beta_2+\\epsilon_2$, find Var($\\hat\\beta_1$).",
+          "solution": "The estimate is $(Y_1+Y_2)/2$. Independent errors give variance $(\\sigma^2+\\sigma^2)/4=\\sigma^2/2$. This averaging reduces variance relative to a direct single observation."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The exact Case 2 design gives contrast variances $5\\sigma^2$ and $(5/2)\\sigma^2$, both larger than their Case 1 value $2\\sigma^2$, while B,D claim the reverse. A,C are repeated false estimability claims. No literal option is true.",
+      "answer_source": "Independent mathematical derivation; question 113, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2020-june-30nov-q113.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q114",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 114,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "For iid observations from the listed one-parameter models, when is $\\bar X$ the MVUE of $\\theta$?",
+      "options": {
+        "A": "$f_\\theta(x)\\propto e^{-\\theta x}$, $x\\ge0$, $\\theta>0$",
+        "B": "$f_\\theta(x)\\propto e^{-(\\theta-x)^2}$, $x\\in\\mathbb R$, $\\theta\\in\\mathbb R$",
+        "C": "$f_\\theta(x)\\propto\\theta^x/x!$, $x=0,1,\\ldots$, $\\theta>0$",
+        "D": "$f_\\theta(x)\\propto\\theta^x$, $x=0,1,\\ldots$, $0<\\theta<1$"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Normalize each distribution before identifying its mean.",
+        "An MVUE must first be unbiased for the parameter actually named, not a transformed parameter."
+      ],
+      "solution": "A normalizes to the exponential rate-θ model, with mean $1/\\theta$, so the sample mean is not unbiased for θ. B is $N(\\theta,1/2)$, whose mean is θ; the sample sum is complete sufficient, making its unbiased sample mean the MVUE. C normalizes to Poisson$(\\theta)$, and the complete sufficient total again makes $\\bar X$ the MVUE of θ. D is the geometric law $(1-\\theta)\\theta^x$, with mean $\\theta/(1-\\theta)$ rather than θ, so it fails unbiasedness. Thus B,C are correct.",
+      "theory": "Minimum-variance unbiased estimation requires both unbiasedness for the specified parameter and a variance-minimality argument. Proportional density or mass formulas must first be normalized to identify the actual family and its mean. An exponential written as $e^{-\\theta x}$ uses θ as a rate, whose mean is reciprocal, not θ. A normal kernel $e^{-(x-\\theta)^2}$ has mean θ and fixed variance $1/2$. The Poisson kernel includes its factorial term and normalizes by $e^{-\\theta}$. The geometric kernel on nonnegative integers normalizes by $1-\\theta$ and has mean $\\theta/(1-\\theta)$. Normal known-variance and Poisson samples are full exponential families with complete sufficient totals; Lehmann–Scheffé then promotes an unbiased function of that total to the unique MVUE. Unbiasedness should be checked before invoking any optimality theorem.",
+      "similar_questions": [
+        {
+          "prompt": "For iid exponential rate θ, is $\\bar X$ unbiased for $1/\\theta$?",
+          "solution": "Yes, because every observation has mean $1/\\theta$. The sum is complete sufficient, so the sample mean is the MVUE of $1/\\theta$, though not of θ."
+        },
+        {
+          "prompt": "For geometric pmf $(1-p)p^x$, is the sample mean unbiased for p?",
+          "solution": "No. Its expectation is $p/(1-p)$. It estimates the mean parameter, which differs from the geometric continuation probability p."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 114, PDF page 28. No candidate response used as an answer key.",
+      "page": 28,
+      "image": "assets/questions/2020-june-30nov-q114.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q115",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 115,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "A sample $(X_i,Y_i)$, n≥4, is bivariate normal with unknown means, common marginal variance $\\sigma^2$, and correlation $\\rho$. The source defines $S_{xx}=\\sum_i(X_i-\\bar X)$ without a square, $S_{yy}=\\sum_i(Y_i-\\bar Y)^2$, and $S_{xy}=\\sum_i(X_i-\\bar X)(Y_i-\\bar Y)$. Which formulas are MLEs of $\\rho$?",
+      "options": {
+        "A": "$S_{xy}/\\sqrt{S_{xx}S_{yy}}$",
+        "B": "$\\sum_iX_iY_i/\\sqrt{(\\sum_iX_i^2)(\\sum_iY_i^2)}$",
+        "C": "$2S_{xy}/(S_{xx}+S_{yy})$",
+        "D": "$2S_{xy}/(S_{xx}+S_{yy}-2S_{xy})$"
+      },
+      "correct_options": [],
+      "hints": [
+        "The literal definition makes $S_{xx}=0$ identically.",
+        "For the intended squared sum, rotate to $X+Y$ and $X-Y$; equal variances change the MLE from ordinary sample correlation."
+      ],
+      "solution": "As printed, $S_{xx}=\\sum_i(X_i-\\bar X)=0$, so A is generally undefined and the C,D formulas do not represent the MLE. B is uncentered despite unknown means and also fails. To derive the actual MLE, let $Q_{xx}=\\sum_i(X_i-\\bar X)^2$. After fitting the two sample means, rotate to $U=(X+Y)/\\sqrt2$, $V=(X-Y)/\\sqrt2$. These are independent normals of variances $\\sigma^2(1+\\rho)$ and $\\sigma^2(1-\\rho)$. Their fitted variance MLEs are $(Q_{xx}+S_{yy}+2S_{xy})/(2n)$ and $(Q_{xx}+S_{yy}-2S_{xy})/(2n)$. Solving gives $\\hat\\rho=2S_{xy}/(Q_{xx}+S_{yy})$. Thus C would be correct if the missing square in the definition of $S_{xx}$ were restored. Under that intended definition A is the unconstrained unequal-variance MLE, not the equal-variance MLE in general; B ignores centering, and D has the wrong denominator. No literal option is a generally valid MLE.",
+      "theory": "For multivariate normal observations, unknown means are fitted by their sample means, so covariance estimation uses centered sums. Structural constraints on the covariance matrix change the likelihood maximizer: equal marginal variances do not lead in general to the usual sample-correlation formula. Rotating an equal-variance bivariate model into sum and difference coordinates diagonalizes its covariance and converts the problem to two independent variance estimates. Their sum and difference recover the common variance and correlation. The Gaussian variance MLE divides by n rather than n-1; this factor cancels in the correlation ratio. Cauchy–Schwarz ensures the resulting correlation lies within [-1,1], with strict interior values almost surely for a nondegenerate sample. A missing square in a centered sum is not harmless: the unsquared sum is identically zero and destroys both the definition and downstream formulas.",
+      "similar_questions": [
+        {
+          "prompt": "Under a common-variance model, centered sums are Qxx=9, Qyy=16, Qxy=6. Find the MLE correlation.",
+          "solution": "The constrained estimate is $2\\cdot6/(9+16)=12/25=0.48$. Ordinary sample correlation would be $6/\\sqrt{144}=0.5$, illustrating the difference."
+        },
+        {
+          "prompt": "If Qxx=Qyy=s and Qxy=c, compare constrained and ordinary correlation estimates.",
+          "solution": "The common-variance estimate is $2c/(2s)=c/s$ and the ordinary estimate is $c/\\sqrt{s^2}=c/s$ for s>0. They coincide in this special equal-sample-variance case."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The exact source definition of $S_{xx}$ lacks the exponent 2 and therefore equals zero identically. The fully derived MLE uses the squared centered sum Qxx. Restoring the square conditionally makes option C correct for the equal-variance model.",
+      "answer_source": "Independent mathematical derivation; question 115, PDF page 28. No candidate response used as an answer key.",
+      "page": 28,
+      "image": "assets/questions/2020-june-30nov-q115.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q116",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 116,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "$X_1,\\ldots,X_n$ are iid $N(\\mu,1)$ with unknown $\\mu$, sample mean $\\bar X$, and minimum $X_{(1)}$. Which statements are true?",
+      "options": {
+        "A": "$\\bar X$ is complete sufficient for $\\mu$",
+        "B": "$\\bar X$ is minimal sufficient for $\\mu$",
+        "C": "$\\bar X-X_{(1)}$ is ancillary",
+        "D": "$\\operatorname{Cov}(\\bar X-X_{(1)})=0$ [literal single-argument covariance]"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "This is a full normal location exponential family.",
+        "The mean-minus-minimum is translation invariant; inspect the literal covariance notation before applying Basu."
+      ],
+      "solution": "A is true because the sample mean is the complete sufficient statistic in the known-variance normal location family. B follows either from completeness and sufficiency or the likelihood-ratio criterion: a ratio of sample densities is parameter-free exactly when the sample sums agree. For C, writing $X_i=\\mu+Z_i$ gives $\\bar X-X_{(1)}=\\bar Z-Z_{(1)}$, whose law does not depend on $\\mu$, so it is ancillary. D literally has one argument separated by a minus sign, not the two random variables required for covariance; it is not a defined scalar covariance statement. If interpreted as the variance of the displayed difference, it is positive for n≥2, not zero. If intended as $\\operatorname{Cov}(\\bar X,X_{(1)})$, the value is $1/n$, also nonzero, because Basu makes $\\bar X$ independent of $\\bar X-X_{(1)}$. If intended as covariance between the mean and that difference, it would be zero. Thus A,B,C are unambiguous true labels and the malformed D is flagged with all natural readings distinguished.",
+      "theory": "A statistic is ancillary if its distribution is independent of the parameter. In a location family, translation-invariant differences are ancillary because the unknown shift cancels. For a known-variance normal sample, the mean is complete sufficient and also minimal sufficient for the unrestricted location parameter. Basu’s theorem states that a complete sufficient statistic is independent of every ancillary statistic, so the sample mean is independent of mean-minus-minimum. This is a statement about a pair of statistics, not that the ancillary statistic itself has variance zero. Covariance requires two arguments, whereas the variance of a single random variable is its covariance with itself. Decomposing the minimum as mean minus the ancillary difference gives $\\operatorname{Cov}(\\bar X,X_{(1)})=\\operatorname{Var}(\\bar X)=1/n$. Precise notation matters when multiple plausible repairs have different mathematical consequences.",
+      "similar_questions": [
+        {
+          "prompt": "For n=2, express $\\bar X-X_{(1)}$ and show it is nonconstant.",
+          "solution": "The difference equals $|X_1-X_2|/2$. Since $X_1-X_2\\sim N(0,2)$, it has a nondegenerate half-normal law and positive variance, independent of the common mean."
+        },
+        {
+          "prompt": "Find $\\operatorname{Cov}(\\bar X,X_{(1)})$ in the stated model.",
+          "solution": "Let A=$\\bar X-X_{(1)}$. Basu gives independence of A and the mean, so $\\operatorname{Cov}(\\bar X,X_{(1)})=\\operatorname{Cov}(\\bar X,\\bar X-A)=\\operatorname{Var}(\\bar X)=1/n$."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option D in the exact image prints $\\operatorname{Cov}(\\bar X-X_{(1)})=0$, with a minus sign and one argument. Covariance needs a pair; natural variance, mean/minimum, and mean/ancillary-difference interpretations give different answers. A,B,C are fully determined.",
+      "answer_source": "Independent mathematical derivation; question 116, PDF page 29. No candidate response used as an answer key.",
+      "page": 29,
+      "image": "assets/questions/2020-june-30nov-q116.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q117",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 117,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "In a balanced incomplete block design with v treatments and b blocks, let $t_j$ be treatment effects and $b_t$ block effects. Which are necessarily estimable?",
+      "options": {
+        "A": "Every treatment effect $t_j$",
+        "B": "Every difference $t_j-b_t$",
+        "C": "Every treatment contrast $t_j-t_i$ for $1\\le i<j\\le v$",
+        "D": "Every sum $t_j+t_i$ for $1\\le i<j\\le v$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Absolute treatment and block effects are aliased with the overall level.",
+        "A connected BIBD estimates treatment contrasts, whose coefficients sum to zero."
+      ],
+      "solution": "In the additive block model $E(Y_{jt})=\\mu+t_j+b_t$, shifts $t_j\\mapsto t_j+c$, $\\mu\\mapsto\\mu-c$ leave all means unchanged. Therefore individual treatment effects and their pair sums are not estimable without an identifying constraint, ruling out A and D. The same shift changes $t_j-b_t$, ruling out B. A genuine BIBD with positive pair concurrence is connected, and its adjusted treatment-information matrix is a positive multiple of $I-J/v$. Its row space is precisely the vectors with coefficient sum zero, including every $e_j-e_i$. Hence all treatment contrasts in C are estimable. Arbitrary constraints may assign representative effects but do not alter the intrinsic estimability criterion.",
+      "theory": "An estimable linear function in a linear model must be invariant under every parameter change that leaves the expected observations unchanged; equivalently its coefficient vector lies in the row space of the design. Additive treatment and block effects are not intrinsically identifiable as absolute levels because constant shifts can be absorbed into the overall mean. Treatment contrasts with coefficients summing to zero avoid this ambiguity. In a balanced incomplete block design, every pair of treatments occurs together the same positive number of times, giving connectedness. Its adjusted information matrix has rank v-1 and a one-dimensional nullspace spanned by the all-ones vector, so every treatment contrast is estimable. Imposing a sum-to-zero constraint identifies one representative parameterization, but does not turn arbitrary unconstrained effects into estimable functions of the original model. Distinguish a treatment contrast from a difference between one treatment and one block effect.",
+      "similar_questions": [
+        {
+          "prompt": "Why is $t_1-t_2$ invariant under treatment-level shifts?",
+          "solution": "Replacing every treatment effect by $t_j+c$ changes the difference to $(t_1+c)-(t_2+c)=t_1-t_2$. It is a zero-sum contrast and avoids the level ambiguity."
+        },
+        {
+          "prompt": "Why is $t_1+t_2$ not intrinsically estimable in the unrestricted additive model?",
+          "solution": "The same common shift adds 2c to this sum while subtracting c from the overall mean leaves all fitted observation means unchanged. Thus two observationally equivalent parameters give different target values."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 117, PDF page 29. No candidate response used as an answer key.",
+      "page": 29,
+      "image": "assets/questions/2020-june-30nov-q117.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q118",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 118,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "A lifetime has $F(t)=1-e^{-t^\\gamma}$ for $t>0$, $\\gamma>0$. Let r(t) be its hazard rate. Which statements are true?",
+      "options": {
+        "A": "r(t) increases in t when $\\gamma>1$",
+        "B": "r(t) decreases in t when $\\gamma>1$",
+        "C": "r(t) is constant when $\\gamma=1$",
+        "D": "r(t) decreases in t when $0<\\gamma<1$"
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The hazard is density divided by survival probability.",
+        "Differentiate $\\gamma t^{\\gamma-1}$ to determine its direction."
+      ],
+      "solution": "The survival is $S(t)=e^{-t^\\gamma}$ and density $f(t)=\\gamma t^{\\gamma-1}e^{-t^\\gamma}$. Hence $r(t)=f/S=\\gamma t^{\\gamma-1}$ and $r\\prime(t)=\\gamma(\\gamma-1)t^{\\gamma-2}$. This is positive for $\\gamma>1$, zero at $\\gamma=1$, and negative for $0<\\gamma<1$. Therefore A,C,D are true and B false. At shape one the model is exponential with unit constant hazard.",
+      "theory": "The hazard rate is the instantaneous conditional failure rate given survival to the current time, $r(t)=f(t)/(1-F(t))$ when the density exists and survival is positive. It is not the density itself: conditioning divides out the surviving fraction. The cumulative hazard is $H(t)=-\\log S(t)$ and its derivative is r(t), providing an alternative calculation. For the unit-scale Weibull family, $H(t)=t^\\gamma$ and the shape parameter determines whether hazard increases, stays constant, or decreases. Increasing hazard models aging, while decreasing hazard can describe early failures among initially vulnerable components. The exponential distribution is the constant-hazard special case and has memorylessness. Limits of the hazard at zero may be zero, finite, or infinite depending on shape, but monotonicity statements here concern positive times.",
+      "similar_questions": [
+        {
+          "prompt": "For $\\gamma=2$, find hazard at t=3.",
+          "solution": "The hazard is $2t$, so r(3)=6. The cumulative hazard is $t^2$, whose derivative confirms the result."
+        },
+        {
+          "prompt": "For $\\gamma=1/2$, find the hazard and its direction.",
+          "solution": "$r(t)=1/(2\\sqrt t)$, which is strictly decreasing for t>0, tends to infinity near zero and tends to zero at large times."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 118, PDF page 29. No candidate response used as an answer key.",
+      "page": 29,
+      "image": "assets/questions/2020-june-30nov-q118.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q119",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 119,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_n$ be iid with mean zero and variance one. Which asymptotic statements are true?",
+      "options": {
+        "A": "$\\sum_{i=1}^nX_i/\\sqrt{n+1}\\Rightarrow N(0,1)$",
+        "B": "$[X_1-X_2+\\cdots+(-1)^{n+1}X_n]/\\sqrt n\\Rightarrow N(0,1)$",
+        "C": "$\\sum_{i=1}^nX_i/(n+1)\\to0$ in probability",
+        "D": "$\\sum_{i=1}^nX_i/\\sqrt n\\to0$ in probability"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Use the central limit theorem and law of large numbers.",
+        "For alternating signs, pair neighboring variables; a single leftover term is negligible after normalization."
+      ],
+      "solution": "The iid CLT gives $S_n/\\sqrt n\\Rightarrow N(0,1)$. Since $\\sqrt{n/(n+1)}\\to1$, Slutsky proves A. For B at n=2m, pair $Z_j=X_{2j-1}-X_{2j}$; these are iid with mean zero and variance two, so $\\sum Z_j/\\sqrt{2m}\\Rightarrow N(0,1)$. At odd n, the extra term divided by $\\sqrt n$ tends to zero in probability by Chebyshev, and the scaling adjustment tends to one, proving B. C follows from the law of large numbers, or directly from variance $n/(n+1)^2\\to0$. D is false: convergence in probability to zero would imply convergence in distribution to a point mass at zero, contradicting the nondegenerate normal CLT limit. Thus A,B,C are correct.",
+      "theory": "The classical iid central limit theorem requires a finite mean and positive finite variance and gives a normal limit for centered sums scaled by the square root of sample size. The law of large numbers instead scales by n and gives convergence to the mean. Slutsky’s theorem permits multiplying a distribution-convergent sequence by a factor approaching a constant, or adding a term approaching zero in probability. Alternating-sign sums need not comprise identically distributed summands when the parent law is asymmetric, so pairing them creates an iid difference sequence with the needed variance. A leftover one-term contribution is negligible under square-root scaling using its finite second moment. Convergence in probability always implies convergence in distribution to the same limit, which rules out a zero probability limit when the CLT supplies a standard normal distribution limit.",
+      "similar_questions": [
+        {
+          "prompt": "If iid Xi have mean zero and variance four, what is the CLT normalization?",
+          "solution": "The standard deviation is 2, so $\\sum Xi/(2\\sqrt n)\\Rightarrow N(0,1)$. Scaling only by $\\sqrt n$ instead gives a normal limit of variance four."
+        },
+        {
+          "prompt": "Use Chebyshev to prove $S_n/n\\to0$ for unit-variance iid centered Xi.",
+          "solution": "$\\operatorname{Var}(S_n/n)=1/n$, so $P(|S_n/n|>\\varepsilon)\\le1/(n\\varepsilon^2)\\to0$ for each positive tolerance."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 119, PDF page 29. No candidate response used as an answer key.",
+      "page": 29,
+      "image": "assets/questions/2020-june-30nov-q119.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-30nov-q120",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-30nov",
+      "question_number": 120,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "For an M/M/1 queue in steady state with traffic intensity $\\rho\\in(0,1)$, let f(ρ) be the expected time waiting in the queue. Which statements hold?",
+      "options": {
+        "A": "f increases in ρ",
+        "B": "f decreases in ρ",
+        "C": "f attains its maximum at $\\rho=1/2$",
+        "D": "f is smooth on (0,1)"
+      },
+      "correct_options": [],
+      "hints": [
+        "Expected waiting time depends on a time scale, not just the dimensionless traffic intensity.",
+        "Write the formula in terms of service rate μ and then check what happens if μ is not held fixed."
+      ],
+      "solution": "For arrival rate λ and service rate μ with ρ=λ/μ, the steady-state queue waiting time is $W_q=\\lambda/[\\mu(\\mu-\\lambda)]=\\rho/[\\mu(1-\\rho)]$. Thus traffic intensity alone does not define a unique f: two queues with the same ρ and different μ have different waiting times. If μ is held at a fixed positive value, then $f\\prime(\\rho)=1/[\\mu(1-\\rho)^2]>0$ and f is smooth, making A,D the standard intended answers; B,C are false and f has no attained maximum in the open interval. Without that unstated fixed-time-scale assumption, choose $\\mu(\\rho)=\\rho^2/(1-\\rho)$, giving $f(\\rho)=1/\\rho$, which decreases, or choose $\\mu(\\rho)=\\rho/(1-\\rho)$, giving constant waiting time one. A nonsmooth positive service-rate family can also make f nonsmooth. The literal problem is underdetermined as a function of ρ alone, so conditional A,D are explained but not silently scored.",
+      "theory": "An M/M/1 queue has Poisson arrivals with rate λ, independent exponential service times with rate μ, and one server. A stationary distribution exists when ρ=λ/μ is below one, with geometric queue occupancy. The mean total number in the system is ρ/(1-ρ), and the mean number waiting excludes the in-service customer, giving ρ²/(1-ρ). Little’s law divides the latter by λ to obtain $W_q=\\rho/[\\mu(1-\\rho)]$. The intensity is dimensionless, whereas waiting time has time units, so a service-rate scale is needed. Monotonicity in intensity is standard when the service rate is fixed and arrivals vary. Varying both rates can preserve intensity while changing all time quantities, or produce different functional directions as intensity changes. Distinguish waiting in the queue from total sojourn time $1/(\\mu-\\lambda)$, and state what parameter remains fixed in a comparative claim.",
+      "similar_questions": [
+        {
+          "prompt": "For λ=2, μ=3, find mean queue waiting time.",
+          "solution": "ρ=2/3, so $W_q=(2/3)/[3(1/3)]=2/3$. The total sojourn time is $1/(3-2)=1$, showing these are different quantities."
+        },
+        {
+          "prompt": "Two queues have ρ=1/2, with μ=1 and μ=2. Compare queue waits.",
+          "solution": "The formula gives $W_q=\\rho/[\\mu(1-\\rho)]=1/\\mu$. Their waits are 1 and 1/2 despite identical intensity, proving that intensity alone does not specify waiting time."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The source specifies only traffic intensity and defines expected waiting time as a function of it without fixing arrival/service time scale. $W_q=\\rho/[\\mu(1-\\rho)]$ depends on μ as well. Under the standard conditional fixed-μ interpretation A,D are correct; literal scale underdetermination is fully demonstrated.",
+      "answer_source": "Independent mathematical derivation; question 120, PDF page 30. No candidate response used as an answer key.",
+      "page": 30,
+      "image": "assets/questions/2020-june-30nov-q120.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

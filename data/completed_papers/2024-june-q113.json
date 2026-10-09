@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2024-june-q113",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 113,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Hard",
+      "prompt": "Let independent $Y_i\\sim N(\\beta x_i,\\sigma^2)$, $n\\ge2$, where the $x_i$ and $\\sigma^2>0$ are known. Give $\\beta$ the prior $N(\\beta_0,\\tau^2)$, $\\tau^2>0$. Under squared error loss, which statements about the Bayes estimate are true? The printed question does not require $\\sum x_i^2>0$.",
+      "options": {
+        "A": "It tends to $\\beta_0$ as $\\tau^2\\to0$.",
+        "B": "It tends to $\\bar y/\\bar x$ as $\\tau^2\\to0$.",
+        "C": "It tends to the BLUE as $\\tau^2\\to\\infty$.",
+        "D": "It tends to the MLE as $\\tau^2\\to\\infty$."
+      },
+      "correct_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Complete the square in the product of the normal likelihood and prior.",
+        "Check both $S=\\sum x_i^2>0$ and the allowed degenerate case $S=0$."
+      ],
+      "solution": "Set $S=\\sum x_i^2$ and $T=\\sum x_iY_i$. Completing the square gives posterior variance $v=(\\tau^{-2}+S/\\sigma^2)^{-1}$ and posterior mean\n$$m=\\frac{\\sigma^2\\beta_0+\\tau^2T}{\\sigma^2+\\tau^2S}.$$\nThe mean minimizes posterior squared error. As $\\tau^2\\to0$, $m\\to\\beta_0$: A holds and B is not a general conclusion (even $\\bar x=0$ is allowed). If $S>0$, $m\\to T/S$ as $\\tau^2\\to\\infty$. This is both the BLUE and the unique MLE, giving the **intended A,C,D**, also the official key for question ID 704113.\n\nThe source omits the nonzero-design hypothesis. If all $x_i=0$, the data distribution does not depend on $\\beta$, $m=\\beta_0$ at every prior variance, no unbiased estimator of $\\beta$ exists, and every real value maximizes the likelihood. Thus the BLUE and unique-MLE limits in C,D are not defined in that case. **This item is unscored as printed; A,C,D apply to the identifiable model $S>0$.**",
+      "theory": "Normal conjugacy adds information through precisions: the prior contributes $\\tau^{-2}$ and the likelihood contributes $S/\\sigma^2$. Squared error loss leads to the posterior mean because conditional risk equals the posterior variance plus the squared distance from that mean. A concentrated prior dominates as its variance tends to zero. A diffuse prior yields the least-squares estimate only when the design identifies the parameter. In regression through the origin, identification requires $S>0$, and the relevant statistic is $T=\\sum x_iY_i$, not the ratio of sample means. Cauchy–Schwarz proves the BLUE property: a linear unbiased estimator has coefficients with $a^\\top x=1$ and variance $\\sigma^2\\|a\\|^2\\ge\\sigma^2/S$, attained at $a=x/S$. Differentiating the normal log likelihood yields the same estimate. When $S=0$, observations contain no information about the parameter and these inference claims require separate treatment.",
+      "similar_questions": [
+        {
+          "prompt": "For $x=(1,2)$, $Y=(2,5)$, $\\sigma^2=1$, prior mean $0$ and variance $t$, find the Bayes estimate.",
+          "solution": "$S=5,T=12$, so $m=12t/(1+5t)$. It tends to $0$ as $t\\to0$ and $12/5$ as $t\\to\\infty$, the OLS/MLE."
+        },
+        {
+          "prompt": "If all design entries are zero, how does a $N(3,7)$ prior change after observing the sample?",
+          "solution": "The likelihood is constant in $\\beta$, so the posterior remains $N(3,7)$ and the squared-error Bayes estimate stays $3$. Any statistic has the same expectation for every $\\beta$, so none can be unbiased for $\\beta$."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Original attached question lacks the nonzero-design condition; intended A,C,D agrees with NTA final key, ID 704113, page 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf",
+      "answer_source": "Independent mathematical derivation; question 113, PDF page 78. No candidate response used as an answer key.",
+      "page": 78,
+      "image": "assets/questions/2024-june-q113.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

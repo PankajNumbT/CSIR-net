@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2021-june-q101",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 101,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let u(x,y) solve x²u_{xy}+3y²u=0 with u(x,0)=e^{1/x}. Which statements are true?",
+      "options": {
+        "A": "The PDE is not linear",
+        "B": "u(1,1)=e²",
+        "C": "u(1,1)=e^{−2}",
+        "D": "Separation of variables can be utilized to compute u(x,y)"
+      },
+      "correct_options": [],
+      "hints": [
+        "The equation is linear in u and its derivatives. A product solution with X(x)=e^{1/x} gives Y′=3y²Y.",
+        "A mixed second-order PDE ordinarily needs more than this single boundary trace for uniqueness. Test a zero-boundary addition."
+      ],
+      "solution": "The PDE is linear, so A is false. Separation gives the particular solution u₀=e^{1/x+y³}, and hence u₀(1,1)=e². However, the supplied boundary trace does not determine u uniquely. Set t=1/x,s=y³; the equation becomes u_{ts}=u. The convergent series v(t,s)=Σ_{k=0}∞tᵏs^{k+1}/[k!(k+1)!] satisfies v_{ts}=v and v(t,0)=0, as termwise differentiation and an index shift verify. Thus u=e^{t+s}+cv(t,s) satisfies the same PDE and trace for every real c. At (1,1), v>0, so u(1,1) can be any real value, including either listed exponential. D does give a method for a particular separated solution, but it cannot determine the general solution from the given data. Therefore the question is flagged for nonuniqueness; under an explicit restriction to the separated solution, the intended labels would be B,D.",
+      "theory": "A partial differential equation is linear if the unknown function and all its derivatives occur to first power without products among them; variable coefficients do not spoil linearity. Separation of variables assumes a product form and can produce particular solutions, but it is not a uniqueness theorem. For a mixed equation u_{ts}=u, boundary data along s=0 alone generally leave freedom in the transverse boundary. A zero-trace homogeneous solution can be added to any solution because the equation is linear. Power series provide a constructive way to demonstrate this freedom: differentiating Σtᵏs^{k+1}/[k!(k+1)!] shifts the index to reproduce the series. Its factorial denominators justify convergence and local termwise differentiation. A boundary trace singular at x=0 should be interpreted on a domain excluding that point.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u_{ts}=u using the separated ansatz u(t,s)=X(t)Y(s) and trace u(t,0)=e^{2t}.",
+          "solution": "The trace selects X=e^{2t} with Y(0)=1. Substitution gives 2Y′=Y, so Y=e^{s/2}; the separated solution is e^{2t+s/2}. It satisfies the PDE and trace, although the trace alone does not guarantee uniqueness among all solutions."
+        },
+        {
+          "prompt": "Construct a nonzero solution of v_{ts}=v with v(t,0)=0.",
+          "solution": "Take v=Σ_{k=0}∞tᵏs^{k+1}/[k!(k+1)!]. Differentiating twice gives Σ_{k≥1}t^{k−1}sᵏ/[(k−1)!k!], equal to v after replacing k−1 by j. At s=0 every term is zero, while v(1,1)>0."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "One boundary trace does not determine the mixed second-order PDE solution. A separated solution yields conditional B,D, but zero-trace additions change u(1,1).",
+      "answer_source": "Independent mathematical derivation; question 101, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2021-june-q101.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q102",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 102,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "For x≥0 consider ∫₀ˣ(x−t)u(t)dt=x, with u continuous on [0,∞). Which statements hold?",
+      "options": {
+        "A": "A unique bounded solution exists",
+        "B": "No solution exists",
+        "C": "A unique solution exists with |u(x)|≤C(1+|x|) for some C",
+        "D": "More than one solution exists with |u(x)|≤C(1+|x|) for some C"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Differentiate the left side using the Leibniz rule.",
+        "Its derivative at zero is zero, whereas the right side has derivative one."
+      ],
+      "solution": "Let F(x)=∫₀ˣ(x−t)u(t)dt. Continuity gives F′(x)=∫₀ˣu(t)dt, since the moving-endpoint term is (x−x)u(x)=0. If F(x)=x then F′(x)=1 for x>0. But ∫₀ˣu(t)dt→0 as x↓0, contradicting equality to one. Equivalently, boundedness of u near zero implies |F(x)|≤Mx²/2, so F(x)/x→0 rather than 1. There is no continuous solution at all; hence B alone is true, regardless of any boundedness or linear-growth restriction in the other options.",
+      "theory": "A Volterra integral operator integrates only over past values up to x. When the kernel is x−t, the resulting function is a twice-integrated version of u: F′(x)=∫₀ˣu and F″=u for continuous u. It automatically satisfies F(0)=F′(0)=0. Therefore an equation F=g can have a continuous solution only if the prescribed g has those initial compatibility conditions; where g is twice differentiable the only candidate is u=g″. Differentiating an integral equation can discard these conditions, so finding u=0 from a second derivative is not enough: substitution or endpoint checks remain necessary. Growth assumptions at infinity cannot repair a local contradiction at zero. The Leibniz rule includes both integrand and moving-endpoint derivatives.",
+      "similar_questions": [
+        {
+          "prompt": "Solve ∫₀ˣ(x−t)u(t)dt=x² for continuous u.",
+          "solution": "Twice differentiating gives u=2. The right side has g(0)=g′(0)=0, so compatibility holds. Directly ∫₀ˣ2(x−t)dt=x², verifying the unique solution."
+        },
+        {
+          "prompt": "Can ∫₀ˣ(x−t)u(t)dt=1+x² hold for continuous u?",
+          "solution": "No. At x=0 the left side is zero but the right side is one. Differentiation would suggest u=2, yet that candidate produces x² only; the lost constant violates the original equation."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 102, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2021-june-q102.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q103",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 103,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Data (xᵢ,yᵢ), i=1,…,n, have not all xᵢ equal. C fits least-squares y on x with an intercept; D fits without an intercept. Let x̄,ȳ be sample means. Which statements are NOT necessarily true?",
+      "options": {
+        "A": "Both fitted lines pass through (x̄,ȳ)",
+        "B": "C’s line passes through (x̄,ȳ), but D’s line will not",
+        "C": "For both fitted models the sample correlation between xᵢ and residuals is zero",
+        "D": "That correlation is zero for C’s model, but not for D’s model"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "With an intercept the normal equations give Σeᵢ=0 and Σxᵢeᵢ=0. Without one, only the second identity is guaranteed.",
+        "A no-intercept line may happen to pass through the means or have zero residual correlation. Use centred data for such a counterexample."
+      ],
+      "solution": "All four categorical statements are not necessary. With an intercept, the line always passes through (x̄,ȳ), and defined residual correlation with x is zero. Without an intercept, β̂=Σxᵢyᵢ/Σxᵢ² and its normal equation Σxᵢeᵢ=0 does not force Σeᵢ=0. For x=(1,2,3), y=(1,1,2), β̂=9/14; the predicted mean 9/7 differs from ȳ=4/3, refuting A. Its centred covariance numerator is −x̄Σeᵢ=−2/7≠0, refuting C. To refute B and D, take x=(−1,0,1), y=(1,−2,1). Both means are zero and the no-intercept slope is zero. Its line passes through the means, its nonzero residual vector equals y, and its correlation with x is zero. Thus the asserted failures in B,D need not occur. If residual variance vanishes, correlation is undefined, an additional reason the correlation assertions require qualification.",
+      "theory": "Ordinary least squares makes the residual vector orthogonal to each design column. Including the constant column yields both zero residual sum and orthogonality to x, forcing the fitted line through the sample means and zero centred covariance between x and residuals. Removing the intercept retains orthogonality to x but not to the constant vector. The centred covariance numerator is Σ(xᵢ−x̄)(eᵢ−ē)=Σxᵢeᵢ−x̄Σeᵢ; therefore it may be nonzero in a through-origin fit. It may also vanish accidentally, for example with centred x. A sample correlation additionally needs nonzero variance in both vectors; perfect fits have zero residual variance. The words “not necessarily true” ask for counterexamples, including to categorical statements that a nonguaranteed property never occurs.",
+      "similar_questions": [
+        {
+          "prompt": "For x=(−1,0,1),y=(1,−2,1), compute the through-origin slope and residual correlation.",
+          "solution": "Σxy=−1+0+1=0 and Σx²=2, so β̂=0. Residuals are y, with mean zero and nonzero variance. Their dot product with centred x is zero, giving correlation zero; the line also passes through the two zero means."
+        },
+        {
+          "prompt": "Show a through-origin fit can miss the mean point for x=(1,2),y=(1,1).",
+          "solution": "The slope is (1+2)/(1+4)=3/5. At x̄=3/2 it predicts 9/10, while ȳ=1. Its residuals are 2/5 and −1/5, whose sum 1/5 is not zero despite Σxe=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Reads the printed categorical “will not” and “but not” literally; occasional equality in the no-intercept model refutes those assertions.",
+      "answer_source": "Independent mathematical derivation; question 103, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2021-june-q103.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q104",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 104,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let X₁,…,Xₙ be iid N(θ,1) with θ≥0, and let T be the maximum-likelihood estimate of θ. Which statements are true?",
+      "options": {
+        "A": "E_θ(T)−θ≥0 for every θ≥0",
+        "B": "E_θ(T)−θ=0 for every θ≥0",
+        "C": "E_θ(T)−θ<0 for every θ≥0",
+        "D": "There is θ₀>0 with negative bias for 0<θ<θ₀ and positive bias for θ≥θ₀"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The unrestricted estimate is the sample mean; project it onto the permitted half-line.",
+        "T=max(0,X̄) is pointwise at least X̄, whose expectation is θ."
+      ],
+      "solution": "The log likelihood is a constant minus (n/2)(θ−X̄)², so over θ≥0 its maximizer is T=max(0,X̄). Thus E_θT−θ=E_θ[T−X̄]=E_θ[−X̄·1_{X̄<0}]≥0. For every finite θ and positive n the normal sample mean has positive probability below zero, making the bias strictly positive. Explicitly, with σ=1/√n and a=θ/σ, E T=θΦ(a)+σφ(a), so bias=σφ(a)−θΦ(−a)>0. Therefore A is true and B,C,D false. At θ=0 the bias is 1/√(2πn).",
+      "theory": "Constrained maximum likelihood maximizes the likelihood over the allowed parameter space rather than using an unrestricted formula blindly. For a quadratic normal log likelihood, restriction to θ≥0 projects the sample mean onto that half-line. Projection changes the estimator’s distribution and introduces bias near the boundary. The expectation of the positive part of N(θ,σ²) is θΦ(θ/σ)+σφ(θ/σ), obtained by splitting the normal integral at zero. A simpler bias proof uses the pointwise identity max(0,X̄)−X̄=−X̄ on the negative tail. Nonnegative pointwise differences imply nonnegative expectation, and positive-probability strict differences give strict bias. As θ increases away from the boundary, the negative-tail correction diminishes but does not become exactly zero for finite θ.",
+      "similar_questions": [
+        {
+          "prompt": "For one X∼N(0,1), find the mean of max(0,X).",
+          "solution": "The positive-part expectation is ∫₀∞xφ(x)dx=φ(0)=1/√(2π). Thus the constrained MLE has positive bias at the boundary θ=0."
+        },
+        {
+          "prompt": "For iid N(θ,4) and θ≤5, find the MLE and its bias direction.",
+          "solution": "The unconstrained optimum is X̄. Projection gives T=min(5,X̄), pointwise no greater than X̄. Consequently E T−θ≤0, strictly negative for every finite θ because P(X̄>5)>0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 104, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2021-june-q104.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q105",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 105,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let X∼Geometric(1/2) on {1,2,…}, Y|X∼Poisson(X). Let U∼Poisson(1), V|U∼Geometric(1/(U+1)) on {1,2,…}. Which inequalities hold?",
+      "options": {
+        "A": "E(Y)≥E(V)",
+        "B": "E(Y)≤E(V)",
+        "C": "Var(Y)≥Var(V)",
+        "D": "Var(Y)≤Var(V)"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Use total expectation and total variance in both hierarchical distributions.",
+        "For a geometric variable on positive integers, mean is 1/p and variance (1−p)/p²."
+      ],
+      "solution": "X has mean 2 and variance 2. Since E(Y|X)=X and Var(Y|X)=X, E Y=2 and Var Y=E X+Var X=4. For V, its conditional mean is U+1 and conditional variance is [U/(U+1)](U+1)²=U(U+1). Poisson(1) has E U=1, Var U=1 and E U²=2. Thus E V=E(U+1)=2 and Var V=E[U(U+1)]+Var(U+1)=2+1+1=4. Both means and both variances are equal. Hence each non-strict inequality A,B,C,D holds; none can be excluded merely because its reverse also holds.",
+      "theory": "The law of total expectation gives E Y=E[E(Y|X)]. The law of total variance gives Var Y=E[Var(Y|X)]+Var(E[Y|X]), separating within-condition randomness from variability of the conditional mean. A Poisson variable with parameter λ has both mean and variance λ. A geometric variable counting trials through the first success, with support {1,2,…}, has mean 1/p and variance (1−p)/p². The alternative support {0,1,…} changes the mean and must not be substituted. In mixtures, a random parameter adds a variance term, so averaging conditional variances alone understates the total. When options use ≥ and ≤ rather than strict inequalities, equality makes both directions true. Second moments follow from E U²=Var U+(E U)².",
+      "similar_questions": [
+        {
+          "prompt": "X∼Poisson(3) and Y|X∼Poisson(2X). Find mean and variance of Y.",
+          "solution": "E Y=E(2X)=6. Total variance is E(2X)+Var(2X)=6+4·3=18. The marginal variance exceeds the mean because the random Poisson parameter adds extra variability."
+        },
+        {
+          "prompt": "U∼Poisson(2), V|U∼Geometric(1/(U+1)). Find its moments.",
+          "solution": "E V=E(U+1)=3. Since E U²=2+4=6, E[U(U+1)]=6+2=8, and Var(U+1)=2. Thus Var V=10."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 105, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2021-june-q105.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q106",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 106,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "Let P=(pᵢⱼ) be an irreducible Markov transition matrix on finite S, and αᵢⱼ=lim_{n→∞}(1/n)Σ_{m=1}ⁿpᵢⱼ^{(m)}. This limit always exists. Which statements necessarily hold?",
+      "options": {
+        "A": "αᵢⱼ=αₖⱼ for every i,j,k∈S",
+        "B": "Σ_{j∈S}αᵢⱼ=1 for every i∈S",
+        "C": "αᵢⱼ>0 for every i,j∈S",
+        "D": "pᵢⱼ^{(n)}→αᵢⱼ for every i,j∈S"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "A finite irreducible chain has a unique strictly positive stationary distribution. Cesàro averages converge to it even if the chain is periodic.",
+        "A two-state deterministic alternating chain disproves convergence of individual transition probabilities."
+      ],
+      "solution": "The finite irreducible-chain ergodic theorem for Cesàro means gives αᵢⱼ=πⱼ, independent of starting state i, where π is the unique stationary distribution. Every πⱼ is strictly positive and Σπⱼ=1. Therefore A,B,C all hold. D needs aperiodicity and is false as stated. For P=[[0,1],[1,0]], P^{2m}=I and P^{2m+1}=P, so p₁₁^{(n)} alternates between 1 and 0 and has no limit; its Cesàro limit is 1/2. This chain is finite and irreducible, with stationary distribution (1/2,1/2), meeting every printed assumption.",
+      "theory": "A finite irreducible Markov chain has a unique stationary probability vector π, satisfying πP=π, whose entries are all positive. It is positive recurrent regardless of its period. Cesàro averages of transition matrices converge to the matrix with every row equal to π; this describes long-run average occupation probabilities. Ordinary powers Pⁿ converge to that matrix when the chain is also aperiodic. Periodicity can prevent ordinary convergence without preventing averages from converging. Each transition-matrix row sums to one, and finite sums allow passage to the limit of averaged rows, giving normalization. Irreducibility rules out zero stationary masses because positive-probability paths propagate mass to every state. These statements concern ensemble transition probabilities; the associated time-average theorem describes sample-path visit frequencies.",
+      "similar_questions": [
+        {
+          "prompt": "For P=[[0,1],[1,0]], find the average of the first 2m powers.",
+          "solution": "Exactly m powers are I and m are P, so the average is (I+P)/2=[[1/2,1/2],[1/2,1/2]]. Each row is the stationary distribution, even though the powers themselves oscillate."
+        },
+        {
+          "prompt": "For P=[[1/2,1/2],[1/4,3/4]], find the stationary distribution and limiting rows.",
+          "solution": "Solve π₁/2+π₂/4=π₁ with π₁+π₂=1, giving π=(1/3,2/3). The positive self-loops make the irreducible chain aperiodic, so Pⁿ and its Cesàro averages both converge to rows (1/3,2/3)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 106, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2021-june-q106.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q107",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 107,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let X₁,…,Xₙ be iid Uniform(0,θ), θ>0, with order statistics X_{(1)}≤⋯≤X_{(n)}. Test H₀:θ=1 against H₁:θ>1. Which rejection rules have significance level α, 0<α<1/2?",
+      "options": {
+        "A": "Reject when X₁>1−α",
+        "B": "Reject when X_{(n)}>(1−α)^{1/n}",
+        "C": "Reject when X_{(n)}<(1−α)^{1/n}",
+        "D": "Reject when X_{(1)}>1−α^{1/n}"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Significance level is the rejection probability under θ=1, regardless of the rule’s power.",
+        "Under the null, P(max≤c)=cⁿ and P(min>c)=(1−c)ⁿ."
+      ],
+      "solution": "Under H₀ each observation is Uniform(0,1). A rejects with probability P(X₁>1−α)=α. B rejects with probability 1−[(1−α)^{1/n}]ⁿ=α. C rejects with probability [(1−α)^{1/n}]ⁿ=1−α, which exceeds α since α<1/2, so it lacks the specified level. D rejects when all observations exceed 1−α^{1/n}; independence gives probability (α^{1/n})ⁿ=α. Thus A,B,D have exactly level α. The first rule uses raw observation X₁, not the minimum, and its size need not depend on n. Equal level does not imply equal power or an appropriate rejection direction.",
+      "theory": "A test’s significance level is its null rejection probability, or the supremum of that probability for a composite null. Here the null is simple, so it is computed at θ=1. For iid Uniform(0,1) observations, the maximum has CDF cⁿ and the minimum has survival probability (1−c)ⁿ on [0,1]. Quantiles of these distributions calibrate rejection thresholds. A rule can have correct size even if it is inefficient or poorly directed for the alternative; level and power are distinct properties. The raw first observation and the first order statistic use different notation and distributions. Continuous null laws make strict versus non-strict inequalities irrelevant for size. The restriction α<1/2 explicitly excludes the accidental equality α=1−α for the wrong-tail maximum rule.",
+      "similar_questions": [
+        {
+          "prompt": "For n=2 and α=0.05, give a maximum-based level-α test of θ=1.",
+          "solution": "Reject if max(X₁,X₂)>√0.95. Under the null the CDF at this threshold is (√0.95)²=0.95, so rejection probability is 0.05."
+        },
+        {
+          "prompt": "Find a threshold c for P₀(min(X₁,…,X₃)>c)=0.125.",
+          "solution": "The probability is (1−c)³. Equating it to 1/8 gives 1−c=1/2 and c=1/2. Thus reject when all three observations exceed one half."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 107, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2021-june-q107.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q108",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 108,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Ten independently treated patients have recovery probability θ. Use a Beta(0.5,0.5) prior with density proportional to [θ(1−θ)]^{−1/2}. Six recover. Which are Bayes estimates under squared-error loss?",
+      "options": {
+        "A": "13/22",
+        "B": "11/20",
+        "C": "1/2",
+        "D": "E(θ | six of ten patients recovered)"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Beta priors are conjugate to binomial likelihoods: add successes and failures to the two parameters.",
+        "The squared-error Bayes estimate is the posterior mean, not the posterior mode."
+      ],
+      "solution": "The likelihood is proportional to θ⁶(1−θ)⁴. Multiplying by the prior gives θ^{6−1/2}(1−θ)^{4−1/2}, so the posterior is Beta(13/2,9/2). Under squared loss, posterior expected loss at action a equals Var(θ|data)+(a−E[θ|data])², minimized at the posterior mean. That mean is (13/2)/[(13/2)+(9/2)]=13/22. Therefore A and the equivalent conditional-expectation description D are true. B=11/20 and C=1/2 differ from the mean. The posterior mode is 11/18 and also differs; no posterior quantity should replace the loss-specific Bayes action.",
+      "theory": "A Beta(a,b) prior on a Bernoulli success probability is conjugate: observing s successes and f failures gives Beta(a+s,b+f). Its mean is a/(a+b), its mode for both parameters greater than one is (a−1)/(a+b−2), and its median generally lacks a simple closed formula. Under squared-error loss the Bayes action is the posterior mean, as completing the square in posterior risk shows. Under absolute loss it is a posterior median instead. The Beta(1/2,1/2) prior is proper despite its integrable endpoint singularities and is often called the Jeffreys prior for a binomial probability. Equal prior parameters shrink the observed fraction toward one half. Multiple options may describe the same action numerically and symbolically, so both must be selected.",
+      "similar_questions": [
+        {
+          "prompt": "With a Beta(1,1) prior and 3 successes in 5 trials, find the squared-loss Bayes estimate.",
+          "solution": "The posterior is Beta(4,3). Its mean is 4/7, which minimizes posterior squared-error risk. The raw success fraction is 3/5 and the posterior mode is also 3/5, but neither equals the mean."
+        },
+        {
+          "prompt": "With a Beta(2,3) prior and 4 successes and 2 failures, find posterior parameters and mean.",
+          "solution": "The posterior is Beta(6,5), obtained by adding counts. Its mean is 6/(6+5)=6/11. This is the squared-error Bayes estimate."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 108, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2021-june-q108.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q109",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 109,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "For a uniformly random permutation π of {1,…,n}, let Xₙ count its fixed points. Which identities are correct?",
+      "options": {
+        "A": "E(X₂₅)=5E(X₅)",
+        "B": "E(X₂₅)=E(X₅)/5",
+        "C": "E(X₂₅)=E(X₅)",
+        "D": "E(X₂₅)=[E(X₁₅)]²"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Represent the count as a sum of indicators, one for each possible fixed point.",
+        "Exactly (n−1)! of the n! permutations fix a specified point."
+      ],
+      "solution": "Write Xₙ=Σ_{i=1}ⁿIᵢ, where Iᵢ=1 when π(i)=i. There are (n−1)! permutations fixing i out of n!, so E Iᵢ=1/n. By linearity E Xₙ=n·(1/n)=1 for every n≥1, without requiring independent indicators. Consequently A asserts 1=5 and B asserts 1=1/5, both false. C asserts 1=1, and D asserts 1=1², both true. The square in D is the square of the expectation, not the second moment; E[Xₙ²] is generally different.",
+      "theory": "Indicator variables turn a count into a sum whose expectation is the sum of event probabilities. Independence is unnecessary for linearity of expectation, though it matters for variance. A uniformly random permutation fixes a specified point with probability 1/n because its image is uniform among n possibilities; it fixes two specified distinct points with probability 1/[n(n−1)]. These yield mean one and variance one for n≥2. The fixed-point count converges in distribution to Poisson(1) as n grows, but its expectation is already exactly one for every positive n. Distinguish [E X]² from E[X²], since the difference is Var X. Symmetry-based counting avoids enumerating permutations by their total number of fixed points.",
+      "similar_questions": [
+        {
+          "prompt": "Find the expected number of matching positions in a random permutation of ten labels.",
+          "solution": "Each position matches with probability 1/10. Summing ten indicators gives expectation 10·1/10=1, even though the positions’ events are dependent."
+        },
+        {
+          "prompt": "For n≥2 compute E[Xₙ(Xₙ−1)] and E[Xₙ²].",
+          "solution": "The factorial count is Σ_{i≠j}IᵢIⱼ. There are n(n−1) ordered pairs, each with probability 1/[n(n−1)], so its expectation is 1. Since X²=X(X−1)+X, E X²=1+1=2 and Var X=1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 109, PDF page 21. No candidate response used as an answer key.",
+      "page": 21,
+      "image": "assets/questions/2021-june-q109.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q110",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 110,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "In Y=Xβ+ε, X is fixed n×p of full column rank and errors εᵢ are iid with mean zero and variance one. Let Ŷᵢ be least-squares fitted values and ε̂ᵢ residuals. For r≠s, which must hold?",
+      "options": {
+        "A": "εᵣ and Ŷₛ are uncorrelated",
+        "B": "εₛ and Ŷᵣ are uncorrelated",
+        "C": "ε̂ᵣ and Ŷₛ are uncorrelated",
+        "D": "ε̂ₛ and Ŷₛ are uncorrelated"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Use the hat matrix H=X(XᵀX)⁻¹Xᵀ: Ŷ=HY and ε̂=(I−H)Y.",
+        "H is symmetric and idempotent. Compute covariance matrices with Cov(ε)=I."
+      ],
+      "solution": "H is a symmetric projection. Since Ŷ=Xβ+Hε and ε̂=(I−H)ε, Cov(ε̂,Ŷ)=(I−H)Hᵀ=H−H²=0. Therefore every residual is uncorrelated with every fitted value, proving C,D, including equal indices. By contrast Cov(εᵣ,Ŷₛ)=Hₛᵣ and Cov(εₛ,Ŷᵣ)=Hᵣₛ, which need not vanish. For an intercept-only model, X is the ones column and Hᵣₛ=1/n for every r,s. This admissible model refutes A,B. Normality of errors is not assumed or needed for uncorrelatedness; it would be needed to infer independence from these zero covariances.",
+      "theory": "Least squares with full-rank fixed design projects Y onto the column space of X. The hat matrix H is symmetric and idempotent, and the residual projection is I−H, orthogonal to H. If errors have covariance σ²I, fitted and residual vectors have covariance cross-matrix σ²H(I−H)=0. Their deterministic orthogonality in each sample and their stochastic uncorrelatedness are related through these projections. The original error vector differs from the fitted residual vector: each fitted value includes a linear combination of original errors, so its covariance with εᵢ can be nonzero. Zero covariance is weaker than independence for nonnormal distributions. An intercept-only design is a useful counterexample because every hat-matrix entry equals 1/n.",
+      "similar_questions": [
+        {
+          "prompt": "For an intercept-only model with n=4 and unit error variance, compute Cov(ε₁,Ŷ₂).",
+          "solution": "Ŷ₂ is the sample mean of the four responses, and its random part is (ε₁+⋯+ε₄)/4. Independence of the errors gives covariance 1/4 with ε₁, so they are not uncorrelated."
+        },
+        {
+          "prompt": "In the same model compute Cov(ε̂₁,Ŷ₂).",
+          "solution": "The residual is ε₁−ε̄ and the fitted random part is ε̄. Cov(ε₁,ε̄)=1/4 and Var(ε̄)=1/4, so the difference is zero. This holds for any residual and any fitted coordinate."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 110, PDF page 21. No candidate response used as an answer key.",
+      "page": 21,
+      "image": "assets/questions/2021-june-q110.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q111",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 111,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let iid pairs (Xᵢ,Yᵢ) have a continuous bivariate distribution, with ranks Rᵢ,Sᵢ among their respective samples. Let T be Spearman’s rank correlation for testing independence. Which statements are true?",
+      "options": {
+        "A": "T=12ΣᵢRᵢSᵢ/[n(n²−1)]−3(n+1)/(n−1)",
+        "B": "E(T)=0 when X,Y are independent",
+        "C": "Var(T)=1/(n−1) when X,Y are independent",
+        "D": "T≥0"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Spearman correlation is Pearson correlation of ranks 1,…,n. Centre them at (n+1)/2.",
+        "Under independence the second rank vector is a uniform random permutation of the first, allowing exact mean and variance calculations."
+      ],
+      "solution": "Write aᵢ=Rᵢ−(n+1)/2,bᵢ=Sᵢ−(n+1)/2. Their squared sum is Q=n(n²−1)/12 and T=Σaᵢbᵢ/Q. Expanding the numerator gives A. Under independence, conditional on R the S ranks are uniformly permuted, so E bᵢ=0 and B follows. Moreover E bᵢ²=Q/n and E bᵢbⱼ=−Q/[n(n−1)] for i≠j. Since Σaᵢ=0, Var(Σaᵢbᵢ)=Q²/n+Q²/[n(n−1)]=Q²/(n−1), hence C. Reversed ranks Sᵢ=n+1−Rᵢ give bᵢ=−aᵢ and T=−1, refuting D. These formulas require n≥2, as implicit in a correlation statistic.",
+      "theory": "Spearman’s rank correlation is ordinary Pearson correlation applied to ranks, so it lies between −1 and 1 and records the direction of monotone association. With continuous marginals there are almost surely no ties, and both rank vectors are permutations of 1,…,n. Their common centred sum of squares is n(n²−1)/12. Under independence one rank ordering is uniformly random relative to the other. Sampling ranks without replacement yields negatively correlated distinct rank coordinates, producing the exact null variance 1/(n−1). Perfectly matching ranks give one and reversed ranks minus one; nonnegativity is not a property of a correlation coefficient. A test may use |T| or T² for a two-sided alternative, but that does not redefine T itself. Ties would require rank averaging and modify the simple exact formulas.",
+      "similar_questions": [
+        {
+          "prompt": "Compute Spearman correlation for ranks R=(1,2,3), S=(3,2,1).",
+          "solution": "The centred ranks are (−1,0,1) and (1,0,−1). Their inner product is −2 and each squared sum is 2, so T=−1. This is perfect negative rank association."
+        },
+        {
+          "prompt": "For n=5 under independence, find E T and Var T.",
+          "solution": "The permutation symmetry gives E T=0. The exact rank-correlation variance is 1/(n−1)=1/4. Its standard deviation is 1/2; this is a finite-sample value, not an asymptotic approximation."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 111, PDF page 21. No candidate response used as an answer key.",
+      "page": 21,
+      "image": "assets/questions/2021-june-q111.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q112",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 112,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let Xₙ and X be random variables on a common probability space, all with finite expectations and characteristic functions φₙ and φ. Which statements hold? Option C is incomplete in the source.",
+      "options": {
+        "A": "E(Xₙ)→E(X) implies Xₙ(ω)→X(ω) for at least one sample point",
+        "B": "Convergence Xₙ(ω)→X(ω) at every sample point implies E(Xₙ)→E(X)",
+        "C": "“if for every sample point ω then φₙ(t)→φ(t) for all t”",
+        "D": "φₙ(t)→φ(t) for all t implies Xₙ(ω)→X(ω) for at least one sample point"
+      },
+      "correct_options": [],
+      "hints": [
+        "Convergence of expectations or of marginal laws gives no pointwise coupling information.",
+        "For expectation failure use moving spikes; the likely missing antecedent in C is pointwise convergence of Xₙ to X."
+      ],
+      "solution": "C omits what is to hold “for every sample point,” so the question has an incomplete option and no complete scored answer set. A fails on Ω={−1,1} with equal masses: take Xₙ(ω)=ω and X(ω)=−ω. All expectations are zero, but at neither point does Xₙ→X. The same example refutes D because the two marginal laws and characteristic functions are identical. B fails on Ω=(0,1] with uniform probability: Xₙ(ω)=n·1_{ω≤1/n} tends to zero at every point, yet E Xₙ=1 and E X=0. If C was intended to say Xₙ(ω)→X(ω) for every sample point, it would be true: e^{itXₙ}→e^{itX} and bounded convergence gives φₙ(t)→φ(t). Conditional intended answer: C only.",
+      "theory": "Almost-sure or everywhere pointwise convergence concerns random variables on a specified coupling, while convergence in distribution concerns only their marginal laws. Equal marginal laws do not force any pointwise agreement. Lévy’s continuity theorem links pointwise convergence of characteristic functions to weak convergence when the limit is a characteristic function, not to convergence on a particular coupling. Pointwise convergence of integrable variables does not automatically yield convergence of expectations; dominated convergence needs a common integrable bound, and uniform integrability is another sufficient condition. Characteristic-function integrands have modulus one, providing the needed uniform bound automatically when the variables converge pointwise. Spike examples concentrate a fixed expected mass into shrinking sets and defeat expectation convergence. An incomplete implication cannot be repaired without acknowledging the missing hypothesis.",
+      "similar_questions": [
+        {
+          "prompt": "On (0,1], let Xₙ=n1_{(0,1/n]} and X=0. Compute the limits of expectations and characteristic functions.",
+          "solution": "At every point Xₙ→0, but E Xₙ=1. Its characteristic function is 1−1/n+e^{itn}/n, tending to 1 for every t, the characteristic function of zero. Thus distributional convergence coexists with failure of expectation convergence."
+        },
+        {
+          "prompt": "Can two variables have the same characteristic function but differ at every sample point?",
+          "solution": "Yes. On the two equally likely points ±1, take X(ω)=ω,Y(ω)=−ω. Both have characteristic function cos t, yet X(ω)≠Y(ω) at both points. Marginal equality does not determine a coupling."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option C lacks the antecedent after “if for every sample point ω”. If pointwise Xₙ→X was intended there, C alone is correct.",
+      "answer_source": "Independent mathematical derivation; question 112, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2021-june-q112.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q113",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 113,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let X₁,…,Xₙ have N(0,1) marginal distributions. The source assumes W(XᵢXⱼ)=0 for i≠j without defining W. Put Y=ΣXᵢ,V=ΣXᵢ². Which statements follow?",
+      "options": {
+        "A": "Y is normal with mean zero and variance n",
+        "B": "V is chi-square with n degrees of freedom",
+        "C": "E(Xᵢ³Xⱼ³)=0 for every i≠j",
+        "D": "P(|Y|>t)≤n/t² for every t>0"
+      },
+      "correct_options": [],
+      "hints": [
+        "A marginally normal vector need not be jointly normal. The symbol W is not defined in the source.",
+        "If W was intended as expectation, zero pairwise covariances yield Var Y=n and Chebyshev’s inequality, but do not establish independence."
+      ],
+      "solution": "W is not a defined expectation, variance, or other operator, so its hypothesis has no specified mathematical meaning and the question is flagged. If W was intended to be E, the Xᵢ are pairwise uncorrelated and Var Y=n; Chebyshev gives D. A,B,C need not hold. For n=2, let Z be standard normal and let s(|Z|) equal +1 below a positive threshold c and −1 above, chosen so E[Z²s(|Z|)]=0. Set X₁=Z,X₂=s(|Z|)Z. Both marginals are standard normal by symmetry and E X₁X₂=0. But Y has positive probability of being zero, so is not normal; V=2Z² is not χ²₂; and E X₁³X₂³=E[Z⁶s(|Z|)]<0 because the upper-tail sixth moment outweighs the lower-tail one at the equal second-moment split. Conditional intended answer: D only.",
+      "theory": "Joint normality is stronger than normality of each marginal. For jointly normal variables, zero covariances imply independence, but this fails without the joint-normal assumption. Variance of a sum is the sum of variances plus twice the pairwise covariances, so merely uncorrelated variables still permit the Chebyshev bound P(|Y−E Y|>t)≤Var(Y)/t². A chi-square sum of squared standard normals requires independence or an equivalent joint Gaussian covariance structure. Higher mixed moments do not vanish simply because second mixed moments vanish. A sign depending only on |Z| preserves a symmetric normal marginal when multiplying Z, yet can create strong dependence. The problem’s undefined W cannot silently be substituted by E; the conditional interpretation is supplied explicitly.",
+      "similar_questions": [
+        {
+          "prompt": "Let X₁,…,Xₙ be jointly normal with means zero, unit variances and zero pairwise covariances. Find Y and V distributions.",
+          "solution": "The joint normal covariance matrix is I, so the coordinates are independent. Therefore Y∼N(0,n), and V=ΣXᵢ²∼χ²ₙ. This conclusion uses the additional joint-normal assumption."
+        },
+        {
+          "prompt": "For centred pairwise uncorrelated variables with Var Xᵢ=2, bound P(|ΣXᵢ|>t).",
+          "solution": "The sum has mean zero and variance 2n because all covariance terms vanish. Chebyshev gives P(|ΣXᵢ|>t)≤2n/t². No independence or normality is required."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The source visibly prints W(XᵢXⱼ)=0 with W undefined. Conditional replacement W=E yields D only.",
+      "answer_source": "Independent mathematical derivation; question 113, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2021-june-q113.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q114",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 114,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A chain on {0,1,2,…} has p₀ⱼ=1/(j!e), j≥0; pᵢ,ᵢ₋₁=1 for positive odd i and pᵢ,ᵢ₊₁=1 for positive even i. Which statements are true?",
+      "options": {
+        "A": "The chain is irreducible",
+        "B": "The chain has period 2",
+        "C": "There are infinitely many recurrent classes",
+        "D": "State zero is transient"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Every pair {2k,2k+1}, k≥1, is a closed deterministic two-cycle.",
+        "Zero can jump into a closed class and never return; it also has a positive self-loop."
+      ],
+      "solution": "For each k≥1 the states 2k and 2k+1 move deterministically back and forth and cannot leave; each pair is a closed recurrent class of period two. There are infinitely many, proving C and refuting irreducibility A. States 0 and 1 communicate because 0→1 has probability 1/e and 1→0 has probability one, but the class is not closed: 0 can jump to any j≥2. Starting at 0, a return occurs precisely if its first jump is to 0 or 1; the probability is 1/e+1/e=2/e<1. Hence zero is transient (D). Its self-loop p₀₀=1/e gives period one, whereas the closed pairs have period two; the chain as a whole cannot be assigned the common period two claimed in B. Exactly C,D.",
+      "theory": "Communicating classes partition a Markov state space according to mutual reachability. A class is closed if no transition leaves it. Finite closed irreducible classes are recurrent; deterministic two-cycles are simple examples with period two. Transient classes can feed into closed classes and lose probability permanently. A state is recurrent if its probability of eventual return is one and transient otherwise. Its period is the greatest common divisor of possible return times, with a positive self-loop forcing period one. All states in an irreducible class share a period, but different classes of a reducible chain may have different periods. The Poisson row from zero sums to one because e^{−1}Σ1/j!=1. It gives positive access to every closed pair while no such pair can reach zero.",
+      "similar_questions": [
+        {
+          "prompt": "A chain has 0→1 surely, 1→0 with probability 1/2 and 1→2 with probability 1/2, while 2 is absorbing. Is zero recurrent?",
+          "solution": "From zero the next step is one. It returns to zero with probability 1/2 and otherwise enters absorbing state two. Thus its return probability is 1/2<1 and zero is transient."
+        },
+        {
+          "prompt": "What are the recurrence and period of a closed deterministic three-cycle?",
+          "solution": "Every state returns after exactly three steps and repeats this indefinitely, so each is recurrent. Return times are positive multiples of three, giving period three. The three states form one closed irreducible class."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 114, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2021-june-q114.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q115",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 115,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "A finite population of size N is partitioned into L strata of sizes Nⱼ. Independently sample nⱼ units by simple random sampling within each stratum, Σnⱼ=n. Let ȳ_st=Σ(Nⱼ/N)ȳⱼ and σ_st²=Var(ȳ_st). Let ȳ be the mean from an independent size-n SRS of the full population, with variance σ². Which statements hold?",
+      "options": {
+        "A": "ȳ_st is unbiased for the population mean",
+        "B": "ȳ is unbiased for the population mean",
+        "C": "σ_st²≤σ²",
+        "D": "If nⱼ/Nⱼ=n/N for every stratum then σ_st²≤σ²"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Both estimates average unbiased stratum or full-population sample means. Arbitrary allocation need not reduce variance.",
+        "For the exact finite-population comparison, test two identical strata {−1,1}, sampling one point from each."
+      ],
+      "solution": "Under ordinary finite-population SRS without replacement, E ȳⱼ=Ȳⱼ. Therefore E ȳ_st=Σ(Nⱼ/N)Ȳⱼ=Ȳ, proving A. The full-population SRS mean is also unbiased, proving B. C and even the exact proportional-allocation claim D are false without further conditions. Take N=4, two strata each containing −1 and 1, and n=2 with one draw per stratum. Allocation is proportional. The independent stratum draws each have variance one, so Var ȳ_st=(1/4)+(1/4)=1/2. The full-population variance S²=4/3, and Var ȳ=(1−2/4)S²/2=1/3. Hence σ_st²>σ², disproving C,D. Common large-population formulas may give a proportional-allocation improvement, but they cannot replace this exact finite-population counterexample. Exactly A,B under the standard sampling convention.",
+      "theory": "Finite-population SRS without replacement gives E ȳ=Ȳ and Var ȳ=(1−n/N)S²/n, where S² uses denominator N−1. Independent stratified sampling gives Var ȳ_st=ΣWⱼ²(1−nⱼ/Nⱼ)Sⱼ²/nⱼ, with Wⱼ=Nⱼ/N and within-stratum Sⱼ² using Nⱼ−1. Under proportional allocation this becomes (1−n/N)ΣWⱼSⱼ²/n. The exact inequality ΣWⱼSⱼ²≤S² is not universally valid: denominator corrections can reverse it when stratum means coincide. Ignoring those finite-size corrections leads to the familiar approximate variance comparison, while sampling with replacement has a different exact decomposition. Allocation should consider within-stratum variabilities, as in Neyman allocation. Unbiasedness of the weighted estimator is independent of whether the chosen allocation improves precision. All comparisons must use the same sampling convention and finite-population denominators consistently.",
+      "similar_questions": [
+        {
+          "prompt": "For strata {−1,1} and {−1,1}, compute the stratified variance when one is sampled from each.",
+          "solution": "Each draw has mean zero and variance one. The weighted estimator is (Y₁+Y₂)/2 with independent draws, so its variance is (1+1)/4=1/2. Both sample fractions are 1/2, proving proportional allocation alone need not ensure the finite-population improvement."
+        },
+        {
+          "prompt": "For the full population {−1,1,−1,1}, compute the variance of a size-two SRS mean.",
+          "solution": "There are six equally likely unordered samples. One gives mean −1, one gives +1, and four give zero. The mean expectation is zero and its variance is (1+1)/6=1/3, smaller than the stratified variance above."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Uses exact finite-population SRS without replacement; proportional allocation does not always dominate SRS when finite-size variance denominators are retained.",
+      "answer_source": "Independent mathematical derivation; question 115, PDF page 22. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2021-june-q115.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q116",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 116,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Independent observations (xᵢ,yᵢ) are uniform on S_θ={(x,y):θ≤x²+y²≤θ+1}, with unknown θ>1. Which claims about maximum-likelihood estimates hold?",
+      "options": {
+        "A": "maxᵢ(xᵢ²+yᵢ²)−1 is an MLE",
+        "B": "minᵢ(xᵢ²+yᵢ²) is an MLE",
+        "C": "Any value between maxᵢ(xᵢ²+yᵢ²)−1 and minᵢ(xᵢ²+yᵢ²) is an MLE",
+        "D": "Any value between maxᵢxᵢ²+maxᵢyᵢ²−1 and minᵢxᵢ²+minᵢyᵢ² is an MLE"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The annulus has area π regardless of θ. The likelihood is constant on parameter values containing every observation.",
+        "Do not forget θ>1: the feasible data interval must be intersected with the parameter space."
+      ],
+      "solution": "The annulus area is π[(θ+1)−θ]=π, so the likelihood equals π^{−n} when θ≤r_min² and θ≥r_max²−1, and zero otherwise. Its maximizers are [r_max²−1,r_min²]∩(1,∞). Since generated radii satisfy r_min²>1 almost surely (and ≥θ>1 even at boundaries), r_min² is always a permitted maximizer, proving B. A need not be permitted: one observation with r²=3/2 gives lower endpoint 1/2, outside θ>1. The same one-observation example refutes C,D, whose stated intervals include θ=3/4. Those values are not admissible estimates, regardless of their data containment. D also uses separate coordinate extrema, which may produce an empty narrower interval. Exactly B holds literally; omitting the printed θ>1 constraint would change the conclusions.",
+      "theory": "For a uniform model with parameter-dependent support and constant support volume, likelihood maximization is a feasibility problem: every parameter whose support contains all observations has the same maximal likelihood. Here polar area makes the annulus volume independent of θ, and squared radii have a uniform distribution on [θ,θ+1]. The joint containment inequalities give a data interval, but the parameter-space restriction must still be imposed. A proposed interval of maximizers can include inadmissible values if that final intersection is omitted. Nonuniqueness of the MLE does not make every convenient endpoint valid. Separate maxima of coordinates can exceed the maximum of their sum, and separate minima can be below its minimum, so they form a potentially empty inner interval rather than the full likelihood set.",
+      "similar_questions": [
+        {
+          "prompt": "For squared radii 2.4,2.8,3.1 in this model, find all MLEs with θ>1.",
+          "solution": "The maximum squared radius is 3.1 and minimum 2.4. The data interval is [2.1,2.4], already inside (1,∞), so every θ in that interval is an MLE with likelihood π^{−3}."
+        },
+        {
+          "prompt": "For squared radii 1.3 and 1.6, find all MLEs under θ>1.",
+          "solution": "The support inequalities give [0.6,1.3]. Intersecting with (1,∞) yields (1,1.3]. The endpoint 0.6 is inadmissible, while 1.3 and every value strictly above one up to it maximize likelihood."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Retains θ>1 exactly. The likelihood-maximizing interval must be intersected with this parameter space; the printed A,C,D omit that restriction.",
+      "answer_source": "Independent mathematical derivation; question 116, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2021-june-q116.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q117",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 117,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "Let {Nₜ:t≥0} be Poisson with intensity 10 and let T be independent exponential with mean 6. Which statements are true?",
+      "options": {
+        "A": "P(N_T=k)=e^{−10T}(10T)ᵏ/k!",
+        "B": "E(N_T)=60",
+        "C": "{N_{T+t}−N_T:t≥0} is Poisson with intensity 4",
+        "D": "{N_{T+t}−N_T:t≥0} is Poisson with intensity 10"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Conditional on T=t, the count is Poisson(10t). Average to obtain its marginal distribution.",
+        "For each fixed shift the post-shift increments have the same Poisson finite-dimensional laws, and T is independent of the process."
+      ],
+      "solution": "Conditional expectation gives E N_T=E(10T)=10·6=60, proving B. A is the conditional mass P(N_T=k|T), not the unconditional probability; its right side is random. Integration against (1/6)e^{−t/6} gives P(N_T=k)=(10ᵏ/(6k!))∫₀∞tᵏe^{−(61/6)t}dt=60ᵏ/61^{k+1}. For D condition on T=t₀. The shifted process N_{t₀+t}−N_{t₀} has independent stationary increments with Poisson means 10 times interval lengths. This joint law is the same for every t₀; mixing over independent T preserves it. Thus D holds and C is false. Randomizing the starting time does not change the increment intensity.",
+      "theory": "For a Poisson process of rate λ, the count at deterministic time t is Poisson(λt). At an independent random time T, it is a mixture whose conditional law is still Poisson but whose marginal law generally is not. Exponential mixing produces a geometric distribution on {0,1,…}; with exponential rate μ, the mass is μλᵏ/(λ+μ)^{k+1}. Total expectation gives λE T and total variance gives λE T+λ²Var T. Independence of T from the process permits conditioning on T as a deterministic shift. The post-shift finite-dimensional increment laws then do not depend on that shift, so their mixture remains the original Poisson-process law. This must not be confused with replacing λ by a function of the random time or with a conditional probability written as an unconditional one.",
+      "similar_questions": [
+        {
+          "prompt": "For rate λ=2 and independent T∼Exp(rate 3), find P(N_T=k).",
+          "solution": "Integrating the conditional Poisson mass gives 3·2ᵏ/5^{k+1}=(3/5)(2/5)ᵏ, a geometric law on nonnegative integers. Its mean is λE T=2/3."
+        },
+        {
+          "prompt": "In the question’s setup find Var(N_T).",
+          "solution": "The conditional variance is 10T and conditional mean 10T. Since E T=6 and Var T=36, total variance is 10·6+100·36=3660, much larger than the mean 60."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 117, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2021-june-q117.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q118",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 118,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Operations Research",
+      "difficulty": "Moderate",
+      "prompt": "Minimize 14x+9y+6z subject to 2x+y+z≥8, 3x+2y+z≥10, x,y,z≥0. What is the optimal objective value?",
+      "options": {
+        "A": "52",
+        "B": "48",
+        "C": "50",
+        "D": "56"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Combine the first constraint multiplied by four with the second multiplied by two.",
+        "Their sum yields 14x+8y+6z≥52; use nonnegativity of y and find an attaining point."
+      ],
+      "solution": "For every feasible point, 4(2x+y+z)+2(3x+2y+z)≥4·8+2·10=52. The left side is 14x+8y+6z, so the objective 14x+9y+6z is at least 52+y≥52. The point (x,y,z)=(2,0,4) is feasible: the two constraints are equalities 8 and 10, and its objective is 28+24=52. Therefore the lower bound is attained and the optimum is 52, A. Values 48 and 50 are below the proved bound; 56 is achievable, for example at (4,0,0), but is not minimal. The dual multipliers (4,2) certify global optimality.",
+      "theory": "Linear-programming duality provides a systematic way to prove optimality. For a minimization problem with constraints Ax≥b and x≥0, any nonnegative multiplier vector λ satisfying Aᵀλ≤c gives the bound cᵀx≥λᵀb. This is weak duality and requires no enumeration of vertices. If a feasible primal point reaches the dual bound, both are optimal. Here the multipliers four and two fit the x,z objective coefficients exactly and leave a nonnegative y slack. Complementary slackness predicts y=0 at equality and both primal constraints active, making the attaining point easy to solve. A feasible point alone supplies only an upper bound in a minimization problem; the matched lower bound is what proves it optimal.",
+      "similar_questions": [
+        {
+          "prompt": "Minimize 3x+2y with x+y≥4, x,y≥0. Find the optimum by a multiplier.",
+          "solution": "Multiply the constraint by 2 to get 2x+2y≥8. The objective is this plus x, so it is at least 8. The feasible point (0,4) attains 8, proving the optimum."
+        },
+        {
+          "prompt": "Minimize 5x+3y subject to x+y≥2, 2x+y≥3, x,y≥0.",
+          "solution": "Multipliers one and two give 5x+3y≥2+6=8. Taking both constraints at equality yields x=1,y=1, whose objective is 8. Feasibility and the matching lower bound prove global optimality."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 118, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2021-june-q118.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q119",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 119,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let X₁,X₂,… be iid N(0,σ²). Which displayed estimators are unbiased and consistent for σ²? The source’s square-root scopes and index π are preserved.",
+      "options": {
+        "A": "√(1/(2n)) Σ_{i=1}ⁿ|Xᵢ|",
+        "B": "√((1/n)Σ_{i=1}ⁿ|Xᵢ²|)",
+        "C": "√((1/(n−1))Σ_{i=1}ⁿ(Xᵢ−X̄)²)",
+        "D": "√((X₁²+X_π²)/(2π))"
+      },
+      "correct_options": [],
+      "hints": [
+        "A variance estimator must target σ², whereas square roots of second-moment estimators target σ.",
+        "Inspect the exact radical scope in A and the noninteger subscript π in D; do not silently replace either."
+      ],
+      "solution": "No displayed valid statistic is both unbiased and consistent for σ², and D is not defined because the sequence has integer indices but the source prints X_π. A has its radical ending before the sum: by the strong law, A/√n→E|X|/√2=σ/√π, so A diverges for σ>0. B is √(n^{−1}ΣXᵢ²), tending to σ, not σ²; it is also downward biased for σ by strict concavity. C is the sample standard deviation, likewise tending to σ and not generally unbiased even for that target. Even if D’s subscript were changed to a legitimate fixed integer, a two-observation statistic would not be consistent as sample size grows. Hence the printed question has no valid answer and is flagged. Replacing B by n^{−1}ΣXᵢ² and C by the unsquared-root sample variance would make both unbiased and consistent for σ², but those are explicit hypothetical corrections.",
+      "theory": "An estimator is unbiased for a parameter if its expectation equals that parameter at every allowed value, and consistent if it converges in probability to it as sample size increases. For a zero-mean normal sample, n^{−1}ΣXᵢ² is unbiased for σ² and strongly consistent by the law of large numbers. The sample variance with denominator n−1 is also unbiased and consistent. Taking square roots preserves convergence by the continuous-mapping theorem but changes the target to σ; concavity ordinarily introduces downward bias. A statistic retaining only finitely many observations need not become more accurate with growing n. Radical boundaries and subscripts are part of a formula’s meaning. Undefined noninteger sequence indices and a missing valid option require recording a source issue rather than selecting a nearby familiar estimator.",
+      "similar_questions": [
+        {
+          "prompt": "For iid N(0,σ²), compute the expectation and variance of Qₙ=n^{−1}ΣXᵢ².",
+          "solution": "E Xᵢ²=σ² and Var Xᵢ²=2σ⁴. Independence gives E Qₙ=σ² and Var Qₙ=2σ⁴/n. Chebyshev proves consistency, and the strong law gives almost-sure convergence."
+        },
+        {
+          "prompt": "Is √Qₙ unbiased for σ? Is it consistent?",
+          "solution": "Since Qₙ is nonconstant and square root is strictly concave, Jensen gives E√Qₙ<√E Qₙ=σ for σ>0. It is biased downward, but Qₙ→σ² and continuity imply √Qₙ→σ, so it is consistent for σ."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "A’s radical stops before its summation; B,C are square-root statistics targeting σ rather than σ²; D visibly uses undefined X_π. No valid unbiased-consistent variance estimator is offered.",
+      "answer_source": "Independent mathematical derivation; question 119, PDF page 23. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2021-june-q119.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q120",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 120,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let X≥0 have E X=1. Which quantities are necessarily at least one?",
+      "options": {
+        "A": "E X⁴",
+        "B": "(E cos X)²+(E sin X)²",
+        "C": "E√X",
+        "D": "E(1/X)"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Apply Jensen to the convex functions x⁴ and 1/x and to the concave square root.",
+        "The trigonometric expression is |E e^{iX}|², bounded above by one. For zero values of X use the extended reciprocal 1/0=+∞."
+      ],
+      "solution": "By Jensen, E X⁴≥(E X)⁴=1, allowing an infinite fourth moment, so A holds. If X>0 almost surely, reciprocal convexity gives E(1/X)≥1/(E X)=1. If P(X=0)>0, the nonnegative extended reciprocal has infinite expectation, so D still holds with that usual convention. Conversely E√X≤√E X=1, and |E e^{iX}|²≤(E|e^{iX}|)²=1; neither is necessarily at least one. Take X=0 or 2 with equal probabilities: E√X=√2/2<1, and the trigonometric expression is |(1+e^{2i})/2|²=cos²1<1. Thus B,C fail and A,D hold.",
+      "theory": "Jensen’s inequality compares the expectation of a convex function with its value at the expectation; for concave functions the direction reverses. The maps x↦x⁴ on nonnegative reals and x↦1/x on positive reals are convex, while square root is concave. Nonnegative expectations may take the value +∞, in which case lower bounds remain meaningful. Extending the reciprocal by +∞ at zero addresses nonnegative variables that are not strictly positive. The modulus inequality |E Z|≤E|Z| bounds a characteristic function’s magnitude by one; writing cos and sin as real and imaginary parts gives B’s expression. Equality in strictly convex Jensen generally requires a constant variable, while a nonconstant two-point distribution provides strict counterexamples to reversed inequalities.",
+      "similar_questions": [
+        {
+          "prompt": "If X takes 1/2 and 3/2 equally, compute E X and E(1/X).",
+          "solution": "E X=(1/2+3/2)/2=1. The reciprocal expectation is (2+2/3)/2=4/3≥1, strictly because X is not constant."
+        },
+        {
+          "prompt": "For X=0 or 2 with equal probabilities, compute E X⁴ and E√X.",
+          "solution": "The mean is one. E X⁴=(0+16)/2=8≥1, whereas E√X=(0+√2)/2=1/√2<1. Convex and concave functions yield opposite Jensen directions."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Reciprocal expectation is interpreted in the nonnegative extended sense, with 1/0=+∞ when X can vanish.",
+      "answer_source": "Independent mathematical derivation; question 120, PDF page 24. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2021-june-q120.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

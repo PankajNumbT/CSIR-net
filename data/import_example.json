@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2020-june-26nov-q003",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Rice A and B cost ₹30 and ₹90 per kg; pulses C and D cost ₹100 and ₹120 per kg. Buy at least 1 kg each of A and B and 0.5 kg each of C and D. Find the minimum and maximum costs of 5 kg.",
+      "options": {
+        "A": "₹150 and ₹600",
+        "B": "₹260 and ₹530",
+        "C": "₹290 and ₹470",
+        "D": "₹370 and ₹460"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "First purchase the compulsory quantities.",
+        "Allocate every remaining kilogram to the cheapest item for the minimum and the costliest item for the maximum."
+      ],
+      "solution": "The compulsory 3 kg costs $30+90+0.5(100)+0.5(120)=230$. There are 2 kg left. The cheapest choice adds $2(30)=60$, giving ₹290. The costliest adds $2(120)=240$, giving ₹470. Both allocations satisfy every lower bound. Hence **C**.",
+      "theory": "For a linear cost $\\sum c_i x_i$ with $x_i\\ge l_i$ and $\\sum x_i=W$, write $x_i=l_i+z_i$. Then $z_i\\ge0$ and $\\sum z_i=R=W-\\sum l_i$. The variable cost is a weighted average of the coefficients times $R$, so it lies between $R\\min c_i$ and $R\\max c_i$. These bounds are attained by putting all excess mass in an extremal item. Check feasibility $W\\ge\\sum l_i$ first. Upper limits on quantities would require allocating the remainder in price order rather than all to one item.",
+      "similar_questions": [
+        {
+          "prompt": "Two items cost ₹20 and ₹50/kg. At least 1 kg of each is required; buy 4 kg. Find the cost range.",
+          "solution": "The compulsory cost is ₹70 and 2 kg remain. The range is ₹110–₹170."
+        },
+        {
+          "prompt": "When is the minimum unique?",
+          "solution": "If the cheapest coefficient is unique and positive remainder is available, all remainder must go to that item. Equal cheapest prices give multiple minima."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Transcribed from the attached paper; independently worked solution.",
+      "answer_source": "Independent mathematical derivation in this learning pack; original question 3, PDF page 1. Not checked against an NTA final key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-26nov-q003.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,1693 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2024-june-q031",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 31,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let $A=\\begin{pmatrix}0&1&0&0\\\\1&0&0&0\\\\0&0&1&1\\\\0&0&1&1\\end{pmatrix}$, and consider the symmetric bilinear form on $\\mathbb R^4$ given by $\\langle v,w\\rangle=v^tAw$, for $v,w\\in\\mathbb R^4$. Which statement is true?",
+      "options": {
+        "A": "A is invertible.",
+        "B": "There exist nonzero vectors v,w such that ⟨v,w⟩=0.",
+        "C": "⟨u,v⟩≠⟨u,w⟩ for all nonzero u,v,w with v≠w.",
+        "D": "Every eigenvalue of A² is positive."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Inspect the two 2×2 diagonal blocks of A.",
+        "Find a nonzero vector in the nullspace; it is orthogonal to every vector for this form."
+      ],
+      "solution": "The lower block has equal rows, so k=(0,0,1,−1)ᵗ satisfies Ak=0. Hence A is singular (A false), and for any nonzero v, ⟨v,k⟩=0 (B true). Taking u=e₁, v=e₃, w=e₄ gives two distinct nonzero vectors with ⟨u,v⟩=⟨u,w⟩=0, disproving C. The upper block has eigenvalues 1,−1 and the lower block has 2,0. Thus A² has eigenvalues 1,1,4,0, disproving D.",
+      "theory": "A real symmetric matrix defines a symmetric bilinear form B(v,w)=vᵗAw. Symmetry does not imply positivity or invertibility. The radical consists of vectors k for which B(v,k)=0 for every v, and equals ker A. A form is nondegenerate exactly when its matrix is invertible. The spectral theorem diagonalizes a symmetric matrix in an orthonormal basis; the eigenvalues of A² are the squares of those of A. Consequently A² is positive semidefinite, and is positive definite precisely when A has no zero eigenvalue. Even for a nondegenerate form in dimension at least two, a linear functional B(u,·) generally has a nontrivial kernel, so distinct vectors can have equal pairing with a fixed u. Do not confuse this pairing with an inner product unless positive definiteness is established.",
+      "similar_questions": [
+        {
+          "prompt": "For A=diag(1,−1,0), determine its radical and the spectrum of A².",
+          "solution": "Av=(v₁,−v₂,0), so ker A=span(e₃). Squaring gives diag(1,1,0), with eigenvalues 1,1,0. The form is degenerate and not positive definite."
+        },
+        {
+          "prompt": "For B(v,w)=v·w on R³, find distinct nonzero v,w with B(e₁,v)=B(e₁,w).",
+          "solution": "Take v=e₂ and w=e₃. Both pairings are zero, even though the Euclidean inner product is nondegenerate. A fixed linear functional need not distinguish all vectors."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704031, answer 2: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2024-june-q031.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q032",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 32,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For a quadratic form $f(x,y,z)\\in\\mathbb R[x,y,z]$, a point $(a,b,c)\\in\\mathbb R^3$ is a zero when $f(a,b,c)=0$. Which form has a zero other than $(0,0,0)$?",
+      "options": {
+        "A": "x²+2y²+3z²",
+        "B": "x²+2y²+3z²−2xy",
+        "C": "x²+2y²+3z²−2xy−2yz",
+        "D": "x²+2y²−3z²"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Complete squares in the forms with cross terms.",
+        "A sum of positive squares vanishes only at zero; a form with both signs can have nonzero zeros."
+      ],
+      "solution": "A is a positive sum of squares. B=(x−y)²+y²+3z². C=(x−y)²+(y−z)²+2z². Each vanishes only when x=y=z=0. D vanishes at (√3,0,1), so D is the unique correct choice.",
+      "theory": "A homogeneous real quadratic form is written q(x)=xᵗMx with M symmetric, taking half the coefficient of each cross term in the corresponding off-diagonal entry. It is positive definite when q(x)>0 for every nonzero vector. Such a form has no nontrivial zero. Completing squares gives a direct way to prove definiteness and can avoid a lengthy eigenvalue calculation. Sylvester’s criterion provides another test: every leading principal minor must be positive for positive definiteness. An indefinite form has directions of positive and negative value; continuity along a connecting path then produces an isotropic, nonzero vector. A semidefinite singular form also has nonzero zeros, namely its nullspace. Therefore the existence of a nonzero zero alone does not distinguish indefinite forms from singular semidefinite forms.",
+      "similar_questions": [
+        {
+          "prompt": "Does x²+2y²−2xy have a nonzero real zero?",
+          "solution": "It equals (x−y)²+y². Both terms must vanish, giving y=0 and x=0. Thus no."
+        },
+        {
+          "prompt": "Find a nonzero zero of 2x²−8y²+z².",
+          "solution": "Choose z=0 and x=2y. With y=1, the vector (2,1,0) gives 2·4−8=0. The form is indefinite because its diagonal coefficients have both signs."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704032, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2024-june-q032.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q033",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 33,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be an entire function. Which statement is FALSE?",
+      "options": {
+        "A": "If Re(f) and Im(f) are bounded, then f is constant.",
+        "B": "If e^(|Re(f)|+|Im(f)|) is bounded, then f is constant.",
+        "C": "If Re(f)+Im(f) and Re(f)Im(f) are bounded, then f is constant.",
+        "D": "If sin(Re(f)+Im(f)) is bounded, then f is constant."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use Liouville’s theorem after obtaining a bound on |f|.",
+        "The sine of every real number lies in [−1,1], so the final condition gives no restriction."
+      ],
+      "solution": "Write u=Re f and v=Im f. A bounds |f|=√(u²+v²), hence Liouville makes f constant. B bounds |u|+|v| by taking a logarithm, again bounding f. For C, u²+v²=(u+v)²−2uv≤M²+2N when |u+v|≤M and |uv|≤N. Thus C also forces f constant. In D the argument u+v is real, so |sin(u+v)|≤1 automatically. The entire nonconstant function f(z)=z is a counterexample. Therefore D is false.",
+      "theory": "Liouville’s theorem states that every bounded entire complex-valued function is constant. “Entire” means holomorphic on all of the complex plane; boundedness on a smaller domain or on just the real axis does not suffice. One may first translate bounds on real and imaginary parts into a modulus bound. The identities |f|²=u²+v² and u²+v²=(u+v)²−2uv are useful for this. Exponential bounds with a real nonnegative exponent can be converted to bounds on that exponent using monotonicity of the real logarithm. Conversely, composition with a bounded real function can destroy information: sin(u+v) is always bounded irrespective of the size of u+v. This does not assert that sin f is bounded, since the complex sine can grow along imaginary directions.",
+      "similar_questions": [
+        {
+          "prompt": "An entire f satisfies |Re f|+|Im f|≤100. Show f is constant.",
+          "solution": "Since |f|≤|Re f|+|Im f|≤100 on C, Liouville’s theorem applies and gives a constant function."
+        },
+        {
+          "prompt": "Does bounded cos(Re f) imply that an entire f is constant?",
+          "solution": "No. Re f is real, and |cos(Re f)|≤1 for every entire f. Taking f(z)=z gives a nonconstant counterexample."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704033, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2024-june-q033.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q034",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 34,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consider the contour $\\gamma(\\theta)=e^{2i\\theta}$ for $0\\leq\\theta\\leq\\pi/2$, $\\gamma(\\theta)=1+2e^{2i\\theta}$ for $\\pi/2\\leq\\theta\\leq3\\pi/2$, and $\\gamma(\\theta)=e^{2i\\theta}$ for $3\\pi/2\\leq\\theta\\leq2\\pi$. Find $\\int_\\gamma dz/[z(z-2)]$.",
+      "options": {
+        "A": "0",
+        "B": "πi",
+        "C": "−πi",
+        "D": "2πi"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Separate the middle closed circle from the two remaining semicircles.",
+        "The unit-circle pieces enclose 0 alone; the circle centered at 1 of radius 2 encloses both poles."
+      ],
+      "solution": "At the junctions all formulas give −1, so the contour is continuous. The first and last pieces together make one positively oriented unit circle. The middle piece makes one positively oriented circle centered at 1 with radius 2. The residues of 1/[z(z−2)] are −1/2 at 0 and 1/2 at 2. The middle circle contributes 2πi(−1/2+1/2)=0; the unit-circle pieces contribute 2πi(−1/2)=−πi. Equivalently the total indices are Indγ(0)=2 and Indγ(2)=1. Hence C.",
+      "theory": "The residue theorem for a closed piecewise smooth contour counts each pole with the contour’s winding number: ∮γ f(z)dz=2πi Σ Indγ(a)Res(f,a), provided no pole lies on the curve and f is holomorphic elsewhere in the relevant region. A contour need not be simple; loops may be separated and their integrals added. Parameter speed matters for multiplicity: e^(2iθ) advances its argument by twice the change in θ. Thus a θ interval of length π traces a full circle, while length π/2 traces a semicircle. For a simple pole a, the residue is lim(z−a)f(z). Check the endpoints of piecewise definitions before using a closed-contour argument, and check pole locations relative to each loop separately rather than inferring them from a rough drawing.",
+      "similar_questions": [
+        {
+          "prompt": "Evaluate ∮|z|=3 dz/[z(z−2)] counterclockwise.",
+          "solution": "Both poles lie inside. Their residues are −1/2 and 1/2, summing to zero. The integral is therefore zero."
+        },
+        {
+          "prompt": "A contour traverses |z|=1 twice counterclockwise. Evaluate ∮ dz/[z(z−3)].",
+          "solution": "Only 0 is inside, with residue −1/3 and winding number 2. The result is 2πi·2·(−1/3)=−4πi/3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704034, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2024-june-q034.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q035",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 35,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $a<0<b$ be real. For $r>0$, let $\\gamma_r(t)=re^{it}$, $0\\leq t\\leq2\\pi$, and $I_r=(2\\pi i)^{-1}\\int_{\\gamma_r}(z^2+1)/[(z-a)(z-b)]\\,dz$. Which statement is necessarily true?",
+      "options": {
+        "A": "I_r≠0 if r>max{|a|,b}.",
+        "B": "I_r≠0 if r<max{|a|,b}.",
+        "C": "I_r=0 if r>max{|a|,b} and |a|=b.",
+        "D": "I_r=0 if |a|<r<b."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Compute the residues at a and b.",
+        "When both poles are inside, add the residues and simplify using a²−b²."
+      ],
+      "solution": "The residues are Ra=(a²+1)/(a−b) and Rb=(b²+1)/(b−a). With both poles inside, I_r=Ra+Rb=(a²−b²)/(a−b)=a+b. Thus when |a|=b, a+b=0 and C holds; this also disproves A. For B take r<min{|a|,b}; neither pole is inside and I_r=0. Under |a|<r<b, only a is inside, so I_r=Ra≠0, disproving D. At r=|a| or r=b the ordinary contour integral encounters a pole and is undefined; the valid assertion C avoids these radii.",
+      "theory": "For a positively oriented circle, the normalized contour integral (2πi)⁻¹∮f equals the sum of residues of poles strictly inside. Poles on the contour are excluded from the ordinary residue theorem and generally make the integral undefined; a principal value would require a separate definition. For distinct simple roots a and b in a denominator, the residue at a is obtained by canceling z−a and evaluating the remaining factor. The sum can simplify dramatically, even when neither residue vanishes. Here each numerator a²+1 or b²+1 is strictly positive for real poles, so a single enclosed pole gives a nonzero result. When no pole is enclosed, Cauchy’s theorem gives zero. Compare r to both pole moduli rather than only to their maximum.",
+      "similar_questions": [
+        {
+          "prompt": "For a=−2,b=2, evaluate I_r at r=1,3, using numerator z²+1.",
+          "solution": "At r=1 no pole is enclosed, hence I=0. At r=3 both poles are enclosed, and their residue sum a+b is also 0."
+        },
+        {
+          "prompt": "For a=−1,b=3, find I_2.",
+          "solution": "Only a=−1 lies inside |z|=2. Its residue is ((−1)²+1)/(−1−3)=2/(−4)=−1/2. Thus I₂=−1/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704035, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 21,
+      "image": "assets/questions/2024-june-q035.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q036",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 36,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For a complex number $a$ with $0<|a|<1$, which statement is true?",
+      "options": {
+        "A": "If |z|<1, then |1−āz|<|z−a|.",
+        "B": "If |z−a|=|1−āz|, then |z|=1.",
+        "C": "If |z|=1, then |z−a|<|1−āz|.",
+        "D": "If |1−āz|<|z−a|, then |z|<1."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Expand the squares of the two moduli.",
+        "Their difference factors as (1−|a|²)(1−|z|²)."
+      ],
+      "solution": "Expansion gives |1−āz|²−|z−a|²=(1−|a|²)(1−|z|²). Since 1−|a|²>0, the first modulus is larger inside the unit disk, equal on its boundary, and smaller outside. Therefore A and C reverse or contradict the comparison. Equality forces |z|=1, giving B. The hypothesis in D forces |z|>1, not <1, so D is false.",
+      "theory": "The disk automorphism φ_a(z)=(z−a)/(1−āz), with |a|<1, maps the open unit disk onto itself and the unit circle onto itself. Its modulus comparison follows directly from |1−āz|²−|z−a|²=(1−|a|²)(1−|z|²). The denominator cannot vanish inside or on the unit disk because |āz|<1 inside and |a|<1 on the boundary. Outside the disk the raw difference-of-squares identity remains valid, though φ_a has a pole at z=1/ā when a≠0. Complex conjugation in the denominator is essential: replacing ā by a generally destroys the identity. To compare nonnegative moduli one may compare their squares; the strict or equality sign is preserved. Always use the sign of both factored terms.",
+      "similar_questions": [
+        {
+          "prompt": "For a=1/2 and z=i/2, determine whether |(z−a)/(1−āz)|<1.",
+          "solution": "|z−a|²=1/2, while |1−āz|²=17/16. The quotient squared is 8/17<1, so the modulus is less than 1."
+        },
+        {
+          "prompt": "If |a|=1/3 and |z−a|=|1−āz|, find |z|.",
+          "solution": "The squared-modulus difference is (8/9)(1−|z|²)=0. Since 8/9 is positive, |z|²=1 and |z|=1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704036, answer 2: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2024-june-q036.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q037",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 37,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "How many arrangements of the digits of 1234567 have exactly three digits in their original positions? For example 5214763 fixes exactly 2,4,6, and 1243576 fixes exactly 1,2,5.",
+      "options": {
+        "A": "525",
+        "B": "35",
+        "C": "840",
+        "D": "315"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Choose which three positions remain fixed.",
+        "The other four symbols must form a derangement, not an arbitrary permutation."
+      ],
+      "solution": "Choose the three fixed positions in C(7,3)=35 ways. The remaining four positions must have no fixed point. Inclusion–exclusion gives D₄=4!−C(4,1)3!+C(4,2)2!−C(4,3)1!+C(4,4)0!=24−24+12−4+1=9. Thus the required number is 35·9=315, option D. Using 4! would incorrectly include permutations with additional fixed digits.",
+      "theory": "A permutation has a fixed point at index i when its value at i is i. A derangement has no fixed points. To count permutations of n objects with exactly k fixed points, first choose the k indices, then derange all remaining n−k objects. The answer is C(n,k)D_(n−k), where D_m=m!Σ(j=0 to m)(−1)^j/j!. This follows from inclusion–exclusion applied to events that each remaining index is fixed. The convention D₀=1 includes the identity permutation when k=n, whereas D₁=0 shows that exactly n−1 fixed points are impossible. Once fixed positions have been chosen, their symbols are removed as well; the remaining symbols occupy the remaining positions. This is why multiplying by an arbitrary factorial overcounts the phrase “exactly.”",
+      "similar_questions": [
+        {
+          "prompt": "How many permutations of five objects have exactly two fixed points?",
+          "solution": "Choose the fixed indices in C(5,2)=10 ways. The other three must be deranged; D₃=6−6+3−1=2. Thus the answer is 20."
+        },
+        {
+          "prompt": "How many permutations of six objects have exactly four fixed points?",
+          "solution": "Choose the four indices in C(6,4)=15 ways. The two remaining objects must be interchanged, the unique derangement of two objects. The answer is 15."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704037, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 22,
+      "image": "assets/questions/2024-june-q037.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q038",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 38,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "The number of group homomorphisms from Z/150Z to Z/90Z is",
+      "options": {
+        "A": "30",
+        "B": "60",
+        "C": "45",
+        "D": "10"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "A homomorphism from a cyclic group is determined by the image of 1.",
+        "Count residues t modulo 90 satisfying 150t≡0 (mod 90)."
+      ],
+      "solution": "Let φ(1)=t modulo 90. The relation 150·1=0 in the domain requires 150t≡0 mod 90, equivalent to 90|150t. Dividing by gcd(150,90)=30 gives 3|5t, hence 3|t. There are 30 multiples of 3 among 0,…,89. Each determines the well-defined map φ([k])=[kt], so exactly 30 homomorphisms exist, option A.",
+      "theory": "A homomorphism from an additive cyclic group Z/mZ into an additive group is determined entirely by the image t of its generator. The defining relation m·1=0 imposes mt=0; this condition is also sufficient for the formula φ([k])=kt to be independent of the representative k. When the codomain is Z/nZ, the number of such t is gcd(m,n). Indeed n|mt becomes (n/d)|t after writing d=gcd(m,n) and canceling the coprime factor m/d. The permitted images form a subgroup of order d. Counting homomorphisms does not mean counting injective maps or surjective maps: the zero homomorphism is included. An injective map from Z/mZ would require an element of order m in the target, which is possible only when m divides n.",
+      "similar_questions": [
+        {
+          "prompt": "Count homomorphisms Z/12Z→Z/18Z.",
+          "solution": "The image t satisfies 18|12t, equivalent to 3|2t and hence 3|t. The six residues 0,3,6,9,12,15 work, so the count is gcd(12,18)=6."
+        },
+        {
+          "prompt": "Count surjective homomorphisms Z/12Z→Z/6Z.",
+          "solution": "All residues t satisfy 12t=0 mod 6, but surjectivity requires t to generate Z/6Z. Thus gcd(t,6)=1, giving t=1 or 5. There are two surjections."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704038, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 23,
+      "image": "assets/questions/2024-june-q038.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q039",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 39,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Consider $R=\\{\\sum_{n\\in\\mathbb Z}a_nX^n:a_n\\in\\mathbb Z,\\ a_n\\neq0\\text{ for only finitely many }n\\}$ with coefficientwise addition and convolution multiplication: $(\\sum a_nX^n)(\\sum b_mX^m)=\\sum_{k\\in\\mathbb Z}(\\sum_{n+m=k}a_nb_m)X^k$. Which statement is true?",
+      "options": {
+        "A": "R is not commutative.",
+        "B": "The ideal (X−1) is maximal in R.",
+        "C": "The ideal (X−1,2) is prime in R.",
+        "D": "The ideal (X,5) is maximal in R."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "This is a Laurent polynomial ring, so X has an inverse.",
+        "Evaluate X at 1 and then reduce coefficients modulo 2."
+      ],
+      "solution": "R=Z[X,X⁻¹] is commutative, so A is false. Evaluation at X=1 is onto Z with kernel (X−1), giving R/(X−1)≅Z. Since Z is not a field, B is false. Evaluation at 1 modulo 2 has kernel (X−1,2), and R/(X−1,2)≅F₂, a field and hence an integral domain. Thus this ideal is maximal and prime, proving C. Finally X is a unit because XX⁻¹=1, so (X,5)=R, which is not a proper maximal ideal; D is false.",
+      "theory": "The Laurent polynomial ring A[X,X⁻¹] allows integer exponents but only finite support, ensuring that all additions and convolution products are algebraic finite sums. Unlike in A[X], the element X is a unit. Every ideal containing a unit is the whole ring and is neither prime nor maximal under the standard requirement that these ideals be proper. For a commutative ring with identity, an ideal I is prime precisely when R/I is an integral domain, and maximal precisely when R/I is a field. Evaluation X↦1 is valid for Laurent polynomials because 1 is invertible, and its kernel is generated by X−1. Combining evaluation with coefficient reduction modulo a prime p yields the field F_p. Distinguish the quotient Z from F_p: the former is a domain but not a field.",
+      "similar_questions": [
+        {
+          "prompt": "Is (X−1) prime in Z[X,X⁻¹]?",
+          "solution": "The quotient by evaluation X=1 is Z, an integral domain. Therefore (X−1) is prime, although it is not maximal because Z is not a field."
+        },
+        {
+          "prompt": "Is (X,7) proper in Z[X,X⁻¹]?",
+          "solution": "No. Since X⁻¹ is in the ring, X⁻¹·X=1 belongs to the ideal. An ideal containing 1 is the entire ring."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704039, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2024-june-q039.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q040",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 40,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let S be a dense subset of R and f:R→R a given function. Define g:S→R by g(x)=f(x). Which statement is necessarily true?",
+      "options": {
+        "A": "If f is continuous on S, then f is continuous on R\\S.",
+        "B": "If g is continuous, then f is continuous on S.",
+        "C": "If g is identically 0 and f is continuous on R\\S, then f is identically 0.",
+        "D": "If g is identically 0 and f is continuous on S, then f is identically 0."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Distinguish continuity of the restriction g from continuity of f at points of its full domain.",
+        "At a point outside S where f is continuous, approach through the dense zero set S."
+      ],
+      "solution": "Here “f is continuous on S” means f is continuous at every point of S as a function on R; g instead uses the subspace domain S. For C, f is already zero on S. For x∉S choose s_n∈S with s_n→x; continuity of f at x gives f(x)=lim f(s_n)=0. For A and D take S=R\\{0}, f(0)=1 and f(x)=0 otherwise: f is continuous at every point of S but not at 0, and is not identically zero. For B take S=Q and f=0 on Q, 1 on its complement. Then g is continuous but f is discontinuous at every rational. Thus C is the intended ambient-continuity statement.",
+      "theory": "A subset S of a metric space is dense when every nonempty open ball meets S. Equivalently every point is a limit of a sequence of points of S. If f is continuous at x and vanishes on a dense set, approaching x along that set forces f(x)=0. The distinction between continuity at x for f:R→R and continuity of its restriction f|S is crucial: the former tests all sequences in R, while the latter tests sequences confined to S. Restricting a continuous function preserves continuity, but a continuous restriction need not extend to continuity of the original function. In this question the explicit introduction of g identifies this distinction. If “continuous on S” were instead defined solely as continuity of f|S, the option wording would change meaning; the solution states the ambient convention used.",
+      "similar_questions": [
+        {
+          "prompt": "A continuous h:R→R is zero at every rational. Determine h.",
+          "solution": "For any x select rationals r_n→x. Continuity gives h(x)=lim h(r_n)=0, so h is identically zero."
+        },
+        {
+          "prompt": "For h=1 on irrationals and 0 on rationals, compare h and h|Q.",
+          "solution": "The restriction h|Q is constant and continuous in the subspace topology. At any real x there are rational and irrational sequences converging to x, with h-values 0 and 1 respectively, so h is nowhere continuous."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704040, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 24,
+      "image": "assets/questions/2024-june-q040.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q041",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 41,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Consider $y\\prime(x)=\\sqrt{|y(x)+\\epsilon|}$, $x\\in\\mathbb R$, $y(0)=y_0$. S1: There exists $\\epsilon>0$ such that for every $y_0\\in\\mathbb R$ the IVP has more than one solution. S2: There exists $y_0\\in\\mathbb R$ such that for every $\\epsilon>0$ the IVP has more than one solution. Which is correct?",
+      "options": {
+        "A": "Both S1 and S2 are true.",
+        "B": "S1 is true but S2 is false.",
+        "C": "S1 is false but S2 is true.",
+        "D": "Both S1 and S2 are false."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Shift to v=y+ε. The only nonsmooth value of the right-hand side is v=0.",
+        "For solutions defined on all of R, a trajectory may reach 0 away from the initial time and wait there for arbitrary durations."
+      ],
+      "solution": "The official final key gives option 4 (D), using local IVP uniqueness. Set v=y+ε. If v₀=y₀+ε≠0, F(v)=√|v| is locally Lipschitz near v₀, and Picard–Lindelöf gives a unique local solution germ. If v₀=0, stationary and delayed-departure solutions give nonuniqueness. For S1, any ε>0 has initial data y₀=0 with v₀=ε>0 and a unique germ, so S1 is false. For S2, a fixed y₀ can equal −ε for at most one positive ε; choose another ε to obtain a unique germ. Thus S2 is false and D is the exam answer. The printed x∈R creates an important global/local distinction: globally, for any c≤d, v(x)=−(x−c)²/4 for x<c, 0 for c≤x≤d, and (x−d)²/4 for x>d is C¹ and solves the ODE. If v₀>0, d=−2√v₀ is fixed but c≤d arbitrary; if v₀<0, c=2√(−v₀) is fixed but d≥c arbitrary; if v₀=0 choose c≤0≤d. Consequently every datum has multiple global extensions, which would make A correct if distinct globally defined solutions were counted. The key identifies the local-germ convention; local uniqueness is not uniqueness of global extensions.",
+      "theory": "For an autonomous ODE y′=F(y), continuity of F guarantees local existence, while local Lipschitz continuity near the initial value guarantees local uniqueness. The function √|v| fails the Lipschitz condition only at v=0. At that equilibrium one can glue a stationary segment to departing or arriving parabolic branches, with the first derivatives matching at zero. Lack of uniqueness is therefore tied to a point visited by the trajectory. Local uniqueness near the initial time is different from uniqueness of a global solution: a locally unique branch can hit a non-Lipschitz equilibrium later, or in reverse time, allowing multiple global extensions. Quantifiers over parameters must be evaluated after deciding which solution interval is specified. Here x∈R supports global extensions; the local-germ alternative is recorded explicitly to prevent confusing the two claims.",
+      "similar_questions": [
+        {
+          "prompt": "Find two solutions on x≥0 of v′=√v, v(0)=0, constrained to v≥0.",
+          "solution": "One is v≡0. Another is v(x)=0 for 0≤x≤1 and (x−1)²/4 for x>1. Both have derivative 0 at x=1 and satisfy v′=√v everywhere."
+        },
+        {
+          "prompt": "For v′=√|v|, v(0)=1, explain local uniqueness and global nonuniqueness.",
+          "solution": "Near v=1 the derivative of F is 1/(2√v), bounded, so the germ is uniquely v=(x+2)²/4 near 0. Globally set d=−2 and choose c=−2 or c=−3 in the glued construction. These global solutions agree near 0 but differ on the negative-time portion."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Exact printed source preserved. NTA final key 704041=4 establishes the local-IVP convention. Under global-solution interpretation of printed x∈R, both statements instead hold; the discrepancy of conventions is explained.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704041, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2024-june-q041.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q042",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 42,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\varphi$ solve $(xy\\prime)\\prime-2y\\prime+y/x=1$, $1<x<e^4$, with $y(1)=0$ and $y(e^4)=4e^4$. Find $\\varphi(e)$.",
+      "options": {
+        "A": "e/2",
+        "B": "−e/3",
+        "C": "e/3",
+        "D": "e"
+      },
+      "correct_options": [],
+      "hints": [
+        "Expand (xy′)′ and substitute y=xv.",
+        "The resulting equation is (xv′)′=1/x; integrate twice and impose the endpoints."
+      ],
+      "solution": "Expanding gives xy″−y′+y/x=1. With y=xv, y′=v+xv′ and y″=2v′+xv″, so the left side is xv′+x²v″. Hence (xv′)′=1/x. Integrating gives xv′=ln x+C and v=(ln x)²/2+C ln x+D. Since y(1)=0, D=0. At e⁴, y/e⁴=8+4C=4, so C=−1. The unique solution is y=x[(ln x)²/2−ln x], and y(e)=−e/2. No printed option equals −e/2. This is a source issue, and no option is selected. The mathematically required answer would be −e/2; the printed options are preserved. The NTA final key lists question ID 704042 as option 1, e/2, which conflicts with the exact printed differential equation and boundary data. Changing that sign would silently repair the source, so this record remains unscored.",
+      "theory": "A Cauchy–Euler differential equation has coefficients matched to derivative order, commonly x²y″+axy′+by=g(x), on an interval excluding x=0. Substitution t=ln x for positive x converts it to constant-coefficient form; alternatively a known homogeneous solution y=x suggests writing y=xv. In this equation the homogeneous operator has a repeated indicial root 1, yielding x and x ln x as its basis. The forcing generates x(ln x)²/2. Boundary values determine two constants; uniqueness holds when no nonzero homogeneous solution satisfies both zero boundary conditions. Here Cx+Dx ln x vanishes at x=1 only if C=0 and then at e⁴ only if D=0. Expanding a product derivative correctly is essential: (xy′)′=y′+xy″. A missing sign in an option must not be silently corrected.",
+      "similar_questions": [
+        {
+          "prompt": "Solve (xy′)′−2y′+y/x=1 with y(1)=0 and y(e²)=0.",
+          "solution": "Write y=x[(ln x)²/2+C ln x+D]. The first boundary gives D=0; the second gives 2+2C=0, so C=−1. Thus y=x[(ln x)²/2−ln x], and y(e)=−e/2."
+        },
+        {
+          "prompt": "Solve the homogeneous equation (xy′)′−2y′+y/x=0 with y(1)=1,y(e)=2e.",
+          "solution": "The general homogeneous solution is x(C+D ln x). The first condition gives C=1 and the second gives 1+D=2, so D=1. Hence y=x(1+ln x)."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The exact printed BVP has the unique value −e/2 at e, but the four printed options are e/2, −e/3, e/3, e. No option is correct; independently checked from the source image. NTA final key lists option 1 (e/2), inconsistent with the independent result for the printed BVP.",
+      "answer_source": "Independent BVP derivation; compared with NTA Final Answer Key, Mathematical Sciences, PDF page 3, question ID 704042 (official option 1): https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. The printed problem gives −e/2; candidate responses were not used.",
+      "page": 26,
+      "image": "assets/questions/2024-june-q042.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q043",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 43,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $u_t+2024u_x=0$, $x\\in\\mathbb R,t>0$, with $u(x,0)=u_0(x)$, where $u_0\\in C^1(\\mathbb R)$. S1: for $A_t=\\{x:u(x,t)<1\\}$, $|A_t|=|A_0|$ for every $t>0$. S2: if $u_0$ is Lebesgue integrable, then $x\\mapsto u(x,t)$ is Lebesgue integrable for every $t>0$. Which statements hold?",
+      "options": {
+        "A": "Both S1 and S2 are true.",
+        "B": "S1 is true but S2 is false.",
+        "C": "S2 is true but S1 is false.",
+        "D": "Both S1 and S2 are false."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Find characteristics of constant speed 2024.",
+        "The solution at time t is a spatial translate of the initial data."
+      ],
+      "solution": "Along x(s)=ξ+2024s, d/ds u(x(s),s)=u_t+2024u_x=0. Therefore u(x,t)=u₀(x−2024t). Consequently A_t=A₀+2024t; Lebesgue measure is translation invariant, including for sets of infinite measure, proving S1. Also ∫R|u(x,t)|dx=∫R|u₀(ξ)|dξ by ξ=x−2024t. Thus integrability is preserved and S2 is true. Choose A.",
+      "theory": "The linear transport equation u_t+cu_x=0 describes a profile moving at constant speed c without changing shape. For C¹ initial data the method of characteristics gives the classical solution u(x,t)=u₀(x−ct). The sign is determined by tracing a characteristic backward from (x,t) to x−ct at time zero. Translation preserves Lebesgue measure, so sublevel and superlevel sets keep their measure even when that measure is infinite. It also preserves every L^p norm for 1≤p≤∞, using the change of variables ξ=x−ct. Lebesgue integrability normally means absolute integrability for a real-valued function, so checking the integral of |u| is the relevant test. A transport equation does not smooth the data or cause diffusion, unlike the heat equation. These invariances rely on constant speed and the whole real line.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u_t−3u_x=0, u(x,0)=e^(−x²).",
+          "solution": "Here c=−3, so u(x,t)=e^(−(x+3t)²). Along x=ξ−3t the value stays e^(−ξ²), verifying the equation and initial condition."
+        },
+        {
+          "prompt": "For u_t+2u_x=0 and u₀(x)=e^(−|x|), compute the L¹ norm at time t.",
+          "solution": "The translated solution is e^(−|x−2t|). Substitution ξ=x−2t gives ∫|u|dx=∫e^(−|ξ|)dξ=2 for every t. This is a weak solution since the initial data has a corner."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704043, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2024-june-q043.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q044",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 44,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "If $u_t=u_{xx}$ on $\\mathbb R\\times(0,\\infty)$, $u(x,0)=\\sin(4x)+x+1$, and $|u(x,t)|<3e^{x^2}$ for every $x\\in\\mathbb R,t>0$, which equality holds?",
+      "options": {
+        "A": "u(π/8,1)+u(−π/8,1)=2",
+        "B": "u(π/8,1)=u(−π/8,1)",
+        "C": "u(π/8,1)+2u(−π/8,1)=2",
+        "D": "u(π/8,1)=−u(−π/8,1)"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "A sine Fourier mode decays under the heat equation; affine functions are stationary.",
+        "Evaluate the odd terms at opposite spatial points."
+      ],
+      "solution": "The solution in the given growth class is u(x,t)=e^(−16t)sin(4x)+x+1: its t derivative and second x derivative both equal −16e^(−16t)sin(4x). Put a=π/8+e^(−16)>0. Then u(π/8,1)=1+a and u(−π/8,1)=1−a. Their sum is 2, proving A. They are unequal, so B is false; the expression in C is 3−a, which differs from 2 since 0<a<1; D would require their sum to be zero. The candidate obeys the growth bound, since |u|≤2+|x|<3e^(x²).",
+      "theory": "For the heat equation u_t=κu_xx, a mode sin(kx) evolves as e^(−κk²t)sin(kx); cosine modes have the same decay. Constants and linear functions have zero second derivative and remain stationary. By linearity, one can add these elementary solutions to match initial data. Uniqueness on the entire line requires a suitable growth class; unrestricted classical solutions can have pathological zero-initial-data behavior. A bound uniform in time of the form Ce^(ax²) supplies a standard Gaussian growth class on finite time strips for uniqueness. Symmetry is often simpler than direct arithmetic: odd spatial components cancel when values at x and −x are added, whereas the constant component doubles. The initial affine term grows in x, so bounded-solution uniqueness alone would not be the appropriate hypothesis here.",
+      "similar_questions": [
+        {
+          "prompt": "Solve u_t=u_xx, u(x,0)=3+cos(2x).",
+          "solution": "The constant remains 3 and the cosine decays by e^(−4t), giving u(x,t)=3+e^(−4t)cos(2x). Direct differentiation verifies u_t=u_xx."
+        },
+        {
+          "prompt": "If u_t=2u_xx and u₀(x)=x+sin(3x)+5, find u(a,t)+u(−a,t).",
+          "solution": "The solution is x+e^(−18t)sin(3x)+5. The linear and sine terms are odd, so their opposite-point sum is 10 for every a and t."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704044, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 28,
+      "image": "assets/questions/2024-june-q044.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q045",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 45,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "The forward Euler approximation to $y\\prime(x)=x(y(x)+1)$, $y(0)=\\beta$, at $x=0.2$, using step size $h=0.1$, is 1.02. Find $\\beta$.",
+      "options": {
+        "A": "0",
+        "B": "−1",
+        "C": "2",
+        "D": "1"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Euler evaluates the derivative at the beginning of each step.",
+        "At x=0 the first increment is zero; the second uses x=0.1."
+      ],
+      "solution": "Euler gives y_(n+1)=y_n+0.1x_n(y_n+1). Starting at x₀=0,y₀=β, the first step gives y₁=β. At x₁=0.1, y₂=β+0.01(β+1)=1.01β+0.01. The given value y₂=1.02 implies 1.01β=1.01, hence β=1, option D. This is the numerical approximation, not the exact solution at 0.2.",
+      "theory": "The forward, or explicit, Euler method approximates an initial value problem y′=F(x,y) using y_(n+1)=y_n+hF(x_n,y_n), with x_(n+1)=x_n+h. It uses the old abscissa and old ordinate; substituting x_(n+1) would define a different scheme. For a sufficiently smooth solution the local truncation error is O(h²) and the global error over a fixed interval is generally O(h), subject to appropriate regularity and stability hypotheses. A zero initial derivative makes the first Euler increment zero even though later increments may be nonzero. When the initial value is unknown, the recurrence can be propagated symbolically to recover it from a later numerical value. Exact and approximate values must be kept distinct; an exact formula is useful as a comparison but does not replace the stated numerical method.",
+      "similar_questions": [
+        {
+          "prompt": "Use Euler with h=0.1 for y′=x(y+1), y(0)=0, and find y(0.2) approximately.",
+          "solution": "First y₁=0+0.1·0·1=0. Next y₂=0+0.1·0.1·1=0.01. Thus the Euler approximation is 0.01."
+        },
+        {
+          "prompt": "For y′=y, y(0)=b, two Euler steps of h=0.2 give 7.2. Find b.",
+          "solution": "Each step multiplies the old value by 1.2. Thus y₂=1.2²b=1.44b=7.2, giving b=5."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704045, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 29,
+      "image": "assets/questions/2024-june-q045.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q046",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 46,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Let $B(0,1)=\\{(x,y):x^2+y^2<1\\}$ and $\\nu$ be its unit outward normal. For continuous $f:\\mathbb R^2\\to\\mathbb R$, find the Euler–Lagrange equation of minimizing $\\frac12\\iint_B|\\nabla u|^2dxdy+\\frac12\\iint_Be^{u^2}dxdy+\\int_{\\partial B}fu\\,ds$, over $u\\in C^1(\\overline B)$.",
+      "options": {
+        "A": "Δu=−ue^(u²) in B; ∂u/∂ν=f on ∂B.",
+        "B": "Δu=ue^(u²)+f in B; u=0 on ∂B.",
+        "C": "Δu=ue^(u²) in B; ∂u/∂ν=−f on ∂B.",
+        "D": "Δu=ue^(u²) in B; ∂u/∂ν+u=f on ∂B."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Differentiate the functional along u+sη, with arbitrary variations η.",
+        "Integrate ∇u·∇η by parts and keep the boundary term."
+      ],
+      "solution": "The first variation is ∫B∇u·∇η+∫B ue^(u²)η+∫∂B fη. Green’s formula turns this into ∫B[−Δu+ue^(u²)]η+∫∂B[∂νu+f]η. Compactly supported variations force −Δu+ue^(u²)=0 in B. Since no boundary values are prescribed, arbitrary boundary traces force ∂νu+f=0 on ∂B. Hence C. The displayed equations are understood classically when the minimizer has sufficient second derivatives, or as the first-variation weak equation otherwise.",
+      "theory": "A stationary point of a differentiable functional has zero first variation in every admissible direction. For an energy ∫Ω[|∇u|²/2+V(u)] plus a boundary linear term ∫∂Ωfu, the interior Euler–Lagrange equation is −Δu+V′(u)=0 and the natural boundary condition is ∂νu+f=0 when boundary values are free. If a Dirichlet boundary value were fixed, variations would vanish there and would not yield this natural condition. Green’s identity introduces the outward-normal derivative with a positive boundary sign. Here V(u)=e^(u²)/2, so the factor 2u from differentiation cancels the factor 1/2. The boundary datum f does not become an interior forcing term. The variational statement makes sense at C¹ regularity, while writing Δu classically requires additional regularity or a weak interpretation.",
+      "similar_questions": [
+        {
+          "prompt": "Find stationary equations for E(u)=½∫Ω(|∇u|²+u²)+∫∂Ωgu with free boundary values.",
+          "solution": "The variation is ∫Ω∇u·∇η+uη+∫∂Ωgη. Integration by parts gives −Δu+u=0 inside and ∂νu+g=0 on the boundary."
+        },
+        {
+          "prompt": "Add ½∫∂Ωu² to the preceding energy. What boundary condition results?",
+          "solution": "The new boundary variation is ∫∂Ωuη. Thus the interior equation remains −Δu+u=0, while ∂νu+u+g=0 on ∂Ω, a Robin condition."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704046, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 30,
+      "image": "assets/questions/2024-june-q046.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q047",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 47,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $u$ solve $\\int_0^t[\\frac12+\\sin(t-\\tau)]u(\\tau)\\,d\\tau=\\sin t$. Find $u(1)$.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "2e^(−1)"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "This is a convolution equation; take Laplace transforms.",
+        "The transform of its kernel is (s+1)²/[2s(s²+1)]."
+      ],
+      "solution": "Let U(s)=L{u}. The kernel transform is 1/(2s)+1/(s²+1)=(s+1)²/[2s(s²+1)]. The right side has transform 1/(s²+1). Therefore U(s)=2s/(s+1)²=2/(s+1)−2/(s+1)². Inverting gives u(t)=2e^(−t)−2te^(−t)=2(1−t)e^(−t). Hence u(1)=0, option A. Differentiating the first-kind equation gives a second-kind Volterra equation with leading term u(t)/2, ensuring uniqueness for continuous solutions on finite intervals.",
+      "theory": "A Volterra equation integrates only over past times 0≤τ≤t. When its kernel depends on t−τ it is a convolution, and its Laplace transform becomes a product of transforms. The elementary transforms L{1}=1/s, L{sin t}=1/(s²+1), L{e^(−t)}=1/(s+1), and L{te^(−t)}=1/(s+1)² make rational kernels tractable. A first-kind equation ∫₀ᵗk(t−τ)u(τ)dτ=g(t) with differentiable kernel and k(0)≠0 can also be differentiated: k(0)u(t)+∫₀ᵗk′(t−τ)u(τ)dτ=g′(t). This converts it to a second-kind Volterra equation, supplying a direct uniqueness argument. One must retain the k(0)u(t) endpoint term. For Laplace-transform manipulations exponential-order hypotheses can be justified from the resulting Volterra equation or by direct verification of the inverse candidate. Checking the initial endpoint t=0 also verifies compatibility of the forcing with the first-kind equation.",
+      "similar_questions": [
+        {
+          "prompt": "Solve ∫₀ᵗu(τ)dτ=sin t.",
+          "solution": "Differentiation gives u(t)=cos t. Substituting verifies ∫₀ᵗcos τ dτ=sin t; u(0)=1 is consistent with the differentiated equation."
+        },
+        {
+          "prompt": "Solve ∫₀ᵗe^(−(t−τ))u(τ)dτ=t.",
+          "solution": "Transforming gives U(s)/(s+1)=1/s², so U=1/s+1/s² and u(t)=1+t. Directly, the convolution v satisfies v′=u−v and v=t, hence u=v′+v=1+t."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704047, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 31,
+      "image": "assets/questions/2024-june-q047.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q048",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 48,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "A solid circular cylinder has radius 2 m, height 3 m and uniform density ρ kg/m³. Find its moment of inertia (kg m²) about a diameter of its base.",
+      "options": {
+        "A": "48πρ",
+        "B": "43πρ",
+        "C": "24πρ",
+        "D": "4πρ"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The axis passes through the base, not through the center of mass.",
+        "Either integrate y²+z² over the cylinder or apply the parallel-axis theorem."
+      ],
+      "solution": "Take the base in z=0 and the axis as the x-axis. Then I=ρ∫₀³∫_(disk R=2)(y²+z²)dA dz. The disk has area 4π and ∫disk y²dA=πR⁴/4=4π. Thus I=ρ[3·4π+4π∫₀³z²dz]=ρ(12π+36π)=48πρ, option A. Equivalently M=ρπR²H=12πρ and I=M(R²/4+H²/3)=48πρ.",
+      "theory": "The moment of inertia about a specified line is I=∫r_perp²dm, where r_perp is the shortest distance to that line. For uniform density, dm=ρdV. A cylinder’s central transverse diameter has I_cm=M(3R²+H²)/12; a parallel diameter in its base lies H/2 from the center of mass, so the parallel-axis theorem adds M(H/2)². The resulting base-diameter value is M(R²/4+H²/3), distinct from the axial moment MR²/2 and from the central transverse value. Direct Cartesian integration separates y² and z² and provides a useful check. For a circular disk, symmetry gives ∫x²dA=∫y²dA=πR⁴/4. Specify the location of the axis before choosing a formula, and keep density units consistent with the cylinder’s volume.",
+      "similar_questions": [
+        {
+          "prompt": "A cylinder has R=1,H=2,M=6. Find inertia about a base diameter.",
+          "solution": "Use I=M(R²/4+H²/3)=6(1/4+4/3)=6·19/12=19/2."
+        },
+        {
+          "prompt": "For the same cylinder find inertia about its central transverse diameter and compare.",
+          "solution": "I_cm=M(3R²+H²)/12=6·7/12=7/2. The base axis is distance H/2=1 away, so adding Md²=6 gives 19/2, agreeing with the direct formula."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704048, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 31,
+      "image": "assets/questions/2024-june-q048.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q049",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 49,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let $A_1,A_2,A_3$ satisfy $0<P(A_i)<1$ for $i=1,2,3$. Which statement is true?",
+      "options": {
+        "A": "P(A₁|A₂)P(A₂|A₃)≤P(A₁|A₃)",
+        "B": "P(A₁|A₂)P(A₃|A₂)≥P(A₁∩A₃|A₂)",
+        "C": "P(A₁|A₂)+P(A₃|A₂)≥P(A₁∪A₃|A₂)",
+        "D": "P(A₁|A₂)+P(A₂|A₃)≤P(A₁|A₃)"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Conditioning on A₂ defines a probability measure.",
+        "Apply the union bound under that conditional probability measure."
+      ],
+      "solution": "Because P(A₂)>0, conditional inclusion–exclusion gives P(A₁∪A₃|A₂)=P(A₁|A₂)+P(A₃|A₂)−P(A₁∩A₃|A₂). The subtracted term is nonnegative, proving C. To disprove A and D, take four equiprobable outcomes, A₁={1}, A₃={2}, A₂={1,2}. Then P(A₁|A₃)=0 while the product in A is 1/2 and the sum in D is 3/2. To disprove B, take A₁=A₃={1}, A₂={1,2}; its left side is 1/4 and right side 1/2. All event probabilities are strictly between 0 and 1.",
+      "theory": "If P(B)>0, the rule Q(A)=P(A|B)=P(A∩B)/P(B) is itself a probability measure. Thus inclusion–exclusion, monotonicity, and the union bound remain valid with every term conditioned on the same B. In particular Q(A∪C)≤Q(A)+Q(C). A product Q(A)Q(C) equals Q(A∩C) only under conditional independence; without that hypothesis it can lie above or below the intersection probability. Products involving different conditioning events generally do not combine into an unconditional transitivity law. The event probability assumptions ensure that all denominators in the displayed conditional probabilities are nonzero. To test a purported universal inequality, a small finite probability space can furnish a complete counterexample with explicitly computed probabilities; identical and disjoint events often reveal missing independence assumptions.",
+      "similar_questions": [
+        {
+          "prompt": "Given P(B)=1/2, P(A∩B)=1/5, P(C∩B)=1/4, and P(A∩C∩B)=1/10, find P(A∪C|B).",
+          "solution": "The numerator is 1/5+1/4−1/10=7/20. Divide by P(B)=1/2 to obtain 7/10. The two conditional marginal probabilities sum to 2/5+1/2=9/10."
+        },
+        {
+          "prompt": "Under Q=P(·|B), suppose A=C and Q(A)=1/3. Compare Q(A)Q(C) with Q(A∩C).",
+          "solution": "The product is 1/9, whereas the intersection is just A with probability 1/3. Thus an unconditional claim that the product is at least the intersection is false."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704049, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 32,
+      "image": "assets/questions/2024-june-q049.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q050",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 50,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "A random variable has CDF $F(x)=0$ if $x<0$, $F(x)=(x+1)/3$ if $0\\leq x<1$, and $F(x)=1$ if $x\\geq1$. Find $P(1/3<X<3/4)+P(X=0)$.",
+      "options": {
+        "A": "7/36",
+        "B": "11/36",
+        "C": "13/36",
+        "D": "17/36"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Point masses are jumps of the CDF.",
+        "The interval endpoints are continuity points; subtract their CDF values and then add the jump at 0."
+      ],
+      "solution": "The jump at zero is F(0)−F(0−)=1/3. On (0,1) the CDF is continuous, so P(1/3<X<3/4)=F(3/4)−F(1/3)=7/12−4/9=5/36. Adding 1/3=12/36 gives 17/36, option D. The distribution also has mass 1/3 at 1, with density 1/3 on (0,1), so its total mass is 1.",
+      "theory": "A cumulative distribution function is F(x)=P(X≤x); it is nondecreasing, right-continuous, and has limits 0 and 1 at the two infinities. Its jump at a is P(X=a)=F(a)−F(a−). For strict endpoints, P(a<X<b)=F(b−)−F(a). If both endpoints are continuity points this simplifies to F(b)−F(a). A CDF may contain both atoms and a continuous component, so differentiating it only describes the continuous part and misses its jumps. On an interval where F is affine, its derivative is the constant density there. Always inspect the values at breakpoints separately; the formulas on half-open pieces determine which value is attained and ensure right-continuity. Endpoint distinctions matter precisely when an atom lies at the endpoint.",
+      "similar_questions": [
+        {
+          "prompt": "For the CDF in the question, calculate P(X=1).",
+          "solution": "The left limit at 1 is (1+1)/3=2/3, whereas F(1)=1. The jump is 1−2/3=1/3."
+        },
+        {
+          "prompt": "For that CDF find P(0<X≤1/2).",
+          "solution": "Use F(1/2)−F(0)=1/2−1/3=1/6. The mass at zero is excluded, and only the density 1/3 over an interval of length 1/2 contributes."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704050, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 32,
+      "image": "assets/questions/2024-june-q050.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q051",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 51,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A Markov chain on $\\{0,1,2,3,4\\}$ has transition matrix $P=\\begin{pmatrix}1/4&0&0&3/4&0\\\\0&1&0&0&0\\\\1/3&2/3&0&0&0\\\\3/4&0&0&1/4&0\\\\1/8&1/8&1/2&1/8&1/8\\end{pmatrix}$. Starting at 4, let $\\alpha$ be the probability of eventual absorption in the closed class $\\{0,3\\}$. Find $\\alpha$.",
+      "options": {
+        "A": "6/21",
+        "B": "11/21",
+        "C": "8/21",
+        "D": "10/21"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Assign absorption probabilities h₀=h₃=1 and h₁=0.",
+        "Compute h₂ first, then use h₄=Σ_jP₄ⱼhⱼ, including the self-transition."
+      ],
+      "solution": "The target class {0,3} is closed, so h₀=h₃=1. State 1 is absorbing outside the target, so h₁=0. From 2, h₂=(1/3)h₀+(2/3)h₁=1/3. First-step conditioning at 4 gives h₄=1/8+0+(1/2)(1/3)+1/8+(1/8)h₄=5/12+h₄/8. Thus (7/8)h₄=5/12 and h₄=10/21, option D. The self-transition cannot be omitted; it delays absorption but permits repeated attempts.",
+      "theory": "For a Markov chain, hitting or absorption probabilities can be obtained by conditioning on the first transition. If h_i is the probability of eventually entering a target closed class, then h_i=Σ_jp_ijh_j outside that class, with h_i=1 in the target and h_i=0 in other closed classes from which the target is inaccessible. These are harmonic equations for the transition matrix. In a finite chain, transient states eventually enter a closed recurrent class with probability one. A closed class need not consist of a single absorbing state: once the chain enters {0,3} here it remains within that two-state class, though it keeps moving. A self-loop contributes p_ii h_i and must be moved to the left side. The minimal nonnegative solution supplies hitting probabilities in general, particularly for infinite chains.",
+      "similar_questions": [
+        {
+          "prompt": "A transient state T moves to absorbing A with probability 1/4, to absorbing B with 1/2, and stays at T with 1/4. Find the probability of absorption at A.",
+          "solution": "Let h be the probability from T. Then h=1/4+(1/4)h, giving (3/4)h=1/4 and h=1/3."
+        },
+        {
+          "prompt": "State U moves to A with 1/2 and V with 1/2; V moves to A with 1/3 and B with 2/3. A and B are absorbing. Find the A-absorption probability from U.",
+          "solution": "At V the probability is h_V=1/3. At U it is h_U=1/2+(1/2)(1/3)=2/3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704051, answer 4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 33,
+      "image": "assets/questions/2024-june-q051.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q052",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 52,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "A point P is chosen at random on a line segment AB of length $\\alpha$. Let $Z_1=AP$ and $Z_2=BP$. Find $E(|Z_1-Z_2|)$.",
+      "options": {
+        "A": "α",
+        "B": "2α",
+        "C": "α/2",
+        "D": "2α/3"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use a uniform coordinate X=AP on [0,α].",
+        "Then BP=α−X; split the absolute-value integral at α/2."
+      ],
+      "solution": "Uniform choice gives X=Z₁∼Uniform(0,α) and Z₂=α−X. Therefore E|Z₁−Z₂|=(1/α)∫₀^α|2x−α|dx. The two halves are symmetric, giving (2/α)∫₀^(α/2)(α−2x)dx=(2/α)[αx−x²]₀^(α/2)=α/2, option C. Equivalently |2X−α| is uniform on [0,α].",
+      "theory": "Choosing a point uniformly on a segment means its distance X from one endpoint has density 1/α on [0,α]. The distances from the two endpoints satisfy the deterministic relation Z₁+Z₂=α, so they are dependent rather than independent uniforms. Expectations of functions of them reduce to a single integral over X. An absolute value requires locating the sign change: 2x−α changes sign at the midpoint. Symmetry halves the calculation. More generally the distance from the midpoint, |X−α/2|, is uniform on [0,α/2], because a small interior distance has two preimages with equal density. Thus its mean is α/4 and twice that mean is α/2. If “at random” were assigned a nonuniform distribution, this expectation would generally change; the conventional uniform selection is used.",
+      "similar_questions": [
+        {
+          "prompt": "A point is uniform on [0,10]. Find its mean distance from the midpoint 5.",
+          "solution": "E|X−5|=(1/10)[∫₀⁵(5−x)dx+∫₅¹⁰(x−5)dx]=(1/10)(25)=2.5."
+        },
+        {
+          "prompt": "For uniform P on a segment of length α, find E[min(AP,BP)].",
+          "solution": "The minimum is α/2−|X−α/2|. Its mean is α/2−α/4=α/4. Equivalently it is uniform on [0,α/2]."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704052, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 34,
+      "image": "assets/questions/2024-june-q052.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q053",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 53,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "A distribution has PMF $f(0|\\theta)=(1-\\theta)/2$, $f(1|\\theta)=1/2$, $f(2|\\theta)=\\theta/2$, and zero otherwise, with $0<\\theta<1$. In a sample of size 100 the counts of 0,1,2 are 20,30,50. Find the maximum likelihood estimate of $\\theta$.",
+      "options": {
+        "A": "1",
+        "B": "5/7",
+        "C": "1/2",
+        "D": "2/7"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Discard likelihood factors independent of θ.",
+        "The score balances the counts at 0 and 2; the count at 1 does not involve θ."
+      ],
+      "solution": "Up to a constant, L(θ)=(1−θ)^20θ^50. Thus ℓ′(θ)=−20/(1−θ)+50/θ. Setting this to zero yields 50(1−θ)=20θ, hence θ̂=50/70=5/7. The second derivative is −20/(1−θ)²−50/θ²<0, proving this critical point is the unique global maximum on (0,1). The sample count of 1 contributes only a factor (1/2)^30, so it does not enter the estimate directly.",
+      "theory": "Maximum likelihood chooses the parameter maximizing the joint probability or density of the observed sample. For independent categorical observations, the likelihood is a product of category probabilities raised to their observed counts; the multinomial coefficient is parameter independent and can be dropped for maximization. Taking logarithms preserves maxima and turns products into sums. A strictly negative second derivative gives strict concavity and certifies an interior score root as the unique maximum. In this model category 1 has fixed probability, so information about θ comes from the relative frequencies of categories 0 and 2, conditional on falling in those categories. The effective informative sample size is n₀+n₂. Boundary cases require care: if one informative count is zero and the parameter space is open, the supremum may occur at an excluded endpoint and an MLE may not exist.",
+      "similar_questions": [
+        {
+          "prompt": "In this model observe counts n₀=12,n₁=8,n₂=18. Find θ̂.",
+          "solution": "The θ-dependent likelihood is (1−θ)^12θ^18. Solving −12/(1−θ)+18/θ=0 gives θ̂=18/(12+18)=3/5; strict concavity proves the maximum."
+        },
+        {
+          "prompt": "Observe n₀=0,n₁=5,n₂=10 with θ∈(0,1). Does an MLE exist?",
+          "solution": "L(θ) is proportional to θ^10, strictly increasing on the open parameter interval. Its supremum occurs as θ→1, but 1 is excluded, so no MLE exists on (0,1). If the space were [0,1], θ̂=1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704053, answer 2: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 35,
+      "image": "assets/questions/2024-june-q053.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q054",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 54,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,X_2$ be an iid sample from $N(0,\\sigma^2)$, $\\sigma>0$. If $(c(X_1^2+X_2^2),\\infty)$ is a confidence interval for $\\sigma^2$ with coefficient 0.95, find $c$.",
+      "options": {
+        "A": "−2 ln(0.05)",
+        "B": "−2 ln(0.95)",
+        "C": "−1/[2 ln(0.05)]",
+        "D": "−1/[2 ln(0.95)]"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use the pivot (X₁²+X₂²)/σ²∼χ²₂.",
+        "Coverage of a lower-bound interval is P(χ²₂<1/c)."
+      ],
+      "solution": "For c>0, the coverage probability is P(cS<σ²)=P(S/σ²<1/c), where S=X₁²+X₂² and S/σ²∼χ²₂. The χ²₂ CDF is 1−e^(−z/2). Hence 1−exp[−1/(2c)]=0.95, or −1/(2c)=ln(0.05). Thus c=−1/[2ln(0.05)], option C. A nonpositive c would give coverage 1 and cannot achieve 0.95.",
+      "theory": "A pivotal quantity has a distribution independent of the unknown parameter. For a normal sample with known mean zero, ΣX_i²/σ² follows a chi-square law with n degrees of freedom. If the mean were estimated from the same sample, the centered sum of squares would instead have n−1 degrees of freedom. A one-sided lower confidence interval (L(X),∞) covers when L(X)<σ², so constructing it requires the upper quantile of the pivot, not its lower quantile. For two degrees of freedom, the chi-square distribution is exponential with rate 1/2 and CDF 1−e^(−z/2). Confidence coefficient refers to repeated-sampling coverage of the random interval, rather than a posterior probability for the fixed parameter. Continuous pivots make strict versus nonstrict endpoints immaterial.",
+      "similar_questions": [
+        {
+          "prompt": "Construct a 90% lower confidence bound for σ² from two N(0,σ²) observations.",
+          "solution": "Let S=X₁²+X₂². The χ²₂ 0.90 quantile is −2ln(0.10). Therefore L=S/[−2ln(0.10)], and P(L<σ²)=0.90."
+        },
+        {
+          "prompt": "Construct a 95% upper bound U=cS for the same model.",
+          "solution": "Coverage is P(σ²<cS)=P(χ²₂>1/c)=e^(−1/(2c)). Set this to 0.95, obtaining c=−1/[2ln(0.95)]. Thus U=S/[−2ln(0.95)]."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704054, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 36,
+      "image": "assets/questions/2024-june-q054.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q055",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 55,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,X_2$ be iid with density $f\\in\\{f_0,f_1\\}$, where $f_0(x)=1/2$ on $[0,2]$ and zero otherwise, while $f_1(x)=1/4$ on $[0,4]$ and zero otherwise. For testing $H_0:f=f_0$ against $H_1:f=f_1$, find the power of a most powerful test of size 0.05.",
+      "options": {
+        "A": "0.4625",
+        "B": "0.5425",
+        "C": "0.7625",
+        "D": "0.6225"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Observations outside the null support can be rejected without using any type-I error budget.",
+        "On the common support the joint likelihood ratio is constant, equal to 1/4."
+      ],
+      "solution": "Let D=[0,2]². Under H₀, D has probability 1. Under H₁ it has probability (2/4)²=1/4. Reject throughout [0,4]²\\D, gaining alternative probability 3/4 with zero null probability. Inside D, f₁(x₁)f₁(x₂)/[f₀(x₁)f₀(x₂)]=1/4. Any additional rejection rule of null probability 0.05 therefore contributes (1/4)·0.05=0.0125 to power. Total power is 0.75+0.0125=0.7625, C. Such a rule exists, for example reject additionally in D when X₁≤0.1.",
+      "theory": "The Neyman–Pearson lemma gives a most powerful size-α test for a simple null against a simple alternative by rejecting for large likelihood ratio f₁/f₀, with randomization at a threshold if necessary. When the alternative support extends beyond the null support, those extra outcomes have infinite likelihood ratio and can be rejected with no type-I cost. On a region where the ratio is constant, all subsets with the same null probability produce the same power contribution. In continuous models an ordinary measurable subset can often attain the desired size, so explicit randomization is unnecessary. For independent samples, joint densities are products, and support calculations take place in the full sample space. Power is P₁(reject), while size is P₀(reject); these must not be interchanged.",
+      "similar_questions": [
+        {
+          "prompt": "Test Uniform(0,1) against Uniform(0,2) using one observation at size 0.1. Find maximum power.",
+          "solution": "Reject on (1,2], yielding alternative probability 1/2 at zero null cost. Inside [0,1], the ratio is 1/2, so a null rejection probability 0.1 adds 0.05. Maximum power is 0.55."
+        },
+        {
+          "prompt": "With three iid observations, test Uniform(0,2) against Uniform(0,4) at size 0.04. Find power.",
+          "solution": "The common-support probability under the alternative is (1/2)^3=1/8. Reject outside it for power 7/8. The additional size 0.04 on common support contributes 0.04/8=0.005. Total power is 0.88."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704055, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 37,
+      "image": "assets/questions/2024-june-q055.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q056",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 56,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,\\ldots,X_{10}$ be iid with density $f(x|\\theta)=\\theta x^{\\theta-1}$ for $0<x<1$ and zero otherwise, where $\\theta>0$. The prior is $\\pi(\\theta)=\\theta e^{-\\theta}$ for $\\theta>0$ and zero otherwise. Find the Bayes estimator under squared error loss.",
+      "options": {
+        "A": "12/[1−Σᵢ₌₁¹⁰ ln Xᵢ]",
+        "B": "11/[2−Σᵢ₌₁¹⁰ ln Xᵢ]",
+        "C": "[3+Σᵢ₌₁¹⁰ ln Xᵢ]/13",
+        "D": "[2+Σᵢ₌₁¹⁰ ln Xᵢ]/11"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Multiply the likelihood by the Gamma(2,rate 1) prior.",
+        "Squared error loss is minimized by the posterior mean, not the posterior mode."
+      ],
+      "solution": "Let T=Σln Xᵢ<0. The likelihood is θ^10exp[(θ−1)T]. Multiplication by θe^(−θ) gives posterior kernel θ^11exp[−(1−T)θ], a Gamma distribution with shape 12 and rate 1−T. Its posterior mean is 12/(1−T), giving A. The posterior rate is positive since every Xᵢ lies in (0,1), so every logarithm is negative.",
+      "theory": "Under squared error loss, the Bayes estimator is the posterior mean: E[(θ−a)²|data]=Var(θ|data)+(a−E[θ|data])², which is uniquely minimized at a=E[θ|data] when the second moment exists. A Gamma distribution in shape–rate notation has density proportional to θ^(a−1)e^(−bθ), mean a/b, and mode (a−1)/b when a>1. Here −ln X is exponentially distributed with rate θ, so the sum of negative logarithms is a natural sufficient statistic and the Gamma prior is conjugate. Shape increases by sample size and rate increases by that sum. Be explicit about rate versus scale, since the mean is a/b for rate b but ab for scale b. Do not substitute the posterior mode for the squared-error estimator.",
+      "similar_questions": [
+        {
+          "prompt": "For n=4 with the same likelihood and Gamma(shape 3,rate 2) prior, find the squared-error estimator.",
+          "solution": "The likelihood kernel is θ⁴e^(−θΣ(−ln Xᵢ)). The posterior is Gamma(7,rate 2−Σln Xᵢ), so the estimator is 7/[2−Σln Xᵢ]."
+        },
+        {
+          "prompt": "For the question’s posterior, find its mode and compare with the Bayes mean.",
+          "solution": "The posterior is Gamma(12,rate r), r=1−Σln Xᵢ. The mode is 11/r, while the mean is 12/r. Squared error selects 12/r, so using the mode would be incorrect."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704056, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 37,
+      "image": "assets/questions/2024-june-q056.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q057",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 57,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consumption C, saving S and total income TI are standardized to mean 0 and variance 1. Disposable income is DI=C+S. In simple regressions DI on TI, DI on C, and S on TI, the slopes are 0.8,0.5,0.4 respectively. There are 21 observations and sample covariances and variances use divisor 20. Find the sum of squared residuals in the regression of DI on S.",
+      "options": {
+        "A": "5",
+        "B": "10",
+        "C": "15",
+        "D": "20"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The slope of DI on C is Cov(DI,C), since Var(C)=1.",
+        "Recover Cov(C,S), then calculate Var(DI) and the residual variance after regressing on S."
+      ],
+      "solution": "The slope DI on C is [Var(C)+Cov(S,C)]/Var(C)=1+r_CS=0.5, so r_CS=−0.5. Thus Var(DI)=Var(C)+Var(S)+2Cov(C,S)=2−1=1. Also Cov(DI,S)=Cov(C,S)+Var(S)=0.5, so the slope DI on S is 0.5. The residual variance is Var(DI)−Cov(DI,S)²/Var(S)=1−0.25=0.75. Multiplying by the stated covariance divisor 20 gives SSE=15, C. For consistency, Cov(S,TI)=0.4 and Cov(DI,TI)=0.8 imply Cov(C,TI)=0.4; these values are not needed for the SSE.",
+      "theory": "In simple least-squares regression with an intercept, slope b=Cov(X,Y)/Var(X). Centering the variables makes the intercept zero and the fitted vector bX. The residual sum of squares is S_YY−S_XY²/S_XX, where the S terms are unnormalized centered sums. If sample covariances are computed with divisor d, this becomes d[Var(Y)−Cov(X,Y)²/Var(X)]. Do not replace d by n or by the regression residual degrees of freedom when recovering the sum of squares; an unbiased residual variance estimate would use a different divisor afterward. For a derived variable Y=C+S, covariance bilinearity gives Cov(Y,C)=Var(C)+Cov(S,C) and Var(Y)=Var(C)+Var(S)+2Cov(C,S). Standardizing C and S does not imply their sum is standardized or that they are independent.",
+      "similar_questions": [
+        {
+          "prompt": "Two centered variables have Var(X)=4, Var(Y)=9, Cov(X,Y)=3, using divisor 10. Find slope and SSE for Y on X.",
+          "solution": "The slope is b=3/4. The residual variance under the same divisor is 9−3²/4=27/4. Thus SSE=10·27/4=135/2."
+        },
+        {
+          "prompt": "C and S have unit variances and covariance 1/4. Find the slope of C+S on S and its residual variance.",
+          "solution": "Cov(C+S,S)=1+1/4=5/4, so the slope is 5/4. Var(C+S)=2+1/2=5/2. Residual variance is 5/2−(5/4)²=15/16."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704057, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 39,
+      "image": "assets/questions/2024-june-q057.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q058",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 58,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_0,X_1,\\ldots,X_p$ ($p\\geq2$) be iid with mean 0 and variance 1. Let $Y_i=X_0+X_i$ for $i=1,\\ldots,p$. Find the first principal component based on the covariance matrix of $Y=(Y_1,\\ldots,Y_p)^t$.",
+      "options": {
+        "A": "(1/√p)Σᵢ₌₁ᵖYᵢ",
+        "B": "(1/p)Σᵢ₌₁ᵖYᵢ",
+        "C": "√p Σᵢ₌₁ᵖYᵢ",
+        "D": "Σᵢ₌₁ᵖYᵢ"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Every variance is 2 and every off-diagonal covariance is 1.",
+        "The all-ones direction is an eigenvector; normalize its Euclidean length to 1."
+      ],
+      "solution": "Independence gives Var(Yᵢ)=2 and Cov(Yᵢ,Yⱼ)=Var(X₀)=1 for i≠j. Hence Σ=I_p+J_p, with J_p the all-ones matrix. The vector 1 has eigenvalue p+1, whereas every vector orthogonal to 1 has eigenvalue 1. Thus the leading unit eigenvector is p^(−1/2)1, and the component is (1/√p)ΣYᵢ, A. Its sign may be reversed without changing the principal direction; the printed options use the positive sign.",
+      "theory": "A covariance-based principal component is a linear combination aᵗY whose coefficient vector has Euclidean norm one and maximizes variance aᵗΣa. The spectral theorem shows that the first component uses a unit eigenvector for the largest eigenvalue. Without the unit-norm constraint the variance could be increased indefinitely by rescaling, so normalization is part of the definition. A compound-symmetric matrix with diagonal d and off-diagonal c equals (d−c)I+cJ. Its all-ones direction has eigenvalue d+(p−1)c, while the orthogonal complement has eigenvalue d−c. When c>0, the common direction is leading. The direction’s sign is immaterial, but an arbitrary scaling changes the conventional component. Covariance and correlation PCA may differ when variables have unequal variances; here their variances are all equal.",
+      "similar_questions": [
+        {
+          "prompt": "For a three-variable covariance matrix with diagonal 5 and off-diagonal 2, find the first component and its variance.",
+          "solution": "Σ=3I+2J. The leading eigenvalue is 3+2·3=9 with unit vector (1,1,1)/√3. Thus PC₁=(Y₁+Y₂+Y₃)/√3, with variance 9."
+        },
+        {
+          "prompt": "For Y₁=X₀+X₁ and Y₂=X₀+X₂ with independent variance-one X variables, find both components.",
+          "solution": "Σ=[[2,1],[1,2]]. Unit eigenvectors (1,1)/√2 and (1,−1)/√2 have eigenvalues 3 and 1. The components are (Y₁+Y₂)/√2 and (Y₁−Y₂)/√2 respectively."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704058, answer 1: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 39,
+      "image": "assets/questions/2024-june-q058.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q059",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 59,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "Find the expected number of distinct units in a simple random sample of 3 units drawn with replacement from a population of 100 units.",
+      "options": {
+        "A": "3−(99/100)³",
+        "B": "100−99³/100²",
+        "C": "2+99²/100³",
+        "D": "3−(99/100)²"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Write the number of distinct sampled units as a sum of inclusion indicators.",
+        "A particular unit is missed on all three draws with probability (99/100)³."
+      ],
+      "solution": "For each population unit j define Iⱼ=1 if it appears at least once in the sample and 0 otherwise. Then D=Σⱼ₌₁¹⁰⁰Iⱼ and E(Iⱼ)=1−(99/100)³. Linearity of expectation yields E(D)=100[1−(99/100)³]=100−99³/100²=2.9701, option B. Independence of the indicators is not needed; only the three draws are independent. The result is less than 3 because repeat selections are possible.",
+      "theory": "For n independent uniform draws with replacement from N units, the number of distinct selected units is D=ΣI_j, where I_j indicates at least one appearance. Each unit is missed with probability (1−1/N)^n, so E(D)=N[1−(1−1/N)^n]. This occupancy identity uses linearity of expectation and does not require independent indicators; in fact the inclusion indicators are dependent. In sampling without replacement, n≤N distinct units are selected deterministically, so the expectation is exactly n. With replacement, the expression lies between 1 and min(n,N) for n≥1 and tends to N as n increases. With unequal selection probabilities p_j the corresponding formula is Σ[1−(1−p_j)^n]. Be careful with algebra after multiplying by N: the denominator exponent decreases by one.",
+      "similar_questions": [
+        {
+          "prompt": "Draw two units with replacement from a population of five. Find E(D).",
+          "solution": "Each unit is missed twice with probability (4/5)². Thus E(D)=5[1−16/25]=9/5. Alternatively D=1 with probability 1/5 and 2 with probability 4/5, giving 9/5."
+        },
+        {
+          "prompt": "Draw three times from two units, each equally likely. Find E(D).",
+          "solution": "Each unit is missed with probability (1/2)³=1/8. Therefore E(D)=2(1−1/8)=7/4. Directly all draws agree with probability 1/4, giving D=1; otherwise D=2, so the mean is 7/4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704059, answer 2: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 40,
+      "image": "assets/questions/2024-june-q059.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q060",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 60,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A petrol pump has one dispensing unit. Customers arrive according to a Poisson process with printed rate $\\lambda=1$ “minutes”. A customer enters only if at most two customers are present; otherwise the customer leaves. Service times are independent exponential variables with mean $1/2$ minutes. Let $X$ denote the average number of customers in the long run. Find $E(X)$.",
+      "options": {
+        "A": "7/15",
+        "B": "3/5",
+        "C": "11/15",
+        "D": "13/15"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Model the customer count as an M/M/1/3 birth–death chain.",
+        "The stationary ratios are π_(n+1)/π_n=λ/μ=1/2."
+      ],
+      "solution": "Interpreting the stated arrival rate as 1 customer per minute, μ=2 per minute and the capacity is 3 including the customer in service. The count has births λ=1 for n=0,1,2 and deaths μ=2 for n=1,2,3. Detailed balance gives π_n=π₀(1/2)^n. Normalizing 1+1/2+1/4+1/8=15/8 gives (π₀,π₁,π₂,π₃)=(8,4,2,1)/15. The stationary mean, also the long-run time-average customer count, is (4+4+3)/15=11/15, C. The printed word “minutes” attached to a rate is dimensionally imprecise; the usual rate 1/minute is the convention used.",
+      "theory": "A finite-capacity M/M/1/K queue has Poisson arrivals of rate λ, exponential service of rate μ, one server, and at most K customers in the system including the one being served. The count is a finite birth–death chain, with arrival transitions blocked in state K. Its stationary distribution satisfies π_(n+1)μ=π_nλ, so π_n is proportional to ρ^n, where ρ=λ/μ. A finite queue has a stationary distribution for every positive λ and μ, even if ρ≥1; no infinite-queue stability restriction is needed. The stationary mean is Σnπ_n. The service rate is the reciprocal of mean service time. Arrival rate units are customers per unit time, not time units. Distinguish capacity including service from waiting-room capacity, since that changes the state space.",
+      "similar_questions": [
+        {
+          "prompt": "For M/M/1/2 with λ=μ=1, find the stationary mean count.",
+          "solution": "Here ρ=1, so the stationary distribution is uniform on states 0,1,2. The mean is (0+1+2)/3=1."
+        },
+        {
+          "prompt": "For M/M/1/2 with λ=1,μ=2, find stationary blocking probability and mean.",
+          "solution": "Weights are 1,1/2,1/4, summing to 7/4. Thus π=(4,2,1)/7. The blocking probability is π₂=1/7 and the mean is (2+2)/7=4/7."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704060, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 41,
+      "image": "assets/questions/2024-june-q060.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q061",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 61,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $(a_n)_{n\\geq1}$ be positive real numbers and $b_n=a_n/\\max\\{a_1,\\ldots,a_n\\}$. Which statements are necessarily true?",
+      "options": {
+        "A": "If lim bₙ exists in R, then {aₙ:n≥1} is bounded.",
+        "B": "If lim bₙ=1, then lim aₙ exists in R.",
+        "C": "If lim bₙ=1/2, then lim aₙ exists in R.",
+        "D": "If lim bₙ=0, then lim aₙ=0."
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "An unbounded sequence has infinitely many new record maxima, where bₙ=1.",
+        "If the limit of bₙ is strictly below 1, the running maxima must be bounded and hence converge."
+      ],
+      "solution": "Write Mₙ=max(a₁,…,aₙ), so Mₙ is positive and nondecreasing. If Mₙ is unbounded, it increases at infinitely many new record indices, at each of which aₙ=Mₙ and bₙ=1. Thus bₙ cannot tend to any c<1. When bₙ→1/2 or 0, Mₙ is therefore bounded and converges to some M≥a₁>0. Consequently aₙ=bₙMₙ→M/2 in C and →0 in D. A and B are disproved by aₙ=n: then bₙ=1 for every n, but aₙ is unbounded and has no finite real limit. Correct options: C,D.",
+      "theory": "The running maximum M_n=max(a₁,…,a_n) is monotone even when the original sequence oscillates. A bounded nondecreasing real sequence converges to its supremum. If the original sequence is unbounded above, new record maxima occur at arbitrarily large indices; otherwise all later terms would remain below the last record. Normalization by the running maximum therefore creates a subsequence exactly equal to 1. Any limit of the normalized sequence strictly below 1 rules out unbounded growth of the running maximum. Once M_n has a finite limit M, ordinary product-limit laws give a_n=b_nM_n→cM. Positivity ensures the denominator is nonzero and M>0. The special limit c=1 is different: it allows the entire original sequence to keep setting records and diverge to infinity.",
+      "similar_questions": [
+        {
+          "prompt": "Take a₁=10 and aₙ=3+1/n for n≥2. Find lim bₙ and lim aₙ.",
+          "solution": "Every later term is below 10, so Mₙ=10. Hence bₙ=(3+1/n)/10→3/10 while aₙ→3, consistent with a-limit=M·b-limit."
+        },
+        {
+          "prompt": "Can bₙ→1 while aₙ→∞? Give an example.",
+          "solution": "Yes. For aₙ=n², each term is a new maximum, so Mₙ=n² and bₙ=1. Yet aₙ diverges to positive infinity and has no finite limit."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704061, answer 3,4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 42,
+      "image": "assets/questions/2024-june-q061.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q062",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 62,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\sum_{n=1}^\\infty a_n$ be a convergent real series. Put $A_n=a_n$ if $a_n>0$ and 0 otherwise; put $B_n=a_n$ if $a_n<0$ and 0 otherwise. Which statements are necessarily true?",
+      "options": {
+        "A": "Aₙ→0 and Bₙ→0.",
+        "B": "If Σaₙ converges absolutely, both ΣAₙ and ΣBₙ converge absolutely.",
+        "C": "Both ΣAₙ and ΣBₙ converge.",
+        "D": "If Σaₙ is not absolutely convergent, both ΣAₙ and ΣBₙ diverge."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Use aₙ=Aₙ+Bₙ and |aₙ|=Aₙ−Bₙ.",
+        "If one sign-part sum converges and Σaₙ converges, what follows for the other sign-part sum?"
+      ],
+      "solution": "Convergence of Σaₙ implies aₙ→0. Since |Aₙ|,|Bₙ|≤|aₙ|, both tend to zero, so A is true. If Σ|aₙ|<∞, comparison gives Σ|Aₙ| and Σ|Bₙ| finite, proving B. C is false for the alternating harmonic series: its positive sum diverges to +∞ and negative sum to −∞. For D, if ΣAₙ converged, then ΣBₙ=Σaₙ−ΣAₙ would also converge; since Aₙ≥0 and Bₙ≤0, this would make Σ|aₙ|=ΣAₙ−ΣBₙ finite, contradiction. The same reasoning applies if ΣBₙ converged. Thus both diverge for a conditionally convergent series. Correct: A,B,D.",
+      "theory": "The positive and negative parts of a real term can be represented as A_n=max(a_n,0) and B_n=min(a_n,0). They satisfy a_n=A_n+B_n and |a_n|=A_n−B_n. Absolute convergence is equivalent to finiteness of both sign-part sums, because these consist of terms of one sign. For a convergent but not absolutely convergent series, positive partial sums must grow to +∞ and negative partial sums to −∞; convergence of the original series occurs through cancellation in the given order. Individual terms still tend to zero, a necessary condition that does not imply convergence of their nonnegative sums. One may subtract convergent series using their partial sums, but must not treat an infinite positive sum minus an infinite negative magnitude as ordinary arithmetic. This sign decomposition underlies conditional-convergence phenomena.",
+      "similar_questions": [
+        {
+          "prompt": "For aₙ=(−1)^(n+1)/n, analyze the positive and negative parts.",
+          "solution": "The alternating-series test gives convergence, but Σ1/n diverges. The positive terms are 1/(2k−1), whose sum diverges; the negative terms are −1/(2k), whose sum tends to −∞. Both term sequences tend to zero."
+        },
+        {
+          "prompt": "For aₙ=(−1)^(n+1)/2ⁿ, compute its sign-part sums.",
+          "solution": "Positive terms have odd index: Σₖ₌₀∞1/2^(2k+1)=(1/2)/(1−1/4)=2/3. Negative terms have even index: −Σₖ₌₁∞1/2^(2k)=−(1/4)/(1−1/4)=−1/3. Their sum is 1/3 and absolute sum is 1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704062, answer 1,2,4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 42,
+      "image": "assets/questions/2024-june-q062.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q063",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 63,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Define $f:\\mathbb R\\to\\mathbb R$ by $f(x)=x|x|$. Which statements are true?",
+      "options": {
+        "A": "f is continuous on R.",
+        "B": "f is differentiable on R.",
+        "C": "f is differentiable only at 0.",
+        "D": "f is not differentiable at 0."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Write f separately for positive and negative x.",
+        "At zero use the difference quotient f(h)/h=|h|."
+      ],
+      "solution": "For x>0, f(x)=x² and f′(x)=2x; for x<0, f(x)=−x² and f′(x)=−2x. The product of the continuous functions x and |x| is continuous everywhere, proving A. At 0, [f(h)−f(0)]/h=|h|→0, so f′(0)=0. Thus f′(x)=2|x| on all R, proving B. C and D are false. Although f is differentiable at the corner of |x|, its second derivative does not exist at 0 because the one-sided derivatives of 2|x| are −2 and 2.",
+      "theory": "Absolute value is continuous everywhere but not differentiable at zero. Multiplying it by a vanishing factor can remove that first-order corner. Differentiability at a point is determined by the difference quotient, so an invalid product-rule application at a nondifferentiable factor must be avoided. For x|x| the quotient at zero reduces to |h| and converges to zero from both sides. Piecewise polynomial formulas provide derivatives away from the joining point, while the joining point must be checked independently. Continuity alone is insufficient for differentiability; matching function values does not guarantee matching slopes. Conversely a function may be once continuously differentiable while failing to have a second derivative: here f′=2|x| is continuous but has a corner. Distinguish these regularity levels when choosing options.",
+      "similar_questions": [
+        {
+          "prompt": "Is f(x)=|x|³ differentiable at zero? Find its derivative everywhere.",
+          "solution": "At zero the quotient |h|³/h=sgn(h)h²→0. Away from zero, differentiating the piecewise formulas gives f′(x)=3x|x|. This derivative extends to 0 with value 0."
+        },
+        {
+          "prompt": "Determine differentiability at zero of f(x)=|x|+x.",
+          "solution": "For x>0, f=2x; for x<0, f=0. The right derivative is 2 and the left derivative is 0, so f is continuous but not differentiable at zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704063, answer 1,2: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 43,
+      "image": "assets/questions/2024-june-q063.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q064",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 64,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "A bounded real sequence $(a_n)$ does not converge. Let $S=\\{l\\in\\mathbb R:\\text{some subsequence of }(a_n)\\text{ converges to }l\\}$. Which statements are necessarily true?",
+      "options": {
+        "A": "S is empty.",
+        "B": "S has exactly one element.",
+        "C": "S has at least two elements.",
+        "D": "S has to be finite."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Bolzano–Weierstrass guarantees at least one subsequential limit.",
+        "For a bounded sequence, a unique subsequential limit would force the whole sequence to converge."
+      ],
+      "solution": "Boundedness gives at least one cluster point by Bolzano–Weierstrass, excluding A. If S={l} but aₙ did not converge to l, there would be ε>0 and a subsequence with |a_(n_k)−l|≥ε. Boundedness gives a convergent further subsequence, whose limit is at least ε away from l, contradiction. Therefore a bounded nonconvergent sequence has at least two distinct subsequential limits: C true and B false. D is false: concatenate the grids {0,1/m,…,1} for m=1,2,…; this bounded sequence has every point of [0,1] as a subsequential limit and does not converge.",
+      "theory": "A subsequential limit, or cluster point, is a limit obtained along an increasing sequence of indices. Bolzano–Weierstrass asserts that every bounded real sequence has a convergent subsequence. Its set of cluster points is nonempty and compact. For bounded sequences, having exactly one cluster point is equivalent to convergence of the whole sequence: any failure to enter a fixed neighborhood infinitely often produces a bounded exceptional subsequence and hence a second cluster point. Boundedness is essential to that implication; exceptional terms could otherwise escape to infinity. The cluster set can be finite, countably infinite, or uncountable. A sequence formed from progressively finer finite grids in [0,1] illustrates an entire interval of cluster points. The two extremal cluster points are the liminf and limsup, which differ precisely when a bounded sequence fails to converge.",
+      "similar_questions": [
+        {
+          "prompt": "Find the cluster set of aₙ=(−1)ⁿ+1/n.",
+          "solution": "Along even indices the limit is 1; along odd indices it is −1. Every convergent subsequence eventually has a further even or odd subsequence, so its limit is one of these. The cluster set is {−1,1}."
+        },
+        {
+          "prompt": "Can an unbounded nonconvergent sequence have just one finite cluster point?",
+          "solution": "Yes. Set a_(2n)=0 and a_(2n−1)=n. Its only finite subsequential limit is 0, obtained from even indices, but it does not converge because odd terms grow unboundedly. This shows why boundedness matters."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704064, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 44,
+      "image": "assets/questions/2024-june-q064.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q065",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 65,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $f:[0,1)\\to[1,\\infty)$ be $f(x)=1/(1-x)$, and let $p_n(x)=1+x+\\cdots+x^n$. Which statements are true?",
+      "options": {
+        "A": "f is not uniformly continuous on [0,1).",
+        "B": "pₙ converges pointwise to f on [0,1).",
+        "C": "pₙ converges uniformly to f on [0,1).",
+        "D": "pₙ converges uniformly to f on [0,c] for every 0<c<1."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Use the geometric-sum remainder f(x)−pₙ(x)=x^(n+1)/(1−x).",
+        "The remainder is uniformly controlled on [0,c], but blows up near 1 for each fixed n."
+      ],
+      "solution": "For fixed x<1, x^(n+1)→0, so the remainder tends to zero and B holds. On [0,c], its absolute value is ≤c^(n+1)/(1−c)→0, proving D. On [0,1), for every fixed n the remainder tends to ∞ as x→1, so C fails. To show A, take x_m=1−1/m and y_m=1−1/(m+1). Then |x_m−y_m|=1/[m(m+1)]→0, but |f(x_m)−f(y_m)|=1. Thus no single δ controls all nearby points and f is not uniformly continuous. Correct: A,B,D.",
+      "theory": "Pointwise convergence permits the index required for a specified accuracy to depend on the point x; uniform convergence requires one index to work for every point in the domain. The geometric-series identity gives p_n(x)=(1−x^(n+1))/(1−x), so the exact remainder reveals the distinction. On a compact subinterval bounded away from the singular endpoint, both the numerator and denominator are uniformly controlled, producing a geometric uniform bound. On the whole half-open interval, the denominator can be arbitrarily small. Uniform continuity similarly requires one distance threshold for all points, unlike ordinary continuity. A convenient disproof uses pairs x_n,y_n with distances tending to zero but function-value differences bounded below. A function continuous on [0,1) need not be uniformly continuous because the domain is not compact.",
+      "similar_questions": [
+        {
+          "prompt": "Does Σₖ₌₀∞xᵏ converge uniformly on [0,1/2]?",
+          "solution": "The remainder after n is x^(n+1)/(1−x)≤2(1/2)^(n+1)=2^(−n), which tends to zero independently of x. Thus convergence is uniform."
+        },
+        {
+          "prompt": "Show 1/x is not uniformly continuous on (0,1].",
+          "solution": "Choose x_n=1/n and y_n=1/(n+1). Their distance tends to zero, but |1/x_n−1/y_n|=1. This contradicts the uniform-continuity condition with ε=1/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704065, answer 1,2,4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 44,
+      "image": "assets/questions/2024-june-q065.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q066",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 66,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consider $I=\\int_{\\pi/2}^{\\pi}dx/\\sqrt{\\sin x}$ and $I_a=\\int_a^\\infty dx/[x\\sqrt{1+x^2}]$ for $a\\geq0$. Which statements are true?",
+      "options": {
+        "A": "I converges.",
+        "B": "I does not converge.",
+        "C": "I_a converges for a=1/2 but not for a=0.",
+        "D": "I_a converges for every a≥0."
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Near π, sin x is comparable to π−x.",
+        "The second integrand behaves like 1/x near zero and 1/x² at infinity."
+      ],
+      "solution": "As x→π−, sin x=sin(π−x)∼π−x, so 1/√sin x is asymptotic to (π−x)^(−1/2), whose endpoint integral converges. Thus A true, B false. For I_a the integrand is asymptotic to 1/x² at infinity, giving a convergent tail. If a>0 there is no zero-endpoint singularity, so I_(1/2) converges. For a=0 it is asymptotic to 1/x near zero, giving logarithmic divergence. Hence C is true and D false. One antiderivative is ln[x/(1+√(1+x²))]; for a>0, I_a=ln[(1+√(1+a²))/a].",
+      "theory": "Improper integrals require separate checks at every infinite limit or singular endpoint. A positive integrand comparable to t^(−p) near a finite zero endpoint is integrable exactly when p<1; at infinity x^(−p) is integrable exactly when p>1. Limit comparison with a positive model integrand is valid when the ratio approaches a finite positive constant. The approximation sin t∼t as t→0 controls trigonometric endpoint singularities. For a second integral spanning both zero and infinity, convergence at infinity does not resolve convergence at zero; the integral must be split at a finite regular point. In x√(1+x²), the square root tends to 1 near zero but behaves like x for large positive x. Remember that a≥0 includes the exceptional value a=0.",
+      "similar_questions": [
+        {
+          "prompt": "For which p does ∫₀^(π/2)(sin x)^(−p)dx converge?",
+          "solution": "The only singularity is at zero, where sin x∼x. Limit comparison with x^(−p) gives convergence exactly for p<1."
+        },
+        {
+          "prompt": "Evaluate ∫₁∞dx/[x√(1+x²)].",
+          "solution": "Use F(x)=ln[x/(1+√(1+x²))]. Since F(x)→0 as x→∞, the integral is −F(1)=ln(1+√2). Both the finite lower endpoint and the x^(−2) tail are regular enough."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704066, answer 1,3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 45,
+      "image": "assets/questions/2024-june-q066.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q067",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 67,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f:R→R be continuous and one-to-one. Which statements are necessarily true?",
+      "options": {
+        "A": "f is strictly increasing.",
+        "B": "f is strictly decreasing.",
+        "C": "f is either strictly increasing or strictly decreasing.",
+        "D": "f is onto."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use the intermediate value theorem to rule out a change in monotonic direction.",
+        "The examples f(x)=x, f(x)=−x and f(x)=eˣ separate the remaining assertions."
+      ],
+      "solution": "A continuous injective function on an interval is strictly monotone. To see the key step, for a<b<c, f(b) must lie strictly between f(a) and f(c); otherwise a value between the extreme f(b) and both endpoint values would be attained once in (a,b) and once in (b,c), contradicting injectivity by the intermediate value theorem. These triple comparisons force one consistent direction throughout R. Thus C is true. A is not necessary because f(x)=−x decreases; B is not necessary because f(x)=x increases. D fails for the continuous injection eˣ, whose range is (0,∞). Only C is correct.",
+      "theory": "On a real interval, continuity plus injectivity implies strict monotonicity. The interval hypothesis permits the intermediate value theorem between any two points, and injectivity prevents the repeated values that would occur at a local turn. Strictly increasing and strictly decreasing functions are both injective, but the hypotheses do not decide which orientation occurs. A continuous strictly monotone function is a homeomorphism onto its image, yet its image need not be the entire real line. For a continuous increasing function on R, surjectivity onto R requires limits −∞ and +∞ at the two ends; decreasing functions need the reversed limits. Exponential and arctangent functions illustrate proper interval images. Continuity cannot simply be dropped: an injective function can rearrange isolated values and fail monotonicity. Likewise a disconnected domain need not admit one global direction.",
+      "similar_questions": [
+        {
+          "prompt": "Is f(x)=arctan x a continuous injective surjection R→R?",
+          "solution": "It is continuous and strictly increasing, since its derivative 1/(1+x²)>0. Its range is (−π/2,π/2), so it is injective but not surjective onto R."
+        },
+        {
+          "prompt": "A continuous injective f:[0,1]→R satisfies f(0)=3 and f(1)=−2. Determine its direction and range.",
+          "solution": "Strict monotonicity holds on the interval; the endpoint order forces decreasing behavior. The intermediate value theorem gives every value between −2 and 3, while monotonicity excludes others. Its range is [−2,3]."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704067, answer 3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 46,
+      "image": "assets/questions/2024-june-q067.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q068",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 68,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "Define $f:\\mathbb R^2\\to\\mathbb R$ by $f(x,y)=y\\sqrt{x^2+y^2}/x$ for $x\\neq0$, and $f(x,y)=0$ for $x=0$. Which statements are true?",
+      "options": {
+        "A": "∂f/∂x(0,0) exists.",
+        "B": "∂f/∂y(0,0) exists.",
+        "C": "f is not continuous at (0,0).",
+        "D": "f is not differentiable at (0,0)."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The function is zero on both coordinate axes.",
+        "Approach the origin along x=t²,y=t, with t>0."
+      ],
+      "solution": "Along y=0, f(h,0)=0, so ∂xf(0,0)=lim[f(h,0)−0]/h=0. Along x=0, the definition gives f(0,h)=0, so ∂yf(0,0)=0. Hence A and B hold. On the path (x,y)=(t²,t), t>0, f(t²,t)=t√(t⁴+t²)/t²=√(1+t²)→1, whereas f(0,0)=0. Thus f is discontinuous at the origin, proving C. Fréchet differentiability implies continuity, so D also holds. All four options are correct. The existence of the two partial derivatives only examines axis directions and misses this curved approach.",
+      "theory": "Partial derivatives at a point are one-dimensional limits along the coordinate axes. Their existence alone does not imply continuity or total differentiability in several variables. Fréchet differentiability at a requires f(a+h)=f(a)+Lh+o(||h||) for a linear map L, which in particular forces continuity. A multivariable limit must be consistent along every approach path; a single path with a different limiting value disproves existence. Straight-line tests can be insufficient, since a curved path may balance numerator and denominator differently. When a formula has an exceptional definition on an axis, evaluate partial derivatives using that exact definition instead of algebraically canceling expressions valid only off the axis. Here both coordinate restrictions vanish, yet x=t² makes the denominator small enough to produce a nonzero limiting value.",
+      "similar_questions": [
+        {
+          "prompt": "For h(x,y)=xy/(x²+y²) off the origin and h(0,0)=0, find axis partials and test continuity.",
+          "solution": "Both axis restrictions are zero, so both partial derivatives at the origin are zero. Along y=x≠0, h=1/2, so the function is not continuous and cannot be differentiable there."
+        },
+        {
+          "prompt": "For h(x,y)=x²+y², prove total differentiability at the origin.",
+          "solution": "Take L=0. Then |h(x,y)−h(0,0)−L(x,y)|/√(x²+y²)=√(x²+y²)→0. Thus h is differentiable with derivative zero; unlike mere axis tests, this estimate controls every path."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704068, answer 1,2,3,4: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 46,
+      "image": "assets/questions/2024-june-q068.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q069",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 69,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "Let $f:\\mathbb R^2\\to\\mathbb R^3$ be a differentiable function such that $(Df)(0,0)$ has rank 2. Write $f=(f_1,f_2,f_3)$. Which statements are necessarily true?",
+      "options": {
+        "A": "f is injective in a neighbourhood of (0,0).",
+        "B": "There exists an open neighbourhood U of (0,0) in R² such that f₃ is a function of f₁ and f₂.",
+        "C": "f maps an open neighbourhood of (0,0) in R² onto an open subset of R³.",
+        "D": "(0,0) is an isolated point of f⁻¹({f(0,0)})."
+      },
+      "correct_options": [],
+      "hints": [
+        "Rank 2 gives an injective linear derivative, but the inverse function theorem needs continuity of the derivative near the point.",
+        "A first-order lower bound isolates the fiber; oscillating derivatives can still destroy injectivity between other nearby points."
+      ],
+      "solution": "Under the literal printed hypothesis, only D is necessary. Let L=Df(0); rank 2 means L is injective, so on the unit circle min||Lh||=m>0. Differentiability gives f(h)−f(0)=Lh+r(h), with ||r(h)||/||h||→0. For sufficiently small nonzero h, ||f(h)−f(0)||≥(m/2)||h||>0, proving D. A fails: define g(0)=0, g(x)=x+x²sin(1/x²) for x≠0 and f(x,y)=(g(x),y,0). This map is differentiable everywhere and Df(0) has rank 2. Yet g′(x)=1+2xsin(1/x²)−(2/x)cos(1/x²) has both positive and negative values in every interval about 0 (use x=(2πn)^(-1/2) and x=((2n+1)π)^(-1/2)). A continuous injection on an interval is strictly monotone and cannot have derivatives of both signs, so f is not injective on any neighborhood. B fails for f(x,y)=(x,0,y): f₃ cannot be determined by (f₁,f₂)=(x,0). C fails for f(x,y)=(x,y,0), whose image lies in a plane. The NTA final key gives options 1 and 4. Those are valid if the missing stronger hypothesis f∈C¹ is imposed: choose two components whose derivative minor is invertible and apply the inverse function theorem. The printed source says only differentiable, so this record is marked source_issue with no graded options rather than silently strengthening the premise.",
+      "theory": "The inverse function theorem normally assumes a C¹ map on a neighborhood and an invertible derivative at the point. For a C¹ map from R² to R³ of rank 2 at the origin, some two-component projection has an invertible 2×2 derivative, yielding a local coordinate chart and local injectivity of the full map. Merely having a derivative at every point does not provide its continuity, so this argument is unavailable as printed. Differentiability at the one point nevertheless controls its own fiber: the injective linear approximation has a positive lower bound on unit vectors, and the smaller remainder cannot cancel it. This distinguishes isolation of f⁻¹(f(0)) from injectivity between arbitrary nearby points. Also rank 2 does not specify which pair of components forms coordinates; f₁ and f₂ may have a singular derivative even if another pair works. An immersed two-dimensional surface in R³ does not contain a three-dimensional open set locally. The official answer reflects the usual C¹ theorem, and that extra assumption must be identified explicitly.",
+      "similar_questions": [
+        {
+          "prompt": "Suppose f:R²→R³ is C¹ and Df(0) has rank 2. Prove local injectivity.",
+          "solution": "Select two rows of Df(0) giving a nonsingular 2×2 minor, and let F be the corresponding two-component map. The C¹ inverse function theorem gives a neighborhood where F is one-to-one. If f(p)=f(q) there, then F(p)=F(q), forcing p=q. Thus f is locally injective."
+        },
+        {
+          "prompt": "If f is only differentiable at 0 and Df(0) is injective, prove 0 is isolated in f⁻¹(f(0)).",
+          "solution": "Compactness of the unit sphere gives ||Df(0)h||≥m||h|| for m>0. The differentiability remainder is ≤m||h||/2 near 0. Thus ||f(h)−f(0)||≥m||h||/2>0 for every sufficiently small h≠0. This proves fiber isolation without claiming local injectivity."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The printed assumption is differentiable, not continuously differentiable. Literal necessary option is D alone. NTA final key 704069 lists 1,4 (A,D), valid under a C¹ hypothesis missing from the source. Exact source and both conclusions are preserved.",
+      "answer_source": "Independent differentiability counterexample and fiber-isolation proof; compared with NTA Final Answer Key, Mathematical Sciences, PDF page 3, question ID 704069 (official options 1,4): https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. The official answer requires a C¹ hypothesis not printed in the source; candidate responses were not used.",
+      "page": 47,
+      "image": "assets/questions/2024-june-q069.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2024-june-q070",
+      "source_type": "official_exam",
+      "paper_id": "2024-june",
+      "question_number": 70,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\varnothing\\neq K\\subseteq\\mathbb R$ and let $f:K\\to K$ be continuous with $|x-y|\\leq|f(x)-f(y)|$ for all $x,y\\in K$. Which statements are true?",
+      "options": {
+        "A": "f need not be surjective.",
+        "B": "f must be surjective if K=[0,1].",
+        "C": "f is injective and f⁻¹:f(K)→K is continuous.",
+        "D": "f is injective, but f⁻¹:f(K)→K need not be continuous."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "If f(x)=f(y), the lower distance bound forces x=y.",
+        "The inverse is 1-Lipschitz. On [0,1], compare the images of the endpoints."
+      ],
+      "solution": "If f(x)=f(y), then |x−y|≤0 and x=y, proving injectivity. For s=f(x),t=f(y), the same inequality gives |f⁻¹(s)−f⁻¹(t)|≤|s−t|; the inverse is 1-Lipschitz and hence continuous, proving C and disproving D. A is true: on K=[0,∞), f(x)=x+1 preserves distances and is continuous but misses [0,1). For K=[0,1], |f(1)−f(0)|≥1, and both images lie in [0,1], forcing the images to be 0 and 1 in some order. By continuity and the intermediate value theorem f attains every value in [0,1], proving B. Correct: A,B,C.",
+      "theory": "A distance-expanding map satisfies d(x,y)≤d(f(x),f(y)); equality is permitted, so isometries are included. This directly implies injectivity and gives a 1-Lipschitz inverse on the image, with no need to assume differentiability. A Lipschitz map is uniformly continuous because the same distance threshold works everywhere. Surjectivity does not follow on arbitrary noncompact sets: translation can move an infinite ray into a proper subset while preserving distances. On the compact interval [0,1], the diameter is 1. The distance between the endpoint images must equal that maximum, so the images are opposite endpoints; continuity then fills the intervening interval. The inverse domain is f(K), not automatically all of K until surjectivity has been established. Distinguish expansion of distances from contraction: it is the inverse whose Lipschitz constant is at most one.",
+      "similar_questions": [
+        {
+          "prompt": "On K=R define f(x)=2x. Verify the inequality and determine the inverse’s Lipschitz constant.",
+          "solution": "|f(x)−f(y)|=2|x−y|≥|x−y|. The map is onto R and its inverse is s/2, with Lipschitz constant 1/2."
+        },
+        {
+          "prompt": "On K=[0,∞), does f(x)=x+2 satisfy the hypotheses and is it onto?",
+          "solution": "It is continuous and |f(x)−f(y)|=|x−y|. Its image is [2,∞), so it is not onto K. The inverse on this image is s−2 and is 1-Lipschitz."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; checked against NTA Final Answer Key, Mathematical Sciences, 25 July 2024, PDF page 3, question ID 704070, answer 1,2,3: https://nta.ac.in/Download/Notice/Notice_20240911185103.pdf. No candidate response used as an answer key.",
+      "page": 48,
+      "image": "assets/questions/2024-june-q070.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,2068 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2020-june-26nov-q001",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 1,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Find $f(0)$ if $f(x+2)=(x+1)^{34}-(x+1)^{33}+5$.",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "6",
+        "D": "72"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Choose x so that x+2=0.",
+        "At x=-2, the base x+1 is -1; distinguish even and odd powers."
+      ],
+      "solution": "Put $x=-2$. Then $f(0)=(-1)^{34}-(-1)^{33}+5=1-(-1)+5=7$. Thus B is correct; A omits the power terms, C misses their difference, and D is not the evaluated expression.",
+      "theory": "A functional formula with a shifted argument must be evaluated by solving for the input variable first. Here the argument of f is x+2, so asking for f(a) means substituting x=a-2, rather than x=a. Integer powers preserve the sign of a negative base exactly when the exponent is odd. Thus (-1) to an even power equals 1, and to an odd power equals -1. Parentheses matter: (-1)^34 differs from -1^34. This substitution method uses only the stated identity and needs no assumption that f is a polynomial or continuous. A useful check is to rewrite the identity directly in terms of t=x+2.",
+      "similar_questions": [
+        {
+          "prompt": "If $g(x+3)=(x+2)^6-(x+2)^5+4$, find g(0).",
+          "solution": "Set x=-3: g(0)=1-(-1)+4=6."
+        },
+        {
+          "prompt": "If $h(x-1)=x^2+2x$, find h(2).",
+          "solution": "Set x=3: h(2)=9+6=15."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 1, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-26nov-q001.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q002",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 2,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Find the shortest distance between the parallel lines A and B in the figure. A passes through (0,0) with slope 1; B passes through (0,-2) and (2,0).",
+      "options": {
+        "A": "$\\sqrt2$",
+        "B": "2",
+        "C": "$2\\sqrt2$",
+        "D": "$2\\sqrt3$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Write the two lines with the same normal vector.",
+        "Use the distance formula for ax+by+c=0."
+      ],
+      "solution": "The lines are $x-y=0$ and $x-y-2=0$. Their perpendicular separation is $|0-(-2)|/\\sqrt{1^2+(-1)^2}=\\sqrt2$. A is correct. The vertical intercept difference 2 in B is not the perpendicular distance; C and D exceed it.",
+      "theory": "The shortest segment joining two parallel lines is perpendicular to both. If their equations share coefficients a and b, their distance is |c1-c2|/sqrt(a²+b²). The denominator normalizes the normal vector (a,b); simply subtracting intercepts usually measures a vertical or horizontal segment instead. Equations must be scaled consistently before applying the formula. The graphical points determine slope and intercept, and the calculation then avoids errors from drawing scale. Rotating or translating the coordinate system cannot change the perpendicular separation. For lines of slope 1, vertical separation is sqrt(2) times the true distance.",
+      "similar_questions": [
+        {
+          "prompt": "Find the distance between x-y=1 and x-y=5.",
+          "solution": "It is 4/sqrt(2)=2sqrt(2)."
+        },
+        {
+          "prompt": "Find the distance between 3x+4y=2 and 3x+4y=12.",
+          "solution": "Normalize the normal (3,4), whose length is 5: distance=10/5=2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 2, PDF page 1. No candidate response used as an answer key.",
+      "page": 1,
+      "image": "assets/questions/2020-june-26nov-q002.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q004",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 4,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Exactly one of A,B,C,D committed a crime. A and D always tell the truth; B and C always lie. C and D are indistinguishable twins. A says “D is innocent”; B says “A is guilty”; one twin says “A is innocent” and the other “B is guilty”. Which statement is FALSE?",
+      "options": {
+        "A": "D said “A is innocent”.",
+        "B": "D is innocent.",
+        "C": "B is innocent.",
+        "D": "C is innocent."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use the statements of the two identified speakers first.",
+        "A is innocent, so which twin could truthfully say otherwise?"
+      ],
+      "solution": "A is truthful, so D is innocent. B lies, so A is innocent. Therefore the twin saying “A is innocent” must be D, and the twin saying “B is guilty” must be C. The latter statement is false, so B is innocent. Since exactly one suspect is guilty, C is guilty. A, B and C are true statements; D is the false statement.",
+      "theory": "Truth-teller problems translate each utterance into a proposition and a truth value fixed by its speaker. A liar’s statement is false; that does not mean every word in it changes independently. Start with speakers whose identities are known, then use resulting facts to identify anonymous speakers. The condition that exactly one person committed the crime is a separate logical constraint, used after innocence has been established. Here the truth value of “A is innocent” distinguishes the identical twins even though their appearance does not. Avoid assuming that a guilty person lies or an innocent person tells the truth: guilt and truthfulness are independent properties in the premises.",
+      "similar_questions": [
+        {
+          "prompt": "Exactly one of P,Q is guilty. A truthful witness says P is innocent. Who is guilty?",
+          "solution": "P is innocent by truthfulness, so Q is guilty by exclusivity."
+        },
+        {
+          "prompt": "A liar says “R is guilty”. What follows?",
+          "solution": "The proposition is false, so R is innocent; no conclusion about the speaker’s guilt follows."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 4, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-26nov-q004.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q005",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 5,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Which diagram in the source correctly represents quadrupeds, mammals, whales and house lizards?",
+      "options": {
+        "A": "One large rectangle contains a smaller rectangle and a separate circle; the smaller rectangle contains another circle.",
+        "B": "Two overlapping rectangles; one circle lies in the overlap and another in only one rectangle.",
+        "C": "A rectangle contains a smaller rectangle and a circle, with another circle outside.",
+        "D": "Two overlapping rectangles, with a circle in the exclusive region of each rectangle."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Mammals and quadrupeds overlap, but neither contains the other.",
+        "Place whales among mammals outside quadrupeds, and house lizards among quadrupeds outside mammals."
+      ],
+      "solution": "Whales are mammals but not quadrupeds; house lizards are quadrupeds but not mammals. Many animals such as dogs belong to the intersection of mammals and quadrupeds. Thus two overlapping large sets are needed, with whales and lizards in their respective exclusive regions, exactly D. A and C incorrectly impose containment; B puts one of the small categories in the intersection.",
+      "theory": "A set diagram represents membership, inclusion and overlap, rather than the size or appearance of an animal category. A subgroup category must lie wholly inside its parent category. Two categories overlap when some objects belong to both, but neither contains all of the other. Quadrupeds include reptiles as well as mammals, while mammals include whales and humans that are not quadrupeds in the ordinary sense. These examples establish proper overlap. The two smaller named categories are disjoint and each belongs to exactly one of the larger categories. Check each diagram using explicit example animals; this is more reliable than choosing a familiar-looking arrangement.",
+      "similar_questions": [
+        {
+          "prompt": "Represent birds, flying animals and penguins.",
+          "solution": "Birds and flying animals overlap; penguins lie inside birds outside flying animals."
+        },
+        {
+          "prompt": "Represent squares, rectangles and circles.",
+          "solution": "Squares lie inside rectangles, and circles lie outside rectangles; containment is required here."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 5, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-26nov-q005.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q007",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 7,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "Water is filled into a cone from the top at a constant volumetric rate. The rate of increase of the height of the water column:",
+      "options": {
+        "A": "Is linearly dependent on time.",
+        "B": "Depends on the apex angle of the cone.",
+        "C": "Increases as the cube root of the volumetric rate.",
+        "D": "Increases as the square root of the volumetric rate."
+      },
+      "correct_options": [],
+      "hints": [
+        "Express water volume using height and the cone half-angle.",
+        "Compare rates at fixed height and at fixed elapsed time: these are different comparisons."
+      ],
+      "solution": "This single-answer question lacks a specified comparison. For an initially empty cone with downward vertex and half-angle $\\theta$, $Qt=(\\pi\\tan^2\\theta/3)h^3$. Therefore $\\dot h=(1/3)[3Q/(\\pi\\tan^2\\theta)]^{1/3}t^{-2/3}$. Both B and C are true at fixed elapsed time. At fixed height, $\\dot h=Q/(\\pi h^2\\tan^2\\theta)$, so B is true but C is not. A and D do not match either formula. A unique graded answer requires specifying what is held fixed and the cone orientation/initial condition.",
+      "theory": "Related-rate problems must distinguish a rate as a function of position from the same rate as a function of time. For a cone with water starting at its vertex, similarity gives radius r=h tan(theta), and volume is pi h³ tan²(theta)/3. Differentiating volume with respect to time yields Q=A(h)h-dot, where A is the cross-sectional area. Integrating the constant inflow gives a second formula involving elapsed time and the initial water volume. Scaling Q at fixed h is linear, whereas scaling it at fixed elapsed time from empty is a cube-root law. An unstated comparison can therefore make apparently competing options simultaneously true.",
+      "similar_questions": [
+        {
+          "prompt": "In a cone with tan(theta)=1 and Q=pi, find h(t) from empty.",
+          "solution": "h³=3t, hence h=(3t)^(1/3) and h-dot=(3t)^(-2/3)."
+        },
+        {
+          "prompt": "At h=2 in the same cone, compare Q=pi and Q=8pi.",
+          "solution": "h-dot=Q/(pi h²): rates are 1/4 and 2, a factor of 8."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The usual initially empty cone model makes both B and C true at fixed time; Part A requires one choice and does not specify the comparison.",
+      "answer_source": "Independent mathematical derivation; question 7, PDF page 2. No candidate response used as an answer key.",
+      "page": 2,
+      "image": "assets/questions/2020-june-26nov-q007.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q009",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 9,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The source graph gives the wavelength-dependent absorbance of compounds A and B. Mixture absorbance is linear in their concentrations. R is absorbance at 650 nm divided by absorbance at 950 nm. If the mixture contains 95% A, what is R?",
+      "options": {
+        "A": "95",
+        "B": "5",
+        "C": "1",
+        "D": "Less than 1"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use a concentration-weighted sum at each wavelength.",
+        "The graph shows A much lower at 650 than 950; only 5% of the strongly absorbing B is present."
+      ],
+      "solution": "Write $R=[0.95a_{650}+0.05b_{650}]/[0.95a_{950}+0.05b_{950}]$. The plotted heights give a smaller numerator than denominator: A rises substantially between the two wavelengths, while the small 5% contribution from B does not offset that rise. Thus R<1, D. The composition percentages themselves are not absorbance ratios, rejecting A and B; equality in C is also inconsistent with the plotted weighted heights.",
+      "theory": "Absorbance additivity means that each compound’s pure-spectrum height is multiplied by its concentration fraction before the contributions are summed. The ratio of sums is not a sum of ratios, nor does a 95% concentration imply a ratio of 95. A spectrum can be used qualitatively when its relative heights clearly establish an inequality. If numerical absorbances are absent, the graph cannot specify the precise ratio, but can still distinguish whether it lies below or above one. The condition for R<1 is 0.95(a950-a650)>0.05(b650-b950). This explicitly identifies the two competing spectral changes and explains why concentration weighting is essential.",
+      "similar_questions": [
+        {
+          "prompt": "A has absorbances 1,4 and B has 8,2 at two wavelengths. Find R for 90% A.",
+          "solution": "R=(0.9+0.8)/(3.6+0.2)=17/38<1."
+        },
+        {
+          "prompt": "For those spectra, what fraction c of A gives R=1?",
+          "solution": "c+8(1-c)=4c+2(1-c), so 6=9c and c=2/3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 9, PDF page 3. No candidate response used as an answer key.",
+      "page": 3,
+      "image": "assets/questions/2020-june-26nov-q009.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q010",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 10,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In a population P, disease spread rate R is proportional to both affected population N and unaffected population P-N. Which source graph is correct?",
+      "options": {
+        "A": "A straight increasing line.",
+        "B": "An asymmetric hump with a positive tail at N=P.",
+        "C": "A downward parabola through N=0 and N=P.",
+        "D": "An increasing convex curve."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Translate both proportionalities into one product.",
+        "Find the zeros and symmetry of R(N)."
+      ],
+      "solution": "$R=kN(P-N)$ for k>0. It is a concave quadratic, vanishes at 0 and P, is symmetric about P/2, and has its maximum there. Graph C has these properties. A and D do not vanish at P; B is asymmetric and retains a tail rather than the required second zero.",
+      "theory": "Proportionality to two varying quantities simultaneously produces their product multiplied by a constant. In a closed epidemic model the number of unaffected people is P-N, not a separate constant. The product N(P-N) captures both scarcity of infectious people at the beginning and scarcity of susceptible people at the end. Its second derivative is negative and its first derivative vanishes at N=P/2. This determines the graph without solving for N as a function of time. A logistic population curve plots N against time, while this question plots its rate against N; confusing those axes is a common mistake.",
+      "similar_questions": [
+        {
+          "prompt": "For P=100 and k=0.01 find the maximum rate.",
+          "solution": "Maximum occurs at N=50, giving R=0.01(50)(50)=25."
+        },
+        {
+          "prompt": "When does R equal half its maximum?",
+          "solution": "N(P-N)=P²/8 yields N=P(1±1/sqrt(2))/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 10, PDF page 3. No candidate response used as an answer key.",
+      "page": 3,
+      "image": "assets/questions/2020-june-26nov-q010.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q011",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 11,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A and B finish a job in 30 days; B and C in 24 days; C and A in 28 days. Which conclusion is correct?",
+      "options": {
+        "A": "C is most efficient and B least.",
+        "B": "B is most efficient; the least cannot be determined.",
+        "C": "C is most efficient; the least cannot be determined.",
+        "D": "C is most efficient and A least."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Let individual daily work rates be a,b,c.",
+        "Subtract pairwise-rate equations instead of comparing days directly."
+      ],
+      "solution": "The rates satisfy a+b=1/30, b+c=1/24, c+a=1/28. Subtracting gives c-a=1/120>0 and c-b=1/420>0; also b-a=1/168>0. Hence c>b>a. D is correct. A misidentifies the least efficient, B the most efficient, and C incorrectly says the least is undetermined.",
+      "theory": "For independent workers on the same job, daily completion fractions add. A completion time t corresponds to rate 1/t, so fewer days means larger rate. Three pairwise totals determine three individual rates uniquely by linear equations. Even when only ordering is needed, subtracting two equations isolates a difference of individual rates and avoids unnecessary arithmetic. This assumes the workers’ efficiencies remain constant and their combined work is additive. Comparing pair completion times directly with individual worker names is unreliable because each pair shares a different colleague. Positivity of derived rates is a useful consistency check for any numerical work-rate problem.",
+      "similar_questions": [
+        {
+          "prompt": "If a+b=1/10, b+c=1/12, a+c=1/15, order the workers.",
+          "solution": "a-c=1/60>0, b-a=1/60>0, so b>a>c."
+        },
+        {
+          "prompt": "Two workers take 6 and 12 days individually. Find their joint time.",
+          "solution": "Rates sum to 1/6+1/12=1/4, so they take 4 days."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 11, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-26nov-q011.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q014",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 14,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The source plot shows water samples A=(12°C,35 g/kg), B=(16°C,35 g/kg), C=(12°C,32 g/kg), D=(16°C,32 g/kg). Which has highest density?",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "In this temperature range, cooling increases water density.",
+        "At a fixed temperature, higher salinity increases density."
+      ],
+      "solution": "A has the lower of the two temperatures and the higher of the two salinities. It is denser than B by temperature, denser than C by salinity, and denser than D by both. Thus A is correct. This comparison uses the ordinary water-density trends over 12–16°C.",
+      "theory": "Water density depends on temperature and dissolved salt concentration. Over the temperatures shown, thermal expansion makes warmer water less dense. Adding salt increases mass per volume and raises density. When one sample dominates another in both favorable directions, its ordering does not require a quantitative density formula. If temperature and salinity changes compete, however, a formula or additional information is needed to decide the result. The low-temperature density anomaly of pure water near 4°C does not apply to the 12–16°C comparison here. Reading both graph axes is essential: selecting only the coldest sample leaves a tie that salinity resolves.",
+      "similar_questions": [
+        {
+          "prompt": "Compare water at 15°C,35 g/kg with 20°C,32 g/kg.",
+          "solution": "The former is colder and saltier, so it is denser in this range."
+        },
+        {
+          "prompt": "Can trends alone compare 15°C,32 g/kg with 20°C,35 g/kg?",
+          "solution": "No. Colder favors the first, saltier favors the second; quantitative density information is required."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 14, PDF page 4. No candidate response used as an answer key.",
+      "page": 4,
+      "image": "assets/questions/2020-june-26nov-q014.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q016",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 16,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A boat weighs 60 kg. Oarsmen A and B weigh 80 and 90 kg. At constant power, course time is proportional to total weight. Alone they finish in 1 hour and 1½ hours, respectively. Their powers add. Find their joint time.",
+      "options": {
+        "A": "49.5 min",
+        "B": "57.5 min",
+        "C": "62.6 min",
+        "D": "72.5 min"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use t=K W/P for the fixed course.",
+        "Infer each power from its solo total weight, including the boat."
+      ],
+      "solution": "Write t=K W/P. Thus P_A/K=140/1=140 and P_B/K=150/1.5=100. Together W=230 and (P_A+P_B)/K=240, giving t=230/240 hours=57.5 minutes. B is correct; A,C,D do not follow the additive-power calculation.",
+      "theory": "The stated model separates total carried weight and applied power for a fixed course: time is proportional to weight and inversely proportional to power. Solo completion times must include the boat’s mass as well as the rower’s. When rowers combine, powers add while the boat is counted only once. Ordinary work-rate addition is not directly applicable because the carried weight changes between solo and joint trials. Introducing a shared constant K lets it cancel after the powers have been inferred in common units. Checking units helps: weight divided by power has time units up to the same course constant, and final hours must be converted to minutes.",
+      "similar_questions": [
+        {
+          "prompt": "A 20 kg boat carries rowers of 60 kg each. Each alone takes 1 h. Joint time?",
+          "solution": "Each power/K=80. Joint weight=140, combined power/K=160, so time=7/8 h=52.5 min."
+        },
+        {
+          "prompt": "If a 100 kg total load takes 2 h, how long for 150 kg at twice the power?",
+          "solution": "Time multiplies by (150/100)/2=3/4: 1.5 h."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 16, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-26nov-q016.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q017",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 17,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A parallelogram ABCD has base length a, height h, centre O, and E the midpoint of CD. Find area of triangle OAE.",
+      "options": {
+        "A": "ah/5",
+        "B": "ah/6",
+        "C": "ah/8",
+        "D": "ah/7"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use an affine coordinate system for the parallelogram.",
+        "The determinant of the two triangle edge vectors gives the area fraction."
+      ],
+      "solution": "Set C=0, D=u, B=v, A=u+v, where |det(u,v)|=ah. Then E=u/2 and O=(u+v)/2. The edge vectors A-E=u/2+v and O-E=v/2 have determinant det(u,v)/4. Triangle area is half its magnitude, ah/8. C is correct; the other fractions are different.",
+      "theory": "Area ratios in a parallelogram are preserved by affine transformations, so a skew drawing need not be treated with trigonometry. Choose its two side vectors as a coordinate basis. Midpoints and the centre then have simple vector expressions, and the determinant of two edge vectors gives the oriented parallelogram area. A triangle has half that area. The physical side length b is irrelevant because the total area is already given by base times perpendicular height. A common mistake is to apply a triangle’s half-area factor twice without identifying its actual base and altitude, or to use the slanted side as the height.",
+      "similar_questions": [
+        {
+          "prompt": "For a rectangle of area 80 with the same O,E construction, find triangle OAE area.",
+          "solution": "The affine-invariant fraction is 1/8, so area=10."
+        },
+        {
+          "prompt": "Triangle ACD in a parallelogram has what area?",
+          "solution": "Its base CD is a and altitude h, so area=ah/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 17, PDF page 5. No candidate response used as an answer key.",
+      "page": 5,
+      "image": "assets/questions/2020-june-26nov-q017.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q018",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 18,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "The sum of the first n positive even integers is:",
+      "options": {
+        "A": "Divisible by n but not n+1.",
+        "B": "Divisible by n+1 but not n.",
+        "C": "Divisible by both n and n+1.",
+        "D": "Divisible by neither n nor n+1."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Factor 2 out of the sum.",
+        "Use the formula for 1+2+⋯+n."
+      ],
+      "solution": "The sum is 2(1+2+⋯+n)=2n(n+1)/2=n(n+1). For every positive integer n, both n and n+1 divide this product. C is correct; A,B,D deny one or both explicit factors.",
+      "theory": "A sum of consecutive terms in an arithmetic progression equals the number of terms times the average of its first and last terms. The first n positive even integers are 2,4,…,2n, so their average is n+1 and their sum is n(n+1). Divisibility is easiest to establish by factoring rather than examining selected small values. Showing an integer m divides a quantity means expressing it as m times an integer. Both factors are positive integers here. The question concerns universal statements for all positive n; a single numerical example cannot prove them, though it can expose an incorrect claim.",
+      "similar_questions": [
+        {
+          "prompt": "Sum the first 20 even integers.",
+          "solution": "20(21)=420."
+        },
+        {
+          "prompt": "Find the sum of the first n odd positive integers.",
+          "solution": "There are n terms with first 1 and last 2n-1, averaging n; sum=n²."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 18, PDF page 6. No candidate response used as an answer key.",
+      "page": 6,
+      "image": "assets/questions/2020-june-26nov-q018.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q019",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 19,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "A,B,C,D,E are the five equally spaced vertices on a circle, labeled as in the source pentagram. Find ∠ABC.",
+      "options": {
+        "A": "48°",
+        "B": "72°",
+        "C": "54°",
+        "D": "36°"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Identify the minor arc AC not containing B.",
+        "An inscribed angle equals half its intercepted arc."
+      ],
+      "solution": "In the circular ordering shown, A and C are neighboring pentagon vertices. Their minor arc has central angle 360°/5=72°. The inscribed angle ABC intercepts that arc, so ∠ABC=36°. D is correct; 72° is the central angle, while 48° and 54° are neither relevant angle.",
+      "theory": "A regular polygon’s vertices lie equally spaced on its circumcircle. Neighboring vertices of a regular pentagon subtend 72 degrees at the centre. An angle whose vertex lies on the circle equals half the central angle subtending the same arc, provided the intercepted arc excludes that vertex. Labels in a star drawing need not run around the polygon in alphabetical order; first read their geometric positions. The pentagram’s sharp tips are 36 degrees, while the convex pentagon’s interior angles are 108 degrees. These are distinct constructions. The circle theorem provides the answer without measuring the diagram or assuming drawn lines are horizontal.",
+      "similar_questions": [
+        {
+          "prompt": "Find a pentagram tip angle for five regular vertices.",
+          "solution": "It intercepts a one-step arc of 72°, hence equals 36°."
+        },
+        {
+          "prompt": "What is the convex regular pentagon’s interior angle?",
+          "solution": "The sum is (5-2)180°=540°, so each is 108°."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 19, PDF page 6. No candidate response used as an answer key.",
+      "page": 6,
+      "image": "assets/questions/2020-june-26nov-q019.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q020",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 20,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "On a 200 m straight road, the maximum number of poles are placed at 20 m intervals. How many must be removed to retain the maximum number at 40 m intervals?",
+      "options": {
+        "A": "8",
+        "B": "6",
+        "C": "5",
+        "D": "4"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Count intervals first, then include both endpoints.",
+        "Retain every second pole starting from an endpoint."
+      ],
+      "solution": "At 20 m spacing there are 200/20+1=11 poles, at positions 0,20,…,200. At 40 m spacing there are 200/40+1=6 poles, at 0,40,…,200. Remove 11-6=5, so C is correct. A,B,D give incompatible remaining counts.",
+      "theory": "For a closed line segment, equally spaced points include both endpoints when length is an integer multiple of spacing. Therefore m intervals require m+1 points. Counting objects and gaps interchangeably causes the usual off-by-one error. Doubling the spacing retains every other original pole. Starting at an endpoint achieves the maximum count here; starting at 20 m retains only five poles because neither endpoint is included. Both counts must use the same endpoint convention before subtraction. This differs from points around a closed circular track, where the number of equal gaps equals the number of points rather than one less.",
+      "similar_questions": [
+        {
+          "prompt": "A 120 m road has poles every 10 m. How many are removed for 30 m spacing?",
+          "solution": "There are 13 initially and 5 finally, so remove 8."
+        },
+        {
+          "prompt": "How many poles at 20 m intervals on a circular 200 m track?",
+          "solution": "There are 10 intervals and 10 distinct poles, since the final point coincides with the first."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 20, PDF page 6. No candidate response used as an answer key.",
+      "page": 6,
+      "image": "assets/questions/2020-june-26nov-q020.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q021",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 21,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For subsets $E_n\\subset\\mathbb R$, define $\\limsup E_n=\\bigcap_{k=1}^\\infty\\bigcup_{n=k}^\\infty E_n$ and $\\liminf E_n=\\bigcup_{k=1}^\\infty\\bigcap_{n=k}^\\infty E_n$. Which statement is true?",
+      "options": {
+        "A": "$\\limsup E_n=\\liminf E_n$.",
+        "B": "$\\limsup E_n=\\{x:x\\in E_n\\text{ for some }n\\}$.",
+        "C": "$\\liminf E_n=\\{x:x\\in E_n\\text{ for all finitely many }n\\}$.",
+        "D": "$\\liminf E_n=\\{x:x\\in E_n\\text{ for infinitely many }n\\}$."
+      },
+      "correct_options": [],
+      "hints": [
+        "Translate the intersections and unions into quantifiers.",
+        "The correct liminf description is “for all but finitely many n”; compare the exact printed wording."
+      ],
+      "solution": "The formulas give $x\\in\\limsup E_n$ iff every tail contains an index with x in E_n, equivalently infinitely many memberships. They give $x\\in\\liminf E_n$ iff x belongs to every E_n after some index. A fails for alternating empty/{0} sets; B fails for E_1={0} and E_n=∅ thereafter; D describes limsup. C prints “for all finitely many n”, which is not “for all BUT finitely many n” and has no standard quantified meaning. If “but” were supplied C would be correct, but the printed question has no unambiguous answer.",
+      "theory": "Set limits are membership-based operations, not topological limits of points. Limsup contains points appearing infinitely often; liminf contains points appearing eventually always. The inclusion liminf⊆limsup holds without any regularity assumption. Equality occurs when each point’s membership eventually stabilizes, as with increasing or decreasing sets. A union over all indices requires only one membership, whereas an intersection of tail unions requires memberships arbitrarily far out. An existential tail followed by universal membership is different again. Exact quantifiers matter: “finitely many” and “all but finitely many” express almost opposite behavior. This is why a missing word cannot safely be repaired when assigning a graded answer.",
+      "similar_questions": [
+        {
+          "prompt": "Let E_n={0} for even n and {1} for odd n. Find both limits.",
+          "solution": "Limsup={0,1}; liminf=∅ because neither point appears eventually always."
+        },
+        {
+          "prompt": "Let E_n=[0,1-1/n]. Find both limits.",
+          "solution": "The sets increase and their union is [0,1), so both limits are [0,1)."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option C omits “but”; the exact printed options provide no unambiguous true assertion.",
+      "answer_source": "Independent mathematical derivation; question 21, PDF page 7. No candidate response used as an answer key.",
+      "page": 7,
+      "image": "assets/questions/2020-june-26nov-q021.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q036",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 36,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $p\\ge1$ be an integer and $r(t)=e^{it}$, $0\\le t\\le2\\pi$. Let f be holomorphic on $|z|<R$, R>1, with its only zero at $z_0$, $0<|z_0|<R$, of multiplicity q. Evaluate $(2\\pi i)^{-1}\\int_r [f\\prime(z)/f(z)]z^p\\,dz$.",
+      "options": {
+        "A": "$qz_0^p$",
+        "B": "$z_0q^p$",
+        "C": "$pz_0^q$",
+        "D": "$z_0p^q$"
+      },
+      "correct_options": [],
+      "hints": [
+        "Locate the zero relative to the unit circle, not merely the radius R.",
+        "The logarithmic derivative has residue q at a zero of multiplicity q."
+      ],
+      "solution": "Locally $f(z)=(z-z_0)^qh(z)$ with h nonzero, so $f\\prime/f=q/(z-z_0)+h\\prime/h$. If |z_0|<1 the residue theorem gives qz_0^p, option A. If 1<|z_0|<R, the integrand is holomorphic inside the contour and the integral is 0, absent from all options. If |z_0|=1, it is singular on the contour and the ordinary integral is undefined. The hypothesis permits all three cases, so A cannot be asserted universally; B–D are not the residue formula either.",
+      "theory": "The logarithmic derivative f-prime/f has a simple pole at each zero, with residue equal to its multiplicity. Multiplying by a holomorphic weight g changes that residue to multiplicity times g at the zero. The residue theorem sums only singularities enclosed by the actual integration contour, and requires no singularity on that contour. A disk of holomorphy larger than the unit disk does not imply that its zeros lie inside the unit circle. Holomorphy of f itself on the contour also does not make f-prime/f regular there when f vanishes. These localization conditions are indispensable in weighted versions of the argument principle.",
+      "similar_questions": [
+        {
+          "prompt": "Take f(z)=(z-1/2)^3, p=2, on the unit circle. Evaluate the weighted integral.",
+          "solution": "It is 3(1/2)²=3/4."
+        },
+        {
+          "prompt": "Take f(z)=z-2, holomorphic on |z|<3, with the same contour.",
+          "solution": "Its zero lies outside the unit disk; the integral is 0 for every p≥1."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Missing condition |z0|<1; the stated zero location allows outside and on-contour cases.",
+      "answer_source": "Independent mathematical derivation; question 36, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2020-june-26nov-q036.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q041",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 41,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "For positive integer k, consider $y\\prime=y^{5k/(5k+2)}$ for t>0, y(0)=0. Which assertion about C¹ solutions on (0,∞) is true?",
+      "options": {
+        "A": "A unique solution exists.",
+        "B": "At most two solutions exist.",
+        "C": "Infinitely many solutions exist.",
+        "D": "No solution exists."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The exponent α=5k/(5k+2) is between 0 and 1.",
+        "Construct solutions that remain zero until an arbitrary waiting time."
+      ],
+      "solution": "Let α=5k/(5k+2). For every T≥0, define y_T(t)=0 for t≤T and $[(1-\\alpha)(t-T)]^{1/(1-\\alpha)}$ for t>T. Since 1/(1-α)=(5k+2)/2>1, both y and its derivative join continuously at T. Direct differentiation verifies the ODE on both sides. Different T give infinitely many solutions, including the zero solution. C is true; A,B,D are contradicted.",
+      "theory": "Continuity of the right-hand side ensures existence locally, but uniqueness generally requires local Lipschitz regularity in the dependent variable. A power y^α with 0<α<1 is not locally Lipschitz at zero, since its derivative grows without bound there. Separation is valid on a positive branch and gives y=[(1-α)(t-T)]^(1/(1-α)). The branch can be joined to the zero solution at any waiting time because its first derivative vanishes at the join. Dividing by y^α before considering y=0 would discard these solutions. The construction uses only nonnegative y and therefore avoids issues about defining fractional powers for negative arguments.",
+      "similar_questions": [
+        {
+          "prompt": "Solve y-prime=sqrt(y), y(0)=0 with waiting time T.",
+          "solution": "y=0 until T and y=(t-T)²/4 afterward; every T≥0 gives a C¹ solution."
+        },
+        {
+          "prompt": "Does y-prime=y, y(0)=0 admit such waiting solutions?",
+          "solution": "No. The right side is Lipschitz, and the unique solution is identically zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 41, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2020-june-26nov-q041.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q042",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 42,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let y0,z0>0 and α>1. Compare $y\\prime=y^\\alpha$, y(0)=y0, and $z\\prime=-z^\\alpha$, z(0)=z0. Global means defined for every t>0.",
+      "options": {
+        "A": "Both are global.",
+        "B": "Neither is global.",
+        "C": "y is global while z blows up in finite time.",
+        "D": "z is global while y blows up in finite time."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Separate variables using y^(1-α).",
+        "The sign changes whether the positive denominator reaches zero."
+      ],
+      "solution": "$y(t)=[y_0^{1-\\alpha}-(\\alpha-1)t]^{-1/(\\alpha-1)}$ blows up at T=y0^(1-α)/(α-1). In contrast $z(t)=[z_0^{1-\\alpha}+(\\alpha-1)t]^{-1/(\\alpha-1)}$ stays positive, finite and decreases to zero for all t≥0. Thus D is true, A–C false.",
+      "theory": "For autonomous power equations with positive initial values, separation of variables produces explicit maximal solutions. A maximal solution may cease to exist at finite time even though the right-hand side is smooth on positive values: unbounded growth is the obstruction here. The sign of the vector field determines whether the solution increases or decreases, while the exponent α>1 makes growth fast enough to blow up in finite time. Negative drift keeps the solution positive and decreasing, approaching zero only asymptotically. The denominator must remain positive in the explicit formula; extending past its zero would not give the same real classical solution.",
+      "similar_questions": [
+        {
+          "prompt": "For y-prime=y², y(0)=2, find blow-up time.",
+          "solution": "y=2/(1-2t), so T=1/2."
+        },
+        {
+          "prompt": "For z-prime=-z³, z(0)=1, find z.",
+          "solution": "z(t)=(1+2t)^(-1/2), global and decreasing to zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 42, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2020-june-26nov-q042.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q043",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 43,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Find the general family of surfaces perpendicular to $z^2=kxy$, k∈ℝ.",
+      "options": {
+        "A": "$\\phi(x^2-y^2,xz)=0$",
+        "B": "$\\phi(x^2-y^2,x^2+z^2)=0$",
+        "C": "$\\phi(x^2-y^2,2x^2+z^2)=0$",
+        "D": "$\\phi(x^2+y^2,3x^2-z^2)=0$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Orthogonality requires the new surface normal to be perpendicular to (-ky,-kx,2z).",
+        "Find two first integrals of this vector field after eliminating k=z²/(xy)."
+      ],
+      "solution": "On a regular region the characteristic field can be scaled to $V=(-yz,-xz,2xy)$. It annihilates I1=x²-y² and I2=2x²+z²: V·∇I1=0 and V·∇I2=0. Thus φ(I1,I2)=0 has normal orthogonal to the old normal, yielding C. For A, V(xz)=y(2x²-z²); for B, V(x²+z²)=2xyz; for D, V(x²+y²)=-4xyz. These are not invariants, rejecting the other general families.",
+      "theory": "Orthogonal surfaces are obtained by requiring their normals to have zero scalar product with the normal of the given family. This is a first-order linear PDE for their implicit defining function. Its characteristics follow the original normal vector field; two independent first integrals describe the general local integral surfaces. Eliminating the family parameter is legitimate on regular regions where the required division is defined, and scaling a vector field by a nonzero factor preserves its integral curves. Every smooth function of its invariants is constant along those curves. Degenerate points require local care, but do not change the listed general family on regular regions.",
+      "similar_questions": [
+        {
+          "prompt": "Find invariants for V=(-y,-x,0).",
+          "solution": "V(x²-y²)=0 and V(z)=0, so φ(x²-y²,z)=0 is the general local family."
+        },
+        {
+          "prompt": "Check I=2x²+z² for V=(-yz,-xz,2xy).",
+          "solution": "∇I=(4x,0,2z); dot product is -4xyz+4xyz=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 43, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2020-june-26nov-q043.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q044",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 44,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Find the general solution of $x z_x+y z_y=0$. Options use arbitrary C¹ functions φ on ℝ.",
+      "options": {
+        "A": "$z=\\phi(|x|/|y|)$",
+        "B": "$z=\\phi((x-1)/y)$",
+        "C": "$z=\\phi((x+1)/y)$",
+        "D": "$z=\\phi(|x|+|y|)$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Characteristics satisfy dx/x=dy/y=dz/0.",
+        "On a quadrant the ratio x/y, equivalently |x|/|y|, is constant."
+      ],
+      "solution": "On each open quadrant, characteristics are radial rays and z is constant on them. Their invariant is x/y, or equivalently |x|/|y| with the quadrant fixed; hence A is the listed local general solution. For u=(x-1)/y, xu_x+yu_y=1/y; for u=(x+1)/y it is -1/y. For u=|x|+|y| the derivative along the radial field equals u. Thus B,C,D fail for arbitrary φ. Formula A is understood locally with y≠0 and fixed signs; globally across quadrants separate functions may be necessary.",
+      "theory": "The method of characteristics converts a first-order PDE into ODEs along curves on which the unknown has prescribed evolution. Here x and y scale by the same factor while z remains constant, so solutions are homogeneous of degree zero on radial regions. Ratios of coordinates supply invariants. Absolute values lose sign information globally, but on a fixed quadrant they differ from x/y by a constant sign and describe the same arbitrary-function family. At y=0 the displayed ratio formula is unavailable; another chart is needed. At the origin a continuous global degree-zero solution must be constant. Always state the local domain when a characteristic formula uses divisions or absolute values.",
+      "similar_questions": [
+        {
+          "prompt": "Solve 2x z_x+2y z_y=0 on x,y>0.",
+          "solution": "The common factor 2 cancels; z=φ(x/y)."
+        },
+        {
+          "prompt": "Verify z=x/y solves the PDE where y≠0.",
+          "solution": "z_x=1/y and z_y=-x/y², so xz_x+yz_y=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 44, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2020-june-26nov-q044.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q045",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 45,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be infinitely differentiable on a bounded interval I. Fix n>1 distinct nodes x0,…,x(n-1), and add nodes x(n+j)=xj+ε, all 2n nodes distinct. Let p(2n-1) be their Lagrange polynomial and q(2n-1) the Hermite polynomial matching f and f′ at the original n nodes. As ε→0, what happens to sup over I of |p-q|?",
+      "options": {
+        "A": "Need not converge.",
+        "B": "Converges to 1/(2n).",
+        "C": "Converges to 0.",
+        "D": "Converges to 1/(2n+1)."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Replace each pair of interpolation conditions by a value and a divided difference.",
+        "The divided difference tends to f′ at its fixed node."
+      ],
+      "solution": "The conditions p(xj)=f(xj) and [p(xj+ε)-p(xj)]/ε=[f(xj+ε)-f(xj)]/ε tend to p(xj)=f(xj), p′(xj)=f′(xj). The limiting Hermite system is nonsingular for distinct original nodes. Therefore the 2n polynomial coefficients converge to those of q. Because I is bounded and the degree is fixed, coefficient convergence gives uniform convergence on I. The supremum tends to zero: C; A,B,D are false.",
+      "theory": "Hermite interpolation is the confluent limit of ordinary interpolation when distinct nodes merge in pairs. Replacing nearly repeated value equations with divided-difference equations reveals a stable limiting linear system. Its uniqueness follows because a polynomial of degree at most 2n-1 vanishing with its derivative at n distinct nodes would be divisible by a degree-2n product of squared factors, so must be zero. Continuity of the resulting finite matrix inverse gives coefficient convergence as nodes coalesce. Fixed polynomial degree and bounded evaluation interval turn coefficient convergence into uniform convergence. No claim about increasingly high interpolation degree is made; that separate limit can behave very differently.",
+      "similar_questions": [
+        {
+          "prompt": "For nodes a,a+ε, what is the limiting linear interpolant?",
+          "solution": "f(a)+[f(a+ε)-f(a)](x-a)/ε tends to f(a)+f′(a)(x-a)."
+        },
+        {
+          "prompt": "Why is cubic Hermite interpolation at two distinct nodes unique?",
+          "solution": "A difference of two candidates would have double roots at both nodes and degree≤3; the required degree-4 factor forces it to vanish."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 45, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2020-june-26nov-q045.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q046",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 46,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Find the extremal of $J(y)=\\int_0^1[2(y\\prime)^2+xy]dx$ with y(0)=0, y(1)=1, y∈C²[0,1].",
+      "options": {
+        "A": "$y=x^2/12+11x/12$",
+        "B": "$y=x^3/3+2x^2/3$",
+        "C": "$y=x^2/7+6x/7$",
+        "D": "$y=x^3/24+23x/24$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Compute F_y and d(F_y′)/dx.",
+        "Integrate y″=x/4, then impose both boundary values."
+      ],
+      "solution": "The Euler–Lagrange equation is x-4y″=0. Thus y=x³/24+c1x+c2. The endpoints give c2=0 and c1=23/24, so D. A and C have constant second derivatives, while B gives y″=2x+4/3; none equals x/4. The second variation is 4∫(η′)²dx>0 for nonzero endpoint-zero η, confirming the unique minimum.",
+      "theory": "For a functional ∫F(x,y,y-prime)dx with fixed endpoints, differentiating against smooth endpoint-zero variations and integrating by parts gives F_y-d(F_y-prime)/dx=0. This necessary condition assumes the needed derivatives exist. Here the derivative-square term makes the equation linear and its two integration constants are determined by two boundary conditions. A stationary curve is not automatically a minimum; the positive second variation or strict convexity supplies that conclusion in this case. Factors in the derivative of 2(y-prime)² are easy to miss: F_y-prime is 4y-prime, not 2y-prime. Substituting candidate second derivatives quickly rejects distractors.",
+      "similar_questions": [
+        {
+          "prompt": "Minimize ∫₀¹[(y′)²+2y]dx with y(0)=y(1)=0.",
+          "solution": "Euler–Lagrange gives y″=1; endpoints give y=(x²-x)/2."
+        },
+        {
+          "prompt": "Minimize ∫₀¹(y′)²dx with y(0)=2,y(1)=5.",
+          "solution": "y″=0, so the unique extremal and minimum is y=2+3x."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 46, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2020-june-26nov-q046.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q047",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 47,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "Solve $y(s)=s+2\\int_0^1(st^2+s^2t)y(t)dt$.",
+      "options": {
+        "A": "$-(50s+40s^2)$",
+        "B": "$30s+15s^2$",
+        "C": "$-(30s+40s^2)$",
+        "D": "$60s+50s^2$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The right side lies in the span of s and s².",
+        "Put y=as+bs² and equate the two coefficients."
+      ],
+      "solution": "Writing y=as+bs² gives ∫t²y=a/4+b/5 and ∫ty=a/3+b/4. Therefore a=1+a/2+2b/5 and b=2a/3+b/2. The second equation yields b=4a/3, and the first gives -a/30=1. Hence a=-30,b=-40, C. The nonsingular two-equation system establishes uniqueness and excludes A,B,D.",
+      "theory": "A degenerate or finite-rank integral kernel is a finite sum of products of a function of s and a function of t. Its integral operator has finite-dimensional range, allowing the integral equation to be reduced to ordinary linear algebra. The inhomogeneous term must also be included in the trial function space. Integrals of the trial coefficients become moments, and equality for every s requires matching independent basis functions. Solvability and uniqueness are controlled by the determinant of the resulting coefficient matrix; a zero determinant requires a compatibility check. Here both basis functions s and s² are needed, even though the forcing contains only s.",
+      "similar_questions": [
+        {
+          "prompt": "Solve y(s)=1+λ∫₀¹s y(t)dt for λ≠2.",
+          "solution": "Set y=1+cs; c=λ(1+c/2), so c=λ/(1-λ/2)."
+        },
+        {
+          "prompt": "Solve y(s)=s+∫₀¹st y(t)dt.",
+          "solution": "Set y=as. Then a=1+a/3, giving a=3/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 47, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2020-june-26nov-q047.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q048",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 48,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "A constant-density solid is the unit upper hemisphere $S=\\{(x,y,z):x^2+y^2+z^2\\le1,z\\ge0\\}$. Which statement is true?",
+      "options": {
+        "A": "Its centre of mass is at the origin.",
+        "B": "The x-axis is a principal axis.",
+        "C": "The inertia tensor is not diagonal.",
+        "D": "The z-axis is a principal axis."
+      },
+      "correct_options": [],
+      "hints": [
+        "Use reflections x↦-x and y↦-y to examine products of inertia.",
+        "Both coordinate axes named in the options are eigenvector directions of a diagonal tensor."
+      ],
+      "solution": "The centre of mass is (0,0,3/8), so A is false. By x and y reflection symmetry, ∫xy,∫xz,∫yz all vanish, so the inertia tensor about the origin is diagonal. Indeed each diagonal entry is 4πρ/15. Thus both B and D are true and C false. About the centre of mass, the shifted tensor remains diagonal, with x and z still principal directions. Part B requires one answer but the source supplies two true assertions, so this is ungraded.",
+      "theory": "The inertia tensor has diagonal entries given by integrals of sums of two squared coordinates and off-diagonal entries equal to minus products of inertia. A principal direction is an eigenvector of this symmetric tensor. Reflection symmetries force products of inertia involving an odd reflected coordinate to vanish. Translating the reference point along a symmetry axis changes diagonal moments through the parallel-axis theorem but preserves the coordinate principal directions. For a hemisphere, the centre of mass is displaced from the sphere centre; this does not prevent the tensor from being diagonal. Rotational symmetry determines equivalent horizontal directions, and the vertical symmetry axis is also principal.",
+      "similar_questions": [
+        {
+          "prompt": "Find the centre of mass height of a unit solid upper hemisphere.",
+          "solution": "Volume=2π/3 and first moment ∫₀¹zπ(1-z²)dz=π/4, giving height 3/8."
+        },
+        {
+          "prompt": "A body is symmetric under x↦-x and y↦-y. What are its products of inertia?",
+          "solution": "All xy,xz,yz integrals vanish by oddness, so coordinate axes are principal."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Both B and D are true; this is a Part B single-choice item.",
+      "answer_source": "Independent mathematical derivation; question 48, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2020-june-26nov-q048.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q049",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 49,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "A student solves 50% of questions, getting these correct with probability 0.90, and guesses the rest, getting guesses correct with probability 0.30. Given a correct answer, find the probability it was guessed.",
+      "options": {
+        "A": "0.25",
+        "B": "0.50",
+        "C": "0.90",
+        "D": "0.30"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Distinguish P(correct|guess) from P(guess|correct).",
+        "Use Bayes with the two equal prior branches."
+      ],
+      "solution": "P(correct)=0.5·0.3+0.5·0.9=0.6. P(guess and correct)=0.15, so P(guess|correct)=0.15/0.6=0.25. A is correct. B is the prior guessing probability, C is success when solving, and D reverses the conditioning.",
+      "theory": "Bayes’ theorem reverses conditional probabilities by multiplying the likelihood by the prior and dividing by total evidence probability. The categories guessed and solved partition the attempts, so the law of total probability adds their two contributions to correctness. Correct answers disproportionately come from the more successful solved category even though half the attempts are guesses. Conditioning must be read in order: the probability of correctness given guessing is not the probability of guessing given correctness. A probability tree or a hypothetical count of 100 attempts makes the denominator clear: 15 correct guesses and 45 correct solved answers produce 60 total correct answers.",
+      "similar_questions": [
+        {
+          "prompt": "Guess on 20% with success 1/4, solve the rest with success 1. Given correct, probability guessed?",
+          "solution": "(0.2/4)/(0.2/4+0.8)=1/17."
+        },
+        {
+          "prompt": "In the original problem, given an incorrect answer, probability guessed?",
+          "solution": "0.5·0.7/(0.5·0.7+0.5·0.1)=7/8."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 49, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2020-june-26nov-q049.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q050",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 50,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Let X1,X2,… be iid chi-square with 5 degrees of freedom. For a constant a∈ℝ, what can be the limiting distribution of $a(X_1+\\cdots+X_n-5n)/\\sqrt n$?",
+      "options": {
+        "A": "Gamma for an appropriate a.",
+        "B": "Chi-square for an appropriate a.",
+        "C": "Standard normal for an appropriate a.",
+        "D": "Degenerate for an appropriate a."
+      },
+      "correct_options": [],
+      "hints": [
+        "Use E(X)=5 and Var(X)=10 in the central limit theorem.",
+        "Also check the explicitly permitted constant a=0."
+      ],
+      "solution": "The central limit theorem gives $(\\sum X_i-5n)/\\sqrt n\\Rightarrow N(0,10)$. For nonzero a the limit is N(0,10a²), standard normal when a=±1/√10, so C is true. For a=0 the random variable is identically zero for every n, giving a degenerate limit, so D is also true. Nondegenerate gamma/chi-square limits are impossible because the nonzero-scale limit is normal on all ℝ. Since a=0 is allowed and Part B is single-choice, the printed item is ambiguous.",
+      "theory": "A chi-square variable with ν degrees of freedom has mean ν and variance 2ν. Independent identically distributed variables with finite positive variance satisfy the classical central limit theorem after centering and scaling by sqrt(n). Multiplication by a fixed constant scales the limiting variance by its square, including a negative constant because a centred normal law is symmetric. Zero scaling is exceptional: it destroys all randomness and yields a point mass, which is a degenerate distribution. The phrase “for an appropriate a” is existential, so both a nonzero standardizing constant and zero must be considered if the domain includes all real constants.",
+      "similar_questions": [
+        {
+          "prompt": "For iid χ²₃, standardize ∑X_i-3n.",
+          "solution": "Divide by √(6n); the limit is N(0,1)."
+        },
+        {
+          "prompt": "What is the limit when a=2 for iid χ²₅?",
+          "solution": "The limit is N(0,40), since variance scales by 4."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Both C and D hold because the source allows a=0; Part B is single-choice.",
+      "answer_source": "Independent mathematical derivation; question 50, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2020-june-26nov-q050.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q051",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 51,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "In a Markov chain, i and j communicate. Which assertion is NOT correct?",
+      "options": {
+        "A": "Their periods are equal.",
+        "B": "i is recurrent iff j is recurrent.",
+        "C": "lim P(Xn=i|X0=k)=lim P(Xn=j|X0=k) for every k.",
+        "D": "lim P(Xn=j|X0=i)=lim P(Xn=j|X0=j)."
+      },
+      "correct_options": [],
+      "hints": [
+        "Period and recurrence are communication-class properties.",
+        "Check whether the displayed ordinary limits exist without aperiodicity."
+      ],
+      "solution": "A and B are valid class properties. C fails even for an aperiodic irreducible two-state chain with identical rows (1/3,2/3): the two limits are 1/3 and 2/3. D is valid when the relevant limits exist in the usual aperiodic setting, but no existence assumption is stated. For the alternating chain P=[[0,1],[1,0]], i and j communicate while both sequences in D oscillate and lack limits. Therefore C is an intended counterexample, but D is not a universally meaningful true assertion under the printed assumptions. The literal single-choice question is ungraded.",
+      "theory": "Communication means each state can reach the other in finitely many transitions with positive probability. Period, recurrence and positive recurrence are properties shared across a communicating class. Transition probabilities to different destination states need not have the same limiting value; in an irreducible positive recurrent aperiodic chain they approach the corresponding stationary probabilities. Transition probabilities from different starting states to one fixed destination do converge to the same value under those conditions. Periodicity can destroy ordinary limits entirely, although Cesàro averages may still converge. Consequently a theorem stated with plain limits must establish their existence or add aperiodicity rather than silently treating oscillating sequences as convergent.",
+      "similar_questions": [
+        {
+          "prompt": "For P with both rows (1/4,3/4), find limiting destination probabilities.",
+          "solution": "After one step the distribution is (1/4,3/4), so the limits differ by destination."
+        },
+        {
+          "prompt": "For deterministic alternation between two states, find P^n_11.",
+          "solution": "It equals 1 at even n and 0 at odd n, so the limit does not exist."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "C is false; D uses limits that need not exist for communicating periodic states.",
+      "answer_source": "Independent mathematical derivation; question 51, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2020-june-26nov-q051.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q056",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 56,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "For I,J>5, the two-way ANOVA model is $y_{ij}=\\alpha+\\beta_i+\\gamma_j+\\epsilon_{ij}$, Eε=0, Varε=σ², with $\\sum_i\\beta_i=\\sum_j\\gamma_j=0$. Which quantity is estimable?",
+      "options": {
+        "A": "$\\beta_1$",
+        "B": "$\\gamma_1$",
+        "C": "$\\beta_1-\\beta_2$",
+        "D": "$\\beta_1+\\gamma_2$"
+      },
+      "correct_options": [],
+      "hints": [
+        "Use the printed zero-sum constraints.",
+        "Express each listed quantity as a linear combination of cell mean expectations."
+      ],
+      "solution": "Let r_i be the mean in row i, c_j the mean in column j, and g the grand mean. The constraints give E(r_i-g)=β_i and E(c_j-g)=γ_j. Therefore A is estimated by r1-g, B by c1-g, C by r1-r2, and D by r1+c2-2g. All four are estimable. The source is Part B and permits one answer only, so it cannot be graded as printed. Omitting the constraints would change the identification problem, but they are explicitly present.",
+      "theory": "Estimability asks whether a parameter function has a linear unbiased estimator under the stated model. Unconstrained additive ANOVA has redundant parameterizations, so individual effects are not identifiable without normalization. Zero-sum constraints resolve that redundancy by defining the grand mean and deviations uniquely. In a complete two-way table, row and column averages isolate those deviations after subtracting the grand average. Every linear combination of identifiable effects is then estimable. The covariance assumptions determine estimator variances and optimality but are not needed to verify these expectation identities. Always check whether constraints are part of the model before applying general statements about nonestimable individual ANOVA effects.",
+      "similar_questions": [
+        {
+          "prompt": "Under zero-sum effects, estimate β2+γ3.",
+          "solution": "Use rowmean2+columnmean3-2grandmean; its expectation is β2+γ3."
+        },
+        {
+          "prompt": "Without constraints, is β1 alone identifiable?",
+          "solution": "No. Replacing α by α+c and every βi by βi-c preserves all cell means while changing β1."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The explicit sum-to-zero constraints make every option estimable, contrary to single-choice format.",
+      "answer_source": "Independent mathematical derivation; question 56, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2020-june-26nov-q056.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q058",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 58,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "A simple random sample without replacement of n=10 is taken from N=100. The printed sample variance is $s^2=(1/10)\\sum_{i=1}^{10}(y_i-\\bar y)^2$. An unbiased estimate of the printed population quantity $\\sigma^2=(1/10)\\sum_{i=1}^{100}(Y_i-\\bar Y)^2$ is:",
+      "options": {
+        "A": "$s^2$",
+        "B": "$(10/11)s^2$",
+        "C": "$(100/99)s^2$",
+        "D": "$(100/11)s^2$"
+      },
+      "correct_options": [],
+      "hints": [
+        "Read both printed denominators literally.",
+        "The usual sample variance with divisor n-1 is unbiased for the population divisor N-1."
+      ],
+      "solution": "Write T=∑(Y_i-Ȳ)². Under SRSWOR, E[s²]=(n-1)T/[n(N-1)]=9T/(10·99)=T/110. The printed target is T/10, so the unbiased estimator is 11s². None of A–D equals 11s². Even replacing the target divisor 10 by the conventional 100 would require (11/10)s², also absent. The source therefore has a substantive normalization/option error and is ungraded.",
+      "theory": "Finite-population variance has two common conventions: T/N and T/(N-1), where T is the sum of squared deviations about the population mean. Under sampling without replacement, the sample variance with divisor n-1 estimates T/(N-1) without bias. Using divisor n instead multiplies its expectation by (n-1)/n. To estimate any stated target, first express both its expectation and the target in terms of the same T, then take their ratio. The finite population correction belongs to the variance of a sample mean, not this bias adjustment. Literal denominators are essential; replacing an unusual definition with a familiar convention changes the mathematical question.",
+      "similar_questions": [
+        {
+          "prompt": "For n=5,N=20, estimate T/20 from s²=∑(yi-ybar)²/5.",
+          "solution": "Multiply by n(N-1)/[(n-1)N]=95/80=19/16."
+        },
+        {
+          "prompt": "For n=10,N=100, estimate T/99 from the printed s².",
+          "solution": "Multiply by 10/9, since E[s²]=(9/10)(T/99)."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Printed population denominator is 10; required factor is 11, absent from all four options.",
+      "answer_source": "Independent mathematical derivation; question 58, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2020-june-26nov-q058.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q063",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 63,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f(x,y)=2xy/(x²+y²) off (0,0), and f(0,0)=0. Define $g(x,y)=\\sum_{n=1}^\\infty 2^{-n}f(x-n,y-n)$. Which statements are true?",
+      "options": {
+        "A": "Every section h(y)=g(c,y) is continuous on ℝ.",
+        "B": "g is continuous on ℝ².",
+        "C": "g is not well defined.",
+        "D": "g is continuous outside {(k,k):k∈ℕ}."
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Use |2xy|≤x²+y² to bound every summand.",
+        "A translated summand is discontinuous only at its own diagonal lattice point, while its vertical sections are continuous."
+      ],
+      "solution": "Since |f|≤1, the series converges uniformly by comparison with ∑2^-n. Every vertical section of f is continuous, including the section x=0, which is identically zero. Thus A holds by uniform convergence. Each summand is continuous off its translated origin, giving D. At (k,k), the kth summand has value 0 but tends to 2^-k along the diagonal; the uniformly convergent remaining sum is continuous there. Hence g is discontinuous at every such point, rejecting B, and uniform absolute convergence rejects C.",
+      "theory": "Uniform convergence follows from a summable majorant independent of the input, known as the Weierstrass M-test. Uniform limits preserve continuity when the component functions are continuous on the domain under consideration. They do not repair a discontinuity of one summand when the remaining sum is continuous there. Separate continuity means continuity in one variable while the other is held fixed; it is weaker than joint continuity in several variables. The base function here is a standard bounded separately continuous function that lacks a joint limit at the origin. Translating and summing it creates countably many isolated discontinuities without destroying its continuous one-dimensional sections.",
+      "similar_questions": [
+        {
+          "prompt": "Why is 2xy/(x²+y²) not continuous at the origin?",
+          "solution": "Along y=x it equals 1, but along y=0 it equals 0."
+        },
+        {
+          "prompt": "Show ∑2^-n sin(nx) is continuous on ℝ.",
+          "solution": "Each summand is continuous and bounded by 2^-n; uniform convergence and the continuity theorem apply."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 63, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2020-june-26nov-q063.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q064",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 64,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "On [0,1], let $A(x)=\\sum_{n=0}^\\infty x^n(1-x)$ and $B(x)=\\sum_{n=0}^\\infty(-1)^nx^n(1-x)$. Which statements are true?",
+      "options": {
+        "A": "Both converge pointwise.",
+        "B": "Both converge uniformly.",
+        "C": "A converges uniformly but B does not.",
+        "D": "B converges uniformly but A does not."
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "Sum each geometric series for x<1 and evaluate x=1 separately.",
+        "For B, bound the exact remainder (1-x)x^(N+1)/(1+x)."
+      ],
+      "solution": "A=1 on [0,1) and A(1)=0, so its continuous partial sums cannot converge uniformly to this discontinuous limit. B=(1-x)/(1+x) throughout [0,1], including its zero endpoint. Its remainder has magnitude (1-x)x^(N+1)/(1+x)≤(1-x)x^(N+1), whose maximum is (N+1)^(N+1)/(N+2)^(N+2)→0. Thus both converge pointwise and only B uniformly: A,D true; B,C false.",
+      "theory": "Uniform convergence controls the largest error over the whole domain, rather than errors at each fixed point separately. A sequence of continuous functions with a discontinuous pointwise limit cannot converge uniformly. A continuous limit alone does not prove uniform convergence, so the alternating series needs an explicit remainder bound. Geometric sums make that bound available even near the endpoint where x is close to one. The factor 1-x forces the alternating remainder to shrink uniformly, whereas the nonalternating series accumulates an endpoint jump. At x=1 every summand is exactly zero; applying the formula for x<1 without checking that endpoint gives a wrong limit.",
+      "similar_questions": [
+        {
+          "prompt": "Does ∑ₙ₌₀∞x^n converge uniformly on [0,r], r<1?",
+          "solution": "Yes: remainder≤r^(N+1)/(1-r)→0."
+        },
+        {
+          "prompt": "Maximize (1-x)x^m on [0,1].",
+          "solution": "Differentiate to find x=m/(m+1); maximum=m^m/(m+1)^(m+1)≤1/(m+1)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 64, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2020-june-26nov-q064.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q065",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 65,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For p∈ℝ, let $I_p=\\int_0^1t^p\\sin t\\,dt$. Which assertions are true?",
+      "options": {
+        "A": "Converges for p=-1/2.",
+        "B": "Diverges for p=-3/2.",
+        "C": "Converges for p=4/3.",
+        "D": "Diverges for p=-4/3."
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Only the endpoint t=0 can be improper.",
+        "Use sin(t)/t→1 to compare with t^(p+1)."
+      ],
+      "solution": "Near zero, t^p sin t is positive and asymptotic to t^(p+1). Its integral converges exactly when p+1>-1, that is p>-2. All four displayed p values exceed -2. Therefore the convergence claims A and C hold, while the divergence claims B and D fail.",
+      "theory": "An improper integral on a finite interval needs analysis only at its singular endpoints. Limit comparison with a positive reference integrand determines convergence when their ratio tends to a positive finite constant. Since sin t behaves like t near zero, it contributes one extra power and improves integrability. The basic criterion ∫₀¹t^a dt<∞ is a>-1, with logarithmic divergence at a=-1. Oscillatory cancellation is not relevant here because sin t is positive near zero and the upper endpoint is finite. A common mistake is to apply the power criterion to t^p alone, ignoring the zero of sin t.",
+      "similar_questions": [
+        {
+          "prompt": "For which p does ∫₀¹t^p(1-cos t)dt converge?",
+          "solution": "1-cos t~t²/2, so p+2>-1, or p>-3."
+        },
+        {
+          "prompt": "Does ∫₀¹sin(t)/t² dt converge?",
+          "solution": "No: it behaves like 1/t, producing logarithmic divergence."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 65, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2020-june-26nov-q065.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q066",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 66,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Real-valued functions fn on ℝ converge to a continuous f uniformly on every closed bounded subset. Which conclusions follow?",
+      "options": {
+        "A": "Uniform convergence on ℝ.",
+        "B": "Pointwise convergence on ℝ.",
+        "C": "All sufficiently large fn are bounded.",
+        "D": "All sufficiently large fn are continuous."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Put a particular x in a compact interval.",
+        "Uniform local convergence need not transfer regularity backward to approximants."
+      ],
+      "solution": "For each x, uniform convergence on [x-1,x+1] implies fn(x)→f(x), proving B. A fails for fn(x)=x/n→0 locally uniformly, whose global errors are unbounded. The same example disproves C. D fails for fn=(1/n)1_ℚ: these are discontinuous everywhere but converge uniformly to the continuous zero function. Thus only B follows.",
+      "theory": "Locally uniform convergence means uniform convergence on every compact subset, with the required index allowed to depend on that subset. It always implies pointwise convergence. It does not imply one index controls an unbounded domain, nor does it impose boundedness of the approximants outside each compact set. The continuity theorem for uniform limits has a one-way hypothesis: continuous approximants imply a continuous limit. A continuous limit does not force its approximants to be continuous. Small-amplitude discontinuities can persist for every index while their magnitudes shrink to zero. Counterexamples should separately target the global-domain issue and the direction of the continuity theorem.",
+      "similar_questions": [
+        {
+          "prompt": "Does x/n converge uniformly to zero on [-M,M]?",
+          "solution": "Yes, supremum error is M/n→0 for each fixed M."
+        },
+        {
+          "prompt": "Give discontinuous functions converging uniformly to zero.",
+          "solution": "fn=1_ℚ/n has supremum norm 1/n, while every fn is discontinuous everywhere."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 66, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2020-june-26nov-q066.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q067",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 67,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f(x)=e^{-x} and g(x)=e^{-x²}. Which statements are true?",
+      "options": {
+        "A": "Both are uniformly continuous on ℝ.",
+        "B": "f is uniformly continuous on every [a,∞).",
+        "C": "g is uniformly continuous on ℝ.",
+        "D": "fg is uniformly continuous on ℝ."
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "A bounded derivative gives a Lipschitz bound.",
+        "Complete the square in -x-x²."
+      ],
+      "solution": "f is not uniformly continuous on ℝ: x_n=-n and y_n=-n+e^-n have distance→0 but |f(x_n)-f(y_n)|→1. Thus A fails. On [a,∞), |f′|≤e^-a, so B holds. g′=-2xe^-x² is globally bounded, proving C. The product is e^(1/4)e^[-(x+1/2)²], whose derivative is also bounded, proving D.",
+      "theory": "A differentiable function with a bounded derivative on an interval is Lipschitz by the mean value theorem and therefore uniformly continuous. A derivative becoming unbounded does not by itself prove failure of uniform continuity, so a pair of sequences with vanishing input distance and persistent output separation is useful for the exponential. Gaussian factors decay fast enough to offset polynomial growth in their derivatives. Products of uniformly continuous functions are uniformly continuous when both are bounded, but that rule does not directly apply here because f is unbounded. Completing the square identifies the product as a translated, scaled Gaussian and gives its own derivative bound.",
+      "similar_questions": [
+        {
+          "prompt": "Is e^x uniformly continuous on (-∞,a]?",
+          "solution": "Yes, derivative e^x≤e^a makes it Lipschitz."
+        },
+        {
+          "prompt": "Is xe^-x² uniformly continuous on ℝ?",
+          "solution": "Yes; derivative (1-2x²)e^-x² is bounded."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 67, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2020-june-26nov-q067.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q068",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 68,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "Let f(x,y)=x³/(x²+y²) for (x,y)≠(0,0), and f(0,0)=0. Which statements hold?",
+      "options": {
+        "A": "f is discontinuous at the origin.",
+        "B": "f is continuous at the origin.",
+        "C": "All directional derivatives at the origin exist.",
+        "D": "f is not differentiable at the origin."
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Bound |f| by the distance to the origin.",
+        "Compute D_(a,b)f, then check whether it is linear in (a,b)."
+      ],
+      "solution": "$|f(x,y)|\\le|x|\\le\\sqrt{x²+y²}$, so B holds and A fails. For nonzero (a,b), f(ta,tb)/t=a³/(a²+b²), proving C. The partial derivatives are f_x(0)=1,f_y(0)=0, so a derivative would be L(x,y)=x. Along y=x, [f(x,x)-x]/√(2x²)=-x/(2√2|x|), not tending to zero. Thus D holds.",
+      "theory": "Differentiability in several variables means approximation by a single linear map with error negligible compared with the input norm. Directional derivatives examine only one ray at a time and can all exist without combining into a linear derivative. Here the homogeneous degree-one formula produces a nonlinear directional-derivative function, exposing the failure. Continuity is weaker and can be proved using a uniform radial bound. Partial derivatives are merely two particular directions; they propose a candidate derivative but do not establish differentiability. Testing the normalized remainder along a carefully chosen diagonal is enough to refute that candidate, whereas proving differentiability would require control over every approach.",
+      "similar_questions": [
+        {
+          "prompt": "For f=xy/√(x²+y²), f(0)=0, is it continuous?",
+          "solution": "Yes, |f|≤√(x²+y²)/2→0."
+        },
+        {
+          "prompt": "Is that f differentiable at zero?",
+          "solution": "No: both partials vanish, but along y=x the normalized value has magnitude 1/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "The question crop clipped the numerator; x³ was verified on source PDF page 18.",
+      "answer_source": "Independent mathematical derivation; question 68, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2020-june-26nov-q068.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q069",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 69,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "Let f(x,y)=(x²-y²)/(x²+y²) off (0,0), and f(0,0)=0. Which statements hold?",
+      "options": {
+        "A": "f is continuous at the origin.",
+        "B": "f is bounded in a neighborhood of the origin.",
+        "C": "f is unbounded in every neighborhood of the origin.",
+        "D": "All directional derivatives at the origin exist."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use |x²-y²|≤x²+y².",
+        "Compare the x-axis values with the assigned value at zero."
+      ],
+      "solution": "The bound |f|≤1 holds everywhere, so B is true and C false. On the punctured x-axis f=1, so it does not approach f(0)=0; A is false. In direction (1,0), [f(t,0)-f(0)]/t=1/t has no finite limit, rejecting D.",
+      "theory": "Boundedness near a point does not imply continuity there. Quotients of homogeneous expressions of the same degree often depend only on direction, creating bounded but discontinuous functions at the origin. Here the quotient is cos(2θ) in polar coordinates and ranges between -1 and 1, so it has no unique limiting value as the angle changes. A directional derivative divides the change in the function by the scalar step; it can fail even though the function is bounded on that ray. Defining a value at the origin cannot make a direction-dependent nonzero radial limit disappear. Axis tests are sufficient to refute continuity or universal directional differentiability.",
+      "similar_questions": [
+        {
+          "prompt": "Find limits along the two axes for this f.",
+          "solution": "Along y=0 the value is 1; along x=0 it is -1."
+        },
+        {
+          "prompt": "Does (x²-y²) itself have a derivative at zero?",
+          "solution": "Yes. Its magnitude is O(x²+y²), so the derivative is the zero linear map."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "The clipped numerator x²-y² was verified on source PDF page 18.",
+      "answer_source": "Independent mathematical derivation; question 69, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2020-june-26nov-q069.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q070",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 70,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Define p(x,y)=|x| when x≠0 and p(0,y)=|y|. Which norm-like properties hold?",
+      "options": {
+        "A": "p(x,y)=0 iff x=y=0.",
+        "B": "p(x,y)≥0 for every (x,y).",
+        "C": "p(αx,αy)=|α|p(x,y) for every α.",
+        "D": "p(u+v)≤p(u)+p(v) for all u,v."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Check homogeneity separately for α=0 and α≠0.",
+        "For a triangle-inequality counterexample, cancel the x coordinates."
+      ],
+      "solution": "A and B follow directly from the two cases. For nonzero α, whether x=0 is unchanged and absolute values scale by |α|; α=0 also gives zero, so C holds. Let u=(1,2),v=(-1,2). Then p(u)=p(v)=1, but p(u+v)=p(0,4)=4>2. D is false, so p is not a norm.",
+      "theory": "A norm must satisfy positive definiteness, absolute homogeneity and the triangle inequality. None of these axioms can be omitted: satisfying the first two does not force the third. Piecewise definitions must be checked at their switching set because sums may move from one branch to another. In this example nonzero first coordinates hide the size of the second coordinate; cancellation reveals that hidden size and breaks subadditivity. Homogeneity behaves differently, because nonzero scalar multiplication preserves the switching condition x=0. Such counterexamples explain why a function that measures positive magnitudes is not automatically a valid distance or norm.",
+      "similar_questions": [
+        {
+          "prompt": "For p as above, compute p(2,100),p(-2,100),p(0,200).",
+          "solution": "They are 2,2,200, again violating the triangle inequality."
+        },
+        {
+          "prompt": "Does q(x,y)=|x|+|y| define a norm?",
+          "solution": "Yes: positivity and homogeneity are immediate; coordinatewise |a+b|≤|a|+|b| gives its triangle inequality."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 70, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2020-june-26nov-q070.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q071",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 71,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A square matrix P satisfies P²=P. Which assertions are true?",
+      "options": {
+        "A": "Trace(P) is irrational.",
+        "B": "Trace(P)=rank(P).",
+        "C": "Trace(P) is an integer.",
+        "D": "Trace(P) is an imaginary complex number."
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The minimal polynomial divides t(t-1).",
+        "Count the eigenvalues equal to one."
+      ],
+      "solution": "P is diagonalizable because t(t-1) has distinct roots. Its eigenvalues are zeros and ones. If r of them are ones, trace(P)=r and rank(P)=r. Therefore B,C are true; A,D are not general properties (e.g. P=[1] has trace 1).",
+      "theory": "An idempotent linear map is a projection onto its image along its kernel. Every vector decomposes as Pv+(v-Pv), with the first part in the image and the second in the kernel. This direct-sum decomposition yields a basis in which the matrix is diagonal with ones and zeros, without any symmetry assumption. Its trace equals the number of ones and its rank equals the image dimension, so both are the same nonnegative integer. A projection need not be orthogonal: its matrix can be nonsymmetric in standard coordinates. Diagonalizability here comes from the distinct roots of the annihilating polynomial rather than from a spectral theorem for symmetric matrices.",
+      "similar_questions": [
+        {
+          "prompt": "Find rank and trace of [[1,2],[0,0]].",
+          "solution": "Its square equals itself; rank=1 and trace=1."
+        },
+        {
+          "prompt": "Can an idempotent 4×4 matrix have trace 2.5?",
+          "solution": "No. Its trace is its integer rank, between 0 and 4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 71, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2020-june-26nov-q071.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q072",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 72,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For real n×n matrices A,B, let $C=\\begin{pmatrix}A&B\\\\B&A\\end{pmatrix}$. Which statements hold?",
+      "options": {
+        "A": "Every eigenvalue of A+B is an eigenvalue of C.",
+        "B": "Every eigenvalue of A-B is an eigenvalue of C.",
+        "C": "Every eigenvalue of A or B is an eigenvalue of C.",
+        "D": "Every eigenvalue of C is real."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Use vectors of the form (v,v) and (v,-v).",
+        "Real matrices need not have real eigenvalues unless an extra symmetry condition is present."
+      ],
+      "solution": "If (A+B)v=λv, then C(v,v)=λ(v,v); if (A-B)v=λv, C(v,-v)=λ(v,-v). Thus A,B are true; equivalently C is similar to diag(A+B,A-B). C fails with scalars A=1,B=2: its eigenvalues are 3,-1, not 1 or 2. D fails with B=0 and A=[[0,-1],[1,0]], producing eigenvalues ±i.",
+      "theory": "Block matrices with matching diagonal and off-diagonal blocks preserve symmetric and antisymmetric subspaces. The change of variables (u,v)↦(u+v,u-v) separates their action into A+B and A-B, regardless of whether A and B commute. This gives the complete spectrum as a union, including algebraic multiplicities. A real matrix may have complex conjugate eigenvalues; reality of entries alone does not imply a real spectrum. Symmetry would supply that stronger conclusion, but is absent. Eigenvalues of separate blocks A and B generally do not survive addition or subtraction, so numerical scalar counterexamples are especially efficient for testing such assertions.",
+      "similar_questions": [
+        {
+          "prompt": "For A=2I,B=3I, find the spectrum of C.",
+          "solution": "A+B=5I and A-B=-I; eigenvalues are 5 and -1, each n times."
+        },
+        {
+          "prompt": "What is det(C)?",
+          "solution": "Similarity gives det(C)=det(A+B)det(A-B), even without commutativity."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 72, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2020-june-26nov-q072.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q073",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 73,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be a real n×n matrix and suppose Ax=b has no solution. Which assertions hold?",
+      "options": {
+        "A": "There is a c for which Ax=c has a unique solution.",
+        "B": "Infinitely many c give an inconsistent system.",
+        "C": "For the first column y of A, Ax=y has a unique solution.",
+        "D": "det(A)=0."
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "If A were invertible every right-hand side would be solvable.",
+        "Every consistent system for a singular matrix has a kernel of possible perturbations."
+      ],
+      "solution": "Inconsistency forces rank(A)<n and det(A)=0, proving D. The column space is a proper subspace; all scalar multiples tb with t≠0 remain outside it and give infinitely many inconsistent right sides, proving B. Since ker(A) is nonzero, any solvable system has infinitely many solutions x+v, v∈ker(A); A and C are false. The first column is consistent via e1, but never unique.",
+      "theory": "A linear system Ax=c is solvable exactly when c lies in the column space. A square matrix is invertible precisely when that space is the whole target space, equivalently its kernel is zero or its determinant is nonzero. If the matrix is singular, a consistent solution is never unique because any kernel vector can be added. The set of all solutions is an affine translate of the kernel. A proper subspace has infinitely many points outside it over ℝ; multiplying a fixed outside vector by nonzero scalars constructs them explicitly. Distinguishing existence from uniqueness is crucial when the right side is a known column of A.",
+      "similar_questions": [
+        {
+          "prompt": "For A=diag(1,0), solve Ax=(1,0).",
+          "solution": "x1=1 and x2 is arbitrary; infinitely many solutions."
+        },
+        {
+          "prompt": "For the same A, which right sides are inconsistent?",
+          "solution": "Every (c1,c2) with c2≠0, since the second output coordinate is always zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 73, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2020-june-26nov-q073.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q074",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 74,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "The first three rows and first five columns of an n×n matrix A are linearly independent. Which statements follow?",
+      "options": {
+        "A": "At least five rows are linearly independent.",
+        "B": "3≤rank(A)≤5.",
+        "C": "rank(A)≥5.",
+        "D": "rank(A²)≥5."
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Row rank equals column rank.",
+        "A matrix can have positive rank and square zero."
+      ],
+      "solution": "Five independent columns imply rank(A)≥5, proving C. Equality of row and column rank gives at least five independent rows, proving A. B fails for A=I6, which has rank 6. D fails for the 10×10 matrix A=[[0,0],[I5,0]]: its first five columns and first three rows are independent only after row ordering—use instead A=[[0,I5],[0,0]] and permute columns to place the nonzero block first. More directly A=[[I5,-I5],[I5,-I5]] has first five columns and first three rows independent, rank 5, and A²=0. Thus D is false.",
+      "theory": "Rank is the dimension of the column space and equals the dimension of the row space. An explicitly independent collection provides a lower bound but does not give an upper bound unless the remaining vectors are known to depend on it. Matrix multiplication can lower rank: rank(A²)≤rank(A), and nilpotent maps may even have square zero despite substantial rank. This happens when the image lies within the kernel. In a 2r-dimensional space, a square-zero map can have rank r. To refute a statement involving specifically the first rows or columns, the counterexample must respect that ordering rather than merely have the correct total rank.",
+      "similar_questions": [
+        {
+          "prompt": "Can a 6×6 matrix meet the assumptions with rank 6?",
+          "solution": "Yes, I6 does; therefore rank≤5 is not implied."
+        },
+        {
+          "prompt": "Verify M=[[I,-I],[I,-I]] has square zero.",
+          "solution": "Each product block is I-I=0; its rank is the block size because the bottom rows repeat the top."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 74, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2020-june-26nov-q074.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q075",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 75,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let ∅≠F⊊{1,…,n}. Define ⟨x,y⟩F=∑ over k∈F xk yk, and T={x:⟨x,x⟩F=0}. For nonzero y, which statements hold?",
+      "options": {
+        "A": "inf over x∈T ⟨x+y,x+y⟩F=⟨y,y⟩F.",
+        "B": "sup over x∈T ⟨x+y,x+y⟩F=⟨y,y⟩F.",
+        "C": "That infimum is strictly smaller than ⟨y,y⟩F.",
+        "D": "That supremum is strictly larger than ⟨y,y⟩F."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "A sum of nonnegative squares is zero only if each listed coordinate is zero.",
+        "Coordinates outside F never enter the expression."
+      ],
+      "solution": "For x∈T, every xk=0 for k∈F. Hence ⟨x+y,x+y⟩F=∑k∈F yk²=⟨y,y⟩F for every such x. Both infimum and supremum equal that constant, proving A,B and rejecting C,D. y≠0 does not imply this constant is positive, since y may be supported outside F.",
+      "theory": "Restricting the Euclidean inner product to a proper subset of coordinates gives a positive semidefinite bilinear form, not a positive definite inner product on all of ℝⁿ. Its zero set is the coordinate subspace supported outside F. Adding an element of that nullspace cannot change the quadratic value because both its own squared value and its cross term vanish. This explains why an optimization over the nullspace has a constant objective despite an unbounded feasible set. Nonzero vectors can have zero value under a degenerate form. The distinction between positive semidefinite and positive definite is essential when drawing conclusions from a sum of squares.",
+      "similar_questions": [
+        {
+          "prompt": "For F={1}, n=2, describe T and evaluate the objective at y=(2,3).",
+          "solution": "T={(0,t)}; the objective is always 4."
+        },
+        {
+          "prompt": "For the same F and y=(0,1), what are the infimum and supremum?",
+          "solution": "Both are 0, although y is nonzero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 75, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2020-june-26nov-q075.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q076",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 76,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For nonzero v∈ℝ³, define $T(x)=x-2[(x\\cdot v)/(v\\cdot v)]v$. Which statements hold?",
+      "options": {
+        "A": "Eigenvalues are +1 and -1.",
+        "B": "det(T)=-1.",
+        "C": "trace(T)=+1.",
+        "D": "T preserves distances."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Decompose x into its component parallel to v and its orthogonal component.",
+        "T reverses one component and leaves the other two unchanged."
+      ],
+      "solution": "Write x=x⊥+x∥. Then T(x)=x⊥-x∥. Therefore v has eigenvalue -1, and the two-dimensional orthogonal plane has eigenvalue +1. A follows; determinant=(-1)(1)(1)=-1, proving B, and trace=-1+1+1=1, proving C. Orthogonal components retain their squared lengths, so ||T(x)-T(y)||=||x-y|| and D holds.",
+      "theory": "The matrix I-2vvᵀ/(vᵀv) is a Householder reflection across the plane perpendicular to v. The fraction vvᵀ/(vᵀv) is the orthogonal projection onto the line spanned by v. Reflection reverses that projection and leaves its orthogonal complement fixed. The map is symmetric and orthogonal, with T²=I. Its determinant is negative because exactly one direction reverses orientation. Eigenvalue multiplicities determine trace and determinant, while orthogonality determines distance preservation. Scaling v by any nonzero factor gives the same reflection. These structural observations avoid coordinate expansion and work in any dimension, where the trace becomes n-2.",
+      "similar_questions": [
+        {
+          "prompt": "For v=(0,0,1), write T explicitly.",
+          "solution": "T(x,y,z)=(x,y,-z), reflection across the xy-plane."
+        },
+        {
+          "prompt": "What is the trace of the same reflection in ℝ⁵?",
+          "solution": "Four +1 eigenvalues and one -1 give trace 3; determinant remains -1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 76, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2020-june-26nov-q076.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q077",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 77,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which real quadratic forms represent zero at a nonzero vector?",
+      "options": {
+        "A": "$xy+z²$",
+        "B": "$x²+3y²-2z²$",
+        "C": "$x²-xy+y²+z²$",
+        "D": "$x²+xy+z²$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "One nonzero zero is enough to prove representation.",
+        "Complete the square in the potentially positive definite form."
+      ],
+      "solution": "A vanishes at (1,0,0). B vanishes at (√2,0,1). D vanishes at (1,-1,0). C=(x-y/2)²+3y²/4+z² is strictly positive at every nonzero vector, so it cannot represent zero nontrivially. Thus A,B,D are correct.",
+      "theory": "A real quadratic form represents zero nontrivially when its zero level set contains a vector other than the origin. Positive definite and negative definite forms cannot do so. Indefinite forms generally do because positive and negative contributions can balance, and semidefinite forms can when they have a nontrivial kernel. Over ℝ, diagonalization by congruence or completion of squares identifies these cases. A single explicit vector suffices to establish a nontrivial representation, while disproving it requires showing definiteness. The condition excludes the trivial zero vector, which makes every homogeneous quadratic form vanish. Cross terms must be accounted for rather than judged by squared coefficients alone.",
+      "similar_questions": [
+        {
+          "prompt": "Does x²+2y² represent zero nontrivially over ℝ?",
+          "solution": "No; it is positive definite."
+        },
+        {
+          "prompt": "Does x²-y²+z² represent zero nontrivially?",
+          "solution": "Yes; (1,1,0) gives zero and is nonzero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 77, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2020-june-26nov-q077.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q078",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 78,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let Q be an arbitrary real quadratic form. Which listed identities/assertions necessarily hold?",
+      "options": {
+        "A": "Q(x1+x2,y,z)=Q(x1,y,z)+Q(x2,y,z) for all coordinates.",
+        "B": "Q(x1+x2,y1+y2,0)+Q(x1-x2,y1-y2,0)=2Q(x1,y1,0)+2Q(x2,y2,0).",
+        "C": "Q(u+v)=Q(u)+Q(v) for at least one choice of u,v.",
+        "D": "2Q(u+v)+2Q(u-v)=Q(u)+Q(v) for all u,v with z=0."
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Expand Q using its associated symmetric bilinear form.",
+        "The existential statement allows u=v=0."
+      ],
+      "solution": "Writing Q(u)=B(u,u), expansion gives Q(u+v)+Q(u-v)=2Q(u)+2Q(v), proving B. C holds by taking u=v=0 (or v=0). A fails for Q=x², x1=x2=1,y=z=0: 4≠2. D has the wrong factor; with Q=x²,u=(1,0,0),v=0 it asserts 4=1. Thus B,C are correct.",
+      "theory": "Quadratic forms are homogeneous of degree two and are associated with symmetric bilinear forms through polarization. Their expansions contain cross terms 2B(u,v), so they are not generally additive. Adding the expansions at u+v and u-v cancels those cross terms and produces the parallelogram identity. An identity claimed for all vectors requires this algebraic structure, whereas an assertion for at least one vector pair may be satisfied by zero vectors. Quantifier distinctions are therefore as important as coefficient factors. Restricting to z=0 still leaves a quadratic form in two variables, so the same identity applies without extra assumptions about the third coordinate.",
+      "similar_questions": [
+        {
+          "prompt": "Expand Q(u+v)-Q(u-v).",
+          "solution": "It equals 4B(u,v), giving the polarization formula B(u,v)=[Q(u+v)-Q(u-v)]/4."
+        },
+        {
+          "prompt": "For Q(x,y)=x²+y², u=(1,0),v=(0,1), verify the parallelogram law.",
+          "solution": "Q(u+v)+Q(u-v)=2+2=4=2Q(u)+2Q(v)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 78, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2020-june-26nov-q078.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q079",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 79,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For z≠-i let $f(z)=\\exp(1/(z+i))-1$. Which statement holds?",
+      "options": {
+        "A": "f has finitely many zeros.",
+        "B": "Zeros accumulate at a removable singularity.",
+        "C": "Zeros accumulate at a pole.",
+        "D": "Zeros accumulate at an essential singularity."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "exp(w)=1 iff w=2πik for an integer k.",
+        "The Laurent expansion has infinitely many negative powers at -i."
+      ],
+      "solution": "Zeros occur at $z_k=-i+1/(2\\pi ik)$ for every nonzero integer k, and z_k→-i. The Laurent expansion at -i is ∑m≥1 (z+i)^-m/m!, so the singularity is essential. Thus D holds; A fails because there are infinitely many zeros, and B,C misclassify their accumulation point.",
+      "theory": "Zeros of a nonzero holomorphic function are isolated within its domain, but may accumulate at a boundary point or a singularity excluded from the domain. Composing an exponential with a simple pole creates an essential singularity because its Laurent series has infinitely many negative powers. Subtracting one creates zeros through the periodic values of the exponential. A pole cannot have zeros accumulating near it, because its magnitude diverges; a removable singularity with accumulating zeros would force the extended function to vanish identically by the identity theorem. Here the accumulation occurs exactly at an essential singularity, consistent with those principles.",
+      "similar_questions": [
+        {
+          "prompt": "Where are the zeros of e^(1/z)-1?",
+          "solution": "At z=1/(2πik), k∈ℤ\\{0}, accumulating at the essential singularity 0."
+        },
+        {
+          "prompt": "Can a meromorphic function with a pole at 0 have zeros tending to 0?",
+          "solution": "No. Its modulus tends to infinity near the pole, so it is nonzero in a sufficiently small punctured disk."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 79, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2020-june-26nov-q079.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q080",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 80,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be holomorphic on the unit disk, |f|≥1 there, and f(0)=i. Which values of f(1/2) are possible?",
+      "options": {
+        "A": "-i",
+        "B": "i",
+        "C": "1",
+        "D": "-1"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Since f has no zeros, 1/f is holomorphic.",
+        "Apply the maximum modulus principle at the interior point 0."
+      ],
+      "solution": "h=1/f is holomorphic with |h|≤1 and |h(0)|=1. The maximum modulus principle makes h constant; hence f≡i. Only B is possible, realized by that constant function. A,C,D are incompatible with it.",
+      "theory": "The maximum modulus principle says a holomorphic function on a connected open domain that attains an interior maximum of its modulus must be constant. A lower modulus bound can be turned into an upper bound by taking a reciprocal, provided there are no zeros. Here |f|≥1 ensures the reciprocal is holomorphic everywhere in the disk. Equality at the interior point supplies the attained maximum. This is also the minimum modulus principle for nonvanishing holomorphic functions. The nonvanishing condition is crucial: a function can attain modulus zero in the interior without being constant. The inequality is non-strict, allowing the stated initial value of modulus one.",
+      "similar_questions": [
+        {
+          "prompt": "If |f|≥2 on a connected domain and f(z0)=2, what follows?",
+          "solution": "1/f attains modulus maximum 1/2 inside, so f≡2."
+        },
+        {
+          "prompt": "If f(z)=z on the unit disk, does its interior minimum force constancy?",
+          "solution": "No; f has a zero, so its reciprocal is not holomorphic and the nonvanishing hypothesis fails."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 80, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2020-june-26nov-q080.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q081",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 81,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f map the unit disk holomorphically into itself with f(0)=f′(0)=0. Which values of f(1/2) are possible?",
+      "options": {
+        "A": "1/4",
+        "B": "-1/4",
+        "C": "1/3",
+        "D": "-1/3"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "Apply Schwarz’s lemma twice, dividing out the zero at the origin.",
+        "Functions ±z² realize equality in the resulting bound."
+      ],
+      "solution": "Schwarz gives |f(z)|≤|z|, and g(z)=f(z)/z extends holomorphically with g(0)=f′(0)=0 and |g|≤1. Applying Schwarz again yields |f(z)|≤|z|². At 1/2 this is 1/4, excluding C,D. f=z² and f=-z² realize A,B while mapping the open disk into itself.",
+      "theory": "Schwarz’s lemma applies to holomorphic self-maps of the unit disk fixing zero: their modulus is bounded by |z| and their derivative at zero has modulus at most one. Higher-order zeros permit repeated division by z and repeated application of the lemma, giving |f(z)|≤|z|^m when the zero has order at least m. The divided function extends at zero by its Taylor coefficient. Equality at a nonzero point forces the corresponding rotational monomial form. Bounds are sharp and should be accompanied by explicit realizing functions when a question asks which values are possible rather than merely permitted by an inequality.",
+      "similar_questions": [
+        {
+          "prompt": "If f has a zero of order at least three, bound |f(1/2)|.",
+          "solution": "Repeated Schwarz gives |f(1/2)|≤1/8."
+        },
+        {
+          "prompt": "Can f(1/2)=i/4 under the original assumptions?",
+          "solution": "Yes: f(z)=iz² maps the disk into itself and realizes it."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 81, PDF page 20. No candidate response used as an answer key.",
+      "page": 20,
+      "image": "assets/questions/2020-june-26nov-q081.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2020-june-26nov-q082",
+      "source_type": "official_exam",
+      "paper_id": "2020-june-26nov",
+      "question_number": 82,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let n≥1, R>1 and z(θ)=Re^{iθ}. Which listed set is contained in {θ∈[0,2π): |z(θ)^n+1|=|z(θ)^n|-1}?",
+      "options": {
+        "A": "cos(nθ)=1",
+        "B": "sin(nθ)=1",
+        "C": "cos(nθ)=-1",
+        "D": "sin(nθ)=-1"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Square both nonnegative sides, using R^n>1.",
+        "The equality case is the negative real direction."
+      ],
+      "solution": "Put r=R^n>1. Squaring yields r²+1+2r cos(nθ)=(r-1)²=r²+1-2r, hence cos(nθ)=-1. Thus the set is exactly C. The angles in A yield modulus r+1; in B,D they yield √(r²+1), so none satisfies r-1.",
+      "theory": "The reverse triangle inequality gives |w+1|≥||w|-1|. When |w|>1, equality occurs exactly when w is on the negative real axis. Squaring is safe because both sides are nonnegative, and the strict radius condition avoids a sign ambiguity in |w|-1. For w=R^n e^(inθ), the argument is multiplied by n, so the solution set consists of n equally spaced angles (2k+1)π/n in a full turn. Comparing squared moduli is often simpler than manipulating square roots directly. The equality condition depends on phase, not just on magnitudes or on the sign of a sine.",
+      "similar_questions": [
+        {
+          "prompt": "Solve |2e^(iθ)+1|=1.",
+          "solution": "cos θ=-1, so θ=π modulo 2π."
+        },
+        {
+          "prompt": "How many θ in [0,2π) satisfy the original equality?",
+          "solution": "Exactly n, given by θ=(2k+1)π/n for k=0,…,n-1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 82, PDF page 21. No candidate response used as an answer key.",
+      "page": 21,
+      "image": "assets/questions/2020-june-26nov-q082.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

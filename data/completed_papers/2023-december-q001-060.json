@@ -1,0 +1,2483 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2023-december-q001",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 1,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Rounding off 4.58500001 to the second decimal place will give",
+      "options": {
+        "A": "4.6",
+        "B": "4.58",
+        "C": "4.59",
+        "D": "4.585"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Identify the hundredths digit and the next digit.",
+        "The number is slightly greater than the exact midpoint 4.585."
+      ],
+      "solution": "Two decimal places means hundredths. The adjacent possibilities are 4.58 and 4.59; their midpoint is 4.585. Since 4.58500001 is strictly above that midpoint, the nearest hundredth is 4.59. A and D have the wrong precision; B is below the nearest value.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. Rounding to a specified decimal place means selecting the closest multiple of the corresponding power of ten. Exact halfway cases require a tie-breaking convention, but this number is not a tie.",
+      "similar_questions": [
+        {
+          "prompt": "Round 2.346 to two decimal places.",
+          "solution": "The neighboring hundredths are 2.34 and 2.35. Their midpoint is 2.345, and 2.346 is above it; the answer is 2.35."
+        },
+        {
+          "prompt": "Round 7.1249 to two decimal places.",
+          "solution": "The neighboring hundredths are 7.12 and 7.13, with midpoint 7.125. Since 7.1249 is smaller, the answer is 7.12."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 1, PDF page 1. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704001, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 1,
+      "image": "assets/questions/2023-december-q001.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q002",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 2,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Two rectangular pieces of land have all sides and diagonals whole numbers of metres. Their areas are in ratio 4:3. The smaller has diagonal 41 m and one side 9 m; the bigger has a smaller diagonal. What is the diagonal of the bigger piece?",
+      "options": {
+        "A": "25",
+        "B": "29",
+        "C": "32",
+        "D": "34"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Recover the second side of the smaller rectangle using Pythagoras.",
+        "The larger area is 480. For an integer diagonal d, both (a+b)²=d²+960 and (a−b)²=d²−960 must be integer squares."
+      ],
+      "solution": "The smaller rectangle has other side sqrt(41²−9²)=40 and area 360. The larger area is 480. If its sides are a,b and diagonal d, then ab=480 and d²=a²+b²≥2ab=960, so d≥sqrt(960)>30. Hence 25 and 29 cannot work. For d=32, (a+b)²=32²+960=1984, which is not an integer square, so integral a,b are impossible. For d=34, (a+b)²=2116=46² and (a−b)²=196=14²; the sides are 30 and 16. Their area is 480 and diagonal 34<41.",
+      "theory": "Euclidean geometry relates lengths, areas, angles, and similarity. A rectangle with side lengths a and b has area ab and diagonal sqrt(a^2+b^2), by the Pythagorean theorem. Similar triangles have equal corresponding angles and a single common ratio between corresponding side lengths. The order of the letters in a similarity statement identifies the correspondence and is essential; matching sides merely by their apparent positions in a sketch can give the wrong ratio. A circular sector with angle theta degrees occupies theta/360 of the full circle. Use exact lengths until the final computation, respect integer restrictions when present, and verify that the calculated lengths satisfy both the original geometric relation and the answer options. ",
+      "similar_questions": [
+        {
+          "prompt": "A rectangle has diagonal 13 and side 5. Find its area.",
+          "solution": "The second side is sqrt(169−25)=12; area=5·12=60."
+        },
+        {
+          "prompt": "Can an integer-sided rectangle of area 24 have diagonal 10?",
+          "solution": "If ab=24 and a²+b²=100, then (a+b)²=148. This is not a square, so no integer sides exist."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 2, PDF page 1. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704002, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 1,
+      "image": "assets/questions/2023-december-q002.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q003",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 3,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Policemen X and Y chase thief T on foot and on a cycle respectively along the same straight road. Initially XY is four times TX. X runs twice as fast as T, and Y rides twice as fast as X. Then",
+      "options": {
+        "A": "X and Y catch up with T at the same time",
+        "B": "X catches T first",
+        "C": "Y catches T first",
+        "D": "Y crosses X during the chase"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Draw the intended ordering Y–X–T and put TX=d.",
+        "Use closing speeds v and 3v, and initial gaps d and 5d."
+      ],
+      "solution": "Under the intended chase ordering Y–X–T, let TX=d and the thief’s speed be v. Then X starts distance d behind T with speed 2v, whereas Y starts 5d behind T with speed 4v. Their respective catch times are d/(2v−v)=d/v and 5d/(4v−v)=5d/(3v), so X catches first. Y would catch X after 4d/(4v−2v)=2d/v, later than both interception times; D therefore does not describe the active chase. A and C are false. The text does not explicitly state the starting order; this answer uses the ordinary intended ordering of pursuers behind the thief, with Y behind X.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. For motion along a straight line in the same direction, the separation changes at the difference of the speeds. A pursuit time is initial separation divided by positive closing speed.",
+      "similar_questions": [
+        {
+          "prompt": "A runner at 6 m/s follows another at 4 m/s from 20 m behind. Find the catch time.",
+          "solution": "The gap closes at 6−4=2 m/s; time=20/2=10 s."
+        },
+        {
+          "prompt": "Two pursuers start 10 m and 30 m behind a runner at 2 m/s. Their speeds are 4 and 6 m/s. Who catches first?",
+          "solution": "Their closing speeds are 2 and 4 m/s, so times are 10/2=5 s and 30/4=7.5 s. The nearer pursuer catches first."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Source does not explicitly state initial ordering. The conventional intended Y–X–T ordering gives B; starting Y ahead of X while behind T is incompatible with XY=4TX, and allowing Y beyond T changes the pursuit model.",
+      "answer_source": "Independent mathematical derivation; question 3, PDF page 2. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704003, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 2,
+      "image": "assets/questions/2023-december-q003.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q004",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 4,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Moderate",
+      "prompt": "In a Sudoku each row, column and 3×3 box contains digits 1–9. Grid (0 denotes blank):\n0 8 0 |4 0 9 |6 5 3\n6 4 2 |8 0 0 |0 7 0\n0 0 0 |0 0 ? |8 0 0\n0 0 7 |0 0 5 |0 4 2\n0 0 0 |7 0 1 |0 0 0\n8 5 0 |6 0 0 |1 0 0\n0 0 6 |0 0 0 |0 0 0\n0 1 0 |0 0 4 |7 3 6\n2 7 3 |5 6 8 |0 1 0\nWhat is the marked square (row 3, column 6)?",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use the intersection of missing digits from the row, column and box.",
+        "Row 2, column 6 is immediately forced to 3; continue propagating constrained cells."
+      ],
+      "solution": "Intersect the missing digits in each cell’s row, column, and box; repeatedly fill single candidates, branching on a cell with the fewest remaining candidates if necessary. The completed grid is:\n7 8 1 4 2 9 6 5 3\n6 4 2 8 5 3 9 7 1\n9 3 5 1 7 6 8 2 4\n1 6 7 9 8 5 3 4 2\n3 2 9 7 4 1 5 6 8\n8 5 4 6 3 2 1 9 7\n4 9 6 3 1 7 2 8 5\n5 1 8 2 9 4 7 3 6\n2 7 3 5 6 8 4 1 9.\nEvery row, column and box contains 1–9 once. Exhaustive propagation/backtracking of the same candidate constraints gives no completion with the marked cell 2,3,or7; it is 6.",
+      "theory": "A logical conclusion is necessary only if it holds in every configuration consistent with the stated information. Translate each sentence into a constraint before combining sentences. Relationships such as parenthood, ordering, and membership have different meanings and should not be conflated. A constructive method is to list candidate configurations, discard those violating any condition, and inspect what is common to the survivors. To reject a proposed conclusion it is enough to exhibit one admissible counterexample. To establish uniqueness, explain why all alternative cases fail. Diagrams and tables help record information but should not silently add gender, spatial order, or family assumptions beyond the usual interpretation of the problem. Sudoku is a constraint satisfaction problem. A candidate digit must belong to the intersection of all three local allowed sets. A completed grid must also preserve every printed clue. For each Sudoku cell, the candidate set is the intersection of missing digits from its row, column, and box. Empty candidate sets reject a branch. A single candidate is forced, and branching only when no forced cell remains yields a complete finite search whose uniqueness can be checked by forbidding the proposed target digit.",
+      "similar_questions": [
+        {
+          "prompt": "A Sudoku row has 1,2,3,4,5,6,7,8 and one blank. Find the blank.",
+          "solution": "A row contains every digit once. The unique missing member of {1,…,9} is 9, so the blank is 9."
+        },
+        {
+          "prompt": "A blank has row candidates {2,4,7}, column candidates {1,4,7}, and box candidates {3,4,8}. Find it.",
+          "solution": "Intersect the three sets: {2,4,7}∩{1,4,7}={4,7}; intersecting with {3,4,8} gives {4}. The digit is 4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 4, PDF page 2. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704004, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 2,
+      "image": "assets/questions/2023-december-q004.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q005",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 5,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Two 24-hour clocks A and B gain 8 minutes and lose 12 minutes respectively per hour. Both are correct at 05:00. Within the next 24 hours A shows 15:12 and B shows 12:12. What is the true time?",
+      "options": {
+        "A": "13:48",
+        "B": "14:00",
+        "C": "14:12",
+        "D": "14:36"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Compare the two clock rates rather than solving their displayed times separately.",
+        "Their separation grows by 20 minutes per real hour."
+      ],
+      "solution": "In t real hours A advances 68t minutes and B advances 48t minutes. Their displayed difference is 180 minutes, giving 20t=180 and t=9. Indeed A advances 612 minutes from 05:00 to 15:12 and B advances 432 minutes to 12:12. The true time is 05:00+9 hours=14:00. Within the stated interval no 24-hour wrap gives another simultaneous solution.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. ",
+      "similar_questions": [
+        {
+          "prompt": "A clock gains 5 minutes per real hour. Starting correct at noon, what does it show after 4 hours?",
+          "solution": "It advances 4·65=260 minutes, or 4 h 20 min, so it shows 16:20."
+        },
+        {
+          "prompt": "One clock gains 6 minutes per hour and another loses 4. Their difference is 50 minutes. How much real time elapsed?",
+          "solution": "Their difference increases at 6+4=10 minutes per hour; elapsed time=50/10=5 hours."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 5, PDF page 4. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704005, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 4,
+      "image": "assets/questions/2023-december-q005.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q006",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 6,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "A family’s monthly amounts (rupees) are food 12000, medicine 8000, education 20000, clothing 4000, recreation 3000, tax 10000, pet 5000, savings 15000, incidentals 6000, travel 7000. Find the central angle for recreation.",
+      "options": {
+        "A": "12°",
+        "B": "13°",
+        "C": "14°",
+        "D": "15°"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Add all categories, including savings.",
+        "Multiply the recreation fraction of the total by 360°."
+      ],
+      "solution": "The total represented in the chart is 90000 rupees, including savings. Recreation’s fraction is 3000/90000=1/30, so its sector angle is 360°/30=12°. The other angles represent different fractions of the total.",
+      "theory": "Euclidean geometry relates lengths, areas, angles, and similarity. A rectangle with side lengths a and b has area ab and diagonal sqrt(a^2+b^2), by the Pythagorean theorem. Similar triangles have equal corresponding angles and a single common ratio between corresponding side lengths. The order of the letters in a similarity statement identifies the correspondence and is essential; matching sides merely by their apparent positions in a sketch can give the wrong ratio. A circular sector with angle theta degrees occupies theta/360 of the full circle. Use exact lengths until the final computation, respect integer restrictions when present, and verify that the calculated lengths satisfy both the original geometric relation and the answer options. ",
+      "similar_questions": [
+        {
+          "prompt": "A pie chart total is 600 and a category is 75. Find its angle.",
+          "solution": "The fraction is 75/600=1/8; the angle is 360/8=45°."
+        },
+        {
+          "prompt": "A 72° sector represents expenditure 2400. Find the chart total.",
+          "solution": "72/360=1/5. Thus 2400 is one fifth of the total, so total=12000."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 6, PDF page 4. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704006, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 4,
+      "image": "assets/questions/2023-december-q006.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q007",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 7,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Train travel between A and B takes 39 hours. A pair leaves A and B at 6 AM daily, beginning Monday. On which earliest day can the same rakes start again from their original stations?",
+      "options": {
+        "A": "Wednesday",
+        "B": "Thursday",
+        "C": "Friday",
+        "D": "Saturday"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Arrival time and next scheduled departure need not be the same.",
+        "After arriving Tuesday at 21:00, the rake can return only Wednesday at 06:00."
+      ],
+      "solution": "A rake leaving Monday 06:00 arrives at the opposite end Tuesday 21:00. Its first available daily departure back is Wednesday 06:00. That trip ends Thursday 21:00, so the earliest departure from its original station is Friday 06:00. The opposite rake follows the symmetric schedule.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. ",
+      "similar_questions": [
+        {
+          "prompt": "Daily trains leave at 08:00 and a trip takes 25 hours. A rake first leaves Monday. When can it first leave its original end again?",
+          "solution": "It arrives Tuesday 09:00, returns Wednesday 08:00, arrives Thursday 09:00, and departs its original end Friday 08:00."
+        },
+        {
+          "prompt": "A daily 06:00 train takes 10 hours each way. A rake leaves Monday. When is its next original-end departure?",
+          "solution": "It arrives Monday 16:00, returns Tuesday 06:00, arrives Tuesday 16:00, and departs its original end Wednesday 06:00."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 7, PDF page 6. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704007, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 6,
+      "image": "assets/questions/2023-december-q007.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q008",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 8,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "In a family of four, the engineer is the son of the chemist and brother of the teacher. The chemist is the wife of the lawyer and mother of the teacher. Which is necessarily true?",
+      "options": {
+        "A": "The teacher is the sister of the engineer",
+        "B": "The teacher is the son of the chemist",
+        "C": "The lawyer is the father of the teacher",
+        "D": "The lawyer is the brother of the teacher"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Identify the parent generation and the child generation.",
+        "The teacher’s gender is unspecified, but the lawyer is the chemist’s husband."
+      ],
+      "solution": "The chemist and lawyer are the parental couple in the intended four-person family. Their two children are the engineer and teacher; hence the lawyer is the teacher’s father. The teacher’s sex is not specified, so neither sister nor son is forced. The lawyer belongs to the parent generation, not the teacher’s sibling generation.",
+      "theory": "A logical conclusion is necessary only if it holds in every configuration consistent with the stated information. Translate each sentence into a constraint before combining sentences. Relationships such as parenthood, ordering, and membership have different meanings and should not be conflated. A constructive method is to list candidate configurations, discard those violating any condition, and inspect what is common to the survivors. To reject a proposed conclusion it is enough to exhibit one admissible counterexample. To establish uniqueness, explain why all alternative cases fail. Diagrams and tables help record information but should not silently add gender, spatial order, or family assumptions beyond the usual interpretation of the problem. ",
+      "similar_questions": [
+        {
+          "prompt": "A is B’s mother, C is A’s husband, and the family consists of these three people. Who is C to B?",
+          "solution": "Under the ordinary nuclear-family interpretation, A and C are the parents and B their child, so C is B’s father."
+        },
+        {
+          "prompt": "P is Q’s brother. Is Q necessarily male?",
+          "solution": "No. Brother specifies P’s sex, not Q’s; Q may be P’s brother or sister."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 8, PDF page 6. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704008, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 6,
+      "image": "assets/questions/2023-december-q008.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q009",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 9,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "In a queue each woman is preceded and followed by exactly two men. A woman is fourth among the women from the front. What is her overall position?",
+      "options": {
+        "A": "9th",
+        "B": "10th",
+        "C": "11th",
+        "D": "12th"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The men between consecutive women count for both neighboring women.",
+        "Write the first four women in the repeating pattern M M W."
+      ],
+      "solution": "The pattern is M M W M M W M M W M M W …, with the two men between consecutive women shared as the succeeding and preceding pair. Women occupy positions 3,6,9,12,… . The fourth woman is at position 3·4=12.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. For a repeating block of length k, an item occurring at a fixed position within each block has indices forming an arithmetic progression with common difference k.",
+      "similar_questions": [
+        {
+          "prompt": "In M M W repeating from the front, where is the seventh woman?",
+          "solution": "Women occur at positions 3k. For k=7 the position is 21."
+        },
+        {
+          "prompt": "A queue repeats M W M W, starting with M. Where is the fifth woman?",
+          "solution": "Women occupy even positions 2,4,6,8,10; the fifth is tenth overall."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 9, PDF page 7. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704009, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 7,
+      "image": "assets/questions/2023-december-q009.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q010",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 10,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "The sets x₁,…,x₁₀₀ and y₁,…,y₁₅₀ have mean zero and equal standard deviations. Which ratio is Σxᵢ²:Σyᵢ² closest to?",
+      "options": {
+        "A": "1:1",
+        "B": "√2:√3",
+        "C": "2:3",
+        "D": "4:9"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "For zero mean, variance is the sum of squares divided by sample size (or size minus one).",
+        "Equal variances make the sums proportional to their denominators."
+      ],
+      "solution": "With population standard deviations, σ²=Σxᵢ²/100=Σyᵢ²/150, so the ratio is 100:150=2:3. With sample standard deviations the ratio is 99:149≈0.6644, still closest to 2:3≈0.6667 rather than 1,0.8165,or0.4444. This assumes the common standard deviation is nonzero; if both data sets are identically zero, the displayed ratio is undefined.",
+      "theory": "The arithmetic mean of n observations is their sum divided by n. The median is a middle order statistic after the data are sorted: for odd n it is observation (n+1)/2, while for even n it is the average of the two central observations. The mode is a value attaining the greatest frequency and need not equal either the mean or median. Population variance is the mean squared deviation from the mean; sample variance uses denominator n-1 instead. When the mean is zero the squared deviations are simply the squares of the observations. Extreme observations affect the mean strongly but may leave the median unchanged. State the variance convention and avoid reading a statistic directly from unsorted data.  Equality of nonzero standard deviations permits equating the corresponding sums of squares after dividing by the appropriate degrees of freedom. Zero standard deviation implies every observation equals its mean and produces the undefined ratio zero to zero, so the usual ratio calculation requires nondegeneracy.",
+      "similar_questions": [
+        {
+          "prompt": "Two zero-mean samples of sizes 20 and 30 have equal population variance 4. Find their sums of squares.",
+          "solution": "The sums are nσ², namely 20·4=80 and 30·4=120; ratio 2:3."
+        },
+        {
+          "prompt": "A zero-mean sample of size 11 has sample variance 9. Find its sum of squares.",
+          "solution": "Sample variance uses denominator n−1=10. Therefore Σxᵢ²=10·9=90."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "The intended comparison assumes a nonzero common standard deviation. If both sets are all zero the ratio is undefined; either standard-deviation convention otherwise gives C as the closest listed ratio.",
+      "answer_source": "Independent mathematical derivation; question 10, PDF page 7. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704010, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 7,
+      "image": "assets/questions/2023-december-q010.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q011",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 11,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Subtract the sum of the digits from a two-digit number. The resulting number is",
+      "options": {
+        "A": "always divisible by 6",
+        "B": "always divisible by 9",
+        "C": "never divisible by 4",
+        "D": "never divisible by 5"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Represent a two-digit number by 10a+b.",
+        "Subtract a+b and factor the result."
+      ],
+      "solution": "Write the number as 10a+b. Subtracting a+b gives 9a, always divisible by 9. For a=1 the result 9 is not divisible by 6. For a=4 the result 36 is divisible by 4, and for a=5 the result 45 is divisible by 5, disproving C and D.",
+      "theory": "An integer divides another integer when the quotient is an integer, equivalently when the remainder upon division is zero. The fundamental theorem of arithmetic gives a unique prime factorization for every positive integer greater than one. Divisibility questions can therefore be approached through factors, prime exponents, or congruences. In positional notation, a two-digit number with digits a and b is 10a+b; the leading digit is nonzero. For positive integers n and prime p, the exponent of p in n! is the sum of floor(n/p^k) over positive k. Each multiple of p contributes once, and each additional power contributes one extra factor. Always distinguish existence of one representation from a statement about all integers. ",
+      "similar_questions": [
+        {
+          "prompt": "Subtract the digit sum from 73.",
+          "solution": "73−(7+3)=63=9·7, illustrating the general formula."
+        },
+        {
+          "prompt": "In base 8, subtract the digit sum from a two-digit number 8a+b. What divides the result?",
+          "solution": "The difference is (8a+b)−(a+b)=7a, so it is always divisible by 7."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 11, PDF page 8. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704011, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 8,
+      "image": "assets/questions/2023-december-q011.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q012",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 12,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Which of 10,11,12,13 can be expressed as a sum of squares of four integers, allowing repetition?",
+      "options": {
+        "A": "Only 10",
+        "B": "Only 10 and 11",
+        "C": "Only 10,11 and 12",
+        "D": "All"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Zero is allowed because it is an integer.",
+        "Start with 3²=9 and represent each remaining amount using three squares."
+      ],
+      "solution": "All four have explicit representations: 10=3²+1²+0²+0²; 11=3²+1²+1²+0²; 12=3²+1²+1²+1²; 13=3²+2²+0²+0². Zero is an integer, and repetition is allowed. These constructions establish D. More generally Lagrange’s four-square theorem applies to every nonnegative integer.",
+      "theory": "An integer divides another integer when the quotient is an integer, equivalently when the remainder upon division is zero. The fundamental theorem of arithmetic gives a unique prime factorization for every positive integer greater than one. Divisibility questions can therefore be approached through factors, prime exponents, or congruences. In positional notation, a two-digit number with digits a and b is 10a+b; the leading digit is nonzero. For positive integers n and prime p, the exponent of p in n! is the sum of floor(n/p^k) over positive k. Each multiple of p contributes once, and each additional power contributes one extra factor. Always distinguish existence of one representation from a statement about all integers. ",
+      "similar_questions": [
+        {
+          "prompt": "Write 15 as four integer squares.",
+          "solution": "15=3²+2²+1²+1²=9+4+1+1."
+        },
+        {
+          "prompt": "Write 7 as four integer squares.",
+          "solution": "7=2²+1²+1²+1²=4+1+1+1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 12, PDF page 8. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704012, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 8,
+      "image": "assets/questions/2023-december-q012.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q013",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 13,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Which power of 3 is the largest factor of 1×2×…×30?",
+      "options": {
+        "A": "3¹⁰",
+        "B": "3¹³",
+        "C": "3¹⁴",
+        "D": "3¹⁵"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Count factors of 3, including extra factors in multiples of 9 and 27.",
+        "Use floor(30/3)+floor(30/9)+floor(30/27)."
+      ],
+      "solution": "Legendre’s formula gives v₃(30!)=floor(30/3)+floor(30/9)+floor(30/27)=10+3+1=14. Thus 3¹⁴ divides 30! but 3¹⁵ does not. Options A and B divide it but are not largest.",
+      "theory": "An integer divides another integer when the quotient is an integer, equivalently when the remainder upon division is zero. The fundamental theorem of arithmetic gives a unique prime factorization for every positive integer greater than one. Divisibility questions can therefore be approached through factors, prime exponents, or congruences. In positional notation, a two-digit number with digits a and b is 10a+b; the leading digit is nonzero. For positive integers n and prime p, the exponent of p in n! is the sum of floor(n/p^k) over positive k. Each multiple of p contributes once, and each additional power contributes one extra factor. Always distinguish existence of one representation from a statement about all integers. ",
+      "similar_questions": [
+        {
+          "prompt": "Find the highest power of 2 dividing 10!.",
+          "solution": "v₂(10!)=5+2+1=8, so the answer is 2⁸."
+        },
+        {
+          "prompt": "Find v₅(100!).",
+          "solution": "floor(100/5)+floor(100/25)=20+4=24; higher powers contribute zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 13, PDF page 9. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704013, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 9,
+      "image": "assets/questions/2023-december-q013.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q014",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 14,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Akash, Bikram, Ramesh and Dewan joined in distinct years 1991–1994 and distinct departments Physics, Chemistry, Mathematics, Biology. One of those who joined before 1993 joined Chemistry. Nobody joined after Ramesh. Dewan joined Physics. Akash joined one year after Dewan and not Chemistry. Which department did the 1992 student join?",
+      "options": {
+        "A": "Physics",
+        "B": "Chemistry",
+        "C": "Mathematics",
+        "D": "Biology"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Ramesh must be the 1994 student; test consecutive year pairs for Dewan and Akash.",
+        "If Dewan joined in 1991, neither of the students before 1993 could be in Chemistry."
+      ],
+      "solution": "Ramesh is latest, so joined in 1994. Dewan and Akash occupy consecutive years. Dewan=1991 would force Akash=1992, but neither would be Chemistry, contradicting a Chemistry student before 1993. Dewan=1993 would force Akash=1994, already occupied by Ramesh. Thus Dewan=1992 and Akash=1993. Bikram=1991 Chemistry, Dewan=1992 Physics, Akash=1993 Mathematics or Biology, Ramesh=1994 the other. The 1992 student certainly joined Physics.",
+      "theory": "A logical conclusion is necessary only if it holds in every configuration consistent with the stated information. Translate each sentence into a constraint before combining sentences. Relationships such as parenthood, ordering, and membership have different meanings and should not be conflated. A constructive method is to list candidate configurations, discard those violating any condition, and inspect what is common to the survivors. To reject a proposed conclusion it is enough to exhibit one admissible counterexample. To establish uniqueness, explain why all alternative cases fail. Diagrams and tables help record information but should not silently add gender, spatial order, or family assumptions beyond the usual interpretation of the problem. ",
+      "similar_questions": [
+        {
+          "prompt": "D joins one year before A. R is last of four distinct years 1–4. D is Physics, A not Chemistry, and Chemistry occurs before year 3. Find D’s year.",
+          "solution": "D=1 would put A=2, leaving no Chemistry in years 1–2. D=3 would put A=4 occupied by R. Hence D=2, A=3, and the remaining student is Chemistry in year 1."
+        },
+        {
+          "prompt": "Four distinct departments are assigned; P is Physics, C is Chemistry, B is Biology. Find the remaining person’s department.",
+          "solution": "Eliminating those three from {Physics,Chemistry,Biology,Mathematics} leaves Mathematics."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 14, PDF page 10. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704014, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 10,
+      "image": "assets/questions/2023-december-q014.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q015",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 15,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "In 8,3,4,9,3,5,9,5,9,9,9,4,5,6,3,3,5,7,2,3,9,9, how many terms are divisible by their immediately preceding terms?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Check each consecutive pair independently.",
+        "Equality counts as divisibility because the quotient is 1."
+      ],
+      "solution": "Test adjacent pairs, excluding the first term because it has no predecessor. Successful pairs occur at positions 10,11,16,21,22: 9/9,9/9,3/3,9/3,9/9. All other adjacent divisions have nonzero remainders. There are five successes, giving C.",
+      "theory": "An integer divides another integer when the quotient is an integer, equivalently when the remainder upon division is zero. The fundamental theorem of arithmetic gives a unique prime factorization for every positive integer greater than one. Divisibility questions can therefore be approached through factors, prime exponents, or congruences. In positional notation, a two-digit number with digits a and b is 10a+b; the leading digit is nonzero. For positive integers n and prime p, the exponent of p in n! is the sum of floor(n/p^k) over positive k. Each multiple of p contributes once, and each additional power contributes one extra factor. Always distinguish existence of one representation from a statement about all integers. ",
+      "similar_questions": [
+        {
+          "prompt": "Count successes in 2,4,3,9,9.",
+          "solution": "4 is divisible by 2; 3 is not divisible by 4; 9 is divisible by 3; final 9 is divisible by 9. Total 3."
+        },
+        {
+          "prompt": "Count successes in 5,2,6,4,8.",
+          "solution": "2/5 fails; 6/2 succeeds; 4/6 fails; 8/4 succeeds. Total 2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 15, PDF page 10. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704015, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 10,
+      "image": "assets/questions/2023-december-q015.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q016",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 16,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "In the figure ΔABC and ΔBDC are similar, with D on AC, AC=20, BC=8 and AB=15. Find BD.",
+      "options": {
+        "A": "8.0",
+        "B": "7.2",
+        "C": "7.5",
+        "D": "6.0"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use the letter order to identify corresponding sides.",
+        "AC/BC=AB/BD."
+      ],
+      "solution": "The ordered similarity ABC∼BDC gives A↔B, B↔D, C↔C. Thus AC corresponds to BC and AB to BD. Hence BD/15=8/20, so BD=6. The other three options violate this side ratio.",
+      "theory": "Euclidean geometry relates lengths, areas, angles, and similarity. A rectangle with side lengths a and b has area ab and diagonal sqrt(a^2+b^2), by the Pythagorean theorem. Similar triangles have equal corresponding angles and a single common ratio between corresponding side lengths. The order of the letters in a similarity statement identifies the correspondence and is essential; matching sides merely by their apparent positions in a sketch can give the wrong ratio. A circular sector with angle theta degrees occupies theta/360 of the full circle. Use exact lengths until the final computation, respect integer restrictions when present, and verify that the calculated lengths satisfy both the original geometric relation and the answer options. ",
+      "similar_questions": [
+        {
+          "prompt": "Triangles PQR and XYZ are similar in that order. PR=12,XZ=8,PQ=9. Find XY.",
+          "solution": "The scale factor from PQR to XYZ is XZ/PR=8/12=2/3. Therefore XY=9·2/3=6."
+        },
+        {
+          "prompt": "Two similar triangles have corresponding sides 5 and 15. The smaller area is 8. Find larger area.",
+          "solution": "The length scale is 3. Areas scale by 3²=9, so the larger area is 72."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 16, PDF page 11. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704016, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 11,
+      "image": "assets/questions/2023-december-q016.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q017",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 17,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Two cylindrical candles have unequal heights and diameters. The shorter lasts 13 hours and the longer 9 hours. Lit together, their heights are equal after 5 hours. Find the ratio of original heights (shorter:longer).",
+      "options": {
+        "A": "1:2",
+        "B": "13:18",
+        "C": "9:13",
+        "D": "√5:3"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the fraction of full burning time remaining after five hours.",
+        "The remaining height fractions are 8/13 and 4/9."
+      ],
+      "solution": "Assuming uniform burning of each cylindrical candle, heights decrease linearly. If original heights are s,l, the remaining heights after 5 hours are s(1−5/13)=8s/13 and l(1−5/9)=4l/9. Equality gives 8s/13=4l/9, hence s/l=13/18. Diameter is already reflected in the different full burning times and does not enter this height equation.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. A uniform cylindrical candle with constant volume consumption loses height at a constant rate, since cross-sectional area is constant. Its remaining fraction of height equals its remaining fraction of total burn time.",
+      "similar_questions": [
+        {
+          "prompt": "Candles last 10 and 6 hours and reach equal height after 2 hours. Find their original height ratio.",
+          "solution": "h₁·8/10=h₂·4/6, giving h₁/h₂=(2/3)/(4/5)=5/6."
+        },
+        {
+          "prompt": "A 24 cm candle burns uniformly in 8 hours. Find its height after 3 hours.",
+          "solution": "Rate=24/8=3 cm/hour. Remaining height=24−3·3=15 cm."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 17, PDF page 12. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704017, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 12,
+      "image": "assets/questions/2023-december-q017.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q018",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 18,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Every day a child adds as many coins as are already in her piggy bank. Starting with one coin it fills in 8 days. How many days if she starts with two coins?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "7"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "This is doubling, not adding a fixed number of coins.",
+        "Starting with two coins is equivalent to beginning one doubling ahead."
+      ],
+      "solution": "The coin count doubles each day. Starting with 1 coin, after 8 additions it reaches 2⁸. Starting with 2=2¹ coins, after n additions it contains 2ⁿ⁺¹. Equality to 2⁸ gives n+1=8, so n=7. The result is independent of whether the initial day is labeled day zero, provided the same convention is used in both cases.",
+      "theory": "Arithmetic models convert verbal descriptions into exact equations. Specify the quantity being counted or measured, retain its units, and distinguish a rate from a total. Addition combines quantities with the same units; multiplication by a rate converts elapsed time into accumulated change. Ratios compare like quantities and remain unchanged when both terms are multiplied by the same nonzero number. Integer restrictions must be checked after solving real-valued equations. A useful method is to introduce one variable for each unknown, express all statements using those variables, solve, and substitute back into the original statements. Avoid premature rounding, counting endpoints inconsistently, or replacing a relative rate by an absolute rate. Repeated proportional growth is geometric rather than additive. If the multiplier is r and the initial amount is a, the amount after n steps is arⁿ.",
+      "similar_questions": [
+        {
+          "prompt": "A culture doubles hourly and takes 12 hours from one unit to reach a threshold. How long from four units?",
+          "solution": "Four units equal two doublings in advance. Therefore the time is 12−2=10 hours."
+        },
+        {
+          "prompt": "A bank contains 3 coins and doubles daily. How many after 5 days?",
+          "solution": "The amount is 3·2⁵=96 coins."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 18, PDF page 12. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704018, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 12,
+      "image": "assets/questions/2023-december-q018.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q019",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 19,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "For the 13 observations 65,61,63,65,61,60,65,83,65,84,61,65,62, which statement holds?",
+      "options": {
+        "A": "Mean = Median < Mode",
+        "B": "Median < Mode = Mean",
+        "C": "Mode = Median < Mean",
+        "D": "Median < Mean < Mode"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Sort the data to identify the seventh observation.",
+        "Count frequencies, then compute the mean from the total 860."
+      ],
+      "solution": "Sorted data are 60,61,61,61,62,63,65,65,65,65,65,83,84. The seventh observation, and therefore median, is 65. The mode is also 65, appearing five times. The sum is 860, giving mean 860/13≈66.154>65. Thus mode=median<mean.",
+      "theory": "The arithmetic mean of n observations is their sum divided by n. The median is a middle order statistic after the data are sorted: for odd n it is observation (n+1)/2, while for even n it is the average of the two central observations. The mode is a value attaining the greatest frequency and need not equal either the mean or median. Population variance is the mean squared deviation from the mean; sample variance uses denominator n-1 instead. When the mean is zero the squared deviations are simply the squares of the observations. Extreme observations affect the mean strongly but may leave the median unchanged. State the variance convention and avoid reading a statistic directly from unsorted data. ",
+      "similar_questions": [
+        {
+          "prompt": "Find mean, median and mode for 1,2,2,3,12.",
+          "solution": "Sum=20, mean=4; the middle sorted value is 2; 2 is most frequent. Thus median=mode=2<mean."
+        },
+        {
+          "prompt": "Find mean, median and mode for 1,3,3,3,5.",
+          "solution": "Sum=15 and n=5, so mean=3. The middle value and most frequent value are both 3; all three statistics coincide."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 19, PDF page 13. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704019, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 13,
+      "image": "assets/questions/2023-december-q019.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q020",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 20,
+      "part": "A",
+      "track": "Shared",
+      "topic": "Aptitude",
+      "difficulty": "Easy",
+      "prompt": "Consider 3ˣ−3ʸ=3⁴ with integer x,y. A solution",
+      "options": {
+        "A": "satisfies x>4,y>4",
+        "B": "satisfies x>5,y>3",
+        "C": "satisfies x>6,y>2",
+        "D": "is not possible"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The positive right side forces x>y.",
+        "Factor out 3ʸ; the other factor is not divisible by 3."
+      ],
+      "solution": "The positive difference forces x>y. Factoring gives 3ʸ(3ˣ⁻ʸ−1)=3⁴. Since x−y is a positive integer, 3ˣ⁻ʸ−1 is an integer not divisible by 3. Comparing 3-adic valuations gives y=4 (this also handles negative integer y). The remaining equation is 3ˣ⁻⁴−1=1, or 3ˣ⁻⁴=2, impossible for an integer exponent. Therefore there are no integer solutions.",
+      "theory": "An integer divides another integer when the quotient is an integer, equivalently when the remainder upon division is zero. The fundamental theorem of arithmetic gives a unique prime factorization for every positive integer greater than one. Divisibility questions can therefore be approached through factors, prime exponents, or congruences. In positional notation, a two-digit number with digits a and b is 10a+b; the leading digit is nonzero. For positive integers n and prime p, the exponent of p in n! is the sum of floor(n/p^k) over positive k. Each multiple of p contributes once, and each additional power contributes one extra factor. Always distinguish existence of one representation from a statement about all integers. The p-adic valuation of a nonzero rational is the exponent of p in its factorization and may be negative. Valuations add under multiplication and identify whether a factor can equal a pure prime power.",
+      "similar_questions": [
+        {
+          "prompt": "Solve 2ˣ−2ʸ=8 for integer x,y.",
+          "solution": "x>y and 2ʸ(2ˣ⁻ʸ−1)=2³. The odd factor forces y=3; then 2ˣ⁻³−1=1 gives x=4. Solution (4,3)."
+        },
+        {
+          "prompt": "Can 5ˣ−5ʸ=25 hold for integers?",
+          "solution": "x>y; the factor 5ˣ⁻ʸ−1 is not divisible by 5, so y=2. Then 5ˣ⁻²=2, impossible. No solution."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 20, PDF page 13. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704020, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 13,
+      "image": "assets/questions/2023-december-q020.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q022",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 22,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "Let X be a nonempty finite set and Y={f⁻¹(0): f is a real-valued function on X}. Which statement is true?",
+      "options": {
+        "A": "Y is infinite",
+        "B": "Y has 2^|X| elements",
+        "C": "There is a bijection from X to Y",
+        "D": "There is a surjection from X to Y"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "A zero set is a subset of X.",
+        "Can every subset be realized by a function taking only the values 0 and 1?"
+      ],
+      "solution": "Every zero set is a subset of X. Conversely, for each subset S⊆X define f(x)=0 on S and f(x)=1 off S; then f⁻¹(0)=S. Thus Y is exactly the power set of X and has 2ⁿ members, n=|X|. It is finite, and 2ⁿ>n for n≥1, excluding both a bijection and a surjection from X.",
+      "theory": "Finite counting rests on injective assignments, partitions, and careful tracking of possible configurations. The pigeonhole principle states that if N objects are assigned to k boxes, some box has at least ceil(N/k) objects. This conclusion guarantees existence of one crowded box, not the same occupancy in every box. The power set of an n-element set has 2ⁿ elements, since each element has two independent choices, inclusion or exclusion. An injection from a finite set to another requires the target to be at least as large; a surjection requires the domain to be at least as large. To prove a counting claim, identify the objects and boxes or construct a bijection. Counterexamples should satisfy all hypotheses and show that the stronger proposed conclusion fails.  The preimage of zero is a set, not an inverse function. Distinct functions may have the same preimage. Counting possible zero sets therefore requires identifying the family of subsets they realize rather than counting the infinitely many functions themselves.",
+      "similar_questions": [
+        {
+          "prompt": "Find all zero sets of real functions on {a,b}.",
+          "solution": "They are ∅,{a},{b},{a,b}, realized by 0/1 functions. There are 2²=4."
+        },
+        {
+          "prompt": "Can a 3-element set map surjectively to its power set?",
+          "solution": "Its power set has 2³=8 elements, while an image of a 3-element domain has at most 3 elements. No."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 22, PDF page 14. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704022, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 14,
+      "image": "assets/questions/2023-december-q022.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q023",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 23,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consider (a) Σₙ₌₁∞ sin(nπ/2)/√n and (b) Σₙ₌₁∞ log(1+1/n²). Which is true?",
+      "options": {
+        "A": "(a) converges but (b) does not",
+        "B": "(a) does not converge but (b) does",
+        "C": "Both converge",
+        "D": "Neither converges"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Write out the first few values of sin(nπ/2).",
+        "Use alternating-series convergence for (a) and log(1+t)≤t for (b)."
+      ],
+      "solution": "The zero even terms leave (a)=1−1/√3+1/√5−1/√7+⋯. The positive magnitudes decrease to zero, so the alternating-series test proves convergence (not absolute convergence). For (b), 0≤log(1+1/n²)≤1/n² and Σ1/n² converges; comparison proves convergence. Therefore C is true.",
+      "theory": "Real analysis studies limits, continuity, differentiation, and convergence using precise quantifiers. A sequence converges to L if every positive tolerance eventually bounds its distance from L. Its limsup is the limit of the suprema of its tails; for a periodic sequence it is the largest recurring value. A numerical series converges when its partial sums have a finite limit. Comparison with a convergent nonnegative series, the alternating-series test, and Dirichlet’s test have distinct hypotheses that must be verified. A differentiable function is continuous, and an accumulation point of its zeros is itself a zero. Rolle’s theorem requires continuity on a closed interval and differentiability inside. Compactness supplies convergent subsequences of bounded real sequences. Be careful not to confuse conditional convergence with absolute convergence. ",
+      "similar_questions": [
+        {
+          "prompt": "Does Σ(−1)ⁿ⁻¹/n converge absolutely?",
+          "solution": "The magnitudes 1/n decrease to zero, so the alternating series converges. The absolute series is harmonic and diverges, so convergence is conditional."
+        },
+        {
+          "prompt": "Prove Σlog(1+1/n³) converges.",
+          "solution": "For t≥0, log(1+t)≤t. Hence its terms lie between 0 and 1/n³, whose p-series converges. Comparison proves convergence."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 23, PDF page 15. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704023, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 15,
+      "image": "assets/questions/2023-december-q023.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q024",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 24,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "aₙ=cos((−1)ⁿ nπ/2+nπ/3). Which statement is true?",
+      "options": {
+        "A": "limsup aₙ=√3/2",
+        "B": "limsup a₂ₙ=1",
+        "C": "limsup a₂ₙ=1/2",
+        "D": "limsup a₃ₙ=0"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Separate even and odd indices before simplifying the angle.",
+        "The even subsequence equals cos(5nπ/3), which attains 1 infinitely often."
+      ],
+      "solution": "For even original index 2n, a₂ₙ=cos(nπ+2nπ/3)=cos(5nπ/3). This is periodic and equals 1 whenever n is divisible by 6; all values are ≤1, so its limsup is 1. Consequently the full sequence also has limsup 1, excluding A, and C is false. In a₃ₙ, take n=4k: the original index is 12k and the angle is 10kπ, giving value 1 infinitely often. Thus its limsup is also 1, excluding D.",
+      "theory": "Real analysis studies limits, continuity, differentiation, and convergence using precise quantifiers. A sequence converges to L if every positive tolerance eventually bounds its distance from L. Its limsup is the limit of the suprema of its tails; for a periodic sequence it is the largest recurring value. A numerical series converges when its partial sums have a finite limit. Comparison with a convergent nonnegative series, the alternating-series test, and Dirichlet’s test have distinct hypotheses that must be verified. A differentiable function is continuous, and an accumulation point of its zeros is itself a zero. Rolle’s theorem requires continuity on a closed interval and differentiability inside. Compactness supplies convergent subsequences of bounded real sequences. Be careful not to confuse conditional convergence with absolute convergence.  A subsequence is obtained by restricting indices to an increasing sequence. For a bounded periodic sequence its limsup is its maximum periodic value. Replacing n by 2n or 3n requires re-evaluating every occurrence of the index, including parity-dependent signs.",
+      "similar_questions": [
+        {
+          "prompt": "Find limsup cos(nπ/2).",
+          "solution": "The repeating values are 0,−1,0,1. The largest recurring value is 1, hence limsup=1."
+        },
+        {
+          "prompt": "For bₙ=(−1)ⁿ, find limsup b₂ₙ and limsup b₂ₙ₊₁.",
+          "solution": "Even indices always give 1, odd indices always give −1. The two limsups are 1 and −1."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 24, PDF page 16. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704024, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 16,
+      "image": "assets/questions/2023-december-q024.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q025",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 25,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f:ℝ→ℝ is differentiable and f,f′ have no common zeros in [0,1]. Which is true?",
+      "options": {
+        "A": "f never vanishes in [0,1]",
+        "B": "f has at most finitely many zeros in [0,1]",
+        "C": "f has infinitely many zeros in [0,1]",
+        "D": "f(1/2)=0"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "An infinite subset of a compact interval has an accumulation point.",
+        "Use difference quotients along the zeros to show that the derivative also vanishes there."
+      ],
+      "solution": "If f had infinitely many distinct zeros in the compact interval, they would have a convergent subsequence xₖ→c∈[0,1]. Continuity gives f(c)=0. Since xₖ≠c, the difference quotients [f(xₖ)−f(c)]/(xₖ−c) vanish. Differentiability on ℝ, including at endpoints, gives f′(c)=0, a contradiction. Hence there are finitely many zeros. f(x)=x−1/3 refutes A and D; f=1 also refutes C and D.",
+      "theory": "Real analysis studies limits, continuity, differentiation, and convergence using precise quantifiers. A sequence converges to L if every positive tolerance eventually bounds its distance from L. Its limsup is the limit of the suprema of its tails; for a periodic sequence it is the largest recurring value. A numerical series converges when its partial sums have a finite limit. Comparison with a convergent nonnegative series, the alternating-series test, and Dirichlet’s test have distinct hypotheses that must be verified. A differentiable function is continuous, and an accumulation point of its zeros is itself a zero. Rolle’s theorem requires continuity on a closed interval and differentiability inside. Compactness supplies convergent subsequences of bounded real sequences. Be careful not to confuse conditional convergence with absolute convergence.  A zero is simple in the differentiable sense when its derivative is nonzero. An accumulation of distinct zeros forces a common zero of the function and derivative by continuity and the definition of derivative. Compactness turns an infinite set of zeros in a bounded closed interval into such an accumulation.",
+      "similar_questions": [
+        {
+          "prompt": "Can a differentiable f with f′(x)≠0 at every zero have infinitely many zeros in [−2,2]?",
+          "solution": "No. Compactness gives an accumulation point c of zeros; continuity and difference quotients force f(c)=f′(c)=0."
+        },
+        {
+          "prompt": "Give a differentiable function with infinitely many real zeros but no common zero with its derivative.",
+          "solution": "f(x)=sin x has zeros kπ and f′(kπ)=cos(kπ)=±1. Its zeros are infinite on ℝ but finite in every compact interval."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 25, PDF page 16. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704025, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 16,
+      "image": "assets/questions/2023-december-q025.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q026",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 26,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f is a real cubic with exactly one real root, which is simple. Which statement holds for every antiderivative F?",
+      "options": {
+        "A": "F has exactly one real root",
+        "B": "F has exactly four real roots",
+        "C": "F has at most two real roots",
+        "D": "F has at most one real root"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Relate distinct zeros of F to zeros of F′ using Rolle’s theorem.",
+        "Three zeros of F would force two distinct zeros of the cubic."
+      ],
+      "solution": "If F had three distinct real zeros, Rolle’s theorem on the two intervening intervals would give two distinct real zeros of F′=f, contradicting the hypothesis. Thus F has at most two distinct real roots. For f=x³+x, antiderivatives are x⁴/4+x²/2+C. C>0 gives no roots, excluding A and B; C<0 gives exactly two roots, excluding D. Hence C is the unique universal conclusion.",
+      "theory": "Real analysis studies limits, continuity, differentiation, and convergence using precise quantifiers. A sequence converges to L if every positive tolerance eventually bounds its distance from L. Its limsup is the limit of the suprema of its tails; for a periodic sequence it is the largest recurring value. A numerical series converges when its partial sums have a finite limit. Comparison with a convergent nonnegative series, the alternating-series test, and Dirichlet’s test have distinct hypotheses that must be verified. A differentiable function is continuous, and an accumulation point of its zeros is itself a zero. Rolle’s theorem requires continuity on a closed interval and differentiability inside. Compactness supplies convergent subsequences of bounded real sequences. Be careful not to confuse conditional convergence with absolute convergence.  Rolle’s theorem bounds distinct roots of a differentiable function by one more than the number of distinct roots of its derivative. Its use here concerns distinct locations, not multiplicity. Additive constants change an antiderivative’s zero set without changing its derivative, so exact root counts cannot be inferred universally.",
+      "similar_questions": [
+        {
+          "prompt": "If f has at most two distinct real zeros, how many can an antiderivative have?",
+          "solution": "Four zeros of an antiderivative would produce three zeros of f by Rolle. Therefore at most three distinct zeros are possible."
+        },
+        {
+          "prompt": "Find real roots of F=x⁴/4+x²/2−3/4.",
+          "solution": "Set y=x²≥0. Then y²+2y−3=0, so y=1 or −3. Only y=1 is allowed, giving x=±1, two roots."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 26, PDF page 17. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704026, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 17,
+      "image": "assets/questions/2023-december-q026.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q027",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 27,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Iₙ is the identity. Which is true?",
+      "options": {
+        "A": "Real A(3×2),B(2×3) with BA=I₂ necessarily have AB=I₃",
+        "B": "A=[[3,3],[1,2]] has an integer-entry B with AB=I₂",
+        "C": "A=[[3,1],[1,2]] over ℤ/6ℤ has a B with AB=I₂",
+        "D": "Every nonzero real diagonal 3×3 matrix has a right inverse"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Distinguish rank constraints over ℝ from unit determinants over a ring.",
+        "The determinant of the third matrix is 5, which is invertible modulo 6."
+      ],
+      "solution": "A: rank(AB)≤2, so AB cannot be I₃. B: det A=3 and the unique real inverse is (1/3)[[2,−3],[−1,3]], not integral. C: the determinant is 6−1=5, a unit modulo 6 with inverse 5. Thus B=5[[2,−1],[−1,3]]≡[[4,1],[1,3]] modulo 6, and multiplication gives I₂. D: diag(1,0,0) is nonzero but singular, so has no right inverse.",
+      "theory": "A linear map is represented by a matrix once bases are chosen. Its rank is the dimension of its image and its nullity is the dimension of its kernel; the rank-nullity theorem says their sum equals the dimension of the domain. Products satisfy rank(AB)≤min(rank A,rank B). A square matrix over a field is invertible exactly when its determinant is nonzero. An eigenvector is a nonzero vector mapped to a scalar multiple of itself; the scalar is its eigenvalue. An invariant subspace is mapped into itself. Real symmetric matrices have real eigenvalues and an orthonormal eigenbasis. Positive definiteness means xᵀAx>0 for every nonzero real x. Distinguish a nonzero matrix from a nonsingular matrix, and specify the coefficient field or ring when testing invertibility. ",
+      "similar_questions": [
+        {
+          "prompt": "Invert [[1,2],[0,1]] over the integers.",
+          "solution": "The determinant is 1. The inverse [[1,−2],[0,1]] has integer entries and multiplying verifies the identity."
+        },
+        {
+          "prompt": "Does [[2,0],[0,1]] invert over ℤ/6ℤ?",
+          "solution": "Its determinant 2 is not a unit modulo 6. Equivalently 2b≡1 has no solution, so no inverse exists."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 27, PDF page 17. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704027, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 17,
+      "image": "assets/questions/2023-december-q027.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q028",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 28,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A=(aᵢⱼ) is the n×n real matrix with aᵢⱼ=ij, n≥3. Which is an eigenvalue?",
+      "options": {
+        "A": "1",
+        "B": "n",
+        "C": "n(n+1)/2",
+        "D": "n(n+1)(2n+1)/6"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Recognize the outer product of (1,2,…,n) with itself.",
+        "Apply A to that vector and evaluate the sum of squares."
+      ],
+      "solution": "Let v=(1,2,…,n)ᵀ. Then A=vvᵀ, so Av=v(vᵀv)=(Σᵢ₌₁ⁿi²)v. The nonzero eigenvalue is Σi²=n(n+1)(2n+1)/6. All vectors perpendicular to v have eigenvalue 0. For n≥3 this nonzero value exceeds each of 1,n,and n(n+1)/2, so only D is an eigenvalue.",
+      "theory": "A linear map is represented by a matrix once bases are chosen. Its rank is the dimension of its image and its nullity is the dimension of its kernel; the rank-nullity theorem says their sum equals the dimension of the domain. Products satisfy rank(AB)≤min(rank A,rank B). A square matrix over a field is invertible exactly when its determinant is nonzero. An eigenvector is a nonzero vector mapped to a scalar multiple of itself; the scalar is its eigenvalue. An invariant subspace is mapped into itself. Real symmetric matrices have real eigenvalues and an orthonormal eigenbasis. Positive definiteness means xᵀAx>0 for every nonzero real x. Distinguish a nonzero matrix from a nonsingular matrix, and specify the coefficient field or ring when testing invertibility. ",
+      "similar_questions": [
+        {
+          "prompt": "Find eigenvalues of [[1,2],[2,4]].",
+          "solution": "The matrix is vvᵀ with v=(1,2). Its nonzero eigenvalue is vᵀv=5, and its other eigenvalue is 0."
+        },
+        {
+          "prompt": "Find eigenvalues of uuᵀ for u=(1,−1,2).",
+          "solution": "The map sends u to (1+1+4)u=6u and kills u-perpendicular. Eigenvalues are 6,0,0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 28, PDF page 18. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704028, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 18,
+      "image": "assets/questions/2023-december-q028.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q029",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 29,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which statement is FALSE?",
+      "options": {
+        "A": "The product of two real 2×2 rank-2 matrices has rank 2",
+        "B": "The product of two real 3×3 rank-2 matrices has rank at most 2",
+        "C": "The product of two real 3×3 rank-2 matrices has rank at least 2",
+        "D": "The product of two real 2×2 rank-1 matrices can be zero"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A product can lose rank when one factor sends vectors into the other’s kernel.",
+        "Test rank-two diagonal matrices with different zero positions."
+      ],
+      "solution": "A is true because both factors are invertible. B follows from rank(AB)≤min(rank A,rank B). C is false: A=diag(1,1,0), B=diag(0,1,1) both have rank 2 but AB=diag(0,1,0) has rank 1. D is true with A=diag(1,0), B=diag(0,1), whose product is zero.",
+      "theory": "A linear map is represented by a matrix once bases are chosen. Its rank is the dimension of its image and its nullity is the dimension of its kernel; the rank-nullity theorem says their sum equals the dimension of the domain. Products satisfy rank(AB)≤min(rank A,rank B). A square matrix over a field is invertible exactly when its determinant is nonzero. An eigenvector is a nonzero vector mapped to a scalar multiple of itself; the scalar is its eigenvalue. An invariant subspace is mapped into itself. Real symmetric matrices have real eigenvalues and an orthonormal eigenbasis. Positive definiteness means xᵀAx>0 for every nonzero real x. Distinguish a nonzero matrix from a nonsingular matrix, and specify the coefficient field or ring when testing invertibility. ",
+      "similar_questions": [
+        {
+          "prompt": "Find rank of diag(1,0,1)diag(0,1,1).",
+          "solution": "The product is diag(0,0,1), which has exactly one nonzero diagonal entry and rank 1."
+        },
+        {
+          "prompt": "Can two invertible 4×4 matrices have a singular product?",
+          "solution": "No. If A,B invertible, (AB)⁻¹=B⁻¹A⁻¹, so the product is invertible and has rank 4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 29, PDF page 19. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704029, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 19,
+      "image": "assets/questions/2023-december-q029.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q030",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 30,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A is an n×n complex matrix, n≥4. Which is true?",
+      "options": {
+        "A": "A has no nonzero invariant subspace in ℂⁿ",
+        "B": "A has an invariant subspace of dimension n−3",
+        "C": "All eigenvalues are real",
+        "D": "A² has no invariant subspace of dimension n−1"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Over ℂ the characteristic polynomial splits.",
+        "Triangularization produces an invariant flag with every dimension."
+      ],
+      "solution": "Every complex matrix is triangularizable: its characteristic polynomial splits, allowing a basis whose matrix is upper triangular. The span of the first k basis vectors is invariant for every k=1,…,n. Set k=n−3 to prove B. A is false even because the full space is invariant. C fails for iI. The triangularizing flag is also invariant under A², including dimension n−1, so D is false.",
+      "theory": "A linear map is represented by a matrix once bases are chosen. Its rank is the dimension of its image and its nullity is the dimension of its kernel; the rank-nullity theorem says their sum equals the dimension of the domain. Products satisfy rank(AB)≤min(rank A,rank B). A square matrix over a field is invertible exactly when its determinant is nonzero. An eigenvector is a nonzero vector mapped to a scalar multiple of itself; the scalar is its eigenvalue. An invariant subspace is mapped into itself. Real symmetric matrices have real eigenvalues and an orthonormal eigenbasis. Positive definiteness means xᵀAx>0 for every nonzero real x. Distinguish a nonzero matrix from a nonsingular matrix, and specify the coefficient field or ring when testing invertibility. ",
+      "similar_questions": [
+        {
+          "prompt": "Find an invariant 2-dimensional subspace for an upper-triangular 3×3 matrix.",
+          "solution": "The span of e₁,e₂ is invariant: the first two columns have no entry in row 3. Thus every vector in that span maps back into it."
+        },
+        {
+          "prompt": "If W is A-invariant, is it A²-invariant?",
+          "solution": "For w∈W, Aw∈W; applying A again gives A²w∈W. Hence yes."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 30, PDF page 20. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704030, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 20,
+      "image": "assets/questions/2023-december-q030.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q031",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 31,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "A symmetric bilinear form on ℝ² has nonzero v,w with (v,v)>0>(w,w) and (v,w)=0. If A is its symmetric matrix, which is true?",
+      "options": {
+        "A": "A²=0",
+        "B": "rank A=1",
+        "C": "rank A=0",
+        "D": "Some nonzero u has (u,u)=0"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Opposite signs make the form indefinite.",
+        "Choose coefficients whose squared positive and negative contributions cancel."
+      ],
+      "solution": "v and w are linearly independent: a scalar multiple would have quadratic value with the same sign. In the basis v,w the matrix is diagonal diag(p,−q), p,q>0, because the cross term vanishes. It is nonsingular, so rank A=2, excluding B,C; a real symmetric matrix with A²=0 must be zero, excluding A. Set u=√q v+√p w. Then (u,u)=qp−pq=0, and independence ensures u≠0. Hence D.",
+      "theory": "A linear map is represented by a matrix once bases are chosen. Its rank is the dimension of its image and its nullity is the dimension of its kernel; the rank-nullity theorem says their sum equals the dimension of the domain. Products satisfy rank(AB)≤min(rank A,rank B). A square matrix over a field is invertible exactly when its determinant is nonzero. An eigenvector is a nonzero vector mapped to a scalar multiple of itself; the scalar is its eigenvalue. An invariant subspace is mapped into itself. Real symmetric matrices have real eigenvalues and an orthonormal eigenbasis. Positive definiteness means xᵀAx>0 for every nonzero real x. Distinguish a nonzero matrix from a nonsingular matrix, and specify the coefficient field or ring when testing invertibility.  A quadratic form associated with a symmetric bilinear form is Q(v)=(v,v). A nonzero vector with Q(v)=0 is called isotropic. Opposite signs make a real form indefinite; orthogonal positive and negative directions allow an explicit isotropic vector by balancing their squared coefficients.",
+      "similar_questions": [
+        {
+          "prompt": "Find a nonzero isotropic vector for x²−4y².",
+          "solution": "Take (x,y)=(2,1). The form equals 4−4=0 and the vector is nonzero."
+        },
+        {
+          "prompt": "A form in basis v,w is diag(9,−4). Find an isotropic combination.",
+          "solution": "Let u=2v+3w. Its value is 9·4−4·9=0; u is nonzero because v,w form a basis."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 31, PDF page 20. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704031, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 20,
+      "image": "assets/questions/2023-december-q031.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q032",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 32,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Aₐ=[[2,−1,0],[−1,2,−1],[0,−1,a]], a∈ℝ. Which is true?",
+      "options": {
+        "A": "Aₐ is positive definite for all a<3",
+        "B": "Aₐ is positive definite for all a>3",
+        "C": "Aₐ is positive definite for all a≥−2",
+        "D": "Aₐ is positive definite for only finitely many a"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Apply Sylvester’s criterion to leading principal minors.",
+        "The determinant is 3a−2; compare the exact threshold with the wording “for all a>3”."
+      ],
+      "solution": "The matrix is symmetric. Its leading principal minors are 2,3,and 3a−2. Sylvester’s criterion therefore gives positive definiteness exactly when a>2/3. In particular every a>3 works, so B is true. A and C include a=0, for which the third minor is −2, so fail. Infinitely many a>2/3 work, excluding D. B is a sufficient statement, not an assertion that 3 is the exact threshold.",
+      "theory": "A linear map is represented by a matrix once bases are chosen. Its rank is the dimension of its image and its nullity is the dimension of its kernel; the rank-nullity theorem says their sum equals the dimension of the domain. Products satisfy rank(AB)≤min(rank A,rank B). A square matrix over a field is invertible exactly when its determinant is nonzero. An eigenvector is a nonzero vector mapped to a scalar multiple of itself; the scalar is its eigenvalue. An invariant subspace is mapped into itself. Real symmetric matrices have real eigenvalues and an orthonormal eigenbasis. Positive definiteness means xᵀAx>0 for every nonzero real x. Distinguish a nonzero matrix from a nonsingular matrix, and specify the coefficient field or ring when testing invertibility.  Sylvester’s criterion applies to real symmetric matrices: positive definiteness is equivalent to positivity of every leading principal minor. A statement giving a sufficient range need not state the exact necessary threshold. Zero minors must be excluded for strict positive definiteness, even if the matrix remains positive semidefinite.",
+      "similar_questions": [
+        {
+          "prompt": "When is [[2,1],[1,t]] positive definite?",
+          "solution": "Leading minors are 2 and 2t−1. Sylvester’s criterion gives t>1/2."
+        },
+        {
+          "prompt": "Is diag(1,2,0) positive definite?",
+          "solution": "No. For x=(0,0,1), xᵀAx=0; positive definiteness requires strict positivity for every nonzero vector."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 32, PDF page 21. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704032, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 21,
+      "image": "assets/questions/2023-december-q032.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q033",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 33,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "ℍ={z∈ℂ:Im z>0} and f(z)=eⁱᶻ. Which is true?",
+      "options": {
+        "A": "f(ℍ)=ℂ\\{0}",
+        "B": "f(ℍ)∩ℍ is countable",
+        "C": "f(ℍ) is bounded",
+        "D": "f(ℍ) is convex"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Write z=x+iy and calculate the modulus of eⁱᶻ.",
+        "The image is the disk of radius 1 with its center removed."
+      ],
+      "solution": "For z=x+iy with y>0, eⁱᶻ=e⁻ʸeⁱˣ, so 0<|f(z)|<1. Conversely every complex number of modulus in (0,1) has this form by taking y=−log r and an argument x. Thus the image is the punctured open unit disk, which is bounded. It is not all nonzero complex numbers; its upper-half intersection contains an open set and is uncountable. It is not convex because r and −r belong but their midpoint 0 does not.",
+      "theory": "A holomorphic function is complex differentiable in a neighborhood of every point of its domain. Real differentiability alone is weaker: the real and imaginary parts need not satisfy the Cauchy–Riemann equations. For a holomorphic function f=u+iv those equations are uₓ=vᵧ and uᵧ=−vₓ. A meromorphic function is holomorphic except at isolated poles. The argument principle counts zeros minus poles, with multiplicities, through the contour integral of f′/f when there are no zeros or poles on the boundary and the contour is positively oriented. Rouché’s theorem compares holomorphic functions on such a boundary using a strict magnitude inequality. Always verify boundary hypotheses, orientation, and multiplicities. Images under exponentials are controlled by their modulus and argument, not just their real part.  For z=x+iy, the exponential e^(iz) has modulus e^(−y) and arbitrary argument x modulo 2π. A set is convex when it contains the entire segment between each pair of its points. Removing the origin from a disk preserves boundedness but destroys convexity because opposite points have midpoint zero.",
+      "similar_questions": [
+        {
+          "prompt": "Find the image of {Re z<0} under eᶻ.",
+          "solution": "|eᶻ|=eᴿᵉᶻ lies in (0,1), and imaginary parts supply all arguments. The image is the punctured unit disk."
+        },
+        {
+          "prompt": "Is {z:0<|z|<2} convex?",
+          "solution": "No. The points 1 and −1 lie in the set, but their midpoint 0 does not."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 33, PDF page 21. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704033, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 21,
+      "image": "assets/questions/2023-december-q033.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q034",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 34,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f is meromorphic near the unit circle C and its interior, with no zeros or poles on C. Let n₀,nₚ count zeros and poles inside. Find (1/(2πi))∮C (zf)′/(zf) dz.",
+      "options": {
+        "A": "n₀−nₚ+1",
+        "B": "n₀−nₚ−1",
+        "C": "n₀−nₚ",
+        "D": "nₚ−n₀"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Expand the logarithmic derivative of the product zf.",
+        "The extra factor z contributes exactly one to the argument-principle count."
+      ],
+      "solution": "On C, (zf)′/(zf)=1/z+f′/f. For the standard positive orientation, the first normalized integral is 1 and the second is n₀−nₚ by the argument principle, counted with multiplicity. The answer is n₀−nₚ+1. Even if f has a pole or zero at 0, multiplication by z increases the net zero-minus-pole count by exactly one.",
+      "theory": "A holomorphic function is complex differentiable in a neighborhood of every point of its domain. Real differentiability alone is weaker: the real and imaginary parts need not satisfy the Cauchy–Riemann equations. For a holomorphic function f=u+iv those equations are uₓ=vᵧ and uᵧ=−vₓ. A meromorphic function is holomorphic except at isolated poles. The argument principle counts zeros minus poles, with multiplicities, through the contour integral of f′/f when there are no zeros or poles on the boundary and the contour is positively oriented. Rouché’s theorem compares holomorphic functions on such a boundary using a strict magnitude inequality. Always verify boundary hypotheses, orientation, and multiplicities. Images under exponentials are controlled by their modulus and argument, not just their real part. ",
+      "similar_questions": [
+        {
+          "prompt": "Let f(z)=(z−1/2)²/(z+1/3). Evaluate the normalized logarithmic derivative integral on |z|=1.",
+          "solution": "There are two zeros counting multiplicity and one pole; the integral is 2−1=1."
+        },
+        {
+          "prompt": "For g=z²f, what is the normalized integral of g′/g on the unit circle?",
+          "solution": "g′/g=2/z+f′/f. Therefore it is 2+n₀−nₚ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 34, PDF page 22. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704034, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 22,
+      "image": "assets/questions/2023-december-q034.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q035",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 35,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f:ℂ→ℂ is real differentiable, with u=Re f and v=Im f. Which necessarily holds?",
+      "options": {
+        "A": "The level curves of u,v are orthogonal wherever they intersect",
+        "B": "∇u·∇v=0 everywhere",
+        "C": "If f is entire, then ∇u·∇v=0 everywhere",
+        "D": "If ∇u·∇v=0 everywhere, then f is entire"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Entire functions satisfy Cauchy–Riemann.",
+        "Orthogonal gradients alone do not impose both Cauchy–Riemann equations."
+      ],
+      "solution": "If f is entire, Cauchy–Riemann gives vₓ=−uᵧ and vᵧ=uₓ. Thus ∇u·∇v=uₓ(−uᵧ)+uᵧuₓ=0. For a merely real-differentiable function u=x,v=x+y, gradients have dot product 1, so A,B fail (the level lines are not orthogonal). For f(z)=conjugate(z), u=x,v=−y gives orthogonal gradients everywhere but f is not holomorphic, disproving D.",
+      "theory": "A holomorphic function is complex differentiable in a neighborhood of every point of its domain. Real differentiability alone is weaker: the real and imaginary parts need not satisfy the Cauchy–Riemann equations. For a holomorphic function f=u+iv those equations are uₓ=vᵧ and uᵧ=−vₓ. A meromorphic function is holomorphic except at isolated poles. The argument principle counts zeros minus poles, with multiplicities, through the contour integral of f′/f when there are no zeros or poles on the boundary and the contour is positively oriented. Rouché’s theorem compares holomorphic functions on such a boundary using a strict magnitude inequality. Always verify boundary hypotheses, orientation, and multiplicities. Images under exponentials are controlled by their modulus and argument, not just their real part.  The gradient is normal to a regular level curve. Orthogonal gradients therefore give orthogonal regular level curves, but at critical points the ordinary geometric interpretation requires care. Cauchy–Riemann implies this algebraic orthogonality, while orthogonality alone is only one condition and is insufficient to establish holomorphicity.",
+      "similar_questions": [
+        {
+          "prompt": "Check ∇u·∇v for f=z².",
+          "solution": "u=x²−y²,v=2xy. Gradients are (2x,−2y),(2y,2x); their dot product is 4xy−4xy=0."
+        },
+        {
+          "prompt": "Show f=x+2iy has orthogonal gradients but is not holomorphic.",
+          "solution": "u=x,v=2y give gradients (1,0),(0,2), dot product zero. However uₓ=1≠vᵧ=2, violating Cauchy–Riemann."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 35, PDF page 23. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704035, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 23,
+      "image": "assets/questions/2023-december-q035.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q036",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 36,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "How many roots of z¹⁰⁰−50z³⁰+40z¹⁰+6z+1 lie in |z|<1?",
+      "options": {
+        "A": "100",
+        "B": "50",
+        "C": "30",
+        "D": "0"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Find a single term that dominates all the others on |z|=1.",
+        "The coefficient 50 exceeds the sum 1+40+6+1."
+      ],
+      "solution": "On |z|=1, |−50z³⁰|=50, whereas |z¹⁰⁰+40z¹⁰+6z+1|≤1+40+6+1=48<50. Rouché’s theorem says the full polynomial has the same number of zeros, counted with multiplicity, as −50z³⁰ inside the circle. That monomial has 30 zeros at the origin, so the answer is 30.",
+      "theory": "A holomorphic function is complex differentiable in a neighborhood of every point of its domain. Real differentiability alone is weaker: the real and imaginary parts need not satisfy the Cauchy–Riemann equations. For a holomorphic function f=u+iv those equations are uₓ=vᵧ and uᵧ=−vₓ. A meromorphic function is holomorphic except at isolated poles. The argument principle counts zeros minus poles, with multiplicities, through the contour integral of f′/f when there are no zeros or poles on the boundary and the contour is positively oriented. Rouché’s theorem compares holomorphic functions on such a boundary using a strict magnitude inequality. Always verify boundary hypotheses, orientation, and multiplicities. Images under exponentials are controlled by their modulus and argument, not just their real part. ",
+      "similar_questions": [
+        {
+          "prompt": "Count zeros of z⁵+3z²+1 in |z|<1.",
+          "solution": "On the boundary |3z²|=3>|z⁵+1|≤2. Rouché compares with 3z², yielding 2 zeros."
+        },
+        {
+          "prompt": "Count zeros of z⁴+2z+5 in |z|<1.",
+          "solution": "The constant has modulus 5 and the rest has modulus ≤1+2=3. Rouché compares with 5, giving no zeros."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 36, PDF page 23. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704036, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 23,
+      "image": "assets/questions/2023-december-q036.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q037",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 37,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "In any class of 50 students, which statement is necessarily true?",
+      "options": {
+        "A": "Two students have the same birthday",
+        "B": "Every month has birthdays of at least five students",
+        "C": "Some month has birthdays of at least five students",
+        "D": "At least 25 birthdays lie in January–June"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Treat the 12 months as boxes.",
+        "Twelve boxes containing at most four students hold at most 48."
+      ],
+      "solution": "Assign 50 students to 12 birth-month boxes. If every month had at most 4 birthdays there would be at most 48 students, a contradiction. Thus some month has at least ceil(50/12)=5 birthdays. Fifty distinct calendar birthdays disprove A; all birthdays in one month disprove B, and all birthdays in July disprove D.",
+      "theory": "Finite counting rests on injective assignments, partitions, and careful tracking of possible configurations. The pigeonhole principle states that if N objects are assigned to k boxes, some box has at least ceil(N/k) objects. This conclusion guarantees existence of one crowded box, not the same occupancy in every box. The power set of an n-element set has 2ⁿ elements, since each element has two independent choices, inclusion or exclusion. An injection from a finite set to another requires the target to be at least as large; a surjection requires the domain to be at least as large. To prove a counting claim, identify the objects and boxes or construct a bijection. Counterexamples should satisfy all hypotheses and show that the stronger proposed conclusion fails. ",
+      "similar_questions": [
+        {
+          "prompt": "Among 25 people, must three share a birth month?",
+          "solution": "Yes. With at most 2 per each of 12 months there are at most 24 people, so some month contains at least 3."
+        },
+        {
+          "prompt": "Among 11 integers, must two have the same last decimal digit?",
+          "solution": "Yes. There are 10 last-digit classes. Assigning 11 objects forces a repeated class."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 37, PDF page 24. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704037, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 24,
+      "image": "assets/questions/2023-december-q037.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q038",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 38,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For a finite group G, which necessarily holds?",
+      "options": {
+        "A": "G is a union of proper subgroups",
+        "B": "G is a union of proper subgroups if |G| has two distinct prime divisors",
+        "C": "If G is abelian it is a union of proper subgroups",
+        "D": "G is a union of proper subgroups iff G is not cyclic"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Look at the cyclic subgroup generated by each element.",
+        "A generator of a cyclic group cannot belong to any proper subgroup."
+      ],
+      "solution": "If G is not cyclic, every cyclic subgroup ⟨g⟩ is proper; their union contains every element g, so covers G. If G is cyclic with generator a, any subgroup containing a equals G, so no union of proper subgroups contains a. This proves the equivalence D. A fails for cyclic groups; B fails for C₆, whose order has primes 2 and 3; C fails for any nontrivial cyclic abelian group.",
+      "theory": "A group is a set with an associative multiplication, an identity, and inverses. A subgroup contains the identity and is closed under multiplication and inversion; a proper subgroup is strictly smaller than the group. A cyclic group is generated by one element. A field has commutative addition and multiplication and every nonzero element is invertible. Every subfield of the complex numbers contains the rational numbers. An algebraic extension is one in which each element satisfies a nonzero polynomial with coefficients in the smaller field; transcendental elements do not. Over a finite ring, nonzero does not necessarily mean invertible: a determinant must be a unit for its matrix to have an inverse. Use explicit counterexamples to refute universal algebraic claims, and keep group structure separate from topological closure. ",
+      "similar_questions": [
+        {
+          "prompt": "Cover the Klein four group by proper subgroups.",
+          "solution": "Writing it {e,a,b,c}, the three order-two subgroups {e,a},{e,b},{e,c} are proper and their union is the group."
+        },
+        {
+          "prompt": "Can C₄ be covered by its proper subgroups?",
+          "solution": "No. A generator a of order 4 lies in no proper subgroup, because any subgroup containing a contains all its powers."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 38, PDF page 25. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704038, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 25,
+      "image": "assets/questions/2023-december-q038.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q039",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 39,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "What is 1³⁷+2³⁷+⋯+88³⁷ in ℤ/89ℤ?",
+      "options": {
+        "A": "88",
+        "B": "−88",
+        "C": "−2",
+        "D": "0"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Use residues a and −a in pairs.",
+        "The exponent 37 is odd, so each pair contributes zero."
+      ],
+      "solution": "Pair a with 89−a for a=1,…,44. Since 37 is odd, (89−a)³⁷≡(−a)³⁷=−a³⁷ modulo 89. Each pair sums to zero, and these 44 pairs partition 1,…,88. Hence the total is 0.",
+      "theory": "Congruence modulo a positive integer m identifies integers whose difference is divisible by m. Addition and multiplication respect congruence, so polynomial expressions can be reduced before or after evaluation. If m is prime, nonzero residue classes form a multiplicative group and every nonzero class has an inverse. Pairing terms often simplifies power sums: for an odd exponent r, aʳ+(m−a)ʳ is congruent to zero modulo m. A finite sum should be partitioned into disjoint pairs with no missing term, and any self-paired residue must be checked. Fermat’s little theorem says aᵖ≡a modulo prime p, but does not by itself determine every lower-exponent sum. Avoid ordinary division by a nonunit when working modulo a composite integer. ",
+      "similar_questions": [
+        {
+          "prompt": "Compute Σₐ₌₁¹⁰a⁵ modulo 11.",
+          "solution": "Pair a and 11−a. The exponent is odd, so each pair cancels modulo 11. Sum=0."
+        },
+        {
+          "prompt": "Compute 1³+2³+3³+4³ modulo 5.",
+          "solution": "Pair 1 with 4 and 2 with 3. Each odd-power pair cancels. The sum is 0 modulo 5."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 39, PDF page 25. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704039, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 25,
+      "image": "assets/questions/2023-december-q039.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q040",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 40,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "K is a proper subfield of ℂ not contained in ℝ, with Euclidean topology. Which necessarily holds?",
+      "options": {
+        "A": "K is dense in ℂ",
+        "B": "K is algebraic over ℚ",
+        "C": "ℂ is algebraic over K",
+        "D": "The closure of K is not a field"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Every complex subfield contains ℚ and some nonreal z.",
+        "The set {r+sz:r,s∈ℚ} is the image of a dense subset under an invertible real-linear map."
+      ],
+      "solution": "Choose z=a+ib∈K with b≠0. Since ℚ⊆K, all r+sz with rational r,s belong to K. The real-linear map (r,s)↦r+sz is an invertible map ℝ²→ℂ; rational pairs are dense, so this subset, and therefore K, is dense in ℂ. B fails for K=ℚ(i,t) with real transcendental t; it is countable and proper but not algebraic over ℚ. C fails for K=ℚ(i), because ℂ contains transcendental elements over this countable algebraic extension. The closure is ℂ itself, a field, so D fails.",
+      "theory": "A group is a set with an associative multiplication, an identity, and inverses. A subgroup contains the identity and is closed under multiplication and inversion; a proper subgroup is strictly smaller than the group. A cyclic group is generated by one element. A field has commutative addition and multiplication and every nonzero element is invertible. Every subfield of the complex numbers contains the rational numbers. An algebraic extension is one in which each element satisfies a nonzero polynomial with coefficients in the smaller field; transcendental elements do not. Over a finite ring, nonzero does not necessarily mean invertible: a determinant must be a unit for its matrix to have an inverse. Use explicit counterexamples to refute universal algebraic claims, and keep group structure separate from topological closure.  A subset is dense if every ambient point is a limit of its elements. An invertible real-linear transformation preserves density and identifies the rational combinations of two real-linearly independent complex numbers with a dense planar grid. Algebraic properties of the field and its Euclidean closure are different questions.",
+      "similar_questions": [
+        {
+          "prompt": "Prove ℚ(i) is dense in ℂ.",
+          "solution": "Every x+iy is approximated by rational r+is with r→x,s→y; these approximants belong to ℚ(i)."
+        },
+        {
+          "prompt": "Prove ℚ(1+i√2) is dense in ℂ.",
+          "solution": "It contains r+s(1+i√2) with rational r,s. Given x+iy choose s→y/√2 and r→x−y/√2. Then these field elements approach x+iy."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 40, PDF page 26. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704040, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 26,
+      "image": "assets/questions/2023-december-q040.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q041",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 41,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "f(x)=(1−x)²sin(x²) for 0<x<1, and 0 otherwise. S={c∈ℝ:f′(x)≤cf(x) for every real x}. Which is true?",
+      "options": {
+        "A": "S=∅",
+        "B": "S is nonempty and a proper subset of (1,∞)",
+        "C": "(2,∞) is a proper subset of S",
+        "D": "S∩(0,1) is nonempty"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Where f>0, divide the inequality by f.",
+        "Compute its logarithmic derivative and examine x→0⁺."
+      ],
+      "solution": "For 0<x<1, f(x)>0 and f′/f=−2/(1−x)+2x cot(x²). As x→0⁺, cot(x²)∼1/x², so this ratio behaves as 2/x−2 and tends to +∞. Thus for any finite c there exists a small positive x with f′(x)>cf(x). No real c satisfies the global inequality; S=∅. At endpoints the zero extension is differentiable, but those points do not repair the failure near 0.",
+      "theory": "Real analysis studies limits, continuity, differentiation, and convergence using precise quantifiers. A sequence converges to L if every positive tolerance eventually bounds its distance from L. Its limsup is the limit of the suprema of its tails; for a periodic sequence it is the largest recurring value. A numerical series converges when its partial sums have a finite limit. Comparison with a convergent nonnegative series, the alternating-series test, and Dirichlet’s test have distinct hypotheses that must be verified. A differentiable function is continuous, and an accumulation point of its zeros is itself a zero. Rolle’s theorem requires continuity on a closed interval and differentiability inside. Compactness supplies convergent subsequences of bounded real sequences. Be careful not to confuse conditional convergence with absolute convergence.  The logarithmic derivative of a positive differentiable function is f′/f. A global inequality f′≤cf is equivalent on its positive set to an upper bound on that logarithmic derivative. Local vanishing rates near a boundary can force this ratio to infinity even when the function and derivative extend continuously there.",
+      "similar_questions": [
+        {
+          "prompt": "Can a finite c satisfy f′≤cf on all x>0 for f=x²?",
+          "solution": "f′/f=2/x is unbounded above near 0, so no finite c works."
+        },
+        {
+          "prompt": "For f=e³ˣ on ℝ, find all c with f′≤cf.",
+          "solution": "f′=3f and f>0, so the condition is 3≤c. The set is [3,∞)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 41, PDF page 26. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704041, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 26,
+      "image": "assets/questions/2023-december-q041.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q042",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 42,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Find the smallest real λ for which −y″+3y=λy, y(0)=y(π)=0, has a nontrivial solution.",
+      "options": {
+        "A": "3",
+        "B": "2",
+        "C": "1",
+        "D": "4"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Move the 3y term to identify the oscillation frequency.",
+        "The boundary at π forces the frequency to be a positive integer."
+      ],
+      "solution": "For λ>3 put k=√(λ−3). The equation is y″+k²y=0, so y=A cos(kx)+B sin(kx). y(0)=0 gives A=0 and y(π)=0 requires sin(kπ)=0 with B≠0; hence k is a positive integer n and λ=3+n². The smallest is 4. For λ=3 the solution is linear and both boundaries force zero; for λ<3 hyperbolic solutions also force zero.",
+      "theory": "An ordinary differential equation relates a function of one variable to its derivatives. For constant-coefficient linear equations, the characteristic polynomial determines exponential, trigonometric, or polynomial solutions. Initial conditions prescribe the function and derivatives at one point; boundary conditions prescribe information at different endpoints. A boundary eigenvalue problem asks which parameter values permit a nonzero solution satisfying all homogeneous boundary conditions. Solving the differential equation is only the first step: substitution into the endpoint conditions produces the admissible spectrum. If an oscillatory solution is sin(kx), vanishing at an interval endpoint imposes an integer multiple of π. Zero solutions do not count as eigenfunctions. Nonoscillatory and repeated-root cases must be checked before concluding that the smallest spectral value belongs to an integer-indexed family. ",
+      "similar_questions": [
+        {
+          "prompt": "Find the smallest eigenvalue for −y″=λy on (0,2), with both endpoints zero.",
+          "solution": "The eigenfunctions are sin(nπx/2), giving λₙ=(nπ/2)². The smallest is π²/4."
+        },
+        {
+          "prompt": "Find eigenvalues of −y″+5y=λy on (0,π), with Dirichlet boundaries.",
+          "solution": "The oscillation condition gives λ−5=n²,n≥1. Thus eigenvalues are 5+n², the smallest 6."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 42, PDF page 27. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704042, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 27,
+      "image": "assets/questions/2023-december-q042.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q043",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 43,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "x²uₓₓ−2xyuₓᵧ−3y²uᵧᵧ+uₓ−uᵧ=0 is",
+      "options": {
+        "A": "elliptic where y>0",
+        "B": "parabolic where x>0,y>0",
+        "C": "hyperbolic where xy≠0",
+        "D": "parabolic where xy≠0"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Use only the coefficients of second derivatives.",
+        "The mixed coefficient is 2B, so B=−xy."
+      ],
+      "solution": "Using the convention Auₓₓ+2Buₓᵧ+Cuᵧᵧ, A=x²,B=−xy,C=−3y². Therefore B²−AC=x²y²+3x²y²=4x²y², strictly positive whenever xy≠0. The equation is hyperbolic there, giving C. It is not elliptic on all y>0 or parabolic in a quadrant; the first derivatives do not change the principal type.",
+      "theory": "A partial differential equation relates derivatives with respect to several variables. For a real second-order equation Auₓₓ+2Buₓᵧ+Cuᵧᵧ plus lower-order terms, the principal discriminant B²−AC determines the local type: positive is hyperbolic, zero parabolic, and negative elliptic when the principal part is nondegenerate. Lower-order terms do not alter this classification. The one-dimensional wave equation uₜₜ−c²uₓₓ=0 has propagation speed c and d’Alembert solution equal to half the sum of two translated displacement profiles plus (1/(2c)) times the integral of the initial velocity between the characteristic endpoints. Classification can change across degeneracy sets. When taking large-time limits, analyze both translated profiles and the moving-endpoint integral rather than assuming the initial data disappear. ",
+      "similar_questions": [
+        {
+          "prompt": "Classify uₓₓ+2uₓᵧ+uᵧᵧ=0.",
+          "solution": "A=1,B=1,C=1. B²−AC=0; the equation is parabolic."
+        },
+        {
+          "prompt": "Classify uₓₓ−uᵧᵧ=0.",
+          "solution": "A=1,B=0,C=−1, so B²−AC=1>0. It is hyperbolic."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 43, PDF page 28. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704043, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 28,
+      "image": "assets/questions/2023-december-q043.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q044",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 44,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "uₜₜ−4uₓₓ=0 on ℝ,t>0; u(x,0)=e^(−1/x²) for x≠0 and 0 at x=0; uₜ(x,0)=xe^(−x²). Find limₜ→∞u(5,t).",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "1/2",
+        "D": "0"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Use d’Alembert’s formula with speed 2.",
+        "The displacement tends to 1 at both ends, and the velocity integral has a vanishing explicit boundary term."
+      ],
+      "solution": "The wave speed is c=2. With f the displacement and g(s)=se⁻ˢ², d’Alembert gives u(5,t)=[f(5−2t)+f(5+2t)]/2+(1/4)∫₅₋₂ₜ⁵₊₂ₜse⁻ˢ²ds. Both f arguments tend in magnitude to infinity, so both values tend to 1. The integral equals (e^(−(5−2t)²)−e^(−(5+2t)²))/2 and tends to zero. Thus the limit is (1+1)/2=1.",
+      "theory": "A partial differential equation relates derivatives with respect to several variables. For a real second-order equation Auₓₓ+2Buₓᵧ+Cuᵧᵧ plus lower-order terms, the principal discriminant B²−AC determines the local type: positive is hyperbolic, zero parabolic, and negative elliptic when the principal part is nondegenerate. Lower-order terms do not alter this classification. The one-dimensional wave equation uₜₜ−c²uₓₓ=0 has propagation speed c and d’Alembert solution equal to half the sum of two translated displacement profiles plus (1/(2c)) times the integral of the initial velocity between the characteristic endpoints. Classification can change across degeneracy sets. When taking large-time limits, analyze both translated profiles and the moving-endpoint integral rather than assuming the initial data disappear. ",
+      "similar_questions": [
+        {
+          "prompt": "If uₜₜ−uₓₓ=0, f=1 and g=0, what is u?",
+          "solution": "d’Alembert gives [1+1]/2+0=1 everywhere."
+        },
+        {
+          "prompt": "With wave speed 1, f=0,g(s)=e⁻ˢ², find limₜ→∞u(0,t).",
+          "solution": "u(0,t)=(1/2)∫₋ₜᵗe⁻ˢ²ds. The Gaussian integral is √π, so the limit is √π/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 44, PDF page 29. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704044, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 29,
+      "image": "assets/questions/2023-december-q044.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q045",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 45,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Use Euler’s method with h=0.05 for y′=√(3x+2y+1), y(1)=1. Approximate y(1.1), rounded to two decimals.",
+      "options": {
+        "A": "1.50",
+        "B": "1.65",
+        "C": "1.25",
+        "D": "1.15"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The interval length 0.1 needs two Euler updates.",
+        "Evaluate each slope at the old x and y, keeping sufficient intermediate precision."
+      ],
+      "solution": "Two steps are required. At x₀=1,y₀=1, f=√6, so y₁=1+0.05√6≈1.122474487 at x₁=1.05. Then y₂=y₁+0.05√(3·1.05+2y₁+1)≈1.122474487+0.126441182=1.248915669. Rounding to two decimal places gives 1.25.",
+      "theory": "Numerical methods approximate mathematical solutions by finite computations. Explicit Euler’s method for y′=f(x,y) uses xₖ₊₁=xₖ+h and yₖ₊₁=yₖ+hf(xₖ,yₖ): the slope is evaluated at the old point, not the new one. Under suitable smoothness and Lipschitz conditions the local truncation error is of order h² and the global error of order h over a fixed interval. The step size determines the number of updates required to reach the target. Round intermediate values only sufficiently far beyond the desired final precision, because premature rounding can change the displayed result. An approximation should be labeled as such and not substituted for an exact solution. Domain restrictions, such as the nonnegative argument of a square root, must hold at every evaluation. ",
+      "similar_questions": [
+        {
+          "prompt": "Euler approximate y(0.2) for y′=y,y(0)=1,h=0.1.",
+          "solution": "y₁=1+0.1·1=1.1; y₂=1.1+0.1·1.1=1.21."
+        },
+        {
+          "prompt": "Euler approximate y(1.1) for y′=x+y,y(1)=2,h=0.05.",
+          "solution": "First slope=3 gives y₁=2.15. Second slope=1.05+2.15=3.20 gives y₂=2.15+0.16=2.31."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 45, PDF page 29. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704045, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 29,
+      "image": "assets/questions/2023-december-q045.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q046",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 46,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Find the cardinality of the extremals of J[y]=∫₀¹(y′)²dx subject to y(0)=1,y(1)=6,∫₀¹y dx=3.",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Countably infinite"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "An isoperimetric constraint introduces a constant multiplier.",
+        "The Euler–Lagrange equation forces a quadratic; all three constraints determine its coefficients."
+      ],
+      "solution": "Using a multiplier, the integrand is (y′)²+λy. Euler–Lagrange gives λ−2y″=0, so y=ax²+bx+c. Endpoints give c=1,a+b=5. The integral condition is a/3+b/2+1=3; substituting b=5−a gives 7/2−a/6=3, hence a=3,b=2. Thus the unique extremal is y=3x²+2x+1. Strict convexity of ∫(y′)² on the fixed-endpoint affine constraint class also confirms uniqueness.",
+      "theory": "The calculus of variations studies extrema of functionals, whose arguments are functions. For J[y]=∫L(x,y,y′)dx with fixed endpoint values, a smooth extremal satisfies the Euler–Lagrange equation Lᵧ−d(Lᵧ′)/dx=0. An integral constraint ∫G(x,y,y′)dx=c is handled by a constant Lagrange multiplier, replacing L by L+λG when the constraint is regular. The resulting differential equation must be solved together with all endpoint and integral conditions. A stationary function need not automatically be a minimum, but strict convexity of the objective on an affine feasible class implies uniqueness of a stationary minimizer. Distinguish the number of extremals from their explicit formula, and count functions rather than arbitrary parameter values remaining before constraints are imposed.  An admissible variation h vanishes at fixed endpoints and satisfies the linearized integral constraint. The multiplier method is regular here because there are endpoint-vanishing variations with nonzero integral. The energy’s second variation is 2∫(h′)², strictly positive for every nonzero endpoint-vanishing variation, proving strict minimization.",
+      "similar_questions": [
+        {
+          "prompt": "Minimize ∫₀¹(y′)²dx with y(0)=0,y(1)=1 and no integral constraint.",
+          "solution": "Euler–Lagrange gives y″=0, so y=ax+b. Endpoints force y=x, the unique minimizer by strict convexity."
+        },
+        {
+          "prompt": "Find the extremal with y(0)=y(1)=0 and ∫₀¹y dx=1.",
+          "solution": "The multiplier equation gives y=ax²+bx. Endpoint x=1 gives b=−a; the integral is a/3−a/2=−a/6=1. Hence y=6x(1−x)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 46, PDF page 30. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704046, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 30,
+      "image": "assets/questions/2023-december-q046.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q047",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 47,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "For what λ does y(x)=λ∫₀¹x²e^(x+t)y(t)dt have a nonzero solution?",
+      "options": {
+        "A": "4/(1+e²)",
+        "B": "2/(1+e²)",
+        "C": "4/(e²−1)",
+        "D": "2/(e²−1)"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "The kernel is a product of a function of x and a function of t.",
+        "The consistency integral is ∫₀¹t²e²ᵗdt."
+      ],
+      "solution": "Put C=∫₀¹eᵗy(t)dt. Then y(x)=λCx²eˣ. For nonzero y, C≠0 and substitution gives C=λC∫₀¹t²e²ᵗdt. The integral is [e²ᵗ(t²/2−t/2+1/4)]₀¹=(e²−1)/4. Thus λ=4/(e²−1), with nonzero solutions proportional to x²eˣ.",
+      "theory": "An integral equation relates an unknown function to an integral involving that function. In a homogeneous Fredholm equation y(x)=λ∫ₐᵇK(x,t)y(t)dt, a nonzero solution is possible only at characteristic parameter values. A separable kernel K(x,t)=u(x)v(t) has rank one: its integral operator maps every input to a scalar multiple of u. Writing C=∫v(t)y(t)dt reduces the problem to y=λCu and the scalar consistency equation C=λC∫vu. A nonzero solution requires C≠0, so cancellation gives λ∫vu=1. Verify the kernel’s factors carefully, retain the same variable in the integral, and distinguish λ from the operator’s eigenvalue, which is its reciprocal in this convention.  Explicitly checking the recovered eigenfunction in the original integral equation verifies sufficiency as well as necessity.",
+      "similar_questions": [
+        {
+          "prompt": "Solve y(x)=λ∫₀¹xy(t)dt for nonzero solutions.",
+          "solution": "Let C=∫y. Then y=λCx and C=λC/2. For C≠0, λ=2; solutions are arbitrary nonzero multiples of x."
+        },
+        {
+          "prompt": "For y(x)=λ∫₀¹x t y(t)dt, find λ.",
+          "solution": "The image is proportional to x. Write y=kx; then kx=λkx∫₀¹t²dt=λkx/3. Nonzero k requires λ=3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 47, PDF page 31. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704047, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 31,
+      "image": "assets/questions/2023-december-q047.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q048",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 48,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "A mass m moves without friction on x=a(θ−sinθ), y=a(1+cosθ), a>0. Which equation of motion holds?",
+      "options": {
+        "A": "(1−cosθ)θ̈+(sinθ)θ̇²/2−(g/(2a))sinθ=0",
+        "B": "(1−2cosθ)θ̈+(sinθ)θ̇²−(g/a)sinθ=0",
+        "C": "m(1−2cosθ)θ̈+(sinθ)θ̇²+(g/a)sinθ=0",
+        "D": "m(1−2cosθ)θ̈+(m/2)(sinθ)θ̇²−(g/a)sinθ=0"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Compute the squared speed from the derivatives of the curve.",
+        "Use T−U and remember the coordinate-dependent kinetic coefficient."
+      ],
+      "solution": "The coordinate derivatives are xθ=a(1−cosθ),yθ=−a sinθ. Thus speed²=2a²(1−cosθ)θ̇², T=ma²(1−cosθ)θ̇² and U=mga(1+cosθ). Euler–Lagrange gives 2ma²(1−cosθ)θ̈+ma²sinθ θ̇²−mga sinθ=0. Dividing by 2ma² yields A. The 1−2cosθ factors and missing factors of 2 in the other options are incorrect.",
+      "theory": "Lagrangian mechanics describes a constrained system using generalized coordinates. The kinetic energy T is one half mass times speed squared, while the gravitational potential for upward vertical coordinate y is U=mgy. The Lagrangian is L=T−U. With no nonconservative forces, each generalized coordinate q obeys d(∂L/∂q̇)/dt−∂L/∂q=0. If a particle moves along a parametrized curve x=x(q),y=y(q), then its squared speed is [x′(q)²+y′(q)²]q̇². A coordinate-dependent kinetic coefficient contributes both an acceleration term and a velocity-squared term. Different equations obtained by multiplying by a nonzero constant are equivalent. Coordinate singularities at endpoints require care and do not justify discarding terms in the interior equation. ",
+      "similar_questions": [
+        {
+          "prompt": "Derive motion on a circle x=a sinθ,y=−a cosθ.",
+          "solution": "Speed²=a²θ̇²,T=ma²θ̇²/2,U=−mga cosθ. Euler–Lagrange gives ma²θ̈+mga sinθ=0, or θ̈+(g/a)sinθ=0."
+        },
+        {
+          "prompt": "For T=mh(q)q̇²/2 and potential V(q), derive the equation.",
+          "solution": "d/dt(∂L/∂q̇)=m h q̈+m h′q̇². Subtract ∂L/∂q=m h′q̇²/2−V′ to obtain m h q̈+(m/2)h′q̇²+V′=0."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 48, PDF page 32. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704048, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 32,
+      "image": "assets/questions/2023-december-q048.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q049",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 49,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "The joint mgf is (3/4+e^t₁/4)²(5/6+e^t₂/6)³. Find P(X+2Y>1).",
+      "options": {
+        "A": "1581/3456",
+        "B": "1875/3456",
+        "C": "125/3456",
+        "D": "3331/3456"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Identify the binomial mgfs and their independence.",
+        "The complement occurs exactly when Y=0 and X≤1."
+      ],
+      "solution": "The mgf identifies independent X∼Bin(2,1/4),Y∼Bin(3,1/6). Since both are nonnegative integers, X+2Y≤1 iff Y=0 and X≤1. P(Y=0)=(5/6)³=125/216 and P(X≤1)=1−(1/4)²=15/16. Their product is 1875/3456. The requested complement is 1−1875/3456=1581/3456.",
+      "theory": "Probability assigns nonnegative masses or densities that total one. Independence allows joint event probabilities to factor, and for independent random variables moment generating functions factor where they exist near zero. A moment generating function is E[eᵗˣ]; a binomial variable with parameters n,p has mgf (1−p+peᵗ)ⁿ. Complementary events often simplify inequalities involving nonnegative integer-valued variables. Markov’s inequality states P(X≥a)≤E[X]/a for a>0 and X≥0. A Poisson variable has mean and variance equal to its parameter. Bounds establish inequalities without requiring exact tail summation. Pay attention to strict versus nonstrict inequalities on lattice-valued variables and remember that multiplying a Poisson variable by a noninteger does not preserve its distribution family.  Factorization of a joint mgf near the origin identifies independence by uniqueness of the transform. A binomial factor’s exponent is the number of trials and its exponential coefficient is the success probability. For a weighted sum of nonnegative integers, describe its small-value complementary event exactly before multiplying probabilities.",
+      "similar_questions": [
+        {
+          "prompt": "For independent X∼Bin(2,1/2),Y∼Bernoulli(1/2), find P(X+2Y>1).",
+          "solution": "The complement is Y=0,X≤1 with probability (1/2)(3/4)=3/8. Thus probability=5/8."
+        },
+        {
+          "prompt": "For independent nonnegative integers X,Y, express P(X+3Y≤2).",
+          "solution": "The event requires Y=0 and X≤2. Independence gives P(Y=0)P(X≤2)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 49, PDF page 32. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704049, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 32,
+      "image": "assets/questions/2023-december-q049.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q050",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 50,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability Distributions",
+      "difficulty": "Moderate",
+      "prompt": "Xᵢ are iid with F(x)=0 for x<5 and F(x)=1−e^(5−x) for x≥5. Let Yₙ=min(X₁,…,Xₙ),Zₙ=√n(Yₙ−5), and Z standard normal. Which holds?",
+      "options": {
+        "A": "P(1/2<Yₙ<3/2)→1",
+        "B": "Yₙ converges in probability to 5",
+        "C": "Zₙ converges in distribution to Z",
+        "D": "P(1<Zₙ<2)→Φ(2)−Φ(1)"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Compute the survival function of the minimum using independence.",
+        "The minimum’s excess above 5 has exponential rate n, so √n is too small a scale for a normal limit."
+      ],
+      "solution": "Xᵢ−5 are rate-one exponentials. For ε>0, P(Yₙ−5>ε)=e⁻ⁿᵋ→0, proving Yₙ→5 in probability. A is false since Yₙ≥5. Moreover P(Zₙ>ε)=e^(−ε√n)→0, so Zₙ→0 in probability, not to a standard normal. The probability in D is e⁻√ⁿ−e⁻²√ⁿ→0, whereas the proposed normal difference is positive.",
+      "theory": "A cumulative distribution function F(x)=P(X≤x) determines probabilities through interval differences and survival probabilities 1−F(x). For independent observations the survival function of their minimum is the product of their survival functions. An exponential distribution of rate λ has survival e⁻λˣ for x≥0, and a gamma distribution of shape k and rate λ has mean k/λ. Independent gamma variables with a common rate have additive shapes. A chi-square variable with ν degrees of freedom is gamma with shape ν/2 and rate 1/2. Convergence in probability requires vanishing tail probabilities around a fixed limit; convergence in distribution requires convergence of cdfs at continuity points. Normal limits should not be assumed solely because a sample size is large; the statistic’s correct scale matters. ",
+      "similar_questions": [
+        {
+          "prompt": "Find the distribution of the minimum of n iid Exp(2) variables.",
+          "solution": "Its survival is (e⁻²ˣ)ⁿ=e⁻²ⁿˣ, so the minimum is Exp(2n)."
+        },
+        {
+          "prompt": "If Mₙ is the minimum of n iid Exp(1), find the distribution of nMₙ.",
+          "solution": "P(nMₙ>x)=P(Mₙ>x/n)=e⁻ˣ. Thus nMₙ is exactly Exp(1), for every n."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 50, PDF page 33. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704050, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 33,
+      "image": "assets/questions/2023-december-q050.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q051",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 51,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "A chain on {0,1,2} has P=[[2/3,1/3,0],[1/2,1/2,0],[0,0,1]]. Which holds?",
+      "options": {
+        "A": "p₂₁⁽ⁿ⁾→1",
+        "B": "The unique stationary law is (1/2,1/2,0)",
+        "C": "{1,2} is closed",
+        "D": "p₂₂⁽ⁿ⁾→1"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Inspect which rows describe absorbing states.",
+        "State 2 cannot leave; the other two states form a separate closed class."
+      ],
+      "solution": "State 2 is absorbing, so p₂₂⁽ⁿ⁾=1 and p₂₁⁽ⁿ⁾=0 for every n. The set {1,2} is not closed because p₁₀=1/2. On class {0,1}, stationarity gives π₀/3=π₁/2 and π₀+π₁=1, so its stationary law is (3/5,2/5,0). All mixtures of this law and (0,0,1) are stationary, excluding uniqueness and the proposed (1/2,1/2,0).",
+      "theory": "A discrete-time Markov chain has transition probabilities pᵢⱼ that depend on the current state and, for a homogeneous chain, not on time. Each transition-matrix row sums to one. A closed class cannot be left with positive probability; an absorbing state has pᵢᵢ=1. The n-step matrix is Pⁿ, so an absorbing state remains there at every step. A stationary distribution is a probability row vector π satisfying πP=π. Uniqueness requires appropriate structure: several closed communicating classes generally yield several stationary distributions and their convex mixtures. Within a finite irreducible aperiodic class, transition probabilities converge to its stationary law. Inspect the communication graph before making global irreducibility or uniqueness claims. ",
+      "similar_questions": [
+        {
+          "prompt": "For P=[[1,0],[1/2,1/2]], find p₀₀⁽ⁿ⁾.",
+          "solution": "State 0 is absorbing, so starting there the chain stays there and p₀₀⁽ⁿ⁾=1."
+        },
+        {
+          "prompt": "Find the stationary law for [[3/4,1/4],[1/2,1/2]].",
+          "solution": "Balance gives π₀/4=π₁/2, hence π₀=2π₁. Normalization gives (2/3,1/3)."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 51, PDF page 34. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704051, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 34,
+      "image": "assets/questions/2023-december-q051.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q052",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 52,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "X∼Poisson(3/4). Which holds?",
+      "options": {
+        "A": "P(X>9)≥11/12",
+        "B": "P(X<9)≥11/12",
+        "C": "E[(X−3/4)²]≥11/12",
+        "D": "(11/9)X∼Poisson(11/12)"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "A tail inequality can avoid exact Poisson probabilities.",
+        "Apply Markov at threshold 9, then take the complement."
+      ],
+      "solution": "X is nonnegative and E[X]=3/4. Markov gives P(X≥9)≤(3/4)/9=1/12; taking complements yields P(X<9)≥11/12. A is impossible under this bound. C is false because the centered second moment is Var(X)=3/4<11/12. D is false because (11/9)X takes the noninteger value 11/9 with positive probability, whereas a Poisson variable is integer valued.",
+      "theory": "Probability assigns nonnegative masses or densities that total one. Independence allows joint event probabilities to factor, and for independent random variables moment generating functions factor where they exist near zero. A moment generating function is E[eᵗˣ]; a binomial variable with parameters n,p has mgf (1−p+peᵗ)ⁿ. Complementary events often simplify inequalities involving nonnegative integer-valued variables. Markov’s inequality states P(X≥a)≤E[X]/a for a>0 and X≥0. A Poisson variable has mean and variance equal to its parameter. Bounds establish inequalities without requiring exact tail summation. Pay attention to strict versus nonstrict inequalities on lattice-valued variables and remember that multiplying a Poisson variable by a noninteger does not preserve its distribution family. ",
+      "similar_questions": [
+        {
+          "prompt": "If X≥0 and E[X]=2, lower-bound P(X<10).",
+          "solution": "Markov gives P(X≥10)≤2/10=1/5, so P(X<10)≥4/5."
+        },
+        {
+          "prompt": "For X∼Poisson(2), compute E[(X−2)²].",
+          "solution": "This is the variance of X, which equals the Poisson parameter 2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 52, PDF page 35. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704052, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 35,
+      "image": "assets/questions/2023-december-q052.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q053",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 53,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X₁,…,X₆ have gamma density λ⁴x³e^(−λx)/6 for x>0. T=ΣXᵢ. A size .05 UMP test of H₀:λ=1 against λ>1 rejects when (χ²ν,α denotes the 1−α quantile)",
+      "options": {
+        "A": "T≥χ²₄₈,.₀₅/2",
+        "B": "T≤χ²₄₈,.₉₅/2",
+        "C": "T≥χ²₂₄,.₀₅/2",
+        "D": "T≤χ²₂₄,.₉₅/2"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Adding six shape-four gamma variables gives shape 24.",
+        "Larger rate produces smaller observations, and the χ² notation here reverses the displayed tail parameter."
+      ],
+      "solution": "T has gamma shape 6·4=24 and rate λ. The likelihood ratio for λ₁>1 against 1 is λ₁²⁴exp[−(λ₁−1)T], decreasing in T. Hence small T is the UMP rejection region. Under H₀,2T∼χ²₄₈. The lower 0.05 quantile is denoted χ²₄₈,.₉₅ because the problem uses 1−α quantiles. Thus reject T≤χ²₄₈,.₉₅/2.",
+      "theory": "Statistical inference uses observations to estimate unknown parameters or test hypotheses. A sufficient statistic retains all likelihood information about the parameter; factorization proves sufficiency. Minimal sufficiency can be verified by the likelihood-ratio criterion: the ratio of two data likelihoods is parameter independent exactly when their statistic values agree. Completeness means every integrable function of the statistic with expectation zero at every parameter is almost surely zero. A complete sufficient statistic yields unique minimum-variance unbiased estimators by the Lehmann–Scheffé theorem. For testing, a monotone likelihood ratio gives one-sided uniformly most powerful rejection regions in the corresponding statistic. Bayesian squared-error estimation uses the posterior mean. Check distribution parametrization, tail-quantile conventions, and whether an estimator is unbiased for the requested parameter or its reciprocal. ",
+      "similar_questions": [
+        {
+          "prompt": "For n iid Exp(λ), test λ=1 against λ>1. What statistic and direction are used?",
+          "solution": "T=ΣX has gamma shape n. The likelihood ratio decreases in T, so reject for small T; under null 2T∼χ²₂ₙ."
+        },
+        {
+          "prompt": "If T∼Gamma(7,rate 1), express its lower 10% threshold using χ² quantiles.",
+          "solution": "2T∼χ²₁₄. Thus threshold=(1/2) times the 0.10 chi-square quantile, denoted χ²₁₄,.₉₀/2 in upper-tail notation."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 53, PDF page 36. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704053, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 36,
+      "image": "assets/questions/2023-december-q053.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q054",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 54,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Yᵢ=iα+i²α²+εᵢ, i=1,…,n≥2, with iid εᵢ∼N(0,σ²),α∈ℝ,σ>0. Which is jointly minimal sufficient for (α,σ)?",
+      "options": {
+        "A": "(ΣYᵢ²,ΣiYᵢ,Σi²Yᵢ)",
+        "B": "(ΣYᵢ²,ΣiYᵢ,Σi²Yᵢ²)",
+        "C": "(ΣiYᵢ,Σi²Yᵢ²)",
+        "D": "(ΣYᵢ,ΣiYᵢ)"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Expand the Gaussian residual sum of squares as a polynomial in α.",
+        "Minimal sufficiency follows by making a likelihood ratio independent of both α and σ."
+      ],
+      "solution": "Expand the residual sum: Σ(Yᵢ−iα−i²α²)²=ΣYᵢ²−2αΣiYᵢ−2α²Σi²Yᵢ plus terms depending only on parameters and fixed indices. Factorization proves sufficiency of A. For two data vectors y,z the log likelihood ratio is −[ΔΣY²−2αΔΣiY−2α²ΔΣi²Y]/(2σ²). Independence from σ forces this polynomial to vanish for every α; its three coefficients must vanish. Thus the ratio criterion gives minimal sufficiency. The other displayed statistics generally fail to determine these coefficients.",
+      "theory": "Statistical inference uses observations to estimate unknown parameters or test hypotheses. A sufficient statistic retains all likelihood information about the parameter; factorization proves sufficiency. Minimal sufficiency can be verified by the likelihood-ratio criterion: the ratio of two data likelihoods is parameter independent exactly when their statistic values agree. Completeness means every integrable function of the statistic with expectation zero at every parameter is almost surely zero. A complete sufficient statistic yields unique minimum-variance unbiased estimators by the Lehmann–Scheffé theorem. For testing, a monotone likelihood ratio gives one-sided uniformly most powerful rejection regions in the corresponding statistic. Bayesian squared-error estimation uses the posterior mean. Check distribution parametrization, tail-quantile conventions, and whether an estimator is unbiased for the requested parameter or its reciprocal.  A curved exponential family can still have several necessary sufficient-statistic components. Minimal sufficiency is determined by parameter-independent likelihood ratios, not by simply counting parameters. Independent polynomial powers of the curved parameter force separate equality conditions for the corresponding data summaries.",
+      "similar_questions": [
+        {
+          "prompt": "For iid N(μ,σ²), find a minimal sufficient statistic.",
+          "solution": "Expanding Σ(xᵢ−μ)² shows dependence through Σxᵢ and Σxᵢ². The likelihood-ratio criterion forces equality of both, so (Σx,Σx²) is minimal sufficient."
+        },
+        {
+          "prompt": "For Yᵢ=aᵢθ+εᵢ with known aᵢ and unknown σ, find a sufficient statistic.",
+          "solution": "The residual sum is ΣYᵢ²−2θΣaᵢYᵢ+θ²Σaᵢ². Thus (ΣYᵢ²,ΣaᵢYᵢ) is sufficient, and the ratio criterion proves minimality when the design is nonzero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 54, PDF page 37. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704054, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 37,
+      "image": "assets/questions/2023-december-q054.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q055",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 55,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "X₁,…,Xₙ,n≥2, have density θx^(θ−1),0<x<1,θ>0. Which is the UMVUE of 1/θ?",
+      "options": {
+        "A": "−ΣlnXᵢ/n",
+        "B": "−n/ΣlnXᵢ",
+        "C": "−(n−1)/ΣlnXᵢ",
+        "D": "−2ΣlnXᵢ/n"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Transform each observation by −log X.",
+        "The transformed sum is complete sufficient gamma, and its mean is n/θ."
+      ],
+      "solution": "Set Zᵢ=−log Xᵢ. Then P(Zᵢ>z)=P(Xᵢ<e⁻ᶻ)=e⁻θᶻ, so Zᵢ∼Exp(rate θ), with mean 1/θ. S=ΣZᵢ is gamma(shape n,rate θ) and complete sufficient for θ (a full one-parameter exponential family). Therefore S/n=−ΣlnXᵢ/n is unbiased for 1/θ and, by Lehmann–Scheffé, is its UMVUE. B and C estimate functions of θ rather than its reciprocal; D has mean 2/θ.",
+      "theory": "Statistical inference uses observations to estimate unknown parameters or test hypotheses. A sufficient statistic retains all likelihood information about the parameter; factorization proves sufficiency. Minimal sufficiency can be verified by the likelihood-ratio criterion: the ratio of two data likelihoods is parameter independent exactly when their statistic values agree. Completeness means every integrable function of the statistic with expectation zero at every parameter is almost surely zero. A complete sufficient statistic yields unique minimum-variance unbiased estimators by the Lehmann–Scheffé theorem. For testing, a monotone likelihood ratio gives one-sided uniformly most powerful rejection regions in the corresponding statistic. Bayesian squared-error estimation uses the posterior mean. Check distribution parametrization, tail-quantile conventions, and whether an estimator is unbiased for the requested parameter or its reciprocal. ",
+      "similar_questions": [
+        {
+          "prompt": "For iid Exp(rate θ), find the UMVUE of 1/θ.",
+          "solution": "S=ΣX is complete sufficient gamma. S/n has expectation 1/θ and is a function of S, so is UMVUE."
+        },
+        {
+          "prompt": "For S∼Gamma(n,rate θ),n>1, find an unbiased estimator of θ.",
+          "solution": "E[1/S]=θ/(n−1), so (n−1)/S is unbiased. If S is complete sufficient it is also UMVUE."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 55, PDF page 37. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704055, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 37,
+      "image": "assets/questions/2023-december-q055.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q056",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 56,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "A coin has head probability p, prior Beta(5,5). In 25 independent tosses there are 10 heads. Find the Bayes estimate under squared-error loss.",
+      "options": {
+        "A": "3/7",
+        "B": "3/5",
+        "C": "1/2",
+        "D": "2/5"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Update the prior shape parameters by heads and tails separately.",
+        "Under squared-error loss use the posterior mean, not the mode or raw sample frequency."
+      ],
+      "solution": "Beta-binomial conjugacy gives posterior Beta(5+10,5+15)=Beta(15,20). Squared-error loss is minimized by the posterior mean, namely 15/(15+20)=15/35=3/7. The empirical frequency 10/25=2/5 is the MLE, not the Bayes estimate with this prior.",
+      "theory": "Statistical inference uses observations to estimate unknown parameters or test hypotheses. A sufficient statistic retains all likelihood information about the parameter; factorization proves sufficiency. Minimal sufficiency can be verified by the likelihood-ratio criterion: the ratio of two data likelihoods is parameter independent exactly when their statistic values agree. Completeness means every integrable function of the statistic with expectation zero at every parameter is almost surely zero. A complete sufficient statistic yields unique minimum-variance unbiased estimators by the Lehmann–Scheffé theorem. For testing, a monotone likelihood ratio gives one-sided uniformly most powerful rejection regions in the corresponding statistic. Bayesian squared-error estimation uses the posterior mean. Check distribution parametrization, tail-quantile conventions, and whether an estimator is unbiased for the requested parameter or its reciprocal. ",
+      "similar_questions": [
+        {
+          "prompt": "Prior Beta(2,3), sample 4 heads and 6 tails. Find posterior mean.",
+          "solution": "Posterior Beta(6,9) has mean 6/15=2/5."
+        },
+        {
+          "prompt": "Prior Beta(1,1), sample 3 heads in 4 tosses. Find squared-error Bayes estimate.",
+          "solution": "Posterior Beta(4,2) has mean 4/6=2/3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 56, PDF page 38. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704056, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 38,
+      "image": "assets/questions/2023-december-q056.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q057",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 57,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "An OLS line from n=10 observations is ŷᵢ=1.5+0.8xᵢ. Corrected sums are Syy=5,Sxx=6. Find adjusted R² rounded to two decimals.",
+      "options": {
+        "A": "0.74",
+        "B": "0.83",
+        "C": "0.77",
+        "D": "0.84"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Find fitted sum of squares using slope² times Sxx.",
+        "Adjust using residual df 8 and total df 9."
+      ],
+      "solution": "In simple OLS with intercept, SSR=b²Sxx=0.8²·6=3.84. Thus SSE=5−3.84=1.16 and R²=3.84/5=.768. There are n−2=8 residual degrees of freedom and n−1=9 total degrees of freedom. Adjusted R²=1−(1.16/8)/(5/9)=1−.261=.739, which rounds to .74. Option .77 is the ordinary R² rounded, not the adjusted value.",
+      "theory": "Ordinary least squares minimizes residual squared error. With an intercept, total corrected sum of squares decomposes into fitted and residual sums of squares. In simple regression the fitted sum of squares is slope² times the corrected x sum of squares; R² is fitted divided by total, and adjusted R² corrects residual and total sums using their degrees of freedom. For p-dimensional normal observations with covariance Σ, the centered scatter matrix has a Wishart distribution with n−1 degrees of freedom and scale Σ. Whitening transforms it to identity scale, and its trace is a sum of independent squared standard normals with (n−1)p degrees of freedom. Distinguish a scalar trace distribution from the matrix-valued Wishart law, and distinguish n from n−1 when the sample mean is estimated. ",
+      "similar_questions": [
+        {
+          "prompt": "n=12,SST=20,SSE=5 in simple regression. Find adjusted R².",
+          "solution": "Residual df=10,total df=11. Adjusted R²=1−(5/10)/(20/11)=1−.275=.725."
+        },
+        {
+          "prompt": "In simple OLS, b=2,Sxx=3,Syy=15. Find R².",
+          "solution": "SSR=b²Sxx=4·3=12, so R²=12/15=.8. SSE=3."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 57, PDF page 39. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704057, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 39,
+      "image": "assets/questions/2023-december-q057.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q058",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 58,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For n≥p+1 iid Nₚ(μ,Σ), let X̄ be the mean and A=Σᵢ(Xᵢ−X̄)(Xᵢ−X̄)ᵀ. What is the distribution of tr(AΣ⁻¹)?",
+      "options": {
+        "A": "Wₚ(n−1,Σ)",
+        "B": "χ²ₚ",
+        "C": "χ²ₙₚ",
+        "D": "χ²₍ₙ₋₁₎ₚ"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Whiten by Σ⁻¹/² and use cyclic invariance of trace.",
+        "Each independent coordinate contributes n−1 degrees of freedom after centering."
+      ],
+      "solution": "Whiten each observation to Zᵢ=Σ⁻¹/²(Xᵢ−μ), which are iid Nₚ(0,I). Cyclic invariance of trace gives tr(AΣ⁻¹)=Σᵢ‖Zᵢ−Z̄‖². For each of the p independent coordinates, this centered sum of squares is χ²ₙ₋₁, and the coordinate sums are independent. Their sum is χ²₍ₙ₋₁₎ₚ. A is the matrix distribution of A itself, not the scalar trace.",
+      "theory": "Ordinary least squares minimizes residual squared error. With an intercept, total corrected sum of squares decomposes into fitted and residual sums of squares. In simple regression the fitted sum of squares is slope² times the corrected x sum of squares; R² is fitted divided by total, and adjusted R² corrects residual and total sums using their degrees of freedom. For p-dimensional normal observations with covariance Σ, the centered scatter matrix has a Wishart distribution with n−1 degrees of freedom and scale Σ. Whitening transforms it to identity scale, and its trace is a sum of independent squared standard normals with (n−1)p degrees of freedom. Distinguish a scalar trace distribution from the matrix-valued Wishart law, and distinguish n from n−1 when the sample mean is estimated. ",
+      "similar_questions": [
+        {
+          "prompt": "For n=8 univariate normal observations with variance σ², find Σ(Xᵢ−X̄)²/σ².",
+          "solution": "It has a chi-square distribution with n−1=7 degrees of freedom."
+        },
+        {
+          "prompt": "For n=6,p=3 normal observations, find degrees of freedom of the whitened scatter trace.",
+          "solution": "Each of 3 coordinates contributes n−1=5 independent squared-normal degrees; total 3·5=15."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 58, PDF page 40. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704058, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 40,
+      "image": "assets/questions/2023-december-q058.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q059",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 59,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "A Latin square has error sum-of-squares degrees of freedom 42. Find treatment degrees of freedom.",
+      "options": {
+        "A": "6",
+        "B": "7",
+        "C": "8",
+        "D": "9"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the standard Latin-square error df formula.",
+        "Solve (v−1)(v−2)=42, then subtract one for treatment df."
+      ],
+      "solution": "For order v, error df=(v−1)(v−2)=42. Thus v²−3v−40=0=(v−8)(v+5), giving admissible v=8. Treatment df=v−1=7. The negative root is not a possible design order.",
+      "theory": "An experimental design organizes treatment comparisons while controlling nuisance variation. A Latin square of order v has v rows, v columns, and v treatments, with every treatment occurring once in each row and each column. There are v² observations. Under the standard additive analysis of variance model, the corrected total degrees of freedom are v²−1. Rows, columns, and treatments each consume v−1 degrees of freedom, leaving (v−1)(v−2) for error. These formulae assume one observation per cell and the standard no-interaction model. A computed order must be an admissible positive integer, and the requested component’s degrees of freedom should be extracted only after finding that order. Do not confuse treatment degrees of freedom with the number of treatments. ",
+      "similar_questions": [
+        {
+          "prompt": "For a Latin square of order 5, find error and treatment df.",
+          "solution": "Error df=(5−1)(5−2)=12; treatment df=5−1=4."
+        },
+        {
+          "prompt": "A Latin square has error df 20. Find its order.",
+          "solution": "(v−1)(v−2)=20 implies v²−3v−18=0=(v−6)(v+3); admissible order v=6."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 59, PDF page 41. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704059, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 41,
+      "image": "assets/questions/2023-december-q059.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2023-december-q060",
+      "source_type": "official_exam",
+      "paper_id": "2023-december",
+      "question_number": 60,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Operations Research",
+      "difficulty": "Moderate",
+      "prompt": "Maximize z=3x+4y subject to x+y≤12,2x+3y≤30,x+4y≤36,x,y≥0. Find the optimum.",
+      "options": {
+        "A": "x*=6,y*=6",
+        "B": "x*=7,y*=5",
+        "C": "x*=3,y*=8",
+        "D": "x*=4,y*=8"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Seek a nonnegative combination of constraints equal to the objective.",
+        "Adding the first two left sides gives exactly 3x+4y."
+      ],
+      "solution": "Add the first two constraints: 3x+4y≤12+30=42. This is a global upper bound on the objective. The point (6,6) satisfies x+y=12,2x+3y=30,x+4y=30≤36 and nonnegativity, and has value 42. Thus it attains the bound and is optimal. Options B and C are feasible but have value 41. D violates 2x+3y≤30 because 8+24=32. Equality in both bound constraints uniquely gives (6,6).",
+      "theory": "Linear programming optimizes a linear objective over a set specified by linear equalities and inequalities. With nonnegative decision variables in two dimensions, feasible constraints form a convex polygon or an unbounded region. If a finite optimum exists on a nonempty polytope, at least one vertex achieves it. Candidate vertices come from intersections of boundary lines, including coordinate axes, but each must be checked against every inequality. A dual upper bound can prove optimality without enumerating all vertices: express the objective as a nonnegative combination of constraint left sides, then use their right sides. A feasible point attaining this bound is optimal. Comparing only the listed options is insufficient unless global optimality is also established. ",
+      "similar_questions": [
+        {
+          "prompt": "Maximize 2x+3y with x+y≤5,x+2y≤8,x,y≥0.",
+          "solution": "Adding the constraints gives objective≤13. Their intersection is y=3,x=2, feasible and attaining 13, so optimal."
+        },
+        {
+          "prompt": "Maximize x+y with x≤2,y≤3,x,y≥0.",
+          "solution": "The bounds imply x+y≤5. Point (2,3) is feasible and attains 5, hence optimal."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 60, PDF page 41. No candidate response used as an answer key. Cross-checked against the NTA final answer key, exact question ID 704060, https://nta.ac.in/Download/Notice/Notice_20240213113136.pdf, page 5.",
+      "page": 41,
+      "image": "assets/questions/2023-december-q060.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

@@ -1,0 +1,1705 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2021-june-q061",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 61,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which of the following are inner products on ℝ²? Write x=(x₁,x₂)ᵀ and y=(y₁,y₂)ᵀ.",
+      "options": {
+        "A": "⟨x,y⟩=x₁y₁+2x₁y₂+2x₂y₁+x₂y₂",
+        "B": "⟨x,y⟩=x₁y₁+x₁y₂+x₂y₁+2x₂y₂",
+        "C": "⟨x,y⟩=x₁y₁+x₁y₂+x₂y₁+x₂y₂",
+        "D": "⟨x,y⟩=x₁y₁−(1/2)x₁y₂−(1/2)x₂y₁+x₂y₂"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "All four forms are symmetric bilinear; only positive definiteness remains.",
+        "Evaluate each form on x=y. Complete squares or use the principal minors of the representing matrix."
+      ],
+      "solution": "For A the squared length is x₁²+4x₁x₂+x₂², which equals −2 at x=(1,−1), so A fails. For B it is (x₁+x₂)²+x₂², positive for every nonzero x. For C it is (x₁+x₂)², zero for the nonzero vector (1,−1), so C fails. For D it is x₁²−x₁x₂+x₂²=(x₁−x₂/2)²+3x₂²/4, positive for every nonzero x. Symmetry and bilinearity are immediate from the formulas. Thus exactly B and D are inner products.",
+      "theory": "A real inner product is a bilinear, symmetric form whose value on (x,x) is strictly positive whenever x is nonzero. Every bilinear form on ℝⁿ has the representation xᵀGy; symmetry is equivalent to Gᵀ=G, and positive definiteness means xᵀGx>0 for all x≠0. For a symmetric 2×2 matrix [[a,b],[b,c]], Sylvester’s criterion gives positive definiteness precisely when a>0 and ac−b²>0. Equivalently, all eigenvalues are positive. A nonnegative quadratic form can still fail to be an inner product when it has a nontrivial zero direction. Completing squares is often the fastest check in dimension two. Checking only the diagonal coefficients is insufficient because cross terms can introduce negative or zero directions.",
+      "similar_questions": [
+        {
+          "prompt": "For which real t is x₁y₁+t(x₁y₂+x₂y₁)+x₂y₂ an inner product?",
+          "solution": "The symmetric matrix is [[1,t],[t,1]], with determinant 1−t². Sylvester’s criterion gives |t|<1. At t=±1 a nonzero null direction appears; beyond those values an eigenvalue 1−|t| is negative."
+        },
+        {
+          "prompt": "Is 2x₁y₁+x₁y₂+x₂y₁+x₂y₂ an inner product?",
+          "solution": "Yes: on the diagonal it is 2x₁²+2x₁x₂+x₂²=x₁²+(x₁+x₂)². Both squares vanish only when x₁=x₂=0; the formula is also symmetric and bilinear."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 61, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2021-june-q061.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q062",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 62,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let A⊆ℝ and let f:ℝ→ℝ be continuous. Which statements are true?",
+      "options": {
+        "A": "If A is closed then f(A) is closed",
+        "B": "If A is bounded then f⁻¹(A) is bounded",
+        "C": "If A is closed and bounded then f(A) is closed and bounded",
+        "D": "If A is bounded then f(A) is bounded"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Use the compactness of closed bounded subsets of ℝ and continuity on the closure of a bounded set.",
+        "For the negative claims, try an exponential image of all ℝ and the inverse image under a constant map."
+      ],
+      "solution": "A is false: A=ℝ is closed and f(x)=eˣ is continuous, but f(A)=(0,∞) is not closed. B is false: f≡0 and A={0} give f⁻¹(A)=ℝ. C holds by Heine–Borel: A compact implies f(A) compact, hence closed and bounded. D also holds even when A is not closed: boundedness places A in [−M,M], and f is bounded on that compact interval. Thus f(A)⊆f([−M,M]) is bounded. Exactly C and D are true.",
+      "theory": "In ℝⁿ the Heine–Borel theorem identifies compact sets with closed bounded sets. A continuous image of a compact set is compact, and every compact subset of ℝ is closed and bounded. Continuous functions need not map arbitrary closed sets to closed sets: unboundedness can permit a limiting image value with no attained preimage. Inverse images of closed sets are closed, but there is no analogous general preservation of boundedness under inverse images. Because f is defined continuously on all of ℝ here, it is bounded on every compact interval. Any bounded subset is contained in such an interval, proving its image is bounded. The entire-domain hypothesis matters: 1/x is unbounded on the bounded subset (0,1) of its smaller domain.",
+      "similar_questions": [
+        {
+          "prompt": "If f:(0,1)→ℝ is continuous, must f((0,1)) be bounded?",
+          "solution": "No: f(x)=1/x is continuous on (0,1) and has unbounded image (1,∞). The closure is not contained in the domain, so the compact-interval argument is unavailable."
+        },
+        {
+          "prompt": "Show that a continuous f:ℝ→ℝ maps every bounded sequence to a bounded sequence.",
+          "solution": "A bounded sequence lies in [−M,M]. The extreme-value theorem gives K=max{|f(x)|:|x|≤M}<∞. Consequently |f(xₙ)|≤K for all n."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 62, PDF page 10. No candidate response used as an answer key.",
+      "page": 10,
+      "image": "assets/questions/2021-june-q062.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q063",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 63,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Functional Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let T:X→Y be a bounded linear operator between Banach spaces. Which conditions imply that T has a bounded inverse?",
+      "options": {
+        "A": "inf_{‖x‖=1}‖Tx‖=0",
+        "B": "inf_{‖x‖=1}‖Tx‖=0 and T(X) is dense in Y",
+        "C": "inf_{‖x‖=1}‖Tx‖>0",
+        "D": "inf_{‖x‖=1}‖Tx‖>0 and T(X) is dense in Y"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "A positive infimum gives a lower norm bound and therefore injectivity and closed range.",
+        "A range that is both closed and dense is all of Y. Without density, consider an isometric inclusion into a larger space."
+      ],
+      "solution": "Interpret inverse as an everywhere-defined inverse Y→X. Set c=inf_{‖x‖=1}‖Tx‖>0. Homogeneity gives ‖Tx‖≥c‖x‖, proving injectivity. If Txₙ→y, this inequality makes xₙ Cauchy; completeness of X gives xₙ→x, and continuity gives y=Tx. Thus the range is closed. Under D it is also dense, so it equals Y, and ‖T⁻¹y‖≤‖y‖/c. C alone fails for the isometric inclusion ℝ→ℝ², x↦(x,0). A fails for the zero operator. B fails for T:ℓ²→ℓ², (xₙ)↦(xₙ/n): its range contains finite sequences and is dense, but infimum is zero and the map is not onto. Therefore D is the only sufficient condition.",
+      "theory": "A bounded operator is bounded below if there exists c>0 with ‖Tx‖≥c‖x‖ for every x. This condition is equivalent to a positive infimum on the unit sphere. It forces injectivity and, when X is Banach, closed range. The inverse on the range then has norm at most 1/c. An inverse defined on all of Y additionally requires surjectivity; density alone becomes sufficient only after closedness is established. The bounded inverse theorem says a bounded linear bijection between Banach spaces has a bounded inverse. The completeness hypotheses are essential in general. Do not confuse a bounded inverse on T(X) with an inverse from Y: an isometric embedding into a proper closed subspace satisfies the first description but not the latter.",
+      "similar_questions": [
+        {
+          "prompt": "T:ℓ²→ℓ² is defined by T(x₁,x₂,…)=(0,x₁,x₂,…). Does it have a bounded inverse on ℓ²?",
+          "solution": "It is an isometry, so bounded below by 1. Its range is the closed subspace of sequences with first coordinate zero. It is not surjective and has no inverse on all ℓ², although its inverse on its range is bounded."
+        },
+        {
+          "prompt": "Suppose ‖Tx‖≥2‖x‖ and T(X) is dense in a Banach Y. Bound the inverse.",
+          "solution": "The lower bound makes the range closed by the Cauchy argument. Density makes it all Y, so T is bijective. For y=Tx, ‖T⁻¹y‖=‖x‖≤‖y‖/2, giving ‖T⁻¹‖≤1/2."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 63, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2021-june-q063.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q064",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 64,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be an m×n matrix whose first r rows and first s columns are linearly independent, where r<m and s<n. Which statements are true?",
+      "options": {
+        "A": "rank(A)≥max{r,s}",
+        "B": "The submatrix of the first r rows and first s columns has rank min{r,s}",
+        "C": "If r<s, some row among r+1,…,m extends the first r rows to a linearly independent set",
+        "D": "If s<r, some column among s+1,…,n together with the first s columns forms a linearly dependent set"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Use equality of row rank and column rank. Independence of complete rows does not ensure independence after restriction to some columns.",
+        "If every additional row were in the span of the first r, the total rank could not exceed r. For D, test an identity matrix."
+      ],
+      "solution": "Independence of the prescribed rows gives rank≥r, and independence of the prescribed columns gives rank≥s, so A holds. B fails with A=[[0,1],[1,0]] and r=s=1: the first row and first column are nonzero but their intersection submatrix is zero. If r<s then rank≥s>r. Hence not every remaining row lies in the r-dimensional span of the first r; choosing one outside extends them, proving C. D fails with A=I₃, r=2,s=1: each of columns 2 and 3 together with column 1 is independent. Thus A and C are true.",
+      "theory": "The rank of a matrix is the common dimension of its row space and its column space. Any independent subset of rows or columns therefore gives a lower bound on rank. Restricting independent vectors to selected coordinates can destroy independence, so an intersection submatrix need not retain the rank suggested by the full rows and columns. An independent set of r vectors can be extended by a vector outside its span whenever the whole spanning family has dimension greater than r. This basis-extension principle proves C. In contrast, independence of the first s columns says nothing forcing a remaining column into their span; the remaining columns might all extend that span individually. Distinguish existence of an independent extension from existence of a dependent extension.",
+      "similar_questions": [
+        {
+          "prompt": "A matrix has four independent columns and its first two rows are independent. Must one remaining row extend those two?",
+          "solution": "Yes. Column rank, hence row rank, is at least four. If every remaining row lay in the span of the first two, row rank would be at most two. Some row lies outside and gives an independent triple."
+        },
+        {
+          "prompt": "Can two independent rows and two independent columns intersect in a rank-zero submatrix?",
+          "solution": "Yes. Use the 4×4 block matrix [[0,I₂],[I₂,0]]. Its first two rows and first two columns are independent, while the upper-left 2×2 block is zero and has rank zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 64, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2021-june-q064.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q065",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 65,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f:[0,1]→ℝ be continuous and satisfy ∫₀ᵗ f(x)dx=∫ₜ¹ f(x)dx for every t∈[0,1]. Which statements necessarily hold?",
+      "options": {
+        "A": "f is differentiable on (0,1)",
+        "B": "f is monotonic on [0,1]",
+        "C": "∫₀¹ f(x)dx=1",
+        "D": "f(x)>0 for all rational x∈[0,1]"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "First substitute t=0. Then express both sides using F(t)=∫₀ᵗf.",
+        "The fundamental theorem of calculus differentiates F because f is continuous."
+      ],
+      "solution": "At t=0 the equality gives ∫₀¹f=0. For arbitrary t, its right side equals ∫₀¹f−∫₀ᵗf=−F(t), so F(t)=−F(t), hence F≡0. By the fundamental theorem of calculus, f(t)=F′(t)=0 on (0,1); continuity gives zero also at the endpoints. Thus f is the zero function, differentiable and both nondecreasing and nonincreasing. A and B hold. The integral is 0 rather than 1, so C fails, and positivity on the rationals is false, so D fails. Here monotonic has its standard non-strict meaning.",
+      "theory": "For continuous f on a closed interval, the accumulated integral F(t)=∫ₐᵗf(x)dx is differentiable in the interior and satisfies F′=f. Integral identities holding for every upper limit can therefore impose pointwise constraints on f. A single equality of total integrals generally does not do so, but an identity for all t is much stronger. Splitting an integral at t gives ∫ₜᵇf=∫ₐᵇf−F(t); endpoint substitutions can identify the total integral before differentiation. A constant function is monotonic under the usual definitions of nondecreasing or nonincreasing, though it is not strictly monotonic. Continuity at endpoints extends a zero interior function to the whole interval. Without continuity, zero accumulated integrals imply only almost-everywhere zero for an integrable function.",
+      "similar_questions": [
+        {
+          "prompt": "Continuous f on [0,2] satisfies ∫₀ᵗf=3∫ₜ²f for every t. Find f.",
+          "solution": "At t=0 the total integral is zero. Writing the right side as −3F(t) gives 4F(t)=0. Thus F≡0 and the fundamental theorem yields f≡0, including endpoints by continuity."
+        },
+        {
+          "prompt": "If continuous f satisfies ∫₀ᵗf(x)dx=t² for all t∈[0,1], find f.",
+          "solution": "Differentiate in the interior to get f(t)=2t. Continuity supplies f(0)=0 and f(1)=2. Direct integration ∫₀ᵗ2x dx=t² verifies the function."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 65, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2021-june-q065.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q066",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 66,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Consider 2x+ky=2−k, kx+2y=k, ky+kz=k−1 in three unknowns and real parameter k. For which listed values is the system consistent?",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "−1",
+        "D": "−2"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "First solve the two equations involving x and y. Their coefficient determinant is 4−k².",
+        "For k=±2 compare the two equations directly; when k≠0 the third determines z."
+      ],
+      "solution": "For k=1, the equations give x=1/3,y=1/3,z=−1/3, so A is consistent. For k=−1, the first two give x=5/3,y=1/3, and the third gives z=5/3, so C is consistent. For k=2, the first two require 2x+2y=0 and 2x+2y=2, impossible. For k=−2 they require 2x−2y=4 and, after multiplying the second by −1, 2x−2y=2, impossible. Therefore exactly A and C. More generally the 3×3 determinant is k(4−k²); nonzero determinant ensures a unique solution.",
+      "theory": "A linear system Ax=b is consistent exactly when b belongs to the column space of A, equivalently when rank(A)=rank([A|b]). A nonsingular square coefficient matrix guarantees a unique solution for every right-hand side. When a parameter makes the determinant zero, one must examine the right-hand side: the system may have infinitely many solutions or none. Proportional left sides demand the same proportionality of right sides. Here the first two equations form a 2×2 subsystem and the last equation determines z when k≠0, so the exceptional values are k=0,±2. At k=0 the third equation becomes 0=−1 and is inconsistent. Never infer inconsistency solely from a vanishing determinant; it establishes only a failure of uniqueness.",
+      "similar_questions": [
+        {
+          "prompt": "Solve x+ty=1 and tx+y=1 for consistency as t varies.",
+          "solution": "For t≠±1, determinant 1−t² is nonzero and x=y=1/(1+t). At t=1 the equations coincide, giving infinitely many solutions x+y=1. At t=−1 they are x−y=1 and −x+y=1, whose sum is 0=2, so there is no solution."
+        },
+        {
+          "prompt": "For which k is x+ky=1, 2x+2ky=k consistent?",
+          "solution": "The second left side is twice the first, so consistency requires k=2. When k=2 the equations are identical after scaling and every pair with x+2y=1 solves them; for every other k they contradict."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 66, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2021-june-q066.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q067",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 67,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For integers k≥1 define fₖ(x)=xᵏ/(1+x)² for x≥0. Which statements are true?",
+      "options": {
+        "A": "For each k, fₖ has bounded variation on compact intervals",
+        "B": "For every k, ∫₀∞fₖ(x)dx<∞",
+        "C": "lim_{k→∞}∫₀¹fₖ(x)dx exists",
+        "D": "fₖ converges uniformly on [0,1] as k→∞"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "For fixed k the derivative is continuous on every compact interval. For the improper integral compare the tail with x^{k−2}.",
+        "Find the pointwise limit on [0,1], including x=1; also bound the integrals by ∫₀¹xᵏdx."
+      ],
+      "solution": "A holds because fₖ is C¹ on every compact subinterval of [0,∞), and its total variation is at most the integral of |fₖ′| there. B is false already for k=1: for x≥1, x/(1+x)²≥1/(4x), so the improper integral diverges. In fact it diverges for every k≥1. C holds with value zero, since 0≤∫₀¹fₖ≤∫₀¹xᵏdx=1/(k+1)→0. Pointwise fₖ(x)→0 for 0≤x<1 and fₖ(1)=1/4. This discontinuous limit cannot be the uniform limit of continuous functions, so D fails. Exactly A and C.",
+      "theory": "A function has bounded variation on [a,b] if the supremum of sums Σ|f(tᵢ)−f(tᵢ₋₁)| over partitions is finite. Every C¹ function on a compact interval has bounded variation, with variation ∫|f′|. This local property does not imply an integrable tail over an unbounded domain. Improper integrals of positive functions can be checked by comparison with power functions: ∫₁∞xᵖdx converges exactly when p<−1. Uniform convergence means sup-norm error tends to zero, a stronger condition than pointwise convergence. Uniform limits of continuous functions are continuous. Integral convergence can occur despite failure of uniform convergence: domination or a direct integral estimate may suffice. The endpoint value is crucial when identifying the limit of xᵏ on [0,1].",
+      "similar_questions": [
+        {
+          "prompt": "For gₙ(x)=xⁿ on [0,1], determine pointwise convergence, uniform convergence, and integral limit.",
+          "solution": "The pointwise limit is zero below 1 and one at 1. It is discontinuous, so convergence is not uniform. Nevertheless ∫₀¹gₙ dx=1/(n+1)→0."
+        },
+        {
+          "prompt": "For gₙ(x)=xⁿ on [0,a], 0<a<1, prove uniform convergence.",
+          "solution": "For all x in the interval, 0≤xⁿ≤aⁿ. Since aⁿ→0, the supremum error tends to zero. Thus convergence to zero is uniform, and the integrals also tend to zero by bounding them by a·aⁿ."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 67, PDF page 11. No candidate response used as an answer key.",
+      "page": 11,
+      "image": "assets/questions/2021-june-q067.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q068",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 68,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let ℝ⁺ be the positive reals, let f:ℝ⁺→ℝ be differentiable, and put g(x)=eˣf(x). Which statements are true?",
+      "options": {
+        "A": "If lim_{x→∞}f(x)=0 then lim_{x→∞}f′(x)=0",
+        "B": "If lim_{x→∞}(f(x)+f′(x))=0 then lim_{x→∞, y→∞}(g(x)−g(y))/(eˣ−eʸ)=0",
+        "C": "If lim_{x→∞}f′(x)=0 then lim_{x→∞}f(x)=0",
+        "D": "If lim_{x→∞}(f(x)+f′(x))=0 then lim_{x→∞}f(x)=0"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "For B apply the Cauchy mean-value theorem to g and the exponential on the interval between x and y.",
+        "For D, solve f′+f=h with an integrating factor and use h(x)→0. For A use a decaying oscillatory function."
+      ],
+      "solution": "A fails for f(x)=sin(x²)/x: f→0, but f′=2cos(x²)−sin(x²)/x² has subsequences tending to 2 and −2. C fails for the constant function f≡1. For B, when x≠y Cauchy’s mean-value theorem yields (g(x)−g(y))/(eˣ−eʸ)=g′(ξ)/e^ξ=f(ξ)+f′(ξ), with ξ between x and y. Both tending to infinity force ξ→∞ and the ratio→0. For D set h=f+f′→0. For t≥R, integrating the equation gives f(t)=e^{−(t−R)}f(R)+∫ᴿᵗe^{−(t−s)}h(s)ds. If |h(s)|≤ε past R, then limsup|f(t)|≤ε. Since ε is arbitrary, f→0. Thus B and D are true.",
+      "theory": "Cauchy’s mean-value theorem states that for functions continuous on a closed interval and differentiable in its interior, a difference quotient (u(b)−u(a))/(v(b)−v(a)) equals u′(ξ)/v′(ξ) at some interior point, when the denominator and relevant derivatives permit the ratio. Applied to v=eˣ, its derivative is everywhere positive. In a two-variable limit with x,y→∞, every point between them also tends to infinity, giving a uniform tail argument. The equation f′+f=h is a stable first-order linear equation: integrating factor eˣ yields an exponentially weighted forcing integral. Vanishing forcing makes the solution vanish. Limits of functions do not in general control derivatives; rapidly oscillating terms can decay in amplitude while their derivatives remain large. A derivative tending to zero likewise does not force the function’s limit to be zero.",
+      "similar_questions": [
+        {
+          "prompt": "Differentiable f satisfies f′+2f→0. Prove f→0.",
+          "solution": "Writing h=f′+2f and fixing R, f(t)=e^{−2(t−R)}f(R)+∫ᴿᵗe^{−2(t−s)}h(s)ds. If |h|≤ε past R, the integral has magnitude at most ε/2. Taking limsup and then ε→0 proves f→0."
+        },
+        {
+          "prompt": "If f′+f→3, find the limit of f.",
+          "solution": "Set u=f−3. Then u′+u=f′+f−3→0. The stable integrating-factor argument gives u→0, so f→3. For example f=3+Ce^{−x} satisfies the equation exactly."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 68, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2021-june-q068.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q069",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 69,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be a real m×m matrix. I: Some nonzero b₁∈ℝᵐ makes Ax=b₁ insoluble. II: There are nonzero b₂,b₃∈ℝᵐ, not scalar multiples of each other, for which Ax=b₂ and Ax=b₃ are soluble. Which statements are true?",
+      "options": {
+        "A": "II is true whenever A is singular",
+        "B": "I is true whenever A is singular",
+        "C": "Both I and II can be true simultaneously",
+        "D": "If m=2, at least one of I and II is false"
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Translate I into a proper column space and II into a column-space dimension at least two.",
+        "For simultaneous truth choose a rank-two matrix in dimension three; for m=2 compare the two rank requirements."
+      ],
+      "solution": "I holds exactly when rank(A)<m: a proper column space omits some nonzero vector. II holds exactly when rank(A)≥2: it requires two independent vectors in the range. A is false, since the singular zero matrix has no nonzero vector in its range. B follows directly from the characterization of I. C is true, for A=diag(1,1,0) in dimension 3: e₃ is omitted, while e₁,e₂ are in the range and independent. For m=2, I requires rank≤1 while II requires rank≥2, so they cannot both hold; D is true. C is an existence claim across the allowed dimensions, whereas D addresses the stated special dimension. Exactly B,C,D.",
+      "theory": "A linear system Ax=b is solvable precisely for b in the range, or column space, of A. For a square m×m matrix, singularity is equivalent to its range being a proper subspace of ℝᵐ. Every proper subspace omits a nonzero vector, making some system inconsistent. The existence of two nonzero non-collinear range vectors is equivalent to rank at least two. These conditions are compatible when 2≤rank<m, which first occurs at m=3. In dimension two they are incompatible. A singular matrix can have ranks ranging from zero to m−1, so singularity alone never guarantees two independent range vectors. An existential option can be demonstrated by one carefully chosen dimension and matrix; a universal option must survive even the zero matrix.",
+      "similar_questions": [
+        {
+          "prompt": "Can a 4×4 matrix have both an inconsistent right-hand side and three independent solvable right-hand sides?",
+          "solution": "Yes: take diag(1,1,1,0). Its range is span{e₁,e₂,e₃}; these three right sides are solvable, while e₄ is not. Its rank is 3, strictly below 4."
+        },
+        {
+          "prompt": "A 3×3 matrix has rank one. Which of I and II above hold?",
+          "solution": "I holds because the range is a proper line in ℝ³. II fails because any two nonzero vectors on that line are scalar multiples. Thus an inconsistent right side exists but not two independent soluble ones."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 69, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2021-june-q069.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q070",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 70,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Multivariable Calculus",
+      "difficulty": "Moderate",
+      "prompt": "Let f:ℝ³→ℝ² be C¹ with f(0,0,0)=(0,0), and let A=Df(0,0,0). Put g(x,y,z)=xy+yz+zx+x+y+z and h=(f,g):ℝ³→ℝ³. For which listed A does h admit a differentiable inverse in some open neighbourhood of the origin?",
+      "options": {
+        "A": "[[1,2,1],[0,0,0]]",
+        "B": "[[2,2,2],[6,5,2]]",
+        "C": "[[0,0,−1],[0,1,0]]",
+        "D": "[[4,2,4],[0,3,2]]"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The derivative of g at the origin is the row (1,1,1). Stack it under the two rows of A.",
+        "The inverse-function theorem applies exactly when the resulting 3×3 derivative is invertible; necessity follows by differentiating the inverse identity."
+      ],
+      "solution": "Dh(0) is formed by appending (1,1,1) to A. For A its second row is zero, giving determinant zero. For B its first row is twice its last row, also giving determinant zero. For C the determinant of [[0,0,−1],[0,1,0],[1,1,1]] is 1. For D the determinant is 4(3−2)−2(0−2)+4(0−3)=−4. In C,D, h is C¹ and has invertible derivative, so the inverse-function theorem gives a local C¹ inverse. In A,B, a differentiable inverse would imply D(h⁻¹)(h(0))Dh(0)=I by the chain rule, impossible for a singular derivative. Hence exactly C and D.",
+      "theory": "The inverse-function theorem states that if F is C¹ on an open subset of ℝⁿ and DF(a) is invertible, then F restricts to a bijection between suitable open neighbourhoods of a and F(a), with C¹ inverse. Its inverse derivative is [DF(a)]⁻¹. Differentiable local invertibility also requires a nonsingular derivative by the chain rule, although mere continuous invertibility need not: x↦x³ has a continuous inverse but its inverse is not differentiable at zero. For a vector-valued map, derivative rows are the gradients of its coordinate functions. Terms quadratic in coordinates vanish from the derivative at the origin, leaving g’s linear terms here. Linear dependence of rows offers a quick singularity check before determinant expansion.",
+      "similar_questions": [
+        {
+          "prompt": "Does F(x,y)=(x+y,x−y+xy) have a differentiable local inverse at zero?",
+          "solution": "DF(0)=[[1,1],[1,−1]], whose determinant is −2. Since F is polynomial and hence C¹, the inverse-function theorem gives a differentiable inverse on suitable open neighbourhoods."
+        },
+        {
+          "prompt": "Does F(x,y)=(x³,y) have a differentiable local inverse at zero?",
+          "solution": "Its derivative there is diag(0,1), singular. It is globally bijective with inverse (u,v)↦(u^{1/3},v), but that inverse is not differentiable at u=0. A differentiable inverse is excluded by the chain rule."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 70, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2021-june-q070.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q071",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 71,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let X be a topological space and E⊆X. Which statements are correct?",
+      "options": {
+        "A": "E connected implies its closure Ē connected",
+        "B": "E connected implies its boundary ∂E connected",
+        "C": "E path connected implies Ē path connected",
+        "D": "E compact implies Ē compact"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Closure preserves connectedness. Compare the boundary of an interval and the closure of the topologist’s sine curve.",
+        "No Hausdorff assumption is supplied. For compactness of the closure, consider an infinite space whose nonempty open sets all contain one fixed point."
+      ],
+      "solution": "A holds: if Ē had a separation into two disjoint nonempty relatively open sets, density forces each to meet E, giving a separation of E. B fails for E=(0,1)⊆ℝ, whose boundary {0,1} is disconnected. C fails for E={(x,sin(1/x)):0<x≤1}; this graph is path connected but its closure includes the vertical segment at x=0 and is not path connected. To see the obstruction, a path leaving that segment for the graph would have a first transition time t₀ with x(t₀)=0 and arbitrarily small positive x-values immediately after. The intermediate-value theorem forces x along the path through sequences with sin(1/x)=1 and −1 arbitrarily near t₀; then the y-coordinate cannot be continuous at t₀. Hence the graph and the added segment cannot be joined by a path. D fails in a general topological space: let X be infinite with topology consisting of ∅ and all sets containing a fixed p. The compact singleton E={p} has closure X. The cover {{p,x}:x∈X\\{p}} has no finite subcover, so X is not compact. Thus only A is universal. With a Hausdorff assumption, D would also hold, but none is printed.",
+      "theory": "A set is connected if it cannot be separated into two disjoint nonempty relatively open subsets. The closure of a connected set is connected because every nonempty relatively open part of the closure meets the original set. Path connectedness requires continuous paths joining pairs of points and is stronger than connectedness. It need not survive closure: the topologist’s sine curve supplies a standard example. A boundary is closure minus interior and can be disconnected even for a connected interval. Compactness means every open cover has a finite subcover. In Hausdorff spaces compact sets are closed, so their closures equal themselves; in arbitrary topological spaces this need not hold. The problem’s lack of separation axioms therefore materially affects option D. Do not import Euclidean or metric facts into an unrestricted topological space.",
+      "similar_questions": [
+        {
+          "prompt": "For E=(0,1) in ℝ, decide connectedness and compactness of E, Ē, and ∂E.",
+          "solution": "E is connected but not compact. Its closure [0,1] is connected and compact by Heine–Borel. Its boundary {0,1} is compact but disconnected, being separated by the two singleton subsets in its subspace topology."
+        },
+        {
+          "prompt": "Show that the closure of a compact set in a Hausdorff space is compact.",
+          "solution": "In a Hausdorff space compact subsets are closed: separate a point outside the compact set from each point in it and use a finite subcover to obtain a disjoint neighbourhood. Therefore Ē=E, and compactness follows immediately."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 71, PDF page 12. No candidate response used as an answer key.",
+      "page": 12,
+      "image": "assets/questions/2021-june-q071.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q072",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 72,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "It is known that X=X₀∈M₂(ℤ) solves AX−XA=A for some A∈{[[1,1],[−1,−1]], [[−1,1],[1,−1]], [[1,−1],[−1,1]]}. Which listed determinants of X₀ are NOT possible?",
+      "options": {
+        "A": "det(X₀)=0",
+        "B": "det(X₀)=2",
+        "C": "det(X₀)=6",
+        "D": "det(X₀)=10"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The trace of a commutator is zero, eliminating the matrices with nonzero trace.",
+        "For the remaining A, write X=[[a,b],[c,d]] and derive c=1−b and d=a+1−2b. Express the determinant using a−b."
+      ],
+      "solution": "Trace(AX−XA)=0, so trace(A)=0 is necessary. The second and third listed matrices have traces −2 and 2; only A=[[1,1],[−1,−1]] is possible. With X=[[a,b],[c,d]], the matrix equation gives b+c=1 and d−a+2b=1; the other two entries give the same relations. Therefore c=1−b,d=a+1−2b and det X=a(a+1−2b)−b(1−b)=(a−b)(a−b+1). Thus determinants are t(t+1) with t∈ℤ. Values 0,2,6 occur at t=0,1,2, for example X=[[t,0],[1,t+1]]. Value 10 would require (2t+1)²=41, impossible for an integer. Exactly D is not possible.",
+      "theory": "The trace identity tr(AB)=tr(BA) implies every commutator AB−BA has trace zero. Consequently a matrix equation asserting a commutator equals A imposes tr(A)=0 before any entries are solved. For 2×2 integer matrices, writing the unknown entries often reduces determinants to a quadratic integer expression. Completing the square converts a realizability question into a perfect-square condition: t(t+1)=d if and only if 1+4d is an odd square, with t integer. Necessary restrictions must be accompanied by examples for values claimed possible. The equation here has free integer parameters a,b, but its determinant depends only on their difference. The displayed set of three A matrices should be retained exactly; the trace condition legitimately eliminates two rather than repairing their entries.",
+      "similar_questions": [
+        {
+          "prompt": "Which of 12 and 20 can be written as t(t+1) for an integer t?",
+          "solution": "Both: 12=3·4 and 20=4·5. The discriminants are 49 and 81, odd squares. Matrices [[3,0],[1,4]] and [[4,0],[1,5]] solve the same commutator equation with A=[[1,1],[−1,−1]]."
+        },
+        {
+          "prompt": "Can AX−XA=I₂ hold for real 2×2 matrices?",
+          "solution": "No. Taking traces gives 0=tr(I₂)=2, a contradiction. This obstruction is independent of whether A or X is invertible and avoids solving four entry equations."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 72, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2021-june-q072.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q073",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 73,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let M∈Mₙ(ℝ), M≠0 and M²=0. Which statements are true?",
+      "options": {
+        "A": "If n is even, dim Col(M)>dim Null(M)",
+        "B": "If n is even, dim Col(M)≤dim Null(M)",
+        "C": "If n is odd, dim Col(M)<dim Null(M)",
+        "D": "If n is odd, dim Col(M)>dim Null(M)"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "M²=0 means every vector in the image is killed by M.",
+        "Combine Col(M)⊆Null(M) with rank–nullity; for odd n equality of the two dimensions is impossible."
+      ],
+      "solution": "If v=Mx belongs to Col(M), then Mv=M²x=0, so Col(M)⊆Null(M). Put r=rank M. This gives r≤dim Null(M)=n−r, or 2r≤n. Therefore B is true for even n and A false. For odd n, r is an integer so r≤(n−1)/2<n−r; C is true and D false. The nonzero assumption merely ensures r≥1 and does not reverse the inclusion. Exactly B and C. Equality is possible when n is even: a direct sum of blocks [[0,1],[0,0]] has rank and nullity both n/2.",
+      "theory": "A square-zero operator satisfies M²=0 and is a nilpotent operator of index at most two. Its image lies in its kernel, because applying M to an image vector applies M twice to the original vector. Rank–nullity states dim(image)+dim(kernel)=n, so inclusion forces rank≤n/2. This argument works over any field and does not require a canonical form. In Jordan form every block has size at most two; each size-two block contributes one to rank and one to nullity, and each size-one zero block contributes only to nullity. Thus even-dimensional equality is possible, while odd dimensions force strict inequality. The condition M≠0 excludes the zero matrix but cannot eliminate one-dimensional zero Jordan blocks or force maximal rank.",
+      "similar_questions": [
+        {
+          "prompt": "Construct a nonzero square-zero 3×3 matrix and find its rank and nullity.",
+          "solution": "Take M=[[0,1,0],[0,0,0],[0,0,0]]. It maps e₂ to e₁ and kills e₁,e₃, so M²=0. Its image has dimension one and kernel span{e₁,e₃} has dimension two."
+        },
+        {
+          "prompt": "What ranks can a nonzero square-zero 6×6 matrix have?",
+          "solution": "The bound is 1≤r≤3. Each is realized by r copies of [[0,1],[0,0]] together with 6−2r zero 1×1 blocks. The rank is r, and nullity 6−r; rank three gives equality."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 73, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2021-june-q073.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q074",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 74,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "In which cases does there exist a continuous onto map f:X→Y (with the usual subspace topologies)?",
+      "options": {
+        "A": "X=(0,1), Y=(0,1]",
+        "B": "X=[0,1], Y=(0,1]",
+        "C": "X=(0,1), Y=ℝ",
+        "D": "X=(0,2), Y={0,1}"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Continuous images preserve compactness and connectedness.",
+        "Construct A with a positive quadratic attaining 1 in the interior, and C with a tangent map."
+      ],
+      "solution": "A is possible: f(x)=4x(1−x) on (0,1) has image (0,1], attaining 1 at x=1/2 and tending to 0 at the omitted endpoints. B is impossible: [0,1] is compact, so its continuous image would be compact; (0,1] is not compact. C is possible: f(x)=tan(π(x−1/2)) is a continuous bijection from (0,1) onto ℝ. D is impossible: (0,2) is connected and its continuous image is connected, but {0,1} with its subspace topology is disconnected. Thus exactly A and C.",
+      "theory": "Continuous maps preserve compactness and connectedness of their domains. These invariants are convenient obstructions to surjectivity: an onto map would force the entire target to possess the relevant property. Real intervals are connected, while a two-point subset of ℝ is disconnected. Closed bounded intervals are compact, while half-open intervals need not be. Continuous images of noncompact domains may be compact or noncompact, so noncompactness alone is not an obstruction. Explicit formulas settle existence claims: a quadratic can attain an interior maximum while approaching an omitted minimum, and a tangent function maps a finite open interval onto the full line. Always verify both continuity on the actual domain and the full range, including whether target endpoints are attained.",
+      "similar_questions": [
+        {
+          "prompt": "Does a continuous surjection [0,1]→ℝ exist?",
+          "solution": "No. A continuous image of the compact domain would be compact, and compact real sets are bounded. The entire real line is unbounded, so it cannot be that image."
+        },
+        {
+          "prompt": "Give a continuous surjection (−1,1)→[0,1].",
+          "solution": "Use f(x)=(1+sin(2πx))/2. It remains in [0,1], attains 0 at x=−1/4 and 1 at x=1/4, and by the intermediate-value theorem attains every value between. Hence it is onto despite the open domain."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 74, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2021-june-q074.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q075",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 75,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f:ℝ²→ℝ be bounded, with gₜ(y)=f(t,y) and hₜ(x)=f(x,t) nondecreasing for every t∈ℝ. Which statements necessarily hold?",
+      "options": {
+        "A": "k(x)=f(x,x) is nondecreasing",
+        "B": "The number of discontinuities of f is at most countably infinite",
+        "C": "lim_{(x,y)→(+∞,+∞)}f(x,y) exists",
+        "D": "lim_{(x,y)→(+∞,−∞)}f(x,y) exists"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Coordinatewise monotonicity lets you compare diagonal points by changing one coordinate at a time.",
+        "For the positive-positive limit use the supremum. For counterexamples, use a step depending on x and a bounded increasing function of x+y."
+      ],
+      "solution": "For a<b, f(a,a)≤f(b,a)≤f(b,b), so A holds. B fails for f(x,y)=1 if x≥0 and 0 if x<0: it is bounded and nondecreasing in each coordinate but discontinuous at every point of the line x=0. For C let L=sup f<∞. Given ε>0 choose (a,b) with f(a,b)>L−ε. Whenever x≥a,y≥b, monotonicity gives L−ε<f(a,b)≤f(x,y)≤L, proving the joint limit L. D fails for f(x,y)=arctan(x+y). Along (t,−t) it equals 0; along (t,−t+1) it equals π/4, though both have x→∞ and y→−∞. Exactly A,C.",
+      "theory": "Coordinatewise nondecreasing means increasing either coordinate while fixing the other cannot decrease the function. This defines monotonicity for the product partial order and implies monotonicity along the diagonal. A bounded nondecreasing real function has a limit at positive infinity equal to its supremum. The same directed-order argument extends to a joint positive-positive limit in several coordinates. A mixed direction, with one coordinate increasing and another decreasing, supplies no such order comparison and can make different paths compete. The theorem that a one-variable monotone function has only countably many discontinuities does not extend to a count of discontinuity points in ℝ²: a single jump in one coordinate creates a whole discontinuity line. Joint limits must agree along every path satisfying the prescribed coordinate behaviour.",
+      "similar_questions": [
+        {
+          "prompt": "A bounded coordinatewise nondecreasing f:ℝ³→ℝ is given. Find its joint limit as all coordinates tend to +∞.",
+          "solution": "Let L=sup f. Choose a point a with f(a)>L−ε. At every point whose three coordinates exceed those of a, monotonicity gives L−ε<f≤L. Thus the joint limit exists and equals L."
+        },
+        {
+          "prompt": "For f(x,y)=tanh(x+y), compare limits along (t,−t) and (t,−t+2).",
+          "solution": "The first path gives tanh(0)=0 and the second gives tanh(2)>0. Both approach the mixed direction (+∞,−∞). Therefore no joint mixed-direction limit exists, although f is bounded and increasing in each coordinate."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 75, PDF page 13. No candidate response used as an answer key.",
+      "page": 13,
+      "image": "assets/questions/2021-june-q075.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q076",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 76,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let Y be a nonempty bounded open subset of ℝⁿ and let Ȳ be its closure. Let {Uⱼ}_{j≥1} be open sets of ℝⁿ covering Ȳ. Which statements are true?",
+      "options": {
+        "A": "There are finitely many positive integers j₁,…,j_N such that Y⊆⋃_{k=1}^N U_{j_k}",
+        "B": "There is N≥1 such that Y⊆⋃_{j=1}^N Uⱼ",
+        "C": "For every subsequence j₁,j₂,…, Y⊆⋃_{k=1}∞U_{j_k}",
+        "D": "There is a subsequence j₁,j₂,… such that Y=⋃_{k=1}∞U_{j_k}"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "The bounded closed set Ȳ is compact. A finite subcover has a largest index.",
+        "The sets may extend outside Y, and an arbitrary subsequence may omit the only useful covering set."
+      ],
+      "solution": "Ȳ is closed and bounded, hence compact by Heine–Borel. There are finitely many indices j₁,…,j_N covering Ȳ and thus Y, proving A. Let M=max{j₁,…,j_N}; the union of U₁,…,U_M contains that subcover, proving B. C fails with Y=(0,1), U₁=(−1,2), and Uⱼ=(2,3) for j≥2: the subsequence 2,3,… does not cover Y. D fails when every Uⱼ=(−1,2) for this same Y: every nonempty subsequence union equals (−1,2), never Y. Thus exactly A and B; containment in a covering union must not be replaced by equality.",
+      "theory": "The Heine–Borel theorem says that a subset of finite-dimensional Euclidean space is compact exactly when it is closed and bounded. The closure of a bounded set remains bounded, so the given cover of Ȳ admits a finite subcover even though Y itself is open and usually noncompact. In a countably indexed cover, a finite chosen collection is contained in a finite initial segment by taking its maximum index. These are different statements but both follow here. Deleting arbitrary members of a cover need not retain coverage. Moreover, a cover supplies containment, not equality: its members may contain points outside the set, and taking their union cannot remove those points. Boundedness is essential; covers of unbounded closed sets need not have finite subcovers.",
+      "similar_questions": [
+        {
+          "prompt": "Open sets Uₙ=(−n,n) cover ℝ. Is some finite initial segment a cover?",
+          "solution": "No. The union up to N equals (−N,N), which omits points of larger magnitude. The domain ℝ is closed but unbounded and is not compact."
+        },
+        {
+          "prompt": "An open cover {Uₙ} of [0,1] has a subcover U₃,U₇,U₁₁. Show an initial segment covers it.",
+          "solution": "Every member of that finite subcover occurs among U₁,…,U₁₁. Therefore [0,1]⊆⋃_{n=1}^{11}Uₙ, even if many of these other sets are unnecessary or extend beyond [0,1]."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 76, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2021-june-q076.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q077",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 77,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let (aₙ),(bₙ) be real sequences and E,F⊆ℝ. Define E+F={a+b:a∈E,b∈F}. Assume the right side is well defined in each statement. Which statements are true? (The source prints lim sup and lim inf for the unindexed sets E and F.)",
+      "options": {
+        "A": "limsup_{n→∞}(aₙ+bₙ)≤limsup_{n→∞}aₙ+limsup_{n→∞}bₙ",
+        "B": "lim sup(E+F)≤lim sup E+lim sup F",
+        "C": "liminf_{n→∞}(aₙ+bₙ)≤liminf_{n→∞}aₙ+liminf_{n→∞}bₙ",
+        "D": "lim inf(E+F)=lim inf E+lim sup F"
+      },
+      "correct_options": [],
+      "hints": [
+        "For sequences, compare tail suprema and tail infima.",
+        "Examine the notation in B and D: a limsup or liminf ordinarily needs an indexed family or an explicitly defined limiting operation."
+      ],
+      "solution": "The printed question does not define lim sup E or lim inf E for unindexed subsets of ℝ, so B and D lack a specified meaning and the complete answer cannot be assigned without a convention or correction. A is a standard valid sequence inequality when its right side is defined: tail suprema satisfy sup_{n≥N}(aₙ+bₙ)≤sup_{n≥N}aₙ+sup_{n≥N}bₙ, and passing to limits proves it. C is false: aₙ=(−1)ⁿ,bₙ=−(−1)ⁿ give left side 0 and right side −2. If the set expressions were intended as ordinary suprema/infima, B would be true since sup(E+F)=sup E+sup F, and D would be false in general. Under that explicit correction, the intended correct labels are A,B. The source wording is preserved and no label is scored.",
+      "theory": "For a sequence, limsup aₙ is the limit of its decreasing tail suprema and liminf aₙ the limit of its increasing tail infima. Sum inequalities point in opposite directions: limsup(aₙ+bₙ)≤limsup aₙ+limsup bₙ, while liminf(aₙ+bₙ)≥liminf aₙ+liminf bₙ, subject to avoiding indeterminate extended-real arithmetic. For nonempty sets E,F with appropriate finite or compatible extended bounds, ordinary extrema obey sup(E+F)=sup E+sup F and inf(E+F)=inf E+inf F. The lower bound involves two infima, not an infimum and a supremum. A set by itself has no sequence index or approach variable defining a limsup; alternative accumulation-point conventions would need explicit definition and are not interchangeable with a supremum.",
+      "similar_questions": [
+        {
+          "prompt": "For aₙ=(−1)ⁿ and bₙ=−(−1)ⁿ, compute both sum bounds.",
+          "solution": "The sum is identically zero, so its limsup and liminf are 0. Each component has limsup 1 and liminf −1. Thus 0≤2 verifies the limsup bound and 0≥−2 verifies the liminf bound, both strictly."
+        },
+        {
+          "prompt": "For E=(0,2), F=(1,3), find the sum set and its ordinary extrema.",
+          "solution": "Every sum lies in (1,5), and every point of (1,5) can be represented by a point in each interval, so E+F=(1,5). Its supremum is 5=2+3 and infimum 1=0+1. The mixed expression inf E+sup F=3 is not its infimum."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "The printed choices B,D use lim sup/lim inf of unindexed subsets without defining that operation. Conditional correction to ordinary sup/inf yields A,B; no silent repair or scored labels.",
+      "answer_source": "Independent mathematical derivation; question 77, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2021-june-q077.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q078",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 78,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let A be an n×n matrix. A is called diagonalizable when PAP⁻¹ is diagonal for some nonsingular P. Which conditions imply diagonalizability? Preserve the printed wording “integer k”.",
+      "options": {
+        "A": "There exists an integer k such that Aᵏ=I",
+        "B": "There exists an integer k such that Aᵏ is nilpotent",
+        "C": "A² is diagonalizable",
+        "D": "A has n linearly independent eigenvectors"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "A basis of eigenvectors gives a diagonal matrix. Test B,C with a nonzero 2×2 matrix whose square is zero.",
+        "The printed integer k is not restricted to positive integers: k=0 makes the first condition hold for every matrix."
+      ],
+      "solution": "D holds over the underlying field: a matrix S whose columns are n independent eigenvectors is invertible and S⁻¹AS is diagonal; take P=S⁻¹. A does not imply diagonalizability under the exact printed wording: k=0 gives A⁰=I for every A, including J=[[1,1],[0,1]], which is not diagonalizable because its eigenvalue 1 has a one-dimensional eigenspace. B and C fail for N=[[0,1],[0,0]]: N is nonzero nilpotent and N²=0 is diagonal, but N itself cannot be diagonalizable, since all eigenvalues are zero and a diagonalizable such matrix would be zero. Thus the literal answer is D. If k were explicitly positive and the field complex, A would also be sufficient by the simple roots of tᵏ−1; that additional wording is not printed.",
+      "theory": "A matrix is diagonalizable over a specified field exactly when its vector space has a basis of eigenvectors over that field. Equivalently, its minimal polynomial splits into distinct linear factors. A nonzero nilpotent matrix cannot be diagonalizable because its only eigenvalue is zero. A power can erase its nilpotent part, so diagonalizability of A² does not generally transfer to A. For a positive integer k over ℂ, Aᵏ=I forces the minimal polynomial to divide tᵏ−1, whose roots are distinct in characteristic zero, hence implies diagonalizability. Over ℝ it may fail because nonreal roots prevent splitting. Crucially, the statement here says integer rather than positive integer: exponent zero is allowed and creates no restriction. Definitions and field hypotheses must be kept separate from a commonly intended theorem.",
+      "similar_questions": [
+        {
+          "prompt": "Over ℂ, prove that A³=I implies diagonalizability.",
+          "solution": "The minimal polynomial divides t³−1=(t−1)(t−ω)(t−ω²), where ω=e^{2πi/3}. These three roots are distinct, so the minimal polynomial has no repeated factor. The matrix therefore has a complex eigenvector basis and is diagonalizable."
+        },
+        {
+          "prompt": "Over ℝ, is [[0,−1],[1,0]] diagonalizable despite A⁴=I?",
+          "solution": "No over ℝ: its characteristic polynomial t²+1 has no real roots, so there are no nonzero real eigenvectors. Over ℂ its eigenvalues ±i are distinct and it is diagonalizable. This illustrates why the field matters when k is positive."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "The source explicitly says integer k, permitting k=0; the literal answer is D. A positive-exponent complex-field interpretation would instead add A. No wording has been silently changed.",
+      "answer_source": "Independent mathematical derivation; question 78, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2021-june-q078.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q079",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 79,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let f be entire and satisfy |zf(z)−1+eᶻ|≤1+|z| for every z∈ℂ. Which statements hold?",
+      "options": {
+        "A": "f′(0)=−1",
+        "B": "f′(0)=−1/2",
+        "C": "f″(0)=−1/3",
+        "D": "f″(0)=−1/4"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Set H(z)=zf(z)−1+eᶻ. A linearly growing entire function is a polynomial of degree at most one.",
+        "Use H(0)=0, then expand (1−eᶻ)/z near zero."
+      ],
+      "solution": "H is entire and on |z|=R its modulus is at most 1+R. Cauchy’s derivative estimate gives |H^{(m)}(0)|≤m!(1+R)/Rᵐ→0 for every m≥2, so H(z)=az+b. Since H(0)=0, b=0. Thus f(z)=a+(1−eᶻ)/z, with the removable singularity filled at zero. The exponential series gives f(z)=a−1−z/2−z²/6−z³/24−⋯. Hence f′(0)=−1/2 and f″(0)=2!(−1/6)=−1/3. A,D are false, and B,C true. The growth bound also implies |a|≤1 but this does not change the derivatives.",
+      "theory": "Cauchy’s derivative estimate bounds an analytic function’s mth derivative at the centre of a disk by m! times its boundary maximum divided by the radius to the mth power. If an entire function has growth O(|z|ᵈ), applying these estimates on disks with radii tending to infinity forces every derivative of order greater than d to vanish. It is therefore a polynomial of degree at most d, a generalization of Liouville’s theorem. Introducing an auxiliary entire function can reveal this growth even when the original function contains an exponential. Once a quotient such as (1−eᶻ)/z has a vanishing numerator at zero, its singularity is removable. Taylor coefficients determine derivatives with factorial factors: the z² coefficient is f″(0)/2!, not f″(0).",
+      "similar_questions": [
+        {
+          "prompt": "An entire H satisfies |H(z)|≤5+2|z| and H(0)=0. What form does H have?",
+          "solution": "For m≥2, Cauchy’s estimate is |H^{(m)}(0)|≤m!(5+2R)/Rᵐ, tending to zero. All higher coefficients vanish, so H(z)=az. The large-radius inequality gives |a|≤2."
+        },
+        {
+          "prompt": "Find the first two derivatives at zero of the entire extension F(z)=(eᶻ−1)/z.",
+          "solution": "Its Taylor series is 1+z/2+z²/6+z³/24+⋯. Therefore F′(0)=1/2 and F″(0)=2!/6=1/3. The extension value F(0)=1 removes the apparent singularity."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 79, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2021-june-q079.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q080",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 80,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "Let p be prime and Nₚ the number of pairs of positive integers (x,y) satisfying 1/x+1/y=1/p⁴. Which listed values of Nₚ are possible?",
+      "options": {
+        "A": "0",
+        "B": "4",
+        "C": "5",
+        "D": "9"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "Complete the product by rearranging xy=p⁴(x+y).",
+        "Both x and y exceed p⁴. Count positive divisors of p⁸, assigning each to x−p⁴."
+      ],
+      "solution": "Each term 1/x and 1/y is strictly smaller than their sum 1/p⁴, so x,y>p⁴. Multiplying and completing the product gives (x−p⁴)(y−p⁴)=p⁸. The positive divisors of p⁸ are pʲ for j=0,…,8. Each gives exactly one ordered pair x=p⁴+pʲ, y=p⁴+p^{8−j}. Therefore Nₚ=9 for every prime p, and only D is possible. The central pair x=y=2p⁴ occurs once. If one deliberately counted unordered pairs, the number would be five, but the source specifies pairs (x,y), which are ordered.",
+      "theory": "Reciprocal Diophantine equations often become divisor-counting problems after completing a product. For positive integers x,y satisfying 1/x+1/y=1/n, rearrangement gives (x−n)(y−n)=n². Positivity of each reciprocal forces x,y>n, so the new factors are positive divisors of n². The number of ordered pairs is consequently τ(n²), the divisor-counting function. If n=∏pᵢ^{aᵢ}, then τ(n²)=∏(2aᵢ+1). Swapping the two factors swaps x and y, so unordered pairs are counted differently; n² being a square supplies one symmetric pair. The primality hypothesis reduces the divisor list to a single sequence of powers. Explicit correspondence in both directions ensures that no solutions are lost or introduced by the algebra.",
+      "similar_questions": [
+        {
+          "prompt": "Count ordered positive integer solutions of 1/x+1/y=1/6.",
+          "solution": "The equation is (x−6)(y−6)=36. Since 36=2²3², it has (2+1)(2+1)=9 positive divisors, each specifying one ordered factor pair and hence one solution. There are nine solutions."
+        },
+        {
+          "prompt": "Count unordered solutions of 1/x+1/y=1/p² for prime p.",
+          "solution": "The completed product is (x−p²)(y−p²)=p⁴, giving five ordered solutions. The pair from equal factors p² is symmetric; the other four occur in two swapped pairs. Thus there are (5+1)/2=3 unordered solutions."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 80, PDF page 14. No candidate response used as an answer key.",
+      "page": 14,
+      "image": "assets/questions/2021-june-q080.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q081",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 81,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let 𝕋={z∈ℂ:|z|=1} and 𝔻={z∈ℂ:|z|<1}. Let R be the set of z₀∈𝕋 for which some holomorphic function f on an open neighbourhood U_{z₀} satisfies f(z)=Σ_{n=0}∞z^{4n} on U_{z₀}∩𝔻. Then R contains:",
+      "options": {
+        "A": "All points of 𝕋",
+        "B": "Infinitely many points of 𝕋",
+        "C": "All points of 𝕋 except a finite set",
+        "D": "No points of 𝕋"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The printed exponent is 4n, so sum the geometric series in z⁴.",
+        "The resulting rational function extends across every circle point except its poles, the fourth roots of unity."
+      ],
+      "solution": "For |z|<1, Σ_{n=0}∞z^{4n}=1/(1−z⁴). If z₀⁴≠1, a sufficiently small disk about z₀ avoids all zeros of the denominator, and that rational function is a holomorphic continuation. At each ζ with ζ⁴=1, the radial values at z=rζ are 1/(1−r⁴), tending to infinity as r↑1. A holomorphic function in a neighbourhood of ζ would be locally bounded, so continuation there is impossible. Thus R=𝕋\\{1,−1,i,−i}. It contains infinitely many points and every point except a finite set, proving B,C; it neither contains all points nor is empty, so A,D are false.",
+      "theory": "A power series can converge only in its disk of convergence while its sum extends holomorphically beyond portions of the boundary. For a geometric series, the rational sum gives such a continuation explicitly, with obstruction only at zeros of the denominator. A holomorphic function is continuous and therefore bounded on sufficiently small compact neighbourhoods of each point; radial blow-up prevents continuation across a pole. Equality on the disk intersection fixes the continuation there by the identity principle, so changing the function outside does not remove the obstruction. Notational accuracy is especially important: z^{4n} produces a geometric series, whereas z^{4ⁿ} is a lacunary series with a different boundary behaviour. The exact source here has the exponent 4n, as confirmed by enlarged visual inspection.",
+      "similar_questions": [
+        {
+          "prompt": "Across which unit-circle points can Σ_{n=0}∞z^{3n} be continued holomorphically?",
+          "solution": "Its sum is 1/(1−z³). It continues across every point except the three cube roots of unity. At any such root ζ, the radial value is 1/(1−r³), unbounded as r↑1, ruling out holomorphic continuation."
+        },
+        {
+          "prompt": "Can Σ_{n=0}∞zⁿ be continued across z=−1 and z=1?",
+          "solution": "The sum is 1/(1−z). It is holomorphic on a neighbourhood of −1, so continuation exists there even though the boundary series itself does not converge. It has a pole at 1, and radial divergence prevents continuation there."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 81, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2021-june-q081.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q082",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 82,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "A positive integer coprime to 17 is a primitive root modulo 17 if nᵏ≢1 (mod 17) for 1≤k<16. Let a,b be distinct integers between 1 and 16. Which statements are true?",
+      "options": {
+        "A": "2 is a primitive root modulo 17",
+        "B": "If a is primitive modulo 17, then a² is not necessarily primitive modulo 17",
+        "C": "If a,b are primitive modulo 17, then ab is primitive modulo 17",
+        "D": "The product of the primitive roots modulo 17 between 1 and 16 is congruent to 1 modulo 17"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "The nonzero residues form a cyclic group of order 16. A power gʳ is primitive exactly when gcd(r,16)=1.",
+        "Primitive exponents are the eight odd numbers 1,3,…,15. Square a primitive root and sum these exponents for the product."
+      ],
+      "solution": "A is false: 2⁴≡−1 and 2⁸≡1 modulo 17, so its order is 8, not 16. If a has order 16, a² has order 16/gcd(16,2)=8; it is never primitive. Thus the weaker assertion “not necessarily” in B is true. Choose a generator g of the nonzero residues. Primitive roots are gʳ for r=1,3,…,15. The product of two primitive roots has even exponent and cannot have order 16, so C is false. The product of all eight primitive roots is g^{1+3+⋯+15}=g⁶⁴=(g¹⁶)⁴≡1, proving D. Exactly B,D.",
+      "theory": "The multiplicative group of nonzero residues modulo a prime p is cyclic of order p−1. A primitive root is a generator, meaning its multiplicative order is exactly p−1. If g has order N, then gᵏ has order N/gcd(N,k); hence the primitive roots are precisely gᵏ with k coprime to N, and there are φ(N) of them. When N is a power of two, these exponents are odd. Squaring a generator halves its order, and multiplying two generators gives an even exponent, losing generator status. The product of all primitive roots can be computed by summing their exponents modulo N. “Not necessarily primitive” is satisfied by proving even a single failure; here the stronger assertion holds that every square fails.",
+      "similar_questions": [
+        {
+          "prompt": "List primitive roots modulo 5 and compute their product.",
+          "solution": "The group has order 4; 2 is a generator. Primitive exponents 1 and 3 give residues 2 and 2³≡3. Their product 6≡1 modulo 5. Each square is 4, whose order is only 2."
+        },
+        {
+          "prompt": "If g has order 12, determine the orders of g², g⁵, and g⁸.",
+          "solution": "Use 12/gcd(12,k). The orders are 6,12,3 respectively. Thus g⁵ is a generator, while g² and g⁸ are not. The exponents coprime to 12 are 1,5,7,11."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 82, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2021-june-q082.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q083",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 83,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let f=a₀+a₁X+⋯+aₙXⁿ with aᵢ∈ℤ. Let p be prime such that p divides aᵢ for all 1<i<n, and p² does not divide aₙ. Which statements are true? Preserve the printed index range and leading coefficient condition.",
+      "options": {
+        "A": "f is always irreducible",
+        "B": "f is always reducible",
+        "C": "f can sometimes be irreducible and sometimes reducible",
+        "D": "f can have degree 1"
+      },
+      "correct_options": [
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Compare the printed conditions carefully with Eisenstein’s criterion: the constant coefficient and leading coefficient requirements differ.",
+        "Use degree-two examples with n=2, where the stated internal index range is empty, and a nonzero linear example."
+      ],
+      "solution": "The printed hypotheses do not imply Eisenstein’s criterion. For n=2 there is no integer i with 1<i<2, so the divisibility condition is vacuous. With p=2, f=X²+X+1 satisfies p²∤a₂=1 and is irreducible over ℚ (negative discriminant −3, hence no rational root). The polynomial X²−1 satisfies the same stated hypotheses but factors (X−1)(X+1), so neither A nor B is universal and C is true. Degree one is possible: f=1+2X with p=2 has no internal index requirement and 4∤2, so D is true. These examples are primitive integer polynomials, avoiding any distinction between irreducibility over ℚ and primitive irreducibility over ℤ. Exactly C,D.",
+      "theory": "Eisenstein’s criterion for a degree-n integer polynomial requires a prime p dividing every coefficient except the leading one, not dividing the leading coefficient, and with p² not dividing the constant coefficient. Under those precise hypotheses the polynomial is irreducible over ℚ. The source imposes different conditions, so that theorem cannot be applied by silently exchanging coefficients or changing index inequalities. A universal irreducibility or reducibility claim is refuted by one admissible counterexample. For quadratics over ℚ, a rational root is equivalent to reducibility; a negative real discriminant precludes such a root. Gauss’s lemma connects irreducibility over ℚ to that of primitive polynomials over ℤ. Empty index ranges impose no restriction, a fact especially useful when n is one or two.",
+      "similar_questions": [
+        {
+          "prompt": "Apply Eisenstein to X³+6X²+6X+12.",
+          "solution": "With p=3, the three lower coefficients 6,6,12 are divisible by 3, the leading coefficient 1 is not, and 9 does not divide 12. Eisenstein therefore proves irreducibility over ℚ."
+        },
+        {
+          "prompt": "Does the condition “2 divides the middle coefficients and 4 does not divide the leading coefficient” force irreducibility?",
+          "solution": "No. The monic polynomial X²−1 has middle coefficient 0, divisible by 2, and leading coefficient 1, not divisible by 4, but factors as (X−1)(X+1). The constant coefficient hypothesis of Eisenstein is missing."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Preserves the source conditions 1<i<n and p²∤aₙ; these are not the usual Eisenstein hypotheses.",
+      "answer_source": "Independent mathematical derivation; question 83, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2021-june-q083.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q084",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 84,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Which statements are true for subsets of ℝ² with the usual topology?",
+      "options": {
+        "A": "A is connected if and only if its closure Ā is connected",
+        "B": "The intersection of two connected subsets is connected",
+        "C": "The union of two compact subsets is compact",
+        "D": "There are exactly two continuous functions from ℚ² to {(0,0),(1,1)}"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Closure preserves connectedness in one direction, but a dense disconnected subset can have connected closure.",
+        "Use upper and lower semicircles for intersection, and an irrational coordinate threshold to build a nonconstant continuous function on ℚ²."
+      ],
+      "solution": "A is false: ℚ×{0} is disconnected (split at an irrational x-coordinate), but its closure ℝ×{0} is connected. B is false: the upper and lower unit semicircles are each path connected, but their intersection is {(−1,0),(1,0)}, disconnected. C is true: restrict any open cover of K₁∪K₂ to each compact Kᵢ, choose finite subcovers and combine them. D is false: besides the two constant functions, define f(q,r)=(0,0) for q<√2 and (1,1) for q>√2. The two inverse images are open in ℚ² and cover it because √2 is irrational, so f is continuous. Different irrational thresholds yield infinitely many such maps. Only C is true.",
+      "theory": "Connectedness is preserved by closure, but the converse fails: taking a closure can fill gaps in a disconnected dense subset. Rational points on a line are disconnected, while the whole line is connected. Intersections of connected sets need not be connected because they can retain separated common points while removing connecting arcs. Finite unions of compact sets are compact by combining finite subcovers; in ℝⁿ this also follows from being closed and bounded. A map into a discrete two-point space is continuous precisely when each fibre is open, hence both fibres are also closed. Although ℚ² is dense in ℝ², it is not connected: irrational coordinate thresholds give nontrivial clopen partitions. The assertion that a map to two points must be constant requires a connected domain.",
+      "similar_questions": [
+        {
+          "prompt": "Show that infinitely many continuous maps ℚ→{0,1} exist.",
+          "solution": "For each irrational α, set fα(q)=0 for q<α and 1 for q>α. Both fibres are open in ℚ and partition it, proving continuity. For distinct irrational α<β choose a rational q between them; the corresponding functions have different values at q."
+        },
+        {
+          "prompt": "Can the union of two disjoint compact sets be compact but disconnected?",
+          "solution": "Yes. In ℝ take K₁=[0,1],K₂=[2,3]. Each is compact and their finite union is compact. The gap separates the union into two nonempty relatively open pieces, so it is disconnected."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 84, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2021-june-q084.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q085",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 85,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For positive integers m,n define f(z)=(sin z)ᵐ/(1−cos z)ⁿ on 0<|z|<1. Which statements about z=0 are true?",
+      "options": {
+        "A": "It is a removable singularity if m≥2n",
+        "B": "It is a pole if m<2n",
+        "C": "It is a pole if m≥2n",
+        "D": "It is an essential singularity for some m,n"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "The zero of sin z at zero has order one; the zero of 1−cos z has order two.",
+        "Factor the quotient as z^{m−2n} times a holomorphic factor that is nonzero at zero."
+      ],
+      "solution": "Near zero, sin z=z u(z), where u is holomorphic with u(0)=1, and 1−cos z=z²v(z), with v holomorphic and v(0)=1/2. Hence f(z)=z^{m−2n}u(z)ᵐ/v(z)ⁿ. The final factor is holomorphic and nonzero near zero, with value 2ⁿ. If m≥2n the expression extends holomorphically: its value is 2ⁿ when m=2n and 0 when m>2n. If m<2n it has a pole of exact order 2n−m. Thus A,B are true; C is false, and no essential singularity occurs, refuting D.",
+      "theory": "The order of a zero of a holomorphic function is the smallest positive power with nonzero coefficient in its local Taylor expansion. A function with a zero of order r can be written zʳ times a holomorphic nonvanishing factor near zero. For a quotient of holomorphic functions, subtracting denominator zero order from numerator zero order classifies the isolated singularity. A nonnegative result gives a removable singularity (possibly a zero after extension), and a negative result gives a pole of the opposite order. Such a quotient with finite zero orders cannot produce an essential singularity. Taylor expansions sin z=z−z³/6+⋯ and 1−cos z=z²/2−z⁴/24+⋯ reveal the crucial differing orders. Cancellation is governed by orders, not merely by both numerator and denominator vanishing.",
+      "similar_questions": [
+        {
+          "prompt": "Classify (sin z)³/(1−cos z)² at zero.",
+          "solution": "The numerator zero order is 3 and denominator order 4, giving a pole of order one. In fact the leading term is z³/(z⁴/4)=4/z, so the residue is 4."
+        },
+        {
+          "prompt": "Extend (sin z)⁴/(1−cos z)² across zero.",
+          "solution": "Both numerator and denominator have zero order four. The quotient has a removable singularity, with limit 1/(1/2)²=4. Defining its value at zero to be 4 gives the holomorphic extension."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 85, PDF page 15. No candidate response used as an answer key.",
+      "page": 15,
+      "image": "assets/questions/2021-june-q085.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q086",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 86,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let A={1,1/2,1/3,…,1/n,…:n∈ℕ} and B=A∪{0}, each with the subspace topology from ℝ. Which statements are true?",
+      "options": {
+        "A": "A is closed in ℝ",
+        "B": "B is closed in ℝ",
+        "C": "A is homeomorphic to ℤ with its subspace topology from ℝ",
+        "D": "B is homeomorphic to ℤ with its subspace topology from ℝ"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Every point of A is isolated, but zero is its missing accumulation point.",
+        "Compare A with the countable discrete space ℤ; B has a nonisolated point and is compact."
+      ],
+      "solution": "A is false since 1/n→0 and 0∉A. B is true: adding zero includes the only accumulation point, so B is closed (and bounded, hence compact). Each 1/n is isolated in A: choose a small interval between its neighbouring sequence values. Thus A is a countably infinite discrete space, as is ℤ. Any bijection between them is a homeomorphism, proving C. D is false because 0 is not isolated in B whereas every point of ℤ is isolated; homeomorphisms preserve isolated points. Alternatively, B is compact while ℤ is unbounded and not compact. Exactly B,C.",
+      "theory": "The subspace topology consists of intersections of ambient open sets with the subset. A point is isolated when its singleton is open in this topology. A space in which every point is isolated is discrete, and arbitrary subsets are open as unions of singletons. Any bijection between two discrete spaces is therefore a homeomorphism. A convergent sequence may be discrete as a subspace when its limit is omitted: its individual terms have gaps separating them from the others. Adding the limit changes the topology by creating a nonisolated point. In metric spaces, a set is closed exactly when it contains all limits of convergent sequences of its points. Compactness and the property of being isolated are both preserved by homeomorphisms.",
+      "similar_questions": [
+        {
+          "prompt": "Are {2^{−n}:n≥1} and ℕ homeomorphic?",
+          "solution": "Yes. Every point of the first set is isolated by an interval between neighbouring terms, and ℕ is discrete in ℝ. The bijection 2^{−n}↦n and its inverse are continuous because every subset in each space is open."
+        },
+        {
+          "prompt": "Can {0}∪{2^{−n}:n≥1} be homeomorphic to ℕ?",
+          "solution": "No. Zero is a nonisolated point because every neighbourhood contains infinitely many sequence terms, while every natural number is isolated. Also the sequence-plus-limit set is compact and ℕ is not compact."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 86, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2021-june-q086.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q087",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 87,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Hard",
+      "prompt": "Let G be a group of order 24. Which statements are necessarily true?",
+      "options": {
+        "A": "G has a normal subgroup of order 3",
+        "B": "G is not simple",
+        "C": "There is an injective group homomorphism G→S₈",
+        "D": "G has a subgroup of index 4"
+      },
+      "correct_options": [
+        "B",
+        "D"
+      ],
+      "hints": [
+        "Sylow’s theorem gives n₃∈{1,4}. In the case n₃=4, use the action on the four Sylow 3-subgroups and their normalizers.",
+        "For C, consider G=Q₈×C₃. Its unique involution is central, strongly restricting stabilizers in a faithful permutation action."
+      ],
+      "solution": "A fails for S₄, whose four Sylow 3-subgroups are not normal. For B, if n₃=1 the normal subgroup of order 3 disproves simplicity. If n₃=4, conjugation gives G→S₄. A nontrivial kernel is proper and normal; a trivial kernel makes G≅S₄, again not simple. D also follows: if n₃=4, a Sylow 3-normalizer has order 24/4=6. If n₃=1, let P be the normal order-three subgroup and t an involution, supplied by Cauchy; ⟨P,t⟩ has order six. C is false for Q₈×C₃. Its unique involution z is central. A faithful permutation action must have a point stabilizer missing z, else z fixes every point. Such a stabilizer has odd order, hence order 1 or 3, giving an orbit of size 24 or 8. In degree at most eight only an eight-point orbit is possible, with stabilizer C₃; since C₃ is central it fixes that entire orbit, contradicting faithfulness. Thus this group cannot inject into S₈. Exactly B,D.",
+      "theory": "Sylow’s theorem says nₚ divides the complementary factor of the group order and is congruent to one modulo p. For order 24, n₃ is one or four. Conjugation on the Sylow subgroups defines a homomorphism to a symmetric group; its kernel is normal, and a subgroup’s normalizer index equals the number of its conjugates. Cauchy’s theorem supplies elements of prime order. A normal order-three subgroup combined with an involution forms a subgroup of order six. Cayley’s theorem embeds every order-24 group into S₂₄, but it does not promise an embedding into S₈. In a permutation action, orbit sizes are stabilizer indices. A central element lying in a stabilizer fixes the whole orbit; faithful actions must detect each nonidentity central element on at least one orbit. This gives efficient lower bounds on permutation degree.",
+      "similar_questions": [
+        {
+          "prompt": "Why is a group of order 18 not simple?",
+          "solution": "Its number of Sylow 3-subgroups divides 2 and is congruent to 1 modulo 3, hence is 1. The unique Sylow 3-subgroup has order 9 and is a proper nontrivial normal subgroup, so the group is not simple."
+        },
+        {
+          "prompt": "Show that Q₈×C₃ has a faithful action on 11 points.",
+          "solution": "Let Q₈ act regularly on eight points and C₃ trivially on those points; let C₃ act regularly on three other points and Q₈ trivially there. The combined action has kernel equal to the intersection C₃∩Q₈={1}, so it is faithful. Together with the stabilizer lower bound, this realizes degree eleven."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 87, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2021-june-q087.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q088",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 88,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For a complex-valued function f, let D_f be the set of points at which its real and imaginary parts satisfy the Cauchy–Riemann equations. Identify the function(s) with D_f=ℂ. The printed parameter a in option B is not specified.",
+      "options": {
+        "A": "f(z)=z/(1+|z|)",
+        "B": "f(z)=(cos(ax)−sin(ay))+i(sin(ax)+cos(ay)), z=x+iy",
+        "C": "f(z)=exp(−1/z⁴) for z≠0, and f(0)=0",
+        "D": "f(z)=x²+iy², z=x+iy"
+      },
+      "correct_options": [],
+      "hints": [
+        "Away from zero, option C is holomorphic. At zero compute real partial derivatives along the coordinate axes.",
+        "In B examine the special case a=0 as well as a≠0; the source gives no condition excluding zero."
+      ],
+      "solution": "C satisfies the equations everywhere. Away from zero it is holomorphic. On both coordinate axes its values near zero are the real function exp(−1/t⁴), whose ratio to t tends to zero; thus u_x,u_y,v_x,v_y at zero are all zero and both CR equations hold. A fails away from zero: writing r=√(x²+y²), u=x/(1+r),v=y/(1+r), the two CR equations would require x²=y² and xy=0, hence only the origin. D has u_x=2x,v_y=2y,u_y=v_x=0 and satisfies CR only on x=y. For B with a real parameter, CR require sin(ax)=sin(ay) and cos(ax)=cos(ay) when a≠0, which do not hold at all points. If a=0, however, B is the constant 1+i and satisfies CR everywhere. Therefore the source has an unspecified parameter affecting the correct option set. Conditional answers are C for real a≠0 and B,C for a=0. No complete unconditional answer set is scored.",
+      "theory": "For f=u+iv, the Cauchy–Riemann equations are u_x=v_y and u_y=−v_x wherever these real partial derivatives exist. Holomorphic functions satisfy them. Their converse needs suitable regularity, such as continuity of the partial derivatives in a neighbourhood; having the equations at a single point alone is insufficient. The function exp(−1/z⁴), filled by zero at the origin, has all four first coordinate partials zero there because it decays rapidly along both real and imaginary axes. It nevertheless grows along other directions and is not continuous at zero. Thus satisfying CR everywhere need not imply an entire function without continuity hypotheses. A parameter in an option must be specified when a special value changes its global CR behaviour; here zero turns B into a constant.",
+      "similar_questions": [
+        {
+          "prompt": "Show that F(z)=exp(−1/z⁴), F(0)=0, is not continuous at zero despite satisfying CR there.",
+          "solution": "Along z=t e^{iπ/4}, z⁴=−t⁴ and F(z)=exp(1/t⁴)→∞. Along real and imaginary axes F=exp(−1/t⁴) and all coordinate partials at zero vanish. Thus CR holds at zero but continuity fails."
+        },
+        {
+          "prompt": "For f(z)=x²+iy², find its CR set and the points where it is complex differentiable.",
+          "solution": "The partials are u_x=2x,u_y=0,v_x=0,v_y=2y. CR holds exactly when x=y. The partials are continuous everywhere, so f is complex differentiable at precisely those points, with derivative 2x. It is not holomorphic on any open set since that line has empty interior."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option B visibly contains an undefined parameter a. For a=0 it is constant and joins C as a correct choice; for real a≠0 only C has D_f=ℂ. The source gives no condition on a.",
+      "answer_source": "Independent mathematical derivation; question 88, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2021-june-q088.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q089",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 89,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which statements are true?",
+      "options": {
+        "A": "Every finite field extension of ℚ is Galois",
+        "B": "There exists a Galois extension of ℚ of degree 3",
+        "C": "Every finite field extension of 𝔽₂ is Galois",
+        "D": "There exists a degree-two field extension of ℚ that is not Galois"
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "In characteristic zero, separability is automatic, but normality is not. Every quadratic extension is normal.",
+        "Use the real subfield of the seventh cyclotomic field for degree three; finite fields are splitting fields of x^{q^n}−x."
+      ],
+      "solution": "A is false: ℚ(∛2)/ℚ has degree three, but lacks the two nonreal roots of X³−2, so is not normal and not Galois. B is true: ℚ(ζ₇)/ℚ has cyclic Galois group of order six; its real subfield ℚ(ζ₇+ζ₇⁻¹), fixed by complex conjugation, is Galois of degree three, with quotient group of order three. C is true: an extension of degree n of 𝔽₂ is the finite field 𝔽_{2ⁿ}, which is the splitting field of X^{2ⁿ}−X, a separable polynomial since its derivative is −1. D is false: every degree-two extension of ℚ is ℚ(√d), containing both conjugate roots ±√d, and is separable in characteristic zero. Thus exactly B,C.",
+      "theory": "A finite extension is Galois if it is both normal and separable. Normality means every irreducible base-field polynomial having one root in the extension splits there. Separability means minimal polynomials have distinct roots; it is automatic in characteristic zero and for finite fields. A finite field with qⁿ elements consists exactly of the roots of X^{qⁿ}−X, so it is a normal separable extension of 𝔽_q with cyclic Galois group generated by Frobenius x↦x^q. Cyclotomic extensions are Galois, and fixed fields of normal subgroups remain Galois over the base with quotient Galois group. All subgroups of an abelian group are normal, enabling odd-degree Galois subfields. Quadratic extensions in characteristic different from two include both square-root conjugates and are Galois.",
+      "similar_questions": [
+        {
+          "prompt": "Is ℚ(√5)/ℚ Galois? Give its automorphisms.",
+          "solution": "Yes. It is the splitting field of X²−5 and the roots ±√5 are distinct. Its two automorphisms are the identity and a+b√5↦a−b√5, giving a cyclic group of order two."
+        },
+        {
+          "prompt": "Describe the Galois group of 𝔽₈ over 𝔽₂.",
+          "solution": "The extension has degree three. Frobenius σ(x)=x² has order three because σ³(x)=x⁸=x for every x∈𝔽₈. The Galois group is {id,σ,σ²}, cyclic of order three."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 89, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2021-june-q089.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q090",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 90,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Number Theory",
+      "difficulty": "Moderate",
+      "prompt": "For a positive integer n, let Ω(n) count prime factors with multiplicity; for example Ω(3)=1 and Ω(6)=Ω(9)=2. Let p>3 be prime and N=p(p+2)(p+4). Which statements are true?",
+      "options": {
+        "A": "Ω(N)≥3",
+        "B": "There are primes p>3 with Ω(N)=3",
+        "C": "p can never be the smallest prime divisor of N",
+        "D": "p can be the smallest prime divisor of N"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Prime-factor multiplicities add across a product. All three factors exceed one.",
+        "Among p,p+2,p+4 one is divisible by 3; because p>3, it must be one of the other two and is composite."
+      ],
+      "solution": "Each of p,p+2,p+4 is greater than one, so each contributes at least one prime factor, establishing A. More sharply, their residues modulo 3 cover all three classes. Since prime p>3 is not divisible by 3, one of p+2,p+4 is divisible by 3 and exceeds 3, hence is composite and contributes at least two factors. Thus Ω(N)≥1+1+2=4, so B is false. The prime 3 divides N and is smaller than p; indeed all factors are odd, so 2 does not divide N and 3 is the smallest prime divisor. This proves C and refutes D. For p=5, N=315=3²·5·7, attaining Ω=4.",
+      "theory": "The arithmetic function Ω(n) counts prime factors with multiplicity: if n=∏pᵢ^{aᵢ}, then Ω(n)=Σaᵢ. It is completely additive, so Ω(ab)=Ω(a)+Ω(b), even when a and b share factors. This differs from ω(n), which counts distinct prime factors and is not additive across arbitrary products. Every integer greater than one contributes at least one factor, and a composite integer contributes at least two. Modular obstructions can rule out a pattern of all-prime factors: among three consecutive odd integers one is divisible by three. Beyond the exceptional number three, that factor is composite. Finding any prime divisor smaller than p is enough to disprove that p is smallest; here parity and divisibility by three identify the smallest exactly.",
+      "similar_questions": [
+        {
+          "prompt": "For p=7 compute Ω(p(p+2)(p+4)).",
+          "solution": "The product is 7·9·11=3²·7·11. Hence Ω=2+1+1=4, while ω=3. The smallest prime divisor is 3, not p=7."
+        },
+        {
+          "prompt": "Why can p,p+2,p+4 all be prime only when p=3?",
+          "solution": "One of the three is divisible by 3. If all are prime, that number must equal 3. For positive prime p with p,p+2,p+4 in increasing order, this forces p=3, yielding 3,5,7. Any p>3 makes one larger multiple of 3 composite."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 90, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2021-june-q090.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q091",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 91,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let f:ℝ²→ℝ² be a nonzero smooth vector field satisfying div f≠0. Which statements are necessarily true for ẋ=f(x)?",
+      "options": {
+        "A": "There are no equilibrium points",
+        "B": "There are no periodic solutions",
+        "C": "All solutions are bounded",
+        "D": "All solutions are unbounded"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use the Bendixson criterion on the simply connected plane: continuous nowhere-zero divergence has constant sign.",
+        "The nontrivial field f(x,y)=(x,y) has divergence 2, an equilibrium at zero, and unbounded nonzero solutions."
+      ],
+      "solution": "Under the standard Bendixson interpretation that div f is nonzero at every point and “periodic solutions” means nonconstant periodic orbits, B holds. Continuity and connectedness make div f have constant sign. A periodic orbit would be a simple closed curve by uniqueness; the flux of f across it is zero because f is tangent. The divergence theorem instead makes that flux the integral of a strictly signed divergence over its interior, a contradiction. A,C,D are not necessary for a nonzero (nontrivial) field: f(x,y)=(x,y) has divergence 2, the equilibrium solution zero, and solutions eᵗ(x₀,y₀), unbounded for nonzero initial conditions. Thus A,C,D each fail. If “nonzero” were intended to mean nowhere-vanishing rather than nontrivial, A would additionally follow; the statement is retained with this terminology caveat.",
+      "theory": "Bendixson’s criterion rules out nonconstant periodic orbits of a C¹ planar autonomous system on a simply connected region when the divergence has a strict constant sign. The proof combines uniqueness of trajectories with the planar divergence theorem: a closed trajectory has zero outward flux, incompatible with the signed integral over its interior. A divergence that merely is not identically zero is insufficient; it must not vanish or change sign in the relevant region. Equilibria are zeros of the vector field, and divergence nonzero does not prohibit them. A “nonzero vector field” can denote a function that is not identically zero, whereas “nowhere-vanishing” explicitly excludes equilibria. Standard dynamical usage calls only nonconstant closed trajectories periodic orbits; constant equilibrium solutions otherwise have every period. These distinctions should be stated when interpreting the source.",
+      "similar_questions": [
+        {
+          "prompt": "For ẋ=x and ẏ=y, identify equilibria, divergence, and bounded solutions.",
+          "solution": "The divergence is 1+1=2. The unique equilibrium is (0,0). Solutions are (x(t),y(t))=eᵗ(x₀,y₀); the equilibrium is bounded, and every other forward solution is unbounded. There are no nonconstant periodic orbits."
+        },
+        {
+          "prompt": "Can the planar system ẋ=−y,ẏ=x have periodic orbits?",
+          "solution": "Yes. Its divergence is zero, so Bendixson’s strict-sign hypothesis fails. Solutions with initial (r,0) are (r cos t,r sin t), periodic with period 2π for r>0. This illustrates why zero divergence cannot be allowed in that criterion."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Uses the usual Bendixson conventions: divergence nowhere zero, nonzero meaning nontrivial field, and periodic solution meaning a nonconstant periodic orbit. Nowhere-vanishing f would additionally imply A.",
+      "answer_source": "Independent mathematical derivation; question 91, PDF page 16. No candidate response used as an answer key.",
+      "page": 16,
+      "image": "assets/questions/2021-june-q091.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q092",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 92,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "For which listed a,b,c,d,e is the piecewise function a cubic spline? f(x)=a(x−1)²+b(x−2)³ for x≤2; f(x)=c(x−1)²+d for 2≤x≤3; f(x)=(x−1)²+e(x−3)³ for x≥3.",
+      "options": {
+        "A": "a=c=1,d=0, and b,e arbitrary",
+        "B": "a=b=c=1,d=0, and e arbitrary",
+        "C": "a=b=c=d=1, and e arbitrary",
+        "D": "a=b=c=d=e=1"
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "A cubic spline has polynomial pieces of degree at most three and is C² at its knots.",
+        "At each knot the cubic term centred at that knot contributes zero to the value and first two derivatives."
+      ],
+      "solution": "At x=2, matching the value gives a=c+d; matching first derivatives gives 2a=2c, hence a=c and d=0; matching second derivatives gives the same a=c. At x=3, the middle and right values are 4c+d and 4; first derivatives are 4c and 4; second derivatives are 2c and 2. Thus c=1,d=0, and a=1. Neither b nor e is constrained, since the centred cubic terms have zero value and first two derivatives at their joining knots. Therefore the full condition is a=c=1,d=0 with arbitrary b,e. A describes it and B is a sufficient special case with b=1, so both are true. C,D have d=1 and fail continuity.",
+      "theory": "A cubic spline is a piecewise polynomial of degree at most three with two continuous derivatives across its knots. Some pieces may be quadratic or linear; “cubic” ordinarily specifies a maximum degree, not an exact degree on each interval. Joining conditions require equality of value, first derivative, and second derivative from both sides. A term (x−t)³ centred at a knot t has all three quantities zero at that knot, so its coefficient can change without spoiling C² matching. This leads to the truncated-power representation of splines using polynomial parts plus multiples of (x−t)₊³. Additional natural or clamped boundary conditions are separate and are not stated here. In a multiple-correct question, a special parameter choice satisfying the general solution is itself a true option.",
+      "similar_questions": [
+        {
+          "prompt": "For S(x)=x² for x≤0 and x²+a x³ for x≥0, is S a cubic spline?",
+          "solution": "Yes for every real a. At zero both values are 0, both first derivatives are 0, and both second derivatives are 2. The pieces have degree at most three, so they join C², while the third derivative may jump."
+        },
+        {
+          "prompt": "Join x² to c x²+d x+e at x=1 with C² continuity. Find c,d,e.",
+          "solution": "Second derivative matching gives 2=2c, so c=1. First derivative matching gives 2=2c+d, so d=0. Value matching gives 1=c+d+e, so e=0. The pieces then agree identically."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 92, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2021-june-q092.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q093",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 93,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Which expressions solve uₜ−e^{−t}uₓ+u=0 with u(x,0)=x?",
+      "options": {
+        "A": "eᵗ(x+eᵗ−1)",
+        "B": "e^{−t}(x−e^{−t}+1)",
+        "C": "x−eᵗ+1",
+        "D": "xeᵗ"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Along a characteristic, dx/dt=−e^{−t} and du/dt=−u.",
+        "Integrate the characteristic position from t=0 and express its initial coordinate in terms of x,t."
+      ],
+      "solution": "Let ξ be the characteristic’s initial x-coordinate. Integrating x′=−e^{−t} gives x(t)=ξ+e^{−t}−1, so ξ=x−e^{−t}+1. Along the curve, u′=uₜ+x′uₓ=−u, and the initial value is ξ. Hence u=e^{−t}ξ=e^{−t}(x−e^{−t}+1), exactly B. Directly, uₓ=e^{−t}, uₜ=−u+e^{−2t}, giving uₜ−e^{−t}uₓ+u=0; at t=0 it equals x. For A the t=0 PDE residual is 2x, and for D it is 2x−1; for C the residual is x+1−2eᵗ−e^{−t}, not identically zero. Thus no other listed expression solves the equation.",
+      "theory": "The method of characteristics converts a first-order linear transport equation uₜ+a(t)uₓ+b(t)u=0 into ordinary differential equations x′=a(t) and U′=−b(t)U along characteristic curves. The initial coordinate ξ is recovered by integrating the transport velocity and solving for the starting point. The solution is the initial profile evaluated at ξ, multiplied by exp(−∫b). Signs in the transport velocity determine whether the profile shifts left or right. Even when every candidate satisfies the initial condition, the PDE residual differentiates them. Checking uₜ,uₓ and the t=0 value supplies a reliable final verification. Here the velocity is −e^{−t}, so the accumulated displacement is e^{−t}−1, while the reaction term produces the attenuation e^{−t}.",
+      "similar_questions": [
+        {
+          "prompt": "Solve uₜ+2uₓ+u=0 with u(x,0)=sin x.",
+          "solution": "Characteristics are x=ξ+2t, so ξ=x−2t. Along them U′=−U and U(0)=sin ξ. Thus u(x,t)=e^{−t}sin(x−2t). Substitution gives zero residual and the prescribed initial profile."
+        },
+        {
+          "prompt": "Solve uₜ−e^{−t}uₓ=0 with u(x,0)=x².",
+          "solution": "The characteristics again give ξ=x−e^{−t}+1. There is no reaction term, so U stays constant along each characteristic. Therefore u(x,t)=(x−e^{−t}+1)²; its time derivative cancels e^{−t} times its x derivative."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 93, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2021-june-q093.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q094",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 94,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Consider ẍ+p(t)ẋ+q(t)x=0 and two solutions x₁,x₂ on [a,b]. Which statements are true for their Wronskian W?",
+      "options": {
+        "A": "W=0 on (a,b) implies x₁,x₂ are independent",
+        "B": "W can change sign in (a,b)",
+        "C": "W(t₀)=0 at some t₀∈(a,b) implies W≡0 on (a,b)",
+        "D": "W(t₀)=1 at some t₀∈(a,b) implies W≡1 on (a,b)"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Differentiate W=x₁x₂′−x₁′x₂ and substitute the ODE.",
+        "Abel’s identity gives W(t)=W(t₀)exp(−∫_{t₀}ᵗp(s)ds)."
+      ],
+      "solution": "Under the usual regular linear-ODE hypothesis that p,q are continuous on the interval, differentiation yields W′=x₁x₂″−x₁″x₂=−pW. Thus W(t)=W(t₀)exp(−∫_{t₀}ᵗp). The exponential is positive, so a zero at any point forces W≡0, proving C, and otherwise its sign cannot change, refuting B. A is false: zero Wronskian for solutions of the same regular second-order linear ODE means dependence; for example x₂=2x₁. D is false: for ẍ+ẋ=0 choose x₁=1,x₂=−e^{−t}; then W=e^{−t}, which is 1 at t=0 but not constant. Only C holds under the conventional coefficient-regularity assumption.",
+      "theory": "The Wronskian of two differentiable functions is the determinant W=x₁x₂′−x₁′x₂. For two solutions of one regular second-order homogeneous linear equation, Abel’s identity states W(t)=W(t₀)exp(−∫p). It determines vanishing and sign without solving for the functions. Uniqueness of the initial-value problem shows that W≡0 is equivalent to linear dependence in this solution space; this equivalence is not valid for arbitrary smooth functions. Constant nonzero Wronskian requires p=0 wherever W is nonzero. Standard theory assumes continuous coefficients, or other conditions sufficient for uniqueness and integration. If no regularity at all is assumed, Abel’s zero-propagation conclusion can fail at singular coefficient points; the source does not state regularity explicitly, so the conventional assumption is recorded rather than hidden.",
+      "similar_questions": [
+        {
+          "prompt": "Find W for solutions of ẍ+3ẋ+2x=0 with W(0)=5.",
+          "solution": "Here p(t)=3. Abel’s identity gives W(t)=5e^{−3t}, which is positive at every finite t and never zero. It is not constant despite its specified initial value."
+        },
+        {
+          "prompt": "For ẍ−2ẋ=0, take solutions 1 and e^{2t}. Verify Abel’s identity.",
+          "solution": "The Wronskian is 1·2e^{2t}−0·e^{2t}=2e^{2t}. Since p=−2, Abel predicts W(t)=W(0)e^{2t}=2e^{2t}, agreeing exactly."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Applies the standard continuous-coefficient interpretation of a regular second-order linear ODE; the printed statement does not explicitly give regularity of p,q.",
+      "answer_source": "Independent mathematical derivation; question 94, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2021-june-q094.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q095",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 95,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Classical Mechanics",
+      "difficulty": "Moderate",
+      "prompt": "A mass m moving with velocity v approaches a stationary mass M along the x-axis. They collide elastically in one dimension. Which formulas for final velocities v_f (mass m) and V_f (mass M) are true?",
+      "options": {
+        "A": "v_f=v, V_f=v",
+        "B": "v_f=0, V_f=v",
+        "C": "v_f=((m−M)/(m+M))v, V_f=2mv/(m+M)",
+        "D": "v_f=mv/(m+M), V_f=Mv/(m+M)"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Conserve momentum and kinetic energy. Elasticity also reverses the relative velocity.",
+        "Solve mv=mv_f+MV_f together with V_f−v_f=v."
+      ],
+      "solution": "Momentum conservation gives mv=mv_f+MV_f. Elasticity gives relative separation speed equal to relative approach speed: V_f−v_f=v. Substituting V_f=v+v_f yields (m+M)v_f=(m−M)v, so v_f=(m−M)v/(m+M), V_f=2mv/(m+M), exactly C. These formulas also conserve kinetic energy, since m(m−M)²+4Mm²=m(m+M)². A adds momentum Mv for nonzero v. B is valid only for the special case m=M, not arbitrary masses. D generally fails momentum and energy conservation; it does not represent the general elastic collision. Exactly C is true.",
+      "theory": "In a one-dimensional isolated elastic collision, total linear momentum and kinetic energy are conserved. For masses m,M with initial velocities u,U, their relative velocity reverses: v_f−V_f=−(u−U). Solving this with momentum yields v_f=[(m−M)u+2MU]/(m+M) and V_f=[2mu+(M−m)U]/(m+M). Here U=0 simplifies the formulas. Equal masses exchange velocities. When M is much larger than m, the incident light mass rebounds approximately with velocity −v while the heavy mass barely moves. When m is much larger, it continues approximately at v and the light target approaches 2v. These limits help check signs and coefficients. A formula valid only for equal masses is not universally valid when masses are unspecified.",
+      "similar_questions": [
+        {
+          "prompt": "A mass m with speed v hits an equal stationary mass elastically. Find the final velocities.",
+          "solution": "Set M=m in the general formulas: v_f=(m−m)v/(2m)=0 and V_f=2mv/(2m)=v. The incident mass stops and the target takes its velocity; momentum and kinetic energy are unchanged."
+        },
+        {
+          "prompt": "A mass m hits a stationary mass 3m elastically. Find final velocities and check momentum.",
+          "solution": "v_f=(m−3m)v/(4m)=−v/2 and V_f=2mv/(4m)=v/2. Final momentum is m(−v/2)+3m(v/2)=mv. Energy is (1/2)m(v²/4)+(1/2)(3m)(v²/4)=(1/2)mv²."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 95, PDF page 17. No candidate response used as an answer key.",
+      "page": 17,
+      "image": "assets/questions/2021-june-q095.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q096",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 96,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "On [0,1]² let K(x,y)=sin(2πx)sin(2πy) and define 𝒦u(x)=∫₀¹u(y)K(x,y)dy for u∈C([0,1]). Which assertions hold?",
+      "options": {
+        "A": "Null(𝒦) is infinite-dimensional",
+        "B": "∫₀¹v(x)𝒦u(x)dx=∫₀¹𝒦v(x)u(x)dx for all u,v∈C([0,1])",
+        "C": "𝒦 has no negative eigenvalue",
+        "D": "𝒦 has an eigenvalue greater than 3/4"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "Write φ(x)=sin(2πx), so 𝒦u=φ∫uφ is a rank-one operator.",
+        "The only possible nonzero eigenvalue is ∫₀¹φ²=1/2. Symmetry follows by multiplying the two scalar integrals."
+      ],
+      "solution": "Put ℓ(u)=∫₀¹uφ and φ=sin(2πx). Then 𝒦u=ℓ(u)φ, with range span{φ}. Its null space is kerℓ, a codimension-one subspace of infinite-dimensional C([0,1]), hence infinite-dimensional (A). More explicitly, all cos(2πkx), k≥0, lie in it and are linearly independent by orthogonality. For B both sides equal ℓ(u)ℓ(v), so symmetry holds. If 𝒦u=λu with λ≠0, then u lies in span{φ}; since 𝒦φ=(∫φ²)φ=(1/2)φ, λ=1/2. Zero is also an eigenvalue from the nontrivial null space. Thus there are no negative eigenvalues (C) and none above 3/4 (D false). Exactly A,B,C.",
+      "theory": "A separable kernel K(x,y)=φ(x)ψ(y) defines a finite-rank integral operator: its output is a scalar functional of u times φ. For nonzero φ and functional ℓ, the range is one-dimensional and the kernel has codimension one. On an infinite-dimensional domain this kernel remains infinite-dimensional. A symmetric real kernel yields the bilinear identity ∫v𝒦u=∫u𝒦v, obtainable directly by Fubini’s theorem for continuous functions on a compact square. For K=φ(x)φ(y), the quadratic form ∫u𝒦u=(∫uφ)² is nonnegative, which rules out negative real eigenvalues. The nonzero eigenvalue is ‖φ‖²_{L²}; its size depends on normalization. These facts can be derived without solving a general Fredholm eigenvalue equation.",
+      "similar_questions": [
+        {
+          "prompt": "Find the eigenvalues of Tu(x)=x∫₀¹yu(y)dy on C([0,1]).",
+          "solution": "The range is span{x}. Applying T to x gives x∫₀¹y²dy=x/3, so the only nonzero eigenvalue is 1/3. Zero is an eigenvalue on the infinite-dimensional subspace of functions with ∫₀¹yu(y)dy=0."
+        },
+        {
+          "prompt": "For Tu(x)=2∫₀¹u(y)dy, compute its nonzero eigenvalue and kernel.",
+          "solution": "Outputs are constant. On the constant function 1, T1=2, so the nonzero eigenvalue is 2. The kernel is all continuous mean-zero functions, for example each sin(2πkx); it is infinite-dimensional."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 96, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2021-june-q096.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q097",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 97,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consider the Euler method for the printed system ẋ=−y, ẋ=x (both derivatives are printed ẋ). Let (xᵢⁿ,yᵢⁿ), i=0,…,n², use time step h=1/n from (1,0). Which statements are true?",
+      "options": {
+        "A": "The points (xᵢⁿ,yᵢⁿ) lie on a circle of radius 1",
+        "B": "lim_{n→∞}(xₙⁿ,yₙⁿ)=(cos 1,sin 1)",
+        "C": "lim_{n→∞}(x₂ⁿ,y₂ⁿ)=(1,0)",
+        "D": "(xᵢⁿ)²+(yᵢⁿ)²>1 for i≥1"
+      },
+      "correct_options": [],
+      "hints": [
+        "The printed equations give two conflicting prescriptions for ẋ and no equation for ẏ. Check the initial values.",
+        "Under the conditional correction ẏ=x, encode the Euler recurrence by zᵢ=xᵢ+iyᵢ, giving zᵢ=(1+i/n)ᶦ."
+      ],
+      "solution": "As printed, ẋ=−y and ẋ=x require x=−y. At the stated initial point (1,0) they would require ẋ(0)=0 and ẋ(0)=1 simultaneously. There is no differentiable solution or defined two-coordinate Euler update, so the question is invalid as written and no options are scored. If the second equation was intended to be ẏ=x, Euler gives xᵢ₊₁=xᵢ−yᵢ/n, yᵢ₊₁=yᵢ+xᵢ/n, hence zᵢ=(1+i/n)ᶦ. Its squared radius is (1+1/n²)ᶦ>1 for i≥1, making A false and D true. At i=n, n log(1+i/n)→i, so zₙ→eⁱ=cos1+i sin1, making B true. At fixed i=2, z₂=(1+i/n)²→1, making C true. The conditional intended answer is B,C,D. The original two ẋ symbols are preserved.",
+      "theory": "Forward Euler approximates y′=F(y) by yᵢ₊₁=yᵢ+hF(yᵢ). For the harmonic oscillator x′=−y,y′=x, the exact solution preserves x²+y², but Euler multiplies that quantity by 1+h² each step. Thus it creates radial growth even while converging on a fixed finite time interval as h→0. Complex notation turns the update into multiplication by 1+ih, making both magnitude and phase transparent. Step number must be distinguished from physical time: n steps of size 1/n reach time one, whereas a fixed two steps reach time 2/n→0. At n² steps the physical time grows to n, so fixed-time convergence arguments do not automatically apply. An Euler scheme requires one derivative equation for each evolving coordinate; the source’s duplicated x′ prevents it being defined.",
+      "similar_questions": [
+        {
+          "prompt": "For the oscillator x′=−y,y′=x with h=0.1 and initial (1,0), compute two Euler steps.",
+          "solution": "The first point is (1,0.1). The second is (1−0.1·0.1,0.1+0.1·1)=(0.99,0.2). Its squared radius is 0.9801+0.04=1.0201=(1.01)², illustrating energy growth."
+        },
+        {
+          "prompt": "For h=1/n, find the limit of the Euler oscillator point after 2n steps.",
+          "solution": "Complex form gives z_{2n}=(1+i/n)^{2n}. Its logarithm is 2n(i/n+O(n^{−2}))→2i, so z_{2n}→e^{2i}. The limiting real point is (cos2,sin2), corresponding to physical time two."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Both derivative lines visibly print ẋ; the incompatible initial derivatives mean no Euler system is defined. Correcting only the second derivative to ẏ gives conditional labels B,C,D.",
+      "answer_source": "Independent mathematical derivation; question 97, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2021-june-q097.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q098",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 98,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Let B be the unit ball in ℝ³ and I(u)=∫_B(1+|∇u|²)^{1/2}dx. Which displayed expressions give its Euler–Lagrange equation? Option A is transcribed exactly, including the outer vector exponent.",
+      "options": {
+        "A": "div((∇u/(1+|∇u|²)²)^{1/2})=0",
+        "B": "∇u/(1+|∇u|²)^{1/2}=1",
+        "C": "|∇u|=1",
+        "D": "(1+|∇u|²)Δu=Σ_{i,j=1}³u_{xᵢ}u_{xⱼ}u_{xᵢxⱼ}"
+      },
+      "correct_options": [],
+      "hints": [
+        "Differentiate the integrand with respect to ∇u and integrate the first variation by parts.",
+        "The correct divergence equation is div(∇u/√(1+|∇u|²))=0. Compare the exact parentheses and exponents in the source."
+      ],
+      "solution": "For a compactly supported smooth variation φ, δI(u)[φ]=∫_B ∇u·∇φ/√(1+|∇u|²) dx. Integration by parts gives the Euler–Lagrange equation div(∇u/√(1+|∇u|²))=0. Put S=1+|∇u|². Expanding yields S^{−1/2}Δu−S^{−3/2}Σ_{i,j}u_{xᵢ}u_{xⱼ}u_{xᵢxⱼ}=0, exactly D after multiplying by S^{3/2}. However, the source’s A is div((∇u/S²)^{1/2})=0, taking a square root of a vector with no defined operation; it is not the valid standard divergence form. B is also a vector set equal to the scalar 1, and C is not the variational equation. Because a potentially intended correct option is malformed, the source is flagged rather than silently changed. D is the valid displayed formula. If A was intended as div(∇u/√S)=0, the conditional intended labels are A,D.",
+      "theory": "For a functional ∫L(x,u,∇u)dx, a smooth stationary point satisfies L_u−div(L_{∇u})=0 under fixed-boundary or compactly supported variations. For L=√(1+|∇u|²), there is no explicit u dependence and L_{∇u}=∇u/√(1+|∇u|²), giving the minimal-surface equation for the graph of u. Expanding divergence introduces the Hessian contraction ∇uᵀ(D²u)∇u and yields (1+|∇u|²)Δu=∇uᵀ(D²u)∇u. This equation assumes enough differentiability to interpret the derivatives classically; its divergence form also supports weak solutions. Parentheses and exponents cannot be rearranged freely: a square root of an unspecified vector has no canonical real meaning, and a vector equality to a scalar is not a well-typed equation. The first variation is obtained by differentiating at ε=0 the expression I(u+εφ); fixing the boundary ensures the integration-by-parts boundary term vanishes.",
+      "similar_questions": [
+        {
+          "prompt": "Derive the Euler–Lagrange equation for E(u)=∫_B|∇u|²/2 dx with fixed boundary values.",
+          "solution": "For a zero-boundary variation φ, δE=∫∇u·∇φ=−∫(Δu)φ. Vanishing for all φ gives Δu=0, the Laplace equation."
+        },
+        {
+          "prompt": "Verify that every affine u(x)=a·x+b solves the minimal-surface equation.",
+          "solution": "Its gradient is the constant a, its Hessian is zero, and its Laplacian is zero. Both sides of the expanded equation vanish. Equivalently, ∇u/√(1+|∇u|²) is a constant vector with zero divergence."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Visual enlargement confirms A has an outer exponent 1/2 on the vector quotient and denominator exponent 2. This is undefined as printed. D is valid; replacing A by the standard divergence form would give A,D.",
+      "answer_source": "Independent mathematical derivation; question 98, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2021-june-q098.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q099",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 99,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let u be a positive eigenfunction with eigenvalue λ for ü+2u̇+a(t)u=λu, u̇(0)=u̇(1)=0, where a:[0,1]→(1,∞). Which statements are possibly true?",
+      "options": {
+        "A": "λ>0",
+        "B": "λ<0",
+        "C": "∫₀¹(u̇)²dt=2∫₀¹uu̇dt+∫₀¹(a(t)−λ)u²dt",
+        "D": "λ=0"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "Multiply the equation by e^{2t} and integrate; the derivative term becomes (e^{2t}u′)′.",
+        "For the energy identity multiply by u and integrate by parts, using the Neumann conditions."
+      ],
+      "solution": "Multiplication by e^{2t} gives (e^{2t}u′)′+e^{2t}a u=λe^{2t}u. Integrating and using u′(0)=u′(1)=0 gives λ=∫₀¹e^{2t}a(t)u(t)dt / ∫₀¹e^{2t}u(t)dt. The positive u makes the denominator positive and a>1 makes λ>1; thus A necessarily holds and B,D are impossible. For C multiply the original equation by u and integrate. The boundary term [uu′]₀¹ vanishes, so ∫uu″=−∫(u′)². Rearranging gives exactly ∫(u′)²=2∫uu′+∫(a−λ)u². Thus C also necessarily holds and hence is possibly true. For instance a≡2,u≡1,λ=2 realizes A,C.",
+      "theory": "An integrating factor converts an equation with a first derivative into a weighted self-adjoint form: u″+2u′ becomes e^{−2t}(e^{2t}u′)′. Neumann boundary conditions kill the derivative boundary term in the weighted integral. A positive eigenfunction then makes the eigenvalue a weighted average of the coefficient a, so it lies above its pointwise lower bound. Positivity is essential; sign-changing eigenfunctions do not provide positive weights and may have other eigenvalues. Multiplying by u instead yields an energy identity through integration by parts, whose boundary term also vanishes. The unweighted integral ∫uu′ equals (u(1)²−u(0)²)/2 and need not be zero under Neumann conditions. These conditions constrain derivatives, not endpoint function values.",
+      "similar_questions": [
+        {
+          "prompt": "Let a≡4 and use Neumann boundary conditions. Exhibit a positive eigenfunction and eigenvalue.",
+          "solution": "The constant u≡1 has zero first and second derivatives, so the equation reduces to 4=λ. Hence λ=4 with positive eigenfunction 1. The weighted-average formula gives the same value."
+        },
+        {
+          "prompt": "For u″+3u′+a(t)u=λu, u′(0)=u′(1)=0 and positive u, derive a bound if a(t)>2.",
+          "solution": "Multiplying by e^{3t} and integrating cancels [(e^{3t}u′)]₀¹. Therefore λ=∫e^{3t}a u/∫e^{3t}u>2. The positive weights justify the strict lower bound."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 99, PDF page 18. No candidate response used as an answer key.",
+      "page": 18,
+      "image": "assets/questions/2021-june-q099.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2021-june-q100",
+      "source_type": "official_exam",
+      "paper_id": "2021-june",
+      "question_number": 100,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Let X={y∈C¹[0,π]:y(0)=y(π)=0} and J(y)=∫₀^π y²(1−y²)dx. Which statements hold?",
+      "options": {
+        "A": "y=0 is a local minimum of J with respect to the C¹ norm on X",
+        "B": "y=0 is a local maximum of J with respect to the C¹ norm on X",
+        "C": "y=0 is a local minimum of J with respect to the supremum norm on X",
+        "D": "y=0 is a local maximum of J with respect to the supremum norm on X"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "If ‖y‖∞<1, the integrand is nonnegative, and positive wherever y≠0.",
+        "C¹-small functions are also uniformly small. Test local maxima with yε(x)=ε sin x."
+      ],
+      "solution": "J(0)=0. Whenever ‖y‖∞<1, y²(1−y²)≥0 pointwise. For nonzero continuous y in that ball the integrand is positive on an interval, so J(y)>0. Thus zero is a strict local minimum for the supremum norm, proving C. The usual C¹ norm controls ‖y‖∞, so the same argument gives A. To refute B,D, choose yε(x)=ε sin x with 0<ε<1. It belongs to X and tends to zero in both norms. Its value is ε²∫sin²x−ε⁴∫sin⁴x=(π/2)ε²−(3π/8)ε⁴>0, so every neighbourhood contains points with value greater than J(0). Hence zero is not a local maximum in either topology. Exactly A,C.",
+      "theory": "A point is a local minimum of a functional with respect to a norm if some norm ball around it contains no point with smaller functional value. The topology matters: a stronger norm has smaller neighbourhoods, so a minimum established in a weaker norm also holds in a stronger norm controlling it. On C¹ intervals, ‖y‖_{C¹}=‖y‖∞+‖y′‖∞ (or the equivalent maximum convention) dominates the supremum norm. Here pointwise positivity for |y|<1 gives an immediate uniform-neighbourhood argument without needing a second-variation theorem. A nonzero continuous function is nonzero on an interval, making its integral strictly positive. To disprove a local maximum, construct admissible small perturbations with positive functional values. Boundary conditions are maintained by using sine perturbations vanishing at both endpoints.",
+      "similar_questions": [
+        {
+          "prompt": "For F(y)=∫₀¹(y²−2y⁴)dx on continuous functions, is zero a local minimum in the supremum norm?",
+          "solution": "Yes. If ‖y‖∞<1/√2, then y²(1−2y²)≥0 everywhere, and the integral is strictly positive for nonzero continuous y. Thus zero is a strict local minimum in that norm."
+        },
+        {
+          "prompt": "Compute J(ε sin x) for J(y)=∫₀^π(y²−y⁴)dx and use it near zero.",
+          "solution": "The integrals are ∫₀^πsin²x=π/2 and ∫₀^πsin⁴x=3π/8. Hence J=(π/2)ε²−(3π/8)ε⁴, positive for small nonzero ε. As ε→0 the C¹ and supremum norms tend to zero, so zero cannot be a local maximum in either norm."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 100, PDF page 19. No candidate response used as an answer key.",
+      "page": 19,
+      "image": "assets/questions/2021-june-q100.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}

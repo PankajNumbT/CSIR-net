@@ -1,0 +1,142 @@
+{
+  "source_questions": 1420,
+  "solved": 1336,
+  "source_issues_explained": 84,
+  "pending": 0,
+  "unclassified": 0,
+  "missing_from_attachments": 20,
+  "papers": [
+    {
+      "paper_id": "2020-june-26nov",
+      "paper": "June - main paper 2020 \u00b7 26 Nov 2020",
+      "ready": 108,
+      "draft": 0,
+      "explained_issues": 12,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2020-june-30nov",
+      "paper": "June - additional paper 2020 \u00b7 30 Nov 2020",
+      "ready": 102,
+      "draft": 0,
+      "explained_issues": 18,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2021-june",
+      "paper": "June 2021 \u00b7 16 Feb 2022",
+      "ready": 91,
+      "draft": 0,
+      "explained_issues": 9,
+      "available": 100,
+      "pending": 0,
+      "expected": 120,
+      "missing": 20
+    },
+    {
+      "paper_id": "2022-june",
+      "paper": "June 2022 \u00b7 16 Sep 2022",
+      "ready": 109,
+      "draft": 0,
+      "explained_issues": 11,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2023-june",
+      "paper": "Dec 2022 / June 2023 (merged cycle) 2023 \u00b7 7 Jun 2023",
+      "ready": 113,
+      "draft": 0,
+      "explained_issues": 7,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2023-december",
+      "paper": "December 2023 \u00b7 28 Dec 2023",
+      "ready": 118,
+      "draft": 0,
+      "explained_issues": 2,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2024-june",
+      "paper": "June 2024 \u00b7 25 Jul 2024",
+      "ready": 116,
+      "draft": 0,
+      "explained_issues": 4,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2024-december-28feb",
+      "paper": "December - main paper 2024 \u00b7 28 Feb 2025",
+      "ready": 115,
+      "draft": 0,
+      "explained_issues": 5,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2024-december-02mar",
+      "paper": "December - additional paper 2024 \u00b7 2 Mar 2025",
+      "ready": 117,
+      "draft": 0,
+      "explained_issues": 3,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2025-june",
+      "paper": "June 2025 \u00b7 28 Jul 2025",
+      "ready": 118,
+      "draft": 0,
+      "explained_issues": 2,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2025-december",
+      "paper": "December 2025 \u00b7 18 Dec 2025",
+      "ready": 117,
+      "draft": 0,
+      "explained_issues": 3,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    },
+    {
+      "paper_id": "2026-june",
+      "paper": "June 2026 \u00b7 17 Jul 2026",
+      "ready": 112,
+      "draft": 0,
+      "explained_issues": 8,
+      "available": 120,
+      "pending": 0,
+      "expected": 120,
+      "missing": 0
+    }
+  ]
+}

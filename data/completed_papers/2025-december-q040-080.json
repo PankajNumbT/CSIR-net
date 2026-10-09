@@ -1,0 +1,1754 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "2025-december-q040",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 40,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $X=(X_1,X_2,X_3)^T$ be a $3\\times1$ random vector with $E(X)=(3,2,1)^T$ and $\\operatorname{Cov}(X)=\\Sigma=\\begin{pmatrix}3&-2&0\\\\-2&3&-2\\\\0&-2&3\\end{pmatrix}$. Suppose that $Y=(Y_1,Y_2,Y_3)^T=X/\\sqrt3$. Then the value of the multiple correlation coefficient between $Y_1$ and $(Y_2,Y_3)$ equals",
+      "options": {
+        "A": "$2/\\sqrt5$",
+        "B": "$\\sqrt{2/5}$",
+        "C": "$2/\\sqrt3$",
+        "D": "$1/\\sqrt3$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Multiple correlation is unchanged by a common nonzero scaling and does not depend on the means.",
+        "Use $R^2=c^TV^{-1}c/\\sigma_{11}$, with $c=(-2,0)^T$ and $V=\\begin{pmatrix}3&-2\\\\-2&3\\end{pmatrix}$."
+      ],
+      "solution": "For $X$, $V^{-1}=\\frac15\\begin{pmatrix}3&2\\\\2&3\\end{pmatrix}$, so $c^TV^{-1}c=12/5$. Thus $R^2=(12/5)/3=4/5$ and $R=2/\\sqrt5$. Multiplying every variable by $1/\\sqrt3$ cancels from the ratio, so the same answer holds for $Y$. B is a different square root; C exceeds one; D is too small.",
+      "theory": "Multiple correlation measures the correlation between a scalar response and its best linear least-squares predictor from a vector of explanatory variables. Center the variables first. If the predictor covariance $V$ is invertible, the minimizing coefficient vector is $V^{-1}c$, where $c$ is the covariance vector with the response. The fitted variance is $c^TV^{-1}c$, and division by the positive response variance gives $R^2$. The coefficient $R$ is the nonnegative square root, lying between zero and one; it is not a signed simple correlation. Means affect the intercept but not this ratio. Nonzero rescaling of response or predictors preserves multiple correlation. Correlation between the explanatory variables matters, so adding squared pairwise correlations without accounting for their covariance is generally wrong.",
+      "similar_questions": [
+        {
+          "prompt": "A response has variance 4, predictors have covariance $I_2$, and covariance vector $(1,1)^T$. Find $R$.",
+          "solution": "$R^2=(1^2+1^2)/4=1/2$, hence $R=1/\\sqrt2$. The least-squares centered predictor is the sum of the two predictors."
+        },
+        {
+          "prompt": "Let $\\operatorname{Var}(Z)=9$, $V=\\operatorname{diag}(4,1)$, and $c=(2,1)^T$. Find $R$.",
+          "solution": "$V^{-1}=\\operatorname{diag}(1/4,1)$, so fitted variance is $4/4+1=2$. Thus $R^2=2/9$ and $R=\\sqrt2/3$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 40, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2025-december-q040.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q041",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 41,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $S$ be a finite subset of $\\mathbb C$ containing $0$. Let $f:\\mathbb C\\setminus S\\to\\mathbb C$ be holomorphic and have a simple pole at $0$. For $R>0$, let $\\gamma_R(t)=Re^{2\\pi it}$, $t\\in[0,1]$. Which statement is necessarily true?",
+      "options": {
+        "A": "$f(1/z)$ has a removable singularity at $0$.",
+        "B": "$f(1/z)$ has an essential singularity at $0$.",
+        "C": "If $\\int_{\\gamma_R}f(z)\\,dz=0$ for some $R>0$, then $S$ is not a singleton.",
+        "D": "If $S$ is not a singleton, then $\\int_{\\gamma_R}f(z)\\,dz=0$ for some $R>0$ with $S\\cap\\{z:|z|=R\\}=\\varnothing$."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "A simple pole has nonzero residue. Apply the residue theorem when the only omitted point is zero.",
+        "To disprove assertions about infinity, compare $1/z$ and $z+1/z$. Extra omitted points need not be genuine singularities."
+      ],
+      "solution": "If $S=\\{0\\}$, every circle encloses just the simple pole at zero, and its integral is $2\\pi i\\operatorname{Res}(f,0)\\ne0$. The contrapositive proves C. A fails for $f(z)=z+1/z$, because $f(1/z)=1/z+z$ has a pole. B fails for $f(z)=1/z$, since $f(1/z)=z$ is removable. D fails with $S=\\{0,1\\}$ and $f(z)=1/z$: each admissible centered circle has integral $2\\pi i$. A contour integral is understood only when the contour avoids $S$.",
+      "theory": "An isolated simple pole at $a$ has Laurent expansion $c_{-1}/(z-a)+c_0+\\cdots$ with $c_{-1}\\ne0$, so its residue is nonzero. For a positively oriented contour avoiding all singularities, the residue theorem sums the residues inside, weighted by winding numbers. A zero contour integral may reflect cancellation among several residues, but such cancellation is impossible if the only enclosed singularity is one simple pole. A finite excluded set is merely a statement about the domain: its points can be removable, poles, or essential singularities. The substitution $z\\mapsto1/z$ probes the behavior at infinity, which is not determined by a local pole at zero. Always check that the contour lies in the domain before applying an integral formula.",
+      "similar_questions": [
+        {
+          "prompt": "For $f(z)=1/z-1/(z-2)$, compute centered circle integrals for $R=1$ and $R=3$.",
+          "solution": "At $R=1$ only residue $1$ at zero is inside, giving $2\\pi i$. At $R=3$ both residues $1,-1$ are inside, giving zero."
+        },
+        {
+          "prompt": "Determine the singularity of $f(1/z)$ at zero when $f(w)=w^2+1/w$.",
+          "solution": "$f(1/z)=z^{-2}+z$, whose principal part is $z^{-2}$. Thus zero is a pole of order two, despite $f$ having a simple pole at zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 41, PDF page 25. No candidate response used as an answer key.",
+      "page": 25,
+      "image": "assets/questions/2025-december-q041.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q042",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 42,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $h$ be holomorphic on $\\mathbb C\\setminus\\{0\\}$ with $\\lim_{|z|\\to\\infty}h(z)=0$. For $n\\ge1$ let $f_n(z)=\\sum_{k=1}^n h(z^k)$. Write $\\mathbb D=\\{z:|z|<1\\}$. Which statement is necessarily true?",
+      "options": {
+        "A": "For all $|z|\\ge1$, $\\{f_n(z)\\}$ converges.",
+        "B": "For all $z\\in\\mathbb D\\setminus\\{0\\}$, $\\{f_n(z)\\}$ converges.",
+        "C": "$\\{f_n\\}$ converges pointwise to a holomorphic function on $\\mathbb D\\setminus[0,1)$.",
+        "D": "$\\{f_n\\}$ converges pointwise to a holomorphic function on $\\{z:|z|>1\\}$."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "A holomorphic function vanishing at infinity decays at least like $1/|z|$ near infinity.",
+        "On a compact subset of $|z|>1$, compare $|h(z^k)|$ with a geometric series. Test the other domains with $h(w)=1/w$."
+      ],
+      "solution": "Set $g(\\zeta)=h(1/\\zeta)$. The limit implies a removable singularity at zero with $g(0)=0$, hence $|g(\\zeta)|\\le C|\\zeta|$ near zero. Therefore $|h(w)|\\le C/|w|$ for large $|w|$. On a compact $K\\subset\\{|z|>1\\}$, $|z|\\ge r>1$, so the series tails are bounded by $Cr^{-k}$. Uniform convergence on compact sets yields a holomorphic sum, proving D. For $h(w)=1/w$, at $z=1$ the partial sums equal $n$, disproving A. For every $0<|z|<1$, the terms $z^{-k}$ do not tend to zero, disproving B and C.",
+      "theory": "The removable singularity theorem says that a holomorphic function bounded near an isolated puncture extends holomorphically across it. Vanishing at the puncture forces its Taylor series to start at order at least one, producing a linear bound. Applied after inversion, this translates a zero limit at infinity into an inverse-power decay estimate. The Weierstrass convergence theorem requires local uniform convergence of holomorphic functions to conclude holomorphy of the limit; pointwise convergence alone is insufficient. A geometric majorant on every compact set proves the needed local uniform convergence. Boundary points need separate treatment because the geometric ratio becomes one. The original assumption controls infinity, not the behavior near zero; for interior unit-disc points the powers approach precisely that uncontrolled singularity.",
+      "similar_questions": [
+        {
+          "prompt": "Find $\\sum_{k=1}^\\infty z^{-k}$ for $|z|>1$.",
+          "solution": "This is a geometric series with ratio $1/z$. Its sum is $(1/z)/(1-1/z)=1/(z-1)$, holomorphic on the exterior disc."
+        },
+        {
+          "prompt": "For $h(w)=w^{-2}$, determine convergence of $\\sum_{k\\ge1}h(z^k)$.",
+          "solution": "The terms form a geometric series with ratio $z^{-2}$. It converges for $|z|>1$ to $1/(z^2-1)$ and diverges for $0<|z|\\le1$ because the terms fail to approach zero on the boundary and grow inside."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 42, PDF page 26. No candidate response used as an answer key.",
+      "page": 26,
+      "image": "assets/questions/2025-december-q042.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q043",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 43,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Sampling and Design of Experiments",
+      "difficulty": "Moderate",
+      "prompt": "A finite population has size $N=100$. $T_1$ is the sample mean for a sample of size $n$, $1<n<N$, under simple random sampling with replacement. $T_2$ is the sample mean for the same study variable under simple random sampling without replacement. If $\\operatorname{Var}(T_1)=9\\operatorname{Var}(T_2)$, then the sample size $n$ equals",
+      "options": {
+        "A": "33",
+        "B": "69",
+        "C": "89",
+        "D": "93"
+      },
+      "correct_options": [],
+      "hints": [
+        "Write the two variances using the same finite-population variance convention.",
+        "Before canceling the population variance, check whether the study variable is required to be nonconstant."
+      ],
+      "solution": "Let $S^2=(N-1)^{-1}\\sum_i(y_i-\\bar y)^2$. Then $\\operatorname{Var}(T_1)=(N-1)S^2/(Nn)$ and $\\operatorname{Var}(T_2)=(N-n)S^2/(Nn)$. If $S^2>0$, canceling gives $99=9(100-n)$, hence $n=89$, the intended option C. As printed, no positive-variance assumption is given. For a constant population, $S^2=0$, both variances are zero for every admissible $n$, and the stated equality gives no sample size. Thus the source does not have a uniquely necessary answer; C is conditional on a nonconstant study variable.",
+      "theory": "For a finite population, two common variance conventions are $\\sigma_N^2=N^{-1}\\sum(y_i-\\bar y)^2$ and $S^2=(N-1)^{-1}\\sum(y_i-\\bar y)^2$. With replacement, the sample mean has variance $\\sigma_N^2/n=(N-1)S^2/(Nn)$. Without replacement, negatively correlated draws reduce the variance to $(1-n/N)S^2/n$. The ratio of these variances, when nonzero, is $(N-1)/(N-n)$, so the finite-population correction becomes substantial when a large fraction is sampled. Mixing variance conventions creates an erroneous $N$ instead of $N-1$. A ratio formula presupposes nonzero population variance. If every population value is identical, both estimators are constant and both variances vanish; algebraic cancellation is invalid and an equality between them cannot identify $n$. Checking whether a variance can vanish is therefore a substantive statistical hypothesis, not merely a technical algebraic detail.",
+      "similar_questions": [
+        {
+          "prompt": "A nonconstant population has $N=50$ and replacement variance seven times without-replacement variance. Find $n$.",
+          "solution": "$49/(50-n)=7$, so $50-n=7$ and $n=43$. The nonconstant assumption licenses division by $S^2$."
+        },
+        {
+          "prompt": "A population of 100 identical values is sampled by either scheme. Does equality of the two variances determine $n$?",
+          "solution": "Every sample mean equals the common value. Both variances are zero for all $1\\le n\\le100$, so equality provides no information about $n$."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Exact source omits a nonzero population variance assumption. Conditional intended answer: option C (89) when the study variable is nonconstant; without that assumption there is no unique necessary answer.",
+      "answer_source": "Independent mathematical derivation; question 43, PDF page 26. No candidate response used as an answer key.",
+      "page": 26,
+      "image": "assets/questions/2025-december-q043.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q044",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 44,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Complex Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\gamma_R(t)=2+i+Re^{2\\pi it}$, $t\\in[0,1]$, for $R=1,2$. Which statement is true?",
+      "options": {
+        "A": "$\\int_{\\gamma_1}\\tan z\\,dz=2\\pi i$",
+        "B": "$\\int_{\\gamma_1}\\tan z\\,dz=-2\\pi i$",
+        "C": "$\\int_{\\gamma_2}\\tan z\\,dz=2\\pi i$",
+        "D": "$\\int_{\\gamma_2}\\tan z\\,dz=-2\\pi i$"
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The poles of $\\tan z$ are the real points $\\pi/2+k\\pi$, each with residue $-1$.",
+        "Compute their distances from the center $2+i$. The nearest pole is slightly farther than one unit away."
+      ],
+      "solution": "At $a=\\pi/2+k\\pi$, $\\operatorname{Res}(\\tan,a)=\\sin a/(-\\sin a)=-1$. The distance from $2+i$ to $\\pi/2$ is $\\sqrt{(2-\\pi/2)^2+1}$, between 1 and 2. The next pole $3\\pi/2$ has distance greater than 2, as do all others. Thus $\\gamma_1$ encloses no pole and has integral zero, while $\\gamma_2$ encloses one pole and has integral $-2\\pi i$. Only D is true.",
+      "theory": "For a quotient $p/q$ with a simple zero of $q$ at $a$ and $p(a)\\ne0$, the residue equals $p(a)/q\\prime(a)$. The complex trigonometric function tangent has poles at the real zeros of cosine, and their residues are all negative one. A circle $c+Re^{2\\pi it}$ is positively oriented; the sign of the integral comes from its residues, not from an orientation reversal. A real pole can lie outside a circle whose center has imaginary part one even when its real coordinate is nearby. Count poles using the full complex distance $|a-c|$, and check strict inequalities so that none lies on the path. Cauchy's theorem gives zero when the enclosed region is free of singularities.",
+      "similar_questions": [
+        {
+          "prompt": "Compute $\\int_{|z|=2}\\tan z\\,dz$ counterclockwise.",
+          "solution": "The enclosed poles are $\\pm\\pi/2$, each with residue $-1$. The sum is $-2$, giving $-4\\pi i$."
+        },
+        {
+          "prompt": "Compute $\\int_{|z-i|=1/2}\\tan z\\,dz$.",
+          "solution": "Every tangent pole is real, at distance at least one from the center $i$. No pole lies inside or on the circle, so Cauchy's theorem gives zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 44, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2025-december-q044.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q045",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 45,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let $B$ be a $4\\times4$ positive-definite real symmetric matrix, not the identity. On $\\mathbb R^4$ define $\\langle v,w\\rangle=v^TBw$. Which statement is FALSE?",
+      "options": {
+        "A": "Eigenvectors of $B$ for distinct eigenvalues satisfy $\\langle v,w\\rangle=0$.",
+        "B": "If $v$ is an eigenvector of $B$ and $w\\ne0$ with $\\langle w,v\\rangle=0$, then $w$ is an eigenvector of $B$.",
+        "C": "For every subspace $W$, $W+W^\\perp=\\mathbb R^4$, where $W^\\perp=\\{v:\\langle v,w\\rangle=0\\ \\forall w\\in W\\}$.",
+        "D": "Every eigenspace $W$ of $B$ has an orthonormal basis."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Positive definiteness gives an actual inner product, so orthogonal complements and Gram–Schmidt work.",
+        "For the second statement, use a diagonal matrix and a vector mixing two different eigenspaces orthogonal to a third."
+      ],
+      "solution": "A is valid: symmetric $B$ has Euclidean-orthogonal eigenvectors for distinct eigenvalues, and if $Bw=\\mu w$, then $v^TBw=\\mu v^Tw=0$. C follows from finite-dimensional orthogonal decomposition. D follows by Gram–Schmidt inside $W$ in the stated inner product. B is not a valid general statement: take $B=\\operatorname{diag}(1,2,3,4)$, $v=e_1$, $w=e_2+e_3$. Then $w^TBv=0$ but $Bw=2e_2+3e_3$ is not a scalar multiple of $w$. Thus B is the false universal assertion. For special matrices such as $2I$, it happens to hold; the counterexample concerns the asserted general implication.",
+      "theory": "A positive-definite symmetric matrix defines an inner product because the form is bilinear, symmetric, and strictly positive on nonzero vectors. The real spectral theorem supplies an orthogonal decomposition into eigenspaces. Euclidean orthogonality of eigenvectors for different eigenvalues also gives orthogonality in the matrix inner product, since applying $B$ merely multiplies an eigenvector by its eigenvalue. Every finite-dimensional inner-product space has a Gram–Schmidt orthonormal basis, and every subspace has a direct orthogonal complement. Orthogonality to one eigenvector, however, only imposes one linear condition. It usually leaves a space containing vectors from several eigenspaces, whose nontrivial sums are not eigenvectors. Distinguish a statement valid for every matrix in the hypothesis from an implication that happens to hold for scalar matrices.",
+      "similar_questions": [
+        {
+          "prompt": "For $B=\\operatorname{diag}(2,5)$, find a $B$-orthonormal basis of $\\mathbb R^2$.",
+          "solution": "$\\langle e_1,e_1\\rangle=2$ and $\\langle e_2,e_2\\rangle=5$, with cross product zero. Hence $e_1/\\sqrt2,e_2/\\sqrt5$ form the requested basis."
+        },
+        {
+          "prompt": "For $B=\\operatorname{diag}(1,2,4)$, is $e_2+e_3$ an eigenvector, and is it orthogonal to $e_1$?",
+          "solution": "$B(e_2+e_3)=2e_2+4e_3$ is not proportional to $e_2+e_3$, so it is not an eigenvector. Its $B$-inner product with $e_1$ is zero."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 45, PDF page 27. No candidate response used as an answer key.",
+      "page": 27,
+      "image": "assets/questions/2025-december-q045.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q046",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 46,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Partial Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $u$ solve $u_{tt}-u_{xx}=e^{-t}$ for $x\\in\\mathbb R$, $t>0$, with $u(x,0)=\\cos x$, $u_t(x,0)=0$. Which statement is true?",
+      "options": {
+        "A": "For each $x_0$, $e^tu(x_0,t)\\to0$.",
+        "B": "For each $x_0$, $|u(x_0,t)|\\to0$.",
+        "C": "For each $x_0$, some $t_0>0$ satisfies $u(x_0,t_0)\\ge4$.",
+        "D": "For each $x_0$, some $t_0>0$ satisfies $u(x_0,t_0)\\le-4$."
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Separate the oscillatory homogeneous solution from a forcing response depending only on $t$.",
+        "The forcing response solves $a\\prime\\prime=e^{-t}$ with zero initial data and contains a linear term."
+      ],
+      "solution": "The homogeneous solution is $\\cos x\\cos t$. A spatially constant particular response with zero initial data is $a(t)=t-1+e^{-t}$, since $a\\prime\\prime=e^{-t}$, $a(0)=a\\prime(0)=0$. Therefore $u(x,t)=\\cos x\\cos t+t-1+e^{-t}$. For every $x$, $u(x,t)\\ge t-2$, so $t=6$ gives $u(x,6)\\ge4$. Indeed $u(x,t)\\to+\\infty$, disproving A and B. Since $a(t)\\ge0$ for $t\\ge0$ and $\\cos x\\cos t\\ge-1$, $u\\ge-1$, disproving D.",
+      "theory": "The one-dimensional wave equation admits d'Alembert's representation for sufficiently smooth initial displacement and velocity. A forcing term adds a time integral over the past light cone. When forcing is spatially constant, its contribution can be found more simply as a scalar second-order ODE with zero initial data. Integrating a decaying forcing twice need not produce a decaying displacement: a nonzero total impulse leaves a nonzero limiting velocity, causing linear growth. An oscillatory Fourier mode such as $\\cos x$ solves the homogeneous equation with time factor $\\cos t$. For asymptotic statements, bound that oscillation uniformly and examine the unbounded component. Verification should check both the PDE and the two initial conditions; dropping integration constants gives an incorrect long-time conclusion.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $u_{tt}-u_{xx}=1$, $u(x,0)=\\sin x$, $u_t(x,0)=0$.",
+          "solution": "The homogeneous part is $\\sin x\\cos t$. The zero-data forcing contribution is $t^2/2$. Hence $u=\\sin x\\cos t+t^2/2$, which tends to infinity for fixed $x$."
+        },
+        {
+          "prompt": "Solve $u_{tt}-u_{xx}=e^{-2t}$ with zero initial data.",
+          "solution": "A spatially constant solution has $a\\prime(t)=(1-e^{-2t})/2$ and $a(t)=t/2-(1-e^{-2t})/4$. It satisfies both initial conditions and grows asymptotically as $t/2$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 46, PDF page 28. No candidate response used as an answer key.",
+      "page": 28,
+      "image": "assets/questions/2025-december-q046.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q047",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 47,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $f:(0,\\infty)\\to(0,\\infty)$ be uniformly continuous. Define $g(x)=x^2$ for $0<x\\le1$ and $g(x)=x$ for $x>1$. Which statement is true?",
+      "options": {
+        "A": "$f\\circ g$ is uniformly continuous, but $g\\circ f$ is not.",
+        "B": "$g\\circ f$ is uniformly continuous, but $f\\circ g$ is not.",
+        "C": "Neither composition is uniformly continuous.",
+        "D": "Both compositions are uniformly continuous."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "The restriction of $x^2$ to $(0,1]$ has a bounded derivative. Check pairs crossing the joining point.",
+        "Prove $g$ is globally Lipschitz, then use stability of uniform continuity under composition."
+      ],
+      "solution": "If $x,y\\le1$, $|x^2-y^2|\\le2|x-y|$. If $x,y>1$, the difference is $|x-y|$. If $x\\le1<y$, $g(y)-g(x)=y-x^2=(y-1)+(1-x^2)\\le(y-1)+2(1-x)\\le2(y-x)$. Thus $g$ is 2-Lipschitz and uniformly continuous. The composition of two uniformly continuous maps is uniformly continuous: first select the inner tolerance from the outer map, then the input tolerance from the inner map. Both $f\\circ g$ and $g\\circ f$ are well-defined on $(0,\\infty)$ and uniformly continuous. Only D holds.",
+      "theory": "Uniform continuity means that a single input tolerance works everywhere in the domain for each prescribed output tolerance. A Lipschitz bound $|g(x)-g(y)|\\le L|x-y|$ is sufficient, with input tolerance $\\epsilon/L$. Piecewise differentiable functions can often be proved Lipschitz by bounded derivatives on each piece plus agreement at the joining points; cross-piece pairs still require justification. The unboundedness of the domain does not itself prevent uniform continuity, and a quadratic formula on a bounded portion causes no global problem. For a composition, one must choose tolerances in the correct order: outer function first, then inner. No differentiability or boundedness assumption on $f$ is needed. Ordinary continuity alone would not guarantee the analogous composition statement with uniform continuity.",
+      "similar_questions": [
+        {
+          "prompt": "Is $g(x)=x^2$ on $[0,2]$ and $g(x)=4+4(x-2)$ for $x>2$ uniformly continuous?",
+          "solution": "Both derivatives are bounded in absolute value by 4 and the pieces agree at 2. Splitting any cross-boundary interval at 2 gives $|g(x)-g(y)|\\le4|x-y|$, so yes."
+        },
+        {
+          "prompt": "If $f$ is uniformly continuous and $g$ is 3-Lipschitz, prove $f\\circ g$ is uniformly continuous.",
+          "solution": "For $\\epsilon>0$, choose $\\eta>0$ so input changes less than $\\eta$ make $f$ change less than $\\epsilon$. If $|x-y|<\\eta/3$, then $|g(x)-g(y)|<\\eta$, giving the conclusion."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 47, PDF page 28. No candidate response used as an answer key.",
+      "page": 28,
+      "image": "assets/questions/2025-december-q047.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q048",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 48,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Numerical Analysis",
+      "difficulty": "Moderate",
+      "prompt": "If $p(x)$ is the interpolating polynomial for the data $x=(-2,-1,0,1,2)$ and $y=(-1,3,1,-1,3)$, then $p(1/2)$ is",
+      "options": {
+        "A": "$-3/8$",
+        "B": "$-5/8$",
+        "C": "$5/8$",
+        "D": "$3/8$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The third finite differences are constant. Try a cubic rather than expanding all five Lagrange terms.",
+        "The polynomial $x^3-3x+1$ matches all five data pairs."
+      ],
+      "solution": "The first differences are $4,-2,-2,4$; second differences are $-6,0,6$; third differences are $6,6$; fourth difference is zero. Direct substitution shows $p(x)=x^3-3x+1$ matches all five nodes. By uniqueness of the degree-at-most-four interpolation polynomial, this is $p$. Therefore $p(1/2)=1/8-3/2+1=-3/8$. B, C, D do not match this evaluation.",
+      "theory": "For $m+1$ distinct interpolation nodes and prescribed values, there is a unique polynomial of degree at most $m$ passing through them. Existence follows from the Lagrange basis, and uniqueness follows because the difference of two candidates would have more distinct zeros than its degree permits. For equally spaced nodes, Newton forward differences expose the actual degree: constant nonzero third differences and zero fourth differences indicate a cubic. The interpolation degree bound is essential; arbitrary higher-degree polynomials can be added by multiplying the node product by another polynomial. In standard terminology, the interpolating polynomial means the unique polynomial within that bound. Once a lower-degree candidate is found, verifying every node is enough; computing every Lagrange coefficient is unnecessary and more error-prone.",
+      "similar_questions": [
+        {
+          "prompt": "Interpolate $(0,1),(1,2),(2,5)$ and evaluate at $1/2$.",
+          "solution": "The polynomial $p(x)=x^2+1$ matches all nodes and has degree at most two, so it is unique. Its value is $1/4+1=5/4$."
+        },
+        {
+          "prompt": "Interpolate $(0,0),(1,0),(2,0),(3,6)$ with degree at most three.",
+          "solution": "A polynomial vanishing at 0,1,2 has form $c x(x-1)(x-2)$. At 3 it equals $6c$, so $c=1$. Thus $p=x(x-1)(x-2)$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 48, PDF page 29. No candidate response used as an answer key.",
+      "page": 29,
+      "image": "assets/questions/2025-december-q048.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q049",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 49,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $S\\subset(0,1)$ consist of numbers whose infinite decimal expansion $0.a_1a_2a_3\\cdots$ has $a_i\\in\\{0,2,4\\}$ for every $i\\ge1$. Which statement is true?",
+      "options": {
+        "A": "There is a bijection from $\\mathbb N$ to $S$.",
+        "B": "There is a surjection from $S$ onto $(0,1)$.",
+        "C": "There is a bijection from $\\mathbb N$ to $(0,1)\\setminus S$.",
+        "D": "$S$ is countable and $(0,1)\\setminus S$ is uncountable."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Restrict further to digit sequences using only 2 and 4; there are as many of them as infinite binary sequences.",
+        "The allowed decimal digits ensure distinct sequences represent distinct real numbers. Compare cardinalities with the continuum."
+      ],
+      "solution": "Map each binary sequence $(b_i)$ to $\\sum_{i\\ge1}(2+2b_i)10^{-i}\\in S$. If two sequences first differ at $k$, the leading difference is $2\\cdot10^{-k}$ and the tail has magnitude at most $(2/9)10^{-k}$, so this map is injective. Thus $S$ has at least continuum cardinality; as a subset of the reals it has exactly continuum cardinality. A bijection, hence a surjection, onto $(0,1)$ exists, proving B. A and D fail because $S$ is uncountable. C fails because $(1/2,1)\\subset(0,1)\\setminus S$; every element of $S$ is at most $4/9$.",
+      "theory": "Cardinality concerns arbitrary maps, not necessarily continuous or digit-preserving ones. Infinite sequences over an alphabet of at least two symbols have continuum cardinality; Cantor's diagonal argument shows they cannot be enumerated by the natural numbers. Restricted-digit sets can therefore be uncountable despite occupying a small interval or having zero Lebesgue measure. To translate sequences into decimals, one must address possible nonunique expansions. Using digits bounded well below nine gives a first-difference estimate that dominates the remaining tail and proves injectivity. A subset of the reals with an injection from binary sequences has continuum cardinality by the Cantor–Schröder–Bernstein theorem. The complement can also be uncountable, so uncountability of one set tells nothing by itself about countability of its complement.",
+      "similar_questions": [
+        {
+          "prompt": "Are numbers in $[0,1]$ with ternary digits only 0 and 2 countable?",
+          "solution": "Binary sequences map to ternary sequences by replacing 1 with 2. Distinct sequences give distinct Cantor-set points except the familiar endpoint representations can be handled canonically. The Cantor set has continuum cardinality and is uncountable."
+        },
+        {
+          "prompt": "Let $T$ have decimal digits only 1 and 3. Show $T$ and its complement in $(0,1)$ are uncountable.",
+          "solution": "Binary sequences inject into $T$ via digits $1+2b_i$ and the first-difference tail bound. Every element of $T$ is at most $1/3$, so $(1/2,1)$ lies in its complement, which is also uncountable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 49, PDF page 30. No candidate response used as an answer key.",
+      "page": 30,
+      "image": "assets/questions/2025-december-q049.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q050",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 50,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Consider $f(x,y,z)=[x\\ y\\ z]A[x\\ y\\ z]^T$, where $A$ is an invertible $3\\times3$ symmetric matrix over $\\mathbb Q$. Assume some nonzero $(\\alpha,\\beta,\\gamma)\\in\\mathbb C^3$ satisfies $f(\\alpha,\\beta,\\gamma)=0$. Which statement is necessarily true?",
+      "options": {
+        "A": "A nonzero real zero exists.",
+        "B": "If a nonzero real zero $(a,b,c)$ exists, then $(a,b,c)\\in\\mathbb Q^3$.",
+        "C": "$\\{(a,b,c)\\in\\mathbb Z^3:f(a,b,c)=0\\}$ is finite.",
+        "D": "If a nonzero rational zero exists, then $A$ has a positive and a negative eigenvalue."
+      },
+      "correct_options": [
+        "D"
+      ],
+      "hints": [
+        "An invertible real symmetric matrix has no zero eigenvalues. A definite quadratic form cannot vanish at a nonzero real vector.",
+        "Complex isotropy does not imply real isotropy; use $x^2+y^2+z^2$ as a counterexample."
+      ],
+      "solution": "If a nonzero rational vector is a zero, it is a nonzero real vector. By the spectral theorem, $f=\\sum\\lambda_j u_j^2$ with nonzero real $\\lambda_j$. If all signs agree the form cannot vanish away from zero, so both positive and negative eigenvalues occur. This proves D. A fails for $A=I_3$: $(1,i,0)$ is a complex zero but no nonzero real zero exists. B fails for $\\operatorname{diag}(1,-1,1)$ and $(\\sqrt2,\\sqrt2,0)$. C fails for the same matrix, since $(m,m,0)$ gives infinitely many integer zeros.",
+      "theory": "A real symmetric matrix is orthogonally diagonalizable, and the signs of its eigenvalues classify its quadratic form. Positive or negative definiteness excludes nonzero real zeros; an indefinite form has both signs and therefore real isotropic vectors. Invertibility excludes zero eigenvalues, which is necessary here: a singular semidefinite form may vanish on its kernel without possessing opposite signs. Rational coefficients do not force real solutions to be rational. Complex quadratic forms use squares rather than absolute squares, so positive definiteness over the reals does not prevent complex isotropic vectors. Homogeneity means that a nonzero integer solution generates infinitely many integer solutions by multiplication. A rational nonzero solution can be cleared of denominators to produce such an integer solution, but complex solvability alone says nothing about rational solvability.",
+      "similar_questions": [
+        {
+          "prompt": "For $q=x^2+y^2-2z^2$, find integer zeros and determine the signature.",
+          "solution": "$(m,m,m)$ gives $m^2+m^2-2m^2=0$ for every integer $m$. The diagonal eigenvalues are $1,1,-2$, so the signature is $(2,1)$."
+        },
+        {
+          "prompt": "Can $q=x^2+2y^2+3z^2$ have a nonzero complex zero or real zero?",
+          "solution": "It has no nonzero real zero because every term is nonnegative and all coefficients are positive. It has the complex zero $(i\\sqrt2,1,0)$, since $-2+2=0$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 50, PDF page 30. No candidate response used as an answer key.",
+      "page": 30,
+      "image": "assets/questions/2025-december-q050.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q051",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 51,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,X_2$ be a random sample from $\\operatorname{Uniform}[0,\\theta]$, $\\theta>0$. To test $H_0:\\theta=1$ against $H_1:\\theta=2$, reject $H_0$ if $X_1+X_2>4/5$. The probability of type-I error is",
+      "options": {
+        "A": "$8/25$",
+        "B": "$13/25$",
+        "C": "$17/25$",
+        "D": "$22/25$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Type-I error is the rejection probability under $\\theta=1$, not under the alternative.",
+        "Inside the unit square, the nonrejection region is a right triangle with both legs $4/5$."
+      ],
+      "solution": "Under $H_0$, $(X_1,X_2)$ is uniform on $[0,1]^2$. The area where $x_1+x_2\\le4/5$ is $\\frac12(4/5)^2=8/25$. Therefore $\\alpha=P_1(X_1+X_2>4/5)=1-8/25=17/25$. The boundary has probability zero. A is the acceptance probability under the null; the other values do not equal the rejection area.",
+      "theory": "A type-I error is rejection of a true null hypothesis. Its probability is computed using the null distribution, whereas power is the rejection probability under a specified alternative. Independent uniform observations have constant joint density on a square, making probabilities proportional to geometric areas. For independent $U(0,1)$ variables, the sum has triangular density and $P(X_1+X_2\\le c)=c^2/2$ when $0\\le c\\le1$. For $1\\le c\\le2$, the upper-tail probability is $(2-c)^2/2$. Scaling by $\\theta$ gives the corresponding formulas for $U(0,\\theta)$. Always select the appropriate branch and divide by the area $\\theta^2$ when working directly in the unscaled square. Continuous distributions give zero mass to the threshold line.",
+      "similar_questions": [
+        {
+          "prompt": "Reject $H_0:\\theta=1$ if two independent uniforms have sum greater than $3/2$. Find size.",
+          "solution": "The rejection triangle has legs $2-3/2=1/2$, so its area and probability are $(1/2)^2/2=1/8$."
+        },
+        {
+          "prompt": "For the cutoff $4/5$, find power at $\\theta=2$.",
+          "solution": "The square has area four. The acceptance triangle has area $8/25$, giving acceptance probability $2/25$. Thus power is $23/25$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 51, PDF page 31. No candidate response used as an answer key.",
+      "page": 31,
+      "image": "assets/questions/2025-december-q051.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q052",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 52,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\{Y_n:n\\ge1\\}$ be i.i.d., with $Y_1\\sim\\operatorname{Bernoulli}(1/2)$. Define $Z=\\sum_{n=1}^\\infty4Y_n/5^n$. Which statement is true?",
+      "options": {
+        "A": "$P(Z\\ge3/5)=0.5,\\ P(Z=4/25)=0$",
+        "B": "$P(Z\\ge3/5)=0.6,\\ P(Z=4/25)=0$",
+        "C": "$P(Z\\ge3/5)=0.7,\\ P(Z=4/25)=0.16$",
+        "D": "$P(Z\\ge3/5)=0.8,\\ P(Z=4/25)=0.16$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "Separate the first digit from the rest; the maximum possible tail is $1/5$.",
+        "The value $4/25$ requires a specific infinite sequence of Bernoulli digits, whose probability is zero."
+      ],
+      "solution": "If $Y_1=0$, then $Z\\le\\sum_{n=2}^\\infty4/5^n=1/5<3/5$. If $Y_1=1$, then $Z\\ge4/5>3/5$. Thus $P(Z\\ge3/5)=P(Y_1=1)=1/2$. To obtain $4/25$, one must have $Y_1=0$, $Y_2=1$, and all later digits zero: if $Y_2=0$ the tail is at most $1/25$, while any later 1 after $Y_2=1$ makes the sum larger. The specified infinite sequence has probability $\\lim_m2^{-m}=0$. Therefore A alone matches both probabilities.",
+      "theory": "Random series with geometrically decreasing nonnegative terms converge absolutely and can encode infinite independent digit sequences. A leading digit often determines whether the value lies in a large gap of the support, because the remaining tail is too small to compensate. Such distributions can be singular with respect to Lebesgue measure while having no point masses: continuous does not mean having a density. To compute the probability of a fixed digit sequence, intersect its finite cylinder events. Continuity of probability from above gives the limit of their probabilities, which is zero for independent fair digits. A first-difference estimate establishes uniqueness of the digit encoding. Never treat a finite visible prefix as the complete event specifying an exact real value; all infinitely many remaining digits matter.",
+      "similar_questions": [
+        {
+          "prompt": "For $W=\\sum_{n\\ge1}2B_n/3^n$ with fair independent Bernoulli digits, compute $P(W\\ge1/2)$.",
+          "solution": "When $B_1=0$, $W\\le1/3$; when $B_1=1$, $W\\ge2/3$. Hence the event is exactly $B_1=1$ and has probability $1/2$."
+        },
+        {
+          "prompt": "For the original $Z$, compute $P(Z=0)$ and $P(Y_1=Y_2=0)$.",
+          "solution": "$Z=0$ requires every digit to be zero and has probability $\\lim_m2^{-m}=0$. The finite-prefix event requires only two zero digits and has probability $1/4$; it allows many positive values of $Z$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 52, PDF page 31. No candidate response used as an answer key.",
+      "page": 31,
+      "image": "assets/questions/2025-december-q052.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q053",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 53,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let $A$ be a $3\\times3$ complex matrix with trace 1 and determinant 1. Suppose one eigenvalue is 1. Which statement is necessarily true?",
+      "options": {
+        "A": "The characteristic polynomial has repeated roots.",
+        "B": "Every eigenvalue has absolute value 1.",
+        "C": "There is no eigenvalue on the imaginary axis.",
+        "D": "$A^2$ is the identity matrix."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Use trace and determinant to determine the sum and product of the remaining two eigenvalues.",
+        "The remaining roots satisfy $t^2+1=0$."
+      ],
+      "solution": "Let the remaining eigenvalues, with algebraic multiplicity, be $a,b$. Trace gives $1+a+b=1$, so $a+b=0$. Determinant gives $ab=1$. Therefore their polynomial is $t^2-(a+b)t+ab=t^2+1$, so $a=i$, $b=-i$. The full spectrum is $1,i,-i$, all of modulus one: B is true. The roots are distinct, disproving A; two lie on the imaginary axis, disproving C. $A^2$ has eigenvalues $1,-1,-1$ and cannot be the identity, disproving D.",
+      "theory": "The trace of a matrix is the sum of its eigenvalues and the determinant is their product, counted with algebraic multiplicity, whether or not the matrix is diagonalizable. These facts follow from the coefficients of the characteristic polynomial. For two unknown roots, the sum and product determine a monic quadratic exactly. Distinct complex eigenvalues ensure diagonalizability, but diagonalizability is not needed to infer the eigenvalues of a polynomial in the matrix: spectral mapping sends each eigenvalue $\\lambda$ to $p(\\lambda)$. Having unit-modulus eigenvalues does not mean that a matrix is unitary; a nonunitary similarity transformation preserves eigenvalues while changing inner-product behavior. Likewise, unit-modulus eigenvalues do not imply an involution. An involution would require every eigenvalue to satisfy $\\lambda^2=1$.",
+      "similar_questions": [
+        {
+          "prompt": "A $3\\times3$ matrix has trace 3, determinant 2, and eigenvalue 1. Find the remaining roots.",
+          "solution": "Their sum is 2 and product 2, so they solve $t^2-2t+2=0$ and are $1+i,1-i$."
+        },
+        {
+          "prompt": "A matrix has three distinct eigenvalues $1,i,-i$. Show $A^4=I$.",
+          "solution": "Distinct eigenvalues give a diagonalization $A=P\\operatorname{diag}(1,i,-i)P^{-1}$. Each diagonal entry has fourth power one, so $A^4=PI P^{-1}=I$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 53, PDF page 32. No candidate response used as an answer key.",
+      "page": 32,
+      "image": "assets/questions/2025-december-q053.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q054",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 54,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X\\mid\\theta\\sim\\operatorname{Uniform}[0,\\theta]$ and let $\\theta$ have an exponential distribution with mean $\\lambda$, where the known $\\lambda>3$. If the observed $X$ is 2025, the posterior mode equals",
+      "options": {
+        "A": "0",
+        "B": "2025",
+        "C": "$2025/\\lambda$",
+        "D": "$2025\\lambda$"
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "The likelihood restricts the posterior support to $\\theta\\ge2025$.",
+        "On this support the posterior density is proportional to $\\theta^{-1}e^{-\\theta/\\lambda}$, which decreases."
+      ],
+      "solution": "With $x=2025$, likelihood is $\\theta^{-1}\\mathbf1_{\\{\\theta\\ge x\\}}$. The prior density is $\\lambda^{-1}e^{-\\theta/\\lambda}$ for $\\theta>0$. Thus the posterior is proportional to $\\theta^{-1}e^{-\\theta/\\lambda}\\mathbf1_{\\{\\theta\\ge2025\\}}$. Its log derivative for $\\theta>2025$ is $-1/\\theta-1/\\lambda<0$, so its maximum occurs at the left support endpoint 2025, option B. Zero and $2025/\\lambda$ are outside the support; $2025\\lambda$ lies to the right and has smaller density. The condition $\\lambda>3$ is unnecessary for the maximizing argument.",
+      "theory": "Bayes' theorem multiplies the likelihood by the prior and divides by a normalizing constant. For posterior modes, that constant is irrelevant, but the likelihood support is crucial when it depends on the parameter. A uniform upper endpoint must be at least as large as the observed sample. The exponential prior with mean $\\lambda$ has rate $1/\\lambda$; confusing rate and mean changes the formula even though monotonicity remains here. A mode can occur at the boundary rather than at a zero of a derivative. Differentiating the log-density on the allowed interior proves whether it is increasing or decreasing, then the endpoint must be checked. The conventional endpoint version of the density identifies the boundary MAP value; isolated density values do not change posterior probabilities.",
+      "similar_questions": [
+        {
+          "prompt": "Observe $x=4$ from $U(0,\\theta)$ with exponential prior of mean 2. Find the MAP estimate.",
+          "solution": "The posterior density on $\\theta\\ge4$ is proportional to $\\theta^{-1}e^{-\\theta/2}$. Its log derivative is $-1/\\theta-1/2<0$, so the mode is 4."
+        },
+        {
+          "prompt": "For $n$ uniform observations with maximum $m>0$ and an exponential prior, find the MAP estimate.",
+          "solution": "The posterior is proportional to $\\theta^{-n}e^{-\\theta/\\lambda}$ on $\\theta\\ge m$. Its log derivative $-n/\\theta-1/\\lambda$ is negative, so the boundary mode is $m$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 54, PDF page 32. No candidate response used as an answer key.",
+      "page": 32,
+      "image": "assets/questions/2025-december-q054.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q055",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 55,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "A single observation has density $f(x\\mid\\theta)=2(\\theta-x)/\\theta^2$ for $0<x<\\theta$ and zero otherwise, with unknown $\\theta>0$. Which interval is a 95% confidence interval for $\\theta$?",
+      "options": {
+        "A": "$(X,X/(1-\\sqrt{0.95}))$",
+        "B": "$(X,X/0.95)$",
+        "C": "$(X,X/\\sqrt{0.95})$",
+        "D": "$(0.95X,X)$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "The pivot $T=X/\\theta$ has density $2(1-t)$ on $(0,1)$.",
+        "For a candidate interval $(X,X/a)$, coverage is $P(T>a)=(1-a)^2$."
+      ],
+      "solution": "Scale $T=X/\\theta$. Its density is $2(1-t)$ for $0<t<1$, and its survival function is $P(T>a)=\\int_a^1 2(1-t)dt=(1-a)^2$. Since $X<\\theta$ almost surely, the interval $(X,X/a)$ contains $\\theta$ exactly when $T>a$. Set $(1-a)^2=0.95$ with $0<a<1$, obtaining $a=1-\\sqrt{0.95}$. This gives A. B has coverage $(0.05)^2=0.0025$, C has coverage $(1-\\sqrt{0.95})^2$, and D never contains $\\theta$ because its upper endpoint is $X<\\theta$.",
+      "theory": "A confidence interval is a random interval whose probability of covering the fixed unknown parameter equals the stated level under repeated sampling. It is not a posterior probability statement about the parameter. A pivotal quantity has a distribution independent of the parameter, enabling exact coverage calculations. Scale families often yield pivots such as $X/\\theta$, but their distributions must be derived from the actual density rather than assumed uniform. To invert an inequality involving a positive scale parameter, keep track of positivity and reversal when taking reciprocals. Here the observation is automatically below the parameter, so only the upper confidence endpoint needs calibration. Endpoint inclusions do not affect coverage for continuous distributions. A very broad interval can be necessary for 95% coverage with just one observation.",
+      "similar_questions": [
+        {
+          "prompt": "For this triangular density, find an interval $(X,X/a)$ with 90% coverage.",
+          "solution": "Coverage is $(1-a)^2$. Thus $a=1-\\sqrt{0.9}$ and the interval is $(X,X/(1-\\sqrt{0.9}))$."
+        },
+        {
+          "prompt": "For one observation from $U(0,\\theta)$, find a 95% interval of the same form.",
+          "solution": "Now $T=X/\\theta$ is uniform, so $P(T>a)=1-a$. Choosing $a=0.05$ gives $(X,20X)$ with coverage 0.95."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 55, PDF page 33. No candidate response used as an answer key.",
+      "page": 33,
+      "image": "assets/questions/2025-december-q055.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q056",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 56,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Which statement is necessarily true?",
+      "options": {
+        "A": "The set of all finite subsets of $\\mathbb Z$ is uncountable.",
+        "B": "If $f:\\mathbb R\\to\\mathbb R$ is continuous and one-to-one and $S\\subseteq\\mathbb R$ is countably infinite, then $f(S)$ is countably infinite.",
+        "C": "Every continuous $f:\\mathbb R\\to\\mathbb R$ has an uncountable subset $T$ with uncountable $f(T)$.",
+        "D": "For continuous $f:\\mathbb R\\to\\mathbb R$, if $R\\subseteq\\operatorname{image}(f)$ is countable, then $f^{-1}(R)$ is countable."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "An injective restriction is a bijection onto its image. Continuity is not needed for that conclusion.",
+        "Use a constant continuous function to test the third and fourth statements."
+      ],
+      "solution": "The restriction $f|_S:S\\to f(S)$ is a bijection, since $f$ is injective and its image is precisely $f(S)$. Thus B preserves countably infinite cardinality. A is false: finite subsets form a countable union over their sizes, and size-$k$ subsets are encoded by $k$-tuples of integers, a countable set. C is false for $f\\equiv0$, because every image contains at most one point. D is false for $f\\equiv0$ and $R=\\{0\\}$, whose inverse image is all of $\\mathbb R$.",
+      "theory": "An injective map preserves the cardinality of its domain when viewed as a map onto its image. A general map can collapse infinitely many points to one value, so neither images nor inverse images preserve cardinality without additional hypotheses. Finite products of countable sets are countable, and countable unions of countable sets are countable. Hence the collection of finite subsets of a countable set is countable, even though the collection of all subsets is uncountable by Cantor's theorem. Continuity by itself controls limiting behavior rather than fiber sizes; a constant function is a particularly useful counterexample. A continuous injective real function is strictly monotone, but that stronger fact is unnecessary here. Distinguish a direct image $f(S)$ from an inverse image $f^{-1}(R)$.",
+      "similar_questions": [
+        {
+          "prompt": "If $S$ is countably infinite and $f(x)=e^x$, determine the cardinality of $f(S)$.",
+          "solution": "The exponential is injective, so its restriction to $S$ is a bijection onto $f(S)$. Hence the image is countably infinite."
+        },
+        {
+          "prompt": "Is the set of all two-element subsets of $\\mathbb Q$ countable?",
+          "solution": "Each such subset can be represented by an ordered pair in $\\mathbb Q^2$ after imposing an ordering. Since a product of two countable sets is countable, the collection is countable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 56, PDF page 33. No candidate response used as an answer key.",
+      "page": 33,
+      "image": "assets/questions/2025-december-q056.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q057",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 57,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Consider $Y_1=\\beta_1+\\beta_2+\\epsilon_1$, $Y_2=\\beta_1+2\\beta_2+\\epsilon_2$, $Y_3=\\beta_1+c\\beta_2+\\epsilon_3$. The errors are uncorrelated, have mean zero and common variance $\\sigma^2>0$. The constant $c$ makes the BLUEs $\\hat\\beta_1,\\hat\\beta_2$ uncorrelated. Which option gives $(\\operatorname{Var}(\\hat\\beta_1),\\operatorname{Var}(\\hat\\beta_2))$?",
+      "options": {
+        "A": "$(\\sigma^2/3,\\sigma^2/14)$",
+        "B": "$(3\\sigma^2,14\\sigma^2)$",
+        "C": "$(\\sigma^2/14,\\sigma^2/3)$",
+        "D": "$(14\\sigma^2,3\\sigma^2)$"
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "By Gauss–Markov, the covariance matrix is $\\sigma^2(X^TX)^{-1}$.",
+        "The off-diagonal of $X^TX$ is $1+2+c$; zero covariance forces $c=-3$."
+      ],
+      "solution": "The design has columns $(1,1,1)^T$ and $(1,2,c)^T$, so $X^TX=\\begin{pmatrix}3&3+c\\\\3+c&5+c^2\\end{pmatrix}$. It is nonsingular because the first two covariates differ. The inverse off-diagonal equals $-(3+c)/\\det(X^TX)$, so uncorrelated BLUEs require $c=-3$. Then $X^TX=\\operatorname{diag}(3,14)$ and their covariance matrix is $\\sigma^2\\operatorname{diag}(1/3,1/14)$. Thus A gives the variances in the correct parameter order.",
+      "theory": "In a linear model $Y=X\\beta+\\epsilon$ with full column rank, zero-mean errors and covariance $\\sigma^2I$, the ordinary least-squares estimator is the best linear unbiased estimator by the Gauss–Markov theorem. No normality or independence assumption is required beyond the stated second moments. Its covariance matrix is $\\sigma^2(X^TX)^{-1}$. In an intercept-and-slope model, the cross-product of the design columns is the sum of the covariates; centering the covariates makes that cross-product vanish, separating the coefficient variances. Orthogonal design columns lead to a diagonal estimator covariance matrix, with diagonal entries equal to error variance divided by the corresponding squared column norms. Be careful to invert the information matrix rather than using its diagonal entries themselves, and retain the order of the coefficients.",
+      "similar_questions": [
+        {
+          "prompt": "For covariates $-2,0,2$ and an intercept, find the BLUE covariance matrix.",
+          "solution": "The column cross-product is zero, and squared norms are 3 and 8. Thus $X^TX=\\operatorname{diag}(3,8)$ and covariance is $\\sigma^2\\operatorname{diag}(1/3,1/8)$."
+        },
+        {
+          "prompt": "Three covariates are $2,4,c$. What $c$ makes intercept and slope BLUEs uncorrelated?",
+          "solution": "Zero cross-product requires $2+4+c=0$, so $c=-6$. The squared slope norm is $4+16+36=56$, giving variances $\\sigma^2/3$ and $\\sigma^2/56$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 57, PDF page 34. No candidate response used as an answer key.",
+      "page": 34,
+      "image": "assets/questions/2025-december-q057.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q058",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 58,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "Suppose $u(x)$ solves $u(x)=3+\\int_0^x(x-t)u(t)\\,dt$. Which statement is true?",
+      "options": {
+        "A": "$u(\\pi)=2e^\\pi$",
+        "B": "$u\\prime(\\pi)=e^\\pi$",
+        "C": "$u(\\pi)+u\\prime(\\pi)=3e^\\pi$",
+        "D": "$u(\\pi)-u\\prime(\\pi)=e^\\pi$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Differentiate the Volterra equation twice, recording initial values at zero.",
+        "The resulting equation is $u\\prime\\prime=u$, with $u(0)=3$, $u\\prime(0)=0$."
+      ],
+      "solution": "Leibniz differentiation yields $u\\prime(x)=\\int_0^x u(t)dt$ and then $u\\prime\\prime(x)=u(x)$. The original equation gives $u(0)=3$, and the first derivative gives $u\\prime(0)=0$. Hence $u=3\\cosh x$, $u\\prime=3\\sinh x$. Their sum at $\\pi$ is $3e^\\pi$, proving C. Their difference is $3e^{-\\pi}$, disproving D. A and B also fail by the explicit formulas $\\frac32(e^\\pi+e^{-\\pi})$ and $\\frac32(e^\\pi-e^{-\\pi})$. Conversely, integrating the ODE twice recovers the integral equation, confirming the solution.",
+      "theory": "A Volterra integral equation integrates over a variable upper limit and often encodes an initial-value problem. For a sufficiently regular integrand, Leibniz' rule differentiates both the kernel and the upper-limit contribution. Here the factor $x-t$ vanishes at $t=x$, eliminating the first boundary term, while a second derivative produces the integrand itself. Initial conditions arise from evaluating the equation and its derivative at zero; they cannot be omitted. The resulting constant-coefficient ODE has a unique solution. Hyperbolic functions obey $\\cosh x\\pm\\sinh x=e^{\\pm x}$, making sum-and-difference options especially easy to test. Establishing equivalence in the reverse direction by integrating the ODE verifies that no additional spurious solutions were introduced by differentiation.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $u(x)=2+\\int_0^x(x-t)u(t)dt$.",
+          "solution": "Two derivatives give $u\\prime\\prime=u$, while $u(0)=2$, $u\\prime(0)=0$. Thus $u=2\\cosh x$ and $u+u\\prime=2e^x$."
+        },
+        {
+          "prompt": "Solve $u(x)=1+x-\\int_0^x(x-t)u(t)dt$.",
+          "solution": "Differentiation yields $u\\prime\\prime=-u$, $u(0)=1$, $u\\prime(0)=1$. The unique solution is $u(x)=\\cos x+\\sin x$, which satisfies the original equation after integrating twice."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 58, PDF page 35. No candidate response used as an answer key.",
+      "page": 35,
+      "image": "assets/questions/2025-december-q058.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q059",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 59,
+      "part": "B",
+      "track": "Statistics",
+      "topic": "Probability",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,X_2,\\ldots$ be i.i.d. $\\operatorname{Binomial}(3,1/4)$. Define $Y_j=1$ if $X_j\\le\\sqrt5$ and zero otherwise. If $n^{-1}\\sum_{j=1}^nY_j^2$ converges almost surely to a constant $c$, then $c$ equals",
+      "options": {
+        "A": "$1/64$",
+        "B": "$37/64$",
+        "C": "$63/64$",
+        "D": "$27/32$"
+      },
+      "correct_options": [
+        "C"
+      ],
+      "hints": [
+        "Since $Y_j$ is an indicator, $Y_j^2=Y_j$. Apply the strong law.",
+        "A binomial $(3,1/4)$ variable exceeds $\\sqrt5$ exactly when it equals 3."
+      ],
+      "solution": "The variables $Y_j^2=Y_j$ are i.i.d. bounded indicators, so the strong law gives $c=E(Y_1)=P(X_1\\le\\sqrt5)$. Since $2<\\sqrt5<3$ and $X_1\\in\\{0,1,2,3\\}$, this is $1-P(X_1=3)=1-(1/4)^3=63/64$. Thus C is correct. A gives the excluded event rather than the accepted event; B and D do not equal the required probability.",
+      "theory": "The strong law of large numbers states that for independent identically distributed integrable random variables, the sample average converges almost surely to their common expectation. A measurable transformation of independent identically distributed variables remains independent and identically distributed, so the theorem can be applied directly to indicators. The square of an indicator equals the same indicator, unlike the square of a general random variable. Its expectation is the probability of the represented event. For integer-valued distributions, inequalities involving noninteger thresholds must be reduced to the supported integer values before computing a probability. A binomial variable counts successes in a fixed number of independent Bernoulli trials, and the probability of all successes is $p^m$. Boundedness ensures the integrability hypothesis automatically here.",
+      "similar_questions": [
+        {
+          "prompt": "For i.i.d. $X_j\\sim\\operatorname{Binomial}(4,1/2)$, find the almost-sure limit of the average of $\\mathbf1_{\\{X_j<4\\}}$.",
+          "solution": "By the strong law the limit is $P(X<4)=1-P(X=4)=1-1/16=15/16$."
+        },
+        {
+          "prompt": "For fair Bernoulli $B_j$, find the almost-sure limits of averages of $B_j^2$ and $(2B_j-1)^2$.",
+          "solution": "$B_j^2=B_j$, so its average tends to $1/2$. In contrast $(2B_j-1)^2=1$ identically, so its average is exactly 1 for every sample size."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 59, PDF page 36. No candidate response used as an answer key.",
+      "page": 36,
+      "image": "assets/questions/2025-december-q059.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q060",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 60,
+      "part": "B",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For a finite group $G$, let $H_G=\\{g\\in G:g^{15}=e\\}$. Which statement is necessarily true?",
+      "options": {
+        "A": "There exists a finite group with $|H_G|$ even.",
+        "B": "There exists a finite group with $|H_G|=4n+1$ for some $n\\ge3$.",
+        "C": "Every finite group has $|H_G|=4n+1$ for some nonnegative integer $n$.",
+        "D": "Every finite group has $|H_G|=4n+3$ for some nonnegative integer $n$."
+      },
+      "correct_options": [
+        "B"
+      ],
+      "hints": [
+        "Pair elements of $H_G$ with their inverses; the identity is the only fixed point of this pairing.",
+        "For the existence statement try $G=C_5\\times C_5$; for universal claims compare the trivial group and $C_3$."
+      ],
+      "solution": "Inversion preserves $H_G$. A fixed point satisfies $g^2=e$ and $g^{15}=e$, forcing $g=e$ because $\\gcd(2,15)=1$. Thus $|H_G|$ is odd, so A is false. In $G=C_5\\times C_5$, every element has fifth power $e$ and hence fifteenth power $e$, so $|H_G|=25=4\\cdot6+1$; B is true. For $C_3$, $|H_G|=3$, disproving C. For the trivial group, $|H_G|=1$, disproving D. No subgroup assumption for $H_G$ is needed.",
+      "theory": "For a group element, $g^m=e$ exactly when its finite order divides $m$. The set of such elements need not be a subgroup in a nonabelian group, so subgroup theorems should not be applied without proof. Inversion nevertheless preserves the set, creating an involution whose nonfixed elements occur in two-element orbits. When $m$ is odd, the identity is the sole self-inverse element in the set, proving that its size is odd. This parity argument does not fix the size modulo four. Existential statements require one witness group, while universal statements can be defeated by one counterexample. Elementary abelian groups of exponent five are useful witnesses because all elements satisfy the fifteenth-power relation and their cardinalities are simple powers of five.",
+      "similar_questions": [
+        {
+          "prompt": "How many elements of $C_{20}$ satisfy $g^{15}=e$?",
+          "solution": "For a generator $a$, $a^{15k}=e$ iff $20$ divides $15k$, equivalently 4 divides $k$. There are five such residues, so the count is $\\gcd(20,15)=5$."
+        },
+        {
+          "prompt": "Prove that a finite group has an odd number of solutions of $g^9=e$.",
+          "solution": "Pair each solution with its inverse. A fixed point satisfies both $g^2=e$ and $g^9=e$, hence $g=e$. The other solutions occur in pairs, so the count is one plus an even number."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 60, PDF page 36. No candidate response used as an answer key.",
+      "page": 36,
+      "image": "assets/questions/2025-december-q060.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q061",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 61,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,\\ldots,X_{15}$ be a random sample with exponential density $f(x\\mid\\sigma)=\\sigma^{-1}e^{-x/\\sigma}$ for $x>0$, zero elsewhere, where $\\sigma>0$. Let $\\bar X=15^{-1}\\sum X_i$. Let $\\phi$ be the likelihood-ratio test of $H_0:\\sigma\\le1$ against $H_1:\\sigma>1$ at level $0.1$. Given $\\chi^2_{15,0.1}=22.307$, $\\chi^2_{15,0.9}=8.547$, $\\chi^2_{30,0.1}=40.256$, $\\chi^2_{30,0.9}=20.599$, with $P(W>\\chi^2_{n,\\alpha})=\\alpha$ for $W\\sim\\chi_n^2$, which statements are true?",
+      "options": {
+        "A": "If $\\bar X=0.6$, $\\phi$ does not reject $H_0$.",
+        "B": "If $\\bar X=1.6$, $\\phi$ rejects $H_0$.",
+        "C": "If $\\bar X=1.3$, $\\phi$ rejects $H_0$.",
+        "D": "If $\\bar X=1.2$, $\\phi$ does not reject $H_0$."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "For $\\sigma=1$, $2\\sum X_i$ has a chi-square distribution with 30 degrees of freedom.",
+        "The upper-tail rejection threshold is $\\bar X>40.256/30\\approx1.34187$."
+      ],
+      "solution": "Write $s=\\sum X_i$. The unrestricted MLE is $s/15$, and under the null it is $\\min(s/15,1)$. The likelihood ratio is one if $s\\le15$ and decreases with $s$ above 15, so rejection is for large $s$. At the least-favorable boundary $\\sigma=1$, $2s\\sim\\chi_{30}^2$; smaller scales yield smaller rejection probabilities. The level-0.1 rule is $2s>40.256$, or $\\bar X>1.341866\\ldots$. Thus 0.6 and 1.2 do not reject (A,D), 1.6 rejects (B), and 1.3 does not reject, so C is false.",
+      "theory": "An exponential distribution with scale $\\sigma$ has mean $\\sigma$, and a sum of $n$ independent observations has a gamma distribution with shape $n$. Consequently $2\\sum X_i/\\sigma$ is chi-square with $2n$ degrees of freedom, not $n$. For a one-sided composite null, the test size is the supremum of null rejection probabilities. Since the sum increases stochastically with scale, the boundary $\\sigma=1$ is least favorable. A constrained likelihood maximum uses the boundary when the unrestricted MLE lies outside the null. The likelihood ratio then orders observations by the sample sum and produces an upper-tail test. Quantile notation can use either lower-tail or upper-tail probabilities; the source explicitly gives an upper-tail convention, so using the 0.9 quantile would reverse the intended calibration.",
+      "similar_questions": [
+        {
+          "prompt": "For ten exponential observations, test scale $\\sigma\\le2$ at level 0.05. Express the rejection rule.",
+          "solution": "At the boundary, $2\\sum X_i/2=\\sum X_i\\sim\\chi^2_{20}$. Reject if $\\sum X_i>\\chi^2_{20,0.05}$, equivalently $\\bar X>\\chi^2_{20,0.05}/10$, using upper-tail quantiles."
+        },
+        {
+          "prompt": "For the source test, decide when $\\bar X=1.4$ or $1.0$.",
+          "solution": "At 1.4 the statistic is $30\\cdot1.4=42>40.256$, so reject. At 1.0 it is 30, below the critical value, so do not reject."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 61, PDF page 37. No candidate response used as an answer key.",
+      "page": 37,
+      "image": "assets/questions/2025-december-q061.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q062",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 62,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Which statements are true?",
+      "options": {
+        "A": "$x^2+xy^2-x-y+1$ is irreducible in $\\mathbb Q[x,y]$.",
+        "B": "$x^3+100x^2+25x+10$ is irreducible in $\\mathbb Z[x]$.",
+        "C": "$2x^2+3xy+y^2+3x+2y+1$ is irreducible in $\\mathbb Q[x,y]$.",
+        "D": "$x^4+4x^2+3$ is irreducible in $\\mathbb Z[x]$."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "For the monic quadratic in $x$, test whether its discriminant is a square in $\\mathbb Q(y)$. Apply Eisenstein at 5 to the cubic.",
+        "The last two expressions have explicit low-degree factors."
+      ],
+      "solution": "A: as a quadratic in $x$, the polynomial is $x^2+(y^2-1)x+(1-y)$ with discriminant $D=y^4-2y^2+4y-3$. A polynomial square would have form $(y^2+ay+b)^2$ up to sign: the cubic coefficient forces $a=0$, after which its linear coefficient is zero, contradicting $4y$. A polynomial that is a square in $\\mathbb Q(y)$ is a square in $\\mathbb Q[y]$ by unique factorization. Thus the quadratic is irreducible over $\\mathbb Q(y)$ and, being monic and primitive, over $\\mathbb Q[x,y]$. B satisfies Eisenstein at 5: all nonleading coefficients are divisible by 5 but 10 is not divisible by 25. C factors as $(x+y+1)(2x+y+1)$. D factors as $(x^2+1)(x^2+3)$. Hence A and B.",
+      "theory": "Gauss' lemma transfers irreducibility of primitive polynomials from a unique-factorization domain to its field of fractions. In multivariable problems, one can regard a polynomial as univariate in one variable with coefficients in the polynomial ring of the others. A quadratic over a field of characteristic different from two is reducible exactly when its discriminant is a square in that field. If a polynomial is a rational-function square, unique factorization forces even multiplicity of every irreducible factor and a square constant, so it is already a polynomial square. Eisenstein's criterion proves irreducibility when a prime divides every nonleading coefficient but its square does not divide the constant term. Explicit factorization overrides any heuristic about large coefficients or missing odd powers. Irreducibility in $\\mathbb Z[x]$ for primitive polynomials agrees with irreducibility over $\\mathbb Q$.",
+      "similar_questions": [
+        {
+          "prompt": "Prove $x^3+5x+10$ is irreducible over $\\mathbb Q$.",
+          "solution": "Eisenstein with prime 5 applies: the leading coefficient is not divisible by 5, the other coefficients are, and 25 does not divide 10. Gauss' lemma gives irreducibility."
+        },
+        {
+          "prompt": "Factor $x^4+5x^2+4$ over $\\mathbb Z$.",
+          "solution": "Treat $x^2$ as $t$: $t^2+5t+4=(t+1)(t+4)$. Therefore the polynomial is $(x^2+1)(x^2+4)$ and is reducible."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 62, PDF page 37. No candidate response used as an answer key.",
+      "page": 37,
+      "image": "assets/questions/2025-december-q062.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q063",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 63,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,\\ldots,X_n$, $n\\ge2$, be a random sample with density $f(x\\mid\\mu,\\sigma)=\\sigma^{-1}\\exp((\\mu-x)/\\sigma)$ for $x>\\mu$, zero otherwise, with unknown positive $\\mu,\\sigma$. Let $\\bar X_n,S_n^2,X_{1:n}$ be sample mean, sample variance, and sample minimum, and put $\\theta=\\sigma/\\mu$. Which statements are true?",
+      "options": {
+        "A": "$S_n(X_{1:n})^{-1}$ is consistent for $\\theta$.",
+        "B": "$(\\bar X_n-X_{1:n})(X_{1:n})^{-1}$ is consistent for $\\theta$.",
+        "C": "$(\\bar X_n-X_{1:n})(\\bar X_n-S_n)^{-1}$ is consistent for $\\theta$.",
+        "D": "$S_n(\\bar X_n)^{-1}$ is consistent for $\\theta$."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "For a shifted exponential, the mean is $\\mu+\\sigma$, the standard deviation is $\\sigma$, and the minimum converges to $\\mu$.",
+        "Apply the continuous mapping theorem to each ratio; $\\mu>0$ keeps the intended limiting denominators nonzero."
+      ],
+      "solution": "The laws of large numbers give $\\bar X_n\\to\\mu+\\sigma$ and $S_n\\to\\sigma$ almost surely. Also $P(X_{1:n}>\\mu+\\epsilon)=e^{-n\\epsilon/\\sigma}\\to0$, and the minimum in fact converges almost surely to $\\mu$. Thus A tends to $\\sigma/\\mu$, B to $((\\mu+\\sigma)-\\mu)/\\mu=\\sigma/\\mu$, and C to $\\sigma/((\\mu+\\sigma)-\\sigma)=\\sigma/\\mu$. D tends to $\\sigma/(\\mu+\\sigma)$, different from $\\sigma/\\mu$ since both parameters are positive. A, B, C are consistent. Any zero finite-sample denominator in C can be assigned an arbitrary value on that null event without changing consistency.",
+      "theory": "A shifted exponential is a location-scale family: $X=\\mu+\\sigma E$ with $E$ standard exponential. Its mean is $\\mu+\\sigma$, variance $\\sigma^2$, and lower support endpoint $\\mu$. Sample means and variances converge under suitable finite moments, which are available here. The minimum estimates the lower endpoint because the probability that every observation exceeds a fixed positive distance above it decays exponentially with sample size. The continuous mapping theorem transfers joint convergence through sums, differences, square roots, and ratios whose limiting denominators are nonzero. Both the $n$ and $n-1$ sample-variance conventions are consistent. An estimator can be inconsistent despite each of its ingredients being consistent for something: the target of the final formula must be computed explicitly. Positivity of $\\mu$ is essential for these ratio conclusions.",
+      "similar_questions": [
+        {
+          "prompt": "For a shifted exponential, construct a consistent estimator of $\\mu$ using mean and standard deviation.",
+          "solution": "$\\bar X_n-S_n\\to(\\mu+\\sigma)-\\sigma=\\mu$. Thus this difference is consistent, although it may be negative in small samples."
+        },
+        {
+          "prompt": "Find the limit of $S_n/(\\bar X_n-X_{1:n})$.",
+          "solution": "The numerator tends to $\\sigma$ and the denominator to $(\\mu+\\sigma)-\\mu=\\sigma>0$. The ratio therefore tends to 1, and it is not generally an estimator of $\\sigma/\\mu$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 63, PDF page 38. No candidate response used as an answer key.",
+      "page": 38,
+      "image": "assets/questions/2025-december-q063.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q064",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 64,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "A dataset of $n$ observations is $A=\\{x_1,\\ldots,x_n\\}$. Form $B=\\{x_1,\\ldots,x_n,-x_1,\\ldots,-x_n\\}$. Which statements are always true? Variance is calculated with divisor equal to the number of observations in each dataset.",
+      "options": {
+        "A": "The mean of B is 0.",
+        "B": "The median of B is 0.",
+        "C": "Variance of B is at least variance of A.",
+        "D": "Range of B is at least range of A."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Pair each observation with its negative. The ordered list has symmetric middle entries.",
+        "Compare $\\operatorname{Var}(A)=n^{-1}\\sum x_i^2-\\bar x^2$ with $\\operatorname{Var}(B)=n^{-1}\\sum x_i^2$."
+      ],
+      "solution": "Treat the observations as a dataset with multiplicities, as specified by the $2n$ displayed entries. Each pair sums to zero, so the mean of B is zero. If its ordered values are $b_1\\le\\cdots\\le b_{2n}$, symmetry gives $b_j=-b_{2n+1-j}$, and the usual median $(b_n+b_{n+1})/2$ is zero. Put $m_2=n^{-1}\\sum x_i^2$. Then $\\operatorname{Var}(B)=m_2$ and $\\operatorname{Var}(A)=m_2-\\bar x^2$, proving C. Since B contains all of A, its minimum cannot increase and maximum cannot decrease, proving D. All four are true.",
+      "theory": "The arithmetic mean and variance of a dataset count repeated observations; set braces in a statistical list ordinarily indicate a multiset rather than deletion of repetitions. Adding the negatives creates a distribution symmetric about zero. With an even number of observations the standard sample median is the average of the two central ordered values, and symmetry makes these opposite numbers. Variance using divisor equal to sample size is the second raw moment minus the squared mean. The question explicitly chooses this convention, so the comparison does not involve differing unbiased-variance corrections. Range is maximum minus minimum and is monotone under inclusion of additional observations. If median were instead defined as the whole interval of minimizing absolute-deviation locations, zero would still be a median; the usual numerical median here is exactly zero.",
+      "similar_questions": [
+        {
+          "prompt": "For $A=(1,3)$, calculate all four summaries for $B=(1,3,-1,-3)$.",
+          "solution": "Mean and median are zero. $\\operatorname{Var}(A)=1$, while $\\operatorname{Var}(B)=(1+9+1+9)/4=5$. Ranges are 2 for A and 6 for B."
+        },
+        {
+          "prompt": "When does the variance comparison become equality?",
+          "solution": "The difference is $\\operatorname{Var}(B)-\\operatorname{Var}(A)=\\bar x^2$. Equality holds exactly when the original mean is zero; for example $A=(-2,2)$ has variance 4 and B also has variance 4."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 64, PDF page 38. No candidate response used as an answer key.",
+      "page": 38,
+      "image": "assets/questions/2025-december-q064.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q065",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 65,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Abstract Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let $G$ be a group of order 8. Which statements are necessarily true?",
+      "options": {
+        "A": "If there are no elements of order 4, G is abelian.",
+        "B": "If there are exactly two elements of order 4, G is abelian.",
+        "C": "If there are exactly six elements of order 4, G is abelian.",
+        "D": "There is an element of order 4 in G."
+      },
+      "correct_options": [
+        "A"
+      ],
+      "hints": [
+        "By Lagrange, element orders divide 8. An element of order 8 would have a square of order 4.",
+        "The dihedral group of the square and the quaternion group give different nonabelian order-8 examples."
+      ],
+      "solution": "If no element has order 4, no element can have order 8 either. Every nonidentity element therefore has order 2. For all $a,b$, $(ab)^{-1}=ab$ while also $(ab)^{-1}=b^{-1}a^{-1}=ba$, so $ab=ba$: A is true. The dihedral group $D_8=\\langle r,s:r^4=s^2=e,srs=r^{-1}\\rangle$ is nonabelian and has exactly two order-4 elements $r,r^3$, disproving B. The quaternion group $Q_8$ is nonabelian and has six order-4 elements $\\pm i,\\pm j,\\pm k$, disproving C. The elementary abelian group $C_2^3$ has no order-4 element, disproving D.",
+      "theory": "Lagrange's theorem restricts an element's order to a divisor of the finite group order, but does not guarantee every divisor occurs. If all elements satisfy $g^2=e$, the inversion identity forces the group to be abelian; this is a useful general fact independent of order eight. The dihedral group of a square consists of four rotations and four reflections. Its quarter-turn rotations have order four, while reflections have order two. The quaternion group has a central element $-1$ of order two and six noncentral elements of order four, and its multiplication is noncommutative. Elementary abelian two-groups have every nonidentity element of order two. These examples demonstrate why counting elements of a given order does not by itself imply commutativity.",
+      "similar_questions": [
+        {
+          "prompt": "Prove any group with $g^2=e$ for every $g$ is abelian.",
+          "solution": "For $a,b$, $ab=(ab)^{-1}=b^{-1}a^{-1}=ba$, since each element equals its inverse. Thus all products commute."
+        },
+        {
+          "prompt": "Count order-4 elements in the cyclic group $C_8$.",
+          "solution": "If $a$ generates $C_8$, $a^k$ has order $8/\\gcd(8,k)$. Order four requires $\\gcd(8,k)=2$, giving $k=2,6$, exactly two elements. This group is abelian, unlike $D_8$ with the same count."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 65, PDF page 39. No candidate response used as an answer key.",
+      "page": 39,
+      "image": "assets/questions/2025-december-q065.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q066",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 66,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\alpha=\\sum_{\\ell=1}^{2025}a_\\ell/10^\\ell$, with $a_\\ell\\in\\{0,\\ldots,9\\}$ and $a_{2025}\\ne0$. Let $(\\beta_n)$ be strictly increasing in $(0,1)$ with limit $\\alpha$. Write $\\beta_n=\\sum_{\\ell=1}^\\infty b_{n,\\ell}/10^\\ell$ for its infinite decimal expansion. Which statements are necessarily true?",
+      "options": {
+        "A": "Eventually $b_{n,\\ell}=a_\\ell$ for every $1\\le\\ell\\le2023$.",
+        "B": "Eventually $b_{n,2025}=a_{2025}-1$.",
+        "C": "$\\beta_n$ is rational for infinitely many $n$.",
+        "D": "Eventually $b_{n,2024}=a_{2024}-1$."
+      },
+      "correct_options": [
+        "A",
+        "B"
+      ],
+      "hints": [
+        "All sequence terms lie strictly below their increasing limit. Eventually they lie between $\\alpha-10^{-2025}$ and $\\alpha$.",
+        "This interval has the first 2024 digits fixed and the 2025th digit one less than that of the terminating limit."
+      ],
+      "solution": "Strict increase to $\\alpha$ implies $\\beta_n<\\alpha$ for every n. Eventually $\\alpha-10^{-2025}<\\beta_n<\\alpha$. Since $a_{2025}\\ge1$, subtracting $10^{-2025}$ changes only the last nonzero displayed digit, to $a_{2025}-1$. Every number in this open decimal cell has first 2024 digits $a_1,\\ldots,a_{2024}$ and digit 2025 equal to $a_{2025}-1$, irrespective of any nonunique expansion further to the right. Thus A and B hold, while D fails: digit 2024 stays $a_{2024}$. C need not hold: choose an irrational positive $c<\\alpha$ and $\\beta_n=\\alpha-c/n$. Every term is irrational, positive, strictly increasing, and converges to $\\alpha$.",
+      "theory": "Terminating decimals lie at boundaries of decimal cells, so convergence from below behaves differently from convergence inside a cell. The final nonzero digit is reduced by one in nearby smaller numbers, while the later digits approach a tail of nines. Earlier digits remain fixed once the sequence enters the appropriate open cell. Decimal representations are not unique at terminating numbers, but the two representations first differ at the terminating digit and cannot affect a fixed prefix for points strictly inside a chosen cell. Monotone convergence from below determines the side of approach; without that condition the final digit could differ. Rationality is not preserved or forced by convergence to a rational limit. Adding an irrational shrinking perturbation constructs sequences with entirely irrational terms and a rational limit.",
+      "similar_questions": [
+        {
+          "prompt": "If $\\beta_n\\uparrow0.375$, what are its eventual first three decimal digits?",
+          "solution": "Eventually $0.374<\\beta_n<0.375$. The first two digits are 3 and 7, and the third is 4. Later digits supply the approach toward the terminating boundary."
+        },
+        {
+          "prompt": "Construct a strictly increasing irrational sequence converging to $1/2$ from below.",
+          "solution": "Take $\\beta_n=1/2-\\sqrt2/(10n)$. Every term is irrational, lies in $(0,1/2)$, increases as n grows, and tends to $1/2$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 66, PDF page 39. No candidate response used as an answer key.",
+      "page": 39,
+      "image": "assets/questions/2025-december-q066.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q067",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 67,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Real Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\mathcal F$ consist of functions $f:[0,\\infty)\\to[0,\\infty)$ that are Riemann integrable on every $[0,t]$. Which statements are necessarily true?",
+      "options": {
+        "A": "If $f\\in\\mathcal F$ is continuous and $f(n)=0$ at every positive integer, then $\\lim_{x\\to\\infty}\\int_0^x f(t)dt$ exists in $\\mathbb R$.",
+        "B": "If $f\\in\\mathcal F$ is uniformly continuous and its improper integral exists in $\\mathbb R$, then $f(x)\\to0$.",
+        "C": "There is $f\\in\\mathcal F$ with finite improper integral but $\\lim_{x\\to\\infty}f(x)\\ne0$.",
+        "D": "If $f\\in\\mathcal F$ is Lebesgue measurable and $\\lim_{x\\to\\infty}\\int_0^x f(t)dt=0$, then $f=0$ almost everywhere."
+      },
+      "correct_options": [],
+      "hints": [
+        "Nonnegativity makes the cumulative integral increasing. Uniform continuity prevents arbitrarily narrow peaks of fixed height.",
+        "Distinguish an existing limit different from zero from failure to converge to zero; option C uses the former notation, while integrable spikes illustrate the latter."
+      ],
+      "solution": "A is false: $f(x)=\\sin^2(\\pi x)$ vanishes at every integer but has an infinite integral. B is true: if $f(x_j)\\ge\\epsilon$ for $x_j\\to\\infty$, uniform continuity gives intervals of a common positive width with $f\\ge\\epsilon/2$. A disjoint subsequence of these intervals forces an infinite integral. D is true: nonnegative cumulative integrals increasing to zero are all zero, and a nonnegative measurable function with zero integral is zero almost everywhere. C has a material notation ambiguity. Literally an existing nonzero limit is impossible: a positive finite limit, or $+\\infty$, forces infinite integral. Under that reading the answer is B,D. If the intended meaning is “f does not converge to zero,” C is true: disjoint triangular peaks of height one at the integers with half-width $2^{-n-2}$ have finite total area but $f(n)=1$. That reading yields B,C,D. Because the printed limit inequality does not distinguish these readings, no unqualified option set is assigned.",
+      "theory": "For a nonnegative function, improper integrability means its cumulative integrals have a finite increasing limit. Uniform continuity plus integrability forces pointwise decay, sometimes called the uniform-continuity form of Barbalat's lemma: a fixed positive height would create a fixed minimum width and consume a fixed amount of area infinitely often. Without uniform continuity, narrow peaks can retain positive heights while their total area is summable. Such a function has no limit at infinity rather than an existing nonzero limit. If a nonnegative integrable function has any limit at infinity, that limit must be zero. Finally, a nonnegative measurable function of integral zero vanishes almost everywhere. The distinction between “the limit is nonzero” and “the function does not tend to zero” matters mathematically and changes the answer to this exact source.",
+      "similar_questions": [
+        {
+          "prompt": "Construct a continuous nonnegative integrable function that does not tend to zero.",
+          "solution": "Use triangular bumps centered at integer n with height 1 and half-width $2^{-n-2}$, zero elsewhere. Supports are disjoint. Their areas sum to $\\sum2^{-n-2}<\\infty$, but values at n are 1 and between bumps are 0, so no limit exists."
+        },
+        {
+          "prompt": "Show a nonnegative integrable function cannot have limit $L>0$.",
+          "solution": "If $f(x)\\to L>0$, then for sufficiently large x, $f(x)>L/2$. The integral over $[M,R]$ is at least $(L/2)(R-M)$, tending to infinity, a contradiction."
+        }
+      ],
+      "review_status": "source_issue",
+      "source_note": "Option C writes lim f(x) != 0. An existing nonzero limit is impossible, giving B,D; the common intended reading “does not converge to zero” allows spikes and gives B,C,D. The exact printed wording is preserved; no official final-key verification claimed.",
+      "answer_source": "Independent mathematical derivation; question 67, PDF page 40. No candidate response used as an answer key.",
+      "page": 40,
+      "image": "assets/questions/2025-december-q067.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q068",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 68,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Ordinary Differential Equations",
+      "difficulty": "Moderate",
+      "prompt": "Consider $y\\prime\\prime+r(x)y=0$, where $r(x)=x^3\\sin(1/x)$ for $x\\ne0$ and $r(0)=0$. Which statements are true?",
+      "options": {
+        "A": "A nontrivial solution has infinitely many zeros in some compact interval $[\\alpha,\\beta]$.",
+        "B": "A nontrivial solution has zeros $x_n\\to\\infty$.",
+        "C": "The Wronskian of two linearly independent solutions is constant on $\\mathbb R$.",
+        "D": "A nontrivial solution vanishes at most once in $(0,\\infty)$."
+      },
+      "correct_options": [
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The coefficient is continuous everywhere, so initial-value uniqueness rules out accumulating zeros in a compact interval.",
+        "For large positive x, $r(x)\\sim x^2$ and is bounded below by 1. Use Sturm comparison; Abel's identity gives the Wronskian."
+      ],
+      "solution": "Continuity at zero follows from $|x^3\\sin(1/x)|\\le|x|^3$. If zeros of a nontrivial solution accumulate at a finite point a, continuity gives $y(a)=0$ and Rolle's theorem gives $y\\prime(a)=0$, contradicting uniqueness; A is false. For $x\\ge2$, $\\sin(1/x)\\ge1/(2x)$, so $r(x)\\ge x^2/2\\ge1$. Compare with $z\\prime\\prime+z=0$. Sturm comparison yields a zero of every nontrivial solution between consecutive sufficiently distant zeros of sine, hence infinitely many positive zeros. Thus B is true and D false. Abel's identity gives $W\\prime=-pW=0$ because the coefficient p of $y\\prime$ is zero, proving C.",
+      "theory": "For a second-order linear ODE with continuous coefficients, each prescribed pair of initial values gives a unique solution. Consequently a nontrivial solution cannot have both value and derivative zero at one point, and its zeros cannot accumulate at a finite location. Oscillation at infinity is a different issue, controlled by the sign and size of the coefficient. Sturm comparison says that a solution of the equation with a larger positive potential must have zeros between zeros of a comparison solution, subject to the standard nontriviality conditions. A positive uniform lower bound eventually permits comparison with sine and forces infinitely many zeros. Abel's Wronskian formula is $W\\prime=-pW$ for $y\\prime\\prime+p y\\prime+q y=0$; a vanishing first-derivative coefficient makes W constant.",
+      "similar_questions": [
+        {
+          "prompt": "For $y\\prime\\prime+4y=0$, describe zeros and Wronskian for $\\cos2x,\\sin2x$.",
+          "solution": "Every nontrivial solution is $R\\cos(2x-\\delta)$ and has infinitely many zeros spaced $\\pi/2$. The Wronskian is $2\\cos^2(2x)+2\\sin^2(2x)=2$."
+        },
+        {
+          "prompt": "Can a nontrivial solution of $y\\prime\\prime+x^2y=0$ have zeros accumulating at zero?",
+          "solution": "No. The coefficient is continuous; an accumulating zero sequence gives value and derivative zero at zero, and uniqueness forces the zero solution. This does not preclude infinitely many zeros tending to infinity."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 68, PDF page 40. No candidate response used as an answer key.",
+      "page": 40,
+      "image": "assets/questions/2025-december-q068.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q069",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 69,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let $X=\\prod_{c\\in(0,\\infty)}[0,c]$ have the product topology, each factor carrying its Euclidean topology. Which statements are necessarily true?",
+      "options": {
+        "A": "X is metrizable.",
+        "B": "X is compact.",
+        "C": "X is Hausdorff.",
+        "D": "X is connected."
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Compactness, Hausdorffness, and connectedness are preserved by arbitrary products.",
+        "A countable collection of product neighborhoods restricts only countably many coordinates, so it cannot be a local base for this uncountable product."
+      ],
+      "solution": "Each nondegenerate interval $[0,c]$ is compact, Hausdorff and connected. Tychonoff's theorem proves compactness, and arbitrary products preserve Hausdorffness and connectedness, so B,C,D hold. For A, suppose a point had a countable local base. Within every base member choose a basic neighborhood restricting finitely many coordinates. Their union of restricted coordinates is countable; choose an index d outside it. A proper neighborhood in coordinate d cannot contain any of these basic neighborhoods, since that coordinate is unrestricted there. This contradicts a local base. Thus X is not first countable and hence not metrizable.",
+      "theory": "The product topology is generated by neighborhoods that restrict only finitely many coordinates. It differs sharply from the box topology, where all coordinates may be restricted simultaneously. Tychonoff's theorem gives compactness of arbitrary products of compact spaces. Product Hausdorffness follows by separating distinct points in a coordinate where they differ. Connectedness of arbitrary products follows from connectedness of finite products and density of points differing from a fixed basepoint in only finitely many coordinates. A countable product of metrizable spaces is metrizable, but an uncountable product of nontrivial factors need not be. Every metric space is first countable. In the present uncountable product, any putative countable local base misses a coordinate entirely, which supplies an open neighborhood disproving the base property.",
+      "similar_questions": [
+        {
+          "prompt": "Is $[0,1]^{\\mathbb N}$ compact and metrizable?",
+          "solution": "Yes. Tychonoff gives compactness. The metric $d(x,y)=\\sum_{n\\ge1}2^{-n}|x_n-y_n|$ induces its product topology, by tail control and finitely many coordinate restrictions."
+        },
+        {
+          "prompt": "Why is an uncountable product of two-point discrete spaces not first countable?",
+          "solution": "A countable family of basic neighborhoods at a point mentions only countably many coordinates. Choose another coordinate and require its value to equal the basepoint. None of the proposed neighborhoods is contained in this new neighborhood, contradicting a local base."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 69, PDF page 41. No candidate response used as an answer key.",
+      "page": 41,
+      "image": "assets/questions/2025-december-q069.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q070",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 70,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,\\ldots,X_n$, $n\\ge2$, be a random sample from $\\operatorname{Uniform}[-3\\theta/2,\\theta/2]$, with unknown $\\theta>0$. Let $\\bar X,X_{(1)},X_{(n)}$ denote sample mean, minimum and maximum. Which statements are true?",
+      "options": {
+        "A": "The method-of-moments estimator is $-2\\bar X$.",
+        "B": "The method-of-moments estimator is $2\\bar X$.",
+        "C": "The maximum likelihood estimator is $\\min\\{-2X_{(1)}/3,2X_{(n)}\\}$.",
+        "D": "The maximum likelihood estimator is $\\max\\{-2X_{(1)}/3,2X_{(n)}\\}$."
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "The population mean is the midpoint of the two support endpoints.",
+        "All observations must satisfy both endpoint inequalities. The likelihood decreases as the feasible scale increases."
+      ],
+      "solution": "The mean is $(-3\\theta/2+\\theta/2)/2=-\\theta/2$, so matching the first moment gives $\\hat\\theta_{MM}=-2\\bar X$, A. This formal moment estimate can fall outside the positive parameter space for some samples, but it is the standard first-moment solution. The joint likelihood is $(2\\theta)^{-n}$ provided $\\theta\\ge-2X_{(1)}/3$ and $\\theta\\ge2X_{(n)}$, and is zero otherwise. The maximum of the two bounds is positive almost surely and the likelihood decreases in $\\theta$, so the maximizing feasible value is that maximum. Thus D is true; B has the wrong sign and C may exclude observations.",
+      "theory": "The method of moments matches sample moments to population moments and solves for the parameter. In an asymmetric uniform scale family, the mean need not be zero; it is the midpoint of the support endpoints. The algebraic moment estimate may occasionally lie outside the parameter space, a general limitation of an unconstrained method-of-moments formula. Maximum likelihood must retain the parameter-dependent support indicator. For uniform data, the density decreases as interval width increases, so the MLE is the smallest parameter value whose interval contains every observation. Lower and upper support constraints give simultaneous lower bounds on a positive scale, hence their maximum. Taking their minimum is a common error because it enforces only one constraint. Sample extrema summarize all support constraints; the interior observations do not affect this likelihood maximizer.",
+      "similar_questions": [
+        {
+          "prompt": "For observations $-3,1$ from this family, find the two estimators.",
+          "solution": "The mean is -1, so the moment estimator is 2. The support bounds are $-2(-3)/3=2$ and $2(1)=2$, so the MLE is also 2."
+        },
+        {
+          "prompt": "For $X_i\\sim U[-\\theta,2\\theta]$, find the formal first-moment estimator and MLE.",
+          "solution": "The mean is $\\theta/2$, giving $2\\bar X$. Support requires $\\theta\\ge-X_{(1)}$ and $\\theta\\ge X_{(n)}/2$, so the MLE is $\\max\\{-X_{(1)},X_{(n)}/2\\}$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 70, PDF page 41. No candidate response used as an answer key.",
+      "page": 41,
+      "image": "assets/questions/2025-december-q070.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q071",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 71,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Topology",
+      "difficulty": "Moderate",
+      "prompt": "Let $\\tau_E$ be the Euclidean topology on $\\mathbb R$. Which statements are necessarily true?",
+      "options": {
+        "A": "$(\\mathbb R,\\tau_E)$ is normal.",
+        "B": "For a topology $\\tau$, continuity of the identity $(\\mathbb R,\\tau_E)\\to(\\mathbb R,\\tau)$ implies $(\\mathbb R,\\tau)$ is regular.",
+        "C": "For a topology $\\tau$, continuity of the identity $(\\mathbb R,\\tau)\\to(\\mathbb R,\\tau_E)$ implies $(\\mathbb R,\\tau)$ is Hausdorff.",
+        "D": "$\\mathbb R$ with the finite-complement topology is regular."
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "A continuous identity map means every target-open set is source-open.",
+        "The cofinite topology is coarser than the Euclidean topology but cannot separate a point from a different singleton by disjoint open neighborhoods."
+      ],
+      "solution": "A is true because every metric space is normal. For C, continuity means $\\tau_E\\subseteq\\tau$. Euclidean disjoint neighborhoods separating distinct points remain $\\tau$-open, so the finer topology is Hausdorff. B is false: the cofinite topology satisfies $\\tau\\subseteq\\tau_E$, making the identity from Euclidean space continuous, but it is not regular. For D, choose distinct x,y; $\\{y\\}$ is closed. Any neighborhoods of x and of $\\{y\\}$ are nonempty cofinite open sets, so they intersect. Point–closed-set separation fails. Thus only A,C hold, regardless of whether regularity includes a separate $T_1$ requirement.",
+      "theory": "Separation axioms concern the availability of suitable open neighborhoods. A Hausdorff space separates distinct points; a regular space separates a point from a closed set not containing it; a normal space separates disjoint closed sets. Metric spaces satisfy these properties. For the identity map between two topologies on the same set, continuity is equivalent to containment of the target topology in the source topology. Passing to a finer topology preserves Hausdorffness because previously available separating neighborhoods remain open. Regularity and normality do not follow merely from having a continuous identity from a well-separated space into a coarser topology. In an infinite cofinite space, any two nonempty open sets intersect, although singletons are closed. This provides a direct counterexample to point–closed-set separation.",
+      "similar_questions": [
+        {
+          "prompt": "Is the discrete topology on $\\mathbb R$ finer than Euclidean, and is it Hausdorff?",
+          "solution": "Every Euclidean-open set is discrete-open, so it is finer. Distinct points are separated by their singleton neighborhoods, proving Hausdorffness."
+        },
+        {
+          "prompt": "Why is the identity from Euclidean $\\mathbb R$ to cofinite $\\mathbb R$ continuous?",
+          "solution": "The inverse image of a cofinite open set is that same set. Its complement is finite and hence Euclidean closed, so the set is Euclidean open. Thus all target-open inverse images are open."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 71, PDF page 42. No candidate response used as an answer key.",
+      "page": 42,
+      "image": "assets/questions/2025-december-q071.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q072",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 72,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Integral Equations",
+      "difficulty": "Moderate",
+      "prompt": "Let $y(x)$ solve $y(x)=e^x+e+1+\\frac13\\int_0^1y(t)dt$, and let $R(x,t,1/3)$ be the associated resolvent kernel. Which statements are true?",
+      "options": {
+        "A": "$R(0,1,1/3)=3/2$",
+        "B": "$R(1/2,1/2,1/3)=2/3$",
+        "C": "$y(1)=3e+1$",
+        "D": "$y(1)=e+3$"
+      },
+      "correct_options": [
+        "A",
+        "C"
+      ],
+      "hints": [
+        "For kernel $K(x,t)=1$ on $[0,1]$, all iterated kernels are one.",
+        "First find the scalar $C=\\int_0^1 y(t)dt$, then substitute it back into the equation."
+      ],
+      "solution": "Using the standard convention $y=f+\\lambda\\int Rf$ for $y=f+\\lambda Ky$, the resolvent is $R=\\sum_{j\\ge1}\\lambda^{j-1}K_j$. Here every $K_j=1$, so at $\\lambda=1/3$, $R=1/(1-1/3)=3/2$ everywhere. A holds and B fails. Integrate the original equation: $C=(e-1)+(e+1)+C/3=2e+C/3$. Hence $C=3e$ and $y(x)=e^x+2e+1$. At $x=1$, $y(1)=3e+1$, so C holds and D fails.",
+      "theory": "A Fredholm integral equation of the second kind has form $y=f+\\lambda Ky$ on a fixed integration interval. A finite-rank or constant kernel reduces the problem to finitely many algebraic equations. For the constant-one kernel on an interval of length one, the operator sends each function to its integral as a constant, and $K^2=K$. Its resolvent kernel in the usual convention is $1/(1-\\lambda)$ when $\\lambda\\ne1$. The factor $\\lambda$ remains outside the resolvent integral; including it inside would define a different kernel convention. The Neumann series converges directly for $|\\lambda|<1$, which includes the source value. At the exceptional value $\\lambda=1$, solvability and uniqueness must be checked separately. Always distinguish the resolvent itself from the actual solution contribution $\\lambda R$.",
+      "similar_questions": [
+        {
+          "prompt": "Solve $y(x)=x+\\frac12\\int_0^1y(t)dt$ and give the resolvent.",
+          "solution": "Let $C=\\int y$. Then $C=1/2+C/2$, so $C=1$ and $y=x+1/2$. The resolvent is $1/(1-1/2)=2$."
+        },
+        {
+          "prompt": "When is $y(x)=f(x)+\\int_0^1y(t)dt$ solvable?",
+          "solution": "Integrating gives $C=\\int f+C$, so $\\int_0^1f=0$ is necessary. If that holds, every $y=f+C$ solves the equation for arbitrary constant C, giving nonuniqueness."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 72, PDF page 43. No candidate response used as an answer key.",
+      "page": 43,
+      "image": "assets/questions/2025-december-q072.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q073",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 73,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Statistical Inference",
+      "difficulty": "Moderate",
+      "prompt": "Suppose $X\\mid\\theta\\sim\\operatorname{Binomial}(7,\\theta)$, $0<\\theta<1$, with prior $\\theta\\sim\\operatorname{Beta}(\\alpha,\\beta)$ for known positive $\\alpha,\\beta$. Which statements MAY NOT be true?",
+      "options": {
+        "A": "Given X=2, the posterior mean is less than the prior mean.",
+        "B": "Given X=3, the posterior mean is greater than the prior mean.",
+        "C": "Given X=4, the posterior mean is not equal to the prior mean.",
+        "D": "Given X=5, the posterior mean is equal to the prior mean."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "The posterior is Beta$(\\alpha+X,\\beta+7-X)$, so compare $(\\alpha+X)/(\\alpha+\\beta+7)$ with $\\alpha/(\\alpha+\\beta)$.",
+        "The sign of their difference is the sign of $X/7$ minus the prior mean. “May not” asks whether each assertion can fail for some permitted prior."
+      ],
+      "solution": "Put $s=\\alpha+\\beta$ and $m=\\alpha/s$. The posterior mean is $(sm+X)/(s+7)$, and its difference from m is $(X-7m)/(s+7)$. A can fail when $m<2/7$: for $(\\alpha,\\beta)=(1,6)$ and X=2, the mean rises from $1/7$ to $3/14$. B can fail with $(1,1)$ and X=3, when the mean falls from $1/2$ to $4/9$. C fails for $(4,3)$ and X=4, because both means equal $4/7$. D fails with $(1,1)$ and X=5, because the posterior mean is $6/9=2/3$, not $1/2$. Hence every assertion may fail: A,B,C,D.",
+      "theory": "The beta family is conjugate to binomial sampling: multiplying the prior density $\\theta^{\\alpha-1}(1-\\theta)^{\\beta-1}$ by the binomial likelihood adds successes to $\\alpha$ and failures to $\\beta$. The posterior mean is a weighted average of the prior mean and the empirical success proportion, with weights $\\alpha+\\beta$ and the sample size. It rises, falls, or remains unchanged according to whether the empirical proportion exceeds, falls below, or equals the prior mean. Positive hyperparameters allow any prior mean strictly between zero and one. The phrasing “may not be true” is existential about failure and differs from asking which claims always fail: one valid counterexample per option is sufficient. Equality can occur for specially matched hyperparameter ratios, so a universal nonequality assertion is also vulnerable.",
+      "similar_questions": [
+        {
+          "prompt": "With Beta$(2,2)$ prior and 8 successes in 10 trials, compute prior and posterior means.",
+          "solution": "The prior mean is $1/2$. The posterior is Beta$(10,4)$ with mean $10/14=5/7$, which is between $1/2$ and the empirical proportion $4/5$."
+        },
+        {
+          "prompt": "Which Beta prior means make observing 3 successes in 7 trials leave the posterior mean unchanged?",
+          "solution": "The difference is zero exactly when $m=3/7$. Thus every positive pair with $\\alpha:\\beta=3:4$, such as $(3,4)$, gives equal prior and posterior means."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 73, PDF page 43. No candidate response used as an answer key.",
+      "page": 43,
+      "image": "assets/questions/2025-december-q073.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q074",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 74,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let $A\\in M_4(\\mathbb C)$ satisfy $A^2=I$ and $\\operatorname{Trace}(A)=0$. Which statements are necessarily true?",
+      "options": {
+        "A": "$\\{B:AB+BA=0\\}$ is an 8-dimensional complex vector space.",
+        "B": "$\\{B:AB-BA=0\\}$ is an 8-dimensional complex vector space.",
+        "C": "There exists $B$ with $AB+BA=0$, $B^2=I$, and $\\operatorname{Trace}(B)=0$.",
+        "D": "Every $B$ satisfying $AB+BA=0$ is diagonalizable."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The minimal polynomial divides $(t-1)(t+1)$, so A is diagonalizable. Trace zero gives two eigenvalues of each sign.",
+        "Use block matrices relative to the positive and negative eigenspaces: commuting blocks are diagonal, anticommuting blocks off-diagonal."
+      ],
+      "solution": "Since the annihilating polynomial has simple roots, A is similar to $D=\\operatorname{diag}(I_2,-I_2)$; trace zero forces multiplicities two and two. For $B=\\begin{pmatrix}P&Q\\\\R&S\\end{pmatrix}$, $DB+BD=\\begin{pmatrix}2P&0\\\\0&-2S\\end{pmatrix}$, so anticommuting B have arbitrary 2-by-2 blocks Q,R and dimension 8: A. Commuting B have Q=R=0 with arbitrary P,S, also dimension 8: B. The matrix $\\begin{pmatrix}0&I_2\\\\I_2&0\\end{pmatrix}$ anticommutes, squares to I and has trace zero, proving C. But $N=\\begin{pmatrix}0&I_2\\\\0&0\\end{pmatrix}$ anticommutes and is nonzero with $N^2=0$, hence is not diagonalizable. Similarity transports these examples back to A, disproving D.",
+      "theory": "A matrix annihilated by a product of distinct linear factors is diagonalizable. An involution over the complex numbers therefore splits the vector space into its plus-one and minus-one eigenspaces. Trace zero in dimension four forces equal dimensions. Commuting operators preserve these eigenspaces, whereas anticommuting operators exchange them: if $Av=v$, then $A(Bv)=-Bv$. Block notation exposes the free parameters and makes dimension counting reliable. Similarity is a linear isomorphism on the whole matrix space and preserves matrix equations, trace, and diagonalizability. Anticommutation alone does not constrain a matrix's minimal polynomial to have simple roots. Nonzero nilpotent off-diagonal blocks give immediate counterexamples. In contrast, an anticommuting matrix whose square is identity is itself diagonalizable, but that additional condition is absent from the final universal claim.",
+      "similar_questions": [
+        {
+          "prompt": "If an involution has eigenspace dimensions p and q, find dimensions of its commuting and anticommuting matrix spaces.",
+          "solution": "Commuting matrices have arbitrary diagonal blocks of sizes p-by-p and q-by-q, giving $p^2+q^2$. Anticommuting matrices have two rectangular off-diagonal blocks, giving $2pq$."
+        },
+        {
+          "prompt": "For $A=\\operatorname{diag}(1,-1)$, give a nondiagonalizable anticommuting matrix.",
+          "solution": "$B=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$ satisfies $AB+BA=0$. It is nonzero and $B^2=0$, so its sole eigenvalue is zero and it cannot be diagonalizable."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 74, PDF page 44. No candidate response used as an answer key.",
+      "page": 44,
+      "image": "assets/questions/2025-december-q074.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q075",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 75,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Stochastic Processes",
+      "difficulty": "Moderate",
+      "prompt": "Consider an $M/M/2$ queue with arrival rate $\\lambda=4$ per minute, service rate $\\mu=1$ per minute, and total capacity 3 customers including those being served. Let $p_0,p_3$ be the long-run empty and full probabilities. Which statements are true?",
+      "options": {
+        "A": "$p_0+p_3=17/29$",
+        "B": "$p_0>p_3$",
+        "C": "$p_3/p_0=2$",
+        "D": "$p_3-p_0=15/29$"
+      },
+      "correct_options": [
+        "A",
+        "D"
+      ],
+      "hints": [
+        "The death rate in state j is $\\min(j,2)\\mu$, while births occur at rate 4 until capacity is reached.",
+        "Use detailed balance to get stationary weights proportional to $1,4,8,16$."
+      ],
+      "solution": "The states are 0,1,2,3. Birth rates are 4 for states 0,1,2 and zero at 3; death rates are 1,2,2 for states 1,2,3. Detailed balance gives $p_1=4p_0$, $p_2=(4/2)p_1=8p_0$, and $p_3=(4/2)p_2=16p_0$. Normalization gives $29p_0=1$. Therefore $p_0=1/29$, $p_3=16/29$, their sum is $17/29$ (A), and difference $p_3-p_0=15/29$ (D). B is false and the ratio is 16 rather than 2, disproving C.",
+      "theory": "A finite-capacity queue is a finite birth–death continuous-time Markov chain and has a stationary distribution even when the arrival rate exceeds the total service capacity. In an M/M/c queue, each occupied server completes service at rate $\\mu$, so the total departure rate is $\\min(j,c)\\mu$ in state j. The per-server rate must not be confused with the aggregate rate. Detailed balance relates neighboring probabilities by $p_{j+1}/p_j=\\lambda_j/\\mu_{j+1}$, and normalization determines their common scale. At the full state, arriving customers are blocked and do not change the state, so the effective birth transition rate is zero. For independent Poisson arrivals, the probability an arrival finds the queue full equals its stationary full-state probability by PASTA, though only time-stationary probabilities are required here.",
+      "similar_questions": [
+        {
+          "prompt": "Find stationary probabilities for an M/M/1/2 queue with arrival rate 2 and service rate 1.",
+          "solution": "The weights are $1,2,4$ because the death rate is 1 in both nonempty states. Dividing by 7 gives $(1/7,2/7,4/7)$."
+        },
+        {
+          "prompt": "For an M/M/2/3 queue with arrival rate 1 and per-server service rate 1, find full probability.",
+          "solution": "Detailed-balance weights are $1,1,1/2,1/4$, summing to $11/4$. Hence $p_3=(1/4)/(11/4)=1/11$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 75, PDF page 44. No candidate response used as an answer key.",
+      "page": 44,
+      "image": "assets/questions/2025-december-q075.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q076",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 76,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "For $n\\ge3$, give $M_n(\\mathbb C)$ the inner product $\\langle A,B\\rangle=\\operatorname{Trace}(A^*B)$. For $0\\le k\\le n$, put $W_k=\\{A:\\langle A,B\\rangle=0\\text{ for every matrix B of rank k}\\}$. Which statements are necessarily true?",
+      "options": {
+        "A": "$W_0=\\{0\\}$",
+        "B": "$W_1=\\{0\\}$",
+        "C": "$W_2=\\{0\\}$",
+        "D": "$W_n=\\{0\\}$"
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "Orthogonality to a set means orthogonality to its linear span. Rank-one matrix units form a basis.",
+        "Express each matrix unit as a sum of two rank-two matrices, and each arbitrary matrix as a difference of two invertible matrices."
+      ],
+      "solution": "The only rank-zero matrix is zero, so every A is orthogonal to it: $W_0=M_n(\\mathbb C)$, not $\\{0\\}$. Rank-one matrices include every $E_{ij}$, so orthogonality forces every entry of A to vanish: B. For a matrix unit $E_{ij}$, choose $E_{pq}$ with $p\\ne i$, $q\\ne j$. Both $E_{ij}+E_{pq}$ and $E_{ij}-E_{pq}$ have rank two, and their sum is $2E_{ij}$. Thus rank-two matrices span all matrix units, proving C. For arbitrary T choose nonzero c such that $T+cI$ is invertible; only finitely many c are forbidden. Then $T=(T+cI)-cI$ is a difference of invertible matrices. Rank-n matrices span the entire space, proving D.",
+      "theory": "The Hilbert–Schmidt inner product on complex matrices is the entrywise inner product, $\\operatorname{Trace}(A^*B)=\\sum\\overline{a_{ij}}b_{ij}$. It is positive definite, and orthogonality to a spanning set forces the zero matrix. Sets of matrices having an exact rank are usually not vector spaces, but their linear spans can be the whole matrix space. Rank-one matrix units are a standard basis. Higher exact-rank matrices can be combined so additional independent rows and columns cancel, recovering those units. Invertible matrices likewise span the full space because a scalar shift makes any matrix invertible except at finitely many exceptional shifts determined by its eigenvalues. The rank-zero set is special: it contains only zero, whose orthogonal complement is the entire space, rather than zero.",
+      "similar_questions": [
+        {
+          "prompt": "Find the orthogonal complement of all diagonal matrices under the Hilbert–Schmidt product.",
+          "solution": "Testing against $E_{ii}$ forces $a_{ii}=0$ for every i and imposes no off-diagonal conditions. Thus the complement is exactly the matrices with zero diagonal."
+        },
+        {
+          "prompt": "Show invertible 2-by-2 matrices span $M_2(\\mathbb C)$.",
+          "solution": "For any T, select nonzero c with $\\det(T+cI)\\ne0$, possible since this determinant is a nonzero quadratic polynomial in c. Both $T+cI$ and $cI$ are invertible and their difference is T."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 76, PDF page 45. No candidate response used as an answer key.",
+      "page": 45,
+      "image": "assets/questions/2025-december-q076.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q077",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 77,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Discrete Mathematics",
+      "difficulty": "Moderate",
+      "prompt": "There are six persons. On each day of 2024 at least one borrowed money from another. Person P is called troublesome in a calendar month M if P borrowed from the same person at least twice during M. Which statements are necessarily true?",
+      "options": {
+        "A": "Every calendar month has at least one troublesome person.",
+        "B": "Any two consecutive calendar months have a troublesome person in at least one of the two.",
+        "C": "At least one person is troublesome in two calendar months.",
+        "D": "At least one person is troublesome in January."
+      },
+      "correct_options": [
+        "B",
+        "C",
+        "D"
+      ],
+      "hints": [
+        "There are $6\\cdot5=30$ ordered borrower–lender pairs. A 31-day month forces one pair to repeat.",
+        "There are seven 31-day months but only six persons; and no pair of consecutive months in 2024 consists entirely of months having at most 30 days."
+      ],
+      "solution": "Choose one borrowing event per day. There are only 30 possible ordered pairs of distinct people. Every 31-day month forces a repeated pair and hence a troublesome borrower. Thus January gives D. Among each pair of consecutive months, at least one has 31 days (February has 29 in leap-year 2024), so B follows. There are seven 31-day months. Select a troublesome borrower in each; with six people, one is selected at least twice, proving C. A is not necessary: in a 30-day month assign each of the 30 ordered pairs to exactly one day, with no other loans. Then nobody borrows twice from the same lender that month. Similar distinct-pair assignments work in February.",
+      "theory": "The pigeonhole principle says that assigning more objects than boxes forces a box to receive at least two objects. Here the boxes must be ordered borrower–lender pairs, because reversing the parties is a different event and does not make a repeated borrower from the same lender. With six people there are 30 such pairs, so 31 daily events force a repetition. The argument remains valid when several loans occur per day, because one representative can be selected per day. A second application uses the seven months with 31 days as objects and six borrowers as boxes. Counterexamples to universal claims must satisfy every stated daily requirement; scheduling each ordered pair once supplies exactly such a month without repetitions. Calendar structure matters for consecutive months and for the leap-year February length.",
+      "similar_questions": [
+        {
+          "prompt": "With five persons, how many days of daily borrowing force a troublesome borrower within that period?",
+          "solution": "There are $5\\cdot4=20$ ordered borrower–lender pairs. Twenty-one days with at least one event daily force a repeated pair; twenty days can avoid repetition by using each pair once."
+        },
+        {
+          "prompt": "If eight months each force at least one troublesome borrower among six persons, what repetition follows?",
+          "solution": "Select one borrower in each month. Eight selections among six people force someone selected in at least two different months. The number of events within a month is irrelevant to this second pigeonhole application."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 77, PDF page 45. No candidate response used as an answer key.",
+      "page": 45,
+      "image": "assets/questions/2025-december-q077.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q078",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 78,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Linear Algebra",
+      "difficulty": "Moderate",
+      "prompt": "Let V be a real vector space, with $\\{u,v,w,x,y\\}$ spanning V and $\\{u,v,x,y\\}$ linearly independent. Which statements are necessarily true?",
+      "options": {
+        "A": "$\\dim V$ is 4 or 5.",
+        "B": "If $2u-3v+5w=0$, then $\\{v,w,x,y\\}$ is a basis.",
+        "C": "If $u-6v+7w=0$, then $\\operatorname{span}\\{v,w,x\\}$ is two-dimensional.",
+        "D": "If $u+w=v+x$, then $\\{u,v,w,y\\}$ is a basis."
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "An independent four-vector set and a spanning five-vector set sandwich the dimension.",
+        "Each displayed relation can replace one vector in the known independent set when the relevant coefficient is nonzero."
+      ],
+      "solution": "Independence gives $\\dim V\\ge4$ and the spanning set gives $\\dim V\\le5$, proving A. Under B, $w=(-2u+3v)/5$, so the original spanning set lies in the span of $v,w,x,y$ because $u=(3v-5w)/2$. Hence these four span V, whose dimension is at least four, and form a basis. Under C, $u=6v-7w$, so $\\operatorname{span}\\{v,w,x\\}=\\operatorname{span}\\{u,v,x\\}$, of dimension three, not two. Under D, $x=u+w-v$ and $w=v+x-u$, so $u,v,w,y$ spans V and is a four-vector basis. Thus A,B,D.",
+      "theory": "For finite-dimensional vector spaces, an independent set has size no greater than the dimension, while a spanning set has size no smaller. A spanning set whose size equals the dimension is automatically a basis. Replacement arguments can be made by solving a linear relation for the vector being removed: a nonzero coefficient ensures it belongs to the span of the remaining vectors. Conversely, solving for the replacement establishes equality of the relevant spans. Any subset of a linearly independent set is independent, so the known triple $u,v,x$ has dimension three. A relation involving an additional vector does not create a dependence among that original triple; it can instead exchange one vector for another. Checking both span and cardinality avoids cumbersome coefficient calculations.",
+      "similar_questions": [
+        {
+          "prompt": "If $a,b,c$ are independent and $d=2a-b$, show $d,b,c$ are independent.",
+          "solution": "If $r d+s b+t c=0$, substitute d to get $2r a+(s-r)b+t c=0$. Independence forces $r=0$, then $s=t=0$."
+        },
+        {
+          "prompt": "A space is spanned by six vectors and contains an independent set of five. What dimensions are possible?",
+          "solution": "The independent set gives dimension at least five, while six spanning vectors give dimension at most six. Hence only five or six are possible."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 78, PDF page 46. No candidate response used as an answer key.",
+      "page": 46,
+      "image": "assets/questions/2025-december-q078.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q079",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 79,
+      "part": "C",
+      "track": "Mathematics",
+      "topic": "Calculus of Variations",
+      "difficulty": "Moderate",
+      "prompt": "Let y be the extremal of $J(y)=\\int_0^1x^2(y\\prime)^2dx$ subject to $y(0)=0$, $y(1)=1$, and $\\int_0^1y^2dx=1/7$. Which statements are true?",
+      "options": {
+        "A": "$y\\prime(1/2)=3/4$",
+        "B": "$y\\prime(1/\\sqrt3)=1$",
+        "C": "$y\\prime(1/3)=1/3$",
+        "D": "$y\\prime(1/4)=1/2$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "hints": [
+        "The isoperimetric Euler–Lagrange equation is a Cauchy–Euler equation. A power $y=x^r$ satisfies both endpoint conditions when $r>0$.",
+        "The integral constraint gives $1/(2r+1)=1/7$, so $r=3$. Verify optimality by completing a square."
+      ],
+      "solution": "With a multiplier, the Euler–Lagrange equation is $(x^2y\\prime)\\prime=\\lambda y$. A regular solution vanishing at zero has form $x^r$ with $r>0$ and $\\lambda=r(r+1)$; the other Euler root $-r-1$ diverges at zero. The endpoint y(1)=1 fixes its coefficient. The constraint $\\int_0^1x^{2r}dx=1/(2r+1)=1/7$ gives $r=3$, hence y=x³ and $y\\prime=3x^2$. Evaluations give $3/4,1,1/3,3/16$, so A,B,C hold and D fails. Global minimality is also exact: integration by parts gives $\\int_0^1(xy\\prime-3y)^2dx=J(y)+12\\int y^2dx-3=J(y)-9/7\\ge0$. Equality holds only for y=x³ with the endpoints.",
+      "theory": "An isoperimetric variational problem minimizes a functional subject to an integral constraint and fixed endpoints. A Lagrange multiplier combines the two integrands, and the Euler–Lagrange equation yields a necessary stationarity condition. When the coefficient is $x^2$, the resulting equation is Cauchy–Euler and admits power solutions; endpoint regularity excludes divergent roots. The singular endpoint at zero must be checked rather than treated as an ordinary point. The integral constraint selects the exponent, while the right endpoint selects the multiplicative constant. Necessary conditions alone do not prove minimization. Completing a square and integrating the cross term by parts gives a sharp lower bound valid for every sufficiently regular admissible function and proves global optimality and uniqueness. Exact derivative values should be substituted only after all constraints have been verified.",
+      "similar_questions": [
+        {
+          "prompt": "Minimize the same J with endpoints 0,1 and constraint $\\int y^2=1/5$.",
+          "solution": "The candidate is $y=x^2$. The identity $\\int(xy\\prime-2y)^2=J+6\\int y^2-2$ gives $J\\ge2-6/5=4/5$, achieved by x². Thus it is the unique minimizer and derivative is 2x."
+        },
+        {
+          "prompt": "For $y=x^r$, $r>0$, compute the constraint integral and J.",
+          "solution": "$\\int_0^1y^2dx=1/(2r+1)$. Since $y\\prime=rx^{r-1}$, $J=\\int_0^1r^2x^{2r}dx=r^2/(2r+1)$. For r=3 these are 1/7 and 9/7."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 79, PDF page 47. No candidate response used as an answer key.",
+      "page": 47,
+      "image": "assets/questions/2025-december-q079.png",
+      "classification_status": "reviewed"
+    },
+    {
+      "id": "2025-december-q080",
+      "source_type": "official_exam",
+      "paper_id": "2025-december",
+      "question_number": 80,
+      "part": "C",
+      "track": "Statistics",
+      "topic": "Regression and Multivariate Analysis",
+      "difficulty": "Moderate",
+      "prompt": "Let $X_1,\\ldots,X_{20}$ be a sample from $N_{12}(\\mu,\\Sigma)$, $\\mu\\in\\mathbb R^{12}$, with positive-definite $\\Sigma$. Put $\\bar X=\\frac1{20}\\sum X_i$ and $S=\\frac1{19}\\sum(X_i-\\bar X)(X_i-\\bar X)^T$. Which statements are true?",
+      "options": {
+        "A": "$19(\\bar X^TS\\bar X)(\\bar X^T\\Sigma\\bar X)^{-1}\\sim\\chi^2_{19}$",
+        "B": "$E(S^{-1})=\\frac{19}{6}\\Sigma^{-1}$",
+        "C": "$S\\sim W_{12}(19,19\\Sigma)$",
+        "D": "$\\operatorname{trace}(19\\Sigma^{-1}S)\\sim\\chi^2_{228}$"
+      },
+      "correct_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "hints": [
+        "For a normal sample, $\\bar X$ is independent of S and $19S\\sim W_{12}(19,\\Sigma)$.",
+        "For Wishart $W_p(\nu,\\Sigma)$, a normalized quadratic projection is chi-square with $\nu$ degrees, while $E(W^{-1})=\\Sigma^{-1}/(\nu-p-1)$."
+      ],
+      "solution": "Write W=19S. Normal sampling gives $W\\sim W_{12}(19,\\Sigma)$ and independence from $\\bar X$. For any fixed nonzero v, $v^TWv/(v^T\\Sigma v)\\sim\\chi^2_{19}$. Conditional on $\\bar X=v$ the same law applies, and $\\bar X\\ne0$ almost surely, proving A. Since $19>12+1$, $E(W^{-1})=\\Sigma^{-1}/(19-12-1)=\\Sigma^{-1}/6$. As $S^{-1}=19W^{-1}$, B holds. Scaling a Wishart scales its covariance parameter, so $S\\sim W_{12}(19,\\Sigma/19)$, not the stated $19\\Sigma$: C fails. Whitening W gives a sum of 19 outer products of 12-dimensional standard normal vectors, so its trace sums $19\\cdot12=228$ independent squared standard normals, proving D.",
+      "theory": "The Wishart distribution describes a sum of outer products of independent multivariate normal vectors. Under its standard scale convention, $W\\sim W_p(\\nu,\\Sigma)$ has expectation $\\nu\\Sigma$; multiplying W by a positive scalar multiplies its scale matrix by that scalar. For normal samples, the sample mean and centered sample covariance are independent, and $(n-1)S$ is Wishart with $n-1$ degrees of freedom. A one-dimensional quadratic projection of W, normalized by the corresponding population variance, is chi-square. Independence permits the projection direction to be a random sample mean and preserves this conditional law. The inverse expectation exists only for $\\nu>p+1$ and has denominator $\\nu-p-1$. Whitening reduces the trace to a sum of independent squared standard normals, giving pν degrees of freedom. Scale conventions and degrees of freedom must be kept distinct.",
+      "similar_questions": [
+        {
+          "prompt": "For a 10-observation bivariate normal sample, find $E(S^{-1})$.",
+          "solution": "$9S\\sim W_2(9,\\Sigma)$ and $9-2-1=6$. Therefore $E(S^{-1})=9\\Sigma^{-1}/6=(3/2)\\Sigma^{-1}$."
+        },
+        {
+          "prompt": "If $W\\sim W_3(8,I)$, find the distributions of $\\operatorname{trace}(W)$ and $v^TWv$ for unit v.",
+          "solution": "Write W as a sum of eight standard-normal outer products. Its trace sums 24 independent standard-normal squares, so is $\\chi^2_{24}$. Each scalar projection is standard normal, giving $v^TWv\\sim\\chi^2_8$."
+        }
+      ],
+      "review_status": "reviewed",
+      "source_note": "Original attached paper; independently transcribed and mathematically worked.",
+      "answer_source": "Independent mathematical derivation; question 80, PDF page 48. No candidate response used as an answer key.",
+      "page": 48,
+      "image": "assets/questions/2025-december-q080.png",
+      "classification_status": "reviewed"
+    }
+  ]
+}
